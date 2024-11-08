@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/main_styles.css">
+    <script src="https://kit.fontawesome.com/76e78a6b9f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <div class="wrapper">
+      <div class="logo"><a href="#">Stéfano</a></div>
+      <input type="radio" name="slide" id="menu-btn">
+      <input type="radio" name="slide" id="cancel-btn">
+      <ul class="nav-links">
+        <label for="cancel-btn" class="btn cancel-btn"><i class="fas fa-times"></i></label>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <a href="#" class="desktop-item">Dropdown Menu</a>
+          <input type="checkbox" id="showDrop">
+          <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+          <ul class="drop-menu">
+            <li><a href="#">Drop 1</a></li>
+            <li><a href="#">Drop 2</a></li>
+            <li><a href="#">Drop 3</a></li>
+            <li><a href="#">Drop 4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="desktop-item">Mega Menu</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">Mega Menu</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img src="./src/img/arvore_c.jpg" alt="">
+              </div>
+              <div class="row">
+                <header>Texture Surprise</header>
+                <ul class="mega-links">
+                  <li><a href="#">Bungee</a></li>
+                  <li><a href="#">Ja Janken</a></li>
+                  <li><a href="#">Emperor Time</a></li>
+                  <li><a href="#">Mukoryuu</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>Texture Surprise</header>
+                <ul class="mega-links">
+                  <li><a href="#">Bungee</a></li>
+                  <li><a href="#">Ja Janken</a></li>
+                  <li><a href="#">Emperor Time</a></li>
+                  <li><a href="#">Mukoryuu</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>Texture Surprise</header>
+                <ul class="mega-links">
+                  <li><a href="#">Bungee</a></li>
+                  <li><a href="#">Ja Janken</a></li>
+                  <li><a href="#">Emperor Time</a></li>
+                  <li><a href="#">Mukoryuu</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+</body>
+</html>
