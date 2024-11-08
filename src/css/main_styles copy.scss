@@ -12,11 +12,61 @@ $lime-green: #99D02C;
 $navy: #0C0150;
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: $montserrat;
 }
 
 nav {
@@ -161,7 +211,7 @@ nav {
 } 
   
 .nav-b {
-  background-color: rgba(255, 255, 255, .4);  
+  background-color: rgba(255, 255, 255, .4);
   height: 50px;
   /* line-height: 50px; */
   transition: all 0.3s ease;
@@ -196,6 +246,7 @@ nav {
   }
   
   .nav-links li a {
+    font-style: normal;
     color: #f2f2f2;
     text-decoration: none;
     font-size: 15px;
@@ -220,9 +271,12 @@ nav {
     left: 0;
     opacity: 0;
     visibility: hidden;
-    background-color: white;
+    background-color: #F8F7F5;
     display: flex;
     justify-content: center;
+    -webkit-box-shadow: inset 0px 1.5px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0px 1.5px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: inset 0px 1.5px 5px 0px rgba(0,0,0,0.25);
 
     .content-a {
       padding: 25px 20px;
@@ -234,6 +288,7 @@ nav {
 
       .row {
         line-height: 13px;
+        width: calc(25% - 30px);
 
         header {
           color: black;
@@ -244,9 +299,30 @@ nav {
           h3 {
             
             a.title-link {
+              color: black;
               text-transform: none;
               font-weight: bold;
               font-size: 12px;
+            }
+          }
+        }
+
+        .mega-links {
+          border-left: 1px solid rgba(255, 255, 255, 0.09);
+          display: flex;
+          flex-direction: column;
+
+          .plus {
+            color: $lime-green;
+          }
+
+          li {
+            a {
+              padding: 3px 0;
+              color: #3f3f3f;
+              font-size: 11px;
+              display: block;
+              text-transform: none;
             }
           }
         }
@@ -258,60 +334,67 @@ nav {
             text-decoration: underline;
           }
         }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          border-left: 0px;
+        }
       }
     } 
   }
   
   
-  
-  .content-a .row,
-  .content-b .row {
-    width: calc(25% - 30px);
-  }
-  
-  .content-b .row img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .content-a .row .mega-links,
-  .content-b .row .mega-links {
-    border-left: 1px solid rgba(255, 255, 255, 0.09);
-    /* margin-left: -40px; */
-  }
 
-  .content-a .row .mega-links {
-    display: flex;
-    flex-direction: column;
+  .content-b {
+    width: 1000px;
+    max-width: 1000px;
+    padding: 25px 20px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    line-height: 14px;
+    font-family: $montserrat;
 
-    .plus {
-      color: $lime-green;
+    .left-col {
+      grid-column: 1 / span 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      
+      li {
+        line-height: 14px;
+
+        a {
+          color: black;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 12px;
+        }
+      }
     }
-  }
-  
-  .content-a .row:nth-child(1),
-  .content-a .row:nth-child(2),
-  .content-b .row:nth-child(1),
-  .content-b .row:nth-child(2) {
-    border-left: 0px;
-  }
-  
-  
-  .content-a .row .mega-links li {
-    line-height: initial;
-  }
 
-  .content-b .row .mega-links li {
-    /* padding: 0 20px; */
-  }
-  
-  .content-a .row .mega-links li a {
-    padding: 3px 0;
-    color: black;
-    font-size: 11px;
-    display: block;
-    text-transform: none;
+    .right-col {
+      display: flex;
+      flex-direction: column;
+
+      .cards-area {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          display: inline-block;
+          width: 130px;
+          height: 200px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
   }
 }
 
