@@ -1640,21 +1640,39 @@ body {
       row-gap: 15px;
       grid-template-columns: 100%;
       margin: 0 auto;
-      column-gap: 25px;
+      /* column-gap: 25px; */
 
       @media screen and (min-width: $md) {
         width: 720px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 327px);
+        justify-content: space-between;
+      }
+
+      @media screen and (min-width: $lg) {
+        width: 800px;
+        grid-template-columns: repeat(2, 382px);
+      }
+
+      @media screen and (min-width: $xl) {
+        width: 1140px;
+        grid-template-columns: repeat(2, 555px);
+        justify-content: space-between;
       }
     }
 
     .swiper {
+      box-sizing: border-box;
       border-radius: 5px;
       border: 1px solid #D7DFE4;
       padding: 20px;
       grid-column-end: span 1;
+      width: 100%;
+      background-color: white;
+      overflow: hidden;
 
       .swiper-wrapper {
+        width: 100%;
+
         .swiper-slide {
           color: #5F5F5F;
           font-family: $roboto;

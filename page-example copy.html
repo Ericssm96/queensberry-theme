@@ -513,7 +513,23 @@
     <section class="specialists-review">
       <div class="wrapper">
         <h2>Palavra do Especialista</h2>
-        <div class="cards-grid">
+        <div class="cards-grid" x-init="
+        const reviewsSwiper = new Swiper('.specialists-review .swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 10000
+          },
+          allowTouchMove: false,
+          breakpoints: {
+            1: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            }
+          }
+        });
+        ">
           <div class="slider-card swiper">
             <div class="swiper-wrapper">
               <article class="swiper-slide">
@@ -530,6 +546,22 @@
                     <p class="ocupation">Fundador</p>
                   </div>
                   <img src="./src/img/slides/martin-jensen.jpg" class="portrait" alt="Martin Jensen">
+                </div>
+              </article>
+              <article class="swiper-slide">
+                <div class="quote">
+                  <img src="./src/img/green-quotation-mark.png" class="quotation-mark" alt="">
+                  <h3>A Turquia é um destino espetacular!</h3>
+                  <p class="description">
+                    O voo de balão na Capadócia, é um dos passeios imperdíveis do destino, que permite apreciar a linda e peculiar paisagem da região. Uma experiência inesquecível!
+                </p>
+                </div>
+                <div class="author">
+                  <div class="info">
+                    <strong class="name">Vanessa Nomoto</strong>
+                    <p class="ocupation">Gerente Operações</p>
+                  </div>
+                  <img src="./src/img/slides/vanessa-nomoto.jpg" class="portrait" alt="Vanessa Nomoto">
                 </div>
               </article>
             </div>
@@ -551,11 +583,26 @@
                   <img src="./src/img/slides/marco-lourenco.jpg" class="portrait" alt="Marco Lourenço">
                 </div>
               </article>
+              <article class="swiper-slide">
+                <div class="quote">
+                  <img src="./src/img/green-quotation-mark.png" class="quotation-mark" alt="">
+                  <h3>Lugar exótico e que mexe com a nossa imaginação: Marrocos</h3>
+                  <p class="description">Toda a excentricidade de uma cultura diferente com lindas paisagens, hotéis de luxo e excelentes restaurantes de renome internacional!</p>
+                </div>
+                <div class="author">
+                  <div class="info">
+                    <strong class="name">José Luiz Gracie</strong>
+                    <p class="ocupation">Gerente de Operações de Incentivos</p>
+                  </div>
+                  <img class="portrait" src="./src/img/slides/jose-luiz.jpg" alt="José Luiz Gracie">
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section class="external-links">
       <article class="queensclub-section">
         <h2>
@@ -567,19 +614,20 @@
       <article class="blog-section">
         <h2>Blog</h2>
         <strong>Uma viagem exploratória, sensorial e exclusiva pelos cinco continentes.</strong>
-        <a href="#">Confira ●</a>
+        <a href="#">Confira</a>
       </article>
     </section>
+
     <section class="featured-videos" x-data="{
       currentVideoTitle: 'Título do vídeo atual'
     }" x-init="
-    const productSwiper = new Swiper('.featured-videos .swiper', {
+    const videoSwiper = new Swiper('.featured-videos .swiper', {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
       navigation: {
-        nextEl: '.featured-content .swiper-button-next',
-        prevEl: '.featured-content .swiper-button-prev',
+        nextEl: '.featured-videos .swiper-button-next',
+        prevEl: '.featured-videos .swiper-button-prev',
       },
       breakpoints: {
         1: {
@@ -590,7 +638,11 @@
           slidesPerView: 2,
           spaceBetween: 0
         },
-        1: {
+        1260: {
+          slidesPerView: 2.3,
+          spaceBetween: 0
+        },
+        1550: {
           slidesPerView: 3,
           spaceBetween: 1
         }

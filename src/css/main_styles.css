@@ -1473,20 +1473,40 @@ body {
   row-gap: 15px;
   grid-template-columns: 100%;
   margin: 0 auto;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
+  /* column-gap: 25px; */
 }
 @media screen and (min-width: 768px) {
   .specialists-review .wrapper .cards-grid {
     width: 720px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 327px);
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .specialists-review .wrapper .cards-grid {
+    width: 800px;
+    grid-template-columns: repeat(2, 382px);
+  }
+}
+@media screen and (min-width: 1260px) {
+  .specialists-review .wrapper .cards-grid {
+    width: 1140px;
+    grid-template-columns: repeat(2, 555px);
+    justify-content: space-between;
   }
 }
 .specialists-review .wrapper .swiper {
+  box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #D7DFE4;
   padding: 20px;
   grid-column-end: span 1;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+.specialists-review .wrapper .swiper .swiper-wrapper {
+  width: 100%;
 }
 .specialists-review .wrapper .swiper .swiper-wrapper .swiper-slide {
   color: #5F5F5F;
