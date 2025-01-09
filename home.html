@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./src/css/main_styles.css" />
+  <title>Home</title>
+  <link rel="stylesheet" href="./src/css/main_navigation.css" />
+  <link rel="stylesheet" href="./src/css/home-page.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -13,6 +14,7 @@
     rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
   <link rel="stylesheet" href="./src/css/swiper-bundle.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -619,57 +621,72 @@
     </section>
 
     <section class="featured-videos" x-data="{
+      videoTitles: ['LIVE | TUNÍSIA, A JORNADA', 'LIVE | Arábia Saudita - O Berço do Islã', 'LIVE | Lançamento GBM 2024/2025', 'LIVE | Lançamento FÉRIAS NA NEVE', 'Lançamento BRASIL IN'],
       currentVideoTitle: 'Título do vídeo atual',
-      currentSlide: ''
+      currentSlideIndex: 0,
+      videoSwiper: new Swiper('.featured-videos .swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+          nextEl: '.featured-videos .swiper-button-next',
+          prevEl: '.featured-videos .swiper-button-prev',
+        },
+        shortSwipes: false,
+        breakpoints: {
+          1: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          },
+          1024: {
+            slidesPerView: 1.7,
+            spaceBetween: 20
+          },
+          1100: {
+            slidesPerView: 1.8,
+            spaceBetween: 20
+          },
+          1260: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          1350: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+          },
+          1450: {
+            slidesPerView: 2.6,
+            spaceBetween: 20
+          },
+          1550: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+          },
+          1700: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          }
+        }
+      })
     }" x-init="
-    const videoSwiper = new Swiper('.featured-videos .swiper', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-      navigation: {
-        nextEl: '.featured-videos .swiper-button-next',
-        prevEl: '.featured-videos .swiper-button-prev',
-      },
-      shortSwipes: false,
-      onAny(eventName, ...args) {
-        console.log('Event: ', eventName);
-        
-        if(eventName === 'slideChange') {
-          currentSlide = document.querySelector('.featured-videos .swiper-slide-active');
-          currentVideoTitle = currentSlide.querySelector('.ytp-title-link.yt-uix-sessionlink');
-
-          console.log(currentVideoTitle);
-        }
-
-      },
-      breakpoints: {
-        1: {
-          slidesPerView: 1,
-          spaceBetween: 0
-        },
-        1024: {
-          slidesPerView: 1.5,
-          spaceBetween: 20
-        },
-        1260: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        1350: {
-          slidesPerView: 2.2,
-          spaceBetween: 20
-        },
-        1550: {
-          slidesPerView: 2.5,
-          spaceBetween: 20
-        },
-        1700: {
-          slidesPerView: 3,
-          spaceBetween: 20
-        }
+    currentVideoTitle = videoTitles[currentSlideIndex]
+    videoSwiper.on('navigationPrev', (e)=>{
+      if(currentSlideIndex === 0) {
+        currentSlideIndex = videoTitles.length - 1;
+      } else {
+        currentSlideIndex -= 1;
       }
+      currentVideoTitle = videoTitles[currentSlideIndex];
     });
-    " $nextTick(() => { console.log(document.querySelector('.swiper-slide-active')) });>
+    videoSwiper.on('navigationNext', (e)=>{
+      if(currentSlideIndex === videoTitles.length - 1) {
+        currentSlideIndex = 0;
+      } else {
+        currentSlideIndex += 1;
+      }
+      currentVideoTitle = videoTitles[currentSlideIndex];
+    })
+    ">
       <div class="wrapper">
         <header>
           <h2>Vídeos</h2>
@@ -789,7 +806,9 @@
               </div>
             </div>
             <div class="submit-area">
-              <div class="squarey-recaptcha-box"></div>
+              <div class="squarey-recaptcha-box">
+                <div class="g-recaptcha" data-sitekey="6LcAo0MjAAAAAIYwWm1Us5ttiUPIe2wr01bQ7zed"></div>
+              </div>
               <button class="submit-btn">Cadastrar</button>
             </div>
           </form>
