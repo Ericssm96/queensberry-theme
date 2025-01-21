@@ -2,21 +2,54 @@
 
 function qb_assets_queue()
 {
-    wp_enqueue_style('qb-fonts', get_template_directory_uri() . "/src/css/fonts.css", [], '1.0.0', 'all');
-    wp_enqueue_style('qb-root', get_template_directory_uri() . "/src/css/root.css", ['qb-fonts'], '1.0.0', 'all');
-    wp_enqueue_style('qb-general', get_template_directory_uri() . "/src/css/output.css", ['qb-fonts', 'qb-root'], '1.0.0', 'all');
-    wp_enqueue_style('qb-navbar', get_template_directory_uri() . "/src/css/navbar-styles.css", ['qb-fonts', 'qb-root', 'qb-general'], "1.0.0", "all");
-    wp_enqueue_style('qb-swiper', get_template_directory_uri() . "/src/css/swiper-bundle.css", ['qb-fonts', 'qb-root', 'qb-general', 'qb-navbar'], "1.0.0", "all");
-    wp_enqueue_style('qb-single-post', get_template_directory_uri() . "/src/css/post-content.css", ['qb-fonts', 'qb-root', 'qb-general', 'qb-navbar'], "1.0.0", "all");
-    wp_enqueue_script('qb-scripts', get_template_directory_uri() . "/src/js/scripts.js", [], '1.0.0', ["in_footer" => true, "strategy" => "defer"]);
-    wp_enqueue_script('qb-swiper-bundle', "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js", [], '1.0.0', ["in_footer" => false]);
+    /* wp_enqueue_style('qb-fonts', get_template_directory_uri() . "/src/css/fonts.css", [], '1.0.0', 'all'); */
+    wp_enqueue_style('qb-root', get_template_directory_uri() . "/src/css/root.css", [], '1.0.0', 'all');
+    wp_enqueue_style('qb-fonts', get_template_directory_uri() . "https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;500;700;800&family=Tenor+Sans&display=swap", [], '1.0.0', 'all');
+    wp_enqueue_style('qb-fa', get_template_directory_uri() . "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css", [], '1.0.0', 'all');
+    wp_enqueue_style('qb-navigation', get_template_directory_uri() . "/src/css/main_navigation.css", ['qb-root', 'qb-fa', 'qb-fonts'], '1.0.0', 'all');
+    wp_enqueue_style('qb-home-page', get_template_directory_uri() . "/src/css/home-page.css", ['qb-root', 'qb-navigation', 'qb-fa', 'qb-fonts'], "1.0.0", "all");
+    wp_enqueue_style('qb-swiper', get_template_directory_uri() . "/src/css/swiper-bundle.css", ['qb-navigation', 'qb-root', 'qb-fonts'], "1.0.0", "all");
+    wp_enqueue_style('qb-products-page', get_template_directory_uri() . "/src/css/products-page.css", ['qb-navigation', 'qb-root', 'qb-fa', 'qb-fonts'], "1.0.0", "all");
 
-    wp_enqueue_script('qb-swiper-scripts', get_template_directory_uri() . "/src/js/swiper-config.js", ['qb-swiper-bundle'], '1.0.0', ["in_footer" => false, "strategy" => "defer"]);
     wp_enqueue_script('qb-alpine-scripts', "https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js", [], '1.0.0', ["in_footer" => false, "strategy" => "defer"]);
-    wp_enqueue_script('icon-scripts', "https://kit.fontawesome.com/76e78a6b9f.js", [], '1.0.0', ["in_footer" => false, "strategy" => "defer"]);
-
-
+    /* wp_enqueue_script('qb-scripts', get_template_directory_uri() . "/src/js/scripts.js", [], '1.0.0', ["in_footer" => true, "strategy" => "defer"]); */
+    wp_enqueue_script('qb-swiper-bundle', "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", [], '1.0.0', ["in_footer" => false]);
+    wp_enqueue_script('qb-recaptcha', "https://www.google.com/recaptcha/api.js", [], '1.0.0', ["in_footer" => false, "strategy" => "defer"]);
+    /* wp_enqueue_script('qb-axios', "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js", [], '1.0.0', ["in_footer" => false]); */
+    /* wp_enqueue_script('qb-swiper-scripts', get_template_directory_uri() . "/src/js/swiper-config.js", ['qb-swiper-bundle'], '1.0.0', ["in_footer" => false, "strategy" => "defer"]); */
 }
+
+function desktop_header_search() {
+    ob_start();
+    ?>
+    <form role="search" action="<?php echo esc_url(home_url('/')); ?>" mathod="get" class="search-field">
+        <input type="search" x-on:blur="isNavSelected = false" x-on:focus="isNavSelected = true"
+        placeholder="BUSCA" value="<?php echo get_search_query(); ?>" name="s" /><button type="submit" class="search-btn" x-on:focus="isNavSelected = true"
+        x-on:blur="isNavSelected = false">
+        <i class="fa-solid fa-magnifying-glass btn-ico"></i>
+        </button>
+    </form>
+    <?php
+    return ob_get_clean();
+}
+
+add_shortcode('desktop_header_search', 'desktop_header_search');
+
+function mobile_header_search() {
+    ob_start();
+    ?>
+    <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="mobile-global-search">
+      <div class="wrapper">
+        <input type="search" value="<?php echo get_search_query(); ?>" placeholder="Busca" x-on:click="isMobileSearchOpen = !isMobileSearchOpen"
+          name="s" />
+        <button type="submit">OK</button>
+      </div>
+    </form>
+    <?php
+    return ob_get_clean();
+}
+
+add_shortcode('mobile_header_search', 'mobile_header_search');
 
 function qb_setup()
 {
@@ -154,7 +187,7 @@ function qb_numeric_archive_posts_nav()
     echo '</ul></div>' . "\n";
 }
 
-function qb_dynamic_meta_description() {
+/* function qb_dynamic_meta_description() {
     global $post;
 
     $meta_description = get_post_meta($post->ID, 'meta_description', true);
@@ -166,7 +199,7 @@ function qb_dynamic_meta_description() {
 
     echo '<meta name="description" content="' . esc_attr($meta_description) . '" />' . "\n";
 }
-add_action('wp_head', 'qb_dynamic_meta_description');
+add_action('wp_head', 'qb_dynamic_meta_description'); */
 
 
 add_action("wp_enqueue_scripts", "qb_assets_queue");

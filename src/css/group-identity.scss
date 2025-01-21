@@ -1,0 +1,363 @@
+$montserrat: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+$tenor_sans: "Tenor Sans", sans-serif;
+$xxl: 1500px;
+$xl: 1260px;
+$lg: 1024px;
+$xmd: 950px;
+$md: 768px;
+$sm: 400px;
+$xsm: 300px;
+$lime-green: #99D02C;
+$navy: #0C0150;
+$dark-navy: #161326;
+$olive-green: #989898;
+
+main {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.team-info {
+  .header-wrapper {
+    background-image: url(../img/banner-quem_somos-sm.jpg);
+    background-repeat: no-repeat;
+    background-color: teal;
+    background-size: cover;
+    background-position: left;
+    height: 460px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 80px;
+
+    @media screen and (min-width: $md) {
+      background-position: center;
+      background-image: url(../img/banner-quem_somos-md.jpg);
+    }
+
+    @media screen and (min-width: $xl) {
+      background-image: url(../img/banner-quem_somos.jpg);
+    }
+
+    h1 {
+      font-size: 4.725rem;
+      line-height: 1.2;
+      color: white;
+      font-family: $tenor_sans;
+      text-transform: uppercase;
+      padding: 0 4vw;
+      width: 100%;
+
+      @media screen and (min-width: $xl) {
+        padding: 0;
+        width: 1000px;
+      }
+    }
+  }
+
+  .introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text-grid {
+      font-family: $roboto;
+      width: 92vw;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-auto-flow: row;
+      padding: 52px 0;
+
+      @media screen and (min-width: $md) {
+        grid-template-columns: repeat(2, calc(50% - 11px));
+        justify-content: space-between;
+        row-gap: 40px;
+        padding: 80px 0;
+      }
+
+      @media screen and (min-width: $xl) {
+        width: 1000px;
+        padding: 115px 0;
+      }
+
+      .image-wrapper {
+        margin-bottom: 24px;
+
+        @media screen and (min-width: $md) {
+          margin-bottom: 0;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 6px;
+
+          @media screen and (min-width: $lg) {
+            width: 95%;
+          }
+        }
+      }
+
+      .quote-wrapper {
+        text-align: center;
+
+        @media screen and (min-width: $lg) {
+          text-align: left;
+        }
+        .quote {
+          padding-top: 15px;
+          font-size: 2.4rem;
+          line-height: 1.2;
+          color: $lime-green;
+          font-style: italic;
+          margin-bottom: 29px;
+        }
+
+        .author {
+          color: $navy;
+          margin-bottom: 25px;
+
+          @media screen and (min-width: $md) {
+            margin-bottom: 0;
+          }
+
+          strong {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            font-weight: bold;
+            margin-bottom: 28px;
+          }
+
+          p {
+            font-size: 1.4rem;
+            line-height: 1.3;
+          }
+          
+        }
+      }
+
+      .bottom-left {
+        margin-bottom: 15px;
+
+        @media screen and (min-width: $md) {
+          margin-bottom: 0;
+        }
+      }
+
+      .text {
+        font-family: $roboto;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        color: #656565;
+
+        p:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+.specialists-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-family: $tenor_sans;
+    font-size: 3.175rem;
+    line-height: 1.3;
+    color: $navy;
+    padding: 0 4vw;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $lg) {
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $xl) {
+      padding: 0;
+      width: 1000px;
+    }
+
+    .highlighted-text {
+      color: $lime-green;
+    }
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 92vw;
+
+    @media screen and (min-width: $md) {
+      grid-template-columns: repeat(3, 200px);
+      justify-content: space-between;
+      row-gap: 50px;
+    }
+
+    @media screen and (min-width: $lg) {
+      grid-template-columns: repeat(3, 285px);
+      width: 1000px;
+    }
+
+    .photo-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 7px;
+      font-family: $roboto;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: $md) {
+          height: 159.75px;
+        }
+
+        @media screen and (min-width: $lg) {
+          height: 220px;
+        }
+      }
+
+      strong {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: bold;
+        color: $navy;
+      }
+
+      p {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: #656565;
+      }
+    }
+
+    .middle {
+      @media screen and (min-width: $md) {
+        grid-column: 2 / span 1;
+      }
+
+      @media screen and (min-width: $lg) {
+        grid-column: 1 / span 1;
+      }
+    }
+  }
+}
+
+.products-overview {
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $md) {
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: $lg) {
+    margin-bottom: 115px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    background-color: cadetblue;
+    background-image: url(../img/palmeiras-baixo-md.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 52px 0;
+
+    @media screen and (min-width: $md) {
+      margin: 80px 0;
+    }
+    
+    @media screen and (min-width: $lg) {
+      background-image: url(../img/palmeiras-baixo-lg.jpg);
+    }
+
+    @media screen and (min-width: $xl) {
+      margin: 115px 0;
+    }
+
+    strong {
+      font-family: $tenor_sans;
+      font-size: 4.8rem;
+      line-height: 1.3;
+      color: white;
+      width: 92vw;
+
+      @media screen and (min-width: $xl) {
+        width: 1000px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .products-grid {
+      width: 92vw;
+      display: grid;
+      grid-template-columns: 100%;
+      row-gap: 30px;
+
+      @media screen and (min-width: $md) {
+        grid-template-columns: repeat(2, calc(50% - 10px));
+        justify-content: space-between;
+      }
+
+      @media screen and (min-width: $lg) {
+        grid-template-columns: repeat(2, calc(50% - 25px));
+        row-gap: 50px;
+      }
+
+      @media screen and (min-width: $xl) {
+        width: 1000px;
+      }
+
+      .product-description {
+        position: relative;
+
+        h2 {
+          font-family: $tenor_sans;
+          color: $lime-green;
+          font-size: 2.4rem;
+          line-height: 1.3;
+          text-transform: uppercase;
+          margin-bottom: 48px;
+          position: relative;
+          z-index: 100;
+        }
+        
+
+        strong {
+          font-family: $roboto;
+          color: #E7E7E7;
+          font-weight: 300;
+          font-size: 160px;
+          line-height: 1;
+          position: absolute;
+          top: -20px;
+          right: 0;
+          z-index: 99;
+        }
+
+        p {
+          position: relative;
+          color: #848484;
+          font-size: 1.4rem;
+          line-height: 1.5;
+          z-index: 100;
+        }
+      }
+    }
+  }
+}

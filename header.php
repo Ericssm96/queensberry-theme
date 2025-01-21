@@ -4,28 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <?php
     $site_title = get_bloginfo('name');
   ?>
   <title><?= is_front_page() ? $site_title : strtoupper(get_the_title()) .  " - " . $site_title ?></title>
-  <link rel="stylesheet" href="./src/css/main_navigation.css" />
   <?php wp_head(); ?>
-  <link rel="stylesheet" href="./src/css/home-page.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;500;700;800&family=Tenor+Sans&display=swap"
-    rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-  <link rel="stylesheet" href="./src/css/swiper-bundle.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-  <div class="video-overlay"></div>
   <nav
     x-bind:class="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? 'desktop-navigation white-nav' : 'desktop-navigation'"
     x-data="{
@@ -38,13 +26,7 @@
     x-init="window.addEventListener('scroll', () => isWindowScrolledPastThreshold = window.scrollY > 150)">
     <div class="nav-a">
       <div class="wrapper">
-        <form action="" class="search-field">
-          <input type="text" x-on:blur="isNavSelected = false" x-on:focus="isNavSelected = true"
-            placeholder="BUSCA" /><button type="submit" class="search-btn" x-on:focus="isNavSelected = true"
-            x-on:blur="isNavSelected = false">
-            <i class="fa-solid fa-magnifying-glass btn-ico"></i>
-          </button>
-        </form>
+      <?php echo do_shortcode('[desktop_header_search]'); ?>
         <h1 class="site-logo">
           <a href="#"><img
               x-bind:src="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? '<?= get_template_directory_uri(); ?>/src/img/logo-escuro.png' : '<?= get_template_directory_uri(); ?>/src/img/logo.png'"
@@ -293,11 +275,5 @@
       </div>
     </div>
     <input type="checkbox" id="mobile-search-toggle" x-on:change="isMobileSearchOpen = !isMobileSearchOpen" />
-    <form action="" class="mobile-global-search">
-      <div class="wrapper">
-        <input type="text" placeholder="Busca" x-on:click="isMobileSearchOpen = !isMobileSearchOpen"
-          name="GLOBAL_SEARCH" />
-        <button type="submit">OK</button>
-      </div>
-    </form>
+    <?php echo do_shortcode('[mobile_header_search]'); ?>
   </nav>

@@ -1,113 +1,3026 @@
 {
-	"CadernoCodigo": 0,
-	"ProgramasCadernos": {
+	"ProgramasAtivosPortal": {
 		"statuscode": "200",
 		"message": "OK",
 		"Paginacao": {
-			"RegistroInicial": 1,
-			"RegistroFinal": 200,
-			"TotalRegistro": 5
+			"RegistroInicial": 0,
+			"RegistroFinal": 0,
+			"RegistroTotal": 297
 		},
-		"ProgramasCadernos": [
+		"ProgramasAtivoPortal": [
 			{
-				"ProgramaCodigo": "TERRA21",
-				"CadernoCodigo": 3,
-				"CadernoTitulo": "Europa 2020",
-				"CadernoTexto": "Este caderno contém a programação da Queensberry para o destino Europa e também para os destinos Oriente Médio e Norte da África, incluindo informações sobre o Roteiro Dia-a-Dia, Atrações, Fotos e Condições Específicas do Programa.",
-				"CadernoFoto": "gbm-europa-2020.jpg",
-				"CadernoStatus": "I",
-				"CadernoPastaImagens": "EUROPA_2020",
-				"CadernoTipMar": "",
+				"ProgramaCodigo": "AFRO25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÁFRICA DO SUL, VIA ROTA JARDIM",
+				"PrograDestino": "ÁFRICA SUL",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
 				"CategoriaCodigo": 4,
-				"CategoriaTexto": "GRUPOS BRASILEIROS NO MUNDO",
-				"CategoriaStatus": "A",
-				"CategoriaPastaImagens": "",
-				"OrdemApresentacao": 2,
-				"DataInclusao": "2021-03-01T19:36:05",
-				"DataAlteracao": "2021-09-28T17:00:11",
-				"TituloImagem": "",
-				"Link": "",
-				"UrglAmigavel": "gbm"
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
 			},
 			{
-				"ProgramaCodigo": "TERRA21",
-				"CadernoCodigo": 53,
-				"CadernoTitulo": "RÉVEILLON 2019 \/ 2020",
-				"CadernoTexto": "Confira a nossa programação especial de Natal e Réveillon, incluindo informações sobre o Roteiro Dia-a-Dia, Atrações, Fotos e Condições Específicas do Programa.",
-				"CadernoFoto": "Reveillon2019.jpg",
-				"CadernoStatus": "I",
-				"CadernoPastaImagens": "REVEILLON_2019",
-				"CadernoTipMar": "",
+				"ProgramaCodigo": "AFRO25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÁFRICA DO SUL, VIA ROTA JARDIM",
+				"PrograDestino": "ÁFRICA SUL",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
 				"CategoriaCodigo": 4,
-				"CategoriaTexto": "GRUPOS BRASILEIROS NO MUNDO",
-				"CategoriaStatus": "A",
-				"CategoriaPastaImagens": "",
-				"OrdemApresentacao": 2,
-				"DataInclusao": "2021-03-01T19:36:05",
-				"DataAlteracao": "2020-01-02T14:02:48",
-				"TituloImagem": "",
-				"Link": "",
-				"UrglAmigavel": "gbm"
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
 			},
 			{
-				"ProgramaCodigo": "TERRA21",
-				"CadernoCodigo": 71,
-				"CadernoTitulo": "LAND AMÉRICAS, ÁSIA E OCEANIA 2017",
-				"CadernoTexto": "Este caderno contém a programação Terrestre para o destino Américas, Ásia e Oceania, incluindo informações sobre o Roteiro Dia-a-Dia, Atrações, Fotos e Condições Específicas do Programa.",
-				"CadernoFoto": "landAMERICA.jpg",
-				"CadernoStatus": "I",
-				"CadernoPastaImagens": "LAND_AMERICAS_ASIA_E_OCEANIA_2017",
-				"CadernoTipMar": "",
+				"ProgramaCodigo": "AFRO925A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÁFRICA DO SUL SURPREENDENTE (AFRO 9)",
+				"PrograDestino": "ÁFRICA SUL",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
 				"CategoriaCodigo": 4,
-				"CategoriaTexto": "GRUPOS BRASILEIROS NO MUNDO",
-				"CategoriaStatus": "A",
-				"CategoriaPastaImagens": "",
-				"OrdemApresentacao": 2,
-				"DataInclusao": "2021-03-01T19:36:05",
-				"DataAlteracao": "2018-11-21T14:05:07",
-				"TituloImagem": "",
-				"Link": "",
-				"UrglAmigavel": "gbm"
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
 			},
 			{
-				"ProgramaCodigo": "TERRA21",
-				"CadernoCodigo": 80,
-				"CadernoTitulo": "LAND EUROPA 2017",
-				"CadernoTexto": "Este caderno contém a programação Terrestre para o destino Europa e Oriente Médio, incluindo informações sobre o Roteiro Dia-a-Dia, Atrações, Fotos e Condições Específicas do Programa.",
-				"CadernoFoto": "land.jpg",
-				"CadernoStatus": "I",
-				"CadernoPastaImagens": "LAND_EUROPA_2017",
-				"CadernoTipMar": "",
+				"ProgramaCodigo": "AFRO925B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÁFRICA DO SUL SURPREENDENTE",
+				"PrograDestino": "ÁFRICA SUL",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
 				"CategoriaCodigo": 4,
-				"CategoriaTexto": "GRUPOS BRASILEIROS NO MUNDO",
-				"CategoriaStatus": "A",
-				"CategoriaPastaImagens": "",
-				"OrdemApresentacao": 2,
-				"DataInclusao": "2021-03-01T19:36:05",
-				"DataAlteracao": "2017-11-08T17:28:13",
-				"TituloImagem": "",
-				"Link": "",
-				"UrglAmigavel": "gbm"
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
 			},
 			{
-				"ProgramaCodigo": "TERRA21",
-				"CadernoCodigo": 104,
-				"CadernoTitulo": "GBM 2021",
-				"CadernoTexto": "Este caderno contém nova programação 2021, para embarques nos meses de Agosto e Setembro. Confira!!",
-				"CadernoFoto": "gbm-2021.jpg",
-				"CadernoStatus": "I",
-				"CadernoPastaImagens": "GBM_2021",
-				"CadernoTipMar": "",
+				"ProgramaCodigo": "ALGREM25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "KOSOVO, ALBÂNIA, MACEDÔNIA E GRÉCIA",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
 				"CategoriaCodigo": 4,
-				"CategoriaTexto": "GRUPOS BRASILEIROS NO MUNDO",
-				"CategoriaStatus": "A",
-				"CategoriaPastaImagens": "",
-				"OrdemApresentacao": 2,
-				"DataInclusao": "2021-03-02T18:20:25",
-				"DataAlteracao": "2021-03-02T18:13:03",
-				"TituloImagem": "",
-				"Link": "",
-				"UrglAmigavel": "gbm"
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "ALPES25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA SUÍÇA, ITÁLIA E ÁUSTRIA",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "BALT25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DOS PAÍSES BÁLTICOS",
+				"PrograDestino": "PAISBALTIC",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "BLUJAZZ25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ROTA DO COUNTRY, BLUES & JAZZ",
+				"PrograDestino": "CHICAGO",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "BRBE00124A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PEDRA DA LAGUNA HOTEL BOUTIQUE E SPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE00224A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BOTANIQUE HOTEL & SPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE00324A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SANTA TERESA HOTEL RJ MGALLERY",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE00424A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "UNIQUE GARDEN",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE00524A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BEIJA FLOR EXCLUSIVE HOTEL & SPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE00624A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MI SECRETO POUSADA & SPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE00724A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CASAS BRANCAS BOUTIQUE HOTEL & SPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE00824A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "UXUA CASA HOTEL & SPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE00924A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "GRANDE HOTEL TERMAS DE ARAXÁ",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRBE01024A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "KUROTEL – CENTRO CONTEMPORÂNEO DE SAÚDE E BEM-ESTAR",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil Bem-Estar",
+				"CadernoTexto": "Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
+",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRLV00124A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PEDRA DA LAGUNA HOTEL BOUTIQUE E SPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in Love",
+				"CadernoTexto": "Com cenários deslumbrantes, acomodações especiais e serviços personalizados, os hotéis selecionados proporcionam cenários perfeitos para celebrar o amor. Tudo projetado para criar experiências inesquecíveis oferecendo um ambiente idílico e romântico. Celebre o amor nas mais infinitas formas.",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRLV00224A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CASTELO SAINT ANDREWS",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in Love",
+				"CadernoTexto": "Com cenários deslumbrantes, acomodações especiais e serviços personalizados, os hotéis selecionados proporcionam cenários perfeitos para celebrar o amor. Tudo projetado para criar experiências inesquecíveis oferecendo um ambiente idílico e romântico. Celebre o amor nas mais infinitas formas.",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRLV00324A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ESSENZA HOTEL",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in Love",
+				"CadernoTexto": "Com cenários deslumbrantes, acomodações especiais e serviços personalizados, os hotéis selecionados proporcionam cenários perfeitos para celebrar o amor. Tudo projetado para criar experiências inesquecíveis oferecendo um ambiente idílico e romântico. Celebre o amor nas mais infinitas formas.",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRLV00424A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "VILA DOS ORIXÁS BOUTIQUE HOTEL",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in Love",
+				"CadernoTexto": "Com cenários deslumbrantes, acomodações especiais e serviços personalizados, os hotéis selecionados proporcionam cenários perfeitos para celebrar o amor. Tudo projetado para criar experiências inesquecíveis oferecendo um ambiente idílico e romântico. Celebre o amor nas mais infinitas formas.",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRLV00524A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "NANNAI MURO ALTO",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in Love",
+				"CadernoTexto": "Com cenários deslumbrantes, acomodações especiais e serviços personalizados, os hotéis selecionados proporcionam cenários perfeitos para celebrar o amor. Tudo projetado para criar experiências inesquecíveis oferecendo um ambiente idílico e romântico. Celebre o amor nas mais infinitas formas.",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRLV00624A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "POUSADA APPLE HOUSE PARATY",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in Love",
+				"CadernoTexto": "Com cenários deslumbrantes, acomodações especiais e serviços personalizados, os hotéis selecionados proporcionam cenários perfeitos para celebrar o amor. Tudo projetado para criar experiências inesquecíveis oferecendo um ambiente idílico e romântico. Celebre o amor nas mais infinitas formas.",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRLV00724A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CAMPO BAHIA HOTEL VILLAS SPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in Love",
+				"CadernoTexto": "Com cenários deslumbrantes, acomodações especiais e serviços personalizados, os hotéis selecionados proporcionam cenários perfeitos para celebrar o amor. Tudo projetado para criar experiências inesquecíveis oferecendo um ambiente idílico e romântico. Celebre o amor nas mais infinitas formas.",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRLV00824A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BELMOND HOTEL",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in Love",
+				"CadernoTexto": "Com cenários deslumbrantes, acomodações especiais e serviços personalizados, os hotéis selecionados proporcionam cenários perfeitos para celebrar o amor. Tudo projetado para criar experiências inesquecíveis oferecendo um ambiente idílico e romântico. Celebre o amor nas mais infinitas formas.",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT00124A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ALAGOAS SURPREENDENTE",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT00224A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ARRAIAL & TRANCOSO – O BEM DO MAR",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT00324A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PERNAMBUCO & ALAGOAS",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT00424A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JERICOACOARA & TRAIRI",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT00624A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "NATAL & PIPA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT00724A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PANTANAL NORTE & CHAPADA DOS GUIMARÃES",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT00824A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPARATINGA E FERNANDO DE NORONHA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT00924A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "RIO DE JANEIRO & BÚZIOS",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT01024A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "A ROTA DOS MILAGRES DE ALAGOAS",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT01124A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "A AMAZÔNIA É NOSSA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT01224A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PANTANAL SUL & BONITO",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT01324A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "A AMAZÔNIA É NOSSA II - ANAVILHANAS JUNGLE LODGE",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRNT01425A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "A AMAZÔNIA É NOSSA - JUMA HOTÉIS",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil in natura",
+				"CadernoTexto": "Roteiros que oferecem atividades ao ar livre com conforto e segurança, privacidade nos serviços e muita personalidade, proporcionando uma perfeita integração homem-natureza em meio a uma biodiversidade impressionante. Celebre a vida in natura!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00124A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "RIO DE JANEIRO E PETRÓPOLIS",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00224A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BRASÍLIA – HISTÓRIA, NATUREZA & VINHOS",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00324A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BALNEÁRIO CAMBORIÚ & FLORIANÓPOLIS",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00424A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ROTA DAS EMOÇÕES – DO MARANHÃO AO CEARÁ",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00524A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SERRA GAÚCHA E SEUS CONTRASTES",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00624A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ARRAIAL & SANTO ANDRÉ – HISTÓRIA E NATUREZA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00724A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MINAS GERAIS – HISTÓRICA & MODERNA",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00824A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "FOZ DO IGUAÇU EXPERIENCE",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC00924A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "RIO IMPERIAL & VALE DO CAFÉ",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC01024A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "RIO IMPERIAL & PARATY",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "BRPC01125A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "FOZ DO IGUAÇU EXPERIENCE",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Brasil, prazer em conhecer",
+				"CadernoTexto": "O luxo aqui é o conforto de um roteiro bem planejado, com serviços privativos, experiências inusitadas e a vivência da história. Acesse recantos pouco conhecidos que revelam uma história construída por imigrantes e suas heranças, com a natureza de pano de fundo. O Brasil explorado por partes!",
+				"CategoriaCodigo": 17,
+				"CategoriaDescricao": "BRASIL IN"
+			},
+			{
+				"ProgramaCodigo": "CAN11A25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AS MARAVILHAS DA COSTA OESTE CANADENSE",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "CAN1925A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CANADÁ TOTAL",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "CAUCASU25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ARMÊNIA, GEÓRGIA E AZERBAIJÃO",
+				"PrograDestino": "ARMÊNIA",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "CHINA25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "GRANDES LUZES DA CHINA",
+				"PrograDestino": "CN",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "COREIA25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "COREIA DO SUL E TAIWAN",
+				"PrograDestino": "CORÉIASUL",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "COREIA25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "COREIA DO SUL E TAIWAN",
+				"PrograDestino": "CORÉIASUL",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "CRYATHIST",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ATENAS A ISTAMBUL",
+				"PrograDestino": "IST",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "CRYSTOCPH",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ESTOCOLMO A COPENHAGUE",
+				"PrograDestino": "CPG",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "CUBA25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ETERNAMENTE CUBA",
+				"PrograDestino": "CUBA",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "EMI25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DUBAI, ABU DHABI E RAS AL KHAIMAH",
+				"PrograDestino": "AE",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "EMI25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DUBAI, ABU DHABI E RAS AL KHAIMAH",
+				"PrograDestino": "AE",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "ESC25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA ESCANDINÁVIA",
+				"PrograDestino": "ESCAN",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "ESPO25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "GRANDE VIAGEM PELA PENÍNSULA IBÉRICA",
+				"PrograDestino": "PORESP",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "EVATHVNC",
+				"Sequencial": 0,
+				"ProgramaDescricao": "EVRIMA - ATENAS A VENEZA",
+				"PrograDestino": "VCE",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "FRAN25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA FRANÇA",
+				"PrograDestino": "FRANÇA",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "IAF002",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÁFRICA DO SUL ESSENCIAL",
+				"PrograDestino": "ÁFRICA SUL",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF093",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ILHA MAURÍCIO",
+				"PrograDestino": "MAURICIO",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF123",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BLUE TRAIN – CAPE TOWN A PRETÓRIA",
+				"PrograDestino": "AFRICA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF123A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BLUE TRAIN – PRETÓRIA À CAPE TOWN",
+				"PrograDestino": "AFRICA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF144",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SEYCHELLES PARADISÍACA",
+				"PrograDestino": "SEYCHELLES",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF168",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÁFRICA DO SUL COM CHARME",
+				"PrograDestino": "AFRICA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF175",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BOTSUANA CLÁSSICA BY WILDERNESS – DELTA DO OKAVANGO E LINYAN",
+				"PrograDestino": "BOTSWANA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF186",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÁFRICA DO SUL SOFISTICADA",
+				"PrograDestino": "AFRICA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF203",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ENCANTOS DO ZIMBÁBUE",
+				"PrograDestino": "ZIMBÁBUE",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF215",
+				"Sequencial": 0,
+				"ProgramaDescricao": "QUÊNIA SOFISTICADA – MASAI MARA",
+				"PrograDestino": "QUENIA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF216",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TANZÂNIA SOFISTICADA",
+				"PrograDestino": "TANZANIA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF225",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÁFRICA DO SUL PARA FAMÍLIAS",
+				"PrograDestino": "ÁFRICA SUL",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF230",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESCUBRA A NAMÍBIA",
+				"PrograDestino": "NAMÍBIA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF235",
+				"Sequencial": 0,
+				"ProgramaDescricao": "HURAWALHI MALDIVES",
+				"PrograDestino": "MLE",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF388",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AVENTURA PELO LESTE AFRICANO – QUÊNIA E TANZÂNIA",
+				"PrograDestino": "AFRICA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF389",
+				"Sequencial": 0,
+				"ProgramaDescricao": "HERITANCE AARAH",
+				"PrograDestino": "MLE",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF390",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAWAKARA ISLANDS MALDIVES",
+				"PrograDestino": "MLE",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF391",
+				"Sequencial": 0,
+				"ProgramaDescricao": "KAGI MALDIVES RESORT AND SPA",
+				"PrograDestino": "MLE",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF392",
+				"Sequencial": 0,
+				"ProgramaDescricao": "KUDADOO MALDIVES PRIVATE ISLAND",
+				"PrograDestino": "MLE",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF393",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MARROCOS ENCANTADOR",
+				"PrograDestino": "MARROCOS",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAF394",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AVENTURA PELO LESTE AFRICANO – QUÊNIA E TANZÂNIA",
+				"PrograDestino": "AFRICA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL004",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CIRCUITO ANDINO",
+				"PrograDestino": "CHILE",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL306",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CANADÁ SURPREENDENTE",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL329",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ST.BARTH, LE SERENO",
+				"PrograDestino": "CARIBE",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL341",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PATAGÔNIA ARGENTINA ESSENCIAL",
+				"PrograDestino": "ARGENTINA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL343",
+				"Sequencial": 0,
+				"ProgramaDescricao": "URUGUAI ESSENCIAL",
+				"PrograDestino": "URU",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL352",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BUENOS AIRES ESSENCIAL",
+				"PrograDestino": "ARGENTINA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL379",
+				"Sequencial": 0,
+				"ProgramaDescricao": "COLÔMBIA: HISTÓRIA, CULTURA E PRAIA",
+				"PrograDestino": "COLOMBIA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL388",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SANTIAGO ESPECIAL",
+				"PrograDestino": "CHILE",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL389",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MENDOZA ESSENCIAL",
+				"PrograDestino": "MDZ",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL391",
+				"Sequencial": 0,
+				"ProgramaDescricao": " AVENTURA EM MENDOZA",
+				"PrograDestino": "MDZ",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL393",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ROTA KAWESKAR NA M\/N SKORPIOS III",
+				"PrograDestino": "CHILE",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL395",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MENDOZA - A BELA CIDADE DO VINHO",
+				"PrograDestino": "MDZ",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL396",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ANGUILLA, BELMOND CAP JULUCA",
+				"PrograDestino": "AXA",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL397",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CURAÇAO, O CARIBE HOLANDÊS",
+				"PrograDestino": "CARIBE",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL398",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ARUBA DE TODOS OS SENTIDOS",
+				"PrograDestino": "AUA",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL399",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BELIZE, O MELHOR DOS MUNDOS",
+				"PrograDestino": "CARIBE",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL400",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TULUM ESSENCIAL",
+				"PrograDestino": "CARIBE",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL401",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BOCAS DEL TORO",
+				"PrograDestino": "PTY",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL402",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ST. BARTH, HOTEL LE TOINY",
+				"PrograDestino": "SBH",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL403",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ST.MARTIN, BELMOND LA SAMANNA",
+				"PrograDestino": "SFG",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL404",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TURKS & CAICOS, THE SANDS AT GRACE BAY",
+				"PrograDestino": "CARIBE",
+				"CadernoTitulo": "Caribe",
+				"CadernoTexto": "Experiências exclusivas que encantam os viajantes mais exigentes. 
+Com praias serenas e estilosas que apresentam elegância sofisticada, charme colorido e vibrações descontraídas. Mergulhe em águas cristalinas, descubra cavernas secretas; explore refúgios paradisíaco e complete sua jornada com exotismo natural criando memórias inesquecíveis em cada destino.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAL405",
+				"Sequencial": 0,
+				"ProgramaDescricao": " PATAGÔNIA TOTAL COM BUENOS AIRES",
+				"PrograDestino": "PATA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAN014",
+				"Sequencial": 0,
+				"ProgramaDescricao": "NOVA ZELÂNDIA ESSENCIAL",
+				"PrograDestino": "NZELANDIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAN040",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AUSTRÁLIA ESSENCIAL",
+				"PrograDestino": "AUSTRALIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAN042",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AUSTRÁLIA ESSENCIAL",
+				"PrograDestino": "AUSTRALIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS002",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CHINA TRADICIONAL",
+				"PrograDestino": "CN",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS003B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MARAVILHAS DA CHINA",
+				"PrograDestino": "CN",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS029",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ROTA DA SEDA NO UZBEQUISTÃO",
+				"PrograDestino": "UZB",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS033",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TAILÂNDIA NORTE E SUL",
+				"PrograDestino": "TAILÂNDIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS034",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SUL DA ÍNDIA",
+				"PrograDestino": "ÍNDIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS046",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MARAVILHAS DA INDOCHINA",
+				"PrograDestino": "INDOCHINA.",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS047",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO PREMIUM",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS055",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA INDONÉSIA",
+				"PrograDestino": "INDONÉSIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS056",
+				"Sequencial": 0,
+				"ProgramaDescricao": "VIETNÃ COM LAOS E CAMBOJA",
+				"PrograDestino": "VIETNA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS057B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÍNDIA CLÁSSICA",
+				"PrograDestino": "ÍNDIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS060B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CORÉIA DO SUL ESSENCIAL",
+				"PrograDestino": "CORÉIASUL",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS063",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SRI LANKA ESPETACULAR",
+				"PrograDestino": "SRI LANKA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS071",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA MALÁSIA",
+				"PrograDestino": "MALÁSIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS092",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESCUBRA AS FILIPINAS",
+				"PrograDestino": "PH",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS094",
+				"Sequencial": 0,
+				"ProgramaDescricao": "OS MISTÉRIOS DA MONGÓLIA",
+				"PrograDestino": "MONGOLIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS095",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DE TAIWAN",
+				"PrograDestino": "TAIWAN",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS110",
+				"Sequencial": 0,
+				"ProgramaDescricao": "NAVEGANDO PELA EXUBERANTE RAJA AMPAT",
+				"PrograDestino": "INDONÉSIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS112",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TURCOMENISTÃO",
+				"PrograDestino": "TURCOMENIS",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS115",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÍNDIA DE TODAS AS CORES",
+				"PrograDestino": "ÍNDIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS117",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TAILÂNDIA DELUXE",
+				"PrograDestino": "TAILÂNDIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS118",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CAZAQUISTÃO",
+				"PrograDestino": "CAZAQUIST",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IAS119",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO PREMIUM",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "Escolha entre os clássicos das primeiras explorações - é o caso de China, Japão, Nepal, Tibete, Índia, Tailândia e Indochina. E outros que procuram o inusitado, como é o caso de Myanmar, Mongólia e Butão. No quesito beleza natural, está as Filipinas. Austrália e Nova Zelândia são considerados os melhores países do mundo para se viajar pelas paisagens deslumbrantes, exótica fauna, antigas tradições com um toque de aventura. Essa parte do mundo serviu de cenário para diversos filmes premiados.",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU008",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PORTUGAL E SANTIAGO DE COMPOSTELA",
+				"PrograDestino": "PORESP",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU083",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESCUBRA A SICÍLIA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU112",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AS MAGIAS DA ILHA DA MADEIRA",
+				"PrograDestino": "PORT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU130",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AS BELEZAS DA PUGLIA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU143",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA SUÍÇA EM TREM",
+				"PrograDestino": "SUIÇA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU150",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SUL DE PORTUGAL",
+				"PrograDestino": "PORT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU167",
+				"Sequencial": 0,
+				"ProgramaDescricao": "OS ENCANTOS DO NORTE DE PORTUGAL",
+				"PrograDestino": "PORT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU168",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ITÁLIA CLÁSSICA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU171",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PORTUGAL - HISTÓRIA, CULTURA E GASTRONOMIA",
+				"PrograDestino": "PORT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU174",
+				"Sequencial": 0,
+				"ProgramaDescricao": "OS FASCÍNIOS DA COSTA AMALFITANA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU187",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESCUBRA AS TERRAS DO VINHO",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU189",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ENTRE A IDADE MÉDIA E RENASCENÇA",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU195",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ESPANHA, BACK IN TIME",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU198",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PAÍSES BAIXOS E BÉLGICA",
+				"PrograDestino": "HOLANDA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU203",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O CORAÇÃO DA ALEMANHA",
+				"PrograDestino": "ALEMANHA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU205",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PORTUGAL LITERÁRIO",
+				"PrograDestino": "PORT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU206",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CATALUNHA ESPECIAL",
+				"PrograDestino": "ESPANHA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU210",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SEVILLA FESTIVA",
+				"PrograDestino": "ESPANHA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU211",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MADEIRA EM FLOR",
+				"PrograDestino": "PORT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU212",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TUNÍSIA FASCINANTE TOP DELUXE",
+				"PrograDestino": "TUN",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU213",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AUSTRIA IMPERIAL",
+				"PrograDestino": "AT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU214",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ALEMANHA FEELINGS",
+				"PrograDestino": "ALEMANHA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU221",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PELAS JOIAS NATURAIS DAS ILHAS DOS AÇORES",
+				"PrograDestino": "PORT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU390",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DE MADRI A LISBOA",
+				"PrograDestino": "ESPANHA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IEU391",
+				"Sequencial": 0,
+				"ProgramaDescricao": "OS TESOUROS DA TURQUIA - ISTAMBUL E CAPADÓCIA",
+				"PrograDestino": "TUR",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IND25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÍNDIA E NEPAL",
+				"PrograDestino": "INDNEP",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "IND25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ÍNDIA E NEPAL",
+				"PrograDestino": "INDNEP",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "INDO25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "INDONÉSIA E CINGAPURA",
+				"PrograDestino": "INDONÉSIA",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "INDO25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "INDONÉSIA E CINGAPURA",
+				"PrograDestino": "INDONÉSIA",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "INDOCH25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "LAOS, VIETNÃ E CAMBOJA",
+				"PrograDestino": "VIETCAMB",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "INDOCH25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "LAOS, VIETNÃ E CAMBOJA",
+				"PrograDestino": "VIETCAMB",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "INSIGNIA25",
+				"Sequencial": 0,
+				"ProgramaDescricao": "VOLTA AO MUNDO 2025",
+				"PrograDestino": "EUA",
+				"CadernoTitulo": "Oceania Cruises",
+				"CadernoTexto": "Com seus navios Marina e Riviera, ambos com capacidade para 1.250 hóspedes, a Oceania Cruises oferece uma variedade espetacular de destinos exóticos, para você conhecer lugares que sempre sonhou. Encontre novas formas de ver o mundo e viajar para os quatro cantos do planeta. Desfrute de passeios privilegiados que o levarão ao coração das tradições culinárias e culturais dos destinos.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "IOM001",
+				"Sequencial": 0,
+				"ProgramaDescricao": "EGITO E OS TESOUROS DO NILO",
+				"PrograDestino": "EGITO",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Explore o contato genuíno com os selvagens animais das savanas africanas, seja em um safári 4x4 nas reservas da África do Sul, em uma canoa nos pântanos de Botsuana, sobrevoando as planícies do Quênia e Tanzânia a bordo de um balão ou aproximando-se dos gigantes e dóceis gorilas nas montanhas de Ruanda ou Uganda. Conecte-se com a história, cultura e tradições de Etiópia e Namíbia, e aprecie a beleza das cataratas de Victoria no Zâmbia ou Zimbábue.
+",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IOM090",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DUBAI & ABU DHABI",
+				"PrograDestino": "OM",
+				"CadernoTitulo": "Oriente Médio",
+				"CadernoTexto": "Da imensidão do deserto a cidades cosmopolitas, o Norte da África e o Oriente Médio surpreendem por suas extraordinárias paisagens e encantam pela riqueza de suas tradições. Abrangendo inúmeros patrimônios históricos e culturais, estas fantásticas regiões oferecem grande diversidade de atrativos e variadas opções de roteiros, incluindo países como Egito, Israel, Jordânia, Líbano, Marrocos, Tunísia e Emirados Árabes Unidos. Escolha o seu destino e vivencie uma experiência verdadeiramente inesquecível!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IOM091",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DUBAI ESSENCIAL",
+				"PrograDestino": "DXB",
+				"CadernoTitulo": "Oriente Médio",
+				"CadernoTexto": "Da imensidão do deserto a cidades cosmopolitas, o Norte da África e o Oriente Médio surpreendem por suas extraordinárias paisagens e encantam pela riqueza de suas tradições. Abrangendo inúmeros patrimônios históricos e culturais, estas fantásticas regiões oferecem grande diversidade de atrativos e variadas opções de roteiros, incluindo países como Egito, Israel, Jordânia, Líbano, Marrocos, Tunísia e Emirados Árabes Unidos. Escolha o seu destino e vivencie uma experiência verdadeiramente inesquecível!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IRLESC25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DUAS IRLANDAS E ESCÓCIA",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "ITM009",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ATENAS, MYKONOS E SANTORINI",
+				"PrograDestino": "GRE",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "ITM045",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CROÁCIA - HISTÓRIA, CULTURA E GASTRONOMIA",
+				"PrograDestino": "CRO",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "De norte a sul, a Europa encanta por sua rica história, cultura fascinante e cenários de incomparável beleza. Existem diversas opções de voos para a região e a proximidade entre os países possibilita uma infinidade de combinações de destinos em uma mesma viagem. Dos destinos clássicos como Itália, França, Alemanha, Portugal, Inglaterra e Espanha aos menos explorados, como Croácia, Romênia, Lituânia, Suécia e Islândia, o continente europeu surpreende a cada viagem!",
+				"CategoriaCodigo": 2,
+				"CategoriaDescricao": "VIAGENS PERSONALIZADAS"
+			},
+			{
+				"ProgramaCodigo": "IUGOS25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SÉRVIA, BÓSNIA, MONTENEGRO E CROÁCIA",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "LAPONIA25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "EXPERIÊNCIAS NO CÍRCULO POLAR ÁRTICO",
+				"PrograDestino": "LAPONIA",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "MAGBAQCTG",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MAGIA DA COLÔMBIA",
+				"PrograDestino": "COLOMBIA",
+				"CadernoTitulo": "Ama Waterways",
+				"CadernoTexto": "A Ama Waterways te levará para viajar por vários países. Um mundo para descobrir, um coração para guardar suas memórias.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "MAGCTGBAQ",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MARAVILHAS DA COLÔMBIA",
+				"PrograDestino": "COLOMBIA",
+				"CadernoTitulo": "Ama Waterways",
+				"CadernoTexto": "A Ama Waterways te levará para viajar por vários países. Um mundo para descobrir, um coração para guardar suas memórias.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "MARROCO25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O EXÓTICO MARROCOS IMPERIAL",
+				"PrograDestino": "MARROCOS",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "MARROCO25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "EXÓTICO MARROCOS IMPERIAL",
+				"PrograDestino": "MARROCOS",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "NCLBLILAX",
+				"Sequencial": 0,
+				"ProgramaDescricao": "RIVIERA MEXICANA - LOS ANGELES A LOS ANGELES",
+				"PrograDestino": "LAX",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "NCLENCSEA",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ALASKA - SEATTLE A SEATTLE",
+				"PrograDestino": "SEA",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "NCLLISROM",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MEDITERRÂNEO - LISBOA A ROMA (CIVITAVECCHIA)",
+				"PrograDestino": "ROM",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "NCLVIVSJU",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CARIBE - SAN JUAN A SAN JUAN",
+				"PrograDestino": "SJU",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "NEVE001",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ANDORRA",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": " ",
+				"CategoriaCodigo": 20,
+				"CategoriaDescricao": "FÉRIAS NA NEVE"
+			},
+			{
+				"ProgramaCodigo": "NEVE002",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ASPEN SNOWMASS",
+				"PrograDestino": "EUA",
+				"CadernoTitulo": "América do Norte",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 20,
+				"CategoriaDescricao": "FÉRIAS NA NEVE"
+			},
+			{
+				"ProgramaCodigo": "NEVE003",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TREMBLANT & MONTREAL",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "América do Norte",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 20,
+				"CategoriaDescricao": "FÉRIAS NA NEVE"
+			},
+			{
+				"ProgramaCodigo": "NEVE004",
+				"Sequencial": 0,
+				"ProgramaDescricao": "VAL D'ISÈRE",
+				"PrograDestino": "FRANÇA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": " ",
+				"CategoriaCodigo": 20,
+				"CategoriaDescricao": "FÉRIAS NA NEVE"
+			},
+			{
+				"ProgramaCodigo": "NEVE005",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DEER VALLEY",
+				"PrograDestino": "EUA",
+				"CadernoTitulo": "América do Norte",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 20,
+				"CategoriaDescricao": "FÉRIAS NA NEVE"
+			},
+			{
+				"ProgramaCodigo": "NEVE006",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MAMMOTH MOUNTAIN",
+				"PrograDestino": "EUA",
+				"CadernoTitulo": "América do Norte",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 20,
+				"CategoriaDescricao": "FÉRIAS NA NEVE"
+			},
+			{
+				"ProgramaCodigo": "OCEAREGYVR",
+				"Sequencial": 0,
+				"ProgramaDescricao": "OCEANIA REGATTA VANCOUVER SEWARD",
+				"PrograDestino": "YVR",
+				"CadernoTitulo": "Oceania Cruises",
+				"CadernoTexto": "Com seus navios Marina e Riviera, ambos com capacidade para 1.250 hóspedes, a Oceania Cruises oferece uma variedade espetacular de destinos exóticos, para você conhecer lugares que sempre sonhou. Encontre novas formas de ver o mundo e viajar para os quatro cantos do planeta. Desfrute de passeios privilegiados que o levarão ao coração das tradições culinárias e culturais dos destinos.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "OCEMIAMIA",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MIAMI A MIAMI",
+				"PrograDestino": "MIA",
+				"CadernoTitulo": "Oceania Cruises",
+				"CadernoTexto": "Com seus navios Marina e Riviera, ambos com capacidade para 1.250 hóspedes, a Oceania Cruises oferece uma variedade espetacular de destinos exóticos, para você conhecer lugares que sempre sonhou. Encontre novas formas de ver o mundo e viajar para os quatro cantos do planeta. Desfrute de passeios privilegiados que o levarão ao coração das tradições culinárias e culturais dos destinos.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "ORI25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MISTÉRIOS DO EGITO",
+				"PrograDestino": "EGITO",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "PARKSE25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "GRAND CANYON, LAKE POWELL E ZION PARK",
+				"PrograDestino": "EUA",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "PARKSW25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "GRAND TENTON, YELLOWSTONE E CUSTER PARK",
+				"PrograDestino": "EUA",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "PERU25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DO PERU",
+				"PrograDestino": "PERU",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "PERU25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DO PERU",
+				"PrograDestino": "PERU",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "PLELYR-LYR",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PONANT LE LYRIAL LONGYEARBYEN\/ LONGYEARBYEN",
+				"PrograDestino": "ESCAN",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "PLELYR-TOS",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PONANT LE LYRIAL TROMSO\/ LONGYEARBYEN",
+				"PrograDestino": "ESCAN",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "R010",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESCOBRINDO O CANADÁ",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R017",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO SELETO 2024\/ 2025",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R019",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CHINA CLÁSSICA",
+				"PrograDestino": "CN",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R024",
+				"Sequencial": 0,
+				"ProgramaDescricao": "BELEZAS DA CHINA",
+				"PrograDestino": "CN",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R026B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "GRANDE TOUR DA INDOCHINA",
+				"PrograDestino": "INDOCHINA.",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R032",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ROTA DAS MONTANHAS",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R033B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CAPITAIS IMPERIAIS VIENA, BUDAPESTE E PRAGA",
+				"PrograDestino": "AT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R048",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESCUBRA O BÁLTICO",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R058",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CIDADES IMPERIAIS",
+				"PrograDestino": "MARROCOS",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Um lugar mágico, que permite vivenciar momentos e experiências que ficarão guardados eternamente na memória. Ali, o contato com os maiores e mais selvagens animais do mundo é espontâneo, e o privilégio de presenciar todos os dias ao nascer e o pôr-do-sol nas reservas de safári é inesquecível. Viajar à África é uma constante descoberta da grandiosidade da natureza.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R072",
+				"Sequencial": 0,
+				"ProgramaDescricao": "FANTASIA ITALIANA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R087",
+				"Sequencial": 0,
+				"ProgramaDescricao": "RÚSSIA PASSADO E PRESENTE",
+				"PrograDestino": "RUSSIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R140",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SICÍLIA CONCÓRDIA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R147B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AUSTRÁLIA & NOVA ZELÂNDIA CLÁSSICA",
+				"PrograDestino": "AUSNE",
+				"CadernoTitulo": "Oceania",
+				"CadernoTexto": "A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R148",
+				"Sequencial": 0,
+				"ProgramaDescricao": "NOVA ZELÂNDIA DE NORTE A SUL",
+				"PrograDestino": "NZELANDIA",
+				"CadernoTitulo": "Oceania",
+				"CadernoTexto": "A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R149",
+				"Sequencial": 0,
+				"ProgramaDescricao": "NOVA ZELÂNDIA EXPRESS",
+				"PrograDestino": "NZELANDIA",
+				"CadernoTitulo": "Oceania",
+				"CadernoTexto": "A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R150B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AUSTRÁLIA FANTÁSTICA",
+				"PrograDestino": "AUSTRALIA",
+				"CadernoTitulo": "Oceania",
+				"CadernoTexto": "A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R204",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESCUBRA A SUÍÇA",
+				"PrograDestino": "SUIÇA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R307",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ROTA DE MAR A MAR",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R335C",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO TRADIÇÃO E CULTURA 2024\/2025",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R444",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ROTA DAS MONTANHAS EXPRESS",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R449B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO ESPIRITUAL 2024\/2025",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R496",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TURQUIA AO SEU ALCANCE",
+				"PrograDestino": "TUR",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R499",
+				"Sequencial": 0,
+				"ProgramaDescricao": "FANTASIA AUTÊNTICA PUGLIA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R509",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AURORA BOREAL",
+				"PrograDestino": "NORUEGA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R513",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PÉROLAS DOS BALCÃS",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R517",
+				"Sequencial": 0,
+				"ProgramaDescricao": "FANTASIA SARDENHA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R520",
+				"Sequencial": 0,
+				"ProgramaDescricao": "3 CAPITAIS ESCANDINAVAS E OS FIORDES",
+				"PrograDestino": "ESCAN",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R522",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DE VIENA A PARIS",
+				"PrograDestino": "PARIS",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R523",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ALEMANHA ROMÂNTICA",
+				"PrograDestino": "ALEMANHA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R526",
+				"Sequencial": 0,
+				"ProgramaDescricao": "HELSINQUE E FIORDES MAGNÍFICOS",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R534",
+				"Sequencial": 0,
+				"ProgramaDescricao": "INGLATERRA E ESCÓCIA",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R542",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TREM ROCKY MOUNTAINEER & CRUZEIRO AO ALASKA",
+				"PrograDestino": "CANADA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R558",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CAPITAIS IMPERIAIS",
+				"PrograDestino": "AT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R559",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESCUBRA A ARABIA SAUDITA",
+				"PrograDestino": "ARABIASAUD",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R560",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ISLÂNDIA A TERRA EM MOVIMENTO",
+				"PrograDestino": "ISLANDIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R561",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO SELETO 2025\/ 2026",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R562",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO TRADIÇÃO E CULTURA 2025\/2026",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R563",
+				"Sequencial": 0,
+				"ProgramaDescricao": "LESTE EUROPEU - VIENA, BUDAPESTE, PRAGA E BERLIM",
+				"PrograDestino": "VIENA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R564",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CAPITAIS IMPERIAIS - VIENA, BUDAPESTE E PRAGA",
+				"PrograDestino": "AT",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R565",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TRIÂNGULO DA EUROPA ORIENTAL",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R566",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PAÍSES BAIXOS E PARIS",
+				"PrograDestino": "HOLANDA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R568",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO FAVORITO",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R569",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO ESPIRITUAL 2025\/2026",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R570",
+				"Sequencial": 0,
+				"ProgramaDescricao": "GRAN TOUR REINO UNIDO E IRLANDA",
+				"PrograDestino": "IRLANDA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R571",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA ESCÓCIA E IRLANDA",
+				"PrograDestino": "IRLANDA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R572",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AMANHECER EM MACHU PICCHU",
+				"PrograDestino": "PERU",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R573",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CIRCUITO CLÁSSICO SUL DO PERU",
+				"PrograDestino": "PERU",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R574",
+				"Sequencial": 0,
+				"ProgramaDescricao": "EMILIANO RIO DE JANEIRO",
+				"PrograDestino": "BRASIL",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R575",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SUÍÇA AUTÊNTICA",
+				"PrograDestino": "SUIÇA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R576",
+				"Sequencial": 0,
+				"ProgramaDescricao": "FANTASIA DESCOBRINDO AS DOLOMITAS, VENETO E TRENTINO ALTO ED",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R578",
+				"Sequencial": 0,
+				"ProgramaDescricao": "RÉVEILLON EM EDIMBURGO",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R579",
+				"Sequencial": 0,
+				"ProgramaDescricao": "A NOITE DE ANDREA BOCELLI",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R583",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ALASCA DESLUMBRANTE",
+				"PrograDestino": "ALASKA",
+				"CadernoTitulo": "Américas",
+				"CadernoTexto": "Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R584",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SICÍLIA CONCÓRDIA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Europa",
+				"CadernoTexto": "Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R585",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AUSTRÁLIA DOWNUNDER",
+				"PrograDestino": "AUSTRALIA",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R586",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PRIMAVERA NO JAPÃO",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R587",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MARAVILHAS DA ARÁBIA SAUDITA",
+				"PrograDestino": "ARAB",
+				"CadernoTitulo": "Ásia",
+				"CadernoTexto": "A Ásia é surpreendente! A nossa seleção de programas compreende destinos de grande procura, clássicos das primeiras explorações e outros que despontam como os mais atraentes e aguçam os mais experientes viajantes que buscam experiências desbravadoras, como Uzbequistão e Sri Lanka.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R588",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CIDADES IMPERIAIS E DESERTO DE AGAFAY",
+				"PrograDestino": "MARROCOS",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Um lugar mágico, que permite vivenciar momentos e experiências que ficarão guardados eternamente na memória. Ali, o contato com os maiores e mais selvagens animais do mundo é espontâneo, e o privilégio de presenciar todos os dias ao nascer e o pôr-do-sol nas reservas de safári é inesquecível. Viajar à África é uma constante descoberta da grandiosidade da natureza.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "R589",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ARGÉLIA EXÓTICA TOP DELUXE",
+				"PrograDestino": "AFRICA",
+				"CadernoTitulo": "África",
+				"CadernoTexto": "Um lugar mágico, que permite vivenciar momentos e experiências que ficarão guardados eternamente na memória. Ali, o contato com os maiores e mais selvagens animais do mundo é espontâneo, e o privilégio de presenciar todos os dias ao nascer e o pôr-do-sol nas reservas de safári é inesquecível. Viajar à África é uma constante descoberta da grandiosidade da natureza.",
+				"CategoriaCodigo": 3,
+				"CategoriaDescricao": "TOURS REGULARES"
+			},
+			{
+				"ProgramaCodigo": "SAFARI25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TESOUROS DO QUÊNIA E DA TANZÂNIA",
+				"PrograDestino": "QUENTANZAN",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SAFARI25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TESOUROS DO QUÊNIA E DA TANZÂNIA",
+				"PrograDestino": "QUENTANZAN",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SAUDI25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ARÁBIA SAUDITA E BAHRAIN",
+				"PrograDestino": "ARAB",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SEACPTBCN",
+				"Sequencial": 0,
+				"ProgramaDescricao": "COSTA DA ÁFRICA OCIDENTAL",
+				"PrograDestino": "BCN",
+				"CadernoTitulo": "Demais Companhias",
+				"CadernoTexto": "Viajar em um navio de cruzeiro é conhecer diversos lugares em uma só viagem com todo o conforto e serviço personalizado de um hotel, sem o inconveniente de precisar fazer e desfazer as malas ao longo dos dias. Os navios são verdadeiros resorts flutuantes. Escolha seu estilo de navegar, existem navios de pequeno, médio e grande porte, como também iates, veleiros e transatlânticos. Embarque em uma jornada de momentos inesquecíveis a bordo dos mais charmosos navios da atualidade!",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "SLEGCPHRKV",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TERRAS DO SOL DA MEIA-NOITE",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Windstar Cruises",
+				"CadernoTexto": "Os cruzeiros Windstar proporcionam o melhor de todos os mundos: as facilidades e mordomias de um navio combinados ao ambiente elegante, informal e romântico.
+Com uma atmosfera única, oferecem uma experiência de viagem especial e singular enquanto você conhece os lugares mais fascinantes e charmosos do mundo. Viajar com a Windstar Cruises é maravilhar-se pela amplitude das paisagens e ao mesmo tempo, encantar-se com os pequenos detalhes a bordo.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "SLEGEDICPH",
+				"Sequencial": 0,
+				"ProgramaDescricao": "NORUEGA E SEUS FAMOSOS FIORDES",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Windstar Cruises",
+				"CadernoTexto": "Os cruzeiros Windstar proporcionam o melhor de todos os mundos: as facilidades e mordomias de um navio combinados ao ambiente elegante, informal e romântico.
+Com uma atmosfera única, oferecem uma experiência de viagem especial e singular enquanto você conhece os lugares mais fascinantes e charmosos do mundo. Viajar com a Windstar Cruises é maravilhar-se pela amplitude das paisagens e ao mesmo tempo, encantar-se com os pequenos detalhes a bordo.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "SLGVIECAM",
+				"Sequencial": 0,
+				"ProgramaDescricao": "VIETNÃ E CAMBOJA",
+				"PrograDestino": "VIETCAMB",
+				"CadernoTitulo": "Inside Asia",
+				"CadernoTexto": "Conheça destinos espetaculares e milenares através da seleção de roteiros Inside Asia. Elaborados cuidadosamente por especialistas, oferecem um verdadeiro mix de atrações que vão de admiráveis templos e deslumbrantes paisagens asiáticas a saborosas descobertas gastronômicas.",
+				"CategoriaCodigo": 18,
+				"CategoriaDescricao": "SMALL LUXURY GROUPS"
+			},
+			{
+				"ProgramaCodigo": "SPRIRKVRKV",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AO REDOR DA ISLÂNDIA",
+				"PrograDestino": "EUROPA",
+				"CadernoTitulo": "Windstar Cruises",
+				"CadernoTexto": "Os cruzeiros Windstar proporcionam o melhor de todos os mundos: as facilidades e mordomias de um navio combinados ao ambiente elegante, informal e romântico.
+Com uma atmosfera única, oferecem uma experiência de viagem especial e singular enquanto você conhece os lugares mais fascinantes e charmosos do mundo. Viajar com a Windstar Cruises é maravilhar-se pela amplitude das paisagens e ao mesmo tempo, encantar-se com os pequenos detalhes a bordo.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "SRIMA25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SRI LANKA E MALDIVAS",
+				"PrograDestino": "SRI LANKA",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SRIMA25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "SRI LANKA E MALDIVAS",
+				"PrograDestino": "SRI LANKA",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWALEMA25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "DESTAQUES DO NORTE DA ALEMANHA",
+				"PrograDestino": "ALEMANHA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWANDAL25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ANDALUZIA, COSTA DO SOL E BARCELONA",
+				"PrograDestino": "ESPANHA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWANDAL25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "ANDALUZIA, COSTA DO SOL E BARCELONA",
+				"PrograDestino": "ESPANHA",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWBASCO25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "UMA ESPANHA SEM IGUAL",
+				"PrograDestino": "ESPANHA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWBAVIE25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "VIAGEM AO REINO DA BAVIERA",
+				"PrograDestino": "ALEMANHA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWBORG25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "A ESSÊNCIA DA BORGONHA, DA ALSÁCIA E CHAMPANHE",
+				"PrograDestino": "FRANÇA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWCARIB25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "COLÔMBIA E PANAMÁ",
+				"PrograDestino": "COLOMPANAM",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWCARIB25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "COLÔMBIA E PANAMÁ",
+				"PrograDestino": "COLOMPANAM",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWGREEK25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "AS ENSOLARADAS ILHAS GREGAS",
+				"PrograDestino": "GRE",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWJAPAO25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO IMPERIAL",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWJAPAO25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "JAPÃO IMPERIAL",
+				"PrograDestino": "JAPÃO",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWLESTE25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TRIANGULO IMPERIAL COM ALEMANHA",
+				"PrograDestino": "LESALE",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWMEX25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "FASCINANTE MÉXICO",
+				"PrograDestino": "MEXICO",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWMEX25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "FASCINANTE MÉXICO",
+				"PrograDestino": "MEXICO",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWPIEMO25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "VALE D'AOSTA, PIEMONTE E LAGO MAGGIORE",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWPROV25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "CÔTE D'AZUR E PROVENCE",
+				"PrograDestino": "FRANÇA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWPUGLI25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "PUGLIA E COSTA AMALFITANA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWSICIL25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA SICÍLIA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWSWISS25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DA SUÍÇA",
+				"PrograDestino": "SUIÇA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWTHAI25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TAILÂNDIA E DOHA",
+				"PrograDestino": "TAILÂNDIA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWTHAI25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TAILÂNDIA E DOHA",
+				"PrograDestino": "TAILÂNDIA",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWTOSC25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TOSCANA E EMILIA-ROMAGNA",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "SWVENET25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "OS ENCANTOS DO VÊNETO",
+				"PrograDestino": "ITALIA",
+				"CadernoTitulo": "Slow Travel 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "TUNIS25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TUNÍSIA, A JORNADA",
+				"PrograDestino": "TUN",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "TUNIS25B",
+				"Sequencial": 0,
+				"ProgramaDescricao": "TUNÍSIA, A JORNADA",
+				"PrograDestino": "TUN",
+				"CadernoTitulo": "Baixa Temporada 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "TURK25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "A FASCINANTE TURQUIA",
+				"PrograDestino": "TUR",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "UK1825A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "INGLATERRA E ESCÓCIA (UK 18)",
+				"PrograDestino": "INGESC",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "UK25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "O MELHOR DO REINO UNIDO E IRLANDA",
+				"PrograDestino": "GBESIR",
+				"CadernoTitulo": "Europa 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "UNIANTOINE",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MERCADOS DE FÉRIAS NO RENO",
+				"PrograDestino": "CYR",
+				"CadernoTitulo": "Uniworld",
+				"CadernoTexto": "Única companhia de cruzeiros fluviais boutique do mundo.
+Os premiados navios Uniworld são verdadeiras obras de arte sobre a água e possuem um refinamento artístico jamais visto em outras embarcações. São inspirados pela beleza, cores e detalhes de cada destino visitado. As excursões com guias locais, já inclusas, oferecem uma excelente conexão cultural com os destinos visitados.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "UNIRIVBEL",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MERCADOS DE FÉRIAS NA BÉLGICA",
+				"PrograDestino": "BRU",
+				"CadernoTitulo": "Uniworld",
+				"CadernoTexto": "Única companhia de cruzeiros fluviais boutique do mundo.
+Os premiados navios Uniworld são verdadeiras obras de arte sobre a água e possuem um refinamento artístico jamais visto em outras embarcações. São inspirados pela beleza, cores e detalhes de cada destino visitado. As excursões com guias locais, já inclusas, oferecem uma excelente conexão cultural com os destinos visitados.",
+				"CategoriaCodigo": 5,
+				"CategoriaDescricao": "MARÍTIMO"
+			},
+			{
+				"ProgramaCodigo": "UZBEK25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": " CAZAQUISTÃO, QUIRGUISTÃO E UZBEQUISTÃO",
+				"PrograDestino": "EURASI",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
+			},
+			{
+				"ProgramaCodigo": "VINHAS25A",
+				"Sequencial": 0,
+				"ProgramaDescricao": "MENDOZA E SALTA",
+				"PrograDestino": "ARGENTINA",
+				"CadernoTitulo": "4 Continentes 2025",
+				"CadernoTexto": "",
+				"CategoriaCodigo": 4,
+				"CategoriaDescricao": "GRUPOS BRASILEIROS NO MUNDO"
 			}
 		]
 	}
