@@ -1,0 +1,479 @@
+<form id="f_queensberry_pop_up_cadastro" name="f_queensberry_pop_up_cadastro" method="POST">
+    <input type="hidden" name="action" value="queensberry_popup_cadastro">
+
+    <!-- Eloqua -->
+    <input type="hidden" name="elqFormName" value="queensberry-pop-up-cadastro">
+    <input type="hidden" name="elqSiteID" value="2864845">
+    <input type="hidden" name="elqCustomerGUID" value="">
+    <input type="hidden" name="elqCookieWrite" value="0">
+
+    <!-- Responsys -->
+    <input type="hidden" name="_ri_"
+        value="X0Gzc2X%3DAQjkPkSRWQGzazcsJ6AbKrIB0a2vaLabgUpCnzceuwybVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG4TwrzbhWDWUINdjCsOv9y4pzbag2rEa6">
+    <input type="hidden" name="_ei_" value="EOFhGZUqGt_VmZAPvWQd4rs">
+    <input type="hidden" name="_di_" value="4n7tvcf4fs51837d46au3eocul9la5beeatniu923cdoafbbdf40">
+    <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+    <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
+    <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário PopUp Cadastro - Queensberry">
+    <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+    <!-- <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber"> -->
+
+    <!-- Formulário -->
+    <input type="text" placeholder="Nome*" required name="FIRST_NAME">
+    <input type="text" placeholder="E-mail*" required name="EMAIL_ADDRESS_">
+
+
+    <select required name="PERFIL">
+        <option value="">- Selecione o Assunto - </option>
+        <option value="passageiro">Passageiro</option>
+        <option value="agente">Agente de Viagens</option>
+    </select>
+
+    <select required name="ESTADO">
+        <option value="">Selecione</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+    </select>
+
+    <div>
+        <input type="checkbox" value="Sim" id="RECEBER_COMUNICACOES" name="RECEBER_COMUNICACOES" required>
+        <label for="RECEBER_COMUNICACOES"> Aceito receber comunicações e informações da Queensberry</label>
+    </div>
+
+    <input type="submit" value="Enviar">
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script>
+    var formData = new FormData(jQuery("#f_queensberry_pop_up_cadastro")[0]); // Use FormData para incluir anexos
+
+
+    $(document).ready(() => {
+
+        $("#f_queensberry_pop_up_cadastro-pop-up-cadastro").on("submit", (e) => {
+            e.preventDefault();
+
+            const perfil = $("select[name='PERFIL']").val();
+
+            if (!perfil || perfil == "") {
+                // Se não houver perfil selecionado, exibe o alert
+                alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
+                return;  // Interrompe o envio do formulário
+            }
+
+            if (perfil === "passageiro") {
+                // Se for "passageiro", envia para o backend (Responsys)
+                jQuery.post(
+                    "https://queensberryforms.abc7484.sg-host.com/wp-admin/admin-post.php?action=queensberry_popup_cadastro",
+                    $("#f_queensberry_pop_up_cadastro").serialize(),
+                    function (data) {
+                        // Callback para lidar com a resposta
+                        console.log(data); // Exibe a resposta no console
+                    }
+                ).done(() => {
+                    // Redireciona para a página de "Obrigado" após o envio
+                    
+                });
+            } else if (perfil === "agente") {
+                // Se for "agente", envia para Eloqua
+                jQuery.ajax({
+                    type: "POST",
+                    url: "https://s2864845.t.eloqua.com/e/f2",
+                    data: jQuery("#f_queensberry_pop_up_cadastro").serialize(),
+                    success: () => {
+                        console.log("Eloqua ok");
+                    },
+                    error: (res) => {
+                        console.log("Eloqua fail", res);
+                    },
+                }).done(() => {
+                    // Redireciona para a página de "Obrigado" após o envio
+                    
+                });
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    var timerId = null, timeout = 5;
+
+    function WaitUntilCustomerGUIDIsRetrieved() {
+        if (!!(timerId)) {
+            if (timeout === 0) {
+                return;
+            }
+            if (typeof this.GetElqCustomerGUID === 'function') {
+                document.forms["f_queensberry_pop_up_cadastro"].elements["elqCustomerGUID"].value = GetElqCustomerGUID();
+                return;
+            }
+            timeout -= 1;
+        }
+        timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
+        return;
+    }
+
+    window.onload = WaitUntilCustomerGUIDIsRetrieved;
+    _elqQ = _elqQ || [];
+    _elqQ.push(['elqGetCustomerGUID']);
+</script>
+
+<script>
+    /*Script para verificar se o usuario
+    marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
+    $(function ($) { // on DOM ready (when the DOM is finished loading)
+        $('#agree').click(function () { // when the checkbox is clicked
+            var checked = $('#agree').is(':checked'); // check the state
+            $('#optIn').val(checked ? "I" : "O"); // set the value
+            $('#optInSMS').val(checked ? "I" : "O"); // set the value
+
+        });
+        $('#optIn').triggerHandler("click"); // initialize the value
+        $('#optInSMS').triggerHandler("click"); // initialize the value
+    });
+
+</script>
+<script>
+    $(function getURL() {
+        var url_cadastro = window.location.href;
+        document.getElementById('URL_CADASTRO').value = url_cadastro;
+    });
+</script>
+<style>
+    #f_queensberry_pop_up_cadastro {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+</style>
+
+
+<style>
+    #f_queensberry_pop_up_cadastro {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    #f_queensberry_pop_up_cadastro h2 {
+        font-size: 22px;
+    }
+
+
+    #f_queensberry_pop_up_cadastro {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+    }
+
+    #f_queensberry_pop_up_cadastro .column-100 {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+    }
+
+    #f_queensberry_pop_up_cadastro .row-100 {
+        display: flex;
+        flex-direction: row;
+        gap: 104px;
+        width: 100%;
+    }
+
+    #f_queensberry_pop_up_cadastro .row-50 {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        width: 50%;
+    }
+
+    #f_queensberry_pop_up_cadastro h2,
+    h3 {
+        color: #04004f;
+        font-family: "Tenor Sans", sans-serif;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 28px;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    #f_queensberry_pop_up_cadastro h3 {
+        margin-bottom: 31px;
+    }
+
+    #f_queensberry_pop_up_cadastro input,
+    select, textarea {
+        border: none;
+        border-bottom: 1px solid #E5E9EF;
+        border-radius: 0;
+        padding: 6px 2px;
+        outline: none;
+    }
+
+    #f_queensberry_pop_up_cadastro input:focus,
+    select:focus {
+        border-bottom: 1px solid #04004f;
+    }
+
+    #f_queensberry_pop_up_cadastro input::placeholder,
+    select::placeholder,
+    select {
+        font-size: 14px;
+        font-family: "Sora", sans-serif;
+        font-weight: 400;
+
+    }
+
+    #f_queensberry_pop_up_cadastro hr {
+        fill: #9ad128;
+        color: #9ad128;
+        background-color: #9ad128;
+        height: 3px;
+    }
+
+    #f_queensberry_pop_up_cadastro button {
+        background-color: #9ad128;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 16px;
+        color: #000000;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    #f_queensberry_pop_up_cadastro button:hover {
+        background-color: #04004f;
+        color: #ffffff;
+    }
+
+    #f_queensberry_pop_up_cadastro input[type="submit"] {
+        background-color: #9ad128;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        width: 30%;
+        padding: 16px;
+        color: #000000;
+        font-family: "Roboto", sans-serif, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        margin-top: 32px;
+    }
+
+    #f_queensberry_pop_up_cadastro input[type="submit"]:hover {
+        background-color: #04004f;
+        color: #ffffff;
+    }
+
+    #f_queensberry_pop_up_cadastro input[type="radio"] {
+        display: none;
+        /* Oculta o input padrão */
+    }
+
+    #f_queensberry_pop_up_cadastro label{
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+        color: #99d02c;
+    }
+
+    #f_queensberry_pop_up_cadastro input[type="radio"]+label {
+        position: relative;
+        padding-left: 30px;
+        /* Espaço para o círculo */
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #f_queensberry_pop_up_cadastro input[type="radio"]+label::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #999;
+        /* Cor da borda quando não está selecionado */
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+
+    #f_queensberry_pop_up_cadastro input[type="radio"]:checked+label::before {
+        background: #9ad128;
+        /* Cor ao selecionar */
+        border-color: #9ad128;
+    }
+
+    [type="radio"]:checked+label:before {
+        background: #9ad128;
+    }
+
+    #f_queensberry_pop_up_cadastro input[type="radio"]+label::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background: #9ad128;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    #f_queensberry_pop_up_cadastro input[type="radio"]:checked+label::after {
+        opacity: 1;
+    }
+
+    /* Oculta o checkbox padrão */
+    #f_queensberry_pop_up_cadastro input[type="checkbox"] {
+        display: none;
+    }
+
+    /* Estiliza o label para posicionamento correto */
+    #f_queensberry_pop_up_cadastro input[type="checkbox"]+label {
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+    }
+
+    /* Caixa do checkbox antes de ser clicado */
+    #f_queensberry_pop_up_cadastro input[type="checkbox"]+label::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        border: 2px solid #d7dfe4;
+        /* Cor da borda padrão */
+        border-radius: 4px;
+        background: #fff;
+        transition: all 0.2s ease;
+    }
+
+    /* Marca interna do checkbox (inicialmente invisível) */
+    #f_queensberry_pop_up_cadastro input[type="checkbox"]+label::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: white;
+        top: 50%;
+        left: 6px;
+        transform: translateY(-50%);
+        border-radius: 2px;
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+
+    /* Mudança ao selecionar o checkbox */
+    #f_queensberry_pop_up_cadastro input[type="checkbox"]:checked+label::before {
+        background: #9ad128;
+        /* Verde ao selecionar */
+        border-color: #9ad128;
+    }
+
+    /* Exibir a marca branca dentro do checkbox ao selecionar */
+    #f_queensberry_pop_up_cadastro input[type="checkbox"]:checked+label::after {
+        opacity: 1;
+    }
+
+
+
+
+
+
+    @media screen and (max-width: 1024px) {
+        .title {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 12px;
+            justify-content: space-between;
+        }
+
+        .title p {
+            font-family: "Sora", sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            text-align: end;
+        }
+
+
+        #f_queensberry_pop_up_cadastro .row-100 {
+            display: flex;
+            flex-direction: column;
+            gap: 31px;
+            width: 100%;
+        }
+
+        #f_queensberry_pop_up_cadastro .row-50 {
+            display: flex;
+            flex-direction: column;
+            gap: 31px;
+            width: 100%;
+        }
+
+        #f_queensberry_pop_up_cadastro input[type="submit"] {
+            background-color: #280071;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            width: 100%;
+            padding: 16px;
+            color: #ffffff;
+            font-family: "Sora", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            margin-top: 32px;
+        }
+
+        #agentes-container button {
+            background-color: #280071;
+            width: 60%;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            padding: 16px;
+            color: #ffffff;
+            font-family: "Sora", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+        }
+    }
+</style>

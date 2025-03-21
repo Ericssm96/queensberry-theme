@@ -67,57 +67,28 @@ main * {
     padding: 115px 0;
   }
 }
-.team-info .introduction .text-grid .image-wrapper {
-  margin-bottom: 24px;
-}
-@media screen and (min-width: 768px) {
-  .team-info .introduction .text-grid .image-wrapper {
-    margin-bottom: 0;
-  }
-}
-.team-info .introduction .text-grid .image-wrapper img {
-  width: 100%;
-  border-radius: 6px;
-}
-@media screen and (min-width: 1024px) {
-  .team-info .introduction .text-grid .image-wrapper img {
-    width: 95%;
-  }
-}
 .team-info .introduction .text-grid .quote-wrapper {
   text-align: center;
-}
-@media screen and (min-width: 1024px) {
-  .team-info .introduction .text-grid .quote-wrapper {
-    text-align: left;
-  }
-}
-.team-info .introduction .text-grid .quote-wrapper .quote {
-  padding-top: 15px;
-  font-size: 2.4rem;
-  line-height: 1.2;
-  color: #99D02C;
-  font-style: italic;
-  margin-bottom: 29px;
-}
-.team-info .introduction .text-grid .quote-wrapper .author {
-  color: #0C0150;
-  margin-bottom: 25px;
+  border-radius: 8px;
+  background-color: #F1F0F5;
+  font-family: "Tenor Sans", sans-serif;
+  grid-column: 1/span 1;
+  padding: 50px 0;
 }
 @media screen and (min-width: 768px) {
-  .team-info .introduction .text-grid .quote-wrapper .author {
-    margin-bottom: 0;
+  .team-info .introduction .text-grid .quote-wrapper {
+    grid-column: 1/span 2;
   }
 }
-.team-info .introduction .text-grid .quote-wrapper .author strong {
-  font-size: 1.8rem;
-  line-height: 1.2;
-  font-weight: bold;
-  margin-bottom: 28px;
+.team-info .introduction .text-grid .quote-wrapper strong {
+  color: #99D02C;
+  display: inline-block;
+  font-size: 3.4rem;
+  margin-bottom: 30px;
 }
-.team-info .introduction .text-grid .quote-wrapper .author p {
-  font-size: 1.4rem;
-  line-height: 1.3;
+.team-info .introduction .text-grid .quote-wrapper p {
+  color: #161326;
+  font-size: 3.4rem;
 }
 .team-info .introduction .text-grid .bottom-left {
   margin-bottom: 15px;
@@ -137,12 +108,12 @@ main * {
   margin-bottom: 15px;
 }
 
-.specialists-overview {
+.team-overview {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.specialists-overview h2 {
+.team-overview h2 {
   font-family: "Tenor Sans", sans-serif;
   font-size: 3.175rem;
   line-height: 1.3;
@@ -151,78 +122,101 @@ main * {
   margin-bottom: 25px;
 }
 @media screen and (min-width: 1024px) {
-  .specialists-overview h2 {
+  .team-overview h2 {
     margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .specialists-overview h2 {
+  .team-overview h2 {
     padding: 0;
     width: 1000px;
   }
 }
-.specialists-overview h2 .highlighted-text {
+.team-overview h2 .highlighted-text {
   color: #99D02C;
 }
-.specialists-overview .photo-grid {
+.team-overview .overview-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 0 4vw;
+}
+.team-overview .overview-text p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  color: #656565;
+}
+@media screen and (min-width: 768px) {
+  .team-overview .overview-text p {
+    padding: 0 6vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .team-overview .overview-text p {
+    padding: 0;
+    width: 1000px;
+  }
+}
+.team-overview .photo-grid {
   display: grid;
   grid-template-columns: 100%;
   width: 92vw;
 }
 @media screen and (min-width: 768px) {
-  .specialists-overview .photo-grid {
+  .team-overview .photo-grid {
     grid-template-columns: repeat(3, 200px);
     justify-content: space-between;
     row-gap: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .specialists-overview .photo-grid {
+  .team-overview .photo-grid {
     grid-template-columns: repeat(3, 285px);
     width: 1000px;
   }
 }
-.specialists-overview .photo-grid .photo-area {
+.team-overview .photo-grid .photo-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 7px;
   font-family: "Roboto", sans-serif;
 }
-.specialists-overview .photo-grid .photo-area img {
+.team-overview .photo-grid .photo-area img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
-  .specialists-overview .photo-grid .photo-area img {
+  .team-overview .photo-grid .photo-area img {
     height: 159.75px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .specialists-overview .photo-grid .photo-area img {
+  .team-overview .photo-grid .photo-area img {
     height: 220px;
   }
 }
-.specialists-overview .photo-grid .photo-area strong {
+.team-overview .photo-grid .photo-area strong {
   font-size: 1.6rem;
   line-height: 1.2;
   font-weight: bold;
   color: #0C0150;
 }
-.specialists-overview .photo-grid .photo-area p {
+.team-overview .photo-grid .photo-area p {
   font-size: 1.4rem;
   line-height: 1.5;
   color: #656565;
 }
 @media screen and (min-width: 768px) {
-  .specialists-overview .photo-grid .middle {
+  .team-overview .photo-grid .middle {
     grid-column: 2/span 1;
   }
 }
 @media screen and (min-width: 1024px) {
-  .specialists-overview .photo-grid .middle {
+  .team-overview .photo-grid .middle {
     grid-column: 1/span 1;
   }
 }
@@ -247,11 +241,12 @@ main * {
   justify-content: center;
   height: 320px;
   background-color: cadetblue;
-  background-image: url(../img/palmeiras-baixo-md.jpg);
+  background-image: url(../img/apresentacao-produtos6.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 52px 0;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .products-overview header {
@@ -260,7 +255,7 @@ main * {
 }
 @media screen and (min-width: 1024px) {
   .products-overview header {
-    background-image: url(../img/palmeiras-baixo-lg.jpg);
+    background-image: url(../img/apresentacao-produtos6.jpg);
   }
 }
 @media screen and (min-width: 1260px) {
@@ -268,16 +263,32 @@ main * {
     margin: 115px 0;
   }
 }
-.products-overview header strong {
-  font-family: "Tenor Sans", sans-serif;
-  font-size: 4.8rem;
+.products-overview header .shaded-overlay {
+  background-color: rgba(0, 0, 0, 0.3137254902);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.products-overview header h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4.14rem;
   line-height: 1.3;
   color: white;
-  width: 92vw;
+  width: 70vw;
+  padding: 20px 0;
+  font-weight: 500;
+  background-color: rgba(161, 255, 51, 0.57);
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  z-index: 110;
 }
 @media screen and (min-width: 1260px) {
-  .products-overview header strong {
-    width: 1000px;
+  .products-overview header h2 {
+    width: 750px;
   }
 }
 .products-overview .container {
@@ -311,7 +322,7 @@ main * {
 .products-overview .container .products-grid .product-description {
   position: relative;
 }
-.products-overview .container .products-grid .product-description h2 {
+.products-overview .container .products-grid .product-description h3 {
   font-family: "Tenor Sans", sans-serif;
   color: #99D02C;
   font-size: 2.4rem;

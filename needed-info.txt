@@ -1,0 +1,64 @@
+Para produto:
+
+wsProgramas -> pega código de programa e categoria (CodigoPrograma e CategoriaCodigo) -> usa código para fazer requisições para wsCategorias, wsProgramasImagens, wsProgramasCadernos, wsProgramasNotas
+
+- Torre (país ou continente alvo da viagem)
+    Rota: wsProgramas -> Torre
+- Nome produto
+    Rota: wsProgramas 
+- Imagem banner
+    Rota: wsProgramas (requer código de programa) -> propriedade Banner
+    Url prefixo: https://www.queensberry.com.br/imagens//Programas/ + pasta imagem (wsCategorias -> propriedade PastaImagens) + subpasta de imagem (wsProgramasCadernos (requer código de programa) -> propriedade CadernoPastaImagens) + código de programa + nome da imagem (wsProgramas (requer código de programa) -> propriedade Banner)
+    Exemplo: https://www.queensberry.com.br/imagens//Programas/FERIAS_NA_NEVE/AMERICAS/NEVE002/DESTAQUE_NEVE002.JPG
+- Descrição banner
+- Infos rápidas (duração, visitando, saídas, etc...)
+    "Visitando": wsProgramas -> Detalhes
+    "Saídas": wsProgramas -> SaidasPrograma
+    "Noites": wsProgramas -> QtdNoitesViagem
+    "Dias": wsProgramas -> QtdNoitesViagem + 1
+    "Tempo e Clima": Descubra
+    Rota: wsProgramas (requer código de programa) -> propriedades 
+- Infos complementares (roteiro, atrações, serviços)
+    Rota: wsProgramasNotas (requer código de programa)
+- Preço: Descubra
+- Galeria
+    Rota: wsProgramasImagens (requer código de programa)
+    Url prefixo: https://www.queensberry.com.br/imagens//Programas/ + pasta imagem (wsCategorias -> propriedade PastaImagens) + subpasta de imagem (wsProgramasCadernos (requer código de programa) -> propriedade CadernoPastaImagens) + código de programa + nome da imagem (wsProgramasImagens -> da segunda imagem pra frente)
+    Exemplo: https://www.queensberry.com.br/imagens//Programas/FERIAS_NA_NEVE/AMERICAS/NEVE002/NEVE002_GALERIA_1g.JPG
+- Descrição card na página de produtos
+    Rota: wsProgramas (requer código de programa)
+- Infos rápidas do card na página de produtos (duração, visitando, saídas...)
+    Rota: wsProgramas (requer código de programa)
+- Foto do card na página de produtos
+    Rota: wsProgramas (requer código de programa)
+    Url prefixo: https://www.queensberry.com.br/imagens//Programas/ + pasta imagem (wsCategorias -> propriedade PastaImagens) + subpasta de imagem (wsProgramasCadernos (requer código de programa) -> propriedade CadernoPastaImagens) + código de programa + nome da imagem (wsProgramas -> propriedade CaminhoImagem). 
+    Exemplo: https://www.queensberry.com.br/imagens//Programas/FERIAS_NA_NEVE/AMERICAS/NEVE002/NEVE002_FOTO_ICONE.JPG
+
+
+Para Categoria (Caderno):
+
+- Nome do arquivo do Banner
+
+- Título da página
+
+- Descrição abaixo do Título
+
+- Produto tem cadernos associados a eles? Se sim, inserir na aba de "Cadernos". (Obrigatóriamente pelo menos um caderno com o nome do produto/categoria deve existir)
+
+- Slide (se possui mais de 1 caderno associado ao produto)
+
+- Título do item do slide (Caderno)
+
+- Foto do Item do slide (Caderno)
+
+- Regiões Mundiais na aba de pesquisa. Quando uma das regiões é clicada, apenas os programas que estão naquela região e possuem relação com o Caderno em questão
+
+- No card de cada programa na área de pesquisas, as informações necessárias serão:
+* Título do programa: wsProgramas["Descricao"]
+* Descrição: wsProgramas["DescricaoResumida"]
+* Categoria: wsCategorias["CategoriaDescricao"]
+* Duração: wsProgramas["QtdDiasViagem"] e wsProgramas["QtdNoitesViagem"]
+* Detalhes da Visita (Visitando): wsProgramas["Detalhes"]
+* Saídas: wsProgramas["SaidasPrograma"]
+* Botão de Saiba Mais com link para página do programa
+* Imagem card: wsPrograma["CaminhoImagem"]

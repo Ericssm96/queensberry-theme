@@ -3,6 +3,17 @@
     Template Name: Home Template
 */
 get_header();
+
+$categories_list = require_once "cached-categories.php";
+$videos_arr = require_once "cached-videos-urls.php";
+$videos_links = [];
+$videos_titles = [];
+foreach($videos_arr as $video_info) {
+  $videos_links[] = $video_info["Link"];
+  $videos_titles[] = $video_info["Descricao"];
+}
+$json_videos_titles = json_encode($videos_titles, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
+$json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 ?>
     <div class="video-overlay"></div>
     <main>
@@ -53,61 +64,33 @@ get_header();
         <h2 class="section-title">Nossos Produtos</h2>
         <div class="swiper product-swiper">
           <div class="swiper-wrapper">
-            <a href="#" style="background-image: url(<?= get_template_directory_uri() ?>/src/img//slides/01-01-lg.jpg);" class="swiper-slide">
-              <div class="slide-overlay"></div>
-              <div class="desktop-slide-overlay"></div>
-              <div class="text-content">
-                <strong>Férias na Neve</strong>
-                <div class="retractable-content">
-                  <p>Viagens elaboradas para quem procura diversão em família ou entre amigos, com experiências de inverno nos principais destinos que oferecem estrutura e atrações focadas nessa estação do ano.</p>
-                  <span class="product-cta">Saiba mais</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" style="background-image: url(<?= get_template_directory_uri() ?>/src/img//slides/01-02-lg.jpg);" class="swiper-slide">
-              <div class="slide-overlay"></div>
-              <div class="desktop-slide-overlay"></div>
-              <div class="text-content">
-                <strong>GBM - Grupos Brasileiros no Mundo</strong>
-                <div class="retractable-content">
-                  <p>Viagem em grupo com acompanhamento de guia brasileiro.</p>
-                  <span class="product-cta">Saiba mais</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" style="background-image: url(<?= get_template_directory_uri() ?>/src/img//slides/01-03-lg.jpg);" class="swiper-slide">
-              <div class="slide-overlay"></div>
-              <div class="desktop-slide-overlay"></div>
-              <div class="text-content">
-                <strong>Viagens Peronalizadas</strong>
-                <div class="retractable-content">
-                  <p>Ideal para quem prefere viajar sozinho, com a família ou amigos.</p>
-                  <span class="product-cta">Saiba mais</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" style="background-image: url(<?= get_template_directory_uri() ?>/src/img//slides/01-04-lg.jpg);" class="swiper-slide">
-              <div class="slide-overlay"></div>
-              <div class="desktop-slide-overlay"></div>
-              <div class="text-content">
-                <strong>Brasil IN</strong>
-                <div class="retractable-content">
-                  <p>Viagens individuais sob medida pelo Brasil</p>
-                  <span class="product-cta">Saiba mais</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" style="background-image: url(<?= get_template_directory_uri() ?>/src/img//slides/01-05-lg.jpg);" class="swiper-slide">
-              <div class="slide-overlay"></div>
-              <div class="desktop-slide-overlay"></div>
-              <div class="text-content">
-                <strong>Cruzeiros</strong>
-                <div class="retractable-content">
-                  <p>Marítimos e fluviais para casais, famílias ou grupo de amigos.</p>
-                  <span class="product-cta">Saiba mais</span>
-                </div>
-              </div>
-            </a>
+            <?php
+            foreach($categories_list as $category) {
+              $cat_title = $category["Titulo"];
+              $cat_description = $category["SubTitulo"];
+              $sanitized_cat_title = sanitize_title($category["CategoriaDescricao"]);
+              $cat_img_file_name = $category["ImagemHome"];
+              $cat_img_folder = $category["PastaImagens"];
+              $cat_img_url = "https://www.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
+              
+              $cat_page_url = home_url() . "/category/$sanitized_cat_title";
+              if($cat_img_file_name !== "") {
+                echo <<<SWIPER_SLIDE
+                <a href="$cat_page_url" style="background-image: url($cat_img_url)" class="swiper-slide">
+                  <div class="slide-overlay"></div>
+                  <div class="desktop-slide-overlay"></div>
+                  <div class="text-content">
+                    <strong>$cat_title</strong>
+                    <div class="retractable-content">
+                      <p>$cat_description</p>
+                      <span class="product-cta">Saiba mais</span>
+                    </div>
+                  </div>
+                </a>
+                SWIPER_SLIDE;
+              }
+            }
+            ?>
           </div>
 
           <div class="swiper-button-prev"></div>
@@ -122,97 +105,114 @@ get_header();
       <div class="wrapper">
         <h2>Destaques</h2>
         <div class="items-grid">
-          <article class="first-col two-thirds"
-            style="background-image: url(<?= get_template_directory_uri() ?>/src/img/destaques/amazonia-hoteis.jpeg);">
-            <a href="#">
-              <div class="card-overlay"></div>
-              <div class="desktop-card-overlay"></div>
-              <div class="text-content">
-                <h3>Brasil In</h3>
-                <h4>A Amazônia é Nossa - Juma Hotéis</h4>
-                <p>O pulmão verde do planeta.</p>
-                <div class="cta-content">
-                  <strong>9 dias / 8 noites</strong>
-                  <span class="cta">Saiba Mais</span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article class="second-col one-third" style="background-image: url(<?= get_template_directory_uri() ?>/src/img/destaques/seychelles.jpeg);">
-            <a href="#">
-              <div class="card-overlay"></div>
-              <div class="desktop-card-overlay"></div>
-              <div class="text-content">
-                <h3>Viagens Personalizadas</h3>
-                <h4>Seychelles Paradisíaca</h4>
-                <p>O Tesouro do Oceano Índico</p>
-                <div class="cta-content">
-                  <strong>8 dias / 7 noites</strong>
-                  <span class="cta">Saiba Mais</span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article class="one-third first-col" style="background-image: url(<?= get_template_directory_uri() ?>/src/img/destaques/leste-africano.jpeg);">
-            <a href="#">
-              <div class="card-overlay"></div>
-              <div class="desktop-card-overlay"></div>
-              <div class="text-content">
-                <h3>Viagens Personalizadas</h3>
-                <h4>Aventura Pelo Leste Africano - Quênia e Tanzânia</h4>
-                <p>Descubra a natureza única do Quênia e Tanzânia numa jornada emocionante.</p>
-                <div class="cta-content">
-                  <strong>10 dias / 9 noites</strong>
-                  <span class="cta">Saiba Mais</span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article class="two-thirds second-col" style="background-image: url(<?= get_template_directory_uri() ?>/src/img/destaques/ilha-mauricio.jpeg);">
-            <a href="#">
-              <div class="card-overlay"></div>
-              <div class="desktop-card-overlay"></div>
-              <div class="text-content">
-                <h3>Viagens Peronalizadas</h3>
-                <h4>Ilha Maurício</h4>
-                <p>O encanto da Pérola do Oceano Índico</p>
-                <div class="cta-content">
-                  <strong>6 dias / 5 noites</strong>
-                  <span class="cta">Saiba Mais</span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article class="one-half first-col" style="background-image: url(<?= get_template_directory_uri() ?>/src/img/destaques/natal_laponia.jpeg);">
-            <a href="#">
-              <div class="card-overlay"></div>
-              <div class="desktop-card-overlay"></div>
-              <div class="text-content">
-                <h3>Tours Regulares</h3>
-                <h4>Natal na Lapônia Fun Family</h4>
-                <p>Com saídas exclusivas de Madri e Barcelona</p>
-                <div class="cta-content">
-                  <strong>6 dias / 5 noites</strong>
-                  <span class="cta">Saiba Mais</span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article class="one-half second-col" style="background-image: url(<?= get_template_directory_uri() ?>/src/img/destaques/montreal-quebec.jpeg);">
-            <a href="#">
-              <div class="card-overlay"></div>
-              <div class="desktop-card-overlay"></div>
-              <div class="text-content">
-                <h3>Tours Regulares</h3>
-                <h4>Montreal e Quebec</h4>
-                <p>E a Magia do Festival de Inverno.</p>
-                <div class="cta-content">
-                  <strong>9 dias / 6 noites</strong>
-                  <span class="cta">Saiba Mais</span>
-                </div>
-              </div>
-            </a>
-          </article>
+          <?php 
+          $args = array(
+            'post_type'      => 'post',
+            'posts_per_page' => -1, 
+            'post_status'    => 'publish',
+            'orderby' => 'title',
+            'order' => 'ASC'
+          );
+
+          $query = new WP_Query($args);
+          $counter = 1;
+
+          if($query->have_posts()) {
+            while($query->have_posts() && $counter <= 6) {
+              $query->the_post();
+              $post_id = get_the_ID();
+              $custom_data = get_post_meta($post_id, 'custom_data', true);
+              
+              $program_name = $program_info["Descricao"];
+
+              if(is_array($custom_data)) {
+                if($custom_data["ProgramInfo"]["DestaquePortal"] !== "N") {
+                  $program_post_link = get_permalink();
+                  $program_info = $custom_data['ProgramInfo'];
+                  $additional_program_info = $custom_data['ProgramAddInfo'];
+                  $current_category_info = $custom_data['CategoryInfo'];
+                  $program_logs_info = $custom_data['ProgramLogInfo'];
+                  $program_notes = $custom_data['ProgramNotes'];
+                  $image_gallery_files = $custom_data['ImageGalleryFiles'];
+                  $price_table_image_files = $custom_data['PriceTableImageFiles'];
+              
+                  $log_name = $additional_program_info["CadernoTitulo"];
+                  $program_code = $program_info["CodigoPrograma"];
+                  $category_code = $program_info["CategoriaCodigo"];
+  
+                  $category_name = $current_category_info["CategoriaDescricao"];
+                  $category_title = $current_category_info["Titulo"];
+                  $program_tower = $program_info["Torre"];
+                  $program_log_info = array_find($program_logs_info, function($program_log_info) use ($log_name) {
+                    $lower_log_name = trim(mb_strtolower($log_name));
+                    $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
+              
+                    return $lower_log_name == $current_item_name;
+                  });
+  
+                  $quick_description = $program_info["DescricaoResumida"];
+                  $days_qtty = $program_info["QtdDiasViagem"];
+                  $nights_qtty = $program_info["QtdNoitesViagem"];
+                  $visit_details_quick_info = $program_info["Detalhes"];
+                  $program_outings_info = $program_info["SaidasPrograma"];
+  
+                  $images_folder_prefix_url = "https://www.queensberry.com.br/imagens/";
+                  $category_image_folder = $current_category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
+                  $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
+                  $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
+                  $banner_img_file_name = $program_info["Banner"]; // Ex.: DESTAQUE_NEVE002.JPG
+                  $banner_img_file_name = rawurlencode($banner_img_file_name);
+                  $log_img_file_name = $image_gallery_files[0]['Descricao'];
+                  $program_banner_img_url = "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$banner_img_file_name";
+                  
+                  $class_list = "";
+  
+                  switch($counter) {
+                    case 1:
+                      $class_list = "first-col two-thirds";
+                      break;
+                    case 2:
+                      $class_list = "second-col one-third";
+                      break;
+                    case 3:
+                      $class_list = "one-third first-col";
+                      break;
+                    case 4:
+                      $class_list = "two-thirds second-col";
+                      break;
+                    case 5:
+                      $class_list = "one-half first-col";
+                      break;
+                    case 6:
+                      $class_list = "one-half second-col";
+                      break;
+                  }
+  
+  
+                  echo <<<FEATURED_PROGRAM
+                  <article class="$class_list" style="background-image: url($program_banner_img_url);">
+                    <a href="$program_post_link">
+                      <div class="card-overlay"></div>
+                      <div class="desktop-card-overlay"></div>
+                      <div class="text-content">
+                        <h3>$category_title</h3>
+                        <h4>$program_name</h4>
+                        <p>$quick_description</p>
+                        <div class="cta-content">
+                          <strong>$days_qtty dias / $nights_qtty noites</strong>
+                          <span class="cta">Saiba Mais</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                  FEATURED_PROGRAM;
+  
+                  $counter += 1;
+                }
+              } 
+            }
+          }
+          ?>
         </div>
       </div>
     </section>
@@ -328,17 +328,19 @@ get_header();
       </article>
     </section>
 
-    <section class="featured-videos" x-data="{
-      videoTitles: ['LIVE | TUNÍSIA, A JORNADA', 'LIVE | Arábia Saudita - O Berço do Islã', 'LIVE | Lançamento GBM 2024/2025', 'LIVE | Lançamento FÉRIAS NA NEVE', 'Lançamento BRASIL IN'],
-      currentVideoTitle: 'Título do vídeo atual',
+
+
+    <section class="featured-videos" x-data='{
+      videoTitles: <?= $json_videos_titles ?>,
+      currentVideoTitle: "Título do vídeo atual",
       currentSlideIndex: 0,
-      videoSwiper: new Swiper('.featured-videos .swiper', {
+      videoSwiper: new Swiper(".featured-videos .swiper", {
         // Optional parameters
-        direction: 'horizontal',
+        direction: "horizontal",
         loop: true,
         navigation: {
-          nextEl: '.featured-videos .swiper-button-next',
-          prevEl: '.featured-videos .swiper-button-prev',
+          nextEl: ".featured-videos .swiper-button-next",
+          prevEl: ".featured-videos .swiper-button-prev",
         },
         shortSwipes: false,
         breakpoints: {
@@ -376,7 +378,7 @@ get_header();
           }
         }
       })
-    }" x-init="
+    }' x-init="
     currentVideoTitle = videoTitles[currentSlideIndex]
     videoSwiper.on('navigationPrev', (e)=>{
       if(currentSlideIndex === 0) {
@@ -393,7 +395,7 @@ get_header();
         currentSlideIndex += 1;
       }
       currentVideoTitle = videoTitles[currentSlideIndex];
-    })
+    });
     ">
       <div class="wrapper">
         <header>
@@ -403,35 +405,21 @@ get_header();
         <div class="filler"></div>
         <article class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="video-frame">
-                <iframe width="100%" height="100%"
-                  src="https://www.youtube-nocookie.com/embed/l2pEIa7Y82o?si=e4jfITaXolmYStZW"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <?php
+            foreach($videos_links as $video_link) {
+              echo <<<SLIDE_ITEM
+              <div class="swiper-slide">
+                <div class="video-frame">
+                  <iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/$video_link"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="video-frame">
-                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/lGFMtFWI5p8?si=UsuooP-aXZPT8gcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="video-frame">
-                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/yHrsLgJLwA4?si=uQRpuEoolT4A2IQ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="video-frame">
-                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/JBnoB_zEY5A?si=Llh2EQwbql7RM0iX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="video-frame">
-                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/17D-bk9Y7Y0?si=zGPowTm9m-89eTvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-            </div>
+              SLIDE_ITEM;
+            }
+            ?>
           </div>
 
           <div class="mobile-controllers">
@@ -445,6 +433,190 @@ get_header();
           <div class="swiper-button-next"></div>
         </div> -->
       </div>
+    </section>
+
+    <section class="popup-form-overlay">
+      <form id="f_queensberry_pop_up_cadastro" name="f_queensberry_pop_up_cadastro" class="sign-up-form" method="POST">
+        <input type="hidden" name="action" value="queensberry_popup_cadastro">
+
+        <!-- Eloqua -->
+        <input type="hidden" name="elqFormName" value="queensberry-pop-up-cadastro">
+        <input type="hidden" name="elqSiteID" value="2864845">
+        <input type="hidden" name="elqCustomerGUID" value="">
+        <input type="hidden" name="elqCookieWrite" value="0">
+
+        <!-- Responsys -->
+        <input type="hidden" name="_ri_"
+            value="X0Gzc2X%3DAQjkPkSRWQGzazcsJ6AbKrIB0a2vaLabgUpCnzceuwybVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG4TwrzbhWDWUINdjCsOv9y4pzbag2rEa6">
+        <input type="hidden" name="_ei_" value="EOFhGZUqGt_VmZAPvWQd4rs">
+        <input type="hidden" name="_di_" value="4n7tvcf4fs51837d46au3eocul9la5beeatniu923cdoafbbdf40">
+        <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+        <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
+        <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário PopUp Cadastro - Queensberry">
+        <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+        <!-- <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber"> -->
+
+        <!-- Formulário -->
+        <div class="input-area">
+          <label for="iptNome"></label>
+          <input type="text" id="iptNome" placeholder="Nome*" required name="FIRST_NAME">
+        </div>
+        <div class="input-area">
+          <label for="iptNome">Email*</label>
+          <input type="text" placeholder="email@exemplo.com" required name="EMAIL_ADDRESS_">
+        </div>
+
+
+        <div class="input-area">
+          <label for="slctPerfil">Perfil*</label>
+          <select id="slctPerfil" required name="PERFIL">
+            <option value="">- Selecione o Assunto - </option>
+            <option value="passageiro">Passageiro</option>
+            <option value="agente">Agente de Viagens</option>
+          </select>
+        </div>
+
+        <div class="input-area">
+          <label for="slctEstado">Estado*</label>
+          <select id="slctEstado" required name="ESTADO">
+            <option value="">Selecione</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+
+        <div class="checkbox-area">
+          <input type="checkbox" value="Sim" id="RECEBER_COMUNICACOES" name="RECEBER_COMUNICACOES" required>
+          <label for="RECEBER_COMUNICACOES"> Aceito receber comunicações e informações da Queensberry</label>
+        </div>
+
+        <p>A nossa empresa está comprometida a proteger e respeitar sua privacidade, utilizaremos seus dados apenas para fins de marketing. Você pode alterar suas preferências a qualquer momento.</p>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+      <script>
+          var formData = new FormData(jQuery("#f_queensberry_pop_up_cadastro")[0]); // Use FormData para incluir anexos
+
+
+          $(document).ready(() => {
+
+              $("#f_queensberry_pop_up_cadastro-pop-up-cadastro").on("submit", (e) => {
+                  e.preventDefault();
+
+                  const perfil = $("select[name='PERFIL']").val();
+
+                  if (!perfil || perfil == "") {
+                      // Se não houver perfil selecionado, exibe o alert
+                      alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
+                      return;  // Interrompe o envio do formulário
+                  }
+
+                  if (perfil === "passageiro") {
+                      // Se for "passageiro", envia para o backend (Responsys)
+                      jQuery.post(
+                          "https://queensberryforms.abc7484.sg-host.com/wp-admin/admin-post.php?action=queensberry_popup_cadastro",
+                          $("#f_queensberry_pop_up_cadastro").serialize(),
+                          function (data) {
+                              // Callback para lidar com a resposta
+                              console.log(data); // Exibe a resposta no console
+                          }
+                      ).done(() => {
+                          // Redireciona para a página de "Obrigado" após o envio
+                          
+                      });
+                  } else if (perfil === "agente") {
+                      // Se for "agente", envia para Eloqua
+                      jQuery.ajax({
+                          type: "POST",
+                          url: "https://s2864845.t.eloqua.com/e/f2",
+                          data: jQuery("#f_queensberry_pop_up_cadastro").serialize(),
+                          success: () => {
+                              console.log("Eloqua ok");
+                          },
+                          error: (res) => {
+                              console.log("Eloqua fail", res);
+                          },
+                      }).done(() => {
+                          // Redireciona para a página de "Obrigado" após o envio
+                          
+                      });
+                  }
+              });
+          });
+      </script>
+
+      <script type="text/javascript">
+          var timerId = null, timeout = 5;
+
+          function WaitUntilCustomerGUIDIsRetrieved() {
+              if (!!(timerId)) {
+                  if (timeout === 0) {
+                      return;
+                  }
+                  if (typeof this.GetElqCustomerGUID === 'function') {
+                      document.forms["f_queensberry_pop_up_cadastro"].elements["elqCustomerGUID"].value = GetElqCustomerGUID();
+                      return;
+                  }
+                  timeout -= 1;
+              }
+              timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
+              return;
+          }
+
+          window.onload = WaitUntilCustomerGUIDIsRetrieved;
+          _elqQ = _elqQ || [];
+          _elqQ.push(['elqGetCustomerGUID']);
+      </script>
+
+      <script>
+          /*Script para verificar se o usuario
+          marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
+          $(function ($) { // on DOM ready (when the DOM is finished loading)
+              $('#agree').click(function () { // when the checkbox is clicked
+                  var checked = $('#agree').is(':checked'); // check the state
+                  $('#optIn').val(checked ? "I" : "O"); // set the value
+                  $('#optInSMS').val(checked ? "I" : "O"); // set the value
+
+              });
+              $('#optIn').triggerHandler("click"); // initialize the value
+              $('#optInSMS').triggerHandler("click"); // initialize the value
+          });
+
+      </script>
+      <script>
+          $(function getURL() {
+              var url_cadastro = window.location.href;
+              document.getElementById('URL_CADASTRO').value = url_cadastro;
+          });
+      </script>
     </section>
   </main>
 

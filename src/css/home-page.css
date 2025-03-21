@@ -451,6 +451,16 @@
   justify-content: center;
   padding: 52px 0;
 }
+@media screen and (min-width: 768px) {
+  .specialists-review {
+    padding: 80px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .specialists-review {
+    padding: 115px 0;
+  }
+}
 .specialists-review .wrapper {
   width: 92vw;
 }

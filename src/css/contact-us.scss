@@ -1,0 +1,208 @@
+$montserrat: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+$tenor_sans: "Tenor Sans", sans-serif;
+$xxl: 1500px;
+$xl: 1260px;
+$lg: 1024px;
+$xmd: 950px;
+$md: 768px;
+$sm: 400px;
+$xsm: 300px;
+$lime-green: #99D02C;
+$navy: #0C0150;
+$dark-navy: #161326;
+$olive-green: #989898;
+
+:root {
+  font-size: 10px;
+}
+
+main {
+  max-width: 100vw;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 460px;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+}
+
+.banner {
+  color: white;
+  height: 460px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 4vw 85.5px 4vw;
+  background-image: url(../img/fale-conosco-lg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: $md) {
+    padding: 0 6vw 85.5px 6vw;
+  }
+
+  @media screen and (min-width: $lg) {
+    padding: 85.5px 0;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+    line-height: 5.76rem;
+    font-family: $tenor_sans;
+    position: relative;
+    z-index: 101;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $lg) {
+      width: 1000px;
+    }
+  }
+
+}
+
+
+.form-area {
+  padding: 52px 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: $md) {
+    padding: 80px 4vw;
+  }
+
+  @media screen and (min-width: $lg) {
+    padding: 117px 0 81.5px 0;
+  }
+
+  .wrapper {
+    width: 92vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 52px;
+
+    @media screen and (min-width: $md) {
+      width: 88vw;
+      row-gap: 80px;
+    }
+
+    @media screen and (min-width: $lg) {
+      width: 1000px;
+      row-gap: 0;
+      flex-direction: row;
+      position: relative;
+    }
+
+    .form-info {
+      font-family: $roboto;
+      color: #656565;
+      font-size: 1.4rem;
+
+      @media screen and (min-width: $lg) {
+        width: 375px;
+      }
+    }
+
+    .form-container {
+      /* height: 744px; */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      background-color: white;
+      padding: 35px;
+      border-radius: 8px;
+
+      @media screen and (min-width: $md) {
+        /* height: 534px; */
+      }
+
+      @media screen and (min-width: $lg) {
+        /* height: 561px; */
+        width: 500px;
+        position: absolute;
+        right: 0;
+        top: -369px;
+        z-index: 120;
+      }
+
+      
+    }
+  }
+}
+
+.contact-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: $roboto;
+    width: 92vw;
+    margin-bottom: 35px;
+
+    @media screen and (min-width: $md) {
+      width: 88vw;
+      margin-bottom: 63.13px;
+    }
+
+    @media screen and (min-width: $lg) {
+      width: 1000px;
+      margin-bottom: 98px;
+    }
+  }
+
+  .main-branch-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    
+    .title {
+      text-transform: uppercase;
+      color: $lime-green;
+      font-size: 1.4rem;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .two-cols {
+      display: grid;
+      grid-auto-flow: column;
+      font-size: 1.6rem;
+      line-height: 1.92rem;
+      color: $navy;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+  }
+
+  .branch-info {
+    max-width: 500px;
+
+    .title {
+      text-transform: uppercase;
+      color: $lime-green;
+      font-size: 1.4rem;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .info-cluster {
+      font-size: 1.6rem;
+      line-height: 1.92rem;
+      color: $navy;
+      font-weight: 500;
+      margin-bottom: 17px;
+    }
+  }
+}

@@ -18,15 +18,15 @@
         <div class="nav-col">
           <h2>Institucional</h2>
           <ul class="nav-links">
-            <li><a href="<?= home_url(); ?>">Quem Somos</a></li>
-            <li><a href="<?= home_url(); ?>">Dados Cadastrais</a></li>
-            <li><a href="<?= home_url(); ?>">Fale Conosco</a></li>
-            <li><a href="<?= home_url(); ?>">Trabalhe Conosco</a></li>
-            <li><a href="<?= home_url(); ?>">Política de Privacidade</a></li>
-            <li><a href="<?= home_url(); ?>">Termos e Condições de Uso</a></li>
-            <li><a href="<?= home_url(); ?>">Recuperação Judicial</a></li>
-            <li><a href="<?= home_url(); ?>">Fale com o presidente</a></li>
-            <li><a href="<?= home_url(); ?>">Canal de Ética</a></li>
+            <li><a href="<?= home_url(); ?>/quem-somos">Quem Somos</a></li>
+            <li><a href="<?= home_url(); ?>/dados-cadastrais">Dados Cadastrais</a></li>
+            <li><a href="<?= home_url(); ?>/fale-conosco">Fale Conosco</a></li>
+            <li><a href="<?= home_url(); ?>/trabalhe-conosco">Trabalhe Conosco</a></li>
+            <li><a href="<?= home_url(); ?>/politica-de-privacidade">Política de Privacidade</a></li>
+            <li><a href="<?= home_url(); ?>/termos-e-condições-de-uso">Termos e Condições de Uso</a></li>
+            <li><a href="https://befly.com.br/fale-com-o-presidente/" target="_blank" rel="noopener">Fale com o presidente</a></li>
+            <li><a href="https://www.contatoseguro.com.br/pt/befly/codigo-de-etica-e-conduta" target="_blank" rel="noopener">Canal de Ética</a></li>
+            <li><a href="https://flytour.feedback.house/ouvidoria" target="_blank" rel="noopener">Ouvidoria</a></li>
           </ul>
         </div>
         <div class="nav-col">
@@ -34,16 +34,16 @@
             <h2>Serviços</h2>
             <ul class="nav-links">
               <li><a href="<?= home_url(); ?>">Folhetos & Cadernos</a></li>
-              <li><a href="<?= home_url(); ?>">Formulários</a></li>
-              <li><a href="<?= home_url(); ?>">Queens Club</a></li>
-              <li><a href="<?= home_url(); ?>">Blog</a></li>
+              <li><a href="<?= home_url(); ?>/formularios">Formulários</a></li>
+              <li><a href="<?= home_url(); ?>/queensclub/">Queens Club</a></li>
+              <li><a href="https://blog.queensberry.com.br/" target="_blank" rel="noopener">Blog</a></li>
             </ul>
           </div>
           <ul class="network-icons">
-            <li><a href="<?= home_url(); ?>"><i class="fa-brands fa-facebook"></a></i></li>
-            <li><a href="<?= home_url(); ?>"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="<?= home_url(); ?>"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/img/glassdoor-icon.png" alt="Perfil do Queensberry no Glassdoor"></a></li>
+            <li><a href="https://www.facebook.com/queensberry.viagens/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></a></i></li>
+            <li><a href="https://www.instagram.com/queensberryviagens/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/q1viagens" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Queensberry-Viagens-EI_IE2624710.13,32.htm" target="_blank" rel="noopener"><img src="<?= get_template_directory_uri(); ?>/src/img/glassdoor-icon.png" alt="Perfil do Queensberry no Glassdoor"></a></li>
           </ul>
         </div>
       </nav>
