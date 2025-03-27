@@ -112,12 +112,8 @@
                       throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
                     } else {
                       jQuery.post(
-                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades_recaptcha",
-                          formData,
-                          function (data) {
-                            
-                            
-                          }
+                        "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades_recaptcha",
+                        formData
                       ).done((res) => {
                           console.log(res);
                           $("#actionField3").val("queensberry_receba_novidades");

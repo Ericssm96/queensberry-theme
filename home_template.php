@@ -536,30 +536,28 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
 
           $(document).ready(() => {
 
-              $("#f_queensberry_pop_up_cadastro-pop-up-cadastro").on("submit", (e) => {
+              $("#f_queensberry_pop_up_cadastro").on("submit", (e) => {
                   e.preventDefault();
 
                   const perfil = $("select[name='PERFIL']").val();
 
-                  if (!perfil || perfil == "") {
-                      // Se não houver perfil selecionado, exibe o alert
-                      alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
-                      return;  // Interrompe o envio do formulário
+                  if (!perfil || perfil === "") {
+                    // Se não houver perfil selecionado, exibe o alert
+                    alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
+                    return;  // Interrompe o envio do formulário
                   }
 
                   if (perfil === "passageiro") {
                       // Se for "passageiro", envia para o backend (Responsys)
                       jQuery.post(
-                          "https://queensberryforms.abc7484.sg-host.com/wp-admin/admin-post.php?action=queensberry_popup_cadastro",
+                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_popup_cadastro",
                           $("#f_queensberry_pop_up_cadastro").serialize(),
                           function (data) {
-                              // Callback para lidar com a resposta
-                              console.log(data); // Exibe a resposta no console
+                            // Callback para lidar com a resposta
+                            console.log(data); // Exibe a resposta no console
+                            alert("Cadastro concluído com sucesso!")
                           }
-                      ).done(() => {
-                          // Redireciona para a página de "Obrigado" após o envio
-                          
-                      });
+                      )
                   } else if (perfil === "agente") {
                       // Se for "agente", envia para Eloqua
                       jQuery.ajax({
@@ -568,14 +566,12 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
                           data: jQuery("#f_queensberry_pop_up_cadastro").serialize(),
                           success: () => {
                               console.log("Eloqua ok");
+                              alert("Cadastro concluído com sucesso!")
                           },
                           error: (res) => {
                               console.log("Eloqua fail", res);
                           },
-                      }).done(() => {
-                          // Redireciona para a página de "Obrigado" após o envio
-                          
-                      });
+                      })
                   }
               });
           });
@@ -600,8 +596,8 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
           }
 
           window.onload = WaitUntilCustomerGUIDIsRetrieved;
-          _elqQ = _elqQ || [];
-          _elqQ.push(['elqGetCustomerGUID']);
+          /* _elqQ = _elqQ || [];
+          _elqQ.push(['elqGetCustomerGUID']); */
       </script>
 
       <script>

@@ -337,12 +337,12 @@ function queensberry_handle_popup_cadastro()
                 $profile_ext_result = queensberry_responsys_profile_extension($profile_ext_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/events/qb_receba_novidades');
 
                 if ($profile_ext_result["status"] == 200) {
-                    /*wp_send_json_success([
-                        "message" => "Cadastro concluído com sucesso!",
+                    wp_send_json_success([
+                        "message" => "OK",
                         "data_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
                         "supp_result" => $supplemental_register_result 
-                    ]);*/
+                    ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
                 }
