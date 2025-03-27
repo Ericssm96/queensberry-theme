@@ -1,19 +1,461 @@
-<?php get_header(); ?>
+<?php 
+/*
+    Template Name: Fale Conosco Template
+*/
+get_header(); ?>
 
 <main>
-  <div class="banner-overlay"></div>
+  <?php
+    if(is_user_logged_in()) {
+      echo <<<ELEMENT
+      <div class="banner-overlay" style="top: 32px;">
+      </div>
+      ELEMENT;
+    } else {
+      echo <<<ELEMENT
+      <div class="banner-overlay" style="top: 0px;">
+      </div>
+      ELEMENT;
+    }
+  ?>
   <section class="banner">
       <h1>Fale Conosco</h1>
   </section>
   <section class="form-area">
-    <div class="wrapper">
-      <div class="form-info">
-        <p>Bem-vindo ao canal de atendimento Queensberry. Para enviar sugestões, obter informações ou esclarecer dúvidas, selecione um assunto no formulário ao lado. Se preferir, entre em contato também por telefone (atendimento de segunda à sexta, das 9h às 18h).</p>
+      <div class="wrapper">
+        <div class="form-info">
+          <p>Bem-vindo ao canal de atendimento Queensberry. Para enviar sugestões, obter informações ou esclarecer
+            dúvidas, selecione um assunto no formulário ao lado. Se preferir, entre em contato também por telefone
+            (atendimento de segunda à sexta, das 9h às 18h).</p>
+        </div>
+        <article class="form-container">
+          <form id="f_queensberry_fale_conosco" name="f_queensberry_fale_conosco" method="POST">
+            <input type="hidden" id="actionField" name="action" value="queensberry_fale_conosco_recaptcha">
+
+            <!-- Eloqua -->
+            <input type="hidden" name="elqFormName" value="queensberry-fale-conosco">
+            <input type="hidden" name="elqSiteID" value="2864845">
+            <input type="hidden" name="elqCustomerGUID" value="">
+            <input type="hidden" name="elqCookieWrite" value="0">
+
+
+            <!-- Responsys -->
+            <input type="hidden" name="_ri_"
+              value="X0Gzc2X%3DAQjkPkSRWQG1SszaHvzcXON5k0mzaSKb4cfIpfK4zbHDCVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG2e9n6TJuwEzb8zgdnknUzazbyzcsdkPM7pza">
+            <input type="hidden" name="_ei_" value="EYl0W1v1-DnBaKPyOAQ9eNc">
+            <input type="hidden" name="_di_" value="u609bmeb2lpifgqckful95hnl4g4djuv8rh5sa7qh3771chd5eog">
+            <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+            <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
+            <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Fale Conosco - Queensberry">
+            <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+            <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber">
+
+            <!-- Formulário -->
+            <label for="ASSUNTO">Assunto</label>
+            <select required name="ASSUNTO" id="ASSUNTO">
+              <option value="">- Selecione o Assunto - </option>
+              <option value="Assessoria de Imprensa">Assessoria de Imprensa</option>
+              <option value="Atendimento ao Agente de Viagens">Atendimento ao Agente de Viagens</option>
+              <option value="Atendimento ao Passageiro">Atendimento ao Passageiro</option>
+              <option value="Pós Vendas">Pós Vendas</option>
+              <option value="Viagens de Incentivo">Viagens de Incentivo</option>
+            </select>
+
+            <input type="text" placeholder="Nome*" required name="FIRST_NAME">
+            <input type="text" placeholder="Sobrenome*" required name="LAST_NAME">
+            <input type="text" placeholder="CPF" maxlength="14" name="CPF_USUARIO">
+            <input type="text" placeholder="E-mail*" required name="EMAIL_ADDRESS_">
+            <input type="text" placeholder="Telefone()*" required maxlength="14" name="MOBILE_NUMBER_" id="celular">
+            <textarea placeholder="Mensagem*" required name="MENSAGEM"></textarea>
+
+            <div class="checkbox-area">
+              <span class="custom-checkbox">
+                <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
+                <label for="RECEBER_COMUNICACOES" class="checkmark"></label>
+              </span>
+              <label for="RECEBER_COMUNICACOES" class="text-label">Aceito receber comunicações e informações da Queensberry</label>
+            </div>
+
+            <div class="submit-area">
+              <div class="recaptcha-box">
+                <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3"></div>
+              </div>
+              
+              <button type="submit" class="submit-btn">Enviar</button>
+            </div>
+          </form>
+          <script>
+            var formData = new FormData(jQuery("#f_queensberry_fale_conosco")[0]); // Use FormData para incluir anexos
+
+
+            $(document).ready(() => {
+              $("#celular").mask("(00) 00000-0000");
+
+              $("#celular").on("blur", () => {
+                let nationalCelNumber = $("#celular").val();
+                let cleanNumber = nationalCelNumber.replace(/\D/g, "");
+                let fullNumber = `55${cleanNumber}`;
+                $("#fullPhoneNumber").val(fullNumber);
+              })
+
+              $("#f_queensberry_fale_conosco").on("submit", (e) => {
+                e.preventDefault();
+
+                let nationalCelNumber = $("#celular").val();
+                let cleanNumber = nationalCelNumber.replace(/\D/g, "");
+                let fullNumber = `55${cleanNumber}`;
+                $("#fullPhoneNumber").val(fullNumber);
+                const captchaResponse = grecaptcha.getResponse();
+
+                if(captchaResponse.length <= 0) {
+                  alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
+
+                  throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
+                } else {
+                  jQuery
+                  .ajax({
+                    type: "POST",
+                    url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco_recaptcha",
+                    data: jQuery("#f_queensberry_fale_conosco").serialize(),
+                    success: (data) => {
+                      jQuery("#actionField").val("queensberry_fale_conosco");
+                      formData = new FormData(this);
+                      console.log(data);
+                      console.log(document.querySelector("#actionField").value);
+
+                      if(data.message === "OK") {
+                        jQuery
+                          .ajax({
+                            type: "POST",
+                            url: "https://s2864845.t.eloqua.com/e/f2",
+                            data: jQuery("#f_queensberry_fale_conosco").serialize(),
+                            success: () => {
+                              // jQuery("#actionField").val("envio_seja_parceiro");
+                              // formData = new FormData(this);
+                              console.log("Eloqua ok");
+                              // console.log(document.querySelector("#actionField").value);
+                            },
+                            error: (res) => {
+                              console.log("Eloqua fail", res);
+                            },
+                          })
+                          .then(() => {
+                            jQuery.post(
+                              "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
+                              $("#f_queensberry_fale_conosco").serialize(),
+                              function (data) {
+                                // Callback para lidar com a resposta
+                                console.log(data); // Exibe a resposta no console
+                              }
+                            ).done(() => {
+
+                            });
+                        });
+                      }
+                    },
+                    error: (res) => {
+                      console.log("Recaptcha Fail", res);
+                    },
+                  })
+                }
+              })
+            })
+          </script>
+
+          <script>
+            /*Script para verificar se o usuario
+            marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
+            $(function ($) { // on DOM ready (when the DOM is finished loading)
+              $('#agree').click(function () { // when the checkbox is clicked
+                var checked = $('#agree').is(':checked'); // check the state
+                $('#optIn').val(checked ? "I" : "O"); // set the value
+                $('#optInSMS').val(checked ? "I" : "O"); // set the value
+
+              });
+              $('#optIn').triggerHandler("click"); // initialize the value
+              $('#optInSMS').triggerHandler("click"); // initialize the value
+            });
+
+          </script>
+          <script>
+            $(function getURL() {
+              var url_cadastro = window.location.href;
+              document.getElementById('URL_CADASTRO').value = url_cadastro;
+            });
+          </script>
+
+
+          <script type="text/javascript">
+            var timerId = null, timeout = 5;
+
+            function WaitUntilCustomerGUIDIsRetrieved() {
+              if (!!(timerId)) {
+                if (timeout === 0) {
+                  return;
+                }
+                if (typeof this.GetElqCustomerGUID === 'function') {
+                  document.forms["f_queensberry_fale_conosco"].elements["elqCustomerGUID"].value = GetElqCustomerGUID();
+                  return;
+                }
+                timeout -= 1;
+              }
+              timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
+              return;
+            }
+
+            window.onload = WaitUntilCustomerGUIDIsRetrieved;
+            _elqQ = _elqQ || [];
+            _elqQ.push(['elqGetCustomerGUID']);
+          </script>
+
+          <style>
+            #f_queensberry_fale_conosco {
+              display: flex;
+              flex-direction: column;
+            }
+
+            #f_queensberry_fale_conosco h2 {
+              font-size: 22px;
+            }
+
+            #f_queensberry_fale_conosco label {
+              margin-bottom: 5px;
+            }
+
+            #f_queensberry_fale_conosco {
+              display: flex;
+              flex-direction: column;
+            }
+
+            #f_queensberry_fale_conosco .column-100 {
+              display: flex;
+              flex-direction: column;
+              gap: 31px;
+            }
+
+            #f_queensberry_fale_conosco .row-100 {
+              display: flex;
+              flex-direction: row;
+              gap: 104px;
+              width: 100%;
+            }
+
+            #f_queensberry_fale_conosco .row-50 {
+              display: flex;
+              flex-direction: row;
+              gap: 32px;
+              width: 50%;
+            }
+
+            #f_queensberry_fale_conosco h2,
+            h3 {
+              color: #04004f;
+              font-family: "Tenor Sans", sans-serif;
+              font-weight: 400;
+              font-size: 23px;
+              line-height: 28px;
+              letter-spacing: -1px;
+              text-transform: uppercase;
+              margin: 0;
+            }
+
+            #f_queensberry_fale_conosco h3 {
+              margin-bottom: 31px;
+            }
+
+            #f_queensberry_fale_conosco input,
+            select,
+            textarea {
+              border: none;
+              border-bottom: 1px solid #E5E9EF;
+              border-radius: 0;
+              padding: 6px 2px;
+              outline: none;
+              margin-bottom: 31px;
+            }
+
+            #f_queensberry_fale_conosco input:focus,
+            select:focus {
+              border-bottom: 1px solid #04004f;
+            }
+
+            #f_queensberry_fale_conosco input::placeholder,
+            select::placeholder,
+            select {
+              font-size: 14px;
+              font-family: "Sora", sans-serif;
+              font-weight: 400;
+
+            }
+
+            #f_queensberry_fale_conosco hr {
+              fill: #9ad128;
+              color: #9ad128;
+              background-color: #9ad128;
+              height: 3px;
+            }
+
+
+            #f_queensberry_fale_conosco input[type="radio"] {
+              display: none;
+              /* Oculta o input padrão */
+            }
+
+            #f_queensberry_fale_conosco label {
+              font-size: 14px;
+              font-family: "Roboto", sans-serif;
+              color: #99d02c;
+            }
+
+            #f_queensberry_fale_conosco textarea {
+              height: 80px;
+            }
+
+            #f_queensberry_fale_conosco .checkbox-area {
+              display: flex;
+              column-gap: 5px;
+              align-items: center;
+              margin-bottom: 30px;
+            }
+
+            #f_queensberry_fale_conosco .checkbox-area .text-label {
+              font-size: 1.4rem;
+              font-family: "Roboto", sans-serif;
+              color: #656565;
+              line-height: 1.5;
+              margin-bottom: 0;
+            }
+
+            #f_queensberry_fale_conosco .custom-checkbox {
+              height: 18px;
+              width: 18px;
+              cursor: pointer;
+              display: inline-block;
+            }
+
+            #f_queensberry_fale_conosco .custom-checkbox input {
+              display: none;
+            }
+
+            #f_queensberry_fale_conosco .custom-checkbox input:checked ~ .checkmark {
+              -webkit-box-shadow: inset 0px 0px 3px 5px #99D20C;
+              -moz-box-shadow: inset 0px 0px 3px 5px #99D20C;
+              box-shadow: inset 0px 0px 3px 5px #99D20C;
+            }
+
+            #f_queensberry_fale_conosco .checkmark {
+              width: 100%;
+              height: 100%;
+              border: 1px solid rgba(80, 80, 80, 0.356);
+              display: inline-block;
+              border-radius: 4px;       
+              margin-bottom: 0;       
+            }
+
+            #f_queensberry_fale_conosco .submit-area {
+              display: flex;
+              flex-direction: column;
+              row-gap: 50px;
+            }
+
+            
+            #f_queensberry_fale_conosco .submit-area .submit-btn {
+              background-color: #9ad128;
+              border: none;
+              border-radius: 5px;
+              text-transform: uppercase;
+              width: 100%;
+              padding: 16px;
+              color: #000000;
+              font-family: "Roboto", sans-serif;
+              font-weight: 700;
+              font-size: 12px;
+              cursor: pointer;
+            }
+
+            @media screen and (min-width: 768px) {
+              #f_queensberry_fale_conosco .submit-area .submit-btn {
+                width: calc(50% - 2.5px);
+              }
+            }
+
+            @media screen and (min-width: 1260px) {
+              #f_queensberry_fale_conosco .submit-area .submit-btn {
+                width: calc(100% - 305px);
+              }
+            }
+
+            #f_queensberry_fale_conosco .submit-btn:hover {
+              background-color: #04004f;
+              color: #ffffff;
+            }
+
+            @media screen and (min-width: 768px) {
+              #f_queensberry_fale_conosco .submit-area {
+                flex-direction: row;
+                row-gap: 0;
+                column-gap: 5px;
+              }
+            }
+
+            #f_queensberry_fale_conosco .submit-area .recaptcha-box {
+              height: 74px;
+              /* background-color: #656565; */
+              width: 80%;
+            }
+
+            @media screen and (min-width: 768px) {
+              #f_queensberry_fale_conosco .submit-area .recaptcha-box {
+                height: 74px;
+                background-color: #656565;
+                width: calc(50% - 2.5px);
+              }
+            }
+
+            @media screen and (min-width: 1260px) {
+              #f_queensberry_fale_conosco .submit-area .recaptcha-box {
+                height: 74px;
+                background-color: #656565;
+                width: 300px;
+              }
+            }
+
+            @media screen and (max-width: 1024px) {
+              .title {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 12px;
+                justify-content: space-between;
+              }
+
+              .title p {
+                font-family: "Sora", sans-serif;
+                font-weight: 400;
+                font-size: 12px;
+                text-align: end;
+              }
+
+
+              #f_queensberry_fale_conosco .row-100 {
+                display: flex;
+                flex-direction: column;
+                gap: 31px;
+                width: 100%;
+              }
+
+              #f_queensberry_fale_conosco .row-50 {
+                display: flex;
+                flex-direction: column;
+                gap: 31px;
+                width: 100%;
+              }
+
+              
+            }
+          </style>
+        </article>
       </div>
-      <article class="form-container">
-      </article>
-    </div>
-  </section>
+    </section>
   <section class="contact-list">
     <div class="wrapper">
       <div class="main-branch-info">

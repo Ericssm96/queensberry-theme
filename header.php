@@ -5,9 +5,12 @@
   <?php wp_head(); ?>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   <?php
     $site_title = get_bloginfo('name');
   ?>
@@ -15,8 +18,8 @@
 </head>
 
 <body x-data="{
-  isGalleryModalOpen: false,
-}" x-bind:style="isGalleryModalOpen ? 'overflow: hidden;' : 'overflow: auto;'">
+  isModalOpen: false,
+}" x-bind:style="isModalOpen ? 'overflow: hidden;' : 'overflow: auto;'">
   <nav
     x-bind:class="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? 'desktop-navigation white-nav' : 'desktop-navigation'"
     x-data="{
@@ -152,7 +155,8 @@
               <div class="content-b">
                 <ul class="left-col">
                   <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-                  <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>
+                  <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>|
+                  <li><a href="<?= home_url(); ?>/category/driveness-experience">Driveness Experience</a></li>|
                   <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
                   <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
                   <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil In</a></li>

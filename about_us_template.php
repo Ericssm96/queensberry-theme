@@ -6,6 +6,7 @@ get_header();
 ?>
 
 <main>
+  
   <section class="team-info">
     <header class="header-wrapper">
         <h1>Quem Somos</h1>

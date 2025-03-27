@@ -118,6 +118,23 @@ main * {
   color: #666;
   font-size: 1.2rem;
 }
+.quick-info .wrapper .info-area .weather-area .areas {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.quick-info .wrapper .info-area .weather-area .areas a {
+  text-decoration: underline;
+  color: #666;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+}
+.quick-info .wrapper .info-area .weather-area .areas .separator {
+  font-size: 6px;
+  line-height: 20px;
+}
 
 /* .price-table-overlay {
   display: flex;
@@ -325,9 +342,11 @@ main * {
   font-size: 1.7rem;
   color: #9c9c9c;
 }
-.general-info .container .info-text .share-links a {
+.general-info .container .info-text .share-links .trigger {
   font-size: 1.7rem;
   color: #9c9c9c;
+  border: none;
+  background-color: transparent;
 }
 
 .price-info-toggle {
@@ -410,7 +429,7 @@ main * {
   color: white;
   text-align: center;
 }
-.price .get-more-info a {
+.price .get-more-info .cta {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -580,4 +599,146 @@ main * {
   z-index: 91;
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
+}
+
+.form-overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 901;
+}
+.form-overlay form {
+  background-color: white;
+  position: relative;
+  z-index: 902;
+  width: 100%;
+  overflow-y: auto;
+}
+@media screen and (min-width: 768px) {
+  .form-overlay form {
+    width: 483px;
+  }
+}
+.form-overlay form .close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #656565;
+}
+.form-overlay form h2 {
+  color: #091360;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  padding: 16px;
+  background-color: #FAFAFA;
+}
+.form-overlay form .inner-form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  row-gap: 25px;
+}
+.form-overlay form .inner-form .input-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.form-overlay form .inner-form .input-area label {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  color: #99D02C;
+}
+.form-overlay form .inner-form .input-area input, .form-overlay form .inner-form .input-area select {
+  border: none;
+  border-bottom: 1px solid #e5e9ef;
+  padding: 5px;
+  height: 30px;
+  max-height: 30px;
+  color: #656565;
+}
+.form-overlay form .inner-form .input-area input ::-moz-placeholder, .form-overlay form .inner-form .input-area select ::-moz-placeholder {
+  color: #656565;
+}
+.form-overlay form .inner-form .input-area input ::placeholder, .form-overlay form .inner-form .input-area select ::placeholder {
+  color: #656565;
+}
+.form-overlay form .inner-form .input-area textarea {
+  border: none;
+  border-bottom: 1px solid #e5e9ef;
+  padding: 5px;
+  color: #656565;
+  height: 80px;
+  max-height: 80px;
+  font-family: "Roboto", sans-serif;
+}
+.form-overlay form .inner-form .input-area textarea ::-moz-placeholder {
+  color: #656565;
+}
+.form-overlay form .inner-form .input-area textarea ::placeholder {
+  color: #656565;
+}
+.form-overlay form .inner-form .checkbox-area {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  align-items: center;
+}
+.form-overlay form .inner-form .checkbox-area .custom-checkbox {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+.form-overlay form .inner-form .checkbox-area .custom-checkbox input {
+  display: none;
+}
+.form-overlay form .inner-form .checkbox-area .custom-checkbox input:checked ~ .checkmark {
+  box-shadow: inset 0px 0px 3px 5px #99D02C;
+}
+.form-overlay form .inner-form .checkbox-area .custom-checkbox .checkmark {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(80, 80, 80, 0.356);
+  display: inline-block;
+  border-radius: 4px;
+}
+.form-overlay form .inner-form .checkbox-area .text-label {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  color: #656565;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+.form-overlay form .inner-form .recaptcha-box {
+  margin-top: 10px;
+  margin: 0 auto;
+}
+.form-overlay form .inner-form .submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0C0150;
+  background-color: #99D02C;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 auto;
+}
+.form-overlay form .inner-form .submit-btn:hover {
+  background-color: #0C0150;
+  color: white;
 }/*# sourceMappingURL=program-page.css.map */

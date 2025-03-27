@@ -26,7 +26,6 @@ main * {
   align-items: center;
   box-sizing: border-box;
   background-color: cadetblue;
-  background-image: url(../img/search.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,7 +34,7 @@ main * {
   box-sizing: border-box;
 }
 .search-banner .wrapper {
-  width: 90vw;
+  width: 92vw;
   height: 460px;
   display: flex;
   flex-direction: column;
@@ -43,17 +42,63 @@ main * {
   color: white;
   position: relative;
   z-index: 101;
-  padding: 30px 0;
 }
 @media screen and (min-width: 768px) {
   .search-banner .wrapper {
-    width: 92vw;
+    width: 88vw;
   }
 }
 @media screen and (min-width: 1260px) {
   .search-banner .wrapper {
     width: 1170px;
   }
+}
+.search-banner .wrapper .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 450px;
+  padding-bottom: 30px;
+}
+.search-banner .wrapper .content h1 {
+  color: white;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-family: "Tenor Sans", sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 32px;
+  letter-spacing: -1px;
+  padding: 30px 0;
+}
+@media screen and (min-width: 768px) {
+  .search-banner .wrapper .content h1 {
+    font-size: 4.8rem;
+  }
+}
+.search-banner .wrapper .content p {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+.search-banner .wrapper .content .cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  max-width: 140px;
+  color: #0C0150;
+  background-color: #99D02C;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-end;
 }
 
 .search-related-content {

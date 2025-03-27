@@ -1,0 +1,122 @@
+main {
+  box-sizing: border-box;
+}
+main * {
+  box-sizing: border-box;
+}
+
+.shaded-overlay {
+  height: 460px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 150;
+}
+
+.banner {
+  background-image: url(../img/banner-qclb-cadastro.jpg);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.banner .title-area {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .banner .title-area {
+    margin-bottom: 85px;
+  }
+}
+.banner .title-area h1 {
+  color: white;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-family: "Tenor Sans", sans-serif;
+  text-transform: uppercase;
+  width: 92vw;
+  position: relative;
+  z-index: 151;
+}
+@media screen and (min-width: 768px) {
+  .banner .title-area h1 {
+    font-size: 4.8rem;
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .banner .title-area h1 {
+    width: 1000px;
+  }
+}
+.banner .title-area strong {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #99D02C;
+}
+
+.form-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.form-area form {
+  width: 92vw;
+}
+@media screen and (min-width: 768px) {
+  .form-area form {
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .form-area form {
+    width: 1000px;
+  }
+}
+.form-area form .submit-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .form-area form .submit-area {
+    flex-direction: row;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+.form-area form .submit-area .recaptcha-box {
+  height: 74px;
+  width: 300px;
+  background-color: #989898;
+}
+.form-area form .submit-area .submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0C0150;
+  background-color: #99D02C;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  width: 230px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+}
+.form-area form .submit-area .submit-btn:hover {
+  background-color: #0C0150;
+  color: white;
+}/*# sourceMappingURL=queensclub-register.css.map */

@@ -358,7 +358,7 @@ get_header();
         } 
       }
     }">
-<?php
+  <?php
     if(is_user_logged_in()) {
       echo <<<ELEMENT
       <div class="shaded-overlay" style="top: 32px;">
@@ -370,7 +370,7 @@ get_header();
       </div>
       ELEMENT;
     }
-    ?>
+  ?>
     <?php 
     if(sanitize_title($category_title) === "brasil-in") {
       ?>

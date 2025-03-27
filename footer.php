@@ -48,32 +48,155 @@
         </div>
       </nav>
       <section class="form-section">
-        <form action="/" class="newsletter-form">
+        <form id="f_queensberry_receba_novidades" action="/" class="newsletter-form">
+          <input type="hidden" id="actionField3" name="action" value="queensberry_receba_novidades_recaptcha">
+
+          <!-- Eloqua -->
+          <input type="hidden" name="elqFormName" value="queensberry-newsletter">
+          <input type="hidden" name="elqSiteID" value="2864845">
+          <input type="hidden" name="elqCustomerGUID" value="">
+          <input type="hidden" name="elqCookieWrite" value="0">
+
+          <!-- Responsys -->
+          <input type="hidden" name="_ri_"
+              value="X0Gzc2X%3DAQjkPkSRWQG3IHmhTHzcn8K72I2zfGItDUp4G4jzf5RzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG5YElTlcCLrzf3j23eojPBzcP6kufR8zbb">
+          <input type="hidden" name="_ei_" value="EZG5N9k5REf3zveZ6bm0rcg">
+          <input type="hidden" name="_di_" value="lfbgbm7m1bbva1iuk9gjbrdj77s9ndl30c1bjvbem2898cehfk10">
+          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+          <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
+          <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Newsletter Receba Novidades - Queensberry">
+          <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
           <div class="fillable-fields">
             <header class="title-area">
               <h2>Receba Novidades</h2>
               <p>Cadastre seu e-mail</p>
             </header>
-            <input type="text" placeholder="Nome" />
-            <input type="email" placeholder="E-mail" />
-            <select name="TIPO_USUARIO" id="">
+            <input type="text" name="FIRST_NAME" placeholder="Nome" />
+            <input type="email" name="EMAIL_ADDRESS_" placeholder="E-mail" />
+            <select name="PERFIL" id="">
               <option value="PASSAGEIRO" selected>Passageiro</option>
               <option value="AGENTE">Agente</option>
             </select>
             <div class="checkbox-field">
-              <input type="checkbox" name="RECEBER_COMUNICACOES" id="iptContactAcceptance">
-              <label for="iptContactAcceptance">Aceito receber comunicações e informações da Queensberry</label>
+              <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
+              <label for="RECEBER_COMUNICACOES">Aceito receber comunicações e informações da Queensberry</label>
             </div>
           </div>
           <div class="submit-area">
-            <div class="squarey-recaptcha-box"></div>
-            <button class="submit-btn">Cadastrar</button>
+            <div class="squarey-recaptcha-box">
+              <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3" data-size="compact" data-theme="dark"></div>
+            </div>
+            <button type="submit" class="submit-btn">Cadastrar</button>
           </div>
         </form>
         <div class="safety-watermark">
           <span class="divider"></span>
           <img src="<?= get_template_directory_uri(); ?>/src/img/sectigo-watermark.jpg" alt="Image with text: Secured by Sectigo">
         </div>
+        <script>
+            var formData = new FormData(jQuery("#f_queensberry_receba_novidades")[0]); // Use FormData para incluir anexos
+
+
+            $(document).ready(() => {
+
+                $("#f_queensberry_receba_novidades").on("submit", (e) => {
+                    e.preventDefault();
+
+                    let perfil = $("select[name='PERFIL']").val();
+                    let formData = $("#f_queensberry_receba_novidades").serialize();
+                    const captchaResponse = grecaptcha.getResponse();
+
+                    if(captchaResponse.length <= 0) {
+                      alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
+
+                      throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
+                    } else {
+                      jQuery.post(
+                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades_recaptcha",
+                          formData,
+                          function (data) {
+                            $("#actionField3").val("queensberry_receba_novidades");
+                            formData = $("#f_queensberry_receba_novidades").serialize();
+                            if(data.message === "OK") {
+                              if (perfil === "passageiro") {
+                                // Enviar para Responsys
+                                jQuery.post(
+                                  "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
+                                  formData,
+                                  function (data) {
+                                    console.log("Responsys ok", data);
+                                  }
+                                ).fail((res) => {
+                                  console.log("Responsys fail", res);
+                                });
+                              } else {
+                                // Enviar para Eloqua
+                                jQuery.ajax({
+                                  type: "POST",
+                                  url: "https://s2864845.t.eloqua.com/e/f2",
+                                  data: formData,
+                                  success: () => {
+                                      console.log("Eloqua ok");
+                                  },
+                                  error: (res) => {
+                                      console.log("Eloqua fail", res);
+                                  },
+                                });
+                            }
+                            }
+                          }
+                      ).fail((res) => {
+                          console.log("Recaptcha fail", res);
+                      });
+                    }
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            var timerId = null, timeout = 5;
+
+            function WaitUntilCustomerGUIDIsRetrieved() {
+                if (!!(timerId)) {
+                    if (timeout === 0) {
+                        return;
+                    }
+                    if (typeof this.GetElqCustomerGUID === 'function') {
+                        document.forms["f_queensberry_receba_novidades"].elements["elqCustomerGUID"].value = GetElqCustomerGUID();
+                        return;
+                    }
+                    timeout -= 1;
+                }
+                timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
+                return;
+            }
+
+            window.onload = WaitUntilCustomerGUIDIsRetrieved;
+            _elqQ = _elqQ || [];
+            _elqQ.push(['elqGetCustomerGUID']);
+        </script>
+
+        <script>
+            /*Script para verificar se o usuario
+            marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
+            $(function ($) { // on DOM ready (when the DOM is finished loading)
+                $('#agree').click(function () { // when the checkbox is clicked
+                    var checked = $('#agree').is(':checked'); // check the state
+                    $('#optIn').val(checked ? "I" : "O"); // set the value
+                    $('#optInSMS').val(checked ? "I" : "O"); // set the value
+
+                });
+                $('#optIn').triggerHandler("click"); // initialize the value
+                $('#optInSMS').triggerHandler("click"); // initialize the value
+            });
+
+        </script>
+        <script>
+            $(function getURL() {
+                var url_cadastro = window.location.href;
+                document.getElementById('URL_CADASTRO').value = url_cadastro;
+            });
+        </script>
       </section>
     </div>
   </div>

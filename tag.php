@@ -90,6 +90,52 @@ $countries_in_region = array_filter($all_countries_list, function($country_info)
 /* $countries_in_region = array_filter($all_countries_list, function($country_info, $key) use ($world_region) {
   return $country_info['regiao'] == $world_region;
 }); */
+$banner_img_name = "busca.jpg";
+
+
+switch(mb_strtolower($tag_title)) {
+  case "áfrica do sul":
+    $banner_img_name = "africadosul.jpg";
+    break;
+  case "egito":
+    $banner_img_name = "egito.jpg";
+    break;
+  case "quênia":
+    $banner_img_name = "quenia.jpg";
+    break;
+  case "marrocos":
+    $banner_img_name = "marrocos.jpg";
+    break;
+  case "tanzânia":
+    $banner_img_name = "tanzania.jpg";
+    break;
+  case "argentina:":
+    $banner_img_name = "argentina.jpg";
+    break;
+  case "chile:":
+    $banner_img_name = "chile.jpg";
+    break;
+  case "canada:":
+    $banner_img_name = "canada.jpg";
+    break;
+  case "estados unidos:":
+    $banner_img_name = "estadosunidos.jpg";
+    break;
+  case "méxico:":
+    $banner_img_name = "mexico.jpg";
+    break;
+  case "peru:":
+    $banner_img_name = "peru.jpg";
+    break;
+  case "brasil:":
+    $banner_img_name = "brasil.jpg";
+    break;
+  default:
+    $banner_img_name = "busca.jpg";
+}
+
+$banner_bg_img_url = get_template_directory_uri() . "/src/img/destinos/$banner_img_name";
+
 
 
 get_header();
@@ -109,7 +155,7 @@ get_header();
       ELEMENT;
     }
   ?>
-  <section class="search-banner">
+  <section class="search-banner" style="background-image: url(<?= $banner_bg_img_url ?>);">
     <div class="wrapper">
     </div>
   </section>

@@ -16,7 +16,9 @@ $json_videos_titles = json_encode($videos_titles, JSON_UNESCAPED_SLASHES | JSON_
 $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 ?>
     <div class="video-overlay"></div>
-    <main>
+    <main x-init="setTimeout(()=>{
+      isModalOpen = true;
+    }, 5000)">
     <section class="banner">
       <video id="video" poster="https://www.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
         <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.webm"
@@ -122,6 +124,8 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
               $query->the_post();
               $post_id = get_the_ID();
               $custom_data = get_post_meta($post_id, 'custom_data', true);
+
+              $program_info = $custom_data["ProgramInfo"];
               
               $program_name = $program_info["Descricao"];
 
@@ -435,89 +439,93 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
       </div>
     </section>
 
-    <section class="popup-form-overlay">
+    <section class="popup-form-overlay" x-show="isModalOpen">
       <form id="f_queensberry_pop_up_cadastro" name="f_queensberry_pop_up_cadastro" class="sign-up-form" method="POST">
-        <input type="hidden" name="action" value="queensberry_popup_cadastro">
 
-        <!-- Eloqua -->
-        <input type="hidden" name="elqFormName" value="queensberry-pop-up-cadastro">
-        <input type="hidden" name="elqSiteID" value="2864845">
-        <input type="hidden" name="elqCustomerGUID" value="">
-        <input type="hidden" name="elqCookieWrite" value="0">
+        <i class="fa-solid fa-xmark close-icon" @click="isModalOpen = false;"></i>
 
-        <!-- Responsys -->
-        <input type="hidden" name="_ri_"
-            value="X0Gzc2X%3DAQjkPkSRWQGzazcsJ6AbKrIB0a2vaLabgUpCnzceuwybVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG4TwrzbhWDWUINdjCsOv9y4pzbag2rEa6">
-        <input type="hidden" name="_ei_" value="EOFhGZUqGt_VmZAPvWQd4rs">
-        <input type="hidden" name="_di_" value="4n7tvcf4fs51837d46au3eocul9la5beeatniu923cdoafbbdf40">
-        <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
-        <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
-        <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário PopUp Cadastro - Queensberry">
-        <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
-        <!-- <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber"> -->
+        <header>
+          <h2>Receba Novidades</h2>
+          <p>Cadastre seu e-mail</p>
+        </header>
 
-        <!-- Formulário -->
-        <div class="input-area">
-          <label for="iptNome"></label>
-          <input type="text" id="iptNome" placeholder="Nome*" required name="FIRST_NAME">
+        <div class="form-content">
+          <input type="hidden" name="action" value="queensberry_popup_cadastro">
+          <!-- Eloqua -->
+          <input type="hidden" name="elqFormName" value="queensberry-pop-up-cadastro">
+          <input type="hidden" name="elqSiteID" value="2864845">
+          <input type="hidden" name="elqCustomerGUID" value="">
+          <input type="hidden" name="elqCookieWrite" value="0">
+          <!-- Responsys -->
+          <input type="hidden" name="_ri_"
+              value="X0Gzc2X%3DAQjkPkSRWQGzazcsJ6AbKrIB0a2vaLabgUpCnzceuwybVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG4TwrzbhWDWUINdjCsOv9y4pzbag2rEa6">
+          <input type="hidden" name="_ei_" value="EOFhGZUqGt_VmZAPvWQd4rs">
+          <input type="hidden" name="_di_" value="4n7tvcf4fs51837d46au3eocul9la5beeatniu923cdoafbbdf40">
+          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+          <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
+          <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário PopUp Cadastro - Queensberry">
+          <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+          <!-- <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber"> -->
+          <!-- Formulário -->
+          <div class="input-area">
+            <label for="iptNome">Nome*</label>
+            <input type="text" id="iptNome" placeholder="Nome*" required name="FIRST_NAME">
+          </div>
+          <div class="input-area">
+            <label for="iptNome">Email*</label>
+            <input type="text" placeholder="email@exemplo.com" required name="EMAIL_ADDRESS_">
+          </div>
+          <div class="input-area">
+            <label for="slctPerfil">Perfil*</label>
+            <select id="slctPerfil" required name="PERFIL">
+              <option value="">- Selecione o Assunto - </option>
+              <option value="passageiro">Passageiro</option>
+              <option value="agente">Agente de Viagens</option>
+            </select>
+          </div>
+          <div class="input-area">
+            <label for="slctEstado">Estado*</label>
+            <select id="slctEstado" required name="ESTADO">
+              <option value="">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
+          <div class="checkbox-area">
+            <span class="custom-checkbox">
+              <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
+              <label for="RECEBER_COMUNICACOES" class="checkmark"></label>
+            </span>
+            <label class="text-label" for="RECEBER_COMUNICACOES">Aceito receber comunicações e informações da Queensberry</label>
+          </div>
+          <p>A nossa empresa está comprometida a proteger e respeitar sua privacidade, utilizaremos seus dados apenas para fins de marketing. Você pode alterar suas preferências a qualquer momento.</p>
+          <button class="submit-btn" type="submit">Cadastrar</button>
         </div>
-        <div class="input-area">
-          <label for="iptNome">Email*</label>
-          <input type="text" placeholder="email@exemplo.com" required name="EMAIL_ADDRESS_">
-        </div>
-
-
-        <div class="input-area">
-          <label for="slctPerfil">Perfil*</label>
-          <select id="slctPerfil" required name="PERFIL">
-            <option value="">- Selecione o Assunto - </option>
-            <option value="passageiro">Passageiro</option>
-            <option value="agente">Agente de Viagens</option>
-          </select>
-        </div>
-
-        <div class="input-area">
-          <label for="slctEstado">Estado*</label>
-          <select id="slctEstado" required name="ESTADO">
-            <option value="">Selecione</option>
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option>
-            <option value="SE">Sergipe</option>
-            <option value="TO">Tocantins</option>
-          </select>
-        </div>
-
-        <div class="checkbox-area">
-          <input type="checkbox" value="Sim" id="RECEBER_COMUNICACOES" name="RECEBER_COMUNICACOES" required>
-          <label for="RECEBER_COMUNICACOES"> Aceito receber comunicações e informações da Queensberry</label>
-        </div>
-
-        <p>A nossa empresa está comprometida a proteger e respeitar sua privacidade, utilizaremos seus dados apenas para fins de marketing. Você pode alterar suas preferências a qualquer momento.</p>
-
-        <button type="submit">Enviar</button>
       </form>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

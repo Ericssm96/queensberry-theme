@@ -1,0 +1,537 @@
+$montserrat: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+$tenor_sans: "Tenor Sans", sans-serif;
+$xxl: 1500px;
+$xl: 1260px;
+$lg: 1024px;
+$xmd: 950px;
+$md: 768px;
+$sm: 400px;
+$xsm: 300px;
+$lime-green: #99D02C;
+$navy: #0C0150;
+$dark-navy: #161326;
+$secondary-dark-navy: #091360;
+$olive-green: #989898;
+
+main {
+  box-sizing: border-box;
+
+  * {
+      box-sizing: border-box;
+  }
+}
+
+.banner {
+  background-image: url(../img/BANNER-qclb.jpg);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  h1 {
+    color: white;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-family: $tenor_sans;
+    text-transform: uppercase;
+    width: 92vw;
+    padding-bottom: 65px;
+    letter-spacing: -1px;
+
+    @media screen and (min-width: $md) {
+      font-size: 4.8rem;
+      width: 88vw;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 1000px;
+    }
+
+  }
+}
+
+.introduction-cards {
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    width: 92vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 80px 0;
+
+    @media screen and (min-width: $md) {
+      width: 88vw;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 100px 0;
+    }
+
+    @media screen and (min-width: $lg) {
+      width: 1000px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 157.5px;
+
+      .card-text {
+        font-family: $roboto;
+        color: #666;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .card-icon {
+        width: 98px;
+        height: 98px;
+      }
+    }
+
+    .separator {
+      @media screen and (min-width: $md) {
+        align-self: center;
+      }
+
+      .mb-separator {
+        display: inline-block;
+        font-size: 20px;
+  
+        @media screen and (min-width: $md) {
+          display: none;
+        }
+      }
+  
+      .lg-separator {
+        display: none;
+        font-size: 20px;
+  
+        @media screen and (min-width: $md) {
+          display: inline-block;
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+    
+  }
+}
+
+.first-cta-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  .wrapper {
+    width: 92vw;
+    /* height: 240px; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $md) {
+      flex-direction: row;
+      width: 88vw;
+      height: 360px;
+    }
+
+    
+
+    @media screen and (min-width: $lg) {
+      width: 1000px;
+    }
+
+    .content-area {
+      background-color: #e4e8ef;
+      width: 100%;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+
+      @media screen and (min-width: $md) {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        width: 50%;
+      }
+
+      @media screen and (min-width: $lg) {
+        padding: 80px 30px 80px 80px;
+      }
+
+      strong {
+        font-size: 2rem;
+        color: #04004F;
+        text-transform: uppercase;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        font-family: $tenor_sans;
+        font-weight: bold;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $lg) {
+          font-size: 2.4rem;
+        }
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        max-width: 230px;
+        color: $navy;
+        background-color: $lime-green;
+        font-size: 1.2rem;
+        font-family: $roboto;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+
+    .img-area {
+      width: 100%;
+      object-fit: cover;
+      
+
+      @media screen and (min-width: $md) {
+        width: 50%;
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        @media screen and (min-width: $md) {
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.second-cta-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  @media screen and (min-width: $md) {
+    margin-bottom: 105px;
+  }
+
+  .wrapper {
+    width: 92vw;
+    /* height: 240px; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+
+    @media screen and (min-width: $md) {
+      flex-direction: row;
+      width: 88vw;
+      height: 360px;
+    }
+
+    @media screen and (min-width: $lg) {
+      width: 1000px;
+    }
+
+    .content-area {
+      background-color: #e4e8ef;
+      width: 100%;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+
+      @media screen and (min-width: $md) {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+        width: 50%;
+      }
+
+      @media screen and (min-width: $lg) {
+        padding: 80px 50px 80px 35px;
+      }
+
+      strong {
+        font-size: 2rem;
+        color: #04004F;
+        text-transform: uppercase;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        font-family: $tenor_sans;
+        font-weight: bold;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $lg) {
+          font-size: 2.4rem;
+        }
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        max-width: 230px;
+        color: $navy;
+        background-color: $lime-green;
+        font-size: 1.2rem;
+        font-family: $roboto;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        border: none;
+      }
+    }
+
+    .img-area {
+      width: 100%;
+      object-fit: cover;
+
+      @media screen and (min-width: $md) {
+        width: 50%;
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        @media screen and (min-width: $md) {
+          border-bottom-right-radius: 0px;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.points-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0px;
+  background-image: url(../img/queensclub-pontos.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media screen and (min-width: $md) {
+    height: 360px;
+    padding: 0;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    background-color: rgba(0, 0, 0, 0.200);
+  }
+
+  .wrapper {
+    width: 92vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    position: relative;
+    z-index: 111;
+
+    @media screen and (min-width: $md) {
+      width: 88vw;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 1000px;
+    }
+
+    strong {
+      font-size: 2.4rem;
+      font-family: $tenor_sans;
+      color: white;
+      display: block;
+      text-align: center;
+      letter-spacing: 0px;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $navy;
+      background-color: $lime-green;
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: $roboto;
+      text-transform: uppercase;
+      width: 230px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+
+      &:hover {
+        background-color: $navy;
+        color: white;
+      }
+    }
+  }
+}
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  
+  @media screen and (min-width: $xl){
+    padding: 105px 0;
+  }
+
+  .wrapper {
+    width: 92vw;
+    
+
+    @media screen and (min-width: $md) {
+      width: 88vw;
+      
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 1000px;
+      padding-bottom: 70px;
+    }
+
+    h2 {
+      color: #b4b4b5;
+      font-size: 3rem;
+      font-family: $tenor_sans;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .swiper-button-next::after, .swiper-button-prev::after {
+      display: none;
+
+      @media screen and (min-width: $xl) {
+        display: flex;
+        
+      }
+    }
+
+    .swiper-pagination-bullet {
+      height: 12px;
+      width: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $lime-green;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 30px;
+      width: 80%;
+
+      @media screen and (min-width: $xl) {
+        flex-direction: row;
+        column-gap: 70px;
+
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+
+        @media screen and (min-width: $xl) {
+          width: 370px;
+          height: 260px;
+        }
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        width: 370px;
+
+        @media screen and (min-width: $xl) {
+          padding-right: 10px;
+        }
+
+        blockquote {
+          font-size: 1.6rem;
+          font-family: $roboto;
+          font-style: italic;
+          line-height: 1.5;
+          font-weight: 500;
+          color: #656565;
+        }
+
+        .quote-info {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+
+          strong {
+            font-weight: bold;
+            font-family: $roboto;
+            color: #0C0150;
+            font-size: 1.4rem;
+          }
+
+          p {
+            font-family: $roboto;
+            color: #212592;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}

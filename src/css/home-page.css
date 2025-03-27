@@ -930,6 +930,131 @@
   }
 }
 
+.popup-form-overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 810;
+  top: 0;
+  left: 0;
+}
+.popup-form-overlay * {
+  box-sizing: border-box;
+}
+.popup-form-overlay .sign-up-form {
+  padding: 20px;
+  width: 480px;
+  background-color: rgb(174, 202, 55);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 990;
+  color: #1E196B;
+  border-radius: 8px;
+}
+.popup-form-overlay .sign-up-form .close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 23px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.popup-form-overlay .sign-up-form header {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.popup-form-overlay .sign-up-form header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+.popup-form-overlay .sign-up-form header p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.popup-form-overlay .sign-up-form .form-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-family: "Roboto", sans-serif;
+}
+.popup-form-overlay .sign-up-form .form-content .input-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+.popup-form-overlay .sign-up-form .form-content .input-area label {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+.popup-form-overlay .sign-up-form .form-content .input-area input, .popup-form-overlay .sign-up-form .form-content .input-area select {
+  max-height: 30px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #656565;
+}
+.popup-form-overlay .sign-up-form .form-content .checkbox-area {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  margin-top: 5px;
+}
+.popup-form-overlay .sign-up-form .form-content .checkbox-area .custom-checkbox {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+.popup-form-overlay .sign-up-form .form-content .checkbox-area .custom-checkbox input {
+  display: none;
+}
+.popup-form-overlay .sign-up-form .form-content .checkbox-area .custom-checkbox input:checked ~ .checkmark {
+  box-shadow: inset 0px 0px 3px 5px #99D02C;
+  border: 2px solid rgba(230, 230, 230, 0.774);
+}
+.popup-form-overlay .sign-up-form .form-content .checkbox-area .custom-checkbox .checkmark {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid rgba(100, 100, 100, 0.541);
+  display: inline-block;
+  border-radius: 4px;
+}
+.popup-form-overlay .sign-up-form .form-content .checkbox-area .text-label {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: -2px;
+}
+.popup-form-overlay .sign-up-form .form-content p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.popup-form-overlay .sign-up-form .form-content .submit-btn {
+  width: 200px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #1E196B;
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 0px solid black;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .video-overlay {
   position: absolute;
   top: 0;

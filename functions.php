@@ -18,6 +18,8 @@ if (!function_exists('array_find')) {
     }
 }
 
+require_once "form-handler.php";
+
 function convert_string_to_uppercase_url($string) {
     // Convert the string to uppercase
     $string = mb_strtoupper($string);
@@ -76,8 +78,24 @@ function qb_assets_queue()
         wp_enqueue_style('qb-program-page', get_template_directory_uri() . "/src/css/program-page.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
-    if(is_page()) {
+    if(is_page('quem-somos')) {
         wp_enqueue_style('qb-about-us', get_template_directory_uri() . "/src/css/group-identity.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
+    if(is_page('queensclub')) {
+        wp_enqueue_style('qb-about-us', get_template_directory_uri() . "/src/css/queensclub.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
+    if(is_page('trabalhe-conosco')) {
+        wp_enqueue_style('qb-join-us', get_template_directory_uri() . "/src/css/join-us.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
+    if(is_page('fale-conosco')) {
+        wp_enqueue_style('qb-contact-us', get_template_directory_uri() . "/src/css/contact-us.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
+    if(is_page('queensclub-cadastro')) {
+        wp_enqueue_style('qb-quennsclub-register', get_template_directory_uri() . "/src/css/queensclub-register.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
     if(is_tag()) {
@@ -94,7 +112,7 @@ function qb_assets_queue()
     wp_enqueue_script('qb-alpine-scripts', "https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js", [], '1.0.0', ["in_footer" => false, "strategy" => "defer"]);
     /* wp_enqueue_script('qb-scripts', get_template_directory_uri() . "/src/js/scripts.js", [], '1.0.0', ["in_footer" => true, "strategy" => "defer"]); */
     wp_enqueue_script('qb-swiper-bundle', "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", [], '1.0.0', ["in_footer" => false]);
-    wp_enqueue_script('qb-recaptcha', "https://www.google.com/recaptcha/api.js", [], '1.0.0', ["in_footer" => false, "strategy" => "defer"]);
+    /* wp_enqueue_script('qb-recaptcha', "https://www.google.com/recaptcha/api.js", [], '1.0.0', ["in_footer" => false, "strategy" => "defer"]); */
     /* wp_enqueue_script('qb-axios', "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js", [], '1.0.0', ["in_footer" => false]); */
     /* wp_enqueue_script('qb-swiper-scripts', get_template_directory_uri() . "/src/js/swiper-config.js", ['qb-swiper-bundle'], '1.0.0', ["in_footer" => false, "strategy" => "defer"]); */
 
@@ -1571,7 +1589,6 @@ function custom_category_filter_results($request) {
 
     $query = new WP_Query($args);
 
-    // Prepare the response
     $posts_metadata = array();
     if ($query->have_posts()) {
         while ($query->have_posts()) {
@@ -1610,27 +1627,9 @@ function custom_category_filter_results($request) {
         }
     }
 
-    // Reset post data
     wp_reset_postdata();
 
-    // Return the response
+    
     return rest_ensure_response($posts_metadata);
 }
 
-/* function refresh_cache_files() {
-    // fetch_data_and_update_cached_items();
-    update_cache_files();
-    // You can also display a success message
-    add_action('admin_notices', function() {
-        echo '<div class="notice notice-success is-dismissible"><p>Function executed successfully!</p></div>';
-    });
-} */
-
-/* function refresh_program_pages() {
-    // fetch_data_and_update_cached_items();
-    create_posts_from_api_data();
-    // You can also display a success message
-    add_action('admin_notices', function() {
-        echo '<div class="notice notice-success is-dismissible"><p>Function executed successfully!</p></div>';
-    });
-} */

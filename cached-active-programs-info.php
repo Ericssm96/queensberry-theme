@@ -2858,7 +2858,7 @@ Imagens meramamente ilustrativas.',
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2021-12-13T16:55:52',
-    'DataAlteracao' => '2024-12-19T15:15:18',
+    'DataAlteracao' => '2025-03-21T22:10:36',
     'CaminhoImagem' => 'IAF235_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAF235.JPG',
@@ -2901,7 +2901,7 @@ Imagens meramamente ilustrativas.',
     'BloqueadoInterno' => 'S',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2024-04-06T00:38:50',
-    'DataAlteracao' => '2024-12-23T21:23:19',
+    'DataAlteracao' => '2025-03-24T21:10:45',
     'CaminhoImagem' => 'IAF389_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAF389.JPG',
@@ -2944,7 +2944,7 @@ Imagens meramamente ilustrativas.',
     'BloqueadoInterno' => 'S',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2024-04-24T14:16:38',
-    'DataAlteracao' => '2024-12-19T22:45:29',
+    'DataAlteracao' => '2025-03-21T22:31:04',
     'CaminhoImagem' => 'IAF390_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAF390.JPG',
@@ -2987,7 +2987,7 @@ Imagens meramamente ilustrativas.',
     'BloqueadoInterno' => 'S',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2024-04-24T17:45:19',
-    'DataAlteracao' => '2024-12-23T14:59:23',
+    'DataAlteracao' => '2025-03-24T15:12:19',
     'CaminhoImagem' => 'IAF391_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAF391.JPG',
@@ -3030,7 +3030,7 @@ Imagens meramamente ilustrativas.',
     'BloqueadoInterno' => 'S',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2024-04-25T17:35:06',
-    'DataAlteracao' => '2024-12-23T15:59:06',
+    'DataAlteracao' => '2025-03-24T17:30:11',
     'CaminhoImagem' => 'IAF392_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAF392.JPG',
@@ -4254,7 +4254,7 @@ Abr.02, 07, 12, 17 e 23
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2025-01-27T14:57:33',
-    'DataAlteracao' => '2025-01-28T14:44:55',
+    'DataAlteracao' => '2025-03-19T20:54:53',
     'CaminhoImagem' => 'IAL408_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAL408.JPG',
@@ -4275,7 +4275,7 @@ Abr.02, 07, 12, 17 e 23
     'ImagemPromocao' => '',
     'OrdemPromocao' => 0,
     'UrlAmigavel' => 'IAL408',
-    'ValidadePrograma' => '2026-12-31',
+    'ValidadePrograma' => '2026-03-31',
     'CodigoEcommerce' => 'IAL408',
     'PrecoSobConsulta' => 'N',
     'DescricaoPortal' => 'Explore a região dos lagos em uma jornada que começa em Puerto Varas, onde o charme das paisagens andinas se encontra com acomodações refinadas e experiências gastronômicas únicas. Continue até a enigmática Ilha de Chiloé, um refúgio de tradição e mistério, onde o luxo se mistura à autenticidade das culturas locais. Finalize em Santiago, onde o dinamismo urbano ganha um toque sofisticado com hotéis exclusivos e vinícolas renomadas, oferecendo uma imersão de bom gosto e elegância.	',
@@ -4283,6 +4283,132 @@ Abr.02, 07, 12, 17 e 23
     'DestaquePortalTexto' => '',
   ),
   98 => 
+  array (
+    'CodigoPrograma' => 'IAL409',
+    'Torre' => 'AL',
+    'GrupoProgramas' => 34,
+    'Descricao' => 'SÃO FRANCISCO - A CIDADE DAS COLINAS E DO CHARME',
+    'CategoriaCodigo' => 2,
+    'Detalhes' => 'São Francisco',
+    'Destino' => 'EUA',
+    'NomeNavio' => 'N',
+    'PortoEmbarqueNavio' => '',
+    'PortoDesembarqueNavio' => '',
+    'MaritimaCia' => 0,
+    'Bloqueado' => 'N',
+    'BloqueadoInterno' => 'N',
+    'MotivoBloqueio' => '',
+    'DataInclusao' => '2025-03-19T20:49:40',
+    'DataAlteracao' => '2025-03-24T13:25:16',
+    'CaminhoImagem' => 'IAL409_FOTO_ICONE.JPG',
+    'Mapa' => '',
+    'Banner' => 'DESTAQUE_IAL409.JPG',
+    'DescricaoResumida' => 'Golden Gate e a Baía Encantadora     ',
+    'Ordem' => 0,
+    'QtdParcelas' => 5,
+    'QtdDiasViagem' => 6,
+    'QtdNoitesViagem' => 5,
+    'ClasseHotelEc' => 0,
+    'ClasseHotelEv' => 0,
+    'SaidasPrograma' => 'Diárias 2025:  Mar.03 a 2026, Mar.31 ',
+    'LiberaSomenteTerrestre' => '',
+    'BloqueiaPromocao' => 'S',
+    'BloqueiaVendaTerrestre' => 'S',
+    'ImagemPromocao' => '',
+    'OrdemPromocao' => 0,
+    'UrlAmigavel' => 'IAL409',
+    'ValidadePrograma' => '2026-03-31',
+    'CodigoEcommerce' => 'IAL409',
+    'PrecoSobConsulta' => 'N',
+    'DescricaoPortal' => 'São Francisco, uma cidade que combina charme histórico com modernidade, onde colinas íngremes se encontram com vistas deslumbrantes da Baía de San Francisco. Descubra a icônica Golden Gate, os encantos de Fisherman’s Wharf e a vibrante cultura de Chinatown. Bem-vindo ao destino que oferece uma experiência única de luxo e autenticidade. ',
+    'DestaquePortal' => 'N',
+    'DestaquePortalTexto' => '',
+  ),
+  99 => 
+  array (
+    'CodigoPrograma' => 'IAL410',
+    'Torre' => 'AL',
+    'GrupoProgramas' => 34,
+    'Descricao' => 'LOS ANGELES – A CIDADE DOS SONHOS',
+    'CategoriaCodigo' => 2,
+    'Detalhes' => 'Los Angeles',
+    'Destino' => 'EUA',
+    'NomeNavio' => 'N',
+    'PortoEmbarqueNavio' => '',
+    'PortoDesembarqueNavio' => '',
+    'MaritimaCia' => 0,
+    'Bloqueado' => 'N',
+    'BloqueadoInterno' => 'N',
+    'MotivoBloqueio' => '',
+    'DataInclusao' => '2025-03-19T21:04:22',
+    'DataAlteracao' => '2025-03-24T13:23:57',
+    'CaminhoImagem' => 'IAL410_FOTO_ICONE.JPG',
+    'Mapa' => '',
+    'Banner' => 'DESTAQUE_IAL410.JPG',
+    'DescricaoResumida' => 'Entre Praias e Hollywood    ',
+    'Ordem' => 0,
+    'QtdParcelas' => 5,
+    'QtdDiasViagem' => 6,
+    'QtdNoitesViagem' => 5,
+    'ClasseHotelEc' => 0,
+    'ClasseHotelEv' => 0,
+    'SaidasPrograma' => 'Diárias 2025:  Mar.03 a 2026, Mar.31 ',
+    'LiberaSomenteTerrestre' => '',
+    'BloqueiaPromocao' => 'S',
+    'BloqueiaVendaTerrestre' => 'S',
+    'ImagemPromocao' => '',
+    'OrdemPromocao' => 0,
+    'UrlAmigavel' => 'IAL410',
+    'ValidadePrograma' => '2026-03-31',
+    'CodigoEcommerce' => 'IAL410',
+    'PrecoSobConsulta' => 'N',
+    'DescricaoPortal' => 'Los Angeles, a cidade dos sonhos, onde o glamour de Hollywood se encontra com praias deslumbrantes e uma cena cutural vibrante. Descubra o luxo de Beverly Hills, a energia de Santa Monica e a sofisticação de Downtown LA, tudo enquanto desfruta de experiências exclusivas e serviços personalizados. Bem-vindo ao destino que redefine o conceito de turismo de alto padrão.',
+    'DestaquePortal' => 'N',
+    'DestaquePortalTexto' => '',
+  ),
+  100 => 
+  array (
+    'CodigoPrograma' => 'IAL411',
+    'Torre' => 'AL',
+    'GrupoProgramas' => 34,
+    'Descricao' => 'LAS VEGAS – A CAPITAL MUNDIAL DO ENTRETENIMENTO',
+    'CategoriaCodigo' => 2,
+    'Detalhes' => 'Las Vegas',
+    'Destino' => 'EUA',
+    'NomeNavio' => 'N',
+    'PortoEmbarqueNavio' => '',
+    'PortoDesembarqueNavio' => '',
+    'MaritimaCia' => 0,
+    'Bloqueado' => 'N',
+    'BloqueadoInterno' => 'N',
+    'MotivoBloqueio' => '',
+    'DataInclusao' => '2025-03-19T21:18:28',
+    'DataAlteracao' => '2025-03-24T13:27:20',
+    'CaminhoImagem' => 'IAL411_FOTO_ICONE.JPG',
+    'Mapa' => '',
+    'Banner' => 'DESTAQUE_IAL411.JPG',
+    'DescricaoResumida' => 'A Cidade do Espetáculo e das Luzes  ',
+    'Ordem' => 0,
+    'QtdParcelas' => 5,
+    'QtdDiasViagem' => 6,
+    'QtdNoitesViagem' => 5,
+    'ClasseHotelEc' => 0,
+    'ClasseHotelEv' => 0,
+    'SaidasPrograma' => 'Diárias 2025:  Mar.03 a 2026, Mar.31 ',
+    'LiberaSomenteTerrestre' => '',
+    'BloqueiaPromocao' => 'S',
+    'BloqueiaVendaTerrestre' => 'S',
+    'ImagemPromocao' => '',
+    'OrdemPromocao' => 0,
+    'UrlAmigavel' => 'IAL411',
+    'ValidadePrograma' => '2026-03-31',
+    'CodigoEcommerce' => 'IAL411',
+    'PrecoSobConsulta' => 'N',
+    'DescricaoPortal' => 'Las Vegas, a cidade mais iluminada do mundo, onde o luxo e a diversão se encontram em um cenário deslumbrante de cassinos, shows de classe mundial e gastronomia refinada. Descubra o brilho da Strip, a sofisticação dos resorts de alto padrão e a emoção dos espetáculos exclusivos. Bem-vindo ao destino que redefine o conceito de entretenimento de alto padrão. ',
+    'DestaquePortal' => 'N',
+    'DestaquePortalTexto' => '',
+  ),
+  101 => 
   array (
     'CodigoPrograma' => 'IAN014',
     'Torre' => 'ASIA',
@@ -4299,7 +4425,7 @@ Abr.02, 07, 12, 17 e 23
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2009-07-06T20:54:54',
-    'DataAlteracao' => '2025-02-17T20:26:20',
+    'DataAlteracao' => '2025-03-19T18:57:04',
     'CaminhoImagem' => 'IAN014_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAN014.JPG',
@@ -4310,9 +4436,7 @@ Abr.02, 07, 12, 17 e 23
     'QtdNoitesViagem' => 7,
     'ClasseHotelEc' => 0,
     'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Diárias	Mai.15’2024 a Mar.25’2025
-
-Diárias
+    'SaidasPrograma' => 'Diárias
 	2025: de Abr. 01 a Dez. 20
 	2026: de Jan. 01 a Mar. 25
 
@@ -4330,50 +4454,7 @@ Diárias
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  99 => 
-  array (
-    'CodigoPrograma' => 'IAN040',
-    'Torre' => 'ASIA',
-    'GrupoProgramas' => 13,
-    'Descricao' => 'AUSTRÁLIA ESSENCIAL',
-    'CategoriaCodigo' => 2,
-    'Detalhes' => 'Sydney, Cairns e Melbourne',
-    'Destino' => 'AUSTRALIA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2023-08-11T12:33:09',
-    'DataAlteracao' => '2024-05-08T22:05:05',
-    'CaminhoImagem' => 'IAN040_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_IAN040.JPG',
-    'DescricaoResumida' => 'Encante-se pelas principais cidade deste vasto país',
-    'Ordem' => 0,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 10,
-    'QtdNoitesViagem' => 9,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Diárias 	Mai.09’2024 a Mar.23’2025
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'IAN040',
-    'ValidadePrograma' => '2025-03-23',
-    'CodigoEcommerce' => 'IAN040',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  100 => 
+  102 => 
   array (
     'CodigoPrograma' => 'IAN042',
     'Torre' => 'ASIA',
@@ -4416,7 +4497,7 @@ Diárias
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  101 => 
+  103 => 
   array (
     'CodigoPrograma' => 'IAS002',
     'Torre' => 'ASIA',
@@ -4434,7 +4515,7 @@ Diárias
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2009-09-15T20:53:52',
-    'DataAlteracao' => '2025-02-25T21:02:26',
+    'DataAlteracao' => '2025-03-19T18:59:05',
     'CaminhoImagem' => 'IAS002_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAS002.JPG',
@@ -4445,8 +4526,7 @@ Diárias
     'QtdNoitesViagem' => 9,
     'ClasseHotelEc' => 0,
     'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Diárias Abr.01´2024 a Mar.23´2025
-Diárias Abr.01´2025 a Mar.23´2026
+    'SaidasPrograma' => 'Diárias Abr.01´2025 a Mar.23´2026
 ',
     'LiberaSomenteTerrestre' => 'N',
     'BloqueiaPromocao' => 'S',
@@ -4463,7 +4543,7 @@ as maravilhas antigas, como a Grande Muralha e a Cidade Proibida em Pequim, até
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  102 => 
+  104 => 
   array (
     'CodigoPrograma' => 'IAS003B',
     'Torre' => 'ASIA',
@@ -4480,7 +4560,7 @@ as maravilhas antigas, como a Grande Muralha e a Cidade Proibida em Pequim, até
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2013-11-18T11:21:14',
-    'DataAlteracao' => '2025-02-25T21:36:32',
+    'DataAlteracao' => '2025-03-19T18:59:50',
     'CaminhoImagem' => 'IAS003_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAS003.JPG',
@@ -4491,9 +4571,7 @@ as maravilhas antigas, como a Grande Muralha e a Cidade Proibida em Pequim, até
     'QtdNoitesViagem' => 9,
     'ClasseHotelEc' => 0,
     'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Diárias: Abr.01’2024 a Mar.23’2025
-
-Diárias Abr.01’2024 a Mar.23’2026
+    'SaidasPrograma' => 'Diárias Abr.01’2024 a Mar.23’2026
 ',
     'LiberaSomenteTerrestre' => '',
     'BloqueiaPromocao' => 'S',
@@ -4509,7 +4587,7 @@ Diárias Abr.01’2024 a Mar.23’2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  103 => 
+  105 => 
   array (
     'CodigoPrograma' => 'IAS029',
     'Torre' => 'ASIA',
@@ -4553,7 +4631,7 @@ Diárias Abr.01’2024 a Mar.23’2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  104 => 
+  106 => 
   array (
     'CodigoPrograma' => 'IAS033',
     'Torre' => 'ASIA',
@@ -4596,7 +4674,7 @@ Diárias Abr.01’2024 a Mar.23’2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  105 => 
+  107 => 
   array (
     'CodigoPrograma' => 'IAS034',
     'Torre' => 'ASIA',
@@ -4645,7 +4723,7 @@ Out.01’2024 a Abr.10’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  106 => 
+  108 => 
   array (
     'CodigoPrograma' => 'IAS046',
     'Torre' => 'ASIA',
@@ -4688,7 +4766,7 @@ Out.01’2024 a Abr.10’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  107 => 
+  109 => 
   array (
     'CodigoPrograma' => 'IAS055',
     'Torre' => 'ASIA',
@@ -4705,7 +4783,7 @@ Out.01’2024 a Abr.10’2025
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2011-09-26T14:01:50',
-    'DataAlteracao' => '2024-09-25T20:16:42',
+    'DataAlteracao' => '2025-03-19T19:01:21',
     'CaminhoImagem' => 'IAS055_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAS055.JPG',
@@ -4717,9 +4795,6 @@ Out.01’2024 a Abr.10’2025
     'ClasseHotelEc' => 0,
     'ClasseHotelEv' => 0,
     'SaidasPrograma' => 'Saídas:  Segundas às Sextas
-            Mai.01’2024 a Mar.24’2025
-
-Saídas:  Segundas às Sextas
                 Abr.01’2025 a Mar.24’2026
 
 
@@ -4737,7 +4812,7 @@ Saídas:  Segundas às Sextas
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  108 => 
+  110 => 
   array (
     'CodigoPrograma' => 'IAS056',
     'Torre' => 'ASIA',
@@ -4781,7 +4856,7 @@ Saídas:  Segundas às Sextas
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  109 => 
+  111 => 
   array (
     'CodigoPrograma' => 'IAS057B',
     'Torre' => 'ASIA',
@@ -4829,7 +4904,7 @@ Diárias, exceto ás Quartas-feiras 2025: de Abr. 16 a Set. 25
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  110 => 
+  112 => 
   array (
     'CodigoPrograma' => 'IAS060B',
     'Torre' => 'ASIA',
@@ -4873,7 +4948,7 @@ Diárias, exceto ás Quartas-feiras 2025: de Abr. 16 a Set. 25
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  111 => 
+  113 => 
   array (
     'CodigoPrograma' => 'IAS063',
     'Torre' => 'ASIA',
@@ -4917,7 +4992,7 @@ Diárias, exceto ás Quartas-feiras 2025: de Abr. 16 a Set. 25
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  112 => 
+  114 => 
   array (
     'CodigoPrograma' => 'IAS071',
     'Torre' => 'ASIA',
@@ -4937,7 +5012,7 @@ Diárias, exceto ás Quartas-feiras 2025: de Abr. 16 a Set. 25
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2012-07-05T13:07:02',
-    'DataAlteracao' => '2025-02-24T17:12:36',
+    'DataAlteracao' => '2025-03-19T19:03:44',
     'CaminhoImagem' => 'IAS071_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAS071.JPG',
@@ -4948,7 +5023,7 @@ Diárias, exceto ás Quartas-feiras 2025: de Abr. 16 a Set. 25
     'QtdNoitesViagem' => 8,
     'ClasseHotelEc' => 0,
     'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Diárias 	Mai.02’2024 a Mar.24’2025
+    'SaidasPrograma' => 'Diárias 	Abr.01’2025 a Mar.24’2026
 ',
     'LiberaSomenteTerrestre' => '',
     'BloqueiaPromocao' => 'S',
@@ -4964,7 +5039,7 @@ Diárias, exceto ás Quartas-feiras 2025: de Abr. 16 a Set. 25
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  113 => 
+  115 => 
   array (
     'CodigoPrograma' => 'IAS092',
     'Torre' => 'ASIA',
@@ -4981,7 +5056,7 @@ Diárias, exceto ás Quartas-feiras 2025: de Abr. 16 a Set. 25
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2015-07-20T18:41:56',
-    'DataAlteracao' => '2025-01-30T14:38:44',
+    'DataAlteracao' => '2025-03-19T19:00:33',
     'CaminhoImagem' => 'IAS092_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IAS092.JPG',
@@ -4992,10 +5067,7 @@ Diárias, exceto ás Quartas-feiras 2025: de Abr. 16 a Set. 25
     'QtdNoitesViagem' => 6,
     'ClasseHotelEc' => 0,
     'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Diárias:	
-Abr.08’2024 a Mar.26’2025
-
-Diárias 
+    'SaidasPrograma' => 'Diárias 
 	2025: de Abr.01 a Dez.25
 	2026: de Jan.01 a Mar.26
 ',
@@ -5014,7 +5086,7 @@ Diárias
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  114 => 
+  116 => 
   array (
     'CodigoPrograma' => 'IAS094',
     'Torre' => 'ASIA',
@@ -5057,7 +5129,7 @@ Diárias
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  115 => 
+  117 => 
   array (
     'CodigoPrograma' => 'IAS095',
     'Torre' => 'ASIA',
@@ -5101,7 +5173,7 @@ Domingos: Jan.05 a Dez.14’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  116 => 
+  118 => 
   array (
     'CodigoPrograma' => 'IAS112',
     'Torre' => 'ASIA',
@@ -5148,7 +5220,7 @@ Saídas: 	Diário Jan.05 a Dez.21’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  117 => 
+  119 => 
   array (
     'CodigoPrograma' => 'IAS115',
     'Torre' => 'ASIA',
@@ -5198,7 +5270,7 @@ Diárias, exceto as segundas-feiras
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  118 => 
+  120 => 
   array (
     'CodigoPrograma' => 'IAS117',
     'Torre' => 'ASIA',
@@ -5244,7 +5316,7 @@ Saídas: 	Diárias 	Nov.01’2024 a Out.20’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  119 => 
+  121 => 
   array (
     'CodigoPrograma' => 'IAS118',
     'Torre' => 'ASIA',
@@ -5289,7 +5361,7 @@ Saídas: 	Diárias 	Nov.01’2024 a Out.20’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  120 => 
+  122 => 
   array (
     'CodigoPrograma' => 'IAS119',
     'Torre' => 'ASIA',
@@ -5332,7 +5404,7 @@ Saídas: 	Diárias 	Nov.01’2024 a Out.20’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  121 => 
+  123 => 
   array (
     'CodigoPrograma' => 'IEU008',
     'Torre' => 'EUROPA',
@@ -5377,7 +5449,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  122 => 
+  124 => 
   array (
     'CodigoPrograma' => 'IEU083',
     'Torre' => 'EUROPA',
@@ -5420,7 +5492,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  123 => 
+  125 => 
   array (
     'CodigoPrograma' => 'IEU112',
     'Torre' => 'EUROPA',
@@ -5463,7 +5535,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  124 => 
+  126 => 
   array (
     'CodigoPrograma' => 'IEU130',
     'Torre' => 'EUROPA',
@@ -5506,7 +5578,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  125 => 
+  127 => 
   array (
     'CodigoPrograma' => 'IEU143',
     'Torre' => 'EUROPA',
@@ -5549,7 +5621,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  126 => 
+  128 => 
   array (
     'CodigoPrograma' => 'IEU150',
     'Torre' => 'EUROPA',
@@ -5595,7 +5667,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  127 => 
+  129 => 
   array (
     'CodigoPrograma' => 'IEU162',
     'Torre' => 'EUROPA',
@@ -5638,7 +5710,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  128 => 
+  130 => 
   array (
     'CodigoPrograma' => 'IEU167',
     'Torre' => 'EUROPA',
@@ -5681,7 +5753,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  129 => 
+  131 => 
   array (
     'CodigoPrograma' => 'IEU168',
     'Torre' => 'EUROPA',
@@ -5726,7 +5798,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  130 => 
+  132 => 
   array (
     'CodigoPrograma' => 'IEU171',
     'Torre' => 'EUROPA',
@@ -5769,7 +5841,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  131 => 
+  133 => 
   array (
     'CodigoPrograma' => 'IEU174',
     'Torre' => 'EUROPA',
@@ -5815,7 +5887,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  132 => 
+  134 => 
   array (
     'CodigoPrograma' => 'IEU187',
     'Torre' => 'EUROPA',
@@ -5860,7 +5932,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => 'DESTAQUE',
   ),
-  133 => 
+  135 => 
   array (
     'CodigoPrograma' => 'IEU189',
     'Torre' => 'EUROPA',
@@ -5903,7 +5975,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  134 => 
+  136 => 
   array (
     'CodigoPrograma' => 'IEU192',
     'Torre' => 'EUROPA',
@@ -5946,7 +6018,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  135 => 
+  137 => 
   array (
     'CodigoPrograma' => 'IEU195',
     'Torre' => 'EUROPA',
@@ -5989,7 +6061,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  136 => 
+  138 => 
   array (
     'CodigoPrograma' => 'IEU198',
     'Torre' => 'EUROPA',
@@ -6031,7 +6103,7 @@ e Alcobaça.
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  137 => 
+  139 => 
   array (
     'CodigoPrograma' => 'IEU203',
     'Torre' => 'EUROPA',
@@ -6075,7 +6147,7 @@ Mai.01’2024 a Mar.31’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  138 => 
+  140 => 
   array (
     'CodigoPrograma' => 'IEU204',
     'Torre' => 'EUROPA',
@@ -6119,7 +6191,7 @@ Mai.01’2024 a Mar.31’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  139 => 
+  141 => 
   array (
     'CodigoPrograma' => 'IEU205',
     'Torre' => 'EUROPA',
@@ -6162,7 +6234,7 @@ Mai.01’2024 a Mar.31’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  140 => 
+  142 => 
   array (
     'CodigoPrograma' => 'IEU206',
     'Torre' => 'EUROPA',
@@ -6205,7 +6277,7 @@ Mai.01’2024 a Mar.31’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => 'PROMOÇÃO',
   ),
-  141 => 
+  143 => 
   array (
     'CodigoPrograma' => 'IEU210',
     'Torre' => 'EUROPA',
@@ -6247,7 +6319,7 @@ Mai.01’2024 a Mar.31’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  142 => 
+  144 => 
   array (
     'CodigoPrograma' => 'IEU211',
     'Torre' => 'EUROPA',
@@ -6289,7 +6361,7 @@ Mai.01’2024 a Mar.31’2025
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  143 => 
+  145 => 
   array (
     'CodigoPrograma' => 'IEU212',
     'Torre' => 'EUROPA',
@@ -6333,7 +6405,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  144 => 
+  146 => 
   array (
     'CodigoPrograma' => 'IEU213',
     'Torre' => 'EUROPA',
@@ -6375,7 +6447,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  145 => 
+  147 => 
   array (
     'CodigoPrograma' => 'IEU214',
     'Torre' => 'EUROPA',
@@ -6420,7 +6492,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  146 => 
+  148 => 
   array (
     'CodigoPrograma' => 'IEU221',
     'Torre' => 'EUROPA',
@@ -6464,7 +6536,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  147 => 
+  149 => 
   array (
     'CodigoPrograma' => 'IEU390',
     'Torre' => 'EUROPA',
@@ -6507,7 +6579,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  148 => 
+  150 => 
   array (
     'CodigoPrograma' => 'IEU391',
     'Torre' => 'EUROPA',
@@ -6550,7 +6622,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  149 => 
+  151 => 
   array (
     'CodigoPrograma' => 'IEU392',
     'Torre' => 'EUROPA',
@@ -6593,7 +6665,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  150 => 
+  152 => 
   array (
     'CodigoPrograma' => 'IND25A',
     'Torre' => 'GBM',
@@ -6638,7 +6710,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  151 => 
+  153 => 
   array (
     'CodigoPrograma' => 'INDO25A',
     'Torre' => 'GBM',
@@ -6681,7 +6753,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  152 => 
+  154 => 
   array (
     'CodigoPrograma' => 'INDO25B',
     'Torre' => 'GBM',
@@ -6724,7 +6796,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  153 => 
+  155 => 
   array (
     'CodigoPrograma' => 'INDOCH25A',
     'Torre' => 'GBM',
@@ -6766,7 +6838,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  154 => 
+  156 => 
   array (
     'CodigoPrograma' => 'INDOCH25B',
     'Torre' => 'GBM',
@@ -6809,7 +6881,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  155 => 
+  157 => 
   array (
     'CodigoPrograma' => 'INSIGNIA25',
     'Torre' => 'MARITIMO',
@@ -6852,7 +6924,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  156 => 
+  158 => 
   array (
     'CodigoPrograma' => 'IOM001',
     'Torre' => 'ORIENTE MEDIO',
@@ -6869,7 +6941,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2009-12-01T19:59:03',
-    'DataAlteracao' => '2024-09-05T20:29:37',
+    'DataAlteracao' => '2025-03-24T18:37:01',
     'CaminhoImagem' => 'IOM001_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IOM001.JPG',
@@ -6880,8 +6952,9 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'QtdNoitesViagem' => 8,
     'ClasseHotelEc' => 0,
     'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Saídas:	Sextas-feiras
-	Out.01’2024 a Abr.11’2025	
+    'SaidasPrograma' => 'Sextas-feiras: Out.01’2024 a Abr.11’2025	
+
+Sextas-feiras 2025: Mai. 01 a Abr. 30’ 2026
 ',
     'LiberaSomenteTerrestre' => 'N',
     'BloqueiaPromocao' => 'S',
@@ -6889,14 +6962,14 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'ImagemPromocao' => '',
     'OrdemPromocao' => 5,
     'UrlAmigavel' => 'IOM001',
-    'ValidadePrograma' => '2025-04-11',
+    'ValidadePrograma' => '2026-04-30',
     'CodigoEcommerce' => 'IOM001',
     'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
+    'DescricaoPortal' => 'Embarque em uma jornada inesquecível pelo Egito, explorando seus templos monumentais, pirâmides imponentes e a grandiosidade do rio Nilo. Descubra os segredos dos faraós no Cairo, navegue por paisagens deslumbrantes em um cruzeiro e visite sítios históricos que contam a fascinante história de uma das civilizações mais antigas do mundo. Uma experiência única para vivenciar a grandiosidade e o encanto dessa terra atemporal.',
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  157 => 
+  159 => 
   array (
     'CodigoPrograma' => 'IOM090',
     'Torre' => 'ORIENTE MEDIO',
@@ -6938,7 +7011,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  158 => 
+  160 => 
   array (
     'CodigoPrograma' => 'IOM091',
     'Torre' => 'ORIENTE MEDIO',
@@ -6980,7 +7053,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  159 => 
+  161 => 
   array (
     'CodigoPrograma' => 'IOM093',
     'Torre' => 'ORIENTE MEDIO',
@@ -7023,7 +7096,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  160 => 
+  162 => 
   array (
     'CodigoPrograma' => 'IOM094',
     'Torre' => 'ASIA',
@@ -7066,12 +7139,12 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  161 => 
+  163 => 
   array (
     'CodigoPrograma' => 'IOM095',
     'Torre' => 'ORIENTE MEDIO',
     'GrupoProgramas' => 102,
-    'Descricao' => 'EGITO E OS TESOUROS DO NILO',
+    'Descricao' => 'EGITO FASCINANTE COM ALEXANDRIA',
     'CategoriaCodigo' => 2,
     'Detalhes' => 'Cairo, Luxor, Edfu, Kom Ombo, Alexandria e Aswan',
     'Destino' => 'EGITO',
@@ -7083,7 +7156,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2025-02-04T21:44:37',
-    'DataAlteracao' => '2025-02-05T00:35:11',
+    'DataAlteracao' => '2025-03-19T17:22:50',
     'CaminhoImagem' => 'IOM095_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IOM095.JPG',
@@ -7109,12 +7182,12 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  162 => 
+  164 => 
   array (
     'CodigoPrograma' => 'IOM096',
     'Torre' => 'EUROPA',
     'GrupoProgramas' => 102,
-    'Descricao' => 'EGITO FASCINANTE',
+    'Descricao' => 'EGITO FASCINANTE COM SHARM EL SHEIKH',
     'CategoriaCodigo' => 2,
     'Detalhes' => 'Cairo, Aswan, Luxor, Sharm El Sheikh',
     'Destino' => 'EGITO',
@@ -7126,15 +7199,15 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2025-02-05T22:02:03',
-    'DataAlteracao' => '2025-02-06T14:42:22',
+    'DataAlteracao' => '2025-03-19T17:21:48',
     'CaminhoImagem' => 'IOM096_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_IOM096.JPG',
     'DescricaoResumida' => 'Explore o Egito com história, cultura e paisagens deslumbrantes.',
     'Ordem' => 0,
     'QtdParcelas' => 5,
-    'QtdDiasViagem' => 9,
-    'QtdNoitesViagem' => 8,
+    'QtdDiasViagem' => 13,
+    'QtdNoitesViagem' => 12,
     'ClasseHotelEc' => 0,
     'ClasseHotelEv' => 0,
     'SaidasPrograma' => 'Segundas 2025: Mai. 01 a Set 30
@@ -7154,7 +7227,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  163 => 
+  165 => 
   array (
     'CodigoPrograma' => 'IOM097',
     'Torre' => 'ORIENTE MEDIO',
@@ -7197,7 +7270,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  164 => 
+  166 => 
   array (
     'CodigoPrograma' => 'IRLESC25A',
     'Torre' => 'GBM',
@@ -7240,7 +7313,7 @@ Saídas 2026:  Diárias de Jan 01\' a Jun 15\' / Set 15\' a Dez 15\'  2026
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  165 => 
+  167 => 
   array (
     'CodigoPrograma' => 'ITH012',
     'Torre' => 'ASIA',
@@ -7286,7 +7359,7 @@ Oceano Pacífico, famosa por suas paisagens paradisíacas, cultura rica e hospit
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  166 => 
+  168 => 
   array (
     'CodigoPrograma' => 'ITM009',
     'Torre' => 'EUROPA',
@@ -7329,7 +7402,7 @@ Oceano Pacífico, famosa por suas paisagens paradisíacas, cultura rica e hospit
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  167 => 
+  169 => 
   array (
     'CodigoPrograma' => 'ITM045',
     'Torre' => 'EUROPA',
@@ -7373,7 +7446,7 @@ Oceano Pacífico, famosa por suas paisagens paradisíacas, cultura rica e hospit
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  168 => 
+  170 => 
   array (
     'CodigoPrograma' => 'IUGOS25A',
     'Torre' => 'GBM',
@@ -7417,7 +7490,7 @@ Oceano Pacífico, famosa por suas paisagens paradisíacas, cultura rica e hospit
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  169 => 
+  171 => 
   array (
     'CodigoPrograma' => 'MAGBAQCTG',
     'Torre' => 'MARITIMO',
@@ -7461,7 +7534,7 @@ Oceano Pacífico, famosa por suas paisagens paradisíacas, cultura rica e hospit
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  170 => 
+  172 => 
   array (
     'CodigoPrograma' => 'MAGCTGBAQ',
     'Torre' => 'MARITIMO',
@@ -7506,7 +7579,7 @@ Oceano Pacífico, famosa por suas paisagens paradisíacas, cultura rica e hospit
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  171 => 
+  173 => 
   array (
     'CodigoPrograma' => 'MARROCO25A',
     'Torre' => 'GBM',
@@ -7549,7 +7622,7 @@ Oceano Pacífico, famosa por suas paisagens paradisíacas, cultura rica e hospit
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  172 => 
+  174 => 
   array (
     'CodigoPrograma' => 'NCLBLILAX',
     'Torre' => 'MARITIMO',
@@ -7593,7 +7666,7 @@ Oceano Pacífico, famosa por suas paisagens paradisíacas, cultura rica e hospit
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  173 => 
+  175 => 
   array (
     'CodigoPrograma' => 'NCLENCSEA',
     'Torre' => 'MARITIMO',
@@ -7637,7 +7710,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  174 => 
+  176 => 
   array (
     'CodigoPrograma' => 'NCLLISROM',
     'Torre' => 'MARITIMO',
@@ -7681,7 +7754,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  175 => 
+  177 => 
   array (
     'CodigoPrograma' => 'NCLVIVSJU',
     'Torre' => 'MARITIMO',
@@ -7725,7 +7798,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  176 => 
+  178 => 
   array (
     'CodigoPrograma' => 'NEVE001',
     'Torre' => 'EUROPA',
@@ -7768,7 +7841,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  177 => 
+  179 => 
   array (
     'CodigoPrograma' => 'NEVE002',
     'Torre' => 'EUROPA',
@@ -7810,7 +7883,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  178 => 
+  180 => 
   array (
     'CodigoPrograma' => 'NEVE003',
     'Torre' => 'EUROPA',
@@ -7852,7 +7925,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  179 => 
+  181 => 
   array (
     'CodigoPrograma' => 'NEVE004',
     'Torre' => 'EUROPA',
@@ -7894,7 +7967,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  180 => 
+  182 => 
   array (
     'CodigoPrograma' => 'NEVE005',
     'Torre' => 'EUROPA',
@@ -7936,7 +8009,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  181 => 
+  183 => 
   array (
     'CodigoPrograma' => 'NEVE006',
     'Torre' => 'EUROPA',
@@ -7978,7 +8051,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  182 => 
+  184 => 
   array (
     'CodigoPrograma' => 'NEVE008',
     'Torre' => 'AL',
@@ -8022,7 +8095,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  183 => 
+  185 => 
   array (
     'CodigoPrograma' => 'NEVE009',
     'Torre' => 'AL',
@@ -8066,7 +8139,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  184 => 
+  186 => 
   array (
     'CodigoPrograma' => 'NEVE010',
     'Torre' => 'AL',
@@ -8108,7 +8181,7 @@ Saídas 2025: Mai. 04, 11, 18 e 25, Jun. 01, 08, 15, 22 e 29, Jul. 06, 13, 20 e 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  185 => 
+  187 => 
   array (
     'CodigoPrograma' => 'NEVE011',
     'Torre' => 'AL',
@@ -8152,7 +8225,7 @@ MINI WEEK (sexta-feira a terça-feira ou terça-feira a sexta-feira) 27 junho a 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  186 => 
+  188 => 
   array (
     'CodigoPrograma' => 'NEVE012',
     'Torre' => 'AL',
@@ -8194,7 +8267,7 @@ MINI WEEK (sexta-feira a terça-feira ou terça-feira a sexta-feira) 27 junho a 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  187 => 
+  189 => 
   array (
     'CodigoPrograma' => 'NEVE013',
     'Torre' => 'AL',
@@ -8239,7 +8312,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  188 => 
+  190 => 
   array (
     'CodigoPrograma' => 'OCEAREGYVR',
     'Torre' => 'MARITIMO',
@@ -8282,7 +8355,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  189 => 
+  191 => 
   array (
     'CodigoPrograma' => 'OCEMIAMIA',
     'Torre' => 'MARITIMO',
@@ -8324,7 +8397,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  190 => 
+  192 => 
   array (
     'CodigoPrograma' => 'ORI25A',
     'Torre' => 'GBM',
@@ -8367,7 +8440,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  191 => 
+  193 => 
   array (
     'CodigoPrograma' => 'PARKSE25A',
     'Torre' => 'GBM',
@@ -8410,7 +8483,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  192 => 
+  194 => 
   array (
     'CodigoPrograma' => 'PARKSW25A',
     'Torre' => 'GBM',
@@ -8453,7 +8526,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  193 => 
+  195 => 
   array (
     'CodigoPrograma' => 'PERU25A',
     'Torre' => 'GBM',
@@ -8495,7 +8568,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  194 => 
+  196 => 
   array (
     'CodigoPrograma' => 'PLELYR-LYR',
     'Torre' => 'MARITIMO',
@@ -8538,7 +8611,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  195 => 
+  197 => 
   array (
     'CodigoPrograma' => 'PLELYR-TOS',
     'Torre' => 'MARITIMO',
@@ -8580,7 +8653,7 @@ MINI WEEK (05 dias / 04 noites)
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  196 => 
+  198 => 
   array (
     'CodigoPrograma' => 'R010',
     'Torre' => 'AL',
@@ -8627,51 +8700,7 @@ Duração:  Toronto a Montreal – 08 dias / 07 noites
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  197 => 
-  array (
-    'CodigoPrograma' => 'R017',
-    'Torre' => 'ASIA',
-    'GrupoProgramas' => 55,
-    'Descricao' => 'JAPÃO SELETO 2024/ 2025',
-    'CategoriaCodigo' => 3,
-    'Detalhes' => 'Tóquio, Hakone, Nara e Quioto.',
-    'Destino' => 'JAPÃO',
-    'NomeNavio' => '',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2009-11-27T13:47:05',
-    'DataAlteracao' => '2023-12-08T18:51:37',
-    'CaminhoImagem' => 'R017_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_R017.JPG',
-    'DescricaoResumida' => '',
-    'Ordem' => 1,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 7,
-    'QtdNoitesViagem' => 6,
-    'ClasseHotelEc' => 4,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Saídas 2024: Terças-feiras Abr.02, 09, 16 e 23 | Mai.07, 14, 21 e 28 | Jun.04, 11, 18 e 25 Jul.02, 09, 16, 23 e 30 | Ago.20 e 27 | Set.03, 10, 17 e 24 Out.01, 08, 15, 22 e 29 | Nov.05, 12, 19 e 26 | Dez.03, 10 e 17
-	
-Saídas 2025: Terças-feiras Jan.07 e 21 | Fev.04 e 18 | Mar.04, 11, 18 e 25',
-    'LiberaSomenteTerrestre' => 'N',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 2,
-    'UrlAmigavel' => '',
-    'ValidadePrograma' => '2025-03-25',
-    'CodigoEcommerce' => 'R017',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => 'Surpreenda-se com as belezas deste país.',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  198 => 
+  199 => 
   array (
     'CodigoPrograma' => 'R019',
     'Torre' => 'ASIA',
@@ -8721,7 +8750,7 @@ Jan.06, 13, 20 e 27 | Fev.03, 10, 17 e 24
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  199 => 
+  200 => 
   array (
     'CodigoPrograma' => 'R024',
     'Torre' => 'ASIA',
@@ -8770,7 +8799,7 @@ Saídas 2026: Terças-feiras Jan.06, 13, 20 e 27 | Fev.03, 10, 17 e 24
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  200 => 
+  201 => 
   array (
     'CodigoPrograma' => 'R026B',
     'Torre' => 'ASIA',
@@ -8818,7 +8847,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  201 => 
+  202 => 
   array (
     'CodigoPrograma' => 'R031',
     'Torre' => 'EUROPA',
@@ -8862,7 +8891,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  202 => 
+  203 => 
   array (
     'CodigoPrograma' => 'R032',
     'Torre' => 'AL',
@@ -8906,7 +8935,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  203 => 
+  204 => 
   array (
     'CodigoPrograma' => 'R033B',
     'Torre' => 'EUROPA',
@@ -8951,7 +8980,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  204 => 
+  205 => 
   array (
     'CodigoPrograma' => 'R048',
     'Torre' => 'EUROPA',
@@ -8996,7 +9025,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  205 => 
+  206 => 
   array (
     'CodigoPrograma' => 'R072',
     'Torre' => 'EUROPA',
@@ -9039,7 +9068,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  206 => 
+  207 => 
   array (
     'CodigoPrograma' => 'R113',
     'Torre' => 'EUROPA',
@@ -9083,7 +9112,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  207 => 
+  208 => 
   array (
     'CodigoPrograma' => 'R140',
     'Torre' => 'EUROPA',
@@ -9128,7 +9157,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  208 => 
+  209 => 
   array (
     'CodigoPrograma' => 'R147B',
     'Torre' => 'ASIA',
@@ -9173,7 +9202,7 @@ Jul.20 | Ago.17 | Set.14 | Out.12
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  209 => 
+  210 => 
   array (
     'CodigoPrograma' => 'R148',
     'Torre' => 'ASIA',
@@ -9219,7 +9248,7 @@ Jan.06 | Fev.03 | Mar.10',
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  210 => 
+  211 => 
   array (
     'CodigoPrograma' => 'R149',
     'Torre' => 'ASIA',
@@ -9236,7 +9265,7 @@ Jan.06 | Fev.03 | Mar.10',
     'BloqueadoInterno' => 'N',
     'MotivoBloqueio' => '',
     'DataInclusao' => '2009-11-30T18:03:24',
-    'DataAlteracao' => '2024-12-13T15:46:25',
+    'DataAlteracao' => '2025-03-19T19:04:55',
     'CaminhoImagem' => 'R149_FOTO_ICONE.JPG',
     'Mapa' => '',
     'Banner' => 'DESTAQUE_R149.JPG',
@@ -9247,11 +9276,8 @@ Jan.06 | Fev.03 | Mar.10',
     'QtdNoitesViagem' => 9,
     'ClasseHotelEc' => 9,
     'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Saídas 2024:  Quartas-feiras
-                            Jun.12 e 26 | Jul.10 e 24 | Ago.07 e 14 | Set.04 e 18 | Out.02, 09, 16 e 23 | Nov.06, 13 e 20 | Dez.04 e 25
-
-Saídas 2025: Quartas-feiras
-                           Jan.08 e 15 | Fev.05, 12 e 26 | Mar.12, 19 e 26 | Abr.09 e 23 | Mai.14 e 28 | Jun.11 e 25 | Jul.09 e 23 | Ago.06 e 13 | Set.03 e 17 | Out.01, 08, 15 e 22 | Nov.05, 12 e 19 | Dez.03 e 24
+    'SaidasPrograma' => 'Saídas 2025: Quartas-feiras
+                           Abr.09 e 23 | Mai.14 e 28 | Jun.11 e 25 | Jul.09 e 23 | Ago.06 e 13 | Set.03 e 17 | Out.01, 08, 15 e 22 | Nov.05, 12 e 19 | Dez.03 e 24
 
 Saídas 2026:        Quartas-feiras
                                Jan.07 e 14 | Fev.04, 11 e 25 | Mar.11, 18 e 25 
@@ -9269,7 +9295,7 @@ Saídas 2026:        Quartas-feiras
     'DestaquePortal' => 'S',
     'DestaquePortalTexto' => '',
   ),
-  211 => 
+  212 => 
   array (
     'CodigoPrograma' => 'R150B',
     'Torre' => 'ASIA',
@@ -9313,7 +9339,7 @@ Saídas 2026:        Quartas-feiras
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  212 => 
+  213 => 
   array (
     'CodigoPrograma' => 'R204',
     'Torre' => 'EUROPA',
@@ -9357,7 +9383,7 @@ Saídas 2026:        Quartas-feiras
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  213 => 
+  214 => 
   array (
     'CodigoPrograma' => 'R307',
     'Torre' => 'AL',
@@ -9398,51 +9424,6 @@ Saídas 2026:        Quartas-feiras
     'CodigoEcommerce' => 'R307',
     'PrecoSobConsulta' => 'S',
     'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  214 => 
-  array (
-    'CodigoPrograma' => 'R335C',
-    'Torre' => 'ASIA',
-    'GrupoProgramas' => 55,
-    'Descricao' => 'JAPÃO TRADIÇÃO E CULTURA 2024/2025',
-    'CategoriaCodigo' => 3,
-    'Detalhes' => 'Tóquio, Hakone, Nara, Quioto, Kanazawa, Shirakawago, Takayama, Gero e Osaka',
-    'Destino' => 'JAPÃO',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2023-09-04T20:37:42',
-    'DataAlteracao' => '2024-09-11T20:32:49',
-    'CaminhoImagem' => 'R335C_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_R335C.JPG',
-    'DescricaoResumida' => '',
-    'Ordem' => 0,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 10,
-    'QtdNoitesViagem' => 9,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Saídas 2024: Terças-feiras Abr.02, 09, 16 e 23 | Mai.07, 14, 21 e 28 | Jun.04, 11, 18 e 25 | Jul.02, 09, 16, 23 e 30 Ago.20 e 27 | Set.03, 10, 17 e 24 | Out.01, 08, 15, 22 e 29 | Nov.05, 12, 19 e 26 Dez.03, 10 e 17
-	
-Saídas 2025: Terças-feiras Jan.07 e 21 | Fev.04 e 18 | Mar.04, 11, 18 e 25
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'R335C',
-    'ValidadePrograma' => '2025-03-25',
-    'CodigoEcommerce' => 'R335C',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => 'Preserva a herança milenar de sua história',
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
@@ -9492,51 +9473,6 @@ Saídas 2025: Terças-feiras Jan.07 e 21 | Fev.04 e 18 | Mar.04, 11, 18 e 25
   ),
   216 => 
   array (
-    'CodigoPrograma' => 'R449B',
-    'Torre' => 'ASIA',
-    'GrupoProgramas' => 55,
-    'Descricao' => 'JAPÃO ESPIRITUAL 2024/2025',
-    'CategoriaCodigo' => 3,
-    'Detalhes' => 'Tóquio, Hakone, Quioto, Nara, Kanazawa, Shirakawago, Takayama, Gero, Nagoya, Ise, Toba, Kumano e Nachi-Katsuura, Koyasan e Osaka.
-',
-    'Destino' => 'JAPÃO',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2022-09-09T20:37:04',
-    'DataAlteracao' => '2023-12-08T18:49:57',
-    'CaminhoImagem' => 'R449_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_R449.JPG',
-    'DescricaoResumida' => '',
-    'Ordem' => 5,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 13,
-    'QtdNoitesViagem' => 12,
-    'ClasseHotelEc' => 9,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Saídas 2024: Terça-feira Abr.02 e 16 | Mai.14 | Jun.04 e 18 | Jul.02 e 16 | Ago.20 | Set.10 | Out.01 e 22 |Nov.19
-
-Saídas 2025: Terça-feira Mar.11 e 25',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'R449B',
-    'ValidadePrograma' => '2025-03-25',
-    'CodigoEcommerce' => 'R449B',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => 'Com trekking moderado em Kumano.',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  217 => 
-  array (
     'CodigoPrograma' => 'R480',
     'Torre' => 'EUROPA',
     'GrupoProgramas' => 45,
@@ -9579,7 +9515,7 @@ Saídas 2025: Terça-feira Mar.11 e 25',
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  218 => 
+  217 => 
   array (
     'CodigoPrograma' => 'R482B',
     'Torre' => 'EUROPA',
@@ -9623,7 +9559,7 @@ Saídas 2025: Terça-feira Mar.11 e 25',
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  219 => 
+  218 => 
   array (
     'CodigoPrograma' => 'R496',
     'Torre' => 'EUROPA',
@@ -9668,7 +9604,7 @@ Saídas 2025: Quintas-feiras  Mar.27 |Abr.10 e 24 | Mai. 08 e 22 | Jun.12 e 26 |
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  220 => 
+  219 => 
   array (
     'CodigoPrograma' => 'R499',
     'Torre' => 'EUROPA',
@@ -9713,7 +9649,7 @@ Abr.25 | Mai.09 e 23 | Jun.06, 20 e 27 | Jul.04 e 18 | Ago.22 | Set.05, 19 e 26 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  221 => 
+  220 => 
   array (
     'CodigoPrograma' => 'R500',
     'Torre' => 'EUROPA',
@@ -9757,7 +9693,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  222 => 
+  221 => 
   array (
     'CodigoPrograma' => 'R502',
     'Torre' => 'EUROPA',
@@ -9803,7 +9739,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'S',
     'DestaquePortalTexto' => '',
   ),
-  223 => 
+  222 => 
   array (
     'CodigoPrograma' => 'R504',
     'Torre' => 'EUROPA',
@@ -9849,7 +9785,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  224 => 
+  223 => 
   array (
     'CodigoPrograma' => 'R509',
     'Torre' => 'EUROPA',
@@ -9891,7 +9827,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  225 => 
+  224 => 
   array (
     'CodigoPrograma' => 'R512',
     'Torre' => 'EUROPA',
@@ -9935,7 +9871,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  226 => 
+  225 => 
   array (
     'CodigoPrograma' => 'R513',
     'Torre' => 'EUROPA',
@@ -9980,7 +9916,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  227 => 
+  226 => 
   array (
     'CodigoPrograma' => 'R517',
     'Torre' => 'EUROPA',
@@ -10022,7 +9958,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  228 => 
+  227 => 
   array (
     'CodigoPrograma' => 'R520',
     'Torre' => 'EUROPA',
@@ -10065,7 +10001,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  229 => 
+  228 => 
   array (
     'CodigoPrograma' => 'R522',
     'Torre' => 'EUROPA',
@@ -10109,7 +10045,7 @@ Mai.09 e 23 | Jun.06 e 20 | Jul.11 e 25 | Ago.08, 22 e 29** | Set.12** | Out.03,
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  230 => 
+  229 => 
   array (
     'CodigoPrograma' => 'R523',
     'Torre' => 'EUROPA',
@@ -10153,7 +10089,7 @@ Mar.30* | Abr.27* | Mai.11* e 25* | Jun.08 e 22* | Jul.13* e 27 | Ago.10* e 31 |
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  231 => 
+  230 => 
   array (
     'CodigoPrograma' => 'R526',
     'Torre' => 'EUROPA',
@@ -10196,7 +10132,7 @@ Mar.30* | Abr.27* | Mai.11* e 25* | Jun.08 e 22* | Jul.13* e 27 | Ago.10* e 31 |
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  232 => 
+  231 => 
   array (
     'CodigoPrograma' => 'R534',
     'Torre' => 'EUROPA',
@@ -10240,7 +10176,7 @@ Mai.11 | Jun.01, 15 e 22 | Jul.20 | Ago.10 e 24 | Set.07, 14, 21 e 28 | Out.05
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  233 => 
+  232 => 
   array (
     'CodigoPrograma' => 'R542',
     'Torre' => 'AL',
@@ -10284,7 +10220,7 @@ Mai.11 | Jun.01, 15 e 22 | Jul.20 | Ago.10 e 24 | Set.07, 14, 21 e 28 | Out.05
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  234 => 
+  233 => 
   array (
     'CodigoPrograma' => 'R558',
     'Torre' => 'EUROPA',
@@ -10329,7 +10265,7 @@ Mai.11 | Jun.01, 15 e 22 | Jul.20 | Ago.10 e 24 | Set.07, 14, 21 e 28 | Out.05
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  235 => 
+  234 => 
   array (
     'CodigoPrograma' => 'R559',
     'Torre' => 'ASIA',
@@ -10373,7 +10309,7 @@ Jan.09 e 23 | Fev.06 e 20 | Mar.06 e 20 | Abr.03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  236 => 
+  235 => 
   array (
     'CodigoPrograma' => 'R561',
     'Torre' => 'ASIA',
@@ -10418,7 +10354,7 @@ Jan.09 e 23 | Fev.06 e 20 | Mar.06 e 20 | Abr.03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  237 => 
+  236 => 
   array (
     'CodigoPrograma' => 'R562',
     'Torre' => 'ASIA',
@@ -10469,7 +10405,7 @@ Saídas 2026:         Terças-feiras
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  238 => 
+  237 => 
   array (
     'CodigoPrograma' => 'R563',
     'Torre' => 'EUROPA',
@@ -10514,7 +10450,7 @@ Saídas 2026:         Terças-feiras
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  239 => 
+  238 => 
   array (
     'CodigoPrograma' => 'R565',
     'Torre' => 'EUROPA',
@@ -10559,7 +10495,7 @@ Saídas 2026:         Terças-feiras
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  240 => 
+  239 => 
   array (
     'CodigoPrograma' => 'R566',
     'Torre' => 'EUROPA',
@@ -10603,7 +10539,7 @@ Saídas 2026:         Terças-feiras
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  241 => 
+  240 => 
   array (
     'CodigoPrograma' => 'R568',
     'Torre' => 'ASIA',
@@ -10648,7 +10584,7 @@ Saídas 2026:         Terças-feiras
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  242 => 
+  241 => 
   array (
     'CodigoPrograma' => 'R569',
     'Torre' => 'ASIA',
@@ -10695,7 +10631,7 @@ Saídas 2026: 	Terça-feira
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  243 => 
+  242 => 
   array (
     'CodigoPrograma' => 'R570',
     'Torre' => 'EUROPA',
@@ -10739,7 +10675,7 @@ Mai.11 e 25 | Jun.01, 08, 15 e 22 | Jul.20 | Ago.10 e 24 | Set.07, 14, 21 e 28 |
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  244 => 
+  243 => 
   array (
     'CodigoPrograma' => 'R571',
     'Torre' => 'EUROPA',
@@ -10783,7 +10719,7 @@ Mai.14 e 28 | Jun.04, 11, 18 e 25 | Jul.23 | Ago.13 e 27 | Set.10, 17 e 24 | Out
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  245 => 
+  244 => 
   array (
     'CodigoPrograma' => 'R573',
     'Torre' => 'AL',
@@ -10826,7 +10762,7 @@ Mai.14 e 28 | Jun.04, 11, 18 e 25 | Jul.23 | Ago.13 e 27 | Set.10, 17 e 24 | Out
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  246 => 
+  245 => 
   array (
     'CodigoPrograma' => 'R574',
     'Torre' => 'AL',
@@ -10868,7 +10804,7 @@ Mai.14 e 28 | Jun.04, 11, 18 e 25 | Jul.23 | Ago.13 e 27 | Set.10, 17 e 24 | Out
     'DestaquePortal' => 'S',
     'DestaquePortalTexto' => '',
   ),
-  247 => 
+  246 => 
   array (
     'CodigoPrograma' => 'R575',
     'Torre' => 'EUROPA',
@@ -10910,7 +10846,7 @@ Mai.14 e 28 | Jun.04, 11, 18 e 25 | Jul.23 | Ago.13 e 27 | Set.10, 17 e 24 | Out
     'DestaquePortal' => 'S',
     'DestaquePortalTexto' => '',
   ),
-  248 => 
+  247 => 
   array (
     'CodigoPrograma' => 'R576',
     'Torre' => 'EUROPA',
@@ -10954,7 +10890,7 @@ Bressanone, Bolzano, Merano, Vipiteno, Kaltern an der Weinstraße, Egna, Trento 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => 'DESTAQUE',
   ),
-  249 => 
+  248 => 
   array (
     'CodigoPrograma' => 'R583',
     'Torre' => 'AL',
@@ -10996,7 +10932,7 @@ Bressanone, Bolzano, Merano, Vipiteno, Kaltern an der Weinstraße, Egna, Trento 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  250 => 
+  249 => 
   array (
     'CodigoPrograma' => 'R584',
     'Torre' => 'EUROPA',
@@ -11038,7 +10974,7 @@ Bressanone, Bolzano, Merano, Vipiteno, Kaltern an der Weinstraße, Egna, Trento 
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  251 => 
+  250 => 
   array (
     'CodigoPrograma' => 'R585',
     'Torre' => 'ASIA',
@@ -11083,7 +11019,7 @@ Saídas 2026: Segundas-feiras Jan.26 | Fev.16
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  252 => 
+  251 => 
   array (
     'CodigoPrograma' => 'R586',
     'Torre' => 'ASIA',
@@ -11127,7 +11063,7 @@ Saídas 2026: Segundas-feiras Jan.26 | Fev.16
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  253 => 
+  252 => 
   array (
     'CodigoPrograma' => 'R589',
     'Torre' => 'AL',
@@ -11171,7 +11107,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  254 => 
+  253 => 
   array (
     'CodigoPrograma' => 'R590',
     'Torre' => 'EUROPA',
@@ -11213,7 +11149,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  255 => 
+  254 => 
   array (
     'CodigoPrograma' => 'R591',
     'Torre' => 'AL',
@@ -11256,7 +11192,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  256 => 
+  255 => 
   array (
     'CodigoPrograma' => 'R592',
     'Torre' => 'ASIA',
@@ -11304,7 +11240,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  257 => 
+  256 => 
   array (
     'CodigoPrograma' => 'R593',
     'Torre' => 'EUROPA',
@@ -11347,7 +11283,140 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
+  257 => 
+  array (
+    'CodigoPrograma' => 'R594',
+    'Torre' => 'EUROPA',
+    'GrupoProgramas' => 52,
+    'Descricao' => 'FANTASIA ROMA E PUGLIA',
+    'CategoriaCodigo' => 3,
+    'Detalhes' => 'Roma, Bari, Trani, Castel del Monte, Alberobello, Matera, Locorotondo, Ostuni, Otranto e Lecce',
+    'Destino' => 'ITALIA',
+    'NomeNavio' => 'N',
+    'PortoEmbarqueNavio' => '',
+    'PortoDesembarqueNavio' => '',
+    'MaritimaCia' => 0,
+    'Bloqueado' => 'N',
+    'BloqueadoInterno' => 'N',
+    'MotivoBloqueio' => '',
+    'DataInclusao' => '2025-03-19T13:49:48',
+    'DataAlteracao' => '2025-03-20T14:26:09',
+    'CaminhoImagem' => 'R594_FOTO_ICONE.JPG',
+    'Mapa' => '',
+    'Banner' => 'DESTAQUE_R594.JPG',
+    'DescricaoResumida' => 'Uma jornada pelos tesouros históricos e culturais do sul da Itália',
+    'Ordem' => 0,
+    'QtdParcelas' => 5,
+    'QtdDiasViagem' => 6,
+    'QtdNoitesViagem' => 5,
+    'ClasseHotelEc' => 0,
+    'ClasseHotelEv' => 0,
+    'SaidasPrograma' => '2025: Quintas-Feiras Abr. 24 | Mai. 08 e 22 | Jun. 05, 19 e 26 | Jul. 03 e 17 | Ago. 21 | Set. 04, 18 e 25 | Out. 02, 16 e 23 | Nov. 6.
+',
+    'LiberaSomenteTerrestre' => '',
+    'BloqueiaPromocao' => 'S',
+    'BloqueiaVendaTerrestre' => 'S',
+    'ImagemPromocao' => '',
+    'OrdemPromocao' => 0,
+    'UrlAmigavel' => 'R594',
+    'ValidadePrograma' => '2025-11-06',
+    'CodigoEcommerce' => 'R594',
+    'PrecoSobConsulta' => 'N',
+    'DescricaoPortal' => '',
+    'DestaquePortal' => 'N',
+    'DestaquePortalTexto' => '',
+  ),
   258 => 
+  array (
+    'CodigoPrograma' => 'R595',
+    'Torre' => 'AL',
+    'GrupoProgramas' => 52,
+    'Descricao' => 'FANTASIA PUGLIA',
+    'CategoriaCodigo' => 3,
+    'Detalhes' => 'Los Angeles',
+    'Destino' => 'ITALIA',
+    'NomeNavio' => 'N',
+    'PortoEmbarqueNavio' => '',
+    'PortoDesembarqueNavio' => '',
+    'MaritimaCia' => 0,
+    'Bloqueado' => 'N',
+    'BloqueadoInterno' => 'N',
+    'MotivoBloqueio' => '',
+    'DataInclusao' => '2025-03-19T18:25:55',
+    'DataAlteracao' => '2025-03-20T18:03:13',
+    'CaminhoImagem' => 'R595_FOTO_ICONE.JPG',
+    'Mapa' => '',
+    'Banner' => 'DESTAQUE_R595.JPG',
+    'DescricaoResumida' => 'A essência da Puglia: vilarejos históricos, paisagens encantadoras e cultura autêntica',
+    'Ordem' => 0,
+    'QtdParcelas' => 5,
+    'QtdDiasViagem' => 6,
+    'QtdNoitesViagem' => 5,
+    'ClasseHotelEc' => 0,
+    'ClasseHotelEv' => 0,
+    'SaidasPrograma' => '2025: Sextas-Feiras Abr. 25 | Mai. 09 e 23 | Jun. 06, 20 e 27 | Jul. 04 e 18 | Ago. 22 | Set. 05, 19 e 26 | Out. 03, 17 e 24 | Nov. 7.
+',
+    'LiberaSomenteTerrestre' => '',
+    'BloqueiaPromocao' => 'S',
+    'BloqueiaVendaTerrestre' => 'S',
+    'ImagemPromocao' => '',
+    'OrdemPromocao' => 0,
+    'UrlAmigavel' => 'R595',
+    'ValidadePrograma' => '2025-11-07',
+    'CodigoEcommerce' => 'R595',
+    'PrecoSobConsulta' => 'N',
+    'DescricaoPortal' => '',
+    'DestaquePortal' => 'N',
+    'DestaquePortalTexto' => '',
+  ),
+  259 => 
+  array (
+    'CodigoPrograma' => 'R596',
+    'Torre' => 'EUROPA',
+    'GrupoProgramas' => 52,
+    'Descricao' => 'FANTASIA SICILIANA',
+    'CategoriaCodigo' => 3,
+    'Detalhes' => 'Palermo, Erice, Marsala, Agrigento, Ragusa, Noto, Siracusa, Taormina
+
+',
+    'Destino' => 'ITALIA',
+    'NomeNavio' => 'N',
+    'PortoEmbarqueNavio' => '',
+    'PortoDesembarqueNavio' => '',
+    'MaritimaCia' => 0,
+    'Bloqueado' => 'N',
+    'BloqueadoInterno' => 'N',
+    'MotivoBloqueio' => '',
+    'DataInclusao' => '2025-03-19T20:41:46',
+    'DataAlteracao' => '2025-03-20T21:47:45',
+    'CaminhoImagem' => 'R596_FOTO_ICONE.JPG',
+    'Mapa' => '',
+    'Banner' => 'DESTAQUE_R596.JPG',
+    'DescricaoResumida' => 'Um mergulho na história, cultura e paisagens deslumbrantes da Sicília',
+    'Ordem' => 0,
+    'QtdParcelas' => 5,
+    'QtdDiasViagem' => 7,
+    'QtdNoitesViagem' => 6,
+    'ClasseHotelEc' => 0,
+    'ClasseHotelEv' => 0,
+    'SaidasPrograma' => '2025: Quintas-Feiras Abr. 10 e 17 | Mai. 08, 15 e 22 | Jun. 05 e 19 | Jul. 03 e 17 | Ago. 21 | Set. 04, 11 e 25 | Out. 02, 09 e 23 | Nov. 6.
+
+2026: Quintas-Feiras Mar. 26
+',
+    'LiberaSomenteTerrestre' => '',
+    'BloqueiaPromocao' => 'S',
+    'BloqueiaVendaTerrestre' => 'S',
+    'ImagemPromocao' => '',
+    'OrdemPromocao' => 0,
+    'UrlAmigavel' => 'R596',
+    'ValidadePrograma' => '2026-03-26',
+    'CodigoEcommerce' => 'R596',
+    'PrecoSobConsulta' => 'N',
+    'DescricaoPortal' => '',
+    'DestaquePortal' => 'N',
+    'DestaquePortalTexto' => '',
+  ),
+  260 => 
   array (
     'CodigoPrograma' => 'SAFARI25A',
     'Torre' => 'GBM',
@@ -11389,7 +11458,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  259 => 
+  261 => 
   array (
     'CodigoPrograma' => 'SAUDI25A',
     'Torre' => 'GBM',
@@ -11431,7 +11500,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  260 => 
+  262 => 
   array (
     'CodigoPrograma' => 'SEACPTBCN',
     'Torre' => 'MARITIMO',
@@ -11474,7 +11543,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  261 => 
+  263 => 
   array (
     'CodigoPrograma' => 'SLEGCPHRKV',
     'Torre' => 'MARITIMO',
@@ -11516,7 +11585,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  262 => 
+  264 => 
   array (
     'CodigoPrograma' => 'SLEGEDICPH',
     'Torre' => 'MARITIMO',
@@ -11558,7 +11627,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  263 => 
+  265 => 
   array (
     'CodigoPrograma' => 'SLGVIECAM',
     'Torre' => 'ASIA',
@@ -11601,7 +11670,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'S',
     'DestaquePortalTexto' => 'DESTAQUE',
   ),
-  264 => 
+  266 => 
   array (
     'CodigoPrograma' => 'SPRIRKVRKV',
     'Torre' => 'MARITIMO',
@@ -11643,7 +11712,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  265 => 
+  267 => 
   array (
     'CodigoPrograma' => 'SRIMA25A',
     'Torre' => 'GBM',
@@ -11686,7 +11755,7 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
-  266 => 
+  268 => 
   array (
     'CodigoPrograma' => 'SRIMA25B',
     'Torre' => 'GBM',
@@ -11727,1441 +11796,6 @@ Jan. 03, 10, 17, 24 e 31 / Fev. 07, 14, 21 e 28 / Mar. 07, 14, 21 e 28 / Abr. 03
     'CodigoEcommerce' => 'SRIMA25B',
     'PrecoSobConsulta' => 'N',
     'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  267 => 
-  array (
-    'CodigoPrograma' => 'SWALEMA25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 6,
-    'Descricao' => 'DESTAQUES DO NORTE DA ALEMANHA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Hamburgo, Altes Land, Stade, Bremen, Celle, Luneburgo, Lübeck, Schwerin, Wismar e Berlim.',
-    'Destino' => 'ALEMANHA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:52:20',
-    'DataAlteracao' => '2025-01-09T20:55:02',
-    'CaminhoImagem' => 'SWALEMA25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWALEMA25A.JPG',
-    'DescricaoResumida' => 'Da Saxônia ao Mar do Norte',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 15,
-    'QtdNoitesViagem' => 12,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 16; Set. 12',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWALEMA25A',
-    'ValidadePrograma' => '2025-09-12',
-    'CodigoEcommerce' => 'SWALEMA25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  268 => 
-  array (
-    'CodigoPrograma' => 'SWANDAL25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 40,
-    'Descricao' => 'ANDALUZIA, COSTA DO SOL E BARCELONA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Sevilha, Pueblos Blancos, Ronda, Málaga, Granada, Murcia, Alicante, Costa Blanca, Valência, Tarragona e Barcelona.
-',
-    'Destino' => 'ESPANHA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:42:06',
-    'DataAlteracao' => '2025-02-07T13:30:10',
-    'CaminhoImagem' => 'SWANDAL25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWANDAL25A.JPG',
-    'DescricaoResumida' => 'Terras de Vários Países',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 19,
-    'QtdNoitesViagem' => 16,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 28; Set. 17; Out. 08; Nov. 05
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWANDAL25A',
-    'ValidadePrograma' => '2025-11-05',
-    'CodigoEcommerce' => 'SWANDAL25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  269 => 
-  array (
-    'CodigoPrograma' => 'SWANDAL25B',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 40,
-    'Descricao' => 'ANDALUZIA, COSTA DO SOL E BARCELONA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Sevilha, Pueblos Blancos, Ronda, Málaga, Granada, Murcia, Alicante, Costa Blanca, Valência, Tarragona e Barcelona.
-',
-    'Destino' => 'ESPANHA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-22T14:15:10',
-    'DataAlteracao' => '2024-12-26T21:36:22',
-    'CaminhoImagem' => 'SWANDAL25B_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWANDAL25B.JPG',
-    'DescricaoResumida' => 'Terras de Vários Países',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 19,
-    'QtdNoitesViagem' => 16,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Abr. 16 (Páscoa)
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWANDAL25B',
-    'ValidadePrograma' => '2025-04-16',
-    'CodigoEcommerce' => 'SWANDAL25B',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  270 => 
-  array (
-    'CodigoPrograma' => 'SWBASCO25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 40,
-    'Descricao' => 'UMA ESPANHA SEM IGUAL',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'San Sebastián, Bilbao, Vitoria, Burgos, Rioja e a Rota dos Vinhos, Marqués de Riscal, Segóvia, Madri e Palma de Mallorca.',
-    'Destino' => 'ESPANHA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:43:25',
-    'DataAlteracao' => '2025-02-18T18:51:17',
-    'CaminhoImagem' => 'SWBASCO25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWBASCO25A.JPG',
-    'DescricaoResumida' => 'Do País Basco a Palma de Mallorca',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 16,
-    'QtdNoitesViagem' => 13,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2025: Mai. 04; Jun. 08; Set. 07; Out. 11*
-*Saída excepcionalmente no Sábado.',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWBASCO25A',
-    'ValidadePrograma' => '2025-10-11',
-    'CodigoEcommerce' => 'SWBASCO25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  271 => 
-  array (
-    'CodigoPrograma' => 'SWBAVIE25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 6,
-    'Descricao' => 'VIAGEM AO REINO DA BAVIERA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Nuremberg, Bamberg, Rothenburg, Munique, Herrenchiemsee, Neuschwanstein, Mainau, Konstanz, Lindau, Meersburg, Floresta Negra, Titisee, Freiburg, Baden-Baden, Heidelberg e Frankfurt.
-',
-    'Destino' => 'ALEMANHA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:54:23',
-    'DataAlteracao' => '2025-02-27T20:58:00',
-    'CaminhoImagem' => 'SWBAVIE25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWBAVIE25A.JPG',
-    'DescricaoResumida' => 'A Alemanha dos Contos de Fadas',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 18,
-    'QtdNoitesViagem' => 15,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Jun. 11;  Set. 03',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWBAVIE25A',
-    'ValidadePrograma' => '2025-09-03',
-    'CodigoEcommerce' => 'SWBAVIE25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  272 => 
-  array (
-    'CodigoPrograma' => 'SWBORG25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 45,
-    'Descricao' => 'A ESSÊNCIA DA BORGONHA, DA ALSÁCIA E CHAMPANHE',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Lyon, Vienne, Beaune, Dijon, Route Des Grands Crus, Montbéliard, Estrasburgo, Colmar, Metz, Reims, Região da Champanhe e Paris.',
-    'Destino' => 'FRANÇA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:44:46',
-    'DataAlteracao' => '2025-01-16T19:58:06',
-    'CaminhoImagem' => 'SWBORG25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWBORG25A.JPG',
-    'DescricaoResumida' => 'Com Lyon e Paris',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 16,
-    'QtdNoitesViagem' => 13,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 10; Jul. 05; Ago. 30',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWBORG25A',
-    'ValidadePrograma' => '2025-08-30',
-    'CodigoEcommerce' => 'SWBORG25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  273 => 
-  array (
-    'CodigoPrograma' => 'SWCARIB25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 355,
-    'Descricao' => 'COLÔMBIA E PANAMÁ',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Cartagena das Índias, Bogotá e Cidade do Panamá',
-    'Destino' => 'COLOMPANAM',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:40:10',
-    'DataAlteracao' => '2025-02-21T19:45:26',
-    'CaminhoImagem' => 'SWCARIB25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWCARIB25A.JPG',
-    'DescricaoResumida' => 'O Vibrante Caribe',
-    'Ordem' => 0,
-    'QtdParcelas' => 7,
-    'QtdDiasViagem' => 13,
-    'QtdNoitesViagem' => 10,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDA 2025: Out. 07',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWCARIB25A',
-    'ValidadePrograma' => '2025-10-07',
-    'CodigoEcommerce' => 'SWCARIB25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  274 => 
-  array (
-    'CodigoPrograma' => 'SWGREEK25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 46,
-    'Descricao' => 'AS ENSOLARADAS ILHAS GREGAS',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Heraklion, Elounda, Spinalonga, Ágios Nikolaos, Santorini, Mykonos e Atenas.
-',
-    'Destino' => 'GRE',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T15:05:05',
-    'DataAlteracao' => '2025-01-03T19:50:18',
-    'CaminhoImagem' => 'SWGREEK25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWGREEK25A.JPG',
-    'DescricaoResumida' => 'A Morada dos Deuses',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 16,
-    'QtdNoitesViagem' => 13,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 10; Set. 14*
-*Vide informações importantes
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWGREEK25A',
-    'ValidadePrograma' => '2025-09-14',
-    'CodigoEcommerce' => 'SWGREEK25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  275 => 
-  array (
-    'CodigoPrograma' => 'SWJAPAO25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 55,
-    'Descricao' => 'JAPÃO IMPERIAL',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Osaka, Kurashiki, Hiroshima, Okayama, Quioto, Nara, Hakone, Nikko, Tóquio e Dubai.
-',
-    'Destino' => 'JAPÃO',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T15:06:18',
-    'DataAlteracao' => '2025-03-13T17:55:10',
-    'CaminhoImagem' => 'SWJAPAO25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWJAPAO25A.JPG',
-    'DescricaoResumida' => 'E suas Tradições Milenares',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 18,
-    'QtdNoitesViagem' => 15,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 15; Jun. 12; Ago. 07; Set. 04; Out. 30',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWJAPAO25A',
-    'ValidadePrograma' => '2025-10-30',
-    'CodigoEcommerce' => 'SWJAPAO25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  276 => 
-  array (
-    'CodigoPrograma' => 'SWJAPAO25B',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 55,
-    'Descricao' => 'JAPÃO IMPERIAL',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Osaka, Kurashiki, Hiroshima, Okayama, Quioto, Nara, Hakone, Nikko, Tóquio e Dubai.
-',
-    'Destino' => 'JAPÃO',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T20:49:54',
-    'DataAlteracao' => '2025-03-13T17:58:09',
-    'CaminhoImagem' => 'SWJAPAO25B_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWJAPAO25B.JPG',
-    'DescricaoResumida' => 'E suas Tradições Milenares',
-    'Ordem' => 0,
-    'QtdParcelas' => 7,
-    'QtdDiasViagem' => 18,
-    'QtdNoitesViagem' => 15,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mar. 15*, 17* e 19*; Abr. 10 (Páscoa)
-*Saídas especiais para o grande Sakura Festival, a Floração das Cerejeiras.
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWJAPAO25B',
-    'ValidadePrograma' => '2025-04-10',
-    'CodigoEcommerce' => 'SWJAPAO25B',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  277 => 
-  array (
-    'CodigoPrograma' => 'SWLESTE25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 6,
-    'Descricao' => 'TRIANGULO IMPERIAL COM ALEMANHA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Budapeste, Bratislava, Viena, Cesky Krumlov, Praga, Liberec, Dresden, Potsdam e Berlim.
-',
-    'Destino' => 'LESALE',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-08-21T14:49:38',
-    'DataAlteracao' => '2024-11-26T11:48:20',
-    'CaminhoImagem' => 'SWLESTE25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWLESTE25A.JPG',
-    'DescricaoResumida' => 'Ícones do Leste Europeu',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 17,
-    'QtdNoitesViagem' => 14,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 14; Jul. 02; Set. 03; Out. 09(*)
-Vide informações importantes 
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWLESTE25A',
-    'ValidadePrograma' => '2025-10-09',
-    'CodigoEcommerce' => 'SWLESTE25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  278 => 
-  array (
-    'CodigoPrograma' => 'SWMEX25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 0,
-    'Descricao' => 'FASCINANTE MÉXICO',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Cidade do México, San Juan Del Rio, Querétaro, San Miguel Allende, Guanajuato, Guadalajara, Chapala, Ajijic, Tlaquepaque, Tequila, Cancún, Playa del Carmen e Chichén-Itzá.
-',
-    'Destino' => 'MEXICO',
-    'NomeNavio' => '',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-08-19T12:47:46',
-    'DataAlteracao' => '2025-01-10T18:12:16',
-    'CaminhoImagem' => 'SWMEX25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWMEX25A.JPG',
-    'DescricaoResumida' => 'História, Arte, Sol e Mar',
-    'Ordem' => 9,
-    'QtdParcelas' => 0,
-    'QtdDiasViagem' => 16,
-    'QtdNoitesViagem' => 14,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Jul. 05; Set. 06; Out. 25',
-    'LiberaSomenteTerrestre' => 'N',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWMEX25A',
-    'ValidadePrograma' => '2025-10-25',
-    'CodigoEcommerce' => 'SWMEX25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  279 => 
-  array (
-    'CodigoPrograma' => 'SWMEX25B',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 62,
-    'Descricao' => 'FASCINANTE MÉXICO',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Cidade do México, San Juan Del Rio, Querétaro, San Miguel Allende, Guanajuato, Guadalajara, Chapala, Ajijic, Tlaquepaque, Tequila, Cancún, Playa del Carmen e Chichén-Itzá.
-',
-    'Destino' => 'MEXICO',
-    'NomeNavio' => '',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-07-05T18:00:58',
-    'DataAlteracao' => '2025-02-27T22:18:04',
-    'CaminhoImagem' => 'SWMEX25B_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWMEX25B.JPG',
-    'DescricaoResumida' => 'História, Arte, Sol e Mar ',
-    'Ordem' => 9,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 16,
-    'QtdNoitesViagem' => 14,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDA 2025: Abr. 12 (Páscoa)',
-    'LiberaSomenteTerrestre' => 'N',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWMEX25B',
-    'ValidadePrograma' => '2025-04-12',
-    'CodigoEcommerce' => 'SWMEX25B',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  280 => 
-  array (
-    'CodigoPrograma' => 'SWPIEMO25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 52,
-    'Descricao' => 'VALE D\'AOSTA, PIEMONTE E LAGO MAGGIORE',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Vale D\'Aosta, Monte Bianco, Courmayeur, Aosta, Castelo de Fenis, Turim, Asti, Barbaresco, Alba, Grinzane Cavour Pollenzo, Barolo, Vercelli, Novara, Stresa, Ilhas Borromeas, Sacro Monte, Lago D\'Orta e Milão.
-',
-    'Destino' => 'ITALIA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:56:56',
-    'DataAlteracao' => '2025-02-25T18:47:17',
-    'CaminhoImagem' => 'SWPIEMO25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWPIEMO25A.JPG',
-    'DescricaoResumida' => 'A Itália com Mais Charme',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 17,
-    'QtdNoitesViagem' => 14,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 09*; Jun. 13, Jul. 11; Set. 05
-*Vide informações importantes.
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWPIEMO25A',
-    'ValidadePrograma' => '2025-09-05',
-    'CodigoEcommerce' => 'SWPIEMO25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  281 => 
-  array (
-    'CodigoPrograma' => 'SWPROV25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 45,
-    'Descricao' => 'CÔTE D\'AZUR E PROVENCE',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Nice, Cannes, Grasse, Gourdon, Saint Paul de Vence, Antibes, St. Tropez, Aix-en-Provence, Moustier-Ste-Marie, Lac de Saint Croix,  Roussillon, Luberon, Saint-Rémy-de-Provence, Avignon, Arles, Pont du Gard, Aigues-Mortes e Marselha.
-',
-    'Destino' => 'FRANÇA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:50:54',
-    'DataAlteracao' => '2025-02-21T19:50:02',
-    'CaminhoImagem' => 'SWPROV25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWPROV25A.JPG',
-    'DescricaoResumida' => 'Encantamento a Cada Passo',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 17,
-    'QtdNoitesViagem' => 14,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 03; Jul. 05*; Ago. 30
-*Floração das Lavandas.
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWPROV25A',
-    'ValidadePrograma' => '2024-08-30',
-    'CodigoEcommerce' => 'SWPROV25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  282 => 
-  array (
-    'CodigoPrograma' => 'SWPUGLI25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 52,
-    'Descricao' => 'PUGLIA E COSTA AMALFITANA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Lecce, Otranto, Leuca, Costa Salentina, Ostuni, Polignano a Mari, Bari, Alberobello, Matera, Nápoles, Sorrento, Positano, Costa Amalfitana, Amalfi e Roma.
-
-',
-    'Destino' => 'ITALIA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T15:01:24',
-    'DataAlteracao' => '2024-11-25T23:21:09',
-    'CaminhoImagem' => 'SWPUGLI25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWPUGLI25A.JPG',
-    'DescricaoResumida' => 'A Itália entre Três Mares',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 16,
-    'QtdNoitesViagem' => 13,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Abr. 25*; Mai. 31*; Jun. 27*; Ago. 21; Set. 18; Out. 16
-*Vide informações importantes.
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWPUGLI25A',
-    'ValidadePrograma' => '2025-10-16',
-    'CodigoEcommerce' => 'SWPUGLI25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  283 => 
-  array (
-    'CodigoPrograma' => 'SWSICIL25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 52,
-    'Descricao' => 'O MELHOR DA SICÍLIA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Palermo, Monreale, Trapani, Segesta, Milazzo, Messina, Reggio di Calabria, Scilla, Tropea , Taormina, Siracusa, Catânia, Mdina, Rabat, Três Cidades, Valletta e Malta.',
-    'Destino' => 'ITALIA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T15:04:07',
-    'DataAlteracao' => '2025-01-27T19:29:17',
-    'CaminhoImagem' => 'SWSICIL25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWSICIL25A.JPG',
-    'DescricaoResumida' => 'E a Bela Ilha de Malta',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 18,
-    'QtdNoitesViagem' => 15,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 28; Ago. 20; Set. 17*; Out. 15*
-*Vide informações importantes.',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWSICIL25A',
-    'ValidadePrograma' => '2025-10-15',
-    'CodigoEcommerce' => 'SWSICIL25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  284 => 
-  array (
-    'CodigoPrograma' => 'SWSWISS25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 132,
-    'Descricao' => 'O MELHOR DA SUÍÇA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Lugano, Locarno, Bellinzona, Zermatt, Montreux, Lausanne, Évian-Les-Bains, Genebra, Château D\'Oex, Gstaad, Grindelwald, Interlaken, Berna, Lucerna e Zurique.',
-    'Destino' => 'SUIÇA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:55:50',
-    'DataAlteracao' => '2025-02-06T19:52:47',
-    'CaminhoImagem' => 'SWSWISS25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWSWISS25A.JPG',
-    'DescricaoResumida' => 'Uma Viagem pelos Encantos Alpinos',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 17,
-    'QtdNoitesViagem' => 14,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 29; Set. 11',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWSWISS25A',
-    'ValidadePrograma' => '2025-09-11',
-    'CodigoEcommerce' => 'SWSWISS25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  285 => 
-  array (
-    'CodigoPrograma' => 'SWTHAI25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 202,
-    'Descricao' => 'TAILÂNDIA E DOHA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Phuket, Chiang Rai, Chiang Saen, Chiang Mai, Bangkok, Ayutthaya e Doha (Qatar).
-
-',
-    'Destino' => 'TAILÂNDIA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-08-16T21:08:41',
-    'DataAlteracao' => '2025-01-03T18:58:44',
-    'CaminhoImagem' => 'SWTHAI25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWTHAI25A.JPG',
-    'DescricaoResumida' => 'O Exótico Sudeste Asiático e a Tradicional Cultura Árabe',
-    'Ordem' => 18,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 18,
-    'QtdNoitesViagem' => 16,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2025: Set. 13; Out. 28*
-*Saída excepcionalmente na Terça-feira. Festival das Lanternas em Chiang Mai.',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWTHAI25A',
-    'ValidadePrograma' => '2025-10-26',
-    'CodigoEcommerce' => 'SWTHAI25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  286 => 
-  array (
-    'CodigoPrograma' => 'SWTOSC25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 52,
-    'Descricao' => 'TOSCANA E EMILIA-ROMAGNA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Parma, Langhirano, Modena, Maranello, Bologna, Florença, Lucca, San Gimignano, Castellina in Chianti, Siena, Montalcino, Orvieto e Roma.',
-    'Destino' => 'ITALIA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:59:42',
-    'DataAlteracao' => '2024-11-27T14:12:55',
-    'CaminhoImagem' => 'SWTOSC25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWTOSC25A.JPG',
-    'DescricaoResumida' => 'Artes, Cores e Sabores',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 17,
-    'QtdNoitesViagem' => 14,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Mai. 10; Jul. 03*; Set. 13
-*Saída excepcionalmente na Quinta-feira.
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWTOSC25A',
-    'ValidadePrograma' => '2025-09-13',
-    'CodigoEcommerce' => 'SWTOSC25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  287 => 
-  array (
-    'CodigoPrograma' => 'SWVENET25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 52,
-    'Descricao' => 'OS ENCANTOS DO VÊNETO',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => ' Ljubljana, Bled, Postojna, Trieste, Aquilea, Grado, Ponzano Vêneto, Treviso, Rota do Prosecco, Marostica, Bossano Del Grappa, Vicenza, Verona, Valpolicella, Pádua, Murano e Veneza.
-',
-    'Destino' => 'ITALIA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T14:58:32',
-    'DataAlteracao' => '2025-02-25T18:50:50',
-    'CaminhoImagem' => 'SWVENET25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_SWVENET25A.JPG',
-    'DescricaoResumida' => 'E da Surpreendente Eslovênia',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 18,
-    'QtdNoitesViagem' => 15,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Jul. 03; Set. 04
-
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'SWVENET25A',
-    'ValidadePrograma' => '2025-09-04',
-    'CodigoEcommerce' => 'SWVENET25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  288 => 
-  array (
-    'CodigoPrograma' => 'TUNIS25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 90,
-    'Descricao' => 'TUNÍSIA, A JORNADA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Tunis, Cartago, Sidi Bou Said, Dougga, Rota do Azeite, Sousse, Monastir, El Jem, Ilha Djerba, Matmata, Lago Chott El Jerid, Tozeur, Chebika, Tamerza, Ong Jmal, Kairouan e Hammamet.
-',
-    'Destino' => 'TUN',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-26T14:42:20',
-    'DataAlteracao' => '2025-02-21T18:46:14',
-    'CaminhoImagem' => 'TUNIS25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_ TUNIS25A.JPG',
-    'DescricaoResumida' => 'Entre o Deserto e o Mar',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 15,
-    'QtdNoitesViagem' => 12,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Ago. 31; Out. 05; Nov. 09',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'TUNIS25A',
-    'ValidadePrograma' => '2025-11-09',
-    'CodigoEcommerce' => 'TUNIS25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  289 => 
-  array (
-    'CodigoPrograma' => 'TUNIS25B',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 90,
-    'Descricao' => 'TUNÍSIA, A JORNADA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => ' Tunes, Cartago, Sidi Bou Said, Dougga, Rota do Azeite, Sousse, El Jem, Matma, Ilha Djerba, Lago Chott El Jerrid, Touzer, Chebika, Tamerza, Ong Jmal, Kairouan e Hammamet.
-',
-    'Destino' => 'TUN',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-26T14:35:17',
-    'DataAlteracao' => '2025-03-10T14:28:36',
-    'CaminhoImagem' => 'TUNIS25B_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_TUNIS25B.JPG',
-    'DescricaoResumida' => 'Entre o Deserto e o Mar',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 15,
-    'QtdNoitesViagem' => 12,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDA 2025: Abr. 13* (Páscoa)
-*Vide informações importantes',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'TUNIS25B',
-    'ValidadePrograma' => '2025-04-13',
-    'CodigoEcommerce' => 'TUNIS25B',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  290 => 
-  array (
-    'CodigoPrograma' => 'TURK25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 89,
-    'Descricao' => 'A FASCINANTE TURQUIA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Istambul, Capadócia, Konya, Hierápolis, Pamukkale, Éfeso, Kusadasi, Cesmi, Alaçati, Urla, Esmirna, e Istambul.
-',
-    'Destino' => 'TUR',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-09-03T17:07:30',
-    'DataAlteracao' => '2025-03-10T17:52:12',
-    'CaminhoImagem' => 'TURK25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_TURK25A.JPG',
-    'DescricaoResumida' => 'Encantos da Ásia Menor',
-    'Ordem' => 27,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 17,
-    'QtdNoitesViagem' => 15,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Jun. 16; Set. 08; Out. 13',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'TURK25A',
-    'ValidadePrograma' => '2025-10-13',
-    'CodigoEcommerce' => 'TURK25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  291 => 
-  array (
-    'CodigoPrograma' => 'UK1825A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 50,
-    'Descricao' => 'INGLATERRA E ESCÓCIA (UK 18)',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Bath, Stonehenge, Oxford, Stratford-Upon-Avon, Chester, Liverpool, Lake District, Windermere, Glasgow, Loch Lomond, Fort William, Loch Ness, Inverness, Blair Castle, Pitlochry, Destilaria de Whisky, Edimburgo, Durham, York, Cambridge e Londres.',
-    'Destino' => 'INGESC',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-11-21T12:01:16',
-    'DataAlteracao' => '2025-02-21T15:14:24',
-    'CaminhoImagem' => 'UK1825A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_UK1825A.JPG',
-    'DescricaoResumida' => 'Dos Celtas ao Mundo Moderno',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 18,
-    'QtdNoitesViagem' => 17,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2025: Mai. 05; Jun. 09; Jul. 07; Ago. 04*; Set. 08
-*Vide informações importantes.',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'UK1825A',
-    'ValidadePrograma' => '2024-09-09',
-    'CodigoEcommerce' => 'UK1825A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  292 => 
-  array (
-    'CodigoPrograma' => 'UK25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 50,
-    'Descricao' => 'O MELHOR DO REINO UNIDO E IRLANDA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Bath, Stonehenge, Oxford, Stratford-Upon-Avon, Chester, Liverpool, Lake District, Windermere, Glasgow, Loch Lomond, Fort William, Loch Ness, Inverness, Blair Castle, Pitlochry, Destilaria de Whisky, Edimburgo, Durham, York, Cambridge, Londres, Cork, Blarney Castle, Killarney, Ring of Kerry, Cliffs of Moher, Galway e Dubl',
-    'Destino' => 'GBESIR',
-    'NomeNavio' => '',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => 'tabela',
-    'DataInclusao' => '2024-03-25T20:21:02',
-    'DataAlteracao' => '2025-02-21T18:15:46',
-    'CaminhoImagem' => 'UK25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_UK25A.JPG',
-    'DescricaoResumida' => 'Dos Celtas ao Mundo Moderno',
-    'Ordem' => 10,
-    'QtdParcelas' => 7,
-    'QtdDiasViagem' => 24,
-    'QtdNoitesViagem' => 21,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2025: Mai. 05; Jun. 09; Jul. 07; Ago. 04*; Set. 08
-*Vide informações importantes.',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'N',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'UK25A',
-    'ValidadePrograma' => '2025-09-08',
-    'CodigoEcommerce' => 'UK25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  293 => 
-  array (
-    'CodigoPrograma' => 'UNIANTOINE',
-    'Torre' => 'MARITIMO',
-    'GrupoProgramas' => 256,
-    'Descricao' => 'MERCADOS DE FÉRIAS NO RENO',
-    'CategoriaCodigo' => 5,
-    'Detalhes' => 'Basiléia, Kehl (Estrasbrugo), Manheim (Baden-Baden), Mainz, Rüdesheim, Koblenz, Colônia.',
-    'Destino' => 'CYR',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 9,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2023-08-30T14:29:58',
-    'DataAlteracao' => '2024-02-23T22:19:00',
-    'CaminhoImagem' => 'UNIANTOINE_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_UNIANTOINE.JPG',
-    'DescricaoResumida' => 'S.S. ANTOINETTE BASILÉIA A COLÔNIA (OU INVERSO)',
-    'Ordem' => 0,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 8,
-    'QtdNoitesViagem' => 7,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2024: Nov. 25; Dez. 02, 09 e 16
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'UNIANTOINE',
-    'ValidadePrograma' => '2024-12-16',
-    'CodigoEcommerce' => 'UNIANTOINE',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => 'Suíça, França e Alemanha proporcionam o cenário perfeito para o cruzeiro no mercado de Natal deste verdadeiro conhecedor.',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  294 => 
-  array (
-    'CodigoPrograma' => 'UNIRIVBEL',
-    'Torre' => 'MARITIMO',
-    'GrupoProgramas' => 256,
-    'Descricao' => 'MERCADOS DE FÉRIAS NA BÉLGICA',
-    'CategoriaCodigo' => 5,
-    'Detalhes' => 'Bruxelas, Gent, Hasselt, Maastricht, Antuérpia, Bruxelas.',
-    'Destino' => 'BRU',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 9,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2023-08-30T16:02:15',
-    'DataAlteracao' => '2024-02-23T22:18:41',
-    'CaminhoImagem' => 'UNIRIVBEL_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_UNIRIVBEL.JPG',
-    'DescricaoResumida' => 'RIVER EMPRESS BRUXELAS A BRUXELAS',
-    'Ordem' => 0,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 8,
-    'QtdNoitesViagem' => 7,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2024: Nov. 25; Dez. 02, 09 e 16
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'UNIRIVBEL',
-    'ValidadePrograma' => '2024-12-16',
-    'CodigoEcommerce' => 'UNIRIVBEL',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => 'Delicie-se com todas as delícias clássicas de um Natal europeu com charme belga único.',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  295 => 
-  array (
-    'CodigoPrograma' => 'UZBEK25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 256,
-    'Descricao' => ' CAZAQUISTÃO, QUIRGUISTÃO E UZBEQUISTÃO',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => 'Almaty (Cazaquistão), Bishkek, Burana (Quirguistão), Tashkent, Khiva, Bukhara, Samarcanda (Uzbequistão) e Dubai.
-
-',
-    'Destino' => 'EURASI',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-03-25T20:04:44',
-    'DataAlteracao' => '2025-03-18T20:06:12',
-    'CaminhoImagem' => 'UZBEK25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_UZBEK25A.JPG',
-    'DescricaoResumida' => 'A Rota dos Encontros ',
-    'Ordem' => 0,
-    'QtdParcelas' => 6,
-    'QtdDiasViagem' => 19,
-    'QtdNoitesViagem' => 17,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'SAÍDAS 2025: Ago. 22; Out. 03
-',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'UZBEK25A',
-    'ValidadePrograma' => '2025-10-03',
-    'CodigoEcommerce' => 'UZBEK25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  296 => 
-  array (
-    'CodigoPrograma' => 'VINHAS25A',
-    'Torre' => 'GBM',
-    'GrupoProgramas' => 0,
-    'Descricao' => 'MENDOZA E SALTA',
-    'CategoriaCodigo' => 4,
-    'Detalhes' => ' Mendoza, Cafayate, Quebrada de Las Conchas, Salta e Buenos Aires.
-',
-    'Destino' => 'ARGENTINA',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2024-11-04T21:23:54',
-    'DataAlteracao' => '2025-02-06T19:03:19',
-    'CaminhoImagem' => 'VINHAS25A_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_VINHAS25A.JPG',
-    'DescricaoResumida' => 'A Rota do Vinho ',
-    'Ordem' => 3,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 11,
-    'QtdNoitesViagem' => 10,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => 'Saídas 2025: Set. 06; Out. 11; Nov. 15 ',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'VINHAS25A',
-    'ValidadePrograma' => '2025-11-14',
-    'CodigoEcommerce' => 'VINHAS25A',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => '',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  297 => 
-  array (
-    'CodigoPrograma' => 'WDW001',
-    'Torre' => 'AL',
-    'GrupoProgramas' => 34,
-    'Descricao' => 'DISNEY EXPERIENCE DELUXE',
-    'CategoriaCodigo' => 21,
-    'Detalhes' => 'Orlando',
-    'Destino' => 'ORLANDO',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2025-02-10T14:23:57',
-    'DataAlteracao' => '2025-03-11T18:42:40',
-    'CaminhoImagem' => 'WDW001_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_WDW001.JPG',
-    'DescricaoResumida' => 'O Mundo Mágico da Disney',
-    'Ordem' => 0,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 8,
-    'QtdNoitesViagem' => 7,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2025: Diárias até Dez. 20',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'WDW001',
-    'ValidadePrograma' => '2025-12-31',
-    'CodigoEcommerce' => 'WDW001',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => 'Orlando é o lar do que é considerado o lugar mais mágico do mundo, o Walt Disney World. O complexo conta com uma estrutura incrível, imersiva e lúdica, encantando a todos que decidem pela experiência completa. O Walt Disney World é composto por 04 Parques Temáticos, Magic Kingdom Park, EPCOT, Disney’s Hollywood Studios e Disney’s Animal Kingdom Theme Park, todos possuem um encanto próprio e atrações incríveis. Além dos 04 principais, existem dois Parques Aquáticos, o Disney\'s Blizzard Beach Water Park e o Disney\'s Typhoon Lagoon Water Park, onde a magia Disney é incorporada a atividades aquáticas.',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  298 => 
-  array (
-    'CodigoPrograma' => 'WDW002',
-    'Torre' => 'AL',
-    'GrupoProgramas' => 34,
-    'Descricao' => 'DISNEY FUN FAMILY',
-    'CategoriaCodigo' => 21,
-    'Detalhes' => 'Orlando',
-    'Destino' => 'ORLANDO',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2025-02-10T19:40:55',
-    'DataAlteracao' => '2025-03-11T18:40:37',
-    'CaminhoImagem' => 'WDW002_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_WDW002.JPG',
-    'DescricaoResumida' => 'O Mundo Mágico da Disney',
-    'Ordem' => 0,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 8,
-    'QtdNoitesViagem' => 7,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2025: Diárias até Dez. 20',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'WDW002',
-    'ValidadePrograma' => '2025-12-31',
-    'CodigoEcommerce' => 'WDW002',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => 'Orlando é o lar do que é considerado o lugar mais mágico do mundo, o Walt Disney World. O complexo conta com uma estrutura incrível, imersiva e lúdica, encantando a todos que decidem pela experiência completa. O Walt Disney World é composto por 04 Parques Temáticos, Magic Kingdom Park, EPCOT, Disney’s Hollywood Studios e Disney’s Animal Kingdom Theme Park, todos possuem um encanto próprio e atrações incríveis. Além dos 04 principais, existem dois Parques Aquáticos, o Disney\'s Blizzard Beach Water Park e o Disney\'s Typhoon Lagoon Water Park, onde a magia Disney é incorporada a atividades aquáticas.',
-    'DestaquePortal' => 'N',
-    'DestaquePortalTexto' => '',
-  ),
-  299 => 
-  array (
-    'CodigoPrograma' => 'WDW003',
-    'Torre' => 'AL',
-    'GrupoProgramas' => 34,
-    'Descricao' => 'DISNEY SEA ADVENTURE',
-    'CategoriaCodigo' => 21,
-    'Detalhes' => 'Orlando, Porto Canaveral, Cruzeiro no Disney Magic, Nassau, Disney Castaway Cay e Disney Lookout Cay at Lighthouse Point.',
-    'Destino' => 'ORLANDO',
-    'NomeNavio' => 'N',
-    'PortoEmbarqueNavio' => '',
-    'PortoDesembarqueNavio' => '',
-    'MaritimaCia' => 0,
-    'Bloqueado' => 'N',
-    'BloqueadoInterno' => 'N',
-    'MotivoBloqueio' => '',
-    'DataInclusao' => '2025-02-10T21:09:26',
-    'DataAlteracao' => '2025-03-11T18:36:19',
-    'CaminhoImagem' => 'WDW003_FOTO_ICONE.JPG',
-    'Mapa' => '',
-    'Banner' => 'DESTAQUE_WDW003.JPG',
-    'DescricaoResumida' => 'A Magia Disney em Terra e Mar',
-    'Ordem' => 0,
-    'QtdParcelas' => 5,
-    'QtdDiasViagem' => 12,
-    'QtdNoitesViagem' => 11,
-    'ClasseHotelEc' => 0,
-    'ClasseHotelEv' => 0,
-    'SaidasPrograma' => '2025: Segundas e Sábados de Mai. 11 a Out. 08 (cruzeiro com saídas aos Domingos e Sextas)',
-    'LiberaSomenteTerrestre' => '',
-    'BloqueiaPromocao' => 'S',
-    'BloqueiaVendaTerrestre' => 'S',
-    'ImagemPromocao' => '',
-    'OrdemPromocao' => 0,
-    'UrlAmigavel' => 'WDW003',
-    'ValidadePrograma' => '2025-10-08',
-    'CodigoEcommerce' => 'WDW003',
-    'PrecoSobConsulta' => 'N',
-    'DescricaoPortal' => 'A experiência mais completa que se pode fazer de Disney. Além dos maravilhosos e inigualáveis parques do Walt Disney World Resort, embarque em um Cruzeiro Disney pelas Bahamas com as atrações exclusivas que só esse mundo mágico pode oferecer. ',
     'DestaquePortal' => 'N',
     'DestaquePortalTexto' => '',
   ),
