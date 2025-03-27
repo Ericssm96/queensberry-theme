@@ -1267,7 +1267,7 @@ function queensberry_trabalhe_conosco()
         //$mail->addAddress('suportecomercial@qualitours.com.br');
 
         $mail->isHTML(true);
-        $mail->Subject = 'BeFly - Cadastro de Agência';
+        $mail->Subject = 'Queensberry - Cadastro de Agência';
 
         $mail->Body =
             <<<HTML

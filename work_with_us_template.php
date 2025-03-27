@@ -63,12 +63,13 @@ get_header(); ?>
                         function(res) {      
                           console.log(res);
                           if(res.data.message === "OK") {
+                            formData.set("action", "queensberry_trabalhe_conosco");
                             $("#actionField").val("queensberry_trabalhe_conosco");
                             $.ajax({
                               url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_trabalhe_conosco",
                               type: "POST",
-                              // data: formData,
-                              data: $("#queensberry_trabalhe_conosco").serialize(),
+                              data: formData,
+                              // data: $("#queensberry_trabalhe_conosco").serialize(),
                               processData: false, // Não processar os dados
                               contentType: false, // Não definir contentType
                               success: function (response) {
