@@ -58,20 +58,23 @@ get_header(); ?>
                     } else {
                       jQuery.post(
                         "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
-                        formData,
-                        function(data) {      
-                          console.log(data);
-                          if(data.message === "OK") {
+                        // formData,
+                        $("#queensberry_trabalhe_conosco").serialize(),
+                        function(res) {      
+                          console.log(res);
+                          if(res.data.message === "OK") {
                             $("#actionField").val("queensberry_trabalhe_conosco");
                             $.ajax({
                               url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_trabalhe_conosco",
                               type: "POST",
-                              data: formData,
+                              // data: formData,
+                              data: $("#queensberry_trabalhe_conosco").serialize(),
                               processData: false, // Não processar os dados
                               contentType: false, // Não definir contentType
                               success: function (response) {
                                   console.log(response);
-                                  window.location.replace("<?= home_url(); ?>/obrigado/");
+                                  // window.location.replace("<?= home_url(); ?>/obrigado/");
+                                  alert("Envio realizado com sucesso");
                               },
                               error: function (xhr, status, error) {
                                   console.error("Erro ao enviar:", error);
@@ -80,9 +83,9 @@ get_header(); ?>
                           }
                         }
                       )
-                      .fail(res) {
+                      .fail((res)=>{
                         console.log("Recaptcha verification fail");
-                      }
+                      })
                     }
         
                     

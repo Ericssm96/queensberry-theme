@@ -1263,7 +1263,7 @@ function queensberry_trabalhe_conosco()
         $mail->Port = SMTP_PORT;
 
         $mail->setFrom('naoresponda@flytour.com.br', 'Queensberry');
-        $mail->addAddress('vitoriapereira.html@gmail.com');
+        $mail->addAddress('ericssm96@gmail.com');
         //$mail->addAddress('suportecomercial@qualitours.com.br');
 
         $mail->isHTML(true);
@@ -1337,7 +1337,13 @@ function queensberry_trabalhe_conosco()
 
         $mail->send();
 
-        header("Location: https://queensberryforms.abc7484.sg-host.com/obrigado/");
+        $home_url = home_url();
+
+        //header("Location: $home_url/obrigado/");
+
+        wp_send_json_success([
+            'message' => 'Email enviado',
+        ]);
     } catch (Exception $e) {
         wp_send_json_error([
             'message' => 'Email não enviado',

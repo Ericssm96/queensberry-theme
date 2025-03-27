@@ -171,8 +171,8 @@
             }
 
             window.onload = WaitUntilCustomerGUIDIsRetrieved;
-            _elqQ = _elqQ || [];
-            _elqQ.push(['elqGetCustomerGUID']);
+            // _elqQ = _elqQ || [];
+            // _elqQ.push(['elqGetCustomerGUID']);
         </script>
 
         <script>
