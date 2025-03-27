@@ -83,6 +83,10 @@ if (is_single()) {
           }
         }
       }),
+      phoneNumberA: '',
+      fullPhoneNumberA: '',
+      phoneNumberB: '',
+      fullPhoneNumberB: '',
       modalType: '',
       formType: 'recomendar',
       clickedGalleryItem: 0,
@@ -378,7 +382,7 @@ if (is_single()) {
         <i class="fa-solid fa-xmark close-icon" @click="isModalOpen = false; modalType = ''; formType = ''"></i>
         <h2>Solicitar informações do programa</h2>
 
-        <input type="hidden" id="actionField" name="action" value="queensberry_programa_recaptcha">
+        <input type="hidden" id="actionField" name="action" value="queensberry_verify_recaptcha">
 
         <!-- Eloqua -->
         <input type="hidden" name="elqFormName" value="queensberry-programa">
@@ -395,7 +399,7 @@ if (is_single()) {
         <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
         <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Programa - Queensberry">
         <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
-        <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber">
+        <input type="hidden" name="FULL_PHONE_NUMBER" x-bind:value="fullPhoneNumberA" id="fullPhoneNumber">
 
 
         <!-- Formulário -->
@@ -410,7 +414,7 @@ if (is_single()) {
           </div>
           <div class="input-area">
             <label for="MOBILE_NUMBER_">Telefone</label>
-            <input type="text" placeholder="Telefone()*" required maxlength="14" id="MOBILE_NUMBER_" name="MOBILE_NUMBER_" id="celular">
+            <input type="text" placeholder="Telefone()*" @change="fullPhoneNumberA = '55' + phoneNumberA" x-model="phoneNumberA" required maxlength="14" id="MOBILE_NUMBER_" name="MOBILE_NUMBER_" id="celular">
           </div>
           <div class="input-area">
             <label for="iptEstado">Estado</label>
@@ -502,19 +506,6 @@ if (is_single()) {
 
               $("#celular").mask("(00) 00000-0000");
 
-              $("#celular").on("blur", () => {
-                  let nationalCelNumber = $("#celular").val();
-                  let cleanNumber = nationalCelNumber.replace(/\D/g, "");
-                  let fullNumber = `55${cleanNumber}`;
-                  $("#fullPhoneNumber").val(fullNumber);
-              })
-
-              let nationalCelNumber = $("#celular").val();
-              let cleanNumber = nationalCelNumber.replace(/\D/g, "");
-              let fullNumber = `55${cleanNumber}`;
-              $("#fullPhoneNumber").val(fullNumber);
-
-
               $("#f_queensberry_programa").on("submit", (e) => {
                   e.preventDefault();
 
@@ -526,11 +517,12 @@ if (is_single()) {
                     throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
                   } else {
                     jQuery.post(
-                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_programa_recaptcha",
-                      formData,
+                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                      $("#f_queensberry_programa").serialize(),
                       function(data) {
-                        if(data.message === "OK") {
+                        if(data.data.message === "OK") {
                           $("#actionField").val("queensberry_programa");
+                          formData.set("action", "queensberry_programa");
                           console.log(data);
 
                           const perfil = $("select[name='PERFIL']").val();
@@ -552,7 +544,8 @@ if (is_single()) {
                                   }
                               ).done(() => {
                                   // Redireciona para a página de "Obrigado" após o envio
-                                  window.location.replace("<?= home_url(); ?>/obrigado/");
+                                  // window.location.replace("<?= home_url(); ?>/obrigado/");
+                                  alert("Envio realizado com sucesso");
                               });
                           } else if (perfil === "agente") {
                               // Se for "agente", envia para Eloqua
@@ -568,7 +561,8 @@ if (is_single()) {
                                   },
                               }).done(() => {
                                   // Redireciona para a página de "Obrigado" após o envio
-                                  window.location.replace("<?= home_url(); ?>/obrigado/");
+                                  // window.location.replace("<?= home_url(); ?>/obrigado/");
+                                  alert("Envio realizado com sucesso");
                               });
                           }
                         }
