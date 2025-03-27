@@ -91,6 +91,7 @@ $countries_in_region = array_filter($all_countries_list, function($country_info)
   return $country_info['regiao'] == $world_region;
 }); */
 $banner_img_name = "busca.jpg";
+$info_file_url = "";
 
 
 switch(mb_strtolower($tag_title)) {
@@ -99,6 +100,7 @@ switch(mb_strtolower($tag_title)) {
     break;
   case "egito":
     $banner_img_name = "egito.jpg";
+    $info_file_url = "https://www.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_egito.pdf";
     break;
   case "quênia":
     $banner_img_name = "quenia.jpg";
@@ -108,6 +110,7 @@ switch(mb_strtolower($tag_title)) {
     break;
   case "tanzânia":
     $banner_img_name = "tanzania.jpg";
+    $info_file_url = "https://www.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_tanzania.pdf";
     break;
   case "argentina:":
     $banner_img_name = "argentina.jpg";
@@ -130,10 +133,14 @@ switch(mb_strtolower($tag_title)) {
   case "brasil:":
     $banner_img_name = "brasil.jpg";
     break;
+  case "emirados árabes":
+    $banner_img_name = "dubai.jpg";
+    $info_file_url = "https://www.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_dubai.pdf";
   default:
     $banner_img_name = "busca.jpg";
 }
 
+$has_additional_banner_info = $info_file_url !== "";
 $banner_bg_img_url = get_template_directory_uri() . "/src/img/destinos/$banner_img_name";
 
 
@@ -154,11 +161,28 @@ get_header();
       </div>
       ELEMENT;
     }
+    if($has_additional_banner_info) {
+      echo <<<BANNER
+      <section class="search-banner" style="background-image: url($banner_bg_img_url);">
+        <div class="wrapper">
+          <div class="content">
+            <h1>$tag_title</h1>
+            <p>Saiba mais sobre seu próximo destino: idioma, clima, melhor época, moeda e outras informações importantes para sua viagem!</p>
+            <a href="$info_file_url" class="cta" target="_blank">Confira</a>
+          </div>
+        </div>
+      </section>
+      BANNER;
+    } else {
+      echo <<<BANNER
+      <section class="search-banner" style="background-image: url($banner_bg_img_url);">
+        <div class="wrapper">
+        </div>
+      </section>
+      BANNER;
+    }
+    
   ?>
-  <section class="search-banner" style="background-image: url(<?= $banner_bg_img_url ?>);">
-    <div class="wrapper">
-    </div>
-  </section>
 
   <section class="search-related-content" x-data='{
     sanitizeTitle(str) {
