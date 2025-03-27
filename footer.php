@@ -73,7 +73,7 @@
             </header>
             <input type="text" name="FIRST_NAME" placeholder="Nome" />
             <input type="email" name="EMAIL_ADDRESS_" placeholder="E-mail" />
-            <select name="PERFIL" id="">
+            <select name="PERFIL" id="slctPerfil">
               <option value="PASSAGEIRO" selected>Passageiro</option>
               <option value="AGENTE">Agente</option>
             </select>
@@ -102,7 +102,7 @@
                 $("#f_queensberry_receba_novidades").on("submit", (e) => {
                     e.preventDefault();
 
-                    let perfil = $("select[name='PERFIL']").val();
+                    
                     let formData = $("#f_queensberry_receba_novidades").serialize();
                     const captchaResponse = grecaptcha.getResponse();
 
@@ -115,38 +115,41 @@
                           "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades_recaptcha",
                           formData,
                           function (data) {
-                            $("#actionField3").val("queensberry_receba_novidades");
-                            formData = $("#f_queensberry_receba_novidades").serialize();
-                            if(data.message === "OK") {
-                              if (perfil === "passageiro") {
-                                // Enviar para Responsys
-                                jQuery.post(
-                                  "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
-                                  formData,
-                                  function (data) {
-                                    console.log("Responsys ok", data);
-                                  }
-                                ).fail((res) => {
-                                  console.log("Responsys fail", res);
-                                });
-                              } else {
-                                // Enviar para Eloqua
-                                jQuery.ajax({
-                                  type: "POST",
-                                  url: "https://s2864845.t.eloqua.com/e/f2",
-                                  data: formData,
-                                  success: () => {
-                                      console.log("Eloqua ok");
-                                  },
-                                  error: (res) => {
-                                      console.log("Eloqua fail", res);
-                                  },
-                                });
-                            }
+                            
+                            
+                          }
+                      ).done((res) => {
+                          console.log(res);
+                          $("#actionField3").val("queensberry_receba_novidades");
+                          formData = $("#f_queensberry_receba_novidades").serialize();
+                          if(res.data.message === "OK") {
+                            let perfil = $("#slctPerfil").val();
+                            if (perfil === "PASSAGEIRO") {
+                              // Enviar para Responsys
+                              jQuery.post(
+                                "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
+                                formData,
+                                function (data) {
+                                  console.log("Responsys ok", data);
+                                }
+                              ).fail((res) => {
+                                console.log("Responsys fail", res);
+                              });
+                            } else {
+                              // Enviar para Eloqua
+                              jQuery.ajax({
+                                type: "POST",
+                                url: "https://s2864845.t.eloqua.com/e/f2",
+                                data: formData,
+                                success: () => {
+                                    console.log("Eloqua ok");
+                                },
+                                error: (res) => {
+                                    console.log("Eloqua fail", res);
+                                },
+                              });
                             }
                           }
-                      ).fail((res) => {
-                          console.log("Recaptcha fail", res);
                       });
                     }
                 });
