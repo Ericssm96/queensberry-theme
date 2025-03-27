@@ -63,7 +63,7 @@ get_header(); ?>
 
             <input type="text" placeholder="Nome*" required name="FIRST_NAME">
             <input type="text" placeholder="Sobrenome*" required name="LAST_NAME">
-            <input type="text" placeholder="CPF" maxlength="14" name="CPF_USUARIO">
+            <input type="text" placeholder="CPF" id="iptCpf" maxlength="14" name="CPF_USUARIO">
             <input type="text" placeholder="E-mail*" required name="EMAIL_ADDRESS_">
             <input type="text" placeholder="Telefone()*" required maxlength="14" name="MOBILE_NUMBER_" id="celular">
             <textarea placeholder="Mensagem*" required name="MENSAGEM"></textarea>
@@ -90,6 +90,7 @@ get_header(); ?>
 
             $(document).ready(() => {
               $("#celular").mask("(00) 00000-0000");
+              $("#iptCpf").mask("000.000.000-00");
 
               $("#celular").on("blur", () => {
                 let nationalCelNumber = $("#celular").val();
@@ -115,16 +116,17 @@ get_header(); ?>
                   jQuery
                   .ajax({
                     type: "POST",
-                    url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco_recaptcha",
+                    url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
                     data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                    success: (data) => {
-                      jQuery("#actionField").val("queensberry_fale_conosco");
-                      formData = new FormData(this);
-                      console.log(data);
-                      console.log(document.querySelector("#actionField").value);
-
-                      if(data.message === "OK") {
-                        jQuery
+                    error: (res) => {
+                      console.log("Recaptcha Fail", res);
+                    },
+                  }).done((res)=>{
+                    jQuery("#actionField").val("queensberry_fale_conosco");
+                    console.log(res);
+                    console.log(document.querySelector("#actionField").value);
+                    if(res.data.message === "OK") {
+                      jQuery
                           .ajax({
                             type: "POST",
                             url: "https://s2864845.t.eloqua.com/e/f2",
@@ -142,20 +144,14 @@ get_header(); ?>
                           .then(() => {
                             jQuery.post(
                               "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                              $("#f_queensberry_fale_conosco").serialize(),
-                              function (data) {
-                                // Callback para lidar com a resposta
-                                console.log(data); // Exibe a resposta no console
-                              }
-                            ).done(() => {
-
-                            });
-                        });
-                      }
-                    },
-                    error: (res) => {
-                      console.log("Recaptcha Fail", res);
-                    },
+                            $("#f_queensberry_fale_conosco").serialize(),
+                            function (data) {
+                              console.log(data); // Exibe a resposta no console
+                              alert("Envio realizado com sucesso!");
+                            }
+                          )
+                      });
+                    }
                   })
                 }
               })
@@ -204,8 +200,8 @@ get_header(); ?>
             }
 
             window.onload = WaitUntilCustomerGUIDIsRetrieved;
-            _elqQ = _elqQ || [];
-            _elqQ.push(['elqGetCustomerGUID']);
+            // _elqQ = _elqQ || [];
+            // _elqQ.push(['elqGetCustomerGUID']);
           </script>
 
           <style>
@@ -309,6 +305,9 @@ get_header(); ?>
 
             #f_queensberry_fale_conosco textarea {
               height: 80px;
+              font-family: "Roboto", sans-serif;
+              font-size: 1.4rem;
+              line-height: 1.5;
             }
 
             #f_queensberry_fale_conosco .checkbox-area {
