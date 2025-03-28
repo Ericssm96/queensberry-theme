@@ -226,8 +226,8 @@
               <div class="content-b">
                 <ul class="left-col">
                   <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-                  <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>|
-                  <li><a href="<?= home_url(); ?>/category/driveness-experience">Driveness Experience</a></li>|
+                  <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>
+                  <li><a href="<?= home_url(); ?>/category/driveness-experience">Driveness Experience</a></li>
                   <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
                   <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
                   <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil In</a></li>

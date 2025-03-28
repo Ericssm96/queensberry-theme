@@ -50,7 +50,7 @@ if($cat_query->have_posts()) {
       $lower_log_name = trim(mb_strtolower($log_name));
       $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-      return $lower_log_name == $current_item_name;
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
     });
 
     $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
@@ -60,6 +60,9 @@ if($cat_query->have_posts()) {
     $card_image_file_name = $program_info["CaminhoImagem"];
 
     $card_image_url = "$images_folder_prefix_url/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$card_image_file_name";
+    // https://www.queensberry.com.br/imagens//Programas//ROTEIROS_INDIVIDUAIS_FORFAITS//IAF002/IAF002_FOTO_ICONE.JPG
+
+    // https://www.queensberry.com.br/imagens//Programas/ROTEIROS_INDIVIDUAIS_FORFAITS/AFRICA/IAF002/IAF002_FOTO_ICONE.JPG
     $post_slug = get_post_field( 'post_name', get_post() );
 
     
