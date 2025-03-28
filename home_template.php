@@ -26,7 +26,7 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
         <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.mp4" type="video/mp4" />
       </video>
       <article class="gbm-cta">
-        <strong>GBM 2024</strong>
+        <strong>GBM 2025</strong>
         <a href="#" rel="noreferrer" target="_blank">Saiba mais</a>
       </article>
     </section>
