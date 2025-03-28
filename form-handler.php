@@ -51,6 +51,10 @@ add_action('admin_post_nopriv_queensberry_programa_recaptcha', 'queensberry_veri
 // Verificação ReCaptcha
 add_action('admin_post_queensberry_verify_recaptcha', 'queensberry_verify_recaptcha');
 add_action('admin_post_nopriv_queensberry_verify_recaptcha', 'queensberry_verify_recaptcha');
+add_action('admin_post_queensberry_verify_recaptcha_b', 'queensberry_verify_recaptcha_b');
+add_action('admin_post_nopriv_queensberry_verify_recaptcha_b', 'queensberry_verify_recaptcha_b');
+add_action('admin_post_queensberry_verify_recaptcha_c', 'queensberry_verify_recaptcha_c');
+add_action('admin_post_nopriv_queensberry_verify_recaptcha_c', 'queensberry_verify_recaptcha_c');
 
 
 // RESPONSYS PAYLOAD'S
@@ -58,6 +62,48 @@ add_action('admin_post_nopriv_queensberry_verify_recaptcha', 'queensberry_verify
 // Recaptcha
 function queensberry_verify_recaptcha() {
     $secret_key = "6Lfq8_sqAAAAAGxyoOs1txS7HdsEgPxOhVO-QGOo";
+    $client_grecaptcha_res = $_POST["g-recaptcha-response"];
+
+    $verify_response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$client_grecaptcha_res}");
+    $response_data = json_decode($verify_response, true);
+
+    if($response_data["success"] == true) {
+        wp_send_json_success([
+            'message' => 'OK',
+            'response_data' => $verify_response
+        ]);
+    } else {
+        wp_send_json_error([
+            'message' => 'Fail',
+            'response_data' => $verify_response,
+            'gre_response' => $client_grecaptcha_res
+        ]);
+    }
+}
+
+function queensberry_verify_recaptcha_b() {
+    $secret_key = "6LcIDAIrAAAAACF_myoi04KL6oLX2_ecROd89xFb";
+    $client_grecaptcha_res = $_POST["g-recaptcha-response"];
+
+    $verify_response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$client_grecaptcha_res}");
+    $response_data = json_decode($verify_response, true);
+
+    if($response_data["success"] == true) {
+        wp_send_json_success([
+            'message' => 'OK',
+            'response_data' => $verify_response
+        ]);
+    } else {
+        wp_send_json_error([
+            'message' => 'Fail',
+            'response_data' => $verify_response,
+            'gre_response' => $client_grecaptcha_res
+        ]);
+    }
+}
+
+function queensberry_verify_recaptcha_c() {
+    $secret_key = "6LexGAIrAAAAAP57VspAlgMRv7KeH-2LX2R6kOPy";
     $client_grecaptcha_res = $_POST["g-recaptcha-response"];
 
     $verify_response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$client_grecaptcha_res}");
@@ -593,12 +639,12 @@ function queensberry_handle_programa()
                 $supplemental_register_result = queensberry_responsys_supplemental_table($supplemental_register_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/folders/!MasterData/suppData/SUP_ORIGENS_CADASTROS_QUEENSBERRY/members');
 
                 if ($supplemental_register_result["status"] == 200) {
-                    /*wp_send_json_success([
+                    wp_send_json_success([
                         "message" => "Cadastro concluído com sucesso!",
                         "data_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
                         "supp_result" => $supplemental_register_result 
-                    ]);*/
+                    ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
                 }
@@ -728,12 +774,12 @@ function queensberry_handle_recomendar_programa()
                 $supplemental_register_result = queensberry_responsys_supplemental_table($supplemental_register_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/folders/!MasterData/suppData/SUP_ORIGENS_CADASTROS_QUEENSBERRY/members');
 
                 if ($supplemental_register_result["status"] == 200) {
-                    /*wp_send_json_success([
+                    wp_send_json_success([
                         "message" => "Cadastro concluído com sucesso!",
                         "data_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
                         "supp_result" => $supplemental_register_result 
-                    ]);*/
+                    ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
                 }

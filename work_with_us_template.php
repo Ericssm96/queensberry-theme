@@ -34,14 +34,15 @@ get_header(); ?>
       
           <div class="submit-area">
             <div class="recaptcha-box">
-              <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3"></div>
+              <!-- <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3"></div> -->
+               <div id="recaptcha-box-2"></div>
             </div>
             <button class="submit-btn" type="submit">Enviar</button>
           </div>
         </form>
 
         <script>
-            $(document).ready(() => {
+            /* $(document).ready(() => {
                 $("#celular").mask("(00) 00000-0000");
         
                 $("#queensberry_trabalhe_conosco").on("submit", function (e) {
@@ -88,6 +89,38 @@ get_header(); ?>
                         console.log("Recaptcha verification fail");
                       })
                     }
+        
+                    
+                });
+            }); */
+
+            $(document).ready(() => {
+                $("#celular").mask("(00) 00000-0000");
+        
+                $("#queensberry_trabalhe_conosco").on("submit", function (e) {
+                    e.preventDefault();
+
+        
+                    var formData = new FormData(this); // Criar FormData DENTRO do evento submit
+                    
+                    formData.set("action", "queensberry_trabalhe_conosco");
+                    $("#actionField").val("queensberry_trabalhe_conosco");
+                    $.ajax({
+                      url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_trabalhe_conosco",
+                      type: "POST",
+                      data: formData,
+                      // data: $("#queensberry_trabalhe_conosco").serialize(),
+                      processData: false, // Não processar os dados
+                      contentType: false, // Não definir contentType
+                      success: function (response) {
+                          console.log(response);
+                          // window.location.replace("<?= home_url(); ?>/obrigado/");
+                          alert("Envio realizado com sucesso");
+                      },
+                      error: function (xhr, status, error) {
+                          console.error("Erro ao enviar:", error);
+                      }
+                    });
         
                     
                 });

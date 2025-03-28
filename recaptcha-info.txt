@@ -1,3 +1,11 @@
 
 site key: 6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3
 secret: 6Lfq8_sqAAAAAGxyoOs1txS7HdsEgPxOhVO-QGOo
+
+2:
+site key: 6LcIDAIrAAAAAIsdJDzyMk1Jof-d61K-2zlibDGZ
+secret: 6LcIDAIrAAAAACF_myoi04KL6oLX2_ecROd89xFb
+
+3:
+site key: 6LexGAIrAAAAALCmMJe_GoDVXZvzNvHUCDAwcX8W
+secret: 6LexGAIrAAAAAP57VspAlgMRv7KeH-2LX2R6kOPy

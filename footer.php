@@ -84,7 +84,8 @@
           </div>
           <div class="submit-area">
             <div class="squarey-recaptcha-box">
-              <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3" data-size="compact" data-theme="dark"></div>
+              <!-- <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3" data-size="compact" data-theme="dark"></div> -->
+              <div id="recaptcha-box-1"></div>
             </div>
             <button type="submit" class="submit-btn">Cadastrar</button>
           </div>
@@ -97,14 +98,14 @@
             var formData = new FormData(jQuery("#f_queensberry_receba_novidades")[0]); // Use FormData para incluir anexos
 
 
-            $(document).ready(() => {
+            /* $(document).ready(() => {
 
                 $("#f_queensberry_receba_novidades").on("submit", (e) => {
                     e.preventDefault();
 
                     
                     let formData = $("#f_queensberry_receba_novidades").serialize();
-                    const captchaResponse = grecaptcha.getResponse();
+                    const captchaResponse = grecaptcha.getResponse(clientId1);
 
                     if(captchaResponse.length <= 0) {
                       alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
@@ -146,6 +147,44 @@
                               });
                             }
                           }
+                      });
+                    }
+                });
+            }); */
+
+
+            $(document).ready(() => {
+
+                $("#f_queensberry_receba_novidades").on("submit", (e) => {
+                    e.preventDefault();
+                    let formData = $("#f_queensberry_receba_novidades").serialize();
+
+                    $("#actionField3").val("queensberry_receba_novidades");
+
+                    let perfil = $("#slctPerfil").val();
+                    if (perfil === "PASSAGEIRO") {
+                      // Enviar para Responsys
+                      jQuery.post(
+                        "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
+                        formData,
+                        function (data) {
+                          console.log("Responsys ok", data);
+                        }
+                      ).fail((res) => {
+                        console.log("Responsys fail", res);
+                      });
+                    } else {
+                      // Enviar para Eloqua
+                      jQuery.ajax({
+                        type: "POST",
+                        url: "https://s2864845.t.eloqua.com/e/f2",
+                        data: formData,
+                        success: () => {
+                            console.log("Eloqua ok");
+                        },
+                        error: (res) => {
+                            console.log("Eloqua fail", res);
+                        },
                       });
                     }
                 });
