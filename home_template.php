@@ -14,6 +14,20 @@ foreach($videos_arr as $video_info) {
 }
 $json_videos_titles = json_encode($videos_titles, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
+
+
+$dolar_currency_info = require_once "dolar-currency-conversion-info.php";
+$euro_currency_info = require_once "euro-currency-conversion-info.php";
+
+$last_dolar_conversion_update_date = explode("T", $dolar_currency_info["DataAtualizacao"])[0];
+$last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao"])[0];
+$last_conversion_date_obj = new DateTime($last_conversion_update_date);
+$formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
+
+$last_euro_conversion_update_time = explode("T", $euro_currency_info["DataAtualizacao"])[1];
+$dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
+// $euro_price = str_replace(".", ",", $euro_currency_info["ValorCambio"]);
+$euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
 ?>
     <div class="video-overlay"></div>
     <main x-init="setTimeout(()=>{
@@ -31,8 +45,8 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
       </article>
     </section>
     <article class="mb-currency-field">
-      <strong class="quotation">US$ 1 = R$6,27 | € 1 = R$6,59</strong>
-      <p id="quotation-date" class="quotation-date">Data: 04/12/2024 às 12:10</p>
+      <strong class="quotation">US$ 1 = R$<?= $dolar_price; ?> | € 1 = R$<?= $euro_price ?></strong>
+      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date; ?> às <?= $last_euro_conversion_update_time; ?></p>
     </article>
     <section class="products" x-init="
     const productSwiper = new Swiper('.products .swiper', {

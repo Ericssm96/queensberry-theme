@@ -19,6 +19,21 @@
   <title><?= (is_front_page() ? $site_title : is_category()) ? single_cat_title() : strtoupper(get_the_title()) .  " - " . $site_title; ?></title>
 </head>
 
+<?php
+$dolar_currency_info = require_once "dolar-currency-conversion-info.php";
+$euro_currency_info = require_once "euro-currency-conversion-info.php";
+
+$last_dolar_conversion_update_date = explode("T", $dolar_currency_info["DataAtualizacao"])[0];
+$last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao"])[0];
+$last_conversion_date_obj = new DateTime($last_conversion_update_date);
+$formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
+
+$last_euro_conversion_update_time = explode("T", $euro_currency_info["DataAtualizacao"])[1];
+$dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
+// $euro_price = str_replace(".", ",", $euro_currency_info["ValorCambio"]);
+$euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
+?>
+
 
 <body x-data="{
   isModalOpen: false,
@@ -111,9 +126,9 @@
         </h1>
         <div class="upper-right">
           <span x-show="!isWindowScrolledPastThreshold" class="green-highlight currency-field">
-            <strong class="bold">US$ 1 = R$5,19 | € 1 = R$5,57</strong>
+            <strong class="bold">US$ 1 = R$<?= $dolar_price ?> | € 1 = R$<?= $euro_price ?></strong>
             <p class="data">
-              <span class="bold">Data:</span>06/03/2024 às 12:44
+              <span class="bold">Data:</span><?= $formatted_conversion_date ?> às <?= $last_euro_conversion_update_time ?>
             </p>
           </span>
           <a href="https://agentes.queensberry.com.br/" class="green-highlight agent-field">

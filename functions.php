@@ -544,7 +544,7 @@ function get_featured_videos_array() {
     return $response["Videos"]; 
 }
 
-function get_currency_conversion() {
+function get_dolar_currency_conversion() {
     $url = "https://gx.befly.com.br/bsi/rest/wsCambio";
     $today = date("Y-m-d");
 
@@ -572,7 +572,38 @@ function get_currency_conversion() {
 
     curl_close($curl_currency_conversion_request);
 
-    return $response["sdtCambio"]["SdtCambio"]; 
+    return $response["sdtCambio"]["SdtCambio"][0]; 
+}
+
+function get_euro_currency_conversion() {
+    $url = "https://gx.befly.com.br/bsi/rest/wsCambio";
+    $today = date("Y-m-d");
+
+    $currency_conversion_req_payload = [
+        "Token" => "e9cf3b5a-9408-472f-8dd3-b5f36ff75698",
+		"Moeda" => "euro",
+		"DataInicial" => $today,
+		"DataFinal" => $today
+    ];
+
+    $req_headers = [
+        "Content-Type: application/json"
+    ];
+    
+    $curl_currency_conversion_request = curl_init();
+
+    curl_setopt($curl_currency_conversion_request, CURLOPT_URL, $url);
+    curl_setopt($curl_currency_conversion_request, CURLOPT_POST, true);
+    curl_setopt($curl_currency_conversion_request, CURLOPT_POSTFIELDS, json_encode($currency_conversion_req_payload));
+    curl_setopt($curl_currency_conversion_request, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl_currency_conversion_request, CURLOPT_HTTPHEADER, $req_headers);
+
+    $response_json = curl_exec($curl_currency_conversion_request);
+    $response = json_decode($response_json, true);
+
+    curl_close($curl_currency_conversion_request);
+
+    return $response["sdtCambio"]["SdtCambio"][0]; 
 }
 
 function get_world_regions() {
@@ -1287,7 +1318,8 @@ function update_cache_files() {
     $cached_logs_file = get_template_directory() . '/cached-logs.php';
     $cached_active_programs_detailed_info_file = get_template_directory() . '/cached-active-programs-info.php';
     $cached_videos_urls = get_template_directory() . '/cached-videos-urls.php';
-    $cached_currency_conversion = get_template_directory() . '/currency-conversion-info.php';
+    $cached_dolar_currency_conversion = get_template_directory() . '/dolar-currency-conversion-info.php';
+    $cached_euro_currency_conversion = get_template_directory() . '/euro-currency-conversion-info.php';
     // $cache_lifetime = 24 * 60 * 60;
 
     $all_programs_list = get_all_programs();
@@ -1297,7 +1329,8 @@ function update_cache_files() {
     $all_logs_list = get_all_logs();
     $active_programs_info_list = [];
 
-    $currency_conversion_info = get_currency_conversion();
+    $dolar_currency_conversion_info = get_dolar_currency_conversion();
+    $euro_currency_conversion_info = get_euro_currency_conversion();
 
     $code_lookup = array_flip(array_column($active_programs_list, 'ProgramaCodigo'));
 
@@ -1314,7 +1347,8 @@ function update_cache_files() {
     file_put_contents($cached_logs_file, '<?php return ' . var_export($all_logs_list, true) . ';');
     file_put_contents($cached_active_programs_detailed_info_file, '<?php return ' . var_export($active_programs_info_list, true) . ';');
     file_put_contents($cached_videos_urls, '<?php return ' . var_export($videos_urls, true) . ';');
-    file_put_contents($cached_currency_conversion, '<?php return ' . var_export($currency_conversion_info, true) . ';');
+    file_put_contents($cached_dolar_currency_conversion, '<?php return ' . var_export($dolar_currency_conversion_info, true) . ';');
+    file_put_contents($cached_euro_currency_conversion, '<?php return ' . var_export($euro_currency_conversion_info, true) . ';');
 }
 
 function update_world_regions() {
