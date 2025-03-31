@@ -174,10 +174,39 @@ get_header(); ?>
                 let nationalCelNumber = $("#celular").val();
                 let cleanNumber = nationalCelNumber.replace(/\D/g, "");
                 let fullNumber = `55${cleanNumber}`;
+                let subject = $("#ASSUNTO").val();
                 $("#fullPhoneNumber").val(fullNumber);
                 jQuery("#actionField").val("queensberry_fale_conosco");
 
-                jQuery
+                if(subject === 'Atendimento ao Passageiro') {
+                  jQuery.post(
+                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
+                    $("#f_queensberry_fale_conosco").serialize(),
+                    function (data) {
+                      console.log(data); // Exibe a resposta no console
+                      alert("Envio realizado com sucesso!");
+                    }
+                  )
+                } else {
+                  jQuery
+                    .ajax({
+                      type: "POST",
+                      url: "https://s2864845.t.eloqua.com/e/f2",
+                      data: jQuery("#f_queensberry_fale_conosco").serialize(),
+                      success: () => {
+                        // jQuery("#actionField").val("envio_seja_parceiro");
+                        // formData = new FormData(this);
+                        console.log("Eloqua ok");
+                        alert("Envio realizado com sucesso!");
+                        // console.log(document.querySelector("#actionField").value);
+                      },
+                      error: (res) => {
+                        console.log("Eloqua fail", res);
+                      },
+                  })
+                }
+
+                /* jQuery
                     .ajax({
                       type: "POST",
                       url: "https://s2864845.t.eloqua.com/e/f2",
@@ -194,14 +223,14 @@ get_header(); ?>
                     })
                     .then(() => {
                       jQuery.post(
-                        "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                      $("#f_queensberry_fale_conosco").serialize(),
-                      function (data) {
-                        console.log(data); // Exibe a resposta no console
-                        alert("Envio realizado com sucesso!");
-                      }
-                    )
-                });
+                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
+                        $("#f_queensberry_fale_conosco").serialize(),
+                        function (data) {
+                          console.log(data); // Exibe a resposta no console
+                          alert("Envio realizado com sucesso!");
+                        }
+                      )
+                    }); */
               })
             }) 
           </script>
