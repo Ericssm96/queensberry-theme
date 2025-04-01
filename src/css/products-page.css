@@ -59,6 +59,7 @@ main * {
   line-height: 56px;
   font-family: "Tenor Sans", sans-serif;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 .product-banner .wrapper .product-description {
   font-size: 14px;
