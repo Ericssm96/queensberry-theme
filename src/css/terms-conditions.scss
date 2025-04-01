@@ -1,0 +1,335 @@
+$montserrat: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+$tenor_sans: "Tenor Sans", sans-serif;
+$xxl: 1500px;
+$xl: 1260px;
+$lg: 1024px;
+$xmd: 950px;
+$md: 768px;
+$sm: 400px;
+$xsm: 300px;
+$lime-green: #99D02C;
+$navy: #0C0150;
+$dark-navy: #161326;
+$secondary-dark-navy: #091360;
+$olive-green: #989898;
+
+main {
+  box-sizing: border-box;
+
+  * {
+      box-sizing: border-box;
+  }
+}
+
+.banner {
+  background-image: url(../img/banner-termos.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  h1 {
+    color: white;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-family: $tenor_sans;
+    text-transform: uppercase;
+    width: 92px;
+    padding-bottom: 65px;
+    letter-spacing: -1px;
+
+    @media screen and (min-width: $md) {
+      font-size: 4.8rem;
+      width: 88vw;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 1000px;
+    }
+  }
+}
+
+.queensberry-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    width: 92vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 32px 0;
+
+    @media screen and (min-width: $md) {
+      width: 88vw;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 1000px;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-family: $tenor_sans;
+      color: $dark-navy;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    .text-area {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      font-family: $roboto;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: #656565;
+
+      @media screen and (min-width: $md) {
+        flex-direction: row;
+        column-gap: 30px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.terms-and-conditions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+
+  .wrapper {
+    width: 92vw;
+
+    @media screen and (min-width: $md) {
+      width: 88vw;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 760px;
+    }
+
+    .title-area {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      margin-bottom: 70px;
+
+      h2 {
+        font-size: 2.4rem;
+        font-family: $tenor_sans;
+        color: $dark-navy;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      small {
+        font-size: 1rem;
+        font-family: $roboto;
+        font-style: italic;
+        color: #212529;
+        align-self: flex-end;
+      }
+    }
+
+    .intro {
+      font-size: 1.4rem;
+      color: #656565;
+      font-family: $roboto;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 60px;
+
+      .cluster {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          display: flex;
+          column-gap: 5px;
+          font-size: 2.4rem;
+          font-family: $tenor_sans;
+          color: $dark-navy;
+          letter-spacing: -1px;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+        }
+
+        .text-area {
+          display: flex;
+          flex-direction: column;
+          row-gap: 30px;
+          font-family: $roboto;
+          font-size: 1.4rem;
+          color: #656565;
+          line-height: 1.5;
+
+          .topic {
+            display: flex;
+            column-gap: 5px;
+
+            .topic-number {
+              color: $lime-green;
+              font-weight: bold;
+            }
+
+            .inner-content {
+              display: flex;
+              flex-direction: column;
+              row-gap: 30px;
+            }
+
+            strong {
+              font-weight: bold;
+            }
+  
+            a {
+              color: #007BFF;
+              text-decoration: none;
+            }
+  
+            .list {
+              list-style-type: circle;
+              color: #212529;
+              padding-left: 40px;
+  
+              li {
+                &:not(:last-child) {
+                  margin-bottom: 1rem;
+                }
+  
+                .sublist {
+                  margin-top: 10px;
+                  padding-left: 40px;
+                  list-style-type: disc;
+                  
+                  li {
+                    &:not(:last-child) {
+                      margin-bottom: 1rem;
+                    }
+                  }
+                }
+              }
+            }
+
+            .list-b {
+              list-style-type: upper-roman;
+              color: #212529;
+              padding-left: 40px;
+  
+              li {
+                &:not(:last-child) {
+                  margin-bottom: 1rem;
+                }
+  
+                .sublist {
+                  margin-top: 10px;
+                  padding-left: 40px;
+                  list-style-type: disc;
+                  
+                  li {
+                    &:not(:last-child) {
+                      margin-bottom: 1rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          
+
+          
+        }
+      }
+    }
+  }
+}
+
+.glossary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    width: 92vw;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 80px 0;
+    
+    @media screen and (min-width: $md) {
+      width: 88vw;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 760px;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-family: $tenor_sans;
+      color: $dark-navy;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .text-area {
+          display: flex;
+          flex-direction: column;
+          row-gap: 30px;
+          font-family: $roboto;
+          font-size: 1.4rem;
+          color: #656565;
+          line-height: 1.5;
+          
+
+          strong {
+            font-weight: bold;
+          }
+
+          a {
+            color: #007BFF;
+            text-decoration: none;
+          }
+
+          .list {
+            list-style-type: disc;
+            color: #212529;
+            padding-left: 40px;
+
+            li {
+              &:not(:last-child) {
+                margin-bottom: 1rem;
+              }
+            }
+
+            
+          }
+        }
+  }
+}
