@@ -98,6 +98,10 @@ function qb_assets_queue()
         wp_enqueue_style('qb-quennsclub-register', get_template_directory_uri() . "/src/css/queensclub-register.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
+    if(is_page('formularios')) {
+        wp_enqueue_style('qb-download-forms', get_template_directory_uri() . "/src/css/download-forms.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
     if(is_page('termos-e-condicoes')) {
         wp_enqueue_style('qb-termos', get_template_directory_uri() . "/src/css/terms-conditions.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
@@ -550,6 +554,33 @@ function get_featured_videos_array() {
     curl_close($curl_featured_videos_request);
 
     return $response["Videos"]; 
+}
+
+function get_form_files_array() {
+    $url = "https://gx.befly.com.br/bsi/rest/wsFormularios";
+
+    $featured_videos_req_payload = [
+        "Token" => "e9cf3b5a-9408-472f-8dd3-b5f36ff75698"
+    ];
+
+    $req_headers = [
+        "Content-Type: application/json"
+    ];
+    
+    $curl_forms_files_data = curl_init();
+
+    curl_setopt($curl_forms_files_data, CURLOPT_URL, $url);
+    curl_setopt($curl_forms_files_data, CURLOPT_POST, true);
+    curl_setopt($curl_forms_files_data, CURLOPT_POSTFIELDS, json_encode($featured_videos_req_payload));
+    curl_setopt($curl_forms_files_data, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl_forms_files_data, CURLOPT_HTTPHEADER, $req_headers);
+
+    $response_json = curl_exec($curl_forms_files_data);
+    $response = json_decode($response_json, true);
+
+    curl_close($curl_forms_files_data);
+
+    return $response["Formularios"]["Formularios"]; 
 }
 
 function get_dolar_currency_conversion() {
