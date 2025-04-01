@@ -23,7 +23,7 @@
             <li><a href="<?= home_url(); ?>/fale-conosco">Fale Conosco</a></li>
             <li><a href="<?= home_url(); ?>/trabalhe-conosco">Trabalhe Conosco</a></li>
             <li><a href="<?= home_url(); ?>/politica-de-privacidade">Política de Privacidade</a></li>
-            <li><a href="<?= home_url(); ?>/termos-e-condições-de-uso">Termos e Condições de Uso</a></li>
+            <li><a href="<?= home_url(); ?>/termos-e-condicoes">Termos e Condições de Uso</a></li>
             <li><a href="https://befly.com.br/fale-com-o-presidente/" target="_blank" rel="noopener">Fale com o presidente</a></li>
             <li><a href="https://www.contatoseguro.com.br/pt/befly/codigo-de-etica-e-conduta" target="_blank" rel="noopener">Canal de Ética</a></li>
             <li><a href="https://flytour.feedback.house/ouvidoria" target="_blank" rel="noopener">Ouvidoria</a></li>
