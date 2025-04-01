@@ -8,31 +8,31 @@ $categories_list = require_once "cached-categories.php";
 $videos_arr = require_once "cached-videos-urls.php";
 $videos_links = [];
 $videos_titles = [];
-foreach($videos_arr as $video_info) {
+foreach ($videos_arr as $video_info) {
   $videos_links[] = $video_info["Link"];
   $videos_titles[] = $video_info["Descricao"];
 }
 $json_videos_titles = json_encode($videos_titles, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 ?>
-    <div class="video-overlay"></div>
-    <main>
-    <section class="banner">
-      <video id="video" poster="https://www.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
-        <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.webm"
-          type='video/webm; codecs="vp8, vorbis"' />
-        <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.mp4" type="video/mp4" />
-      </video>
-      <article class="gbm-cta">
-        <strong>GBM 2024</strong>
-        <a href="#" rel="noreferrer" target="_blank">Saiba mais</a>
-      </article>
-    </section>
-    <article class="mb-currency-field">
-      <strong class="quotation">US$ 1 = R$6,27 | € 1 = R$6,59</strong>
-      <p id="quotation-date" class="quotation-date">Data: 04/12/2024 às 12:10</p>
+<div class="video-overlay"></div>
+<main>
+  <section class="banner">
+    <video id="video" poster="https://www.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
+      <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.webm"
+        type='video/webm; codecs="vp8, vorbis"' />
+      <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.mp4" type="video/mp4" />
+    </video>
+    <article class="gbm-cta">
+      <strong>GBM 2024</strong>
+      <a href="#" rel="noreferrer" target="_blank">Saiba mais</a>
     </article>
-    <section class="products" x-init="
+  </section>
+  <article class="mb-currency-field">
+    <strong class="quotation">US$ 1 = R$6,27 | € 1 = R$6,59</strong>
+    <p id="quotation-date" class="quotation-date">Data: 04/12/2024 às 12:10</p>
+  </article>
+  <section class="products" x-init="
     const productSwiper = new Swiper('.products .swiper', {
       // Optional parameters
       direction: 'horizontal',
@@ -60,22 +60,22 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
       }
     });
     ">
-      <div class="wrapper">
-        <h2 class="section-title">Nossos Produtos</h2>
-        <div class="swiper product-swiper">
-          <div class="swiper-wrapper">
-            <?php
-            foreach($categories_list as $category) {
-              $cat_title = $category["Titulo"];
-              $cat_description = $category["SubTitulo"];
-              $sanitized_cat_title = sanitize_title($category["CategoriaDescricao"]);
-              $cat_img_file_name = $category["ImagemHome"];
-              $cat_img_folder = $category["PastaImagens"];
-              $cat_img_url = "https://www.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
-              
-              $cat_page_url = home_url() . "/category/$sanitized_cat_title";
-              if($cat_img_file_name !== "") {
-                echo <<<SWIPER_SLIDE
+    <div class="wrapper">
+      <h2 class="section-title">Nossos Produtos</h2>
+      <div class="swiper product-swiper">
+        <div class="swiper-wrapper">
+          <?php
+          foreach ($categories_list as $category) {
+            $cat_title = $category["Titulo"];
+            $cat_description = $category["SubTitulo"];
+            $sanitized_cat_title = sanitize_title($category["CategoriaDescricao"]);
+            $cat_img_file_name = $category["ImagemHome"];
+            $cat_img_folder = $category["PastaImagens"];
+            $cat_img_url = "https://www.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
+
+            $cat_page_url = home_url() . "/category/$sanitized_cat_title";
+            if ($cat_img_file_name !== "") {
+              echo <<<SWIPER_SLIDE
                 <a href="$cat_page_url" style="background-image: url($cat_img_url)" class="swiper-slide">
                   <div class="slide-overlay"></div>
                   <div class="desktop-slide-overlay"></div>
@@ -88,108 +88,108 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
                   </div>
                 </a>
                 SWIPER_SLIDE;
-              }
             }
-            ?>
-          </div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          }
+          ?>
         </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- DESTAQUES -->
+  <!-- DESTAQUES -->
 
-    <section class="featured-content">
-      <div class="wrapper">
-        <h2>Destaques</h2>
-        <div class="items-grid">
-          <?php 
-          $args = array(
-            'post_type'      => 'post',
-            'posts_per_page' => -1, 
-            'post_status'    => 'publish',
-            'orderby' => 'title',
-            'order' => 'ASC'
-          );
+  <section class="featured-content">
+    <div class="wrapper">
+      <h2>Destaques</h2>
+      <div class="items-grid">
+        <?php
+        $args = array(
+          'post_type'      => 'post',
+          'posts_per_page' => -1,
+          'post_status'    => 'publish',
+          'orderby' => 'title',
+          'order' => 'ASC'
+        );
 
-          $query = new WP_Query($args);
-          $counter = 1;
+        $query = new WP_Query($args);
+        $counter = 1;
 
-          if($query->have_posts()) {
-            while($query->have_posts() && $counter <= 6) {
-              $query->the_post();
-              $post_id = get_the_ID();
-              $custom_data = get_post_meta($post_id, 'custom_data', true);
-              
-              $program_name = $program_info["Descricao"];
+        if ($query->have_posts()) {
+          while ($query->have_posts() && $counter <= 6) {
+            $query->the_post();
+            $post_id = get_the_ID();
+            $custom_data = get_post_meta($post_id, 'custom_data', true);
 
-              if(is_array($custom_data)) {
-                if($custom_data["ProgramInfo"]["DestaquePortal"] !== "N") {
-                  $program_post_link = get_permalink();
-                  $program_info = $custom_data['ProgramInfo'];
-                  $additional_program_info = $custom_data['ProgramAddInfo'];
-                  $current_category_info = $custom_data['CategoryInfo'];
-                  $program_logs_info = $custom_data['ProgramLogInfo'];
-                  $program_notes = $custom_data['ProgramNotes'];
-                  $image_gallery_files = $custom_data['ImageGalleryFiles'];
-                  $price_table_image_files = $custom_data['PriceTableImageFiles'];
-              
-                  $log_name = $additional_program_info["CadernoTitulo"];
-                  $program_code = $program_info["CodigoPrograma"];
-                  $category_code = $program_info["CategoriaCodigo"];
-  
-                  $category_name = $current_category_info["CategoriaDescricao"];
-                  $category_title = $current_category_info["Titulo"];
-                  $program_tower = $program_info["Torre"];
-                  $program_log_info = array_find($program_logs_info, function($program_log_info) use ($log_name) {
-                    $lower_log_name = trim(mb_strtolower($log_name));
-                    $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
-              
-                    return $lower_log_name == $current_item_name;
-                  });
-  
-                  $quick_description = $program_info["DescricaoResumida"];
-                  $days_qtty = $program_info["QtdDiasViagem"];
-                  $nights_qtty = $program_info["QtdNoitesViagem"];
-                  $visit_details_quick_info = $program_info["Detalhes"];
-                  $program_outings_info = $program_info["SaidasPrograma"];
-  
-                  $images_folder_prefix_url = "https://www.queensberry.com.br/imagens/";
-                  $category_image_folder = $current_category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
-                  $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
-                  $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
-                  $banner_img_file_name = $program_info["Banner"]; // Ex.: DESTAQUE_NEVE002.JPG
-                  $banner_img_file_name = rawurlencode($banner_img_file_name);
-                  $log_img_file_name = $image_gallery_files[0]['Descricao'];
-                  $program_banner_img_url = "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$banner_img_file_name";
-                  
-                  $class_list = "";
-  
-                  switch($counter) {
-                    case 1:
-                      $class_list = "first-col two-thirds";
-                      break;
-                    case 2:
-                      $class_list = "second-col one-third";
-                      break;
-                    case 3:
-                      $class_list = "one-third first-col";
-                      break;
-                    case 4:
-                      $class_list = "two-thirds second-col";
-                      break;
-                    case 5:
-                      $class_list = "one-half first-col";
-                      break;
-                    case 6:
-                      $class_list = "one-half second-col";
-                      break;
-                  }
-  
-  
-                  echo <<<FEATURED_PROGRAM
+            $program_name = $program_info["Descricao"];
+
+            if (is_array($custom_data)) {
+              if ($custom_data["ProgramInfo"]["DestaquePortal"] !== "N") {
+                $program_post_link = get_permalink();
+                $program_info = $custom_data['ProgramInfo'];
+                $additional_program_info = $custom_data['ProgramAddInfo'];
+                $current_category_info = $custom_data['CategoryInfo'];
+                $program_logs_info = $custom_data['ProgramLogInfo'];
+                $program_notes = $custom_data['ProgramNotes'];
+                $image_gallery_files = $custom_data['ImageGalleryFiles'];
+                $price_table_image_files = $custom_data['PriceTableImageFiles'];
+
+                $log_name = $additional_program_info["CadernoTitulo"];
+                $program_code = $program_info["CodigoPrograma"];
+                $category_code = $program_info["CategoriaCodigo"];
+
+                $category_name = $current_category_info["CategoriaDescricao"];
+                $category_title = $current_category_info["Titulo"];
+                $program_tower = $program_info["Torre"];
+                $program_log_info = array_find($program_logs_info, function ($program_log_info) use ($log_name) {
+                  $lower_log_name = trim(mb_strtolower($log_name));
+                  $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
+
+                  return $lower_log_name == $current_item_name;
+                });
+
+                $quick_description = $program_info["DescricaoResumida"];
+                $days_qtty = $program_info["QtdDiasViagem"];
+                $nights_qtty = $program_info["QtdNoitesViagem"];
+                $visit_details_quick_info = $program_info["Detalhes"];
+                $program_outings_info = $program_info["SaidasPrograma"];
+
+                $images_folder_prefix_url = "https://www.queensberry.com.br/imagens/";
+                $category_image_folder = $current_category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
+                $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
+                $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
+                $banner_img_file_name = $program_info["Banner"]; // Ex.: DESTAQUE_NEVE002.JPG
+                $banner_img_file_name = rawurlencode($banner_img_file_name);
+                $log_img_file_name = $image_gallery_files[0]['Descricao'];
+                $program_banner_img_url = "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$banner_img_file_name";
+
+                $class_list = "";
+
+                switch ($counter) {
+                  case 1:
+                    $class_list = "first-col two-thirds";
+                    break;
+                  case 2:
+                    $class_list = "second-col one-third";
+                    break;
+                  case 3:
+                    $class_list = "one-third first-col";
+                    break;
+                  case 4:
+                    $class_list = "two-thirds second-col";
+                    break;
+                  case 5:
+                    $class_list = "one-half first-col";
+                    break;
+                  case 6:
+                    $class_list = "one-half second-col";
+                    break;
+                }
+
+
+                echo <<<FEATURED_PROGRAM
                   <article class="$class_list" style="background-image: url($program_banner_img_url);">
                     <a href="$program_post_link">
                       <div class="card-overlay"></div>
@@ -206,20 +206,20 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
                     </a>
                   </article>
                   FEATURED_PROGRAM;
-  
-                  $counter += 1;
-                }
-              } 
+
+                $counter += 1;
+              }
             }
           }
-          ?>
-        </div>
+        }
+        ?>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PALAVRA DO ESPECIALISTA -->
+  <!-- PALAVRA DO ESPECIALISTA -->
 
-
+  <!-- 
     <section class="specialists-review">
       <div class="wrapper">
         <h2>Palavra do Especialista</h2>
@@ -312,25 +312,25 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
         </div>
       </div>
     </section>
+        -->
+  <section class="external-links">
+    <article class="queensclub-section">
+      <h2>
+        <img src="<?= get_template_directory_uri() ?>/src/img/logo-queensclub.png" alt="QueensClub">
+      </h2>
+      <strong>Quanto mais você viajar, mais você vai ganhar.</strong>
+      <a href="#">Saiba Mais</a>
+    </article>
+    <article class="blog-section">
+      <h2>Blog</h2>
+      <strong>Uma viagem exploratória, sensorial e exclusiva pelos cinco continentes.</strong>
+      <a href="#">Confira</a>
+    </article>
+  </section>
 
-    <section class="external-links">
-      <article class="queensclub-section">
-        <h2>
-          <img src="<?= get_template_directory_uri() ?>/src/img/logo-queensclub.png" alt="QueensClub">
-        </h2>
-        <strong>Quanto mais você viajar, mais você vai ganhar.</strong>
-        <a href="#">Saiba Mais</a>
-      </article>
-      <article class="blog-section">
-        <h2>Blog</h2>
-        <strong>Uma viagem exploratória, sensorial e exclusiva pelos cinco continentes.</strong>
-        <a href="#">Confira</a>
-      </article>
-    </section>
 
 
-
-    <section class="featured-videos" x-data='{
+  <section class="featured-videos" x-data='{
       videoTitles: <?= $json_videos_titles ?>,
       currentVideoTitle: "Título do vídeo atual",
       currentSlideIndex: 0,
@@ -397,17 +397,17 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
       currentVideoTitle = videoTitles[currentSlideIndex];
     });
     ">
-      <div class="wrapper">
-        <header>
-          <h2>Vídeos</h2>
-          <h3 x-text="currentVideoTitle"></h3>
-        </header>
-        <div class="filler"></div>
-        <article class="swiper">
-          <div class="swiper-wrapper">
-            <?php
-            foreach($videos_links as $video_link) {
-              echo <<<SLIDE_ITEM
+    <div class="wrapper">
+      <header>
+        <h2>Vídeos</h2>
+        <h3 x-text="currentVideoTitle"></h3>
+      </header>
+      <div class="filler"></div>
+      <article class="swiper">
+        <div class="swiper-wrapper">
+          <?php
+          foreach ($videos_links as $video_link) {
+            echo <<<SLIDE_ITEM
               <div class="swiper-slide">
                 <div class="video-frame">
                   <iframe width="100%" height="100%"
@@ -418,22 +418,22 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
                 </div>
               </div>
               SLIDE_ITEM;
-            }
-            ?>
-          </div>
+          }
+          ?>
+        </div>
 
-          <div class="mobile-controllers">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-        </article>
+        <div class="mobile-controllers">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </article>
 
-        <!-- <div class="desktop-controllers">
+      <!-- <div class="desktop-controllers">
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div> -->
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
-  <?php get_footer(); ?>
+<?php get_footer(); ?>

@@ -13,19 +13,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <link rel="icon" href="/wp queensberry/queensberry/wp-content/themes/queensberry v1.0/src/img/fav-icon-queensberry.jpg">
   <?php
-    $site_title = get_bloginfo('name');
+  $site_title = get_bloginfo('name');
   ?>
-  <title><?= (is_front_page() ? $site_title : is_category()) ? single_cat_title() : strtoupper(get_the_title()) .  " - " . $site_title; ?></title>
+  <title><?= (is_front_page() ? $site_title : is_category()) ? single_cat_title() : get_the_title() .  " - " . $site_title; ?></title>
 </head>
 
 
 <body x-data="{
   isModalOpen: false,
 }" x-bind:style="isModalOpen ? 'overflow: hidden;' : 'overflow: auto;'">
-  
+
   <?php
-  if(is_single()) {
+  if (is_single()) {
     echo <<<SCRIPT
     <script>
       var clientId1;
@@ -50,7 +51,7 @@
     </script>
     SCRIPT;
   } else {
-    if(is_page("fale-conosco") || is_page("trabalhe-conosco") || is_page("queensclub-registro")) {
+    if (is_page("fale-conosco") || is_page("trabalhe-conosco") || is_page("queensclub-registro")) {
       echo <<<SCRIPT
       <script>
         var clientId1;
@@ -71,7 +72,7 @@
 
         
       </script>
-      SCRIPT; 
+      SCRIPT;
     } else {
       echo <<<SCRIPT
       <script>
@@ -87,7 +88,7 @@
           });
         }
       </script>
-      SCRIPT; 
+      SCRIPT;
     }
   }
   ?>
@@ -103,7 +104,7 @@
     x-init="window.addEventListener('scroll', () => isWindowScrolledPastThreshold = window.scrollY > 150)">
     <div class="nav-a">
       <div class="wrapper">
-      <?php echo do_shortcode('[desktop_header_search]'); ?>
+        <?php echo do_shortcode('[desktop_header_search]'); ?>
         <h1 class="site-logo">
           <a href="<?= home_url() ?>"><img
               x-bind:src="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? '<?= get_template_directory_uri(); ?>/src/img/logo-escuro.png' : '<?= get_template_directory_uri(); ?>/src/img/logo.png'"
@@ -267,8 +268,8 @@
               </div>
             </div>
           </li>
-          <li class="nav-link"><a href="<?= home_url(); ?>/category/disney">Disney</a></li>
-          <li class="nav-link"><a href="https://blog.queensberry.com.br/" target="_blank" rel="noopener">>Blog</a></li>
+          <li class="nav-link"><a href="https://disney.queensberry.com.br/" target="_blank">Disney</a></li>
+          <li class="nav-link"><a href="https://blog.queensberry.com.br/" target="_blank" rel="noopener">Blog</a></li>
           <li class="nav-link"><a href="https://www.queensberryincentivos.com.br/" target="_blank" rel="noopener">Viagens de Incentivo</a></li>
           <li class="nav-link"><a href="<?= home_url() ?>/quem-somos/">Quem Somos</a></li>
           <li class="nav-link"><a href="<?= home_url() ?>/fale-conosco">Fale Conosco</a></li>
