@@ -22,7 +22,7 @@ get_header(); ?>
       </div>
     </div>
   </section>
-  <section class="terms-and-conditions">
+  <section class="politics">
     <div class="wrapper">
       
       <article class="info">
