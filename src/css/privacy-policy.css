@@ -1,0 +1,263 @@
+main {
+  box-sizing: border-box;
+}
+main * {
+  box-sizing: border-box;
+}
+
+.banner {
+  background-image: url(../img/banner-politica-privacidade.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.banner h1 {
+  color: white;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-family: "Tenor Sans", sans-serif;
+  text-transform: uppercase;
+  width: 92px;
+  padding-bottom: 65px;
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 768px) {
+  .banner h1 {
+    font-size: 4.8rem;
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .banner h1 {
+    width: 1000px;
+  }
+}
+
+.queensberry-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.queensberry-info .wrapper {
+  width: 92vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 32px 0;
+}
+@media screen and (min-width: 768px) {
+  .queensberry-info .wrapper {
+    width: 88vw;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .queensberry-info .wrapper {
+    width: 1000px;
+  }
+}
+.queensberry-info .wrapper h2 {
+  font-size: 2.4rem;
+  font-family: "Tenor Sans", sans-serif;
+  color: #161326;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+.queensberry-info .wrapper .text-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #656565;
+}
+@media screen and (min-width: 768px) {
+  .queensberry-info .wrapper .text-area {
+    flex-direction: row;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+.queensberry-info .wrapper .text-area div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.queensberry-info .wrapper .text-area div strong {
+  font-weight: bold;
+}
+
+.politics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.politics .wrapper {
+  width: 92vw;
+}
+@media screen and (min-width: 768px) {
+  .politics .wrapper {
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .politics .wrapper {
+    width: 760px;
+  }
+}
+.politics .wrapper .title-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-bottom: 70px;
+}
+.politics .wrapper .title-area h2 {
+  font-size: 2.4rem;
+  font-family: "Tenor Sans", sans-serif;
+  color: #161326;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.politics .wrapper .title-area small {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  color: #212529;
+  align-self: flex-end;
+}
+.politics .wrapper .intro {
+  font-size: 1.4rem;
+  color: #656565;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.politics .wrapper .info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+.politics .wrapper .info .cluster {
+  display: flex;
+  flex-direction: column;
+}
+.politics .wrapper .info .cluster h3 {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  font-size: 2.4rem;
+  font-family: "Tenor Sans", sans-serif;
+  color: #161326;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.politics .wrapper .info .cluster .text-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #656565;
+  line-height: 1.5;
+}
+.politics .wrapper .info .cluster .text-area strong {
+  font-weight: bold;
+}
+.politics .wrapper .info .cluster .text-area a {
+  color: #007BFF;
+  text-decoration: none;
+}
+.politics .wrapper .info .cluster .text-area .list {
+  list-style-type: circle;
+  color: #212529;
+  padding-left: 40px;
+}
+.politics .wrapper .info .cluster .text-area .list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.politics .wrapper .info .cluster .text-area .list li .sublist {
+  margin-top: 10px;
+  padding-left: 40px;
+  list-style-type: disc;
+}
+.politics .wrapper .info .cluster .text-area .list li .sublist li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.politics .wrapper .info .cluster .text-area .list-b {
+  list-style-type: upper-roman;
+  color: #212529;
+  padding-left: 40px;
+}
+.politics .wrapper .info .cluster .text-area .list-b li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.politics .wrapper .info .cluster .text-area .list-b li .sublist {
+  margin-top: 10px;
+  padding-left: 40px;
+  list-style-type: disc;
+}
+.politics .wrapper .info .cluster .text-area .list-b li .sublist li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.glossary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glossary .wrapper {
+  width: 92vw;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 80px 0;
+}
+@media screen and (min-width: 768px) {
+  .glossary .wrapper {
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .glossary .wrapper {
+    width: 760px;
+  }
+}
+.glossary .wrapper h2 {
+  font-size: 2.4rem;
+  font-family: "Tenor Sans", sans-serif;
+  color: #161326;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.glossary .wrapper .text-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #656565;
+  line-height: 1.5;
+}
+.glossary .wrapper .text-area strong {
+  font-weight: bold;
+}
+.glossary .wrapper .text-area a {
+  color: #007BFF;
+  text-decoration: none;
+}
+.glossary .wrapper .text-area .list {
+  list-style-type: disc;
+  color: #212529;
+  padding-left: 40px;
+}
+.glossary .wrapper .text-area .list li:not(:last-child) {
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=privacy-policy.css.map */

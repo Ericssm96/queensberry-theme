@@ -98,6 +98,14 @@ function qb_assets_queue()
         wp_enqueue_style('qb-quennsclub-register', get_template_directory_uri() . "/src/css/queensclub-register.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
+    if(is_page('termos-e-condicoes')) {
+        wp_enqueue_style('qb-termos', get_template_directory_uri() . "/src/css/terms-conditions.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
+    if(is_page('politica-de-privacidade')) {
+        wp_enqueue_style('qb-politica-privacidade', get_template_directory_uri() . "/src/css/privacy-policy.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
     if(is_tag()) {
         wp_enqueue_style('qb-tag-styles', get_template_directory_uri() . "/src/css/tag-page.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
