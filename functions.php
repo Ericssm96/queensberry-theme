@@ -559,7 +559,7 @@ function get_featured_videos_array() {
 function get_form_files_array() {
     $url = "https://gx.befly.com.br/bsi/rest/wsFormularios";
 
-    $featured_videos_req_payload = [
+    $forms_files = [
         "Token" => "e9cf3b5a-9408-472f-8dd3-b5f36ff75698"
     ];
 
@@ -571,7 +571,7 @@ function get_form_files_array() {
 
     curl_setopt($curl_forms_files_data, CURLOPT_URL, $url);
     curl_setopt($curl_forms_files_data, CURLOPT_POST, true);
-    curl_setopt($curl_forms_files_data, CURLOPT_POSTFIELDS, json_encode($featured_videos_req_payload));
+    curl_setopt($curl_forms_files_data, CURLOPT_POSTFIELDS, json_encode($forms_files));
     curl_setopt($curl_forms_files_data, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl_forms_files_data, CURLOPT_HTTPHEADER, $req_headers);
 
