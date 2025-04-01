@@ -14,282 +14,356 @@ get_header(); ?>
 
       <div class="text-area">
         <div>
-          <p>Estes Termos e Condições de Uso da Plataforma Queensberry regem o acesso e uso dos Clientes, bem como das Agências de Turismo que disponibilizam os roteiros da QUEENSBERRY para terceiros.</p>
+          <p>A <strong>Plataforma Queensberry</strong> é destinada aos Clientes que irão vivenciar uma experiência personalizada para a escolha dos seus destinos de viagem, que poderão ser os Clientes e Agências de Turismo como Usuários que utilizam nossos serviços e as opções de roteiro de viagens, incluindo os próprios Clientes das Agências.</p>
+          <p>Por esta razão, poderemos coletar alguns dados dos Clientes e das suas preferências e interações realizadas na <strong>Plataforma Queensberry</strong>, incluindo os dados cadastrais inseridos pelos Usuários, tendo sempre em consideração a preservação da privacidade.</p>
         </div>
         <div>
-          <p>Ao acessar e fazer uso da Plataforma Queensberry, os Usuários ("Cliente ou Agência") aceitam e concordam com as regras deste documento e de sua Política de Privacidade.</p>
+          <p>Esta página tem por finalidade informar as maneiras como asseguramos a privacidade e estabelecer as regras sobre a coleta, acesso, uso, armazenamento, transferência, enriquecimento e eliminação dos dados coletados dos Clientes durante a utilização da nossa Plataforma, além do registro de suas atividades de acordo com as leis em vigor no Brasil.</p>
+          <p>Quando os Clientes acessam e utilizam a Plataforma oferecida pela <strong>QUEENSBERRY</strong>, aceitam esta <strong>Política de Privacidade</strong>, conferindo sua livre e expressa concordância com as disposições aqui estipuladas.</p>
         </div>
       </div>
     </div>
+    
   </section>
   <section class="politics">
     <div class="wrapper">
-      
+      <header class="title-area">
+        <h2>Política de Privacidade e Proteção de Dados</h2>
+        <small>Atualizada em 10 de maio de 2024</small>
+      </header>
+      <p class="intro">Olá, seja bem vindo (a)!</p>
       <article class="info">
         <div class="cluster">
-          <h3><span>1.</span> <span>Plataforma Queensberry</span></h3>
+          <h3><span>1.</span> <span>Para que serve essa política de privacidade?</span></h3>
           <div class="text-area">
-            <div class="topic">
-              <span class="topic-number">1.1</span>
-              <div class="inner-content">
-                  <p>Quando os Usuários acessarem ou utilizarem a Plataforma, a <strong>QUEENSBERRY</strong> poderá coletar alguns dados, incluindo as informações fornecidas por você, os dados navegacionais e o histórico de interações com a Plataforma.</p>
-              </div>
-            </div>
-            <div class="topic">
-              <span class="topic-number">1.2</span>
-              <div class="inner-content">
-                  <p>As informações que a <strong>QUEENSBERRY</strong> poderá coletar dos <strong>Clientes</strong> incluem:</p>
-                  <ul class="list">
-                      <li>
-                          <p>Viagens Individuais;</p>
-                      </li>
-                      <li>
-                          <p>Viagens em Grupo - Grupo Brasileiros no Mundo;</p>
-                      </li>
-                      <li>
-                          <p>Cruzeiros Marítimos;</p>
-                      </li>
-                  </ul>
-              </div>
-            </div>
-            <div class="topic">
-              <span class="topic-number">1.3</span>
-              <div class="inner-content">
-                  <p>Também são ofertados pela <strong>Plataforma Queensberry</strong> os roteiros de Viagens de Incentivos destinadas para empresas que pretendem presentear seus colaboradores e parceiros.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cluster">
-          <h3><span>2.</span> <span>Principais funcionalidades do Portal Queensberry</span></h3>
-          <div class="text-area">
-              <div class="topic">
-                  <span class="topic-number">2.1</span>
-                  <div class="inner-content">
-                      <p>Não somos responsáveis pela veracidade nas informações prestadas pelos <strong>Clientes</strong> ou pela sua desatualização, quando é de sua responsabilidade prestá-las com exatidão ou atualizá-las.</p>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="cluster">
-          <h3><span>3.</span> <span>Opções de pagamento, cotação e confirmação da reserva</span></h3>
-          <div class="text-area">
-              <div class="topic">
-                  <span class="topic-number">3.1</span>
-                  <div class="inner-content">
-                      <p>Os <strong>Usuários</strong> possuem as seguintes opções de pagamento na <strong>Plataforma Queensberry</strong></p>
-                      <ol class="list-b">
-                          <li>
-                              <p>À vista: cartão de crédito (Visa, MasterCard, Diners, Elo e American Express);</p>
-                          </li>
-                          <li>
-                              <p>A prazo: cartão de crédito (Visa, MasterCard, Diners, Elo e American Express);</p>
-                          </li>
-                      </ol>
-                  </div>
-              </div>
-              <div class="topic">
-                  <span class="topic-number">3.2</span>
-                  <div class="inner-content">
-                      <p>Os preços apresentados em banners, folders e demais peças publicitárias de divulgação na <strong>Plataforma Queensberry</strong> poderão sofrer alterações sem aviso prévio, como no caso de variação cambial, e somente são válidos para as compras finalizadas no ato de sua exibição.</p>
-                  </div>
-              </div>
-              <div class="topic">
-                  <span class="topic-number">3.3</span>
-                  <div class="inner-content">
-                      <p>Os preços apresentados nos folders, banners, e demais peças publicitárias de divulgação na <strong>Plataforma Queensberry</strong> em moeda estrangeira serão convertidas em moeda nacional, com indicação da data e horário da conversão. No momento da cotação e/ou aquisição pelo Usuário, poderá haver divergência nos valores apresentados sem que isso implique em qualquer direito ou garantia dos valores anteriormente apresentados ou recebidos pelo Usuário ou no dever de comunicação prévia das alterações das condições pela <strong>QUEENSBERRY</strong>.</p>
-                  </div>
-              </div>
-              <div class="topic">
-                  <span class="topic-number">3.4</span>
-                  <div class="inner-content">
-                      <p>A mera inclusão dos roteiros como Pedidos na <strong>Plataforma Queensberry</strong> ou a exibição dos preços e informações pelos canais da <strong>QUEENSBERRY</strong> não implica em sua reserva pelo Cliente, não garantindo nenhum direito em relação à disponibilidade, condições e preço. Somente os pedidos efetivamente formulados e pagos serão considerados como reserva e não se aplicarão eventuais alterações posteriores de preço.</p>
-                  </div>
-              </div>
-              <div class="topic">
-                  <span class="topic-number">3.5</span>
-                  <div class="inner-content">
-                      <p>As compras realizadas com pagamento à vista, poderão receber um desconto automaticamente, a critério exclusivo da <strong>QUEENSBERRY</strong>.</p>
-                  </div>
-              </div>
-              <div class="topic">
-                  <span class="topic-number">3.6</span>
-                  <div class="inner-content">
-                      <p>Os Pedidos que forem pagos com cartão de crédito estão sujeitos à aprovação da administradora do cartão e a outros dispositivos de verificação de fraude. O prazo de confirmação é considerado a partir da checagem dos dados cadastrais e da confirmação do pagamento, que poderá ser realizada em até 2 (dois) dias úteis. Caso seja notada qualquer diferença de informação com os dados cadastrados, a <strong>QUEENSBERRY</strong> poderá entrar em contato com o Usuário e informar a pendência existente.</p>
-                  </div>
-              </div>
-              <div class="topic">
-                  <span class="topic-number">3.7</span>
-                  <div class="inner-content">
-                      <p>O Cliente poderá exercer o seu direito de arrependimento, bem como solicitar o cancelamento do roteiro(s) adquirido(s), em até 07 (sete) dias úteis contados da confirmação de pagamento, sendo cabível a aplicação de taxas e penalidades compensatórias conforme a Política de Cancelamento vigente.</p>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="cluster">
-          <h3><span>4.</span><span>Condições gerais de uso</span></h3>
-          <div class="text-area">
-              <div class="topic">
-                  <span class="topic-number">4.1</span>
-                  <div class="inner-content">
-                      <p>Para acessar a <strong>Plataforma Queensberry</strong> de forma segura e utilizar suas funcionalidades integralmente é de inteira responsabilidade dos <strong>Usuários</strong> dispor de dispositivos e equipamentos compatíveis, serviço de conexão à Internet com antivírus e firewall habilitados, softwares devidamente atualizados - tais como determinados plug-ins e complementos dos navegadores -, além da adoção de medidas de segurança mínimas, o que inclui, mas não se limita, a utilização de mecanismo de bloqueio de acesso e senhas.</p>
-                  </div>
-              </div>
-              <div class="topic">
-                  <span class="topic-number">4.2</span>
-                  <div class="inner-content">
-                    <p>A <strong>Plataforma Queensberry</strong> e suas funcionalidades são apresentadas aos Usuários na maneira como estão disponíveis, podendo passar por constantes aprimoramentos e atualizações, comprometendo-se a <strong>QUEENSBERRY</strong> a: (i) exibir as funcionalidades de maneira clara, completa, precisa e suficiente de modo que exista a exata percepção das operações realizadas; e (ii) empregar os recursos necessários, sempre considerando o estado da técnica disponível, para preservar a privacidade e a segurança dos dados inseridos nas funcionalidades oferecidas na <strong>Plataforma Queensberry</strong>.</p>
-                  </div>
-              </div>
-              <div class="topic">
-                <span class="topic-number">4.3</span>
-                <div class="inner-content">
-                  <p>A <strong>QUEENSBERRY</strong> disponibiliza documento próprio, denominado Política de Privacidade, que regula o tratamento dado às informações coletadas na <strong>Plataforma Queensberry</strong>, parte integrante do presente instrumento, em: www.queensberry.com.br/institucional/politica-de-privacidade</p>
-                </div>
-              </div>
-              <div class="topic">
-                <span class="topic-number">4.4</span>
-                <div class="inner-content">
-                  <p>A <strong>QUEENSBERRY</strong> envida seus esforços para a disponibilidade contínua e permanente do <strong>Plataforma Queensberry</strong>. No entanto, pode ocorrer, eventualmente, alguma indisponibilidade temporária decorrente de manutenção necessária ou gerada por motivo de força maior, como desastres naturais, falhas ou colapsos nos sistemas centrais de comunicação e acesso à Internet ou fatos de terceiro que fogem de sua esfera de vigilância e responsabilidade.</p>
-                </div>
-              </div>
-              <div class="topic">
-                <span class="topic-number">4.5</span>
-                <div class="inner-content">
-                    <p>Se isso ocorrer, a <strong>QUEENSBERR</strong>Y fará o que estiver ao seu alcance para restabelecer o acesso à <strong>Plataforma Queensberry</strong> o mais breve possível, dentro das limitações técnicas de seus serviços e serviços de terceiros, dos quais a <strong>QUEENSBERRY</strong> depende para ficar online.</p>
-                </div>
-              </div>
-              <div class="topic">
-                <span class="topic-number">4.6</span>
-                <div class="inner-content">
-                    <p>Eventuais procedimentos de manutenção serão informados por meio dos canais oficiais de comunicação da <strong>QUEENSBERRY</strong> (a exemplo, mas não se limitando a, perfis oficiais em mídias sociais), caso seja necessário que este fique indisponível por longos períodos.</p>
-                </div>
-              </div>
-              <div class="topic">
-                <span class="topic-number">4.7</span>
-                <div class="inner-content">
-                    <p>Os Usuários comprometem-se a adotar um comportamento ético e respeitoso ao fazer uso da <strong>Plataforma Queensberry</strong>, o que inclui:</p>
-                    <ol class="list-b">
-                      <li>
-                        <p>Não acessar as áreas de programação da <strong>Plataforma Queensberry</strong>, seu banco de dados nem qualquer outro conjunto de informações que faça parte da atividade de desenvolvimento;</p>
-                      </li>
-                      <li>
-                        <p>Não realizar ou permitir que se realize engenharia reversa, nem traduzir, decompilar, copiar, modificar, reproduzir, alugar, sublicenciar, publicar, divulgar, transmitir, emprestar, distribuir ou, de outra maneira, dispor das ferramentas da <strong>Plataforma Queensberry</strong> e de suas funcionalidades;</p>
-                      </li>
-                      <li>
-                        <p>Não utilizar técnicas para mascarar, esconder, alterar ou falsear seu endereço de IP (Internet Protocol) durante seu acesso ou tentativa de acesso à <strong>Plataforma Queensberry</strong>;</p>
-                      </li>
-                      <li>
-                        <p>Respeitar todos os direitos de propriedade intelectual de titularidade da <strong>QUEENSBERRY</strong>, incluindo todos os direitos referentes a terceiros que porventura estejam, ou estiveram, de alguma forma ali disponíveis; e</p>
-                      </li>
-                      <li>
-                        <p>Somente reproduzir os conteúdos disponíveis na <strong>Plataforma Queensberry</strong>, em especial suas marcas e layout do ambiente, caso tenham sido expressamente autorizados pela QUEENSBERRY neste sentido.</p>
-                      </li>
-                    </ol>
-                </div>
-              </div>
-              <div class="topic">
-                <span class="topic-number">4.8</span>
-                <div class="inner-content">
-                    <p>Os <strong>Usuários</strong> declaram-se cientes de que eventual remoção, bloqueio ou suspensão de qualquer conteúdo ou funcionalidade da <strong>Plataforma Queensberry</strong>, em decorrência de alguma reclamação, deverá ser sempre compreendido como demonstração de boa-fé e intenção de solução amigável de conflitos, jamais como reconhecimento de culpa ou de qualquer infração pela <strong>QUEENSBERRY</strong> a direito de terceiro.</p>
-                </div>
-              </div>
-          </div>
-        </div>
-        <div class="cluster">
-          <h3><span>5.</span><span>Isenção de responsabilidade</span></h3>
-          <div class="text-area">
-            <div class="topic">
-              <span class="topic-number">5.1</span>
-              <div class="inner-content">
-                  <p>A <strong>QUEENSBERRY</strong> não se responsabiliza:</p>
-                  <ol class="list-b">
-                    <li>
-                      <p>Por quaisquer problemas, bugs, glitches ou funcionamentos indevidos que ocorrerem nos dispositivos e equipamentos dos Usuários e sejam resultantes direta ou indiretamente do uso regular da Plataforma Queensberry;</p>
-                    </li>
-                    <li>
-                      <p>Por qualquer dano direto ou indireto ocasionado por eventos de terceiros, a exemplo, mas não se limitando a ataque de hackers, falhas no sistema, no servidor ou na conexão à internet, inclusive por ações de softwares que possam, de algum modo, danificar ativos físicos ou lógicos ou a conexão dos Usuários em decorrência do acesso, utilização ou navegação na Plataforma Queensberry, bem como a transferência de dados, arquivos, imagens, textos, áudios ou vídeos contidos neste;</p>
-                    </li>
-                    <li>
-                      <p>Pela navegação dos Clientes e Agências nos links externos disponibilizados na Plataforma Queensberry, sendo seus deveres a leitura dos Termos e Condições de Uso e da Política de Privacidade do recurso acessado e agir conforme o determinado; e</p>
-                    </li>
-                    <li>
-                      <p>Por verificar, controlar, aprovar ou garantir a adequação ou exatidão das informações ou dados disponibilizados em tais links, não sendo, portanto, responsáveis por prejuízos, perdas ou danos ocorridos pela visita de tais sites, cabendo ao interessado verificar a confiabilidade das informações e dados ali exibidos antes de tomar alguma decisão ou praticar algum ato.</p>
-                    </li>
-                  </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cluster">
-          <h3><span>6.</span><span>Disposições Finais</span></h3>
-          <div class="text-area">
-            <div class="topic">
-              <span class="topic-number">6.1</span>
-              <div class="inner-content">
-                  <p>A tolerância do eventual descumprimento de quaisquer das cláusulas e condições do presente instrumento não constituirá novação das obrigações aqui estipuladas e tampouco impedirá ou inibirá a exigibilidade das mesmas a qualquer tempo.</p>
-              </div>
-            </div>
+            <p>A <strong>Queensberry Viagens</strong> valoriza a sua privacidade e a proteção dos seus Dados Pessoais. Por isso, é nosso compromisso garantir que você, como Titular de Dados e usuário dos nossos serviços, saiba como Tratamos os seus Dados Pessoais, com quem podemos compartilhá-los, como os protegemos e os mantemos seguros, sempre de acordo com a Legislação Aplicável de Proteção de Dados e nos termos desta Política de Privacidade <strong>(“Política”)</strong>.</p>
+            <p>A <strong>Queensberry Viagens</strong> lida com uma grande quantidade de informações que dizem respeito a pessoas físicas <strong>(“Dados Pessoais”)</strong>, incluindo clientes, consumidores e outros contatos comerciais <strong>(“Titulares de Dados”)</strong> em nossas atividades diárias.</p>
+            <p>Esta Política pode ser revista a qualquer momento, razão pela qual recomendamos que você consulte esta Política periodicamente para se manter atualizado. Além disso, caso alguma dessas alterações implique na necessidade de obtermos a sua autorização prévia e expressa, assim o faremos.</p>
+            <p>Leia atentamente esta Política, pois, ao interagir conosco, você confia a nós suas informações e declara ter lido atentamente as disposições desta Política, estando plenamente de acordo com os termos aqui indicados. O significado dos termos usados nesta Política podem ser consultados no Glossário, ao final desta Política, sempre indicados em letra maiúscula.</p>
+            <strong class="disclaimer">NÃO SE PREOCUPE: TODOS OS SEUS DADOS PESSOAIS SÃO E PERMANECERÃO SENDO CONFIDENCIAIS. CONTUDO, CASO VOCÊ NÃO CONCORDE COM QUAISQUER DOS TERMOS APRESENTADOS NESTE TERMO, VOCÊ NÃO DEVE UTILIZAR A PLATAFORMA DA QUEENSBERRY VIAGENS OU QUALQUER DE NOSSOS SERVIÇOS.</strong>
 
-            <div class="topic">
-              <span class="topic-number">6.2</span>
-              <div class="inner-content">
-                  <p>Caso alguma disposição do presente instrumento seja julgada inaplicável ou sem efeito, o restante continua a viger, sem a necessidade de medida judicial que declare tal assertiva.</p>
-              </div>
-            </div>
+            <p>Caso você tenha qualquer dúvida, não hesite em entrar em contato com nosso Encarregado de Proteção de Dados pelo e-mail <a href="mailto:dpo@befly.com.br" class="mail-link">dpo@befly.com.br</a>.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>2.</span> <span>Quem Somos?</span></h3>
+          <div class="text-area">
+            <p><strong>QUEENSBERRY AGÊNCIA DE VIAGENS E TURISMO LTDA.</strong>, inscrita no CNPJ sob o nº 45.575.958/0001-49, com sede na Alameda Campinas, nº 1.070, Edifício Paulista Star, Parte Queensberry, bairro Jardim Paulista, CEP 01.404-200, na Cidade de São Paulo/SP (“<strong>Queensberry Viagens</strong>”). Nos termos da Legislação Aplicável de Proteção de Dados, desempenhamos o papel de Controlador dos seus Dados Pessoais.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>3.</span> <span>De quem são os dados pessoais tratados pela Queensberry Viagens?</span></h3>
+          <div class="text-area">
+            <p>Esta Política é aplicável a todas as pessoas físicas que interagem, de alguma forma, com a <strong>Queensberry Viagens</strong>, a saber: (i) consumidores, (ii) clientes, (iii) candidatos, (v) visitantes, (vi) representantes de fornecedores e prestadores de serviço, (vii) terceirizados, (viii) pessoas de contato com o cliente e com o fornecedor, (ix) representantes legais da <strong>Queensberry Viagens</strong> e do cliente, dentre outros.</p>
 
-            <div class="topic">
-              <span class="topic-number">6.3</span>
-              <div class="inner-content">
-                  <p>A <strong>Plataforma Queensberry</strong> tem como base a data e horários oficiais de Brasília (UTC/GMT -03:00).</p>
-              </div>
-            </div>
+            <p>Caso você seja um colaborador da <strong>Queensberry Viagens</strong>, esta Política não será aplicável a você.</p>
           </div>
         </div>
         <div class="cluster">
-          <h3><span>7.</span><span>Lei aplicável e jurisdição</span></h3>
+          <h3><span>4.</span><span>Quais tipos de dados pessoais coletamos?</span></h3>
           <div class="text-area">
-            <div class="topic">
-              <span class="topic-number">7.1</span>
-              <div class="inner-content">
-                  <p>Os <strong>Termos e Condições de Uso</strong> da <strong>Plataforma Queensberry</strong> são interpretados segundo a legislação brasileira, no idioma português, sendo eleito o foro da Comarca da Cidade de São Paulo no Estado de São Paulo para dirimir qualquer litígio ou controvérsia envolvendo o presente documento, salvo ressalva específica de competência pessoal, territorial ou funcional pela legislação aplicável.</p>
-              </div>
-            </div>
+            <p>Para o desempenho de nossas atividades, podemos tratar as seguintes categorias de Dados Pessoais:</p>
+            <ul class="list">
+              <li>
+                <p><strong>Informações cadastrais e de identificação, </strong>tais como nome completo, RG, CPF, nacionalidade, cópia do passaporte, visto, endereço, data de nascimento, assinatura, telefone, WhatsApp, cidade de origem e foto;</p>
+              </li>
+              <li>
+                <p><strong>Informações relacionadas ao status familiar, </strong>tais como estado civil, dados do cônjuge e filiação;</p>
+              </li>
+              <li>
+                <p><strong>Informações profissionais, </strong>tais como profissão, renda mensal e cargo;</p>
+              </li>
+              <li>
+                <p><strong>Informações relacionadas a comunicações eletrônicas, </strong>tais como e-mail e contato de emergência;</p>
+              </li>
+              <li>
+                <p><strong>Informações de identificação de dispositivos (eletrônicos) pessoais, </strong>tais como endereço IP do dispositivo móvel, localizador;</p>
+              </li>
+              <li>
+                <strong>Informações bancárias, </strong><p>tais como dados bancários, cartão de crédito, assinatura do pagante;</p>
+              </li>
+              <li>
+                <p><strong>Dados de Crianças e de Adolescentes, </strong>tais como nomes dos pais, nome completo das crianças, data de nascimento, CPF e passaporte ou RG;</p>
+              </li>
+              <li>
+                <p><strong>Dados Pessoais Sensíveis, </strong>tais como informações de saúde (necessidades especiais, doenças, vacinação, restrições alimentares e alergias); e</p>
+              </li>
+              <li>
+                <p><strong>Informações sobre a prestação dos serviços, </strong>como localizador da reserva, locais de viagens, dados sobre seguros.</p>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="cluster">
-          <h3><span>8.</span><span>Glossario</span></h3>
+          <h3><span>5.</span><span>Como coletamos dados pessoais?</span></h3>
           <div class="text-area">
-            <div class="topic">
-              <span class="topic-number">8.1</span>
-              <div class="inner-content">
-                <p>Para os fins deste documento, devem se considerar as seguintes definições e descrições para seu melhor entendimento:</p>
-                <p><strong>Agências:</strong> São todas as <strong>Agências de Turismo</strong>, pré-aprovadas e credenciadas pela <strong>QUEENSBERRY</strong>, que criaram uma Conta de Acesso para fazer uso das funcionalidades de reserva e contratação dos roteiros de viagem.</p>
-                <p><strong>Bugs:</strong> Condições acidentais que fazem com que uma unidade funcional não consiga executar sua função.</p>
-                <p><strong>Cliente:</strong> Todo aquele que acessa ou navega na área não logada e logada da <strong>Plataforma Queensberry</strong>.</p>
-                <p><strong>Conta de Acesso:</strong> Credencial que permite acesso à área restrita e às funcionalidades exclusivas do <strong>Plataforma Queensberry</strong> para os <strong>Clientes</strong> e <strong>Agências de Turismo</strong>.</p>
-                <p><strong>Glitches:</strong> Condições acidentais que fazem com que uma unidade funcional não consiga executar sua função, sem causa explícita, e que podem ocasionar em vantagem indevida.</p>
-                <p><strong>Link:</strong> Terminologia para endereço de internet.</p>
-                <p><strong>Plataforma:</strong> Designa o endereço eletrônico da <strong>QUEENSBERRY</strong>, acessível pelo endereço: https://www.queensberry.com.br/</p>
-                <p><strong>Queensberry:</strong> Queensberry Agência de Viagens e Turismo Ltda., pessoa jurídica de direito privado, inscrita no CNPJ sob o nº. 45.575.958/0001-49 , com sede na Av. São Luís, nº. 165, República, CEP 01046-911, na Cidade de São Paulo, Estado de São Paulo.</p>
-                <p><strong>Usuário:</strong> Pessoas, físicas ou jurídicas, que acessam ou interagem com os serviços oferecidos pela <strong>Plataforma Queensberry</strong>, incluindo <strong>Clientes</strong> da QUEENSBERRY e das Agências.</p>
-              </div>
-            </div>
+            <p>A <strong>Queensberry Viagens</strong> poderá coletar todos ou alguns dos Dados Pessoais (i) diretamente de você, Titular de Dados; e (ii) por meio de terceiros que tenham legitimidade para compartilhar seus Dados Pessoais conosco, incluindo o seu empregador (caso você seja colaborador de um de nossos clientes), áreas internas da <strong>Queensberry Viagens</strong>, fornecedores e empresas que prestam serviço para <strong>Queensberry Viagens</strong>.</p>
+            <p>Como regra, recebemos seus Dados Pessoais via e-mail, formulários digitais e físicos, Ferramentas de Vendas, Sites de Cias aéreas, Mídias Sociais, Gupy e/ou via integrações de sistemas, bem como pelas Câmeras de segurança (caso você venha visitar as dependências de uma das empresas do Ecossistema Befly).</p>
           </div>
         </div>
         <div class="cluster">
-          <h3><span>9.</span><span>Registro Público</span></h3>
+          <h3><span>6.</span><span>Por que e como tratamos seus dados pessoais?</span></h3>
+          <div class="text-area">
+            <p>A seguir são apresentadas as atividades de Tratamento de Dados Pessoais que realizamos de acordo com as finalidades, Titulares de Dados afetados, hipóteses legais e categorias de Dados Pessoais Tratados (para mais informações sobre essas categorias, ver a Seção acima):</p>
+            <strong>COM BASE NA EXECUÇÃO OU PARA PROCEDIMENTOS PRELIMINARES RELACIONADOS AO NOSSO CONTRATO:</strong>
+            <ul class="list">
+              <li>
+                <p>Enviar cotações e efetuar emissões de serviços de viagens ou ofertas/promoções;</p>
+              </li>
+              <li>
+                <p>Formalizar o contrato com o Cliente e com os fornecedores necessários à prestação do serviço. Por exemplo: Hotéis, cias aéreas, locadoras de veículos e equipamentos, operadoras turísticas, parques, empresas de assistência de embarque, seguradoras, dentre outros que sejam necessários para o atendimento à solicitação do cliente;</p>
+              </li>
+              <li>
+                <p>Enviar os Dados Pessoais necessários para fornecedores, visando a execução dos serviços contratados, como cotação, compra e efetivação de reservas de hotel, passagens aéreas, pacotes turísticos, venda de experiências (shows, teatros, restaurantes, dentre outros), participação em eventos, locação de veículos, bilhetes rodoviários;</p>
+              </li>
+              <li>
+                <p>Enviar comunicação aos clientes com detalhes e informações primordiais sobre o andamento dos pedidos, processos obrigatórios para realização das viagens, cotações, materiais de viagem bem como outras informações importantes para efetivação do serviço contratado; e</p>
+              </li>
+              <li>
+                <p>Processamento de dados internamente para realizar a gestão dos serviços prestados, formas de pagamento, operacionalizar vendas, formas de pagamento e cobrança de comissões, efetuar pagamento de fornecedores, atender e analisar solicitações de clientes durante ou depois da viagem e responder dúvidas e reclamações recebidas.</p>
+              </li>
+            </ul>
+            <strong>COM BASE EM NOSSO INTERESSE LEGÍTIMO:</strong>
+            <ul>
+              <li>
+                <p>Elaborar relatórios gerenciais e análise de resultados, elaborar estratégias de marketing, analisar o perfil do cliente para direcionar melhor os anúncios, promoções e ofertas futuras, controlar relatório de inadimplentes, implementar medidas técnicas de segurança de ambientes e ativos físicos da empresa, realizar a gestão dos ativos eletrônicos e do banco de dados (DW), garantir a segurança e integridade dos Dados Pessoais por meio de backup; e</p>
+              </li>
+              <li>
+                <p>Envio de brindes e presentes a passageiros.</p>
+              </li>
+            </ul>
+            <p>Podemos, ainda, Tratar seus Dados Pessoais para cumprimento de obrigações legais, como, por exemplo, para atender aos seus direitos, conforme previsto na LGPD ou para cumprir ordens judiciais ou atender a requerimentos de outras autoridades públicas, conforme previsto em lei.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>7.</span><span>Como tratamos dados pessoais de menores de 18 anos?</span></h3>
+          <div class="text-area">
+            <p>Eventualmente, a <strong>Queensberry Viagens</strong> pode realizar o Tratamento de Dados Pessoais de menores de 18 (dezoito) anos. Nesses casos, garantimos que o Tratamento será realizado sempre no melhor interesse do menor, inclusive mediante a obtenção prévia da autorização do seu respectivo pai ou responsável legal, conforme necessário, nos termos da Legislação Aplicável de Proteção de Dados e das diretrizes da ANPD a esse respeito.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>8.</span><span>Por quanto tempo mantemos seus dados pessoais em nossos sistemas?</span></h3>
+          <div class="text-area">
+            <p>Armazenaremos os seus Dados Pessoais apenas durante o período necessário para cumprir as finalidades de Tratamento para as quais o Dado Pessoal foi coletado, conforme indicado nesta Política. Assim, a menos que tenhamos uma razão legal para manter os seus Dados Pessoais nos nossos sistemas, descartaremos os seus Dados Pessoais ou realizaremos o procedimento de Anonimização sempre que (i) a finalidade do Tratamento foi alcançada ou os Dados Pessoais deixaram de ser necessários; (ii) o Tratamento chegar ao fim; (iii) você solicitar; ou (iv) a ANPD determinar.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>9.</span><span>Com quem podemos compartilhar seus dados pessoais?</span></h3>
+          <div class="text-area">
+            <p>A Queensberry Viagens preserva a privacidade e a proteção dos seus Dados Pessoais e se compromete a não compartilhar os seus Dados Pessoais, a menos que (i) se autorizado prévia e expressamente por você, ou, pelo menos, um dos pais ou do responsável legal de um menor de idade, quando aplicável; ou (ii) em um dos seguintes casos:</p>
+            <ul class="list">
+              <li>
+                <p><strong>Operações Societárias: </strong>Em decorrência de eventuais operações de reestruturação societária, a <strong>Queensberry Viagens</strong> poderá compartilhar seus Dados Pessoais com as pessoas envolvidas na de reestruturação societária.</p>
+              </li>
+              <li>
+                <p><strong>Parceiros: </strong>Às vezes, podemos disponibilizar alguns Dados Pessoais para parceiros de confiança que nos auxiliam e ajudam no fornecimento de serviços que são necessários à prestação dos nossos serviços, tais como consultoria jurídica e serviços, fornecedores de plataforma e auditorias. Esses parceiros receberão permissão para obter apenas as informações necessárias para prestar o serviço adequadamente e exigimos que eles se comprometam ao mesmo nível de proteção e privacidade que a <strong>Queensberry Viagens</strong> teria se os estivesse tratando diretamente, isto inclui a obrigação de não usarem seus Dados Pessoais para qualquer outra finalidade que não a finalidade contratada pela <strong>Queensberry Viagens</strong>, além de obrigações de confidencialidade e padrões de segurança, entre outros. Sempre que possível e compatível com as atividades de Tratamento e suas respectivas finalidades, as informações serão fornecidas a estes terceiros de forma a preservar o anonimato dos Titulares de Dados.</p>
+              </li>
+              <li>
+                <p><strong>Medidas Judiciais e Obrigações Legais: </strong>A <strong>Queensberry Viagens</strong> poderá divulgar ou compartilhar informações, incluindo Dados Pessoais, se acreditar, de boa-fé, que o acesso, o uso, a conservação ou a divulgação das informações seja razoavelmente necessário para (i) cumprir qualquer legislação, regulamentação, decisão judicial ou solicitação governamental; (ii) investigar possíveis violações de direitos; (iii) detectar ou impedir fraudes, bem como resolver questões técnicas ou de segurança; (iv) garantir a segurança dos Titulares de Dados e de terceiros; (v) resguardar direitos e prevenir responsabilidades da <strong>Queensberry Viagens</strong> (vi) investigar, impedir ou tomar medidas relacionadas a atividades ilegais, suspeitas ou reais, ou para cooperar com órgãos públicos; e (vii) cumprir obrigações legais ou qualquer outra determinação perante órgãos do governo e do judiciário, incluindo, mas não se limitando a, Ministérios e/ou Secretarias do Governo, autarquias federais, agências regulatórias e/ou autoridades legais , órgãos de defesa do consumidor, órgãos judiciais e outros.</p>
+              </li>
+              <li>
+                <p><strong>Empresas relacionadas do Ecossistema Befly: </strong>A <strong>Queensberry Viagens</strong> faz parte do Ecossistema Befly, conglomerado composto por diferentes frentes de negócios voltados para o turismo. Em razão do compartilhamento de infraestrutura, sistemas, tecnologias e áreas de apoio (departamentos como jurídico, recursos humanos, tecnologia da informação, entre outros), entre a <strong>Queensberry Viagens</strong> as demais empresas do Ecossistema Befly, os Dados Pessoais tratados pela <strong>Queensberry Viagens</strong> poderão ser compartilhados com as demais empresas do Ecossistema BeFly. Nessa hipótese, a <strong>Queensberry Viagens</strong> garante o atendimento a todos os requisitos impostos pela LGPD para tratamento de Dados Pessoais, tais como (i) observância aos princípios da finalidade, adequação, necessidade, qualidade, segurança da transferência e do tratamento dos dados; (ii) identificação e registro da base legal aplicável ao tratamento, incluindo a coleta do consentimento do Titular de Dados, sempre que aplicável; (iii) registro das operações de tratamento de dados pessoais realizadas; e (iv) a adoção de medidas administrativas e de segurança da informação para prevenir a ocorrência de danos aos titulares de dados, sem prejuízo das demais medidas impostas pela Legislação Aplicável de Proteção de Dados e pelas diretrizes da ANPD a respeito.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>10.</span><span>Como protegemos seus dados pessoais?</span></h3>
 
           <div class="text-area">
-            <div class="topic">
-              <span class="topic-number">9.1</span>
-              <div class="inner-content">
-                <p>Estes <strong>Termos e Condições de Uso</strong> estão registrados no 1º Cartório Oficial de Registro de Títulos e Documentos da Cidade de São Paulo sob o número 3.619.879 em 28/06/2018.</p>
-              </div>
-            </div>
+            <p>A segurança dos seus Dados Pessoais é de extrema importância para nós. Por isso, estamos comprometidos a adotar medidas de segurança técnicas e administrativas compatíveis com o mercado e aptas a proteger os seus Dados Pessoais de acessos não autorizados e de situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito, bem como todas as medidas que são aconselháveis dado o estado da tecnologia, garantindo a integridade, segurança e confidencialidade dos Dados Pessoais Tratados. Nesse sentido, as medidas que adotamos incluem pseudonimização, criptografia, controle lógico, acesso físico aos dados, backup das informações, entre outras.</p>
+            <p>Possuímos um programa de proteção de dados, políticas e procedimentos internos, treinamentos de equipe com a temática de segurança da informação, corrupção, prevenção a ações fraudulentas e proteção de dados. Também adotamos procedimentos de acompanhamento, supervisão e de mitigação de riscos.</p>
+            <p>Além disso, escolhemos criteriosamente os nossos fornecedores, os avaliamos e buscamos contratos que protejam os seus dados e ajudem a minimizar os riscos para os titulares de dados.</p>
+            <p>Todavia, saiba que nenhum método de transmissão ou retenção de Dados Pessoais eletrônicos é plenamente seguro e pode estar sujeito a ataques externos. Tendo isso em vista, não seremos responsáveis por prejuízos que derivem de atos de terceiros que utilizem de meios indevidos, fraudulentos ou ilegais para acessar as informações armazenadas nos servidores ou nos bancos de Dados Pessoais utilizados.</p>
+            <p>Assim, entendemos que proteger o seu dispositivo é uma forma de manter, também, os seus Dados Pessoais mais seguros. Abaixo apresentamos algumas formas de manter as informações do seu dispositivo mais seguras:</p>
+            <ul class="list">
+              <li>
+                <p>Ative a autenticação por código, reconhecimento biométrico digital ou facial para o seu dispositivo: esse procedimento encripta automaticamente os dados de acesso e impede que qualquer pessoa utilize o seu dispositivo sem a sua permissão.</p>
+              </li>
+              <li>
+                <p>Configure uma funcionalidade que lhe permitirá apagar todos os dados do seu dispositivo em caso de perda ou roubo:</p>
+                <ul class="sublist">
+                  <li>
+                    <p>Para dispositivos iOS™, ativar esta funcionalidade é um processo em duas etapas: primeiro, é preciso ativar o “Buscar meu Iphone” através do iCloud® e depois ativar “Apagar dispositivo” (ver instruções nas páginas de Suporte da Apple).</p>
+                  </li>
+                  <li>
+                    <p>Para dispositivos Android™, faça o download e configure o “Encontre meu Dispositivo” a partir da Google Play Store e, se necessário, utilize a interface web ligada para bloquear ou limpar o seu telefone remotamente (ver instruções nas páginas de Suporte do Google).</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>11.</span><span>Os seus dados pessoais são tratados em outro lugar além do Brasil?</span></h3>
+          <div class="text-area">
+            <p>Os seus Dados Pessoais poderão ser armazenados em servidores nacionais ou internacionais, próprios ou contratados. No caso de servidores internacionais, realizaremos a transferência internacional dos seus Dados Pessoais de maneira segura e em conformidade com a Legislação Aplicável de Proteção de Dados.</p>
+            <p>Ainda, caso o serviço solicitado pelo cliente envolva fornecedores ou prestadores de serviço que ficam fora do Brasil, também será necessária a transferência de Dados para o exterior, esta é uma condição para tornar viável a prestação do serviço. Neste caso, a <strong>Queensberry Viagens</strong> tomará as providências necessárias para garantir a proteção dos Dados Pessoais, de acordo com a legislação aplicável à Proteção de Dados.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>12.</span><span>Quais são os seus direitos como titulares de dados?</span></h3>
+          <div class="text-area">
+            <ol class="list-b">
+              <li>
+                <p>Confirmação da existência de Tratamento;</p>
+              </li>
+              <li>
+                <p>Acesso aos Dados Pessoais;</p>
+              </li>
+              <li>
+                <p>Correção de Dados Pessoais incompletos, inexatos ou desatualizados;</p>
+              </li>
+              <li>
+                <p>Anonimização, bloqueio ou eliminação de Dados Pessoais desnecessários, excessivos ou Tratados em desconformidade com a LGPD;</p>
+              </li>
+              <li>
+                <p>Portabilidade dos Dados Pessoais a outro fornecedor de serviço ou produto;</p>
+              </li>
+              <li>
+                <p>Eliminação de Dados Pessoais Tratados com base no Consentimento;</p>
+              </li>
+              <li>
+                <p>Informação Entidades com as quais o Controlador realizou uso compartilhado de Dados Pessoais;</p>
+              </li>
+              <li>
+                <p>Informação sobre a possibilidade de não fornecer o Consentimento e sobre as consequências da negativa;</p>
+              </li>
+              <li>
+                <p>Revogação do Consentimento;</p>
+              </li>
+              <li>
+                <p>Peticionar em relação aos Dados Pessoais contra o Controlador perante a ANPD; e</p>
+              </li>
+              <li>
+                <p>Revisão de Decisões Tomadas Unicamente com Base em Tratamento Automatizado e que afetem os Interesses dos Titulares.</p>
+              </li>
+            </ol>
+            
+            <p>De toda forma, <strong>pedimos que você não hesite em entrar em contato conosco, por meio dos canais abaixo, antes de apresentar qualquer reclamação à ANPD, para que possamos tentar resolver seu questionamento ou reclamação de maneira imediata.</strong></p>
+
+            <p><strong>Canal para exercer os seus diretos:</strong> Para exercer os direitos acima elencados ou esclarecer qualquer dúvida quanto ao disposto nesta Política, bastará enviar um e-mail ao nosso Encarregado por meio do e-mail <a class="mail-link" href="mailto:dpo@befly.com.br">dpo@befly.com.br</a>. Note, por gentileza, que, para processar sua solicitação de exercício de direitos de forma segura, podemos, eventualmente, solicitar a você uma prova de sua identidade e mais informações sobre o direito que você deseja exercer.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>13.</span><span>Quais cookies utilizamos e por quê?</span></h3>
+
+          <div class="text-area">
+            <p>A <strong>Queensberry Viagens</strong> pode armazenar pequenas quantidades de informações usando cookies ou outras tecnologias em seu computador, a fim de que seja possível melhor compreender como se dá a sua interação em nosso site e assim proporcionar ao usuário uma melhor e mais eficaz experiência de navegação.</p>
+
+            <p>Os cookies são pequenos arquivos instalados no dispositivo de um usuário que permitem a coleta de determinadas informações, inclusive de dados pessoais em algumas situações, visando ao atendimento de finalidades diversas. Eles nos permitem, por exemplo, personalizar a sua experiência on-line e fornecer serviços mais amigáveis, facilitando a utilização. De modo a melhorar a navegabilidade do nosso site, levamos em consideração as suas preferências e processamos os dados para fins de aperfeiçoamento de performance, análise e, em alguns casos, marketing.</p>
+
+            <p>Note que as tecnologias que utilizamos para aperfeiçoar a sua experiência em nosso site não são capazes de danificar arquivos contidos nos seus dispositivos, nem obter acesso a informações contidas em seus dispositivos.</p>
+
+            <p>A <strong>Queensberry Viagens</strong> utiliza cookies, tanto próprios (primários), ou seja, do domínio <strong>Queensberry Viagens</strong>, quanto de terceiros e do Google Analytics, para facilitar o uso e melhor adaptar a sua página aos seus interesses e necessidades, bem como para compilar informações sobre a utilização de nossos sites e serviços, auxiliando a estruturação de seu conteúdo, conforme descrito na tabela abaixo:</p>
+
+            <ul class="list">
+              <li>
+                <p>Cookies Necessários: Os cookies necessários são essenciais para o funcionamento do site, sem eles o site não funcionaria corretamente (por exemplo, acesso a áreas seguras do site, segurança, legislação). - Provedor TBD</p>
+              </li>
+              <li>
+                <p>Cookies de Marketing: Os cookies de marketing ou publicidade rastreiam a navegação dos visitantes e coletam dados para que a <strong>Queensberry Viagens</strong> possa fornecer anúncios mais relevantes de acordo com tal comportamento. - Provedor TBD</p>
+              </li>
+              <li>
+                <p>Cookies de Performance: Os cookies de desempenho permitem que o site se comporte de acordo com o visitante, ajustando-se à sua localização, idioma preferido etc. - Provedor TBD</p>
+              </li>
+              <li>
+                <p>Cookies Estatísticos: Os cookies de estatísticas, ou análises, traduzem as interações dos visitantes em relatórios detalhados de comportamento, de maneira anônima. - Provedor TBD</p>
+              </li>
+              <li>
+                <p>Cookies funcionais: Os cookies funcionais ajustam o site a serviços de terceiros, como links para seu perfil em redes sociais, comentários, chatbots etc. - Provedor TBD</p>
+              </li>
+            </ul>
+            <p>As suas preferências de cookies podem ser realizadas no banner de cookies ou modificadas, a qualquer tempo, no nosso site clicando <a href="<?= home_url(); ?>">aqui</a>.</p>
+            <p>Para maiores informações sobre como gerir os cookies nos navegadores, recomendamos a leitura e aplicação do passo a passo disponível nos endereços eletrônicos:</p>
+            <ul class="list">
+              <li>
+                <p>
+                  Internet Explorer: <a href="https://support.microsoft.com/pt-br/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">https://support.microsoft.com/pt-br/help/17442/windows-internet-explorer-delete-manage-cookies</a>;
+                </p>
+              </li>
+              <li>
+                <p>Mozilla Firefox: <a href="https://support.mozilla.org/pt-BR/kb/ative-e-desative-os-cookies-que-os-sites-usam" target="_blank">https://support.mozilla.org/pt-BR/kb/ative-e-desative-os-cookies-que-os-sites-usam</a></p>
+              </li>
+              <li>
+                <p>Google Chrome: <a href="https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=pt-BR;" target="_blank">https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=pt-BR</a>;</p>
+              </li>
+              <li>Safari: <a href="https://support.apple.com/pt-br/guide/safari/sfri11471/mac" target="_blank">https://support.apple.com/pt-br/guide/safari/sfri11471/mac</a>.</li>
+            </ul>
+            <p>Por fim, lembramos que, caso você não aceite a utilização dos cookies necessários do website da <strong>Queensberry Viagens</strong>, certos serviços poderão não funcionar de maneira ideal.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>14.</span><span>Validade da política de privacidade</span></h3>
+
+          <div class="text-area">
+            <p>A nossa política de privacidade não é aplicada a sites de terceiros, ou seja, em caso de direcionamento para outro site o usuário deverá ler, conhecer e consentir à sua política de privacidade. Nós não nos responsabilizamos pela política de privacidade ou conteúdo presente em outros sites/portais, mesmo estes sendo parceiros comerciais de nossa empresa.</p>
+            <p>Sempre buscamos melhorar os nossos serviços, por isso, esta Política pode ser revista a qualquer momento, razão pela qual recomendamos que você consulte esta Política periodicamente para se manter atualizado. Além disso, caso alguma dessas alterações implique na necessidade de obtermos a sua autorização prévia e expressa, assim o faremos.</p>
+          </div>
+        </div>
+        <div class="cluster">
+          <h3><span>15.</span><span>Contato</span></h3>
+
+          <div class="text-area">
+            <p>Direcione as suas dúvidas e solicitações para a Encarregada de Dados, Dra. Beatriz Cirilo Robles, através do e-mail <a href="mailto:dpo@befly.com.br">dpo@befly.com.br</a> - Alameda Campinas, 1070 - Jardim Paulista, São Paulo - SP, 01404-200.</p>
           </div>
         </div>
       </article>
+    </div>
+  </section>
+  <section class="glossary">
+    <div class="wrapper">
+      <h2>DEFINIÇÕES | GLOSSÁRIO</h2>
+
+      <div class="text-area">
+        <p>Os termos mencionados nesta Política, com iniciais maiúsculas, seja no plural ou no singular, serão entendidos conforme as definições a seguir:</p>
+
+        <ul class="list">
+          <li>
+            <p><strong>“Agente de Tratamento”</strong>: o Controlador e o Operador.</p>
+          </li>
+          <li>
+            <p><strong>“ANPD”</strong>: Autoridade Nacional de Proteção de Dados.</p>
+          </li>
+          <li>
+            <p><strong>“Colaboradores”</strong>: pessoas físicas contratadas, ou que já foram contratadas, para prestar serviços permanentes ou temporários às empresas da <strong>Queensberry Viagens</strong>, sejam elas empregados, administradores, estagiários, trabalhadores temporários, trabalhadores terceirizados ou menores aprendizes.</p>
+          </li>
+          <li>
+            <p><strong>“Consentimento”</strong>: significa a manifestação livre, informada e inequívoca pela qual o Titular de Dados concorda com o Tratamento de seus Dados Pessoais para uma finalidade determinada.</p>
+          </li>
+          <li>
+            <p><strong>“Controlador”</strong>: pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao Tratamento de Dados. Ressaltamos que é possível que mais de um Agente de Tratamento seja responsável de forma concomitante e, desta forma, serão considerados como Controladores Conjuntos.</p>
+          </li>
+          <li>
+            <p><strong>“Dados Pessoais”</strong>: significa quaisquer informações que identifiquem ou tornem identificável uma pessoa física.</p>
+          </li>
+          <li>
+            <p><strong>“Dados Pessoais Sensíveis”</strong>: referem-se aos Dados Pessoais sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou dado biométrico, quando vinculado a uma pessoa natural.</p>
+          </li>
+          <li>
+            <p><strong>“Ecossistema Befly”</strong>: significa as empresas pertencentes ao Ecossistema BeFly, que podem ser consultadas <a href="https://befly.com.br/nossas-marcas/" target="_blank">aqui</a>.</p>
+          </li>
+          <li>
+            <p><strong>“DPO” ou “Encarregado”</strong>: pessoa natural ou jurídica, nomeada pela Queensberry Viagens para atuar principalmente como canal de comunicação entre as empresas do Ecossistema Befly, os Titulares de Dados e a ANPD.</p>
+          </li>
+          <li>
+            <p><strong>“Legislação Aplicável de Proteção de Dados”</strong>: significa quaisquer leis, estatutos, diretivas ou regulamentos, incluindo todas e quaisquer emendas ou substituições legislativas e/ou regulatórias destas, relativos à privacidade, proteção de dados, obrigações de segurança da informação e/ou tratamento de Dados Pessoais, incluindo a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - “LGPD”) e qualquer legislação municipal, estadual e/ou federal secundária adotada nos termos da LGPD, juntamente com quaisquer orientações, regulamentos, diretrizes, políticas, recomendações, instruções ou códigos de práticas emitidos pela ANPD ou outra autoridade de supervisão ou proteção de dados pertinente (conforme alterados, atualizados, substituídos ou reeditados periodicamente).</p>
+          </li>
+          <li>
+            <p><strong>“Operador”</strong>: refere-se a qualquer pessoa natural ou jurídica, de direito público ou privado, que realiza o Tratamento de Dados Pessoais em nome do Controlador.</p>
+          </li>
+          <li>
+            <p><strong>“Queensberry Viagens”</strong>: QUEENSBERRY AGÊNCIA DE VIAGENS E TURISMO LTDA., inscrita no CNPJ sob o nº 45.575.958/0001-49, com sede na Alameda Campinas, nº 1.070, Edifício Paulista Star, Parte Queensberry Viagens, bairro Jardim Paulista, CEP 01.404-200, na Cidade de São Paulo/SP</p>
+          </li>
+          <li>
+            <p><strong>“Titular de Dados”</strong>: pessoa natural a quem se referem os Dados Pessoais que são objeto de Tratamento.</p>
+          </li>
+          <li>
+            <p><strong>“Tratamento” ou “Tratar”</strong>: refere-se a qualquer operação ou conjunto de operações realizadas com Dados Pessoais ou conjuntos de Dados Pessoais, tais como a coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração. Para efeitos desta Política, “Tratamento”, “Tratar”, “Tratamos”, “Tratado” ou “Tratados”, terão o mesmo significado.</p>
+          </li>
+        </ul>
+        <p>Quaisquer outros termos que apareçam nesta Política, que estejam escritos em letra maiúscula, e não foram definidos acima deverão ser interpretados conforme a Legislação Aplicável de Proteção de Dados.</p>
+      </div>
     </div>
   </section>
 </main>
