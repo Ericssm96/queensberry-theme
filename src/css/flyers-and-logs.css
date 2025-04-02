@@ -35,4 +35,75 @@ main * {
   .banner h1 {
     width: 1000px;
   }
+}
+
+.cards-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards-area .wrapper {
+  width: 92vw;
+}
+@media screen and (min-width: 768px) {
+  .cards-area .wrapper {
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cards-area .wrapper {
+    width: 1000px;
+  }
+}
+.cards-area .wrapper .alert {
+  display: none;
+}
+.cards-area .wrapper .gbm-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  padding: 80px 0;
+}
+@media screen and (min-width: 768px) {
+  .cards-area .wrapper .gbm-area {
+    padding: 115px 0;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cards-area .wrapper .gbm-area {
+    padding: 170px 0;
+  }
+}
+.cards-area .wrapper .gbm-area h2 {
+  font-size: 3.4rem;
+  font-family: "Tenor Sans", sans-serif;
+  color: #999;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.cards-area .wrapper .gbm-area .cards-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .cards-area .wrapper .gbm-area .cards-grid {
+    justify-content: flex-start;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+  }
+}
+.cards-area .wrapper .gbm-area .cards-grid .card {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+}
+.cards-area .wrapper .gbm-area .cards-grid .card h3 {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #04004f;
+  line-height: 1.5;
+  text-transform: uppercase;
 }/*# sourceMappingURL=flyers-and-logs.css.map */

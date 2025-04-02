@@ -10,6 +10,7 @@ $sm: 400px;
 $xsm: 300px;
 $lime-green: #99D02C;
 $navy: #0C0150;
+$secondary-navy: #04004f;
 $dark-navy: #161326;
 $secondary-dark-navy: #091360;
 $olive-green: #989898;
@@ -51,4 +52,78 @@ main {
       width: 1000px;
     }
   }
+}
+
+.cards-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    width: 92vw;
+
+    @media screen and (min-width: $md) {
+      width: 88vw;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 1000px;
+    }
+
+    .alert {
+      display: none;
+    }
+
+    .gbm-area {
+      display: flex;
+      flex-direction: column;
+      row-gap: 35px;
+      padding: 80px 0;
+
+      @media screen and (min-width: $md) {
+        padding: 115px 0;
+      }
+
+      @media screen and (min-width: $xl) {
+        padding: 170px 0;
+      }
+
+      h2 {
+        font-size: 3.4rem;
+        font-family: $tenor_sans;
+        color: #999;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+
+      .cards-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: $md) {
+          justify-content: flex-start;
+          column-gap: 35px;
+        }
+
+        .card {
+          width: 190px;
+          display: flex;
+          flex-direction: column;
+
+          h3 {
+            font-size: 1.4rem;
+            font-family: $roboto;
+            font-weight: 500;
+            color: $secondary-navy;
+            line-height: 1.5;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+
 }
