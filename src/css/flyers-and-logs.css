@@ -1,0 +1,422 @@
+main {
+  box-sizing: border-box;
+}
+main * {
+  box-sizing: border-box;
+}
+
+.banner {
+  background-image: url(../img/banner-folhetos.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.banner h1 {
+  color: white;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-family: "Tenor Sans", sans-serif;
+  text-transform: uppercase;
+  width: 92px;
+  padding-bottom: 65px;
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 768px) {
+  .banner h1 {
+    font-size: 4.8rem;
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .banner h1 {
+    width: 1000px;
+  }
+}
+
+.cards-area-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards-area-a .wrapper {
+  width: 92vw;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-a .wrapper {
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cards-area-a .wrapper {
+    width: 1000px;
+  }
+}
+.cards-area-a .wrapper .alert {
+  display: none;
+}
+.cards-area-a .wrapper .gbm-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  padding: 80px 0;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-a .wrapper .gbm-area {
+    padding: 115px 0;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cards-area-a .wrapper .gbm-area {
+    padding: 150px 0;
+  }
+}
+.cards-area-a .wrapper .gbm-area h2 {
+  font-size: 3.4rem;
+  font-family: "Tenor Sans", sans-serif;
+  color: #999;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-a .wrapper .gbm-area .cards-grid {
+    justify-content: flex-start;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+  }
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card h3 {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #04004f;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .card-img {
+  width: 136.2px;
+  height: 180px;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .action-icons {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .action-icons .action-icon {
+  color: #99D02C;
+  font-size: 2.2rem;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .qtty-setter {
+  display: flex;
+  align-items: center;
+  /* Firefox */
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .qtty-setter input::-webkit-outer-spin-button,
+.cards-area-a .wrapper .gbm-area .cards-grid .card .qtty-setter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .qtty-setter input[type=number] {
+  -moz-appearance: textfield;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .qtty-setter button {
+  width: 25px;
+  height: 25px;
+  font-size: 1.6rem;
+  background-color: #EFEEF2;
+  color: #161326;
+  font-weight: bold;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  border: 0px solid black;
+}
+.cards-area-a .wrapper .gbm-area .cards-grid .card .qtty-setter input[type=number] {
+  width: 20px;
+  height: 20px;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: #161326;
+  border: 0px solid black;
+  text-align: center;
+}
+.cards-area-a .wrapper .general-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  padding: 80px 0;
+  background-color: #EFEEF2;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-a .wrapper .general-area {
+    padding: 115px 0;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cards-area-a .wrapper .general-area {
+    padding: 150px 0;
+  }
+}
+.cards-area-a .wrapper .general-area h2 {
+  font-size: 3.4rem;
+  font-family: "Tenor Sans", sans-serif;
+  color: #999;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.cards-area-a .wrapper .general-area .cards-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-a .wrapper .general-area .cards-grid {
+    justify-content: flex-start;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+  }
+}
+.cards-area-a .wrapper .general-area .cards-grid .card {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card h3 {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #04004f;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .card-img {
+  width: 136.2px;
+  height: 180px;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .action-icons {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .action-icons .action-icon {
+  color: #99D02C;
+  font-size: 2.2rem;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .qtty-setter {
+  display: flex;
+  align-items: center;
+  /* Firefox */
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .qtty-setter input::-webkit-outer-spin-button,
+.cards-area-a .wrapper .general-area .cards-grid .card .qtty-setter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .qtty-setter input[type=number] {
+  -moz-appearance: textfield;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .qtty-setter button {
+  width: 25px;
+  height: 25px;
+  font-size: 1.6rem;
+  background-color: white;
+  color: #161326;
+  font-weight: bold;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  border: 0px solid black;
+}
+.cards-area-a .wrapper .general-area .cards-grid .card .qtty-setter input[type=number] {
+  width: 20px;
+  height: 20px;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: #161326;
+  border: 0px solid black;
+  text-align: center;
+}
+
+.cards-area-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFEEF2;
+}
+.cards-area-b .wrapper {
+  width: 92vw;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-b .wrapper {
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cards-area-b .wrapper {
+    width: 1000px;
+  }
+}
+.cards-area-b .wrapper .alert {
+  display: none;
+}
+.cards-area-b .wrapper .general-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  padding: 80px 0 40px 0;
+  background-color: #EFEEF2;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-b .wrapper .general-area {
+    padding: 115px 0 60px 0;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cards-area-b .wrapper .general-area {
+    padding: 150px 0 80px 0;
+  }
+}
+.cards-area-b .wrapper .general-area h2 {
+  font-size: 3.4rem;
+  font-family: "Tenor Sans", sans-serif;
+  color: #999;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.cards-area-b .wrapper .general-area .cards-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-b .wrapper .general-area .cards-grid {
+    justify-content: flex-start;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+  }
+}
+.cards-area-b .wrapper .general-area .cards-grid .card {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card h3 {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #04004f;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .card-img {
+  width: 136.2px;
+  height: 180px;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .action-icons {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .action-icons .action-icon {
+  color: #99D02C;
+  font-size: 2.2rem;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .qtty-setter {
+  display: flex;
+  align-items: center;
+  /* Firefox */
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .qtty-setter input::-webkit-outer-spin-button,
+.cards-area-b .wrapper .general-area .cards-grid .card .qtty-setter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .qtty-setter input[type=number] {
+  -moz-appearance: textfield;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .qtty-setter button {
+  width: 25px;
+  height: 25px;
+  font-size: 1.6rem;
+  background-color: white;
+  color: #161326;
+  font-weight: bold;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  border: 0px solid black;
+}
+.cards-area-b .wrapper .general-area .cards-grid .card .qtty-setter input[type=number] {
+  width: 20px;
+  height: 20px;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: #161326;
+  border: 0px solid black;
+  text-align: center;
+}
+.cards-area-b .wrapper .request-btn {
+  width: 170px;
+  height: 50px;
+  background-color: #99D02C;
+  color: #161326;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .cards-area-b .wrapper .request-btn {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cards-area-b .wrapper .request-btn {
+    margin-bottom: 80px;
+  }
+}/*# sourceMappingURL=flyers-and-logs.css.map */
