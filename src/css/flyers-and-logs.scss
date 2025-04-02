@@ -1,0 +1,54 @@
+$montserrat: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+$tenor_sans: "Tenor Sans", sans-serif;
+$xxl: 1500px;
+$xl: 1260px;
+$lg: 1024px;
+$xmd: 950px;
+$md: 768px;
+$sm: 400px;
+$xsm: 300px;
+$lime-green: #99D02C;
+$navy: #0C0150;
+$dark-navy: #161326;
+$secondary-dark-navy: #091360;
+$olive-green: #989898;
+
+main {
+  box-sizing: border-box;
+
+  * {
+      box-sizing: border-box;
+  }
+}
+
+.banner {
+  background-image: url(../img/banner-folhetos.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  h1 {
+    color: white;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-family: $tenor_sans;
+    text-transform: uppercase;
+    width: 92px;
+    padding-bottom: 65px;
+    letter-spacing: -1px;
+
+    @media screen and (min-width: $md) {
+      font-size: 4.8rem;
+      width: 88vw;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 1000px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+main {
+  box-sizing: border-box;
+}
+main * {
+  box-sizing: border-box;
+}
+
+.banner {
+  background-image: url(../img/banner-folhetos.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.banner h1 {
+  color: white;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-family: "Tenor Sans", sans-serif;
+  text-transform: uppercase;
+  width: 92px;
+  padding-bottom: 65px;
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 768px) {
+  .banner h1 {
+    font-size: 4.8rem;
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .banner h1 {
+    width: 1000px;
+  }
+}/*# sourceMappingURL=flyers-and-logs.css.map */
