@@ -35,7 +35,7 @@ if (is_single()) {
       $lower_log_name = trim(mb_strtolower($log_name));
       $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-      return $lower_log_name == $current_item_name;
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
     });
     $quick_description = $program_info["DescricaoResumida"];
     $days_qtty = $program_info["QtdDiasViagem"];
