@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-  <link rel="icon" href="/wp queensberry/queensberry/wp-content/themes/queensberry v1.0/src/img/fav-icon-queensberry.jpg">
+  <link rel="icon" href="<?= home_url(); ?>/wp-content/themes/queensberry v1.0/src/img/fav-icon-queensberry.jpg">
   <?php
   $site_title = get_bloginfo('name');
   ?>
