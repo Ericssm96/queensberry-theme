@@ -315,11 +315,8 @@
     </header>
     <section class="form-area">
       <div class="wrapper">
-        <form id="f_queensberry_recomendar_programa" name="f_queensberry_recomendar_programa" method="POST" x-show="isModalOpen && modalType === 'form' && formType === 'recomendar'">
+        <form id="f_queensberry_recomendar_programa" name="f_queensberry_recomendar_programa" method="POST">
           <input type="hidden" id="actionField2" name="action" value="queensberry_verify_recaptcha_c">
-          <i class="fa-solid fa-xmark close-icon" @click="isModalOpen = false; modalType = ''; formType = ''"></i>
-          <h2>Recomendar Programa</h2>
-
           <!-- Responsys -->
           <input type="hidden" name="_ri_"
               value="X0Gzc2X%3DAQjkPkSRWQGvd46H8AazcAfgLBPKA19XWHehXFudc5VwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQGzeCj2E6OlFDyIUPtO6kwzd9AoaTLlUYs">
@@ -329,18 +326,20 @@
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Recomendar Programa - Queensberry">
           <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
 
+          <p class="required-info">* = preenchimento obrigatório</p>
+
           <!-- Formulário -->
           <div class="inner-form">
             <div class="input-area">
-              <label for="iptNome">Nome*</label>
+              <label for="iptNome">Seu nome*</label>
               <input type="text" placeholder="Nome" required name="FIRST_NAME">
             </div>
             <div class="input-area">
-            <label for="iptRemetente">Remetente* (e-mail)</label>
+              <label for="iptRemetente">Seu e-mail*</label>
               <input type="text" placeholder="Remetente" required name="EMAIL_ADDRESS_">
             </div>
             <div class="input-area">
-              <label for="iptDestino">Destino*</label>
+              <label for="iptDestino">E-mail do destinatário*</label>
               <input type="text" id="iptDestino" required name="DESTINO" placeholder="Destinatário">
             </div>
             <div class="input-area">
