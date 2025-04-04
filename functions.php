@@ -1008,7 +1008,7 @@ function generate_countries_list() {
 
     $countries_list = array_unique($countries_list, SORT_REGULAR);
     usort($countries_list, function($a, $b) {
-        $alphabet = 'áabcćçdeéęfghiíjklłmnnoóqprstuvwxyzźż'; // i used polish letters
+        $alphabet = 'áabcćçdeéfghiíjklłmnnoóqprstuvwxyz'; 
         $a = mb_strtolower($a['pais']);
         $b = mb_strtolower($b['pais']);
 
@@ -1025,8 +1025,7 @@ function generate_countries_list() {
                 return -1;
             }
         }
-    }); 
-    // sort($countries_list);
+    });
 
     $cached_countries_list_file = get_template_directory() . '/cached-countries-list.php';
 
