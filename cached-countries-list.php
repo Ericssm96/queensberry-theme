@@ -436,120 +436,135 @@
   ),
   87 => 
   array (
+    'pais' => 'QUIRGUIZISTÃO',
+    'regiao' => 'Ásia',
+  ),
+  88 => 
+  array (
     'pais' => 'QUÊNIA',
     'regiao' => 'África',
   ),
-  88 => 
+  89 => 
   array (
     'pais' => 'REINO UNIDO',
     'regiao' => 'Europa',
   ),
-  89 => 
+  90 => 
   array (
     'pais' => 'REPÚBLICA TCHECA',
     'regiao' => 'Europa',
   ),
-  90 => 
+  91 => 
   array (
     'pais' => 'SEICHELES',
     'regiao' => 'África',
   ),
-  91 => 
+  92 => 
   array (
     'pais' => 'SENEGAL',
     'regiao' => 'África',
   ),
-  92 => 
+  93 => 
   array (
     'pais' => 'SRI LANKA',
     'regiao' => 'Ásia',
   ),
-  93 => 
+  94 => 
   array (
     'pais' => 'ST. BARTHELEMY',
     'regiao' => 'Américas',
   ),
-  94 => 
+  95 => 
   array (
     'pais' => 'ST. MARTIN',
     'regiao' => 'Américas',
   ),
-  95 => 
+  96 => 
   array (
     'pais' => 'SUIÇA',
     'regiao' => 'Europa',
   ),
-  96 => 
+  97 => 
   array (
     'pais' => 'SUÉCIA',
     'regiao' => 'Europa',
   ),
-  97 => 
+  98 => 
   array (
     'pais' => 'SVALBARD',
     'regiao' => 'Europa',
   ),
-  98 => 
+  99 => 
   array (
     'pais' => 'TAILÂNDIA',
     'regiao' => 'Ásia',
   ),
-  99 => 
+  100 => 
   array (
     'pais' => 'TAIWAN',
     'regiao' => 'Ásia',
   ),
-  100 => 
+  101 => 
   array (
     'pais' => 'TANZÂNIA',
     'regiao' => 'África',
   ),
-  101 => 
+  102 => 
   array (
     'pais' => 'TOGO',
     'regiao' => 'África',
   ),
-  102 => 
+  103 => 
   array (
     'pais' => 'TUNÍSIA',
     'regiao' => 'África',
   ),
-  103 => 
+  104 => 
   array (
     'pais' => 'TURKS & CAICOS ISLAND',
     'regiao' => 'Américas',
   ),
-  104 => 
+  105 => 
+  array (
+    'pais' => 'TURQUEMENISTÃO',
+    'regiao' => 'Ásia',
+  ),
+  106 => 
   array (
     'pais' => 'TURQUIA',
     'regiao' => 'Europa',
   ),
-  105 => 
+  107 => 
   array (
     'pais' => 'URUGUAI',
     'regiao' => 'Américas',
   ),
-  106 => 
+  108 => 
+  array (
+    'pais' => 'UZBEQUISTÃO',
+    'regiao' => 'Ásia',
+  ),
+  109 => 
   array (
     'pais' => 'VIETNÃ',
     'regiao' => 'Ásia',
   ),
-  107 => 
+  110 => 
   array (
     'pais' => 'ZIMBÁBUE',
     'regiao' => 'África',
   ),
-  108 => 
+  111 => 
   array (
     'pais' => 'ÁFRICA DO SUL',
     'regiao' => 'África',
   ),
-  109 => 
+  112 => 
   array (
     'pais' => 'ÁUSTRIA',
     'regiao' => 'Europa',
   ),
-  110 => 
+  113 => 
   array (
     'pais' => 'ÍNDIA',
     'regiao' => 'Ásia',
