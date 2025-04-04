@@ -41,7 +41,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </video>
       <article class="gbm-cta">
         <strong>GBM 2025</strong>
-        <a href="#" rel="noreferrer" target="_blank">Saiba mais</a>
+        <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo" rel="noreferrer" target="_blank">Saiba mais</a>
       </article>
     </section>
     <article class="mb-currency-field">
