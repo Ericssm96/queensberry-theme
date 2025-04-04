@@ -422,7 +422,7 @@ get_header();
             <p x-html="currentSlideDescription.replace('\n', '<br />')"></p>
           </div>
           <div class="bottom">
-            <a href="#" class="schedules-cta">Programas</a>
+            <a href="#searchContainer" class="schedules-cta">Programas</a>
 
             <div class="controls">
               
@@ -437,18 +437,20 @@ get_header();
             if($related_logs_qtty <= 3) {
               // Se tiver menos de 3 cadernos relacionados à categoria, repetir os slides para a propriedade "loop" do slide funcionar corretamente.
               foreach($api_data["RelatedLogs"] as $related_log_info) {
+                $sanitized_log_identifier = sanitize_title($related_log_info["CadernoTitulo"]) . "-log";
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                  <a href="#searchContainer" @click='selectedLogs = [$sanitized_log_identifier]; console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
                 SLIDE_ELEMENT;
               }
             }
             foreach($api_data["RelatedLogs"] as $related_log_info) {
+              $sanitized_log_identifier = sanitize_title($related_log_info["CadernoTitulo"]) . "-log";
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                <a href="#searchContainer" @click='selectedLogs = [$sanitized_log_identifier]; console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
               SLIDE_ELEMENT;
             }
             ?>
