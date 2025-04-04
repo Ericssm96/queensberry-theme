@@ -405,6 +405,7 @@ main * {
   align-items: center;
   -moz-column-gap: 5px;
        column-gap: 5px;
+  text-transform: capitalize;
 }
 .search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list {
   display: flex;
@@ -414,9 +415,16 @@ main * {
   max-height: 0;
   transition: all 0.3s ease;
   overflow: hidden;
+  text-transform: capitalize;
 }
 .search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list .region-list {
   padding-bottom: 10px;
+  row-gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list .region-list label {
+  text-transform: capitalize;
 }
 .search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list .custom-checkbox {
   height: 18px;
@@ -452,6 +460,9 @@ main * {
   align-items: center;
   -moz-column-gap: 5px;
        column-gap: 5px;
+}
+.search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list li label {
+  text-transform: capitalize;
 }
 .search-related-content .search-container .search-form {
   height: 30px;

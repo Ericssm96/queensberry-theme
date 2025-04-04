@@ -18,6 +18,22 @@ if (!function_exists('array_find')) {
     }
 }
 
+if (!function_exists('mb_ucfirst') && function_exists('mb_substr')) {
+    function mb_ucfirst($string) {
+        $string = mb_strtoupper(mb_substr($string, 0, 1)) . mb_substr($string, 1);
+        return $string;
+    }
+}
+
+if (!function_exists('mb_strcasecmp') && function_exists('mb_strtolower')) {
+    function mb_strcasecmp($str1, $str2, $encoding = 'UTF-8') {
+        return strcmp(
+            mb_strtolower($str1, $encoding),
+            mb_strtolower($str2, $encoding)
+        );
+    }
+}
+
 require_once "form-handler.php";
 
 function convert_string_to_uppercase_url($string) {
@@ -973,7 +989,10 @@ function create_posts_from_api_data_batches() {
     ob_end_flush();
 }
 
+
+
 function generate_countries_list() {
+    setlocale(LC_COLLATE, 'pt_BR.utf8');
     $active_programs = require "cached-active-programs-list.php";
     $countries_list = [];
 
@@ -988,7 +1007,26 @@ function generate_countries_list() {
     }
 
     $countries_list = array_unique($countries_list, SORT_REGULAR);
-    sort($countries_list);
+    usort($countries_list, function($a, $b) {
+        $alphabet = 'áabcćçdeéęfghiíjklłmnnoóqprstuvwxyzźż'; // i used polish letters
+        $a = mb_strtolower($a['pais']);
+        $b = mb_strtolower($b['pais']);
+
+        for ($i = 0; $i < mb_strlen($a); $i++) {
+            if (mb_substr($a, $i, 1) == mb_substr($b, $i, 1)) {
+                continue;
+            }
+            if ($i > mb_strlen($b)) {
+                return 1;
+            }
+            if (mb_strpos($alphabet, mb_substr($a, $i, 1)) > mb_strpos($alphabet, mb_substr($b, $i, 1))) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+    }); 
+    // sort($countries_list);
 
     $cached_countries_list_file = get_template_directory() . '/cached-countries-list.php';
 
@@ -1410,24 +1448,26 @@ function my_custom_admin_menu() {
     );
 
     add_menu_page(
-        'Atualizar páginas de programa', // Page title
-        'Atualizar páginas de programa',     // Menu title
-        'manage_options', // Capability required to access
-        'refresh-program-pages',  // Menu slug
-        'refresh_program_pages_plugin_content', // Callback function to display content
-        'dashicons-admin-generic', // Icon (optional)
-        7                  // Position in the menu
-    );
-
-    add_menu_page(
         'Atualizar páginas de categorias', // Page title
         'Atualizar páginas de categorias',     // Menu title
         'manage_options', // Capability required to access
         'refresh-category-pages',  // Menu slug
         'refresh_category_pages_plugin_content', // Callback function to display content
         'dashicons-admin-generic', // Icon (optional)
+        7                  // Position in the menu
+    );
+
+    add_menu_page(
+        'Atualizar páginas de programa', // Page title
+        'Atualizar páginas de programa',     // Menu title
+        'manage_options', // Capability required to access
+        'refresh-program-pages',  // Menu slug
+        'refresh_program_pages_plugin_content', // Callback function to display content
+        'dashicons-admin-generic', // Icon (optional)
         8                  // Position in the menu
     );
+
+    
 }
 
 add_action('admin_menu', 'my_custom_admin_menu');

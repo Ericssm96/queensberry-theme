@@ -137,7 +137,18 @@ get_header();
 
         return str;
       },
+      capitalizeString(str) {
+        const lowercaseStr = str.toLowerCase();
+        const words = lowercaseStr.split(" ");
 
+        const capitalizedString = words.map((word) => { 
+          if(word !== "no" || word !== "na" || word !== "da" || word !== "do" || word !== "de") {
+            return word[0].toUpperCase() + word.substring(1);
+          } 
+        }).join(" ");
+
+        return capitalizedString;
+      },
       currentSlideTitle: "",
       currentSlideDescription: "",
       currentSlideIndex: 0,
@@ -511,23 +522,24 @@ get_header();
                         <i class="fa-solid fa-location-dot map-pin"></i>
                       </div>
                       <input type="checkbox" name="countries_list_trigger" id="countries_list_trigger">
-                      <ul class="countries-checkbox-list">
-                        
+                      <div class="countries-checkbox-list">
                         <template x-for="region in selectedRegionsData">
-                          <div class="region-list">
-                            <h3 x-text="region['region']" x-init="console.log(region['countries'])"></h3>
+                          <ul class="region-list">
+                            <li>
+                              <h3 x-text="region['region']" x-init="console.log(region['countries'])"></h3>
+                            </li>
                             <template x-for="countryName in region['countries']">
                               <li>
                                 <span class="custom-checkbox">
                                   <input type="checkbox" @change="performSearch()" x-model="selectedCountries" x-bind:value="sanitizeTitle(countryName)" x-bind:name="sanitizeTitle(countryName)" x-bind:id="sanitizeTitle(countryName)">
                                   <label x-bind:for="sanitizeTitle(countryName)" class="checkmark"></label>
                                 </span>
-                                <label x-bind:for="sanitizeTitle(countryName)" x-text="countryName"></label>
+                                <label x-bind:for="sanitizeTitle(countryName)" x-text="capitalizeString(countryName)"></label>
                               </li>
                             </template>
-                          </div>
+                          </ul>
                         </template>
-                      </ul>
+                      </div>
                     </div>
                   <?php
                 }

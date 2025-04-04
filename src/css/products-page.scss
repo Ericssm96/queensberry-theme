@@ -452,6 +452,7 @@ main {
             display: flex;
             align-items: center;
             column-gap: 5px;
+            text-transform: capitalize;
           }
         }
 
@@ -464,9 +465,17 @@ main {
           max-height: 0;
           transition: all 0.3s ease;
           overflow: hidden;
+          text-transform: capitalize;
 
           .region-list {
             padding-bottom: 10px;
+            row-gap: 5px;
+            display: flex;
+            flex-direction: column;
+
+            label {
+              text-transform: capitalize;
+            }
           }
 
           .custom-checkbox {
@@ -508,6 +517,10 @@ main {
             display: flex;
             align-items: center;
             column-gap: 5px;
+            
+            label {
+              text-transform: capitalize;
+            }
           }
         }
       }
