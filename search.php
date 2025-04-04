@@ -208,39 +208,41 @@ $json_early_posts_meta = json_encode($early_posts_metadata, JSON_UNESCAPED_SLASH
           <p>Não foi possível encontrar um programa correspondente</p>
         </div>
       </div>
-      <ul class="cards-grid" x-show="!isLoading && postsMeta.length > 0">
+      <div class="cards-grid" x-show="!isLoading && postsMeta.length > 0">
         <template x-for="postMeta in postsMeta">
-          <li class="card" x-data="{
+          <div class="card" x-data="{
             qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
             qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
             cardImgHeight: 0
           }">
-            <img class="card-img" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-            <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
-                <div class="initial-description">
-                    <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
-                    <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>
-                    <strong x-text="postMeta['PostData']['CategoryInfo']['Titulo']"></strong>
-                </div>
-                <div class="complementary-description">
-                    <strong>Duração</strong>
-                    <p x-text="`${qtdDiasPrograma} dias / ${qtdNoitesPrograma} noites`"></p>
-                </div>
-                <div class="complementary-description">
-                    <strong>Visitando</strong>
-                    <p x-html="postMeta['PostData']['ProgramInfo']['Detalhes'].replace('\n', '<br />')"></p>
-                </div>
-                <div class="complementary-description">
-                    <strong>Saídas</strong>
-                    <p x-html="postMeta['PostData']['ProgramInfo']['SaidasPrograma'].replace('\n', '<br />')"></p>
-                </div>
-                <p class="additional-info"></p>
-                <div class="spacer"></div>
-                <a x-bind:href="postMeta['Link']" class="card-cta">Saiba mais</a>
-            </div>
-          </li>
+            <a class="post-link" x-bind:href="postMeta['Link']">
+              <img class="card-img" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
+              <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
+                  <div class="initial-description">
+                      <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
+                      <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>
+                      <strong x-text="postMeta['PostData']['CategoryInfo']['Titulo']"></strong>
+                  </div>
+                  <div class="complementary-description">
+                      <strong>Duração</strong>
+                      <p x-text="`${qtdDiasPrograma} dias / ${qtdNoitesPrograma} noites`"></p>
+                  </div>
+                  <div class="complementary-description">
+                      <strong>Visitando</strong>
+                      <p x-html="postMeta['PostData']['ProgramInfo']['Detalhes'].replace('\n', '<br />')"></p>
+                  </div>
+                  <div class="complementary-description">
+                      <strong>Saídas</strong>
+                      <p x-html="postMeta['PostData']['ProgramInfo']['SaidasPrograma'].replace('\n', '<br />')"></p>
+                  </div>
+                  <p class="additional-info"></p>
+                  <div class="spacer"></div>
+                  <button class="card-cta">Saiba mais</button>
+              </div>
+            </a>
+          </div>
         </template>
-      </ul>
+      </div>
     </article>
   </section>
 </main>

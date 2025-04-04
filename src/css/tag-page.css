@@ -447,6 +447,12 @@ main * {
 }
 .search-related-content .search-container .cards-grid .card {
   background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+.search-related-content .search-container .cards-grid .card .post-link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
 }
 .search-related-content .search-container .cards-grid .card .card-img {
   aspect-ratio: 1/1;
@@ -541,6 +547,8 @@ main * {
   text-transform: uppercase;
   border-radius: 5px;
   justify-self: flex-end;
+  border: 0px solid black;
+  cursor: pointer;
 }
 
 .spinner {

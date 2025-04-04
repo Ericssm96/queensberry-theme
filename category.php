@@ -594,7 +594,7 @@ get_header();
                         <button class="card-cta">Saiba mais</button>
                     </div>
                   </a>
-              </div>
+                </div>
               </template>
 
             </div>
