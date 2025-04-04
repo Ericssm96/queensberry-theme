@@ -141,7 +141,7 @@ main {
         .areas {
           display: flex;
           align-items: center;
-          flex-wrap: nowrap;
+          flex-wrap: wrap;
           column-gap: 5px;
           a {
             text-decoration: underline;
