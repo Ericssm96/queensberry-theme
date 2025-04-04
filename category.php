@@ -555,9 +555,9 @@ get_header();
                 <p>Não foi possível encontrar um programa correspondente</p>
               </div>
             </div>
-            <ul class="cards-grid">
+            <div class="cards-grid">
               <template x-for="postMeta in limitedPostsMeta">
-                <li x-init="console.log()" class="card" x-data="{
+                <a x-bind:href="postMeta['Link']" x-init="console.log()" class="card" x-data="{
                   qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
                   qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
                   isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
@@ -592,10 +592,10 @@ get_header();
                       <div class="spacer"></div>
                       <a x-bind:href="postMeta['Link']" class="card-cta">Saiba mais</a>
                   </div>
-                </li>
+                </a>
               </template>
 
-            </ul>
+            </div>
 
             
         </article>
