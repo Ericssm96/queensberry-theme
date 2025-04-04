@@ -665,6 +665,12 @@ main {
       .card {
         background-color: white;
         font-family: $roboto;
+        
+        .post-link {
+          display: block;
+          text-decoration: none;
+          height: 100%;
+        }
 
         .card-img {
           aspect-ratio: 1 / 1;
@@ -770,10 +776,9 @@ main {
             text-transform: uppercase;
             border-radius: 5px;
             justify-self: flex-end;
+            border: 0px solid black;
           }
         }
-
-
       }
     }
   }
