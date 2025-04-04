@@ -247,7 +247,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
                   <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
                   <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
                   <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil In</a></li>
-                  <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzeiros</a></li>
+                  <li><a href="<?= home_url(); ?>/category/maritimo">Cruzeiros</a></li>
                 </ul>
                 <div class="right-col">
                   <header>

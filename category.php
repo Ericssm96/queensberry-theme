@@ -467,10 +467,24 @@ get_header();
             <div class="checkable-filters">
               <h2>Pesquise</h2>
               <div class="checkbox-area">
+                <?php 
+                if($category_title === "Cruzeiros") {
+                  $icon_url = get_template_directory_uri() . "/src/img/icon-navio.png";
+                  echo <<<LIST_TITLE
+                  <div class="list-title">
+                    <label for="logs_list_trigger" class="text-area"><span class="active-indicator" x-text="isLogFilterListOpen ? '[ - ]' : '[ + ]'"></span><p>Cruzeiros</p></label>
+                    <img src="$icon_url" alt="">
+                  </div>
+                  LIST_TITLE;
+                } else {
+                  ?> 
                 <div class="list-title">
                   <label for="logs_list_trigger" class="text-area"><span class="active-indicator" x-text="isLogFilterListOpen ? '[ - ]' : '[ + ]'"></span><p><?= sanitize_title($category_title) === "brasil-in" ? "Brasil IN" : "Cadernos" ?></p></label>
                   <img src="<?= get_template_directory_uri(); ?>/src/img/i.icone-caderno.png" alt="">
                 </div>
+                <?php
+                }
+                ?>
                 <input @change="isLogFilterListOpen = !isLogFilterListOpen" type="checkbox" name="logs_list_trigger" id="logs_list_trigger">
                 <ul class="checkbox-list">
                   <?php
