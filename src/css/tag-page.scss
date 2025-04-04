@@ -202,14 +202,18 @@ main {
               color: $lime-green;
             }
 
-            .map-pin {
-              font-size: 19px;
-              color: $lime-green;
-            }
+            
   
             p {
               color: $navy;
             }
+          }
+
+          .map-pin {
+            font-size: 19px;
+            color: $lime-green;
+            display: inline-block;
+            padding-right: 2px;
           }
   
           img {

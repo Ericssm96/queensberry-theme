@@ -179,12 +179,14 @@ main * {
 .search-related-content .search-container .checkable-filters .checkbox-area .list-title .text-area .active-indicator {
   color: #99D02C;
 }
-.search-related-content .search-container .checkable-filters .checkbox-area .list-title .text-area .map-pin {
-  font-size: 19px;
-  color: #99D02C;
-}
 .search-related-content .search-container .checkable-filters .checkbox-area .list-title .text-area p {
   color: #0C0150;
+}
+.search-related-content .search-container .checkable-filters .checkbox-area .list-title .map-pin {
+  font-size: 19px;
+  color: #99D02C;
+  display: inline-block;
+  padding-right: 2px;
 }
 .search-related-content .search-container .checkable-filters .checkbox-area #categories_list_trigger {
   display: none;
