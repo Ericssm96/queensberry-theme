@@ -1,0 +1,190 @@
+main {
+  box-sizing: border-box;
+}
+main * {
+  box-sizing: border-box;
+}
+
+.shaded-overlay {
+  height: 460px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 150;
+}
+
+.banner {
+  background-image: url(../img/banner-folhetos.jpg);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.banner .title-area {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .banner .title-area {
+    margin-bottom: 85px;
+  }
+}
+.banner .title-area h1 {
+  color: white;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-family: "Tenor Sans", sans-serif;
+  text-transform: uppercase;
+  width: 92vw;
+  position: relative;
+  z-index: 151;
+}
+@media screen and (min-width: 768px) {
+  .banner .title-area h1 {
+    font-size: 4.8rem;
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .banner .title-area h1 {
+    width: 1000px;
+  }
+}
+.banner .title-area strong {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #99D02C;
+}
+
+.form-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-area .wrapper {
+  width: 92vw;
+}
+@media screen and (min-width: 768px) {
+  .form-area .wrapper {
+    width: 88vw;
+    max-width: 440px;
+  }
+}
+.form-area .wrapper form {
+  width: 100%;
+  position: relative;
+}
+.form-area .wrapper form .required-info {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  color: #656565;
+}
+.form-area .wrapper form .inner-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 16px 30px 16px;
+  row-gap: 25px;
+}
+.form-area .wrapper form .inner-form .input-area {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.form-area .wrapper form .inner-form .input-area label {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  color: #99D02C;
+}
+.form-area .wrapper form .inner-form .input-area input, .form-area .wrapper form .inner-form .input-area select {
+  border: none;
+  border-bottom: 1px solid #e5e9ef;
+  padding: 5px;
+  height: 30px;
+  max-height: 30px;
+  color: #656565;
+}
+.form-area .wrapper form .inner-form .input-area input ::-moz-placeholder, .form-area .wrapper form .inner-form .input-area select ::-moz-placeholder {
+  color: #656565;
+}
+.form-area .wrapper form .inner-form .input-area input ::placeholder, .form-area .wrapper form .inner-form .input-area select ::placeholder {
+  color: #656565;
+}
+.form-area .wrapper form .inner-form .input-area textarea {
+  border: none;
+  border-bottom: 1px solid #e5e9ef;
+  padding: 5px;
+  color: #656565;
+  height: 80px;
+  max-height: 80px;
+  font-family: "Roboto", sans-serif;
+}
+.form-area .wrapper form .inner-form .input-area textarea ::-moz-placeholder {
+  color: #656565;
+}
+.form-area .wrapper form .inner-form .input-area textarea ::placeholder {
+  color: #656565;
+}
+.form-area .wrapper form .inner-form .checkbox-area {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  align-items: center;
+}
+.form-area .wrapper form .inner-form .checkbox-area .custom-checkbox {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+.form-area .wrapper form .inner-form .checkbox-area .custom-checkbox input {
+  display: none;
+}
+.form-area .wrapper form .inner-form .checkbox-area .custom-checkbox input:checked ~ .checkmark {
+  box-shadow: inset 0px 0px 3px 5px #99D02C;
+}
+.form-area .wrapper form .inner-form .checkbox-area .custom-checkbox .checkmark {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(80, 80, 80, 0.356);
+  display: inline-block;
+  border-radius: 4px;
+}
+.form-area .wrapper form .inner-form .checkbox-area .text-label {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  color: #656565;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+.form-area .wrapper form .inner-form .recaptcha-box {
+  margin-top: 10px;
+  margin: 0 auto;
+}
+.form-area .wrapper form .inner-form .submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0C0150;
+  background-color: #99D02C;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 auto;
+}
+.form-area .wrapper form .inner-form .submit-btn:hover {
+  background-color: #0C0150;
+  color: white;
+}/*# sourceMappingURL=share-log-form.css.map */
