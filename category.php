@@ -476,6 +476,7 @@ get_header();
                   <?php
                   foreach($related_logs_name_list as $related_log_name) {
                     $log_identifier = sanitize_title($related_log_name) . "-log";
+                    $related_log_name = capitalize_pt_br_string($related_log_name);
 
                     echo <<<CHECKBOX_FIELD
                       <li>

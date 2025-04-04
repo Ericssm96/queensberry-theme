@@ -281,7 +281,7 @@ get_header();
           <ul class="checkbox-list">
             <?php
             foreach($valid_categories_list as $category_info) {
-              $category_title = $category_info['CategoriaDescricao'];
+              $category_title = capitalize_pt_br_string($category_info['CategoriaDescricao']);
               $sanitized_cat_title = sanitize_title($category_title);
               echo <<<ELEMENT
               <li>
@@ -305,7 +305,7 @@ get_header();
             </li>
             <?php
             foreach($countries_in_region as $country_info) {
-              $country_name = $country_info['pais'];
+              $country_name = capitalize_pt_br_string($country_info['pais']);
               $sanitized_country_name = sanitize_title($country_name);
 
               if($country_name === $tag_title) {

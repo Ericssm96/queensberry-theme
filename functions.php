@@ -34,6 +34,24 @@ if (!function_exists('mb_strcasecmp') && function_exists('mb_strtolower')) {
     }
 }
 
+function capitalize_pt_br_string($str) {
+    $lowercase_str = mb_strtolower($str);
+    $words = explode(" ", $lowercase_str);
+    
+    $exceptions = array("no", "na", "da", "do", "de");
+    
+    $capitalized_words = array_map(function($word) use ($exceptions) {
+        if (!in_array($word, $exceptions)) {
+            if (strlen($word) > 0) {
+                return mb_ucfirst($word);
+            }
+        }
+        return $word;
+    }, $words);
+    
+    return implode(" ", $capitalized_words);
+}
+
 require_once "form-handler.php";
 
 function convert_string_to_uppercase_url($string) {

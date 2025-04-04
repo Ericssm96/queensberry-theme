@@ -173,7 +173,7 @@ $json_early_posts_meta = json_encode($early_posts_metadata, JSON_UNESCAPED_SLASH
           <ul class="checkbox-list">
             <?php
             foreach($valid_categories_list as $valid_category) {
-              $cat_title = $valid_category['Titulo'];
+              $cat_title = capitalize_pt_br_string($valid_category['Titulo']);
               $cat_slug = sanitize_title($cat_title);
 
               echo <<<CHECKBOX_FIELD
