@@ -207,6 +207,7 @@ main * {
   border: none;
   border-bottom: 1px solid black;
   font-size: 14px;
+  background-color: transparent;
 }
 .search-related-content .search-container .search-form input ::-moz-placeholder {
   color: #6C757D;

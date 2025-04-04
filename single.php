@@ -151,7 +151,6 @@ if (is_single()) {
       <div>
         <strong><?= $category_name ?></strong>
         <h1><?= $program_name ?></h1>
-        <strong><?= $program_code ?></strong>
         <p><?= $quick_description ?></p>
       </div>
     </header>
