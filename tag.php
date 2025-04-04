@@ -379,7 +379,7 @@ get_header();
                   </div>
                   <p class="additional-info"></p>
                   <div class="spacer"></div>
-                  <a x-bind:href="postMeta['Link']" class="card-cta">Saiba mais</a>
+                  <button class="card-cta">Saiba mais</button>
               </div>
             </a>
           </div>
