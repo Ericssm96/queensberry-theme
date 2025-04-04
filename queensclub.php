@@ -112,10 +112,10 @@ get_header(); ?>
             <div class="swiper-slide">       
               <img src="<?= get_template_directory_uri(); ?>/src/img/qclb-slide2.jpg" alt="Egito e Dubai e seus contrastes">
               <div class="text">
-                <blockquote>Excelente excursão. Ótimo grupo de participantes. Alegre, unido e agradável. Parabéns aos guias. Parabéns à Queensberry.</blockquote>
+                <blockquote>Viagem ótima! O nosso guia foi muito bom durante todo o percurso. O grupo foi muito unido! Obrigada e até a próxima viagem!</blockquote>
                 <div class="quote-info">
                   <strong>Roteiro: Egito e Dubai e seus contrastes</strong>
-                  <p>G.G. - São Paulo - SP</p>
+                  <p>D.S. – Guaratinguetá – SP</p>
                   <p>Fevereiro/2022</p>
                 </div>
               </div>
@@ -123,10 +123,10 @@ get_header(); ?>
             <div class="swiper-slide">       
               <img src="<?= get_template_directory_uri(); ?>/src/img/qclb-slide3.jpg" alt="Egito e Dubai e seus contrastes">
               <div class="text">
-                <blockquote>Excelente excursão. Ótimo grupo de participantes. Alegre, unido e agradável. Parabéns aos guias. Parabéns à Queensberry.</blockquote>
+                <blockquote>Fazer esta viagem foi realizar o sonho de uma vida. Conhecer o Egito foi mágico! O grupo de pessoas que conheci foi muito especial. Vou levar muitas lembranças deste convívio tão alegre e festivo.</blockquote>
                 <div class="quote-info">
                   <strong>Roteiro: Egito e Dubai e seus contrastes</strong>
-                  <p>G.G. - São Paulo - SP</p>
+                  <p>M.B.C.P. – Volta Redonda – RJ</p>
                   <p>Fevereiro/2022</p>
                 </div>
               </div>

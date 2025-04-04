@@ -319,12 +319,12 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
         <img src="<?= get_template_directory_uri() ?>/src/img/logo-queensclub.png" alt="QueensClub">
       </h2>
       <strong>Quanto mais você viajar, mais você vai ganhar.</strong>
-      <a href="#">Saiba Mais</a>
+      <a href="<?= home_url() ?>/queensclub/">Saiba Mais</a>
     </article>
     <article class="blog-section">
       <h2>Blog</h2>
       <strong>Uma viagem exploratória, sensorial e exclusiva pelos cinco continentes.</strong>
-      <a href="#">Confira</a>
+      <a href="https://blog.queensberry.com.br/" target="_blank">Confira</a>
     </article>
   </section>
 

@@ -545,17 +545,25 @@ get_header(); ?>
       
           <span class="phone-number">
             <p>
-              ¹¹ 3217-7100
+              ¹¹ 3217-7600
             </p>
           </span>
         </div>
       </div>
       <div class="branch-info">
-        <strong class="title">BRASILIA-DF / GOIÂNIA - Pier Viagens</strong>
+        <strong class="title">NOSSOS REPRESENTANTES COMERCIAIS</strong>
         <div class="info-cluster">
-          <p>João</p>
-          <p>Tel.: 61 3298-1504 ou 61 98116-7780</p>
-          <p>E-mail: joao@pierviagens.com.br</p>
+          <p>Atendimento ao Agente de Viagens</p>
+        </div>
+      <div class="branch-info">
+        <strong class="title">DF - BRASÍLIA | GO - GOIÂNIA</strong>
+        <div class="info-cluster">
+          <p>Atendimento PIER VIAGENS:</p>
+          <p>Brasília – Tel.: 61 3298-1515 | Goiânia – Tel.: 62 4016-2535</p>
+          <br/>
+          <p>João Jatobá</p>
+          <p>Tel.: 61 3298-1504 ou 61 98116-7780 ( João) </p> 
+          <p> E-mail: joao@pierviagens.com.br</p>
         </div>
         <div class="info-cluster">
           <p>Daniel</p>
@@ -564,29 +572,39 @@ get_header(); ?>
         </div>
       </div>
       <div class="branch-info">
-        <strong class="title">Atendimento Goiânia</strong>
+        <strong class="title">ES – VITÓRIA | PR – CURITIBA</strong>
         <div class="info-cluster">
-          <p>62 4016-2535</p>
+          <p>Brunna Soares</p>
+          <p>Tel.: 11 3217-7111</p>
+          <p>E-mail: brunna.soares@queensberry.com.br</p>
         </div>
       </div>
       <div class="branch-info">
-        <strong class="title">MINAS GERAIS</strong>
+        <strong class="title">MG - BELO HORIZONTE</strong>
         <div class="info-cluster">
-          <p>Vilma Alagiyawanna</p>
-          <p>Tel.: 31 99637-8984</p>
-          <p>E-mail: vilma@vtours.tur.br</p>
+          <p>Juliana Tavares Piancastelli</p>
+          <p>Tel.: 11 3217-7105</p>
+          <p>E-mail: juliana.piancastelli@queensberry.com.br</p>
         </div>
       </div>
       <div class="branch-info">
-        <strong class="title">PARANÁ</strong>
+        <strong class="title">NORTE E NORDESTE</strong>
         <div class="info-cluster">
-          <p>Ricardo Cassio</p>
-          <p>Tel.: 41 3079-7271</p>
-          <p>E-mail: reservas@ciadoscruzeiros.com.br</p>
+          <p>Rubens Peixoto</p>
+          <p>Tels.: 84 99101-3363</p>
+          <p>E-mail: rubens.peixoto@queensberry.com.br</p>
         </div>
       </div>
       <div class="branch-info">
-        <strong class="title">RIO GRANDE DO SUL</strong>
+        <strong class="title">RJ – RIO DE JANEIRO | MG – JUÍZ DE FORA</strong>
+        <div class="info-cluster">
+          <p>Elton Anselmo</p>
+          <p>Tel.: 11 3217-7128  | 21 99294-5718</p>
+          <p>E-mail: elton.anselmo@queensberry.com.br</p>
+        </div>
+      </div>
+      <div class="branch-info">
+        <strong class="title">RS – PORTO ALEGRE</strong>
         <div class="info-cluster">
           <p>Maria Amélia</p>
           <p>Tel.: 51 99707-5459</p>
@@ -594,7 +612,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="branch-info">
-        <strong class="title">SANTA CATARINA</strong>
+        <strong class="title">SC – FLORIANÓPOLIS</strong>
         <div class="info-cluster">
           <p>Adriana Taranto</p>
           <p>Tel.: 48 99980-2163</p>
@@ -602,44 +620,23 @@ get_header(); ?>
         </div>
       </div>
       <div class="branch-info">
-        <strong class="title">SP - CAMPINAS E RIBEIRÃO PRETO</strong>
-        <div class="info-cluster">
-          <p>Alvimar</p>
-          <p>Tel.: 19 3231-9004</p>
-          <p>E-mail: alvimar@accpq.com.br</p>
-        </div>
+        <strong class="title">SP – CAMPINAS E RIBEIRÃO PRETO</strong>
         <div class="info-cluster">
           <p>Valéria Cazetto</p>
-          <p>Tel.: 19 99475-5438</p>
+          <p>Tel.: 19 3231-9004 e 19 99475-5438</p>
           <p>E-mail: valeria@accpq.com.br</p>
         </div>
+        <div class="info-cluster">
+          <p>Alvimar Cazetto</p>
+          <p>E-mail: alvimar@accpq.com.br</p>
+        </div>
       </div>
       <div class="branch-info">
-        <strong class="title">SP - SÃO PAULO (CAPITAL)</strong>
+        <strong class="title">SP – SÃO PAULO (CAPITAL)</strong>
         <div class="info-cluster">
           <p>Paulus Anjos</p>
+          <p>Tel.: 11 98802-6357</p>
           <p>E-mail: paulus.anjos@queensberry.com.br</p>
-        </div>
-      </div>
-      <div class="branch-info">
-        <strong class="title">RIO DE JANEIRO - RJ - FILIAL</strong>
-        <div class="info-cluster">
-          <p>Rosaly Maranhão</p>
-          <p>Tel.: 21 99393-0180 ou 11 3217-7121</p>
-          <p>E-mail: rosaly.maranhao@queensberry.com.br</p>
-        </div>
-        <div class="info-cluster">
-          <p>Kelly Rizzo</p>
-          <p>Tel.: 21 98231-4544 ou 11 3217-7103</p>
-          <p>E-mail: kelly.rizzo@queensberry.com.br</p>
-        </div>
-      </div>
-      <div class="branch-info">
-        <strong class="title">BA - SALVADOR | CE - FORTALEZA | ES - VITÓRIA | PE - RECIFE</strong>
-        <div class="info-cluster">
-          <p>Brunna Soares</p>
-          <p>Tel.: 11 3217-7111</p>
-          <p>E-mail: brunna.soares@queensberry.com.br</p>
         </div>
       </div>
     </div>

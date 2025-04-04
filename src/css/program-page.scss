@@ -334,14 +334,26 @@ main {
           }
         }
 
-        li.selected {
+        li:hover{
           background-color: $lime-green;
           color: white;
+          cursor: pointer;
 
           i {
             color: $navy;
           }
         }
+
+        li.selected {
+          background-color: $lime-green;
+          color: white;
+          cursor: pointer;
+
+          i {
+            color: $navy;
+          }
+        }
+        
       }
 
       .details {

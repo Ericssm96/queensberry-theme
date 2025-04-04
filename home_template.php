@@ -237,7 +237,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
 
     <!-- PALAVRA DO ESPECIALISTA -->
 
-
+  <!--
     <section class="specialists-review">
       <div class="wrapper">
         <h2>Palavra do Especialista</h2>
@@ -330,6 +330,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
         </div>
       </div>
     </section>
+    -->
 
     <section class="external-links">
       <article class="queensclub-section">
@@ -337,12 +338,12 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
           <img src="<?= get_template_directory_uri() ?>/src/img/logo-queensclub.png" alt="QueensClub">
         </h2>
         <strong>Quanto mais você viajar, mais você vai ganhar.</strong>
-        <a href="#">Saiba Mais</a>
+        <a href="<?= home_url() ?>/queensclub/">Saiba Mais</a>
       </article>
       <article class="blog-section">
         <h2>Blog</h2>
         <strong>Uma viagem exploratória, sensorial e exclusiva pelos cinco continentes.</strong>
-        <a href="#">Confira</a>
+        <a href="https://blog.queensberry.com.br/" target="_blank">Confira</a>
       </article>
     </section>
 

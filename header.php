@@ -13,11 +13,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-  <link rel="icon" href="<?= home_url(); ?>/wp-content/themes/queensberry v1.0/src/img/fav-icon-queensberry.jpg">
+  <link rel="icon" href="<?= get_template_directory_uri(); ?>/src/img/favicon-queensberry-viagens.png">
   <?php
-  $site_title = get_bloginfo('name');
+    $site_title = get_bloginfo('name');
+
+    if (is_front_page()) {
+        $page_title = $site_title;
+    } elseif (is_category()) {
+        $page_title = single_cat_title('', false);
+    } elseif (is_tag()) {
+        $page_title = single_tag_title('', false);
+    } else {
+        $page_title = get_the_title();
+    }
+
+    $page_title = strtoupper($page_title);
+    $site_title = strtoupper($site_title);
   ?>
-  <title><?= (is_front_page() ? $site_title : is_category()) ? single_cat_title() : get_the_title() .  " - " . $site_title; ?></title>
+  <title><?= $page_title . " - " . $site_title; ?></title>
+
+
 </head>
 
 <?php
@@ -242,12 +257,12 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
               <div class="content-b">
                 <ul class="left-col">
                   <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-                  <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>
+                  <li><a href="<?= home_url(); ?>/category/disney">Walt Disney World Resort</a></li>
                   <li><a href="<?= home_url(); ?>/category/driveness-experience">Driveness Experience</a></li>
                   <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
                   <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
                   <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil In</a></li>
-                  <li><a href="<?= home_url(); ?>/category/maritimo">Cruzeiros</a></li>
+                  <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzeiros</a></li>
                 </ul>
                 <div class="right-col">
                   <header>

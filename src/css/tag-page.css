@@ -461,6 +461,7 @@ main * {
   aspect-ratio: 1/1;
   width: 100%;
   position: relative;
+  object-fit: cover;
   z-index: 98;
 }
 .search-related-content .search-container .cards-grid .card .card-img img {
