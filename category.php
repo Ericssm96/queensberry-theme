@@ -53,10 +53,17 @@ if($cat_query->have_posts()) {
 
       return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
     });
+    $program_name = $program_info["Descricao"];
 
     $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
+
+    if(sanitize_title($program_name) === "nova-zelandia-de-norte-a-sul") {
+      $program_log_image_folder = "AUSTRALIA_E_NOVA_ZELANDIA";
+    }
+
+
     $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
     $card_image_file_name = $program_info["CaminhoImagem"];
 
