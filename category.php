@@ -1,5 +1,6 @@
 <?php
 $current_category = get_queried_object();
+$checked_log = $_GET["checked_log"];
 
 $api_data = get_term_meta($current_category->term_id, 'api_data', true);
 
