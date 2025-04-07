@@ -594,7 +594,6 @@ get_header();
                   isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
                   cardImgHeight: 0
                 }">
-                  <!-- <img class="card-img" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card"> -->
                   <a class="post-link" x-bind:href="postMeta['Link']">
                     <div class="card-img">
                       <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">

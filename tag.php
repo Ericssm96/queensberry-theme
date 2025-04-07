@@ -355,10 +355,16 @@ get_header();
           <div class="card" x-data="{
             qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
             qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
+            isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
             cardImgHeight: 0
           }">
             <a x-bind:href="postMeta['Link']" class="post-link">
-              <img class="card-img" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
+              <div class="card-img">
+                <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
+                <span x-show="isHighlightedPost" class="highlight-stamp">
+                  DESTAQUE
+                </span>
+              </div>
               <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
                   <div class="initial-description">
                       <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
