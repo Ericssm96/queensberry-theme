@@ -150,6 +150,7 @@ get_header();
         return capitalizedString;
       },
       currentSlideTitle: "",
+      cSlideSanitizedTitle: "",
       currentSlideDescription: "",
       currentSlideIndex: 0,
 
@@ -320,7 +321,7 @@ get_header();
       currentSlideDescription = slideDescriptions[currentSlideIndex];
     });
 
-
+    cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
     // cards-configs
     highlightedPosts = postsMeta.filter(postMeta => {
       return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
@@ -333,7 +334,8 @@ get_header();
     amountOfPosts = postsMeta.length;
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
     selectedTags = [...selectedWorldRegions, ...selectedCountries];" x-effect="
-    _postsMeta = _postsMeta;
+    cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
+    console.log(cSlideSanitizedTitle);
     highlightedPosts = postsMeta.filter(postMeta => {
       return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
     });
@@ -422,7 +424,7 @@ get_header();
             <p x-html="currentSlideDescription.replace('\n', '<br />')"></p>
           </div>
           <div class="bottom">
-            <a href="#searchContainer" class="schedules-cta">Programas</a>
+            <a href="#searchContainer" @click="selectedLogs = []; selectedLogs.push(cSlideSanitizedTitle + '-log');" class="schedules-cta">Programas</a>
 
             <div class="controls">
               
