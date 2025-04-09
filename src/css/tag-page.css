@@ -179,12 +179,14 @@ main * {
 .search-related-content .search-container .checkable-filters .checkbox-area .list-title .text-area .active-indicator {
   color: #99D02C;
 }
-.search-related-content .search-container .checkable-filters .checkbox-area .list-title .text-area .map-pin {
-  font-size: 19px;
-  color: #99D02C;
-}
 .search-related-content .search-container .checkable-filters .checkbox-area .list-title .text-area p {
   color: #0C0150;
+}
+.search-related-content .search-container .checkable-filters .checkbox-area .list-title .map-pin {
+  font-size: 19px;
+  color: #99D02C;
+  display: inline-block;
+  padding-right: 2px;
 }
 .search-related-content .search-container .checkable-filters .checkbox-area #categories_list_trigger {
   display: none;
@@ -260,6 +262,7 @@ main * {
   border: none;
   border-bottom: 1px solid black;
   font-size: 14px;
+  background-color: transparent;
 }
 .search-related-content .search-container .search-form input ::-moz-placeholder {
   color: #6C757D;
@@ -447,6 +450,12 @@ main * {
 }
 .search-related-content .search-container .cards-grid .card {
   background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+.search-related-content .search-container .cards-grid .card .post-link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
 }
 .search-related-content .search-container .cards-grid .card .card-img {
   aspect-ratio: 1/1;
@@ -542,6 +551,8 @@ main * {
   text-transform: uppercase;
   border-radius: 5px;
   justify-self: flex-end;
+  border: 0px solid black;
+  cursor: pointer;
 }
 
 .spinner {

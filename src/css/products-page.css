@@ -405,6 +405,7 @@ main * {
   align-items: center;
   -moz-column-gap: 5px;
        column-gap: 5px;
+  text-transform: capitalize;
 }
 .search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list {
   display: flex;
@@ -414,9 +415,16 @@ main * {
   max-height: 0;
   transition: all 0.3s ease;
   overflow: hidden;
+  text-transform: capitalize;
 }
 .search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list .region-list {
   padding-bottom: 10px;
+  row-gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list .region-list label {
+  text-transform: capitalize;
 }
 .search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list .custom-checkbox {
   height: 18px;
@@ -453,6 +461,9 @@ main * {
   -moz-column-gap: 5px;
        column-gap: 5px;
 }
+.search-related-content .search-container .checkable-filters .checkbox-area .countries-checkbox-list li label {
+  text-transform: capitalize;
+}
 .search-related-content .search-container .search-form {
   height: 30px;
   display: flex;
@@ -470,6 +481,7 @@ main * {
   border: none;
   border-bottom: 1px solid black;
   font-size: 14px;
+  background-color: transparent;
 }
 .search-related-content .search-container .search-form input ::-moz-placeholder {
   color: #6C757D;
@@ -611,6 +623,11 @@ main * {
   background-color: white;
   font-family: "Roboto", sans-serif;
 }
+.search-related-content .search-container .cards-grid .card .post-link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
 .search-related-content .search-container .cards-grid .card .card-img {
   aspect-ratio: 1/1;
   width: 100%;
@@ -705,4 +722,6 @@ main * {
   text-transform: uppercase;
   border-radius: 5px;
   justify-self: flex-end;
+  border: 0px solid black;
+  cursor: pointer;
 }/*# sourceMappingURL=products-page.css.map */

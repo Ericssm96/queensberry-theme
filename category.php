@@ -1,5 +1,6 @@
 <?php
 $current_category = get_queried_object();
+$checked_log = $_GET["checked_log"];
 
 $api_data = get_term_meta($current_category->term_id, 'api_data', true);
 
@@ -52,10 +53,17 @@ if($cat_query->have_posts()) {
 
       return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
     });
+    $program_name = $program_info["Descricao"];
 
     $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
+
+    if(sanitize_title($program_name) === "nova-zelandia-de-norte-a-sul") {
+      $program_log_image_folder = "AUSTRALIA_E_NOVA_ZELANDIA";
+    }
+
+
     $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
     $card_image_file_name = $program_info["CaminhoImagem"];
 
@@ -137,8 +145,20 @@ get_header();
 
         return str;
       },
+      capitalizeString(str) {
+        const lowercaseStr = str.toLowerCase();
+        const words = lowercaseStr.split(" ");
 
+        const capitalizedString = words.map((word) => { 
+          if(word !== "no" || word !== "na" || word !== "da" || word !== "do" || word !== "de") {
+            return word[0].toUpperCase() + word.substring(1);
+          } 
+        }).join(" ");
+
+        return capitalizedString;
+      },
       currentSlideTitle: "",
+      cSlideSanitizedTitle: "",
       currentSlideDescription: "",
       currentSlideIndex: 0,
 
@@ -309,7 +329,7 @@ get_header();
       currentSlideDescription = slideDescriptions[currentSlideIndex];
     });
 
-
+    cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
     // cards-configs
     highlightedPosts = postsMeta.filter(postMeta => {
       return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
@@ -322,7 +342,8 @@ get_header();
     amountOfPosts = postsMeta.length;
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
     selectedTags = [...selectedWorldRegions, ...selectedCountries];" x-effect="
-    _postsMeta = _postsMeta;
+    cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
+    console.log(cSlideSanitizedTitle);
     highlightedPosts = postsMeta.filter(postMeta => {
       return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
     });
@@ -411,7 +432,7 @@ get_header();
             <p x-html="currentSlideDescription.replace('\n', '<br />')"></p>
           </div>
           <div class="bottom">
-            <a href="#" class="schedules-cta">Programas</a>
+            <a href="#searchContainer" @click="selectedLogs = []; selectedLogs.push(cSlideSanitizedTitle + '-log');" class="schedules-cta">Programas</a>
 
             <div class="controls">
               
@@ -426,18 +447,20 @@ get_header();
             if($related_logs_qtty <= 3) {
               // Se tiver menos de 3 cadernos relacionados à categoria, repetir os slides para a propriedade "loop" do slide funcionar corretamente.
               foreach($api_data["RelatedLogs"] as $related_log_info) {
+                $sanitized_log_identifier = sanitize_title($related_log_info["CadernoTitulo"]) . "-log";
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                  <a href="#searchContainer" @click='selectedLogs = [$sanitized_log_identifier]; console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
                 SLIDE_ELEMENT;
               }
             }
             foreach($api_data["RelatedLogs"] as $related_log_info) {
+              $sanitized_log_identifier = sanitize_title($related_log_info["CadernoTitulo"]) . "-log";
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                <a href="#searchContainer" @click='selectedLogs = [$sanitized_log_identifier]; console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
               SLIDE_ELEMENT;
             }
             ?>
@@ -456,15 +479,30 @@ get_header();
             <div class="checkable-filters">
               <h2>Pesquise</h2>
               <div class="checkbox-area">
+                <?php 
+                if($category_title === "Cruzeiros") {
+                  $icon_url = get_template_directory_uri() . "/src/img/icon-navio.png";
+                  echo <<<LIST_TITLE
+                  <div class="list-title">
+                    <label for="logs_list_trigger" class="text-area"><span class="active-indicator" x-text="isLogFilterListOpen ? '[ - ]' : '[ + ]'"></span><p>Cruzeiros</p></label>
+                    <img src="$icon_url" alt="">
+                  </div>
+                  LIST_TITLE;
+                } else {
+                  ?> 
                 <div class="list-title">
                   <label for="logs_list_trigger" class="text-area"><span class="active-indicator" x-text="isLogFilterListOpen ? '[ - ]' : '[ + ]'"></span><p><?= sanitize_title($category_title) === "brasil-in" ? "Brasil IN" : "Cadernos" ?></p></label>
                   <img src="<?= get_template_directory_uri(); ?>/src/img/i.icone-caderno.png" alt="">
                 </div>
+                <?php
+                }
+                ?>
                 <input @change="isLogFilterListOpen = !isLogFilterListOpen" type="checkbox" name="logs_list_trigger" id="logs_list_trigger">
                 <ul class="checkbox-list">
                   <?php
                   foreach($related_logs_name_list as $related_log_name) {
                     $log_identifier = sanitize_title($related_log_name) . "-log";
+                    $related_log_name = capitalize_pt_br_string($related_log_name);
 
                     echo <<<CHECKBOX_FIELD
                       <li>
@@ -511,23 +549,24 @@ get_header();
                         <i class="fa-solid fa-location-dot map-pin"></i>
                       </div>
                       <input type="checkbox" name="countries_list_trigger" id="countries_list_trigger">
-                      <ul class="countries-checkbox-list">
-                        
+                      <div class="countries-checkbox-list">
                         <template x-for="region in selectedRegionsData">
-                          <div class="region-list">
-                            <h3 x-text="region['region']" x-init="console.log(region['countries'])"></h3>
+                          <ul class="region-list">
+                            <li>
+                              <h3 x-text="region['region']" x-init="console.log(region['countries'])"></h3>
+                            </li>
                             <template x-for="countryName in region['countries']">
                               <li>
                                 <span class="custom-checkbox">
                                   <input type="checkbox" @change="performSearch()" x-model="selectedCountries" x-bind:value="sanitizeTitle(countryName)" x-bind:name="sanitizeTitle(countryName)" x-bind:id="sanitizeTitle(countryName)">
                                   <label x-bind:for="sanitizeTitle(countryName)" class="checkmark"></label>
                                 </span>
-                                <label x-bind:for="sanitizeTitle(countryName)" x-text="countryName"></label>
+                                <label x-bind:for="sanitizeTitle(countryName)" x-text="capitalizeString(countryName)"></label>
                               </li>
                             </template>
-                          </div>
+                          </ul>
                         </template>
-                      </ul>
+                      </div>
                     </div>
                   <?php
                 }
@@ -555,47 +594,48 @@ get_header();
                 <p>Não foi possível encontrar um programa correspondente</p>
               </div>
             </div>
-            <ul class="cards-grid">
+            <div class="cards-grid">
               <template x-for="postMeta in limitedPostsMeta">
-                <li x-init="console.log()" class="card" x-data="{
+                <div x-init="console.log()" class="card" x-data="{
                   qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
                   qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
                   isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
                   cardImgHeight: 0
                 }">
-                  <!-- <img class="card-img" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card"> -->
-                  <div class="card-img">
-                    <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-                    <span x-show="isHighlightedPost" class="highlight-stamp">
-                      DESTAQUE
-                    </span>
-                  </div>
-                  <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
-                      <div class="initial-description">
-                          <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
-                          <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>
-                          <strong><?= $category_title ?></strong>
-                      </div>
-                      <div class="complementary-description">
-                          <strong>Duração</strong>
-                          <p x-text="`${qtdDiasPrograma} dias / ${qtdNoitesPrograma} noites`"></p>
-                      </div>
-                      <div class="complementary-description">
-                          <strong>Visitando</strong>
-                          <p x-html="postMeta['PostData']['ProgramInfo']['Detalhes'].replace('\n', '<br />')"></p>
-                      </div>
-                      <div class="complementary-description">
-                          <strong>Saídas</strong>
-                          <p x-html="postMeta['PostData']['ProgramInfo']['SaidasPrograma'].replace('\n', '<br />')"></p>
-                      </div>
-                      <p class="additional-info"></p>
-                      <div class="spacer"></div>
-                      <a x-bind:href="postMeta['Link']" class="card-cta">Saiba mais</a>
-                  </div>
-                </li>
+                  <a class="post-link" x-bind:href="postMeta['Link']">
+                    <div class="card-img">
+                      <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
+                      <span x-show="isHighlightedPost" class="highlight-stamp">
+                        DESTAQUE
+                      </span>
+                    </div>
+                    <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
+                        <div class="initial-description">
+                            <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
+                            <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>
+                            <strong><?= $category_title ?></strong>
+                        </div>
+                        <div class="complementary-description">
+                            <strong>Duração</strong>
+                            <p x-text="`${qtdDiasPrograma} dias / ${qtdNoitesPrograma} noites`"></p>
+                        </div>
+                        <div class="complementary-description">
+                            <strong>Visitando</strong>
+                            <p x-html="postMeta['PostData']['ProgramInfo']['Detalhes'].replace('\n', '<br />')"></p>
+                        </div>
+                        <div class="complementary-description">
+                            <strong>Saídas</strong>
+                            <p x-html="postMeta['PostData']['ProgramInfo']['SaidasPrograma'].replace('\n', '<br />')"></p>
+                        </div>
+                        <p class="additional-info"></p>
+                        <div class="spacer"></div>
+                        <button class="card-cta">Saiba mais</button>
+                    </div>
+                  </a>
+                </div>
               </template>
 
-            </ul>
+            </div>
 
             
         </article>

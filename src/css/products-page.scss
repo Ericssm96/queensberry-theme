@@ -453,6 +453,7 @@ main {
             display: flex;
             align-items: center;
             column-gap: 5px;
+            text-transform: capitalize;
           }
         }
 
@@ -465,9 +466,17 @@ main {
           max-height: 0;
           transition: all 0.3s ease;
           overflow: hidden;
+          text-transform: capitalize;
 
           .region-list {
             padding-bottom: 10px;
+            row-gap: 5px;
+            display: flex;
+            flex-direction: column;
+
+            label {
+              text-transform: capitalize;
+            }
           }
 
           .custom-checkbox {
@@ -509,6 +518,10 @@ main {
             display: flex;
             align-items: center;
             column-gap: 5px;
+            
+            label {
+              text-transform: capitalize;
+            }
           }
         }
       }
@@ -532,6 +545,7 @@ main {
         border: none;
         border-bottom: 1px solid black;
         font-size: 14px;
+        background-color: transparent;
 
         ::placeholder {
           color: #6C757D;
@@ -666,6 +680,12 @@ main {
       .card {
         background-color: white;
         font-family: $roboto;
+        
+        .post-link {
+          display: block;
+          text-decoration: none;
+          height: 100%;
+        }
 
         .card-img {
           aspect-ratio: 1 / 1;
@@ -771,10 +791,10 @@ main {
             text-transform: uppercase;
             border-radius: 5px;
             justify-self: flex-end;
+            border: 0px solid black;
+            cursor: pointer;
           }
         }
-
-
       }
     }
   }

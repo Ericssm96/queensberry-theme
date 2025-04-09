@@ -1098,3 +1098,101 @@
 .mb-currency-field .quotation-date {
   font-size: 19px;
 }/*# sourceMappingURL=home-page.css.map */
+
+.mini-popup {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+    -webkit-transition: all ease-in-out 300ms;
+    -moz-transition: all ease-in-out 300ms;
+    -o-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms
+}
+
+.mini-popup img {
+    -webkit-box-shadow: -2px 5px 25px 5px rgba(0,0,0,.62);
+    box-shadow: -2px 5px 25px 5px rgba(0,0,0,.62)
+}
+
+.popup-rotativo img {
+    border-radius: 15px
+}
+
+@media only screen and (max-width: 480px) {
+    .mini-popup {
+        left:50%!important;
+        top: 72%!important;
+        transform: translate(-50%,-50%)
+    }
+
+    .mini-popup img {
+        width: 80vw
+    }
+
+    .popup-rotativo__imagem--desktop {
+        display: none
+    }
+
+    .mini-popup--alerta {
+        z-index: 1100;
+        margin: 0 auto;
+        display: flex!important;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        left: initial!important;
+        bottom: 0!important;
+        background: #000000a3
+    }
+
+    .popup-rotativo--alerta {
+        height: initial!important;
+        display: flex;
+        flex-direction: column
+    }
+
+    .fecharBlog--alerta {
+        width: 25px!important;
+        position: relative!important;
+        top: initial!important
+    }
+}
+
+@media(max-width: 700px) {
+    .mini-popup>a>img {
+        width:173px;
+        height: 136px
+    }
+}
+
+@media(max-width: 576px) {
+    .mini-popup {
+        bottom:5px;
+        left: 5px
+    }
+
+    .mini-popup>a>img {
+        width: 151px;
+        height: 119px
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .popup-rotativo__imagem--mobile {
+        display:none
+    }
+}
+
+.mini-popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #99d02c;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 30px;
+    height: 30px
+}

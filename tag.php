@@ -35,10 +35,18 @@ if(have_posts()){
 
       return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
     });
+    $program_name = $program_info["Descricao"];
 
     $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
+
+
+    if(sanitize_title($program_name) === "nova-zelandia-de-norte-a-sul") {
+      $program_log_image_folder = "AUSTRALIA_E_NOVA_ZELANDIA";
+    }
+
+
     $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
     $card_image_file_name = $program_info["CaminhoImagem"];
 
@@ -55,6 +63,14 @@ if(have_posts()){
       "RegionInfo" => $region_info
     ];
   }
+
+  usort($posts_metadata, function ($a, $b) {
+  $titleA = $a['PostData']['ProgramInfo']['Descricao'] ?? '';
+  $titleB = $b['PostData']['ProgramInfo']['Descricao'] ?? '';
+  return strcmp($titleA, $titleB);
+});
+
+
 }
 
 $json_posts_meta = json_encode($posts_metadata, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
@@ -281,7 +297,7 @@ get_header();
           <ul class="checkbox-list">
             <?php
             foreach($valid_categories_list as $category_info) {
-              $category_title = $category_info['CategoriaDescricao'];
+              $category_title = capitalize_pt_br_string($category_info['CategoriaDescricao']);
               $sanitized_cat_title = sanitize_title($category_title);
               echo <<<ELEMENT
               <li>
@@ -305,7 +321,7 @@ get_header();
             </li>
             <?php
             foreach($countries_in_region as $country_info) {
-              $country_name = $country_info['pais'];
+              $country_name = capitalize_pt_br_string($country_info['pais']);
               $sanitized_country_name = sanitize_title($country_name);
 
               if($country_name === $tag_title) {
@@ -350,39 +366,50 @@ get_header();
           <p>Não foi possível encontrar um programa correspondente</p>
         </div>
       </div>
-      <ul class="cards-grid">
+      <div class="cards-grid">
         <template x-for="postMeta in postsMeta">
-          <li class="card" x-data="{
+          <div class="card" x-data="{
             qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
             qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
+            isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
             cardImgHeight: 0
+          }" x-show="sanitizeTitle(postMeta['PostData']['ProgramInfo']['Descricao']) !== 'nova-zelandia-express'" x-init="
+          if(sanitizeTitle(postMeta['PostData']['ProgramInfo']['Descricao']) !== 'nova-zelandia-de-norte-a-sul') {
+            postMeta['CardImageUrl']
           }">
-            <img class="card-img" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-            <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
-                <div class="initial-description">
-                    <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
-                    <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>
-                    <strong x-text="postMeta['PostData']['CategoryInfo']['Titulo']"></strong>
-                </div>
-                <div class="complementary-description">
-                    <strong>Duração</strong>
-                    <p x-text="`${qtdDiasPrograma} dias / ${qtdNoitesPrograma} noites`"></p>
-                </div>
-                <div class="complementary-description">
-                    <strong>Visitando</strong>
-                    <p x-html="postMeta['PostData']['ProgramInfo']['Detalhes'].replace('\n', '<br />')"></p>
-                </div>
-                <div class="complementary-description">
-                    <strong>Saídas</strong>
-                    <p x-html="postMeta['PostData']['ProgramInfo']['SaidasPrograma'].replace('\n', '<br />')"></p>
-                </div>
-                <p class="additional-info"></p>
-                <div class="spacer"></div>
-                <a x-bind:href="postMeta['Link']" class="card-cta">Saiba mais</a>
-            </div>
-          </li>
+            <a x-bind:href="postMeta['Link']" class="post-link">
+              <div class="card-img">
+                <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
+                <span x-show="isHighlightedPost" class="highlight-stamp">
+                  DESTAQUE
+                </span>
+              </div>
+              <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
+                  <div class="initial-description">
+                      <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
+                      <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>
+                      <strong x-text="postMeta['PostData']['CategoryInfo']['Titulo']"></strong>
+                  </div>
+                  <div class="complementary-description">
+                      <strong>Duração</strong>
+                      <p x-text="`${qtdDiasPrograma} dias / ${qtdNoitesPrograma} noites`"></p>
+                  </div>
+                  <div class="complementary-description">
+                      <strong>Visitando</strong>
+                      <p x-html="postMeta['PostData']['ProgramInfo']['Detalhes'].replace('\n', '<br />')"></p>
+                  </div>
+                  <div class="complementary-description">
+                      <strong>Saídas</strong>
+                      <p x-html="postMeta['PostData']['ProgramInfo']['SaidasPrograma'].replace('\n', '<br />')"></p>
+                  </div>
+                  <p class="additional-info"></p>
+                  <div class="spacer"></div>
+                  <button class="card-cta">Saiba mais</button>
+              </div>
+            </a>
+          </div>
         </template>
-      </ul>
+      </div>
     </article>
   </section>
 </main>

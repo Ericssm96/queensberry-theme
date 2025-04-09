@@ -104,21 +104,39 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </script>
       SCRIPT;
     } else {
-      echo <<<SCRIPT
-      <script>
-        var clientId1;
-        var clientId2;
-        var clientId3;
-
-        var recaptchaCallback = function() {
-          clientId1 = grecaptcha.render('recaptcha-box-1', {
-            'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-            'theme' : 'dark',
-            'size': 'compact'
-          });
-        }
-      </script>
-      SCRIPT;
+      if(is_home()) {
+        echo <<<SCRIPT
+        <script>
+          var clientId1;
+          var clientId2;
+          var clientId3;
+  
+          var recaptchaCallback = function() {
+            clientId1 = grecaptcha.render('recaptcha-box-1', {
+              'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
+              'theme' : 'dark',
+              'size': 'compact'
+            });
+          }
+        </script>
+        SCRIPT;
+      } else {
+        echo <<<SCRIPT
+        <script>
+          var clientId1;
+          var clientId2;
+          var clientId3;
+  
+          var recaptchaCallback = function() {
+            clientId1 = grecaptcha.render('recaptcha-box-1', {
+              'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
+              'theme' : 'dark',
+              'size': 'compact'
+            });
+          }
+        </script>
+        SCRIPT;
+      }
     }
   }
   ?>
@@ -262,7 +280,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
                   <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
                   <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
                   <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil In</a></li>
-                  <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzeiros</a></li>
+                  <li><a href="<?= home_url(); ?>/category/maritimo">Cruzeiros</a></li>
                 </ul>
                 <div class="right-col">
                   <header>
@@ -270,25 +288,25 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
                   </header>
                   <ul class="cards-area">
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=4-conti">
+                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-4-continentes.png" alt="Imagem Promocional Grupo Brasil no Mundo - 4 Continentes" />
                       </a>
                       <p>4 continentes 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=europa">
+                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=europa-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-europa.png" alt="Imagem Promocional Grupo Brasil no Mundo - Europa" />
                       </a>
                       <p>Europa 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=baixa-temporada">
+                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-baixa-temporada.png" alt="Imagem Promocional Grupo Brasil no Mundo - Baixa Temporada" />
                       </a>
                       <p>Baixa Temporada 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=slow-travel">
+                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-slow-travel.png" alt="Imagem Promocional Grupo Brasil no Mundo - Slow Travel" />
                       </a>
                       <p>Slow Travel 2025</p>

@@ -41,7 +41,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </video>
       <article class="gbm-cta">
         <strong>GBM 2025</strong>
-        <a href="#" rel="noreferrer" target="_blank">Saiba mais</a>
+        <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo" rel="noreferrer" target="_blank">Saiba mais</a>
       </article>
     </section>
     <article class="mb-currency-field">
@@ -83,12 +83,18 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
             <?php
             foreach($categories_list as $category) {
               $cat_title = $category["Titulo"];
+
+              // Pula o card se for "Contiki - Especial para Jovens"
+              if (stripos($cat_title, 'Contiki') !== false && stripos($cat_title, 'Especial para Jovens') !== false) {
+                continue;
+              }
+
               $cat_description = $category["SubTitulo"];
               $sanitized_cat_title = sanitize_title($category["CategoriaDescricao"]);
               $cat_img_file_name = $category["ImagemHome"];
               $cat_img_folder = $category["PastaImagens"];
               $cat_img_url = "https://www.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
-              
+
               $cat_page_url = home_url() . "/category/$sanitized_cat_title";
               if($cat_img_file_name !== "") {
                 echo <<<SWIPER_SLIDE
@@ -234,6 +240,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
         </div>
       </div>
     </section>
+
 
     <!-- PALAVRA DO ESPECIALISTA -->
 
@@ -638,5 +645,22 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </script>
     </section>
   </main>
+
+  <div class="mini-popup">
+    <div class="popup-rotativo">
+            <button class="mini-popup-close-btn" onclick="fecharMiniPopup()"> X </button>
+            <a href="<?= home_url(); ?>/category/disney" target="_blank">
+                <img src="<?= get_template_directory_uri(); ?>/src/img/popupdisney.png">
+            </a>
+    </div>
+</div>
+<script>
+  function fecharMiniPopup() {
+    const popup = document.querySelector('.mini-popup');
+    if (popup) {
+      popup.style.display = 'none';
+    }
+  }
+</script>
 
   <?php get_footer(); ?>

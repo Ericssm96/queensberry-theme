@@ -68,7 +68,7 @@ get_header(); ?>
     <div class="overlay"></div>
       <div class="wrapper">
           <strong>Quem já viajou possui pontos acumulados. <br> Quanto mais você viajar, mais você vai ganhar.</strong>
-          <button class="btn">Consulte seus pontos</button>
+          <button class="btn button" disabled >Em manutenção</button>
       </div>
   </article>
   <section class="testimonials" x-data="{
@@ -139,5 +139,11 @@ get_header(); ?>
       </div>
     </section>
 </main>
+
+<style>
+.button{
+cursor: not-allowed	!important;
+}
+</style>
 
 <?php get_footer(); ?>
