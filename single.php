@@ -59,14 +59,14 @@ if (is_single()) {
     $log_img_file_name = $image_gallery_files[0]['Descricao'];
     
     $attraction_description_list = array_filter($program_notes, function($note) {
-      return $note["NotaDescricao"] == "ATRAÇÕES";
+      return $note["ProgramaDescricao"] == "Atrações" && $note["NotaDescricao"] !== "DESATIVADO";
     });
     $itinerary_info_list = array_filter($program_notes, function($note) {
-      return $note["ProgramaDescricao"] == "Roteiro Dia-a-Dia";
+      return $note["ProgramaDescricao"] == "Roteiro Dia-a-Dia" && $note["NotaDescricao"] !== "DESATIVADO" && str_contains($note["NotaDescricao"], "DIA");
     });
     $itinerary_info_list = array_values($itinerary_info_list);
     $services_info_list = array_filter($program_notes, function($note) {
-      return $note["ProgramaDescricao"] == "Serviços";
+      return $note["ProgramaDescricao"] == "Serviços" && $note["NotaDescricao"] !== "DESATIVADO";
     });
 
     $attractions_note_contents = [];
