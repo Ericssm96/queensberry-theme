@@ -224,12 +224,6 @@ $json_early_posts_meta = json_encode($early_posts_metadata, JSON_UNESCAPED_SLASH
                 </span>
               </div>
               <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
-              <div class="card-img">
-                <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-                <span x-show="isHighlightedPost" class="highlight-stamp">
-                  DESTAQUE
-                </span>
-              </div>
                   <div class="initial-description">
                       <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
                       <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>
