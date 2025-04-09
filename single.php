@@ -69,7 +69,7 @@ if (is_single()) {
       return $note["ProgramaDescricao"] == "Serviços";
     });
 
-    $services_note_contents = [];
+    /* $services_note_contents = [];
     $temporary_index = [];
 
     foreach ($services_info_list as $service_info) {
@@ -88,8 +88,57 @@ if (is_single()) {
         }
     }
 
-    unset($temporary_index);
+    unset($temporary_index); */
 
+    $services_note_contents = [];
+/* 
+    foreach ($services_info_list as $service_info) {
+        $title = $service_info['NotaDescricao'];
+        $text = $service_info['NotaTextoDescricao'];
+        
+        // Check if this title already exists in the new array
+        $found = false;
+        foreach ($services_note_contents as &$note_content) {
+            if ($note_content['NotaDescricao'] === $title) {
+                $note_content['NotaTextoDescricao'] .= $text; // Append the text
+                $found = true;
+            }
+        }
+        
+        // If title wasn't found, add a new entry
+        if (!$found) {
+            $services_note_contents[] = [
+                'Titulo' => $title,
+                'Conteudo' => $text
+            ];
+        }
+    } */
+
+    foreach ($services_info_list as $service_info) {
+        $title = $service_info['NotaDescricao'];
+        $text = $service_info['NotaTextoDescricao'];
+        
+        // Check if this title already exists in $post_contents
+        $found_key = null;
+        foreach ($services_note_contents as $key => $post) {
+            if ($post['NotaDescricao'] === $title) {
+                $found_key = $key;
+                break;
+            }
+        }
+        
+        if ($found_key !== null) {
+            // Append the text to the existing entry
+            $services_note_contents[$found_key]['NotaTextoDescricao'] .= $text;
+        } else {
+            // Add a new entry
+            $services_note_contents[] = [
+                'NotaDescricao' => $title,
+                'NotaTextoDescricao' => $text
+            ];
+        }
+    }
+  
 
     $gallery_image_list = array_slice($image_gallery_files, 1);
 
@@ -185,11 +234,6 @@ if (is_single()) {
       </div>
     </header>
 
-    <?php
-    var_dump($services_note_contents);
-    ?>
-
-
     <section class="quick-info">
       <div class="wrapper">
         <div class="info-area">
@@ -284,9 +328,9 @@ if (is_single()) {
             </div>
             <div class="tab" x-show="selectedTab === 'services'">
               <?php
-              foreach($services_info_list as $service_info):
-                $service_topic = $service_info["NotaDescricao"];
-                $info_text = $service_info["NotaTextoDescricao"];
+              foreach($services_note_contents as $service_note):
+                $service_topic = $service_note["NotaDescricao"];
+                $info_text = $service_note["NotaTextoDescricao"];
 
                 $info_text = str_replace("\n", "<br />", $info_text);
 
