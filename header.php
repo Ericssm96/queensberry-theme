@@ -104,21 +104,40 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </script>
       SCRIPT;
     } else {
-      echo <<<SCRIPT
-      <script>
-        var clientId1;
-        var clientId2;
-        var clientId3;
-
-        var recaptchaCallback = function() {
-          clientId1 = grecaptcha.render('recaptcha-box-1', {
-            'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-            'theme' : 'dark',
-            'size': 'compact'
-          });
-        }
-      </script>
-      SCRIPT;
+      if(is_home()) {
+        echo <<<SCRIPT
+        <script>
+          var clientId1;
+          var clientId2;
+          var clientId3;
+  
+          var recaptchaCallback = function() {
+            clientId1 = grecaptcha.render('recaptcha-box-1', {
+              'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
+              'theme' : 'dark',
+              'size': 'compact'
+            });
+          }
+        </script>
+        SCRIPT;
+      } else {
+        echo <<<SCRIPT
+        <script>
+          var clientId1;
+          var clientId2;
+          var clientId3;
+  
+          var recaptchaCallback = function() {
+            clientId1 = grecaptcha.render('recaptcha-box-1', {
+              'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
+              'theme' : 'dark',
+              'size': 'compact'
+            });
+          }
+        </script>
+        SCRIPT;
+      }
+      
     }
   }
   ?>

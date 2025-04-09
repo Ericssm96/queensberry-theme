@@ -30,9 +30,7 @@ $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"])
 $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
 ?>
     <div class="video-overlay"></div>
-    <main x-init="setTimeout(()=>{
-      isModalOpen = true;
-    }, 5000)">
+    <main>
     <section class="banner">
       <video id="video" poster="https://www.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
         <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.webm"

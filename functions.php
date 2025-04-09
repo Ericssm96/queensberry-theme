@@ -1528,6 +1528,7 @@ function refresh_category_pages_plugin_content() {
 function handle_custom_button_click() {
     if (isset($_POST['refresh_cache_btn'])) {
         update_cache_files(); // Call your custom function here
+        update_world_regions();
         generate_countries_list();
 
         add_action('admin_notices', function() {
