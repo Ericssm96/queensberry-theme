@@ -32,7 +32,7 @@
           <div>
             <h2>Serviços</h2>
             <ul class="nav-links">
-              <li><a href="<?= home_url(); ?>">Folhetos & Cadernos</a></li>
+              <li><a href="<?= home_url(); ?>/folhetos-e-cadernos">Folhetos & Cadernos</a></li>
               <li><a href="<?= home_url(); ?>/formularios">Formulários</a></li>
               <li><a href="<?= home_url(); ?>/queensclub/">Queens Club</a></li>
               <li><a href="https://blog.queensberry.com.br/" target="_blank" rel="noopener">Blog</a></li>
