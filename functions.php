@@ -116,6 +116,10 @@ function qb_assets_queue()
         wp_enqueue_style('qb-about-us', get_template_directory_uri() . "/src/css/group-identity.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
+    if(is_page('folhetos-e-cadernos')) {
+        wp_enqueue_style('qb-flyers-page', get_template_directory_uri() . "/src/css/flyers-and-logs.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
     if(is_page('queensclub')) {
         wp_enqueue_style('qb-about-us', get_template_directory_uri() . "/src/css/queensclub.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
@@ -615,6 +619,33 @@ function get_form_files_array() {
     curl_close($curl_forms_files_data);
 
     return $response["Formularios"]["Formularios"]; 
+}
+
+function get_flyers_array() {
+    $url = "https://gx.befly.com.br/bsi/rest/wsFolhetos";
+
+    $flyers_req_payload = [
+        "Token" => "e9cf3b5a-9408-472f-8dd3-b5f36ff75698"
+    ];
+
+    $req_headers = [
+        "Content-Type: application/json"
+    ];
+    
+    $curl_flyers_req = curl_init();
+
+    curl_setopt($curl_flyers_req, CURLOPT_URL, $url);
+    curl_setopt($curl_flyers_req, CURLOPT_POST, true);
+    curl_setopt($curl_flyers_req, CURLOPT_POSTFIELDS, json_encode($flyers_req_payload));
+    curl_setopt($curl_flyers_req, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl_flyers_req, CURLOPT_HTTPHEADER, $req_headers);
+
+    $response_json = curl_exec($curl_flyers_req);
+    $response = json_decode($response_json, true);
+
+    curl_close($curl_flyers_req);
+
+    return $response["Folhetos"]["Folhetos"]; 
 }
 
 function get_dolar_currency_conversion() {
