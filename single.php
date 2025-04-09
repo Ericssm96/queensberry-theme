@@ -238,8 +238,8 @@ if (is_single()) {
     <header style="background-image: url(<?= "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$banner_img_file_name" ?>);" class="product-page-banner">
       <div>
         <strong><?= $category_name ?></strong>
-        <h1><?= $program_name ?></h1>
-        <p><?= $quick_description ?></p>
+        <h1 class="titulo-principal"><?= $program_name ?></h1>
+        <p class="descricao-principal"><?= $quick_description ?></p>
       </div>
     </header>
 
@@ -247,15 +247,15 @@ if (is_single()) {
       <div class="wrapper">
         <div class="info-area">
           <strong>Duração</strong>
-          <p><?= $days_qtty ?> dias / <?= $nights_qtty ?> noites</p>
+          <p class="duracao-conteudo"><?= $days_qtty ?> dias / <?= $nights_qtty ?> noites</p>
         </div>
         <div class="info-area">
           <strong>Visitando</strong>
-          <p><?= $visit_details_quick_info ?></p>
+          <p class="visitando-conteudo"><?= $visit_details_quick_info ?></p>
         </div>
         <div class="info-area">
           <strong>Saídas</strong>
-          <p><?= $program_outings_info ?></p>
+          <p class="saida-conteudo"><?= $program_outings_info ?></p>
         </div>
         <div class="info-area">
           <strong>Tempo e clima</strong>
@@ -320,7 +320,7 @@ if (is_single()) {
               ?>
               </div>
             </div>
-            <div class="tab" x-show="selectedTab === 'itinerary'">
+            <div class="tab roteiro" x-show="selectedTab === 'itinerary'">
               <?php 
               for($i = 0; $i < count($itinerary_note_contents); $i++):
                 $itinerary_daily_info = $itinerary_note_contents[$i]['NotaTextoDescricao'];
@@ -339,7 +339,7 @@ if (is_single()) {
               endfor;
               ?>
             </div>
-            <div class="tab" x-show="selectedTab === 'services'">
+            <div class="tab services" x-show="selectedTab === 'services'">
               <?php
               foreach($services_note_contents as $service_note):
                 $service_topic = $service_note["NotaDescricao"];
@@ -364,7 +364,7 @@ if (is_single()) {
                 <strong>(<?= $category_name ?>)</strong>
                 <span class="close-icon"><i class="fa-solid fa-x" @click="$refs.priceTableModal.close()"></i></span>
               </div>
-              <div class="modal-content">
+              <div class="modal-content imagem">
                 <?php
                 foreach($price_table_image_files as $price_table_image_file) {
                   $price_img_file_name = $price_table_image_file["ImagemPrecoPrograma"];
@@ -996,6 +996,286 @@ $("#f_queensberry_recomendar_programa").on("submit", (e) => {
       </script>
 
     </section>
+
+    <script>
+
+      /*Código de controle do gerador do PDF*/
+
+      document.addEventListener("DOMContentLoaded", function () {
+      const icon = document.querySelector(".fa-solid.fa-print");
+      if (!icon) return;
+
+      icon.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      const pageHeight = doc.internal.pageSize.height;
+      const margin = 10;
+      let y = 20;
+
+      function checkPageSpace(lines, lineHeight = 6) {
+      const requiredSpace = lines.length * lineHeight;
+      if (y + requiredSpace > pageHeight - margin) {
+        doc.addPage();
+        y = margin;
+      }
+      }
+
+      const dataHora = new Date().toLocaleString();
+      const titulo = document.querySelector(".titulo-principal")?.innerText || '';
+      const descricao = document.querySelector(".descricao-principal")?.innerText || '';
+      const categoria = document.querySelector(".categoria")?.innerText || '';
+      const visitando = document.querySelector(".visitando-conteudo")?.innerText || '';
+      const saida = document.querySelector(".saida-conteudo")?.innerText || '';
+      const duracao = document.querySelector(".duracao-conteudo")?.innerText || '';
+
+      doc.setFontSize(10);
+      doc.text(`Gerado em: ${dataHora}`, margin, 10);
+
+      doc.setFont(undefined, "bold");
+      doc.setFontSize(16);
+      doc.text(titulo, margin, y);
+
+      y += 8;
+      doc.setFont(undefined, "normal");
+      doc.setFontSize(11);
+      let desc = doc.splitTextToSize(descricao, 180);
+      checkPageSpace(desc);
+      doc.text(desc, margin, y);
+      y += desc.length * 6;
+
+      const blocos = [
+      { label: "CATEGORIA", text: categoria },
+      { label: "VISITANDO", text: visitando },
+      { label: "SAÍDA", text: saida },
+      { label: "DURAÇÃO", text: duracao }
+      ];
+
+      blocos.forEach(({ label, text }) => {
+      y += 10;
+      doc.setFont(undefined, "bold");
+      doc.setFontSize(12);
+      doc.text(label, margin, y);
+      y += 6;
+
+      doc.setFont(undefined, "normal");
+      doc.setFontSize(11);
+      const lines = doc.splitTextToSize(text, 180);
+      checkPageSpace(lines);
+      doc.text(lines, margin, y);
+      y += lines.length * 6;
+      });
+
+      // Atrações
+      const atracoesContainer = document.querySelector('.topic');
+      if (atracoesContainer) {
+      const h2 = atracoesContainer.querySelector('h2')?.innerText.toUpperCase() || '';
+      const paragrafos = atracoesContainer.querySelectorAll('p');
+
+      y += 10;
+      doc.setFont(undefined, "bold");
+      doc.setFontSize(12);
+      doc.text(h2, margin, y);
+      y += 6;
+
+      doc.setFont(undefined, "normal");
+      doc.setFontSize(11);
+      let atracoes = '';
+      paragrafos.forEach(p => {
+        atracoes += p.innerText + '\n\n';
+      });
+      const linhas = doc.splitTextToSize(atracoes.trim(), 180);
+      checkPageSpace(linhas);
+      doc.text(linhas, margin, y);
+      y += linhas.length * 6;
+      }
+
+      // Serviços
+      const servicosTab = document.querySelector('.tab.services');
+      if (servicosTab) {
+      const blocosServicos = servicosTab.querySelectorAll('.topic');
+
+      blocosServicos.forEach(bloco => {
+        const tituloServico = bloco.querySelector('h2')?.innerText.toUpperCase() || '';
+        const textoServico = bloco.querySelector('p')?.innerText || '';
+
+        y += 10;
+        doc.setFont(undefined, "bold");
+        doc.setFontSize(12);
+        doc.text(tituloServico, margin, y);
+        y += 6;
+
+        doc.setFont(undefined, "normal");
+        doc.setFontSize(11);
+        const linhasTexto = doc.splitTextToSize(textoServico.trim(), 180);
+        checkPageSpace(linhasTexto);
+        doc.text(linhasTexto, margin, y);
+        y += linhasTexto.length * 6;
+      });
+      }
+
+      // Roteiro
+      const roteiroTab = document.querySelector('.tab.roteiro');
+      if (roteiroTab) {
+      const blocosRoteiro = roteiroTab.querySelectorAll('.topic');
+
+      y += 10;
+      doc.setFont(undefined, "bold");
+      doc.setFontSize(12);
+      doc.setTextColor(85, 107, 47); // verde oliva
+      doc.text("ROTEIRO DIA-A-DIA", margin, y);
+      y += 6;
+      doc.setTextColor(0, 0, 0); // reset cor para preto
+
+      blocosRoteiro.forEach(bloco => {
+        const tituloRoteiro = bloco.querySelector('h2')?.innerText || '';
+        const textoRoteiro = bloco.querySelector('p')?.innerText || '';
+
+        y += 10;
+        doc.setFont(undefined, "bold");
+        doc.setFontSize(12);
+        doc.text(tituloRoteiro, margin, y);
+        y += 6;
+
+        doc.setFont(undefined, "normal");
+        doc.setFontSize(11);
+        const linhasTexto = doc.splitTextToSize(textoRoteiro.trim(), 180);
+        checkPageSpace(linhasTexto);
+        doc.text(linhasTexto, margin, y);
+        y += linhasTexto.length * 6;
+      });
+      }
+
+      const nomeArquivo = titulo.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+
+      // Tabelas de preço (imagens)
+      const imagemContainer = document.querySelector('.modal-content.imagem');
+      if (imagemContainer) {
+      const imagens = imagemContainer.querySelectorAll('img');
+
+      (async () => {
+        for (const img of imagens) {
+          await new Promise(resolve => {
+            const image = new Image();
+            image.crossOrigin = 'anonymous';
+
+            image.onload = function () {
+              const ratio = image.width / image.height;
+              const targetWidth = 180;
+              const targetHeight = targetWidth / ratio;
+
+              if (y + targetHeight > pageHeight - margin) {
+                doc.addPage();
+                y = margin;
+              }
+
+              const canvas = document.createElement('canvas');
+              canvas.width = image.width;
+              canvas.height = image.height;
+              const ctx = canvas.getContext('2d');
+              ctx.drawImage(image, 0, 0);
+              const imgData = canvas.toDataURL('image/jpeg');
+
+              doc.addImage(imgData, 'JPEG', margin, y, targetWidth, targetHeight);
+              y += targetHeight + 5;
+              resolve();
+            };
+
+            image.src = img.src;
+          });
+        }
+
+        
+      const totalPages = doc.internal.getNumberOfPages();
+
+      for (let i = 1; i <= totalPages; i++) {
+      doc.setPage(i);
+      doc.setFontSize(10);
+      doc.setTextColor(150);
+      doc.text(`Página ${i} de ${totalPages}`, 200, pageHeight - 10, { align: "right" });
+      }
+
+      let finalY = y + 20;
+      if (finalY + 40 > pageHeight - margin) {
+      doc.addPage();
+      finalY = 40;
+      }
+
+      doc.setFont(undefined, "normal");
+      doc.setFontSize(11);
+      doc.setTextColor(0, 0, 0);
+      doc.text("Veja este e outros roteiros no nosso site:", 105, finalY, { align: "center" });
+      finalY += 6;
+
+      doc.setTextColor(0, 0, 255);
+      doc.textWithLink("www.queensberry.com.br", 105, finalY, { url: "https://www.queensberry.com.br", align: "center" });
+      doc.setTextColor(0, 0, 0);
+      finalY += 6;
+
+      doc.text("Veja a versão ONLINE do folheto impresso:", 105, finalY, { align: "center" });
+      finalY += 6;
+      doc.text("Folhetos", 105, finalY, { align: "center" });
+      finalY += 6;
+      doc.text("Condições Gerais para Viagens Internacionais", 105, finalY, { align: "center" });
+      finalY += 10;
+
+      doc.setFont(undefined, "bold");
+      doc.text("ATENÇÃO - Preços Sujeitos a Disponibilidade e Alteração Sem Aviso Prévio", 105, finalY, { align: "center" });
+
+      doc.save(`${nomeArquivo}.pdf`);
+
+      })();
+
+      return;
+      }
+
+
+      const totalPages = doc.internal.getNumberOfPages();
+
+      for (let i = 1; i <= totalPages; i++) {
+      doc.setPage(i);
+      doc.setFontSize(10);
+      doc.setTextColor(150);
+      doc.text(`Página ${i} de ${totalPages}`, 200, pageHeight - 10, { align: "right" });
+      }
+
+      let finalY = y + 20;
+      if (finalY + 40 > pageHeight - margin) {
+      doc.addPage();
+      finalY = 40;
+      }
+
+      doc.setFont(undefined, "normal");
+      doc.setFontSize(11);
+      doc.setTextColor(0, 0, 0);
+      doc.text("Veja este e outros roteiros no nosso site:", 105, finalY, { align: "center" });
+      finalY += 6;
+
+      doc.setTextColor(0, 0, 255);
+      doc.textWithLink("www.queensberry.com.br", 105, finalY, { url: "https://www.queensberry.com.br", align: "center" });
+      doc.setTextColor(0, 0, 0);
+      finalY += 6;
+
+      doc.text("Veja a versão ONLINE do folheto impresso:", 105, finalY, { align: "center" });
+      finalY += 6;
+      doc.text("Folhetos", 105, finalY, { align: "center" });
+      finalY += 6;
+      doc.text("Condições Gerais para Viagens Internacionais", 105, finalY, { align: "center" });
+      finalY += 10;
+
+      doc.setFont(undefined, "bold");
+      doc.text("ATENÇÃO - Preços Sujeitos a Disponibilidade e Alteração Sem Aviso Prévio", 105, finalY, { align: "center" });
+
+      doc.save(`${nomeArquivo}.pdf`);
+
+
+      });
+      });
+
+
+    </script>
   </main>
 
 <?php

@@ -31,7 +31,7 @@
     $site_title = strtoupper($site_title);
   ?>
   <title><?= $page_title . " - " . $site_title; ?></title>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </head>
 
