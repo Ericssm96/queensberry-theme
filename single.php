@@ -301,19 +301,23 @@ if (is_single()) {
           <div class="details">
             <div class="tab" x-show="selectedTab === 'attractions'">
               <div class="topic">
-                <h2>Atrações</h2>
-                <?php 
-                foreach($attraction_description_list as $attraction_description_item):
-                $attraction_description = $attraction_description_item['NotaTextoDescricao'];
-                $attraction_description = str_replace("\n", "<br />", $attraction_description);
+              <?php 
+              for($i = 0; $i < count($attractions_note_contents); $i++):
+                $attraction_info = $attractions_note_contents[$i]['NotaTextoDescricao'];
+                $topic_title = $attractions_note_contents[$i]['NotaDescricao'];
+                $attraction_info = str_replace("\n", "<br />", $attraction_info);
 
                 echo <<<ITEM_DESCRIPTION
-                <p>
-                  $attraction_description
-                </p>
+                <div class="topic">
+                  <h2>$topic_title</h2>
+
+                  <p>
+                    $attraction_info
+                  </p>
+                </div>
                 ITEM_DESCRIPTION;
-                endforeach;
-                ?>
+              endfor;
+              ?>
               </div>
             </div>
             <div class="tab" x-show="selectedTab === 'itinerary'">
