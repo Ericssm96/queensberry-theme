@@ -59,7 +59,7 @@ if (is_single()) {
     $log_img_file_name = $image_gallery_files[0]['Descricao'];
     
     $attraction_description_list = array_filter($program_notes, function($note) {
-      return $note["ProgramaDescricao"] == "Atrações";
+      return $note["NotaDescricao"] == "Atrações";
     });
     $itinerary_info_list = array_filter($program_notes, function($note) {
       return $note["ProgramaDescricao"] == "Roteiro Dia-a-Dia";
@@ -277,8 +277,8 @@ if (is_single()) {
             </div>
             <dialog class="price-table-modal" x-ref="priceTableModal">
               <div class="modal-header">
-                <h2>Aspen Snowmass</h2>
-                <strong>(Férias na Neve)</strong>
+                <h2><?= $program_name ?></h2>
+                <strong>(<?= $category_name ?>)</strong>
                 <span class="close-icon"><i class="fa-solid fa-x" @click="$refs.priceTableModal.close()"></i></span>
               </div>
               <div class="modal-content">
