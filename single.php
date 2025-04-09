@@ -69,50 +69,36 @@ if (is_single()) {
       return $note["ProgramaDescricao"] == "Serviços";
     });
 
-    /* $services_note_contents = [];
-    $temporary_index = [];
-
-    foreach ($services_info_list as $service_info) {
-        $service_title = $service_info['NotaDescricao'];
-        
-        if (isset($temporary_index[$title])) {
-            // Append to existing text
-            $services_note_contents[$temporary_index[$service_title]]['NotaTextoDescricao'] .= $service_info['NotaTextoDescricao'];
-        } else {
-            // Add new entry
-            $temporary_index[$service_title] = count($services_note_contents);
-            $services_note_contents[] = [
-                'TituloNota' => $title,
-                'ConteudoNota' => $service_info['NotaTextoDescricao']
-            ];
-        }
-    }
-
-    unset($temporary_index); */
-
+    $attractions_note_contents = [];
     $services_note_contents = [];
-/* 
-    foreach ($services_info_list as $service_info) {
-        $title = $service_info['NotaDescricao'];
-        $text = $service_info['NotaTextoDescricao'];
-        
-        // Check if this title already exists in the new array
-        $found = false;
-        foreach ($services_note_contents as &$note_content) {
-            if ($note_content['NotaDescricao'] === $title) {
-                $note_content['NotaTextoDescricao'] .= $text; // Append the text
-                $found = true;
-            }
-        }
-        
-        // If title wasn't found, add a new entry
-        if (!$found) {
-            $services_note_contents[] = [
-                'Titulo' => $title,
-                'Conteudo' => $text
-            ];
-        }
-    } */
+    $itinerary_note_contents = [];
+
+    // TODO: Make these blocks into a function
+
+    foreach ($attraction_description_list as $attraction_info) {
+      $title = $attraction_info['NotaDescricao'];
+      $text = $attraction_info['NotaTextoDescricao'];
+      
+      // Check if this title already exists in $post_contents
+      $found_key = null;
+      foreach ($attractions_note_contents as $key => $post) {
+          if ($post['NotaDescricao'] === $title) {
+              $found_key = $key;
+              break;
+          }
+      }
+      
+      if ($found_key !== null) {
+          // Append the text to the existing entry
+          $attractions_note_contents[$found_key]['NotaTextoDescricao'] .= $text;
+      } else {
+          // Add a new entry
+          $attractions_note_contents[] = [
+              'NotaDescricao' => $title,
+              'NotaTextoDescricao' => $text
+          ];
+      }
+  }
 
     foreach ($services_info_list as $service_info) {
         $title = $service_info['NotaDescricao'];
@@ -133,6 +119,31 @@ if (is_single()) {
         } else {
             // Add a new entry
             $services_note_contents[] = [
+                'NotaDescricao' => $title,
+                'NotaTextoDescricao' => $text
+            ];
+        }
+    }
+
+    foreach ($itinerary_info_list as $itinerary_info) {
+        $title = $itinerary_info['NotaDescricao'];
+        $text = $itinerary_info['NotaTextoDescricao'];
+        
+        // Check if this title already exists in $post_contents
+        $found_key = null;
+        foreach ($itinerary_note_contents as $key => $post) {
+            if ($post['NotaDescricao'] === $title) {
+                $found_key = $key;
+                break;
+            }
+        }
+        
+        if ($found_key !== null) {
+            // Append the text to the existing entry
+            $itinerary_note_contents[$found_key]['NotaTextoDescricao'] .= $text;
+        } else {
+            // Add a new entry
+            $itinerary_note_contents[] = [
                 'NotaDescricao' => $title,
                 'NotaTextoDescricao' => $text
             ];
@@ -223,8 +234,6 @@ if (is_single()) {
       ELEMENT;
     }
     ?>
-
-
     
     <header style="background-image: url(<?= "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$banner_img_file_name" ?>);" class="product-page-banner">
       <div>
@@ -309,9 +318,9 @@ if (is_single()) {
             </div>
             <div class="tab" x-show="selectedTab === 'itinerary'">
               <?php 
-              for($i = 0; $i < count($itinerary_info_list); $i++):
-                $itinerary_daily_info = $itinerary_info_list[$i]['NotaTextoDescricao'];
-                $topic_title = $itinerary_info_list[$i]['NotaDescricao'];
+              for($i = 0; $i < count($itinerary_note_contents); $i++):
+                $itinerary_daily_info = $itinerary_note_contents[$i]['NotaTextoDescricao'];
+                $topic_title = $itinerary_note_contents[$i]['NotaDescricao'];
                 $itinerary_daily_info = str_replace("\n", "<br />", $itinerary_daily_info);
 
                 echo <<<ITEM_DESCRIPTION
