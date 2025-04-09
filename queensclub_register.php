@@ -228,6 +228,7 @@ get_header(); ?>
               <label for="chkboxciv">Civilizações Antigas</label>
             </div>
           </div>
+          <div class="margin"></div>
         </div>
         <div>
           <div>
@@ -273,7 +274,7 @@ get_header(); ?>
 
       <!--  -->
 
-      <div>
+      <div class="aceito">
         <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES" required>
         <label for="RECEBER_COMUNICACOES">Aceito receber comunicações e
           informações da Queensberry</label>
@@ -481,7 +482,6 @@ get_header(); ?>
       #m_f_queensberry_cadastro_adin {
         display: flex;
         flex-direction: column;
-        gap: 16px;
       }
 
       #m_f_queensberry_cadastro_adin h2 {
@@ -495,7 +495,7 @@ get_header(); ?>
       }
 
       .title p {
-        font-family: "Roboto", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 400;
         font-size: 12px;
       }
@@ -503,13 +503,12 @@ get_header(); ?>
       #m_f_queensberry_cadastro_adin {
         display: flex;
         flex-direction: column;
-        gap: 31px;
       }
 
       #m_f_queensberry_cadastro_adin .column-100 {
         display: flex;
         flex-direction: column;
-        gap: 31px;
+        margin-bottom: 31px;
       }
 
       #m_f_queensberry_cadastro_adin .row-100 {
@@ -517,6 +516,11 @@ get_header(); ?>
         flex-direction: row;
         column-gap: 104px;
         width: 100%;
+        margin-top:31px;
+      }
+
+      #m_f_queensberry_cadastro_adin .margin{
+        margin-bottom: 31px;
       }
 
       #m_f_queensberry_cadastro_adin .cluster div div {
@@ -540,6 +544,12 @@ get_header(); ?>
         letter-spacing: -1px;
         text-transform: uppercase;
         margin: 0;
+        margin-top:31px;
+      }
+
+      #m_f_queensberry_cadastro_adin .aceito{
+        margin-top:31px;
+        margin-bottom:31px;
       }
 
       #m_f_queensberry_cadastro_adin h3 {
@@ -551,6 +561,8 @@ get_header(); ?>
         border: none;
         border-bottom: 1px solid #E5E9EF;
         border-radius: 0;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
         padding: 6px 2px;
         outline: none;
       }
@@ -564,7 +576,7 @@ get_header(); ?>
       select::placeholder,
       select {
         font-size: 14px;
-        font-family: "Sora", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 400;
 
       }
@@ -592,7 +604,7 @@ get_header(); ?>
         padding-left: 30px;
         /* Espaço para o círculo */
         cursor: pointer;
-        font-size: 16px;
+        font-size: 12px;
       }
 
       #m_f_queensberry_cadastro_adin input[type="radio"]+label::before {
@@ -601,8 +613,8 @@ get_header(); ?>
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
         border: 2px solid #999;
         /* Cor da borda quando não está selecionado */
@@ -648,7 +660,7 @@ get_header(); ?>
         position: relative;
         padding-left: 30px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 12px;
         color: #333;
       }
 
@@ -659,8 +671,8 @@ get_header(); ?>
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 18px;
-        height: 18px;
+        width: 14px;
+        height: 14px;
         border: 2px solid #d7dfe4;
         /* Cor da borda padrão */
         border-radius: 4px;
@@ -709,7 +721,7 @@ get_header(); ?>
         }
 
         .title p {
-          font-family: "Sora", sans-serif;
+          font-family: "Montserrat", sans-serif;
           font-weight: 400;
           font-size: 12px;
           text-align: end;
@@ -738,7 +750,7 @@ get_header(); ?>
           width: 100%;
           padding: 16px;
           color: #ffffff;
-          font-family: "Sora", sans-serif;
+          font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: 12px;
           margin-top: 32px;
@@ -752,7 +764,7 @@ get_header(); ?>
           text-transform: uppercase;
           padding: 16px;
           color: #ffffff;
-          font-family: "Sora", sans-serif;
+          font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: 12px;
         }

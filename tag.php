@@ -63,6 +63,14 @@ if(have_posts()){
       "RegionInfo" => $region_info
     ];
   }
+
+  usort($posts_metadata, function ($a, $b) {
+  $titleA = $a['PostData']['ProgramInfo']['Descricao'] ?? '';
+  $titleB = $b['PostData']['ProgramInfo']['Descricao'] ?? '';
+  return strcmp($titleA, $titleB);
+});
+
+
 }
 
 $json_posts_meta = json_encode($posts_metadata, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);

@@ -433,7 +433,25 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
           <div class="swiper-button-next"></div>
         </div> -->
     </div>
-  </section>
+  </section>  
 </main>
+
+<div class="mini-popup">
+    <div class="popup-rotativo">
+            <button class="mini-popup-close-btn" onclick="fecharMiniPopup()"> X </button>
+            <a href="<?= home_url(); ?>/category/disney" target="_blank">
+                <img src="<?= get_template_directory_uri(); ?>/src/img/popupdisney.png">
+            </a>
+    </div>
+</div>
+<script>
+  function fecharMiniPopup() {
+    const popup = document.querySelector('.mini-popup');
+    if (popup) {
+      popup.style.display = 'none';
+    }
+  }
+</script>
+
 
 <?php get_footer(); ?>

@@ -137,7 +137,6 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
         </script>
         SCRIPT;
       }
-      
     }
   }
   ?>

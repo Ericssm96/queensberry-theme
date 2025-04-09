@@ -562,11 +562,11 @@ get_header(); ?>
           <p>Brasília – Tel.: 61 3298-1515 | Goiânia – Tel.: 62 4016-2535</p>
           <br/>
           <p>João Jatobá</p>
-          <p>Tel.: 61 3298-1504 ou 61 98116-7780 ( João) </p> 
+          <p>Tel.: 61 3298-1504 ou 61 98116-7780 </p> 
           <p> E-mail: joao@pierviagens.com.br</p>
         </div>
         <div class="info-cluster">
-          <p>Daniel</p>
+          <p>Daniel Marrocos</p>
           <p>Tel.: 61 3298-1519 ou 61 98252-7980</p>
           <p>E-mail: daniel@pierviagens.com.br</p>
         </div>
