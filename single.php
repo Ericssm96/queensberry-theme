@@ -59,7 +59,7 @@ if (is_single()) {
     $log_img_file_name = $image_gallery_files[0]['Descricao'];
     
     $attraction_description_list = array_filter($program_notes, function($note) {
-      return $note["NotaDescricao"] == "Atrações";
+      return $note["NotaDescricao"] == "ATRAÇÕES";
     });
     $itinerary_info_list = array_filter($program_notes, function($note) {
       return $note["ProgramaDescricao"] == "Roteiro Dia-a-Dia";
@@ -68,6 +68,29 @@ if (is_single()) {
     $services_info_list = array_filter($program_notes, function($note) {
       return $note["ProgramaDescricao"] == "Serviços";
     });
+
+    $services_note_contents = [];
+    $temporary_index = [];
+
+    foreach ($services_info_list as $service_info) {
+        $service_title = $service_info['NotaDescricao'];
+        
+        if (isset($temporary_index[$title])) {
+            // Append to existing text
+            $services_note_contents[$temporary_index[$service_title]]['NotaTextoDescricao'] .= $service_info['NotaTextoDescricao'];
+        } else {
+            // Add new entry
+            $temporary_index[$service_title] = count($services_note_contents);
+            $services_note_contents[] = [
+                'TituloNota' => $title,
+                'ConteudoNota' => $service_info['NotaTextoDescricao']
+            ];
+        }
+    }
+
+    unset($temporary_index);
+
+
     $gallery_image_list = array_slice($image_gallery_files, 1);
 
     get_header();
@@ -162,6 +185,9 @@ if (is_single()) {
       </div>
     </header>
 
+    <?php
+    var_dump($services_note_contents);
+    ?>
 
 
     <section class="quick-info">
