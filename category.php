@@ -342,6 +342,8 @@ get_header();
     amountOfPosts = postsMeta.length;
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
     selectedTags = [...selectedWorldRegions, ...selectedCountries];" x-effect="
+    selectedTags = [...selectedWorldRegions, ...selectedCountries];
+    console.log(selectedTags);
     cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
     console.log(cSlideSanitizedTitle);
     highlightedPosts = postsMeta.filter(postMeta => {
@@ -451,7 +453,7 @@ get_header();
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" @click='selectedLogs = [$sanitized_log_identifier]; console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier ); console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
                 SLIDE_ELEMENT;
               }
             }
@@ -460,7 +462,7 @@ get_header();
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" @click='selectedLogs = [$sanitized_log_identifier]; console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier ); console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
               SLIDE_ELEMENT;
             }
             ?>
