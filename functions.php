@@ -944,7 +944,7 @@ function create_posts_from_api_data_batches() {
                 'post_status' => 'publish',
                 'posts_per_page' => 1
             ));
-            $category_title = $category_info["CategoriaDescricao"];
+            $category_title = $category_info["Titulo"];
             $current_category = get_term_by('name', $category_title, 'category');
     
             if ($query->have_posts()) {
@@ -1336,12 +1336,13 @@ function create_category_pages_with_api_data() {
 
     foreach($valid_categories_list as $valid_category) {
         $category_title = $valid_category["Titulo"];
+        $category_description = $valid_category["CategoriaDescricao"];
         $category_subtitle = $valid_category["SubTitulo"];
-        $formatted_category_title = trim(mb_strtolower($category_title));
-        $logs_related_to_category = array_filter($logs_list, function($log) use ($formatted_category_title) {
+        $formatted_category_description = trim(mb_strtolower($category_description));
+        $logs_related_to_category = array_filter($logs_list, function($log) use ($formatted_category_description) {
             $formatted_log_category_title = trim(mb_strtolower($log["CategoriaDescricao"]));
 
-            return ($formatted_category_title == $formatted_log_category_title) && $log["Status"] == "A";
+            return ($formatted_category_description == $formatted_log_category_title) && $log["Status"] == "A";
         });
         $slugified_category_title = sanitize_title($category_title);
         $category_page_data = [

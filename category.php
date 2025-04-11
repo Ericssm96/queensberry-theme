@@ -410,7 +410,7 @@ get_header();
 
       <section class="product-banner" style="background-image: url(<?= "$banner_img_url_prefix/$banner_img_file_name" ?>);">
         <div class="wrapper">
-          <h1 class="product-title"><img style="width: 200px; height: 162px;" src="<?= get_template_directory_uri() ?>/src/img/go4brazil.png" alt="Brasil IN"></h1>
+          <h1 class="product-title"><img style="width: 200px;" src="<?= $title_img_url ?>" alt="Brasil IN"></h1>
           <div class="product-description" style="">
             <p class="description-text">A Queensberry Viagens apresenta o Brasil sob um novo olhar. Uma linha de Viagens Nacionais elaboradas com riqueza de detalhes para proporcionar experiências únicas e momentos inesquecíveis.Ideal para quem prefere viajar sozinho, a dois ou com a família e grupo de amigos.</p>
           </div>

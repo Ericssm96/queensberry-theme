@@ -280,33 +280,33 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
                   <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
                   <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
                   <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil In</a></li>
-                  <li><a href="<?= home_url(); ?>/category/maritimo">Cruzeiros</a></li>
+                  <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzeiros</a></li>
                 </ul>
                 <div class="right-col">
                   <header>
-                    <h3><a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros No Mundo</a></h3>
+                    <h3><a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros No Mundo</a></h3>
                   </header>
                   <ul class="cards-area">
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log">
+                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-4-continentes.png" alt="Imagem Promocional Grupo Brasil no Mundo - 4 Continentes" />
                       </a>
                       <p>4 continentes 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=europa-2025-log">
+                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=europa-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-europa.png" alt="Imagem Promocional Grupo Brasil no Mundo - Europa" />
                       </a>
                       <p>Europa 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
+                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-baixa-temporada.png" alt="Imagem Promocional Grupo Brasil no Mundo - Baixa Temporada" />
                       </a>
                       <p>Baixa Temporada 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log">
+                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-slow-travel.png" alt="Imagem Promocional Grupo Brasil no Mundo - Slow Travel" />
                       </a>
                       <p>Slow Travel 2025</p>
@@ -373,12 +373,12 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
           <input type="checkbox" name="dropdown-mb" id="produtos-mb" />
           <ul class="produtos-items-mb">
             <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-            <li><a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros no Mundo</a></li>
+            <li><a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros no Mundo</a></li>
             <li><a href="<?= home_url(); ?>/category/disney">Walt Disney World Resort</a></li>
             <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
             <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours regulares</a></li>
             <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil in</a></li>
-            <li><a href="<?= home_url(); ?>/category/maritimo">Cruzerios</a></li>
+            <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzerios</a></li>
           </ul>
         </li>
         <li><a href="https://blog.queensberry.com.br/" target="_blank" rel="noopener">Blog</a></li>
