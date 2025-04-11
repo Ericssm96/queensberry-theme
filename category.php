@@ -341,7 +341,7 @@ get_header();
     normalPosts = postsMeta.filter(postMeta => {
       return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
     })
-    _postsMeta = [...highlightedPosts, ...normalPosts];
+    // _postsMeta = [...highlightedPosts, ...normalPosts];
 
     amountOfPosts = postsMeta.length;
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
@@ -356,7 +356,7 @@ get_header();
     normalPosts = postsMeta.filter(postMeta => {
       return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
     })
-    _postsMeta = [...highlightedPosts, ...normalPosts];
+    // _postsMeta = [...highlightedPosts, ...normalPosts];
 
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
     for(let region in countriesByRegion) {
