@@ -273,7 +273,6 @@ get_header();
 
           return this._postsMeta;
         }
-        
       },
       orderPosts() {
         if(this.postsOrder == "alphabAsc") {
@@ -355,7 +354,8 @@ get_header();
     });
     normalPosts = postsMeta.filter(postMeta => {
       return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
-    })
+    });
+    console.log(highlightedPosts);
     // _postsMeta = [...highlightedPosts, ...normalPosts];
 
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);

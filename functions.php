@@ -1769,7 +1769,7 @@ function custom_category_filter_results($request) {
     }
 
     if (!empty($tag_slugs)) {
-        $args['tag_slug__and'] = explode(',', $tag_slugs);
+        $args['tag_slug__in'] = explode(',', $tag_slugs);
     }
 
     if (!empty($category_slug)) {
