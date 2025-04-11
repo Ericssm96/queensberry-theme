@@ -248,10 +248,13 @@ main {
           height: 85%;
           
 
-          img {
+          .img-cont {
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            // object-fit: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             /* @media screen and (min-width: $md) {
               height: 100%;
               width: 100%;

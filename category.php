@@ -398,8 +398,16 @@ get_header();
     }
   ?>
     <?php 
-    if(sanitize_title($category_title) === "brasil-in") {
+    if(sanitize_title($category_title) === "brasil-in" || sanitize_title($category_title) === "gbm-grupos-brasileiros-no-mundo") {
+
+      if(sanitize_title($category_title) === "brasil-in") {
+        $title_img_url = get_template_directory_uri() . "/src/img/go4brazil.png";
+      } else {
+        $title_img_url = get_template_directory_uri() . "/src/img/gbm-titulo.png";
+      }
+
       ?>
+
       <section class="product-banner" style="background-image: url(<?= "$banner_img_url_prefix/$banner_img_file_name" ?>);">
         <div class="wrapper">
           <h1 class="product-title"><img style="width: 200px; height: 162px;" src="<?= get_template_directory_uri() ?>/src/img/go4brazil.png" alt="Brasil IN"></h1>
@@ -453,7 +461,10 @@ get_header();
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier ); console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier ); console.log(selectedLogs)' class="swiper-slide">
+                  <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
+                  </div>
+                  </a>
                 SLIDE_ELEMENT;
               }
             }
@@ -462,7 +473,10 @@ get_header();
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier ); console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier ); console.log(selectedLogs)' class="swiper-slide">
+                  <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
+                  </div>
+                </a>
               SLIDE_ELEMENT;
             }
             ?>

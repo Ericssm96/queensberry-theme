@@ -24,7 +24,7 @@ $last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao
 $last_conversion_date_obj = new DateTime($last_conversion_update_date);
 $formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
 
-$last_euro_conversion_update_time = explode("T", $euro_currency_info["DataAtualizacao"])[1];
+$last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
 $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
 // $euro_price = str_replace(".", ",", $euro_currency_info["ValorCambio"]);
 $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
@@ -44,7 +44,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
     </section>
     <article class="mb-currency-field">
       <strong class="quotation">US$ 1 = R$<?= $dolar_price; ?> | € 1 = R$<?= $euro_price ?></strong>
-      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date; ?> às <?= $last_euro_conversion_update_time; ?></p>
+      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date; ?> às <?= $last_dolar_conversion_update_time; ?></p>
     </article>
     <section class="products" x-init="
     const productSwiper = new Swiper('.products .swiper', {

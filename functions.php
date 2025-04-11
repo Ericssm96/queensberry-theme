@@ -1335,7 +1335,7 @@ function create_category_pages_with_api_data() {
     });
 
     foreach($valid_categories_list as $valid_category) {
-        $category_title = $valid_category["CategoriaDescricao"];
+        $category_title = $valid_category["Titulo"];
         $category_subtitle = $valid_category["SubTitulo"];
         $formatted_category_title = trim(mb_strtolower($category_title));
         $logs_related_to_category = array_filter($logs_list, function($log) use ($formatted_category_title) {

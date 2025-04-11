@@ -44,7 +44,7 @@ $last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao
 $last_conversion_date_obj = new DateTime($last_conversion_update_date);
 $formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
 
-$last_euro_conversion_update_time = explode("T", $euro_currency_info["DataAtualizacao"])[1];
+$last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
 $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
 // $euro_price = str_replace(".", ",", $euro_currency_info["ValorCambio"]);
 $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
@@ -162,7 +162,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
           <span x-show="!isWindowScrolledPastThreshold" class="green-highlight currency-field">
             <strong class="bold">US$ 1 = R$<?= $dolar_price ?> | € 1 = R$<?= $euro_price ?></strong>
             <p class="data">
-              <span class="bold">Data:</span><?= $formatted_conversion_date ?> às <?= $last_euro_conversion_update_time ?>
+              <span class="bold">Data:</span><?= $formatted_conversion_date ?> às <?= $last_dolar_conversion_update_time ?>
             </p>
           </span>
           <a href="https://agentes.queensberry.com.br/" class="green-highlight agent-field">

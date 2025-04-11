@@ -290,7 +290,6 @@ main * {
        column-gap: 5px;
   color: #B4B4B5;
   font-size: 1.2rem;
-  cursor: pointer;
   line-height: 1.2;
   font-weight: bold;
   text-transform: uppercase;
@@ -301,12 +300,15 @@ main * {
 .general-info .container .info-text .tab-select li i {
   font-size: 17px;
 }
-.general-info .container .info-text .tab-select li.selected {
+.general-info .container .info-text .tab-select li:hover {
   background-color: #99D02C;
   color: white;
   cursor: pointer;
 }
-.general-info .container .info-text .tab-select li:hover {
+.general-info .container .info-text .tab-select li:hover i {
+  color: #0C0150;
+}
+.general-info .container .info-text .tab-select li.selected {
   background-color: #99D02C;
   color: white;
   cursor: pointer;
