@@ -35,7 +35,7 @@ if (is_single()) {
       $lower_log_name = trim(mb_strtolower($log_name));
       $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-      return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
     });
     $quick_description = $program_info["DescricaoResumida"];
     $days_qtty = $program_info["QtdDiasViagem"];
@@ -48,9 +48,9 @@ if (is_single()) {
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
 
 
-    if(sanitize_title($program_name) === "nova-zelandia-de-norte-a-sul") {
+    /* if(sanitize_title($program_name) === "nova-zelandia-de-norte-a-sul") {
       $program_log_image_folder = "AUSTRALIA_E_NOVA_ZELANDIA";
-    }
+    } */
 
 
     $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
