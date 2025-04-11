@@ -264,12 +264,16 @@ get_header();
         }
       },
       get postsMeta() {
+        console.log(this.selectedLogs)
         if(this.selectedLogs.length > 0) {
           return this._postsMeta.filter(postMeta => {
             return this.selectedLogs.includes(postMeta["LogSlug"] + "-log");
           })
-        } 
-        return this._postsMeta;
+        } else {
+
+          return this._postsMeta;
+        }
+        
       },
       orderPosts() {
         if(this.postsOrder == "alphabAsc") {
