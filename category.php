@@ -243,8 +243,8 @@ get_header();
       amountOfPosts: 0,
       displayedPosts: 6,
       countriesByRegion: <?= $json_countries_by_region ?>,
-      highlightedPosts: [],
-      normalPosts: [],
+      _highlightedPosts: [],
+      _normalPosts: [],
       selectedRegionsData: [],
       limitedPostsMeta: [],
       selectedLogs: [],
@@ -259,8 +259,18 @@ get_header();
           this.displayedPosts += 6;
         }
       },
+      get highlightedPosts() {
+        return this.postsMeta.filter(postMeta => {
+          return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
+        });
+      },
+      get normalPosts() {
+        return this.postsMeta.filter(postMeta => {
+          return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
+        })
+      },
       get postsMeta() {
-        console.log(this.selectedLogs)
+        
         if(this.selectedLogs.length > 0) {
           return this._postsMeta.filter(postMeta => {
             return this.selectedLogs.includes(postMeta["LogSlug"] + "-log");
@@ -330,12 +340,12 @@ get_header();
 
     cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
     // cards-configs
-    highlightedPosts = postsMeta.filter(postMeta => {
-      return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
-    });
-    normalPosts = postsMeta.filter(postMeta => {
-      return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
-    })
+    // highlightedPosts = postsMeta.filter(postMeta => {
+    //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
+    // });
+    // normalPosts = postsMeta.filter(postMeta => {
+    //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
+    // })
     // _postsMeta = [...highlightedPosts, ...normalPosts];
 
     amountOfPosts = postsMeta.length;
@@ -345,13 +355,13 @@ get_header();
     console.log(selectedTags);
     cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
     console.log(cSlideSanitizedTitle);
-    highlightedPosts = postsMeta.filter(postMeta => {
-      return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
-    });
-    normalPosts = postsMeta.filter(postMeta => {
-      return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
-    });
-    console.log(highlightedPosts);
+    // highlightedPosts = postsMeta.filter(postMeta => {
+    //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
+    // });
+    // normalPosts = postsMeta.filter(postMeta => {
+    //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
+    // });
+    console.log('hp: ' + highlightedPosts + '\n np: ' + normalPosts);
     // _postsMeta = [...highlightedPosts, ...normalPosts];
 
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
