@@ -260,21 +260,35 @@ get_header();
         }
       },
       get highlightedPosts() {
-        return this.postsMeta.filter(postMeta => {
+        return this._postsMeta.filter(postMeta => {
           return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
         });
       },
       get normalPosts() {
-        return this.postsMeta.filter(postMeta => {
+        return this._postsMeta.filter(postMeta => {
           return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
         })
       },
       get postsMeta() {
-        
         if(this.selectedLogs.length > 0) {
-          return this._postsMeta.filter(postMeta => {
-            return this.selectedLogs.includes(postMeta["LogSlug"] + "-log");
-          })
+          let tempHlPosts, tempNormalPosts;
+
+          tempHlPosts = this.highlightedPosts.filter((highlightedPost)=>{
+            return this.selectedLogs.includes(highlightedPost["LogSlug"] + "-log");
+          });
+
+          tempNormalPosts = this.normalPosts.filter((normalPost)=>{
+            return this.selectedLogs.includes(normalPost["LogSlug"] + "-log");
+          });
+
+          console.log("hl: " + tempHlPosts);
+          console.log("normal: " + tempNormalPosts);
+
+          return [...tempHlPosts, ...tempNormalPosts];
+
+          // return this._postsMeta.filter(postMeta => {
+          //   return this.selectedLogs.includes(postMeta["LogSlug"] + "-log");
+          // })
         } else {
 
           return this._postsMeta;
@@ -288,6 +302,10 @@ get_header();
         }
       },
       filterPostsByAscAlphabeticOrder() {
+        let tempHlPosts = this.highlightedPosts.filter((highlightedPost)=>{
+          return this.selectedLogs.includes(highlightedPost["LogSlug"] + "-log");
+        });
+
         // Função para ordenar os posts em ordem alfabética crescente (A-Z)
         this.postsMeta.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
       },
@@ -307,8 +325,6 @@ get_header();
           });
 
           this._postsMeta = response.data;
-
-          console.log(this._postsMeta);
         } catch (error) {
           console.error("Error fetching search results:", error);
         } finally {
@@ -352,16 +368,14 @@ get_header();
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
     selectedTags = [...selectedWorldRegions, ...selectedCountries];" x-effect="
     selectedTags = [...selectedWorldRegions, ...selectedCountries];
-    console.log(selectedTags);
     cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
-    console.log(cSlideSanitizedTitle);
     // highlightedPosts = postsMeta.filter(postMeta => {
     //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
     // });
     // normalPosts = postsMeta.filter(postMeta => {
     //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
     // });
-    console.log('hp: ' + highlightedPosts + '\n np: ' + normalPosts);
+    // console.log('hp: ' + highlightedPosts + '\n np: ' + normalPosts);
     // _postsMeta = [...highlightedPosts, ...normalPosts];
 
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
@@ -471,7 +485,7 @@ get_header();
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier ); console.log(selectedLogs)' class="swiper-slide">
+                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier );' class="swiper-slide">
                   <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
                   </div>
                   </a>
@@ -483,7 +497,7 @@ get_header();
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier ); console.log(selectedLogs)' class="swiper-slide">
+                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier );' class="swiper-slide">
                   <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
                   </div>
                 </a>
@@ -622,7 +636,7 @@ get_header();
             </div>
             <div class="cards-grid">
               <template x-for="postMeta in limitedPostsMeta">
-                <div x-init="console.log()" class="card" x-data="{
+                <div class="card" x-data="{
                   qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
                   qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
                   isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
@@ -635,7 +649,7 @@ get_header();
                         DESTAQUE
                       </span>
                     </div>
-                    <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
+                    <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight;" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
                         <div class="initial-description">
                             <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
                             <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>
