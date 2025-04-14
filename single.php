@@ -378,8 +378,8 @@ if (is_single()) {
           </div>
           <div class="share-links">
             <p>Compartilhe:</p>
-            <button @click="isModalOpen = true; modalType = 'form'; formType = 'recomendar'" class="trigger"><i class="fa-regular fa-envelope"></i></button>
-            <button class="trigger"><i class="fa-solid fa-print"></i></i></button>
+            <button @click="isModalOpen = true; modalType = 'form'; formType = 'recomendar'" class="trigger"><i class="fa-regular fa-envelope share"></i></button>
+            <button class="trigger"><i class="fa-solid fa-print share"></i></i></button>
           </div>
         </article>
       </div>
@@ -1285,3 +1285,9 @@ $("#f_queensberry_recomendar_programa").on("submit", (e) => {
   endif;
 }
 ?>
+
+<style>
+.share:hover{
+  color: #99D02C;
+}
+</style>

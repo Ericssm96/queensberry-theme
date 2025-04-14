@@ -353,111 +353,93 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
     </section>
 
 
+<section class="featured-videos" x-data='{
+  videoTitles: <?= $json_videos_titles ?>,
+  currentVideoTitle: "Título do vídeo atual",
+  currentSlideIndex: 0,
+  videoSwiper: new Swiper(".featured-videos .swiper", {
+    direction: "horizontal",
+    loop: true,
+    navigation: {
+      nextEl: ".featured-videos .swiper-button-next",
+      prevEl: ".featured-videos .swiper-button-prev",
+    },
+    shortSwipes: false,
+    breakpoints: {
+      1: { slidesPerView: 1, spaceBetween: 0 },
+      1024: { slidesPerView: 1.7, spaceBetween: 20 },
+      1100: { slidesPerView: 1.8, spaceBetween: 20 },
+      1260: { slidesPerView: 2, spaceBetween: 20 },
+      1350: { slidesPerView: 2.5, spaceBetween: 20 },
+      1450: { slidesPerView: 2.6, spaceBetween: 20 },
+      1550: { slidesPerView: 2.5, spaceBetween: 20 },
+      1700: { slidesPerView: 3, spaceBetween: 20 }
+    }
+  })
+}' x-init="
+  currentVideoTitle = videoTitles[currentSlideIndex]
+  videoSwiper.on('navigationPrev', (e)=>{
+    if(currentSlideIndex === 0) {
+      currentSlideIndex = videoTitles.length - 1;
+    } else {
+      currentSlideIndex -= 1;
+    }
+    currentVideoTitle = videoTitles[currentSlideIndex];
+  });
+  videoSwiper.on('navigationNext', (e)=>{
+    if(currentSlideIndex === videoTitles.length - 1) {
+      currentSlideIndex = 0;
+    } else {
+      currentSlideIndex += 1;
+    }
+    currentVideoTitle = videoTitles[currentSlideIndex];
+  });
+">
+  <div class="wrapper">
+    <header>
+      <h2>Vídeos</h2>
+      <h3 x-text="currentVideoTitle"></h3>
+    </header>
+    <div class="filler"></div>
+    <article class="swiper">
+      <div class="swiper-wrapper">
+        <?php
+        $allowed_titles = [
+          "LIVE | TUNÍSIA, A JORNADA",
+          "LIVE | Lançamento FÉRIAS NA NEVE",
+          "LIVE | Lançamento GBM 2024/2025",
+          "Lançamento BRASIL IN",
+          "LIVE | Arábia Saudita - O Berço do Islã"
+        ];
 
-    <section class="featured-videos" x-data='{
-      videoTitles: <?= $json_videos_titles ?>,
-      currentVideoTitle: "Título do vídeo atual",
-      currentSlideIndex: 0,
-      videoSwiper: new Swiper(".featured-videos .swiper", {
-        // Optional parameters
-        direction: "horizontal",
-        loop: true,
-        navigation: {
-          nextEl: ".featured-videos .swiper-button-next",
-          prevEl: ".featured-videos .swiper-button-prev",
-        },
-        shortSwipes: false,
-        breakpoints: {
-          1: {
-            slidesPerView: 1,
-            spaceBetween: 0
-          },
-          1024: {
-            slidesPerView: 1.7,
-            spaceBetween: 20
-          },
-          1100: {
-            slidesPerView: 1.8,
-            spaceBetween: 20
-          },
-          1260: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          },
-          1350: {
-            slidesPerView: 2.5,
-            spaceBetween: 20
-          },
-          1450: {
-            slidesPerView: 2.6,
-            spaceBetween: 20
-          },
-          1550: {
-            slidesPerView: 2.5,
-            spaceBetween: 20
-          },
-          1700: {
-            slidesPerView: 3,
-            spaceBetween: 20
+        foreach ($videos_links as $index => $video_link) {
+          $title = $videos_titles[$index];
+
+          if (in_array($title, $allowed_titles)) {
+            echo <<<SLIDE_ITEM
+            <div class="swiper-slide">
+              <div class="video-frame">
+                <iframe width="100%" height="100%"
+                  src="https://www.youtube-nocookie.com/embed/$video_link"
+                  title="$title" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+            SLIDE_ITEM;
           }
         }
-      })
-    }' x-init="
-    currentVideoTitle = videoTitles[currentSlideIndex]
-    videoSwiper.on('navigationPrev', (e)=>{
-      if(currentSlideIndex === 0) {
-        currentSlideIndex = videoTitles.length - 1;
-      } else {
-        currentSlideIndex -= 1;
-      }
-      currentVideoTitle = videoTitles[currentSlideIndex];
-    });
-    videoSwiper.on('navigationNext', (e)=>{
-      if(currentSlideIndex === videoTitles.length - 1) {
-        currentSlideIndex = 0;
-      } else {
-        currentSlideIndex += 1;
-      }
-      currentVideoTitle = videoTitles[currentSlideIndex];
-    });
-    ">
-      <div class="wrapper">
-        <header>
-          <h2>Vídeos</h2>
-          <h3 x-text="currentVideoTitle"></h3>
-        </header>
-        <div class="filler"></div>
-        <article class="swiper">
-          <div class="swiper-wrapper">
-            <?php
-            foreach($videos_links as $video_link) {
-              echo <<<SLIDE_ITEM
-              <div class="swiper-slide">
-                <div class="video-frame">
-                  <iframe width="100%" height="100%"
-                    src="https://www.youtube-nocookie.com/embed/$video_link"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-              </div>
-              SLIDE_ITEM;
-            }
-            ?>
-          </div>
-
-          <div class="mobile-controllers">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-        </article>
-
-        <!-- <div class="desktop-controllers">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div> -->
+        ?>
       </div>
-    </section>
+
+      <div class="mobile-controllers">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
 
     <section class="popup-form-overlay" x-show="isModalOpen">
       <form id="f_queensberry_pop_up_cadastro" name="f_queensberry_pop_up_cadastro" class="sign-up-form" method="POST">
@@ -651,7 +633,200 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
                 <img src="<?= get_template_directory_uri(); ?>/src/img/popupdisney.png">
             </a>
     </div>
+  </div>
+
+<!-- Botão Flutuante -->
+<div class="floating-button-container">
+  <!-- Sub Botões -->
+  <div class="floating-menu" id="floatingMenu">
+    <button class="circle-button email" onclick="window.location.href='/fale-conosco'">
+      <i class="fas fa-envelope"></i>
+    </button>
+    <button class="circle-button whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=5511981000737', '_blank')">
+      <i class="fab fa-whatsapp"></i>
+    </button>
+    <button class="circle-button phone" onclick="showPhonePopup()">
+      <i class="fas fa-phone"></i>
+    </button>
+  </div>
+
+  <!-- Botão principal -->
+  <button class="main-button" id="toggleMenu">
+    <i class="fas fa-comment"></i>
+  </button>
+
+  <!-- Botão de Fechar-->
+  <button class="close-button" id="closeMenu">
+    <i class="fas fa-times"></i>
+  </button>
 </div>
+
+<!-- Pop-up Telefone-->
+<div class="phone-popup" id="phonePopup">
+  <div class="popup-header">
+    <span>Telefone</span>
+    <button class="close-x" onclick="closePhonePopup()">×</button>
+  </div>
+  <div class="popup-body">
+    <p>+55 (11) 3217-7100</p>
+  </div>
+</div>
+
+<style>
+  .floating-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .main-button,
+  .circle-button,
+  .close-button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-button {
+    background-color: #333;
+  }
+
+  .close-button {
+    background-color: #a2c36f;
+    display: none;
+  }
+
+  .floating-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+
+  .floating-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .circle-button.email {
+    background-color: #666;
+  }
+
+  .circle-button.whatsapp {
+    background-color: #25d366;
+  }
+
+  .circle-button.phone {
+    background-color: #007bff;
+  }
+
+  /* Pop-up de telefone */
+  .phone-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 250px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+
+  .popup-header {
+    background-color: #a2c36f;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .popup-header .close-x {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .popup-body {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  @media (max-width: 600px) {
+    .main-button,
+    .circle-button,
+    .close-button {
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+    }
+
+    .popup-body {
+      font-size: 18px;
+    }
+
+    .phone-popup {
+      width: 90%;
+      right: 5%;
+    }
+  }
+</style>
+
+<script>
+  const toggleBtn = document.getElementById("toggleMenu");
+  const closeBtn = document.getElementById("closeMenu");
+  const menu = document.getElementById("floatingMenu");
+  const popup = document.getElementById("phonePopup");
+
+  toggleBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+    toggleBtn.style.display = "none";
+    closeBtn.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+    toggleBtn.style.display = "flex";
+    closeBtn.style.display = "none";
+    popup.style.display = "none"; // fecha se estiver aberto!!
+  });
+
+  function showPhonePopup() {
+    popup.style.display = "block";
+  }
+
+  function closePhonePopup() {
+    popup.style.display = "none";
+  }
+</script>
+
+
 <script>
   function fecharMiniPopup() {
     const popup = document.querySelector('.mini-popup');
