@@ -260,44 +260,56 @@ get_header();
         }
       },
       get highlightedPosts() {
-        return this._postsMeta.filter(postMeta => {
-          return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
-        });
+        if(this.selectedLogs.length > 0) {
+          let tempHlPosts;
+
+          tempHlPosts = this._postsMeta.filter((postMeta)=>{
+            return this.selectedLogs.includes(postMeta["LogSlug"] + "-log") && postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
+          });
+
+          return tempHlPosts;
+        } else {
+          return this._postsMeta.filter(postMeta => {
+            return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
+          });
+        }        
       },
       get normalPosts() {
-        return this._postsMeta.filter(postMeta => {
-          return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
-        })
+        if(this.selectedLogs.length > 0) {
+          let tempNormalPosts;
+
+          tempNormalPosts = this._postsMeta.filter((postMeta)=>{
+            return this.selectedLogs.includes(postMeta["LogSlug"] + "-log") && postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
+          });
+
+          return tempNormalPosts;
+        } else {
+          return this._postsMeta.filter(postMeta => {
+            return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
+          })
+        }       
       },
       get postsMeta() {
-        if(this.selectedLogs.length > 0) {
-          let tempHlPosts, tempNormalPosts;
+        let tempHlPosts, tempNormalPosts;
+        tempHlPosts = this.highlightedPosts;
+        tempNormalPosts = this.normalPosts;
 
-          tempHlPosts = this.highlightedPosts.filter((highlightedPost)=>{
-            return this.selectedLogs.includes(highlightedPost["LogSlug"] + "-log");
-          });
+        if(this.postsOrder == "alphabAsc") {
+          this.orderPostsArrayByAscAlphabeticOrder(tempHlPosts);
+          this.orderPostsArrayByAscAlphabeticOrder(tempNormalPosts);
+        } else if (this.postsOrder == "alphabDesc") {
+          this.orderPostsArrayByDescAlphabeticOrder(tempHlPosts);
+          this.orderPostsArrayByDescAlphabeticOrder(tempNormalPosts);
+        }
 
-          tempNormalPosts = this.normalPosts.filter((normalPost)=>{
-            return this.selectedLogs.includes(normalPost["LogSlug"] + "-log");
-          });
+        console.log("hl: " + tempHlPosts);
+        console.log("np: " + tempNormalPosts);
 
-          console.log("hl: " + tempHlPosts);
-          console.log("normal: " + tempNormalPosts);
+        return [...tempHlPosts, ...tempNormalPosts];
 
-          if(this.postsOrder == "alphabAsc") {
-            this.orderPostsArrayByAscAlphabeticOrder(tempHlPosts);
-            this.orderPostsArrayByAscAlphabeticOrder(tempNormalPosts);
-          } else if (this.postsOrder == "alphabDesc") {
-            this.orderPostsArrayByDescAlphabeticOrder(tempHlPosts);
-            this.orderPostsArrayByDescAlphabeticOrder(tempNormalPosts);
-          }
-
-          return [...tempHlPosts, ...tempNormalPosts];
-
-          // return this._postsMeta.filter(postMeta => {
-          //   return this.selectedLogs.includes(postMeta["LogSlug"] + "-log");
-          // })
-        } else {
+        // return [...this.highlightedPosts, ...this.normalPosts];
+      },
+      orderPosts() {
           if(this.postsOrder == "alphabAsc") {
             this.orderPostsArrayByAscAlphabeticOrder(this.highlightedPosts);
             this.orderPostsArrayByAscAlphabeticOrder(this.normalPosts);
@@ -305,13 +317,6 @@ get_header();
             this.orderPostsArrayByDescAlphabeticOrder(this.highlightedPosts);
             this.orderPostsArrayByDescAlphabeticOrder(this.normalPosts);
           }
-
-          return [...this.highlightedPosts, ...this.normalPosts];
-          // return this._postsMeta;
-        }
-      },
-      orderPosts() {
-
       },
       orderPostsArrayByAscAlphabeticOrder(postsArr) {
         // Função para ordenar os posts em ordem alfabética crescente (A-Z)
@@ -626,7 +631,7 @@ get_header();
                 <button class="submit-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div class="filter-area">
-                <select x-model="postsOrder" name="FILTRO_PRODUTOS" id="filtroProdutos">
+                <select x-model="postsOrder" @change="orderPosts()" name="FILTRO_PRODUTOS" id="filtroProdutos">
                     <option value="" disabled selected>Organizar</option>
                     <option value="alphabAsc">A - Z</option>
                     <option value="alphabDesc">Z - A</option>
