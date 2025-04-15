@@ -284,34 +284,42 @@ get_header();
           console.log("hl: " + tempHlPosts);
           console.log("normal: " + tempNormalPosts);
 
+          if(this.postsOrder == "alphabAsc") {
+            this.orderPostsArrayByAscAlphabeticOrder(tempHlPosts);
+            this.orderPostsArrayByAscAlphabeticOrder(tempNormalPosts);
+          } else if (this.postsOrder == "alphabDesc") {
+            this.orderPostsArrayByDescAlphabeticOrder(tempHlPosts);
+            this.orderPostsArrayByDescAlphabeticOrder(tempNormalPosts);
+          }
+
           return [...tempHlPosts, ...tempNormalPosts];
 
           // return this._postsMeta.filter(postMeta => {
           //   return this.selectedLogs.includes(postMeta["LogSlug"] + "-log");
           // })
         } else {
+          if(this.postsOrder == "alphabAsc") {
+            this.orderPostsArrayByAscAlphabeticOrder(this.highlightedPosts);
+            this.orderPostsArrayByAscAlphabeticOrder(this.normalPosts);
+          } else if (this.postsOrder == "alphabDesc") {
+            this.orderPostsArrayByDescAlphabeticOrder(this.highlightedPosts);
+            this.orderPostsArrayByDescAlphabeticOrder(this.normalPosts);
+          }
 
-          return this._postsMeta;
+          return [...this.highlightedPosts, ...this.normalPosts];
+          // return this._postsMeta;
         }
       },
       orderPosts() {
-        if(this.postsOrder == "alphabAsc") {
-          this.filterPostsByAscAlphabeticOrder();
-        } else if (this.postsOrder == "alphabDesc") {
-          this.filterPostsByDescAlphabeticOrder();
-        }
-      },
-      filterPostsByAscAlphabeticOrder() {
-        let tempHlPosts = this.highlightedPosts.filter((highlightedPost)=>{
-          return this.selectedLogs.includes(highlightedPost["LogSlug"] + "-log");
-        });
 
-        // Função para ordenar os posts em ordem alfabética crescente (A-Z)
-        this.postsMeta.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
       },
-      filterPostsByDescAlphabeticOrder() {
+      orderPostsArrayByAscAlphabeticOrder(postsArr) {
+        // Função para ordenar os posts em ordem alfabética crescente (A-Z)
+        postsArr.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
+      },
+      orderPostsArrayByDescAlphabeticOrder(postsArr) {
         // Função para ordenar os posts em ordem alfabética descrescente (Z-A)
-        this.postsMeta.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
+        postsArr.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
       },
       async performSearch() {
         this.isLoading = true;
@@ -618,7 +626,7 @@ get_header();
                 <button class="submit-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div class="filter-area">
-                <select x-model="postsOrder" @change="orderPosts()" name="FILTRO_PRODUTOS" id="filtroProdutos">
+                <select x-model="postsOrder" name="FILTRO_PRODUTOS" id="filtroProdutos">
                     <option value="" disabled selected>Organizar</option>
                     <option value="alphabAsc">A - Z</option>
                     <option value="alphabDesc">Z - A</option>
