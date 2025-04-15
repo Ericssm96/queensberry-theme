@@ -100,6 +100,16 @@ if (is_single()) {
       }
   }
 
+  if($program_info["DescricaoPortal"] !== "") {
+    $opening_arr = [
+      'NotaDescricao' => "Abertura",
+      'NotaTextoDescricao' => $program_info["DescricaoPortal"]
+    ];
+
+    array_unshift($attractions_note_contents, $opening_arr);
+  }
+
+
     foreach ($services_info_list as $service_info) {
         $title = $service_info['NotaDescricao'];
         $text = $service_info['NotaTextoDescricao'];
@@ -300,7 +310,6 @@ if (is_single()) {
           </ul>
           <div class="details">
             <div class="tab" x-show="selectedTab === 'attractions'">
-              <div class="topic">
               <?php 
               for($i = 0; $i < count($attractions_note_contents); $i++):
                 $attraction_info = $attractions_note_contents[$i]['NotaTextoDescricao'];
@@ -318,7 +327,6 @@ if (is_single()) {
                 ITEM_DESCRIPTION;
               endfor;
               ?>
-              </div>
             </div>
             <div class="tab roteiro" x-show="selectedTab === 'itinerary'">
               <?php 
