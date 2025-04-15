@@ -119,7 +119,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </div>
     </section>
 
-    <!-- DESTAQUES -->
+    <!--
 
     <section class="featured-content">
       <div class="wrapper">
@@ -238,6 +238,132 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
         </div>
       </div>
     </section>
+    -->
+
+    <!-- DESTAQUES -->
+<section class="featured-content">
+  <div class="wrapper">
+    <h2>Destaques</h2>
+    <div class="items-grid">
+      <?php 
+      // Lista dos nomes que devem aparecer nos destaques
+      $nomes_dos_destaques = array(
+        'A AMAZÔNIA É NOSSA - JUMA HOTÉIS',
+        'SEYCHELLES PARADISÍACA',
+        'AVENTURA PELO LESTE AFRICANO – QUÊNIA E TANZÂNIA',
+        'ILHA MAURÍCIO',
+        'SUÍÇA AUTÊNTICA',
+        'ÁFRICA DO SUL COM CHARME'
+      );
+
+      $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => -1, 
+        'post_status'    => 'publish',
+        'orderby' => 'title',
+        'order' => 'ASC'
+      );
+
+      $query = new WP_Query($args);
+      $counter = 1;
+
+      if($query->have_posts()) {
+        while($query->have_posts() && $counter <= 6) {
+          $query->the_post();
+          $post_id = get_the_ID();
+          $custom_data = get_post_meta($post_id, 'custom_data', true);
+
+          if (is_array($custom_data)) {
+            $program_info = $custom_data["ProgramInfo"];
+            $program_name = $program_info["Descricao"];
+
+            // Verifica se o nome está na lista de destaques
+            if(in_array($program_name, $nomes_dos_destaques)) {
+              $program_post_link = get_permalink();
+              $additional_program_info = $custom_data['ProgramAddInfo'];
+              $current_category_info = $custom_data['CategoryInfo'];
+              $program_logs_info = $custom_data['ProgramLogInfo'];
+              $program_notes = $custom_data['ProgramNotes'];
+              $image_gallery_files = $custom_data['ImageGalleryFiles'];
+              $price_table_image_files = $custom_data['PriceTableImageFiles'];
+          
+              $log_name = $additional_program_info["CadernoTitulo"];
+              $program_code = $program_info["CodigoPrograma"];
+              $category_code = $program_info["CategoriaCodigo"];
+
+              $category_name = $current_category_info["CategoriaDescricao"];
+              $category_title = $current_category_info["Titulo"];
+              $program_tower = $program_info["Torre"];
+              $program_log_info = array_find($program_logs_info, function($program_log_info) use ($log_name) {
+                $lower_log_name = trim(mb_strtolower($log_name));
+                $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
+                return $lower_log_name == $current_item_name;
+              });
+
+              $quick_description = $program_info["DescricaoResumida"];
+              $days_qtty = $program_info["QtdDiasViagem"];
+              $nights_qtty = $program_info["QtdNoitesViagem"];
+              $visit_details_quick_info = $program_info["Detalhes"];
+              $program_outings_info = $program_info["SaidasPrograma"];
+
+              $images_folder_prefix_url = "https://www.queensberry.com.br/imagens/";
+              $category_image_folder = $current_category_info["PastaImagens"];
+              $program_log_image_folder = $program_log_info["CadernoPastaImagens"];
+              $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]);
+              $banner_img_file_name = rawurlencode($program_info["Banner"]);
+              $log_img_file_name = $image_gallery_files[0]['Descricao'];
+              $program_banner_img_url = "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$banner_img_file_name";
+
+              $class_list = "";
+
+              switch($counter) {
+                case 1:
+                  $class_list = "first-col two-thirds";
+                  break;
+                case 2:
+                  $class_list = "second-col one-third";
+                  break;
+                case 3:
+                  $class_list = "one-third first-col";
+                  break;
+                case 4:
+                  $class_list = "two-thirds second-col";
+                  break;
+                case 5:
+                  $class_list = "one-half first-col";
+                  break;
+                case 6:
+                  $class_list = "one-half second-col";
+                  break;
+              }
+
+              echo <<<FEATURED_PROGRAM
+              <article class="$class_list" style="background-image: url($program_banner_img_url);">
+                <a href="$program_post_link">
+                  <div class="card-overlay"></div>
+                  <div class="desktop-card-overlay"></div>
+                  <div class="text-content">
+                    <h3>$category_title</h3>
+                    <h4>$program_name</h4>
+                    <p>$quick_description</p>
+                    <div class="cta-content">
+                      <strong>$days_qtty dias / $nights_qtty noites</strong>
+                      <span class="cta">Saiba Mais</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              FEATURED_PROGRAM;
+
+              $counter += 1;
+            }
+          }
+        }
+      }
+      ?>
+    </div>
+  </div>
+</section>
 
 
     <!-- PALAVRA DO ESPECIALISTA -->
@@ -352,6 +478,29 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </article>
     </section>
 
+<?php
+$allowed_titles = [
+  "LIVE | TUNÍSIA, A JORNADA",
+  "LIVE | Lançamento FÉRIAS NA NEVE",
+  "LIVE | Lançamento GBM 2024/2025",
+  "Lançamento BRASIL IN",
+  "LIVE | Arábia Saudita - O Berço do Islã"
+];
+
+$filtered_titles = [];
+$filtered_links = [];
+
+foreach ($videos_titles as $index => $title) {
+  if (in_array($title, $allowed_titles)) {
+    $filtered_titles[] = $title;
+    $filtered_links[] = $videos_links[$index];
+  }
+}
+
+$json_videos_titles = json_encode($filtered_titles);
+$videos_links = $filtered_links;
+$videos_titles = $filtered_titles;
+?>
 
 <section class="featured-videos" x-data='{
   videoTitles: <?= $json_videos_titles ?>,
@@ -439,6 +588,8 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
     </article>
   </div>
 </section>
+
+
 
 
     <section class="popup-form-overlay" x-show="isModalOpen">
@@ -642,7 +793,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
     <button class="circle-button email" onclick="window.location.href='/fale-conosco'">
       <i class="fas fa-envelope"></i>
     </button>
-    <button class="circle-button whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=5511981000737', '_blank')">
+    <button class="circle-button whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=551132177100', '_blank')">
       <i class="fab fa-whatsapp"></i>
     </button>
     <button class="circle-button phone" onclick="showPhonePopup()">
@@ -692,7 +843,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
     border-radius: 50%;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 23px;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s;
     display: flex;
@@ -701,7 +852,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
   }
 
   .main-button {
-    background-color: #333;
+    background-color: #a3c166;
   }
 
   .close-button {
@@ -796,6 +947,105 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       right: 5%;
     }
   }
+
+  .mini-popup {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+    -webkit-transition: all ease-in-out 300ms;
+    -moz-transition: all ease-in-out 300ms;
+    -o-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms
+}
+
+.mini-popup img {
+    -webkit-box-shadow: -2px 5px 25px 5px rgba(0,0,0,.62);
+    box-shadow: -2px 5px 25px 5px rgba(0,0,0,.62)
+}
+
+.popup-rotativo img {
+    border-radius: 15px
+}
+
+@media only screen and (max-width: 480px) {
+    .mini-popup {
+        left:50%!important;
+        top: 72%!important;
+        transform: translate(-50%,-50%)
+    }
+
+    .mini-popup img {
+        width: 80vw
+    }
+
+    .popup-rotativo__imagem--desktop {
+        display: none
+    }
+
+    .mini-popup--alerta {
+        z-index: 1100;
+        margin: 0 auto;
+        display: flex!important;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        left: initial!important;
+        bottom: 0!important;
+        background: #000000a3
+    }
+
+    .popup-rotativo--alerta {
+        height: initial!important;
+        display: flex;
+        flex-direction: column
+    }
+
+    .fecharBlog--alerta {
+        width: 25px!important;
+        position: relative!important;
+        top: initial!important
+    }
+}
+
+@media(max-width: 700px) {
+    .mini-popup>a>img {
+        width:173px;
+        height: 136px
+    }
+}
+
+@media(max-width: 576px) {
+    .mini-popup {
+        bottom:5px;
+        left: 5px
+    }
+
+    .mini-popup>a>img {
+        width: 151px;
+        height: 119px
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .popup-rotativo__imagem--mobile {
+        display:none
+    }
+}
+
+.mini-popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #99d02c;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 30px;
+    height: 30px
+}
+
 </style>
 
 <script>
