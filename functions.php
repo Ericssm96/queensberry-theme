@@ -1627,6 +1627,7 @@ function custom_search_results($request) {
     $results = array();
 
     if ($query->have_posts()) {
+        $counter = 1;
         while ($query->have_posts()) {
             $query->the_post();
             $post_id = get_the_ID();
@@ -1663,8 +1664,11 @@ function custom_search_results($request) {
                 "PostData" => $metadata,
                 "CardImageUrl" => $card_image_url,
                 "PostSlug" => $post_slug,
-                "LogSlug" => sanitize_title($log_name)
+                "LogSlug" => sanitize_title($log_name),
+                "Key" => $counter
             ];
+
+            $counter += 1;
         }
     }
 
@@ -1709,6 +1713,7 @@ function custom_tag_filter_results($request) {
     // Prepare the response
     $posts_metadata = array();
     if ($query->have_posts()) {
+        $counter = 1;
         while ($query->have_posts()) {
             $query->the_post();
             $post_id = get_the_ID();
@@ -1740,8 +1745,11 @@ function custom_tag_filter_results($request) {
                 "PostData" => $metadata,
                 "CardImageUrl" => $card_image_url,
                 "PostSlug" => $post_slug,
-                "LogSlug" => sanitize_title($log_name)
+                "LogSlug" => sanitize_title($log_name),
+                "Key" => $counter
             ];
+
+            $counter += 1;
         }
     }
 
