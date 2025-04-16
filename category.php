@@ -32,6 +32,8 @@ $cat_query_args = [
 
 $cat_query = new WP_Query($cat_query_args);
 
+$counter = 1;
+
 if($cat_query->have_posts()) {
   while($cat_query->have_posts()) {
     $cat_query->the_post();
@@ -76,8 +78,11 @@ if($cat_query->have_posts()) {
       "CardImageUrl" => $card_image_url,
       "PostSlug" => $post_slug,
       "LogSlug" => sanitize_title($log_name),
-      "RegionInfo" => $region_info
+      "RegionInfo" => $region_info,
+      "Key" => $counter
     ];
+
+    $counter += 1;
   }
 }
 
@@ -648,18 +653,18 @@ get_header();
               </div>
             </div>
             <div class="cards-grid">
-              <template x-for="postMeta in limitedPostsMeta">
-                <div class="card" x-data="{
+              <template x-for="postMeta in limitedPostsMeta" :key="postMeta['Key']">
+                <div class="card"  x-data="{
                   qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
                   qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
                   isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
+                  highlightText: postMeta['PostData']['ProgramInfo']['DestaquePortalTexto'],
                   cardImgHeight: 0
                 }">
                   <a class="post-link" x-bind:href="postMeta['Link']">
                     <div class="card-img">
                       <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-                      <span x-show="isHighlightedPost" class="highlight-stamp">
-                        DESTAQUE
+                      <span x-show="isHighlightedPost" x-text="highlightText" class="highlight-stamp">
                       </span>
                     </div>
                     <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight;" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
