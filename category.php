@@ -32,6 +32,8 @@ $cat_query_args = [
 
 $cat_query = new WP_Query($cat_query_args);
 
+$counter = 1;
+
 if($cat_query->have_posts()) {
   while($cat_query->have_posts()) {
     $cat_query->the_post();
@@ -76,8 +78,11 @@ if($cat_query->have_posts()) {
       "CardImageUrl" => $card_image_url,
       "PostSlug" => $post_slug,
       "LogSlug" => sanitize_title($log_name),
-      "RegionInfo" => $region_info
+      "RegionInfo" => $region_info,
+      "Key" => $counter
     ];
+
+    $counter += 1;
   }
 }
 
@@ -157,7 +162,8 @@ get_header();
       cSlideSanitizedTitle: "",
       currentSlideDescription: "",
       currentSlideIndex: 0,
-
+      isWorldRegionListOpen: false,
+      isCountriesListOpen: false,
       productGroupSwiper: new Swiper(".product-page-slider .swiper", {
         // Optional parameters
         direction: "horizontal",
@@ -498,7 +504,7 @@ get_header();
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier );' class="swiper-slide">
+                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( "$sanitized_log_identifier" );' class="swiper-slide">
                   <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
                   </div>
                   </a>
@@ -510,7 +516,7 @@ get_header();
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier );' class="swiper-slide">
+                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( "$sanitized_log_identifier" );' class="swiper-slide">
                   <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
                   </div>
                 </a>
@@ -575,10 +581,10 @@ get_header();
                   ?>
                     <div class="checkbox-area">
                       <div class="list-title">
-                        <label for="regions_list_trigger" class="text-area"><span class="active-indicator">[ + ]</span><p>Regiões Mundiais</p></label>
+                        <label for="regions_list_trigger" class="text-area"><span class="active-indicator" x-text="isWorldRegionListOpen ? '[ - ]' : '[ + ]'"></span><p>Regiões Mundiais</p></label>
                         <img src="<?= get_template_directory_uri(); ?>/src/img/icone-globo.png" alt="">
                       </div>
-                      <input type="checkbox" name="regions_list_trigger" id="regions_list_trigger">
+                      <input type="checkbox" @change="isWorldRegionListOpen = !isWorldRegionListOpen" name="regions_list_trigger" id="regions_list_trigger">
                       <ul class="checkbox-list">
                         <?php 
                         foreach($world_regions_names as $world_region_name) {
@@ -598,10 +604,10 @@ get_header();
                     </div>
                     <div class="checkbox-area" x-show="selectedWorldRegions.length > 0">
                       <div class="list-title">
-                        <label for="countries_list_trigger" class="text-area"><span class="active-indicator">[ + ]</span><p>Países</p></label>
+                        <label for="countries_list_trigger" class="text-area"><span x-text="isCountriesListOpen ? '[ - ]' : '[ + ]'" class="active-indicator"></span><p>Países</p></label>
                         <i class="fa-solid fa-location-dot map-pin"></i>
                       </div>
-                      <input type="checkbox" name="countries_list_trigger" id="countries_list_trigger">
+                      <input type="checkbox" @change="isCountriesListOpen = !isCountriesListOpen" name="countries_list_trigger" id="countries_list_trigger">
                       <div class="countries-checkbox-list">
                         <template x-for="region in selectedRegionsData">
                           <ul class="region-list">
@@ -648,18 +654,18 @@ get_header();
               </div>
             </div>
             <div class="cards-grid">
-              <template x-for="postMeta in limitedPostsMeta">
-                <div class="card" x-data="{
+              <template x-for="postMeta in limitedPostsMeta" :key="postMeta['Key']">
+                <div class="card"  x-data="{
                   qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
                   qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
                   isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
+                  highlightText: postMeta['PostData']['ProgramInfo']['DestaquePortalTexto'],
                   cardImgHeight: 0
                 }">
                   <a class="post-link" x-bind:href="postMeta['Link']">
                     <div class="card-img">
                       <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-                      <span x-show="isHighlightedPost" class="highlight-stamp">
-                        DESTAQUE
+                      <span x-show="isHighlightedPost" x-text="highlightText" class="highlight-stamp">
                       </span>
                     </div>
                     <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight;" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
