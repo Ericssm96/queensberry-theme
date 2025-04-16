@@ -1784,7 +1784,9 @@ function custom_category_filter_results($request) {
     $query = new WP_Query($args);
 
     $posts_metadata = array();
+
     if ($query->have_posts()) {
+        $counter = 1;
         while ($query->have_posts()) {
             $query->the_post();
             $post_id = get_the_ID();
@@ -1816,8 +1818,11 @@ function custom_category_filter_results($request) {
                 "PostData" => $metadata,
                 "CardImageUrl" => $card_image_url,
                 "PostSlug" => $post_slug,
-                "LogSlug" => sanitize_title($log_name)
+                "LogSlug" => sanitize_title($log_name),
+                "Key" => $counter,
             ];
+
+            $counter += 1;
         }
     }
 

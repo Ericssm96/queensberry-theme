@@ -162,7 +162,8 @@ get_header();
       cSlideSanitizedTitle: "",
       currentSlideDescription: "",
       currentSlideIndex: 0,
-
+      isWorldRegionListOpen: false,
+      isCountriesListOpen: false,
       productGroupSwiper: new Swiper(".product-page-slider .swiper", {
         // Optional parameters
         direction: "horizontal",
@@ -503,7 +504,7 @@ get_header();
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier );' class="swiper-slide">
+                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( "$sanitized_log_identifier" );' class="swiper-slide">
                   <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
                   </div>
                   </a>
@@ -515,7 +516,7 @@ get_header();
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( $sanitized_log_identifier );' class="swiper-slide">
+                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( "$sanitized_log_identifier" );' class="swiper-slide">
                   <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
                   </div>
                 </a>
@@ -580,10 +581,10 @@ get_header();
                   ?>
                     <div class="checkbox-area">
                       <div class="list-title">
-                        <label for="regions_list_trigger" class="text-area"><span class="active-indicator">[ + ]</span><p>Regiões Mundiais</p></label>
+                        <label for="regions_list_trigger" class="text-area"><span class="active-indicator" x-text="isWorldRegionListOpen ? '[ - ]' : '[ + ]'"></span><p>Regiões Mundiais</p></label>
                         <img src="<?= get_template_directory_uri(); ?>/src/img/icone-globo.png" alt="">
                       </div>
-                      <input type="checkbox" name="regions_list_trigger" id="regions_list_trigger">
+                      <input type="checkbox" @change="isWorldRegionListOpen = !isWorldRegionListOpen" name="regions_list_trigger" id="regions_list_trigger">
                       <ul class="checkbox-list">
                         <?php 
                         foreach($world_regions_names as $world_region_name) {
@@ -603,10 +604,10 @@ get_header();
                     </div>
                     <div class="checkbox-area" x-show="selectedWorldRegions.length > 0">
                       <div class="list-title">
-                        <label for="countries_list_trigger" class="text-area"><span class="active-indicator">[ + ]</span><p>Países</p></label>
+                        <label for="countries_list_trigger" class="text-area"><span x-text="isCountriesListOpen ? '[ - ]' : '[ + ]'" class="active-indicator"></span><p>Países</p></label>
                         <i class="fa-solid fa-location-dot map-pin"></i>
                       </div>
-                      <input type="checkbox" name="countries_list_trigger" id="countries_list_trigger">
+                      <input type="checkbox" @change="isCountriesListOpen = !isCountriesListOpen" name="countries_list_trigger" id="countries_list_trigger">
                       <div class="countries-checkbox-list">
                         <template x-for="region in selectedRegionsData">
                           <ul class="region-list">
