@@ -269,7 +269,7 @@ $json_early_posts_meta = json_encode($early_posts_metadata, JSON_UNESCAPED_SLASH
             qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
             isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
             highlightText: postMeta['PostData']['ProgramInfo']['DestaquePortalTexto'],
-            cardImgHeight: 0
+            cardImgHeight: 269
           }">
             <a class="post-link" x-bind:href="postMeta['Link']">
               <div class="card-img">

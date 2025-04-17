@@ -227,37 +227,51 @@ get_header();
     selectedTags: [],
     selectedCategories: [],
     isLoading: false,
+    _highlightedPosts: [],
+    _normalPosts: [],
+    get highlightedPosts() {
+      return this._postsMeta.filter(postMeta => {
+        return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
+      });    
+    },
+    get normalPosts() {
+      return this._postsMeta.filter(postMeta => {
+        return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
+      })    
+    },
     get postsMeta() {
-      if(this.textFilter === "") {
-        return this._postsMeta;
-      } else {
-        return this._postsMeta.filter((postMeta)=> {
-          let postDescription = postMeta["PostData"]["ProgramInfo"]["DescricaoResumida"].toLowerCase();
-          let postSlug = postMeta["PostSlug"];
-          let travelOutings = postMeta["PostData"]["ProgramInfo"]["SaidasPrograma"].toLowerCase();
-          let travelVisits = postMeta["PostData"]["ProgramInfo"]["Detalhes"].toLowerCase();
-          let lowerCaseFilter = this.textFilter.toLowerCase();
-          return postDescription.includes(lowerCaseFilter) || 
-          postSlug.includes(this.sanitizeTitle(this.textFilter)) || 
-          travelOutings.includes(lowerCaseFilter) ||
-          travelVisits.includes(lowerCaseFilter);
-        });
+      tempHlPosts = this.highlightedPosts;
+      tempNormalPosts = this.normalPosts;
+
+      if(this.postsOrder == "alphabAsc") {
+        this.orderPostsArrayByAscAlphabeticOrder(tempHlPosts);
+        this.orderPostsArrayByAscAlphabeticOrder(tempNormalPosts);
+      } else if (this.postsOrder == "alphabDesc") {
+        this.orderPostsArrayByDescAlphabeticOrder(tempHlPosts);
+        this.orderPostsArrayByDescAlphabeticOrder(tempNormalPosts);
       }
+
+      console.log("hl: " + tempHlPosts);
+      console.log("np: " + tempNormalPosts);
+
+      return [...tempHlPosts, ...tempNormalPosts];
     },
     orderPosts() {
       if(this.postsOrder == "alphabAsc") {
-        this.filterPostsByAscAlphabeticOrder();
+        this.orderPostsArrayByAscAlphabeticOrder(this.highlightedPosts);
+        this.orderPostsArrayByAscAlphabeticOrder(this.normalPosts);
       } else if (this.postsOrder == "alphabDesc") {
-        this.filterPostsByDescAlphabeticOrder();
+        this.orderPostsArrayByDescAlphabeticOrder(this.highlightedPosts);
+        this.orderPostsArrayByDescAlphabeticOrder(this.normalPosts);
       }
     },
-    filterPostsByAscAlphabeticOrder() {
+    orderPostsArrayByAscAlphabeticOrder(postsArr) {
       // Função para ordenar os posts em ordem alfabética crescente (A-Z)
-      this.postsMeta.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
+      postsArr.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
     },
-    filterPostsByDescAlphabeticOrder() {
+    orderPostsArrayByDescAlphabeticOrder(postsArr) {
       // Função para ordenar os posts em ordem alfabética descrescente (Z-A)
-      this.postsMeta.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
+      postsArr.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
     },
     async performSearch() {
       this.isLoading = true;
@@ -277,9 +291,7 @@ get_header();
         console.error("Error fetching search results:", error);
       } finally {
         this.isLoading = false;
-      }
-
-      
+      }      
     },
   }' x-init="
     selectedTags = currentCountry.length !== 0 ? [sanitizeTitle(currentCountry)] : [];
@@ -345,8 +357,8 @@ get_header();
           </ul>
         </div>
       </div>
-      <form action="" @submit.prevent="textFilter = $refs.textFilterField.value" class="search-form">
-        <input type="text" x-ref="textFilterField" placeholder="Informe seu destino">
+      <form action="" @submit.prevent="performSearch()" class="search-form">
+        <input type="text" x-model="textFilter" x-ref="textFilterField" placeholder="Informe seu destino">
         <button class="submit-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
       <div class="filter-area">
@@ -367,17 +379,15 @@ get_header();
         </div>
       </div>
       <div class="cards-grid">
-        <template x-for="postMeta in postsMeta">
+        <template x-for="postMeta in postsMeta" :key="postMeta['Key']">
           <div class="card" x-data="{
             qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
             qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
             isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
-            cardImgHeight: 0
-          }" x-show="sanitizeTitle(postMeta['PostData']['ProgramInfo']['Descricao']) !== 'nova-zelandia-express'" x-init="
-          if(sanitizeTitle(postMeta['PostData']['ProgramInfo']['Descricao']) !== 'nova-zelandia-de-norte-a-sul') {
-            postMeta['CardImageUrl']
+            highlightText: postMeta['PostData']['ProgramInfo']['DestaquePortalTexto'],
+            cardImgHeight: 269
           }">
-            <a x-bind:href="postMeta['Link']" class="post-link">
+            <a x-bind:href="postMeta['Link']" x-init="console.log(postMeta['PostData']['ProgramInfo']['Descricao'] + isHighlightedPost)" class="post-link">
               <div class="card-img">
                 <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
                 <span x-show="isHighlightedPost" class="highlight-stamp">
