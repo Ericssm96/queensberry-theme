@@ -485,7 +485,7 @@ get_header();
             <p x-html="currentSlideDescription.replace('\n', '<br />')"></p>
           </div>
           <div class="bottom">
-            <a href="#searchContainer" @click="selectedLogs = []; selectedLogs.push(cSlideSanitizedTitle + '-log');" class="schedules-cta">Programas</a>
+            <a href="#searchContainer" @click="selectedLogs = []; selectedLogs.push(cSlideSanitizedTitle + '-log'); $refs.logListTrigger.checked = true;" class="schedules-cta">Programas</a>
 
             <div class="controls">
               
@@ -504,7 +504,7 @@ get_header();
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( "$sanitized_log_identifier" );' class="swiper-slide">
+                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push("$sanitized_log_identifier"); \$refs.logListTrigger.checked = true;'  class="swiper-slide">
                   <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
                   </div>
                   </a>
@@ -516,7 +516,7 @@ get_header();
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push( "$sanitized_log_identifier" );' class="swiper-slide">
+                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push("$sanitized_log_identifier"); \$refs.logListTrigger.checked = true;' class="swiper-slide">
                   <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
                   </div>
                 </a>
@@ -556,7 +556,7 @@ get_header();
                 <?php
                 }
                 ?>
-                <input @change="isLogFilterListOpen = !isLogFilterListOpen" type="checkbox" name="logs_list_trigger" id="logs_list_trigger">
+                <input @change="isLogFilterListOpen = !isLogFilterListOpen" type="checkbox" x-ref="logListTrigger" name="logs_list_trigger" id="logs_list_trigger">
                 <ul class="checkbox-list">
                   <?php
                   foreach($related_logs_name_list as $related_log_name) {
