@@ -1685,6 +1685,7 @@ function custom_search_results($request) {
 function custom_tag_filter_results($request) {
     $tag_slugs = $request->get_param('tags');
     $category_slugs = $request->get_param('categories');
+    $search_query = sanitize_text_field($request->get_param('search'));
 
     $args = array(
         'post_type'      => 'post',
@@ -1693,6 +1694,10 @@ function custom_tag_filter_results($request) {
         'orderby' => 'title',
         'order' => 'ASC'
     );
+
+    if(!empty($search_query) && trim($search_query) !== "") {
+        $args['s'] = $search_query;
+    }
 
     if (!empty($tag_slugs)) {
         $args['tag_slug__and'] = explode(',', $tag_slugs);

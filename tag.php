@@ -11,6 +11,7 @@ if ($tag && isset($tag->name)) {
 }
 
 if(have_posts()){
+  $counter = 1;
   while(have_posts()) {
     the_post();
 
@@ -55,8 +56,11 @@ if(have_posts()){
       "CardImageUrl" => $card_image_url,
       "PostSlug" => $post_slug,
       "LogSlug" => sanitize_title($log_name),
-      "RegionInfo" => $region_info
+      "RegionInfo" => $region_info,
+      "Key" => $counter
     ];
+
+    $counter += 1;
   }
 
   usort($posts_metadata, function ($a, $b) {
@@ -260,6 +264,7 @@ get_header();
       try {
         const response = await axios.get("<?php echo esc_url(rest_url("api/v1/tagfilter/")); ?>", {
           params: {
+            search: this.textFilter,
             tags: this.selectedTags.join(","),
             categories: this.selectedCategories.join(",")
           },
