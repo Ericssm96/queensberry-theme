@@ -13,20 +13,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   <link rel="icon" href="<?= get_template_directory_uri(); ?>/src/img/favicon-queensberry-viagens.png">
   <?php
-    $site_title = get_bloginfo('name');
+  $site_title = get_bloginfo('name');
 
-    if (is_front_page()) {
-        $page_title = $site_title;
-    } elseif (is_category()) {
-        $page_title = single_cat_title('', false);
-    } elseif (is_tag()) {
-        $page_title = single_tag_title('', false);
-    } else {
-        $page_title = get_the_title();
-    }
+  if (is_front_page()) {
+    $page_title = $site_title;
+  } elseif (is_category()) {
+    $page_title = single_cat_title('', false);
+  } elseif (is_tag()) {
+    $page_title = single_tag_title('', false);
+  } else {
+    $page_title = get_the_title();
+  }
 
-    $page_title = strtoupper($page_title);
-    $site_title = strtoupper($site_title);
+  $page_title = strtoupper($page_title);
+  $site_title = strtoupper($site_title);
   ?>
   <title><?= $page_title . " - " . $site_title; ?></title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -188,7 +188,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
               <div class="content-b">
                 <ul class="left-col">
                   <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-                  <li><a href="<?= home_url(); ?>/category/disney">Walt Disney World Resort</a></li>
+                  <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>
                   <li><a href="<?= home_url(); ?>/category/driveness-experience">Driveness Experience</a></li>
                   <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
                   <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
@@ -286,8 +286,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
           <input type="checkbox" name="dropdown-mb" id="produtos-mb" />
           <ul class="produtos-items-mb">
             <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-            <li><a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros no Mundo</a></li>
-            <li><a href="<?= home_url(); ?>/category/disney">Walt Disney World Resort</a></li>
+            <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>
             <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
             <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours regulares</a></li>
             <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil in</a></li>
