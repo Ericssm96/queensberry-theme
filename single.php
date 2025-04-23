@@ -484,7 +484,7 @@ if (is_single()) {
         <i class="fa-solid fa-xmark close-icon" @click="isModalOpen = false; modalType = ''; formType = ''"></i>
         <h2>Solicitar informações do programa</h2>
 
-        <input type="hidden" id="actionField" name="action" value="queensberry_verify_recaptcha_b">
+        <input type="hidden" id="actionField" name="action" value="queensberry_verify_recaptcha">
 
         <!-- Eloqua -->
         <input type="hidden" name="elqFormName" value="queensberry-programa">
@@ -549,9 +549,6 @@ if (is_single()) {
             </span>
             <label for="RECEBER_COMUNICACOES" class="text-label">Aceito receber comunicações e informações da Queensberry</label>
           </div>
-          <div class="recaptcha-box">
-            <div id="recaptcha-box-2"></div>
-          </div>
           <button class="submit-btn" type="submit">Enviar</button>
         </div>
       </form>
@@ -606,46 +603,71 @@ if (is_single()) {
               $("#celular1").mask("(00) 00000-0000");
 
               $("#f_queensberry_programa").on("submit", (e) => {
-                  e.preventDefault();
+                e.preventDefault();
 
-                  $("#actionField").val("queensberry_programa");
-                  formData.set("action", "queensberry_programa");
+                var formData = new FormData($("#f_queensberry_programa")[0]);
 
-                  const perfil = $("select[name='PERFIL']").val();
 
-                  if (!perfil || perfil == "") {
-                      // Se não houver perfil selecionado, exibe o alert
-                      alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
-                      return;  // Interrompe o envio do formulário
-                  }
+                grecaptcha.ready(function() {
+                  grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+                    console.log(token);
+                    jQuery.post(
+                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                      {
+                        "g-recaptcha-response": token
+                      }
+                    ).done((res) => {
+                      if(res.data.message === "OK") {
+                        $("#actionField").val("queensberry_programa");
+                        formData.set("action", "queensberry_programa");
 
-                  if (perfil === "passageiro") {
-                      // Se for "passageiro", envia para o backend (Responsys)
-                      jQuery.post(
-                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_programa",
-                          $("#f_queensberry_programa").serialize(),
-                          function (data) {
-                              console.log(data);
-                          }
-                      ).done(() => {
-                          alert("Envio realizado com sucesso");
-                      });
-                  } else if (perfil === "agente") {
-                      // Se for "agente", envia para Eloqua
-                      jQuery.ajax({
-                          type: "POST",
-                          url: "https://s2864845.t.eloqua.com/e/f2",
-                          data: jQuery("#f_queensberry_programa").serialize(),
-                          success: () => {
-                              console.log("Eloqua ok");
-                          },
-                          error: (res) => {
-                              console.log("Eloqua fail", res);
-                          },
-                      }).done(() => {
-                          alert("Envio realizado com sucesso");
-                      });
-                  }                  
+                        const perfil = $("select[name='PERFIL']").val();
+
+                        if (!perfil || perfil == "") {
+                            // Se não houver perfil selecionado, exibe o alert
+                            alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
+                            return;  // Interrompe o envio do formulário
+                        }
+
+                        if (perfil === "passageiro") {
+                            // Se for "passageiro", envia para o backend (Responsys)
+                            jQuery.post(
+                                "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_programa",
+                                $("#f_queensberry_programa").serialize(),
+                                function (data) {
+                                    console.log(data);
+                                }
+                            ).done(() => {
+                                alert("Envio realizado com sucesso");
+                            });
+                        } else if (perfil === "agente") {
+                            // Se for "agente", envia para Eloqua
+                            jQuery.ajax({
+                                type: "POST",
+                                url: "https://s2864845.t.eloqua.com/e/f2",
+                                data: jQuery("#f_queensberry_programa").serialize(),
+                                success: () => {
+                                    console.log("Eloqua ok");
+                                },
+                                error: (res) => {
+                                    console.log("Eloqua fail", res);
+                                },
+                            }).done(() => {
+                                alert("Envio realizado com sucesso");
+                            });
+                        }                  
+                      } else {
+                        console.log("Recaptcha error")
+                      }
+                    })
+                  });
+                });
+
+
+
+                 
+
+                  
               });
           });
       </script>
@@ -669,8 +691,8 @@ if (is_single()) {
           }
 
           window.onload = WaitUntilCustomerGUIDIsRetrieved;
-          _elqQ = _elqQ || [];
-          _elqQ.push(['elqGetCustomerGUID']);
+          // _elqQ = _elqQ || [];
+          // _elqQ.push(['elqGetCustomerGUID']);
       </script>
 
       <script>
@@ -697,7 +719,7 @@ if (is_single()) {
 
 
       <form id="f_queensberry_recomendar_programa" name="f_queensberry_recomendar_programa" method="POST" x-show="isModalOpen && modalType === 'form' && formType === 'recomendar'">
-          <input type="hidden" id="actionField2" name="action" value="queensberry_verify_recaptcha_c">
+          <input type="hidden" id="actionField2" name="action" value="queensberry_verify_recaptcha">
           <i class="fa-solid fa-xmark close-icon" @click="isModalOpen = false; modalType = ''; formType = ''"></i>
           <h2>Recomendar Programa</h2>
 
@@ -740,45 +762,41 @@ if (is_single()) {
       </form>
 
       <script>
-          
-          $(document).ready(() => {
 
-          // AJUSTANDO A MÁSCARA
+      $(document).ready(() => {
 
-          $("#f_queensberry_recomendar_programa").on("submit", (e) => {
-              e.preventDefault();
+        $("#f_queensberry_recomendar_programa").on("submit", (e) => {
+          e.preventDefault();
 
-              grecaptcha.ready(function() {
-                grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
-                  console.log(token);
+          grecaptcha.ready(function() {
+            grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+              console.log(token);
+              jQuery.post(
+                "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                {
+                  "g-recaptcha-response": token
+                }
+              ).done((res) => {
+                if(res.data.message === "OK") {
+                  $("#actionField2").val("queensberry_recomendar_programa");
+
                   jQuery.post(
-                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
-                    {
-                      "g-recaptcha-response": token
-                    }
-                  ).done((res) => {
-                    if(res.data.message === "OK") {
-                      $("#actionField2").val("queensberry_recomendar_programa");
-
-                      jQuery.post(
-                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_recomendar_programa",
-                          $("#f_queensberry_recomendar_programa").serialize(),
-                          function (data) {
-                              // Callback para lidar com a resposta
-                              console.log(data); // Exibe a resposta no console
-                              alert("Envio realizado com sucesso!")
-                          }
-                      )
-                    });
-                    } else {
-                      console.log("Recaptcha error")
-                    }
-                  })
-                });
-              });
-              
-              
-          });
+                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_recomendar_programa",
+                      $("#f_queensberry_recomendar_programa").serialize(),
+                      function (data) {
+                          // Callback para lidar com a resposta
+                          console.log(data); // Exibe a resposta no console
+                          alert("Envio realizado com sucesso!")
+                      }
+                  )
+                } else {
+                  console.log("Recaptcha error")
+                }
+              })
+            })
+          })
+        })
+      })
       </script>
 
       <script type="text/javascript">
@@ -800,8 +818,8 @@ if (is_single()) {
           }
 
           window.onload = WaitUntilCustomerGUIDIsRetrieved;
-          _elqQ = _elqQ || [];
-          _elqQ.push(['elqGetCustomerGUID']);
+          // _elqQ = _elqQ || [];
+          // _elqQ.push(['elqGetCustomerGUID']);
       </script>
 
       <script>
