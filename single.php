@@ -827,135 +827,35 @@ if (is_single()) {
               </span>
               <label for="checkReceberComunicacoes" class="text-label">Aceito receber comunicações e informações da Queensberry</label>
             </div>
-            <div class="recaptcha-box">
-              <div id="recaptcha-box-3"></div>
-            </div>
             <button class="submit-btn" type="submit">Enviar</button>
           </div>
       </form>
 
       <script>
-/*           var formData2 = new FormData(jQuery("#f_queensberry_recomendar_programa")[0]); // Use FormData para incluir anexos
-
-          $(document).ready(() => {
-
-              $("#f_queensberry_recomendar_programa").on("submit", (e) => {
-                  e.preventDefault();
-
-                  let captchaResponse2 = grecaptcha.getResponse();
-
-                  console.log(captchaResponse2)
-
-                  if(captchaResponse2.length <= 0) {
-                    alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
-
-                    throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
-                  } else {
-                    jQuery.post(
-                        "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
-                        $("#f_queensberry_recomendar_programa").serialize(),
-                        function (data) {
-                          $("#actionField2").val("queensberry_recomendar_programa");
-                          formData2.set("action", "queensberry_recomendar_programa");
-                          console.log(data);
-                          if(data.data.message === "OK") {
-                            jQuery.post(
-                                "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_recomendar_programa",
-                                $("#f_queensberry_recomendar_programa").serialize(),
-                                function (data) {
-                                    // Callback para lidar com a resposta
-                                    console.log(data); // Exibe a resposta no console
-                                }
-                            )
-                          }
-                        }
-                    ).fail((res)=>{
-
-                    }).done(() => {
-                        // Redireciona para a página de "Obrigado" após o envio
-                        // window.location.replace("<?= home_url(); ?>/obrigado/");
-                        alert("Envio realizado com sucesso");
-                    });
-                  }
-                 
-
-              });
-          }); */
-
-
-
-
-
-
-/* 
-          $(document).ready(() => {
-
-              // AJUSTANDO A MÁSCARA
-
-              $("#celular").mask("(00) 00000-0000");
-
-              $("#f_queensberry_recomendar_programa").on("submit", (e) => {
-                  e.preventDefault();
-
-                  const captchaResponse3 = grecaptcha.getResponse(clientId3);
-
-                  if(captchaResponse3.length <= 0) {
-                    alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
-
-                    throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
-                  } else {
-                    jQuery.post(
-                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha_c",
-                      $("#f_queensberry_recomendar_programa").serialize(),
-                      function(data) {
-                        if(data.data.message === "OK") {
-                          $("#actionField").val("queensberry_recomendar_programa");
-                          formData.set("action", "queensberry_recomendar_programa");
-                          console.log(data);
-
-                          jQuery.post(
-                              "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_recomendar_programa",
-                              $("#f_queensberry_recomendar_programa").serialize(),
-                              function (data) {
-                                  // Callback para lidar com a resposta
-                                  console.log(data); // Exibe a resposta no console
-                              }
-                          )
-                        }
-                      }
-                    )
-                    .fail((res) => {
-                      console.log("Recaptcha verification fail");
-                    })
-                  }    
-              });
-          }); */
-
-
           
           $(document).ready(() => {
 
-// AJUSTANDO A MÁSCARA
+          // AJUSTANDO A MÁSCARA
 
-$("#celular").mask("(00) 00000-0000");
+          $("#celular").mask("(00) 00000-0000");
 
-$("#f_queensberry_recomendar_programa").on("submit", (e) => {
-    e.preventDefault();
+          $("#f_queensberry_recomendar_programa").on("submit", (e) => {
+              e.preventDefault();
 
-    
-    $("#actionField2").val("queensberry_recomendar_programa");
+              
+              $("#actionField2").val("queensberry_recomendar_programa");
 
-      jQuery.post(
-          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_recomendar_programa",
-          $("#f_queensberry_recomendar_programa").serialize(),
-          function (data) {
-              // Callback para lidar com a resposta
-              console.log(data); // Exibe a resposta no console
-              alert("Envio realizado com sucesso!")
-          }
-      )
-    });
-});
+                jQuery.post(
+                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_recomendar_programa",
+                    $("#f_queensberry_recomendar_programa").serialize(),
+                    function (data) {
+                        // Callback para lidar com a resposta
+                        console.log(data); // Exibe a resposta no console
+                        alert("Envio realizado com sucesso!")
+                    }
+                )
+              });
+          });
       </script>
 
       <script type="text/javascript">

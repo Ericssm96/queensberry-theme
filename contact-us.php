@@ -81,78 +81,6 @@ get_header(); ?>
             </div>
           </form>
           <script>
-            /* var formData = new FormData(jQuery("#f_queensberry_fale_conosco")[0]); // Use FormData para incluir anexos
-
-
-            $(document).ready(() => {
-              $("#celular").mask("(00) 00000-0000");
-              $("#iptCpf").mask("000.000.000-00");
-
-              $("#celular").on("blur", () => {
-                let nationalCelNumber = $("#celular").val();
-                let cleanNumber = nationalCelNumber.replace(/\D/g, "");
-                let fullNumber = `55${cleanNumber}`;
-                $("#fullPhoneNumber").val(fullNumber);
-              })
-
-              $("#f_queensberry_fale_conosco").on("submit", (e) => {
-                e.preventDefault();
-
-                let nationalCelNumber = $("#celular").val();
-                let cleanNumber = nationalCelNumber.replace(/\D/g, "");
-                let fullNumber = `55${cleanNumber}`;
-                $("#fullPhoneNumber").val(fullNumber);
-                const captchaResponse = grecaptcha.getResponse();
-
-                if(captchaResponse.length <= 0) {
-                  alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
-
-                  throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
-                } else {
-                  jQuery
-                  .ajax({
-                    type: "POST",
-                    url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
-                    data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                    error: (res) => {
-                      console.log("Recaptcha Fail", res);
-                    },
-                  }).done((res)=>{
-                    jQuery("#actionField").val("queensberry_fale_conosco");
-                    console.log(res);
-                    console.log(document.querySelector("#actionField").value);
-                    if(res.data.message === "OK") {
-                      jQuery
-                          .ajax({
-                            type: "POST",
-                            url: "https://s2864845.t.eloqua.com/e/f2",
-                            data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                            success: () => {
-                              // jQuery("#actionField").val("envio_seja_parceiro");
-                              // formData = new FormData(this);
-                              console.log("Eloqua ok");
-                              // console.log(document.querySelector("#actionField").value);
-                            },
-                            error: (res) => {
-                              console.log("Eloqua fail", res);
-                            },
-                          })
-                          .then(() => {
-                            jQuery.post(
-                              "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                            $("#f_queensberry_fale_conosco").serialize(),
-                            function (data) {
-                              console.log(data); // Exibe a resposta no console
-                              alert("Envio realizado com sucesso!");
-                            }
-                          )
-                      });
-                    }
-                  })
-                }
-              })
-            }) */
-
             $(document).ready(() => {
               $("#celular").mask("(00) 00000-0000");
               $("#iptCpf").mask("000.000.000-00");
@@ -218,37 +146,6 @@ get_header(); ?>
                     })
                   });
                 });
-
-
-                
-
-                
-
-                /* jQuery
-                    .ajax({
-                      type: "POST",
-                      url: "https://s2864845.t.eloqua.com/e/f2",
-                      data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                      success: () => {
-                        // jQuery("#actionField").val("envio_seja_parceiro");
-                        // formData = new FormData(this);
-                        console.log("Eloqua ok");
-                        // console.log(document.querySelector("#actionField").value);
-                      },
-                      error: (res) => {
-                        console.log("Eloqua fail", res);
-                      },
-                    })
-                    .then(() => {
-                      jQuery.post(
-                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                        $("#f_queensberry_fale_conosco").serialize(),
-                        function (data) {
-                          console.log(data); // Exibe a resposta no console
-                          alert("Envio realizado com sucesso!");
-                        }
-                      )
-                    }); */
               })
             }) 
           </script>
