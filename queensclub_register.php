@@ -282,10 +282,6 @@ get_header(); ?>
       </div>
 
       <div class="submit-area">
-        <div class="recaptcha-box">
-          <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3"></div>
-        </div>
-
         <button class="submit-btn">Cadastrar</button>
       </div>
     </form>
@@ -419,36 +415,32 @@ get_header(); ?>
           let fullNumber = `55${cleanNumber}`;
           $("#fullPhoneNumber").val(fullNumber);
 
-          let captchaResponse = grecaptcha.getResponse();
-
-          if(captchaResponse.length <= 0) {
-            alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
-
-            throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
-          } else {
-            jQuery.post(
-              "<?= home_url(); ?>/wp-admin/admin-post.php?action=verify_recaptcha",
-              $("#f_queensberry_fale_conosco").serialize(),
-              function (data) {
-                console.log(data);
-                $("#actionField").value("queensberry_queensclub");
-                jQuery.post(
-                  "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_queensclub",
-                  $("#m_f_queensberry_cadastro_adin").serialize(),
-                  function (data) {
-                    console.log(data);
-                  }
-                )
-                
-                console.log(data); 
-              }
-            ).done(() => {
-              window.location.replace("<?= home_url(); ?>/obrigado/");
-            }).fail((res) => {
-              
+          grecaptcha.ready(function() {
+            grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+              console.log(token);
+              jQuery.post(
+                "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                {
+                  "g-recaptcha-response": token
+                }
+              ).done((res) => {
+                jQuery("#actionField").val("queensberry_fale_conosco");
+                if(res.data.message === "OK") {
+                  $("#actionField").value("queensberry_queensclub");
+                  jQuery.post(
+                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_queensclub",
+                    $("#m_f_queensberry_cadastro_adin").serialize(),
+                    function (data) {
+                      console.log(data);
+                      alert("Envio realizado com sucesso");
+                    }
+                  )
+                } else {
+                  console.log("Recaptcha error")
+                }
+              })
             });
-          }
-
+          });
           
 
         });
