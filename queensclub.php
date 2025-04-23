@@ -60,7 +60,9 @@ get_header(); ?>
           </div>
           <div class="content-area">
               <strong>ACUMULE PONTOS A CADA VIAGEM E TROQUE POR DESCONTOS PROGRESSIVOS EM SEUS FUTUROS EMBARQUES.</strong>
-              <button class="btn">Veja o regulamento</button>
+              <a href="<?= get_template_directory_uri(); ?>/src/doc/REGULAMENTO_QC_2023_24.pdf" target="_blank" class="btn">
+                Veja o regulamento
+              </a>
           </div> 
       </div>
   </article>

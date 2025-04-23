@@ -782,7 +782,7 @@ $videos_titles = $filtered_titles;
   <div class="mini-popup">
     <div class="popup-rotativo">
             <button class="mini-popup-close-btn" onclick="fecharMiniPopup()"> X </button>
-            <a href="<?= home_url(); ?>/category/disney" target="_blank">
+            <a href="<?= home_url(); ?>/category/walt-disney-world-resort" target="_blank">
                 <img src="<?= get_template_directory_uri(); ?>/src/img/popupdisney.png">
             </a>
     </div>
