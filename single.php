@@ -516,7 +516,7 @@ if (is_single()) {
           </div>
           <div class="input-area">
             <label for="MOBILE_NUMBER_">Telefone</label>
-            <input type="text" placeholder="Telefone()*" @change="fullPhoneNumberA = '55' + phoneNumberA" x-model="phoneNumberA" required maxlength="14" id="MOBILE_NUMBER_" name="MOBILE_NUMBER_" id="celular">
+            <input type="text" placeholder="Telefone()*" @change="fullPhoneNumberA = '55' + phoneNumberA" x-model="phoneNumberA" required maxlength="14" id="MOBILE_NUMBER_" name="MOBILE_NUMBER_" id="celular1">
           </div>
           <div class="input-area">
             <label for="iptEstado">Estado</label>
@@ -599,145 +599,53 @@ if (is_single()) {
               });
           });
       </script>
-      <script>
-          /* var formData = new FormData(jQuery("#f_queensberry_programa")[0]); // Use FormData para incluir anexos
-
+      <script>          
           $(document).ready(() => {
+             var formData = new FormData(jQuery("#f_queensberry_programa")[0]);
 
-              // AJUSTANDO A MÁSCARA
-
-              $("#celular").mask("(00) 00000-0000");
+              $("#celular1").mask("(00) 00000-0000");
 
               $("#f_queensberry_programa").on("submit", (e) => {
                   e.preventDefault();
 
-                  grecaptcha.reset(clientId1);
-                  grecaptcha.reset(clientId2); 
-                  grecaptcha.reset(clientId3);
+                  $("#actionField").val("queensberry_programa");
+                  formData.set("action", "queensberry_programa");
 
-                  const captchaResponse2 = grecaptcha.getResponse(clientId2);
+                  const perfil = $("select[name='PERFIL']").val();
 
-                  if(captchaResponse2.length <= 0) {
-                    alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
+                  if (!perfil || perfil == "") {
+                      // Se não houver perfil selecionado, exibe o alert
+                      alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
+                      return;  // Interrompe o envio do formulário
+                  }
 
-                    throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
-                  } else {
-                    jQuery.post(
-                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha_b",
-                      $("#f_queensberry_programa").serialize(),
-                      function(data) {
-                        if(data.data.message === "OK") {
-                          $("#actionField").val("queensberry_programa");
-                          formData.set("action", "queensberry_programa");
-                          console.log(data);
-
-                          const perfil = $("select[name='PERFIL']").val();
-
-                          if (!perfil || perfil == "") {
-                              // Se não houver perfil selecionado, exibe o alert
-                              alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
-                              return;  // Interrompe o envio do formulário
+                  if (perfil === "passageiro") {
+                      // Se for "passageiro", envia para o backend (Responsys)
+                      jQuery.post(
+                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_programa",
+                          $("#f_queensberry_programa").serialize(),
+                          function (data) {
+                              console.log(data);
                           }
-
-                          if (perfil === "passageiro") {
-                              // Se for "passageiro", envia para o backend (Responsys)
-                              jQuery.post(
-                                  "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_programa",
-                                  $("#f_queensberry_programa").serialize(),
-                                  function (data) {
-                                      // Callback para lidar com a resposta
-                                      console.log(data); // Exibe a resposta no console
-                                  }
-                              ).done(() => {
-                                  // Redireciona para a página de "Obrigado" após o envio
-                                  // window.location.replace("<?= home_url(); ?>/obrigado/");
-                                  alert("Envio realizado com sucesso");
-                              });
-                          } else if (perfil === "agente") {
-                              // Se for "agente", envia para Eloqua
-                              jQuery.ajax({
-                                  type: "POST",
-                                  url: "https://s2864845.t.eloqua.com/e/f2",
-                                  data: jQuery("#f_queensberry_programa").serialize(),
-                                  success: () => {
-                                      console.log("Eloqua ok");
-                                  },
-                                  error: (res) => {
-                                      console.log("Eloqua fail", res);
-                                  },
-                              }).done(() => {
-                                  // Redireciona para a página de "Obrigado" após o envio
-                                  // window.location.replace("<?= home_url(); ?>/obrigado/");
-                                  alert("Envio realizado com sucesso");
-                              });
-                          }
-                        }
-                      }
-                    )
-                    .fail((res) => {
-                      console.log("Recaptcha verification fail");
-                    })
-                  }    
-              });
-          }); */
-
-
-          
-          $(document).ready(() => {
-             var formData = new FormData(jQuery("#f_queensberry_programa")[0]); // Use FormData para incluir anexos
-
-              // AJUSTANDO A MÁSCARA
-
-              $("#celular").mask("(00) 00000-0000");
-
-              $("#f_queensberry_programa").on("submit", (e) => {
-                  e.preventDefault();
-
-                    $("#actionField").val("queensberry_programa");
-                    formData.set("action", "queensberry_programa");
-
-                    const perfil = $("select[name='PERFIL']").val();
-
-                    if (!perfil || perfil == "") {
-                        // Se não houver perfil selecionado, exibe o alert
-                        alert("Por favor, selecione um perfil válido (Passageiro ou Agente).");
-                        return;  // Interrompe o envio do formulário
-                    }
-
-                    if (perfil === "passageiro") {
-                        // Se for "passageiro", envia para o backend (Responsys)
-                        jQuery.post(
-                            "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_programa",
-                            $("#f_queensberry_programa").serialize(),
-                            function (data) {
-                                // Callback para lidar com a resposta
-                                console.log(data); // Exibe a resposta no console
-                                /* alert("Envio realizado com sucesso!") */
-                            }
-                        ).done(() => {
-                            // Redireciona para a página de "Obrigado" após o envio
-                            // window.location.replace("<?= home_url(); ?>/obrigado/");
-                            alert("Envio realizado com sucesso");
-                        });
-                    } else if (perfil === "agente") {
-                        // Se for "agente", envia para Eloqua
-                        jQuery.ajax({
-                            type: "POST",
-                            url: "https://s2864845.t.eloqua.com/e/f2",
-                            data: jQuery("#f_queensberry_programa").serialize(),
-                            success: () => {
-                                console.log("Eloqua ok");
-                                /* alert("Envio realizado com sucesso!") */
-                            },
-                            error: (res) => {
-                                console.log("Eloqua fail", res);
-                            },
-                        }).done(() => {
-                            // Redireciona para a página de "Obrigado" após o envio
-                            // window.location.replace("<?= home_url(); ?>/obrigado/");
-                            alert("Envio realizado com sucesso");
-                        });
-                    }                  
+                      ).done(() => {
+                          alert("Envio realizado com sucesso");
+                      });
+                  } else if (perfil === "agente") {
+                      // Se for "agente", envia para Eloqua
+                      jQuery.ajax({
+                          type: "POST",
+                          url: "https://s2864845.t.eloqua.com/e/f2",
+                          data: jQuery("#f_queensberry_programa").serialize(),
+                          success: () => {
+                              console.log("Eloqua ok");
+                          },
+                          error: (res) => {
+                              console.log("Eloqua fail", res);
+                          },
+                      }).done(() => {
+                          alert("Envio realizado com sucesso");
+                      });
+                  }                  
               });
           });
       </script>
@@ -837,24 +745,39 @@ if (is_single()) {
 
           // AJUSTANDO A MÁSCARA
 
-          $("#celular").mask("(00) 00000-0000");
-
           $("#f_queensberry_recomendar_programa").on("submit", (e) => {
               e.preventDefault();
 
-              
-              $("#actionField2").val("queensberry_recomendar_programa");
-
-                jQuery.post(
-                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_recomendar_programa",
-                    $("#f_queensberry_recomendar_programa").serialize(),
-                    function (data) {
-                        // Callback para lidar com a resposta
-                        console.log(data); // Exibe a resposta no console
-                        alert("Envio realizado com sucesso!")
+              grecaptcha.ready(function() {
+                grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+                  console.log(token);
+                  jQuery.post(
+                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                    {
+                      "g-recaptcha-response": token
                     }
-                )
+                  ).done((res) => {
+                    if(res.data.message === "OK") {
+                      $("#actionField2").val("queensberry_recomendar_programa");
+
+                      jQuery.post(
+                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_recomendar_programa",
+                          $("#f_queensberry_recomendar_programa").serialize(),
+                          function (data) {
+                              // Callback para lidar com a resposta
+                              console.log(data); // Exibe a resposta no console
+                              alert("Envio realizado com sucesso!")
+                          }
+                      )
+                    });
+                    } else {
+                      console.log("Recaptcha error")
+                    }
+                  })
+                });
               });
+              
+              
           });
       </script>
 
