@@ -77,11 +77,6 @@ get_header(); ?>
             </div>
 
             <div class="submit-area">
-              <div class="recaptcha-box">
-                <!-- <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3"></div> -->
-                <div id="recaptcha-box-2"></div>
-              </div>
-              
               <button type="submit" class="submit-btn">Enviar</button>
             </div>
           </form>
@@ -176,35 +171,58 @@ get_header(); ?>
                 let fullNumber = `55${cleanNumber}`;
                 let subject = $("#ASSUNTO").val();
                 $("#fullPhoneNumber").val(fullNumber);
-                jQuery("#actionField").val("queensberry_fale_conosco");
 
-                if(subject === 'Atendimento ao Passageiro') {
-                  jQuery.post(
-                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                    $("#f_queensberry_fale_conosco").serialize(),
-                    function (data) {
-                      console.log(data); // Exibe a resposta no console
-                      alert("Envio realizado com sucesso!");
-                    }
-                  )
-                } else {
-                  jQuery
-                    .ajax({
-                      type: "POST",
-                      url: "https://s2864845.t.eloqua.com/e/f2",
-                      data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                      success: () => {
-                        // jQuery("#actionField").val("envio_seja_parceiro");
-                        // formData = new FormData(this);
-                        console.log("Eloqua ok");
-                        alert("Envio realizado com sucesso!");
-                        // console.log(document.querySelector("#actionField").value);
-                      },
-                      error: (res) => {
-                        console.log("Eloqua fail", res);
-                      },
-                  })
-                }
+
+
+                grecaptcha.ready(function() {
+                  grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+                    console.log(token);
+                    jQuery.post(
+                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                      {
+                        "g-recaptcha-response": token
+                      }
+                    ).done((res) => {
+                      jQuery("#actionField").val("queensberry_fale_conosco");
+                      if(res.data.message === "OK") {
+                        if(subject === 'Atendimento ao Passageiro') {
+                          jQuery.post(
+                              "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
+                            $("#f_queensberry_fale_conosco").serialize(),
+                            function (data) {
+                              console.log(data); // Exibe a resposta no console
+                              alert("Envio realizado com sucesso!");
+                            }
+                          )
+                        } else {
+                          jQuery
+                            .ajax({
+                              type: "POST",
+                              url: "https://s2864845.t.eloqua.com/e/f2",
+                              data: jQuery("#f_queensberry_fale_conosco").serialize(),
+                              success: () => {
+                                // jQuery("#actionField").val("envio_seja_parceiro");
+                                // formData = new FormData(this);
+                                console.log("Eloqua ok");
+                                alert("Envio realizado com sucesso!");
+                                // console.log(document.querySelector("#actionField").value);
+                              },
+                              error: (res) => {
+                                console.log("Eloqua fail", res);
+                              },
+                          })
+                        }
+                      } else {
+                        console.log("Recaptcha error")
+                      }
+                    })
+                  });
+                });
+
+
+                
+
+                
 
                 /* jQuery
                     .ajax({
@@ -431,6 +449,8 @@ get_header(); ?>
             #f_queensberry_fale_conosco .submit-area {
               display: flex;
               flex-direction: column;
+              align-items: center;
+              justify-content: center;
               row-gap: 50px;
             }
 
