@@ -730,7 +730,7 @@ if (is_single()) {
           <input type="hidden" name="_di_" value="il13bar20jj92v93jquln3o9t91ml5b13dqjrnk5jso1031f734g">
           <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Recomendar Programa - Queensberry">
-          <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+          <input type="hidden" id="URL_CADASTRO" x-bind:value="window.location.href" name="URL_CADASTRO">
 
           <!-- Formulário -->
           <div class="inner-form">

@@ -49,7 +49,7 @@ get_header(); ?>
           </select>
         </div>
         <div class="row-100">
-          <input type="text" placeholder="DD/MM/AAAA" required name="DATA_NASCIMENTO" maxlength="8">
+          <input type="text" placeholder="DD/MM/AAAA" required name="DATA_NASCIMENTO" maxlength="10">
           <input type="text" placeholder="Telefone( )*" maxlength="20" required name="MOBILE_NUMBER_" id="celular">
         </div>
         <div class="row-100">
