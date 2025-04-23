@@ -5,9 +5,7 @@
   <?php wp_head(); ?>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit" async defer></script>
-  <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback2&render=explicit" async defer></script>
-  <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback3&render=explicit" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
@@ -55,91 +53,6 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
   isModalOpen: false,
 }" x-bind:style="isModalOpen ? 'overflow: hidden;' : 'overflow: auto;'">
 
-  <?php
-  if (is_single()) {
-    echo <<<SCRIPT
-    <script>
-      var clientId1;
-      var clientId2;
-      var clientId3;
-
-      var recaptchaCallback = function() {
-        clientId1 = grecaptcha.render('recaptcha-box-1', {
-          'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-          'theme' : 'dark',
-          'size': 'compact'
-        });
-        clientId2 = grecaptcha.render('recaptcha-box-2', {
-          'sitekey' : '6LcIDAIrAAAAAIsdJDzyMk1Jof-d61K-2zlibDGZ',
-          'theme' : 'light'
-        });
-        clientId3 = grecaptcha.render('recaptcha-box-3', {
-          'sitekey' : '6LexGAIrAAAAALCmMJe_GoDVXZvzNvHUCDAwcX8W',
-          'theme' : 'light'
-        });
-      }
-    </script>
-    SCRIPT;
-  } else {
-    if (is_page("fale-conosco") || is_page("trabalhe-conosco") || is_page("queensclub-registro")) {
-      echo <<<SCRIPT
-      <script>
-        var clientId1;
-        var clientId2;
-        var clientId3;
-
-        var recaptchaCallback = function() {
-          clientId1 = grecaptcha.render('recaptcha-box-1', {
-            'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-            'theme' : 'dark',
-            'size': 'compact'
-          });
-          clientId2 = grecaptcha.render('recaptcha-box-2', {
-            'sitekey' : '6LcIDAIrAAAAAIsdJDzyMk1Jof-d61K-2zlibDGZ',
-            'theme' : 'light'
-          });
-        }
-
-        
-      </script>
-      SCRIPT;
-    } else {
-      if(is_home()) {
-        echo <<<SCRIPT
-        <script>
-          var clientId1;
-          var clientId2;
-          var clientId3;
-  
-          var recaptchaCallback = function() {
-            clientId1 = grecaptcha.render('recaptcha-box-1', {
-              'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-              'theme' : 'dark',
-              'size': 'compact'
-            });
-          }
-        </script>
-        SCRIPT;
-      } else {
-        echo <<<SCRIPT
-        <script>
-          var clientId1;
-          var clientId2;
-          var clientId3;
-  
-          var recaptchaCallback = function() {
-            clientId1 = grecaptcha.render('recaptcha-box-1', {
-              'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-              'theme' : 'dark',
-              'size': 'compact'
-            });
-          }
-        </script>
-        SCRIPT;
-      }
-    }
-  }
-  ?>
   <nav
     x-bind:class="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? 'desktop-navigation white-nav' : 'desktop-navigation'"
     x-data="{

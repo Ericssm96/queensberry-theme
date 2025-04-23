@@ -963,7 +963,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .site-footer .footer-top .wrapper .form-section .newsletter-form {
-    flex-direction: row;
     -moz-column-gap: 15px;
          column-gap: 15px;
   }
@@ -997,6 +996,7 @@ body {
 @media screen and (min-width: 1200px) {
   .site-footer .footer-top .wrapper .form-section .newsletter-form .fillable-fields {
     width: 270px;
+    margin-top: -40px;
   }
 }
 .site-footer .footer-top .wrapper .form-section .newsletter-form .fillable-fields input[type=text],

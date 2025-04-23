@@ -82,10 +82,6 @@
             </div>
           </div>
           <div class="submit-area">
-            <div class="squarey-recaptcha-box">
-              <!-- <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3" data-size="compact" data-theme="dark"></div> -->
-              <div id="recaptcha-box-1"></div>
-            </div>
             <button type="submit" class="submit-btn">Cadastrar</button>
           </div>
         </form>
@@ -152,42 +148,62 @@
             }); */
 
 
-            $(document).ready(() => {
+          $(document).ready(() => {
+            $("#f_queensberry_receba_novidades").on("submit", (e) => {
+              e.preventDefault();
+              let formData = $("#f_queensberry_receba_novidades").serialize();
+              
 
-                $("#f_queensberry_receba_novidades").on("submit", (e) => {
-                    e.preventDefault();
-                    let formData = $("#f_queensberry_receba_novidades").serialize();
-
-                    $("#actionField3").val("queensberry_receba_novidades");
-
-                    let perfil = $("#slctPerfil").val();
-                    if (perfil === "PASSAGEIRO") {
-                      // Enviar para Responsys
-                      jQuery.post(
-                        "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
-                        formData,
-                        function (data) {
-                          console.log("Responsys ok", data);
-                        }
-                      ).fail((res) => {
-                        console.log("Responsys fail", res);
-                      });
-                    } else {
-                      // Enviar para Eloqua
-                      jQuery.ajax({
-                        type: "POST",
-                        url: "https://s2864845.t.eloqua.com/e/f2",
-                        data: formData,
-                        success: () => {
-                            console.log("Eloqua ok");
-                        },
-                        error: (res) => {
-                            console.log("Eloqua fail", res);
-                        },
-                      });
+              grecaptcha.ready(function() {
+                grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+                  console.log(token);
+                  jQuery.post(
+                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                    {
+                      "g-recaptcha-response": token
                     }
+                  ).done((res) => {
+                    $("#actionField3").val("queensberry_receba_novidades");
+                    formData = $("#f_queensberry_receba_novidades").serialize();
+                    if(res.data.message === "OK") {
+                      $("#actionField3").val("queensberry_receba_novidades");
+                      let perfil = $("#slctPerfil").val();
+                      if (perfil === "PASSAGEIRO") {
+                        // Enviar para Responsys
+                        jQuery.post(
+                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
+                          formData,
+                          function (data) {
+                            console.log("Responsys ok", data);
+                          }
+                        ).fail((res) => {
+                          console.log("Responsys fail", res);
+                        });
+                      } else {
+                        // Enviar para Eloqua
+                        jQuery.ajax({
+                          type: "POST",
+                          url: "https://s2864845.t.eloqua.com/e/f2",
+                          data: formData,
+                          success: () => {
+                              console.log("Eloqua ok");
+                          },
+                          error: (res) => {
+                              console.log("Eloqua fail", res);
+                          },
+                        });
+                      }
+                    } else {
+                      console.log("Recaptcha error")
+                    }
+                  })
                 });
+              });
+
+
+              
             });
+          });
         </script>
 
         <script type="text/javascript">

@@ -1069,6 +1069,7 @@ body {
           align-items: flex-start;
         }
 
+
         .newsletter-form {
           width: 80%;
           max-width: 270px;
@@ -1083,7 +1084,6 @@ body {
 
 
           @media screen and (min-width: 1200px) {
-            flex-direction: row;
             column-gap: 15px;
           }
 
@@ -1117,6 +1117,7 @@ body {
 
             @media screen and (min-width: 1200px) {
               width: 270px;
+              margin-top: -40px;
             }
 
             input[type="text"],

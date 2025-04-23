@@ -61,7 +61,7 @@ add_action('admin_post_nopriv_queensberry_verify_recaptcha_c', 'queensberry_veri
 
 // Recaptcha
 function queensberry_verify_recaptcha() {
-    $secret_key = "6Lfq8_sqAAAAAGxyoOs1txS7HdsEgPxOhVO-QGOo";
+    $secret_key = "6LfF5yArAAAAALzZS-aUHevfaqgcqAgFZ3_eoTz3";
     $client_grecaptcha_res = $_POST["g-recaptcha-response"];
 
     $verify_response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$client_grecaptcha_res}");
