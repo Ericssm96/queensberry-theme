@@ -394,9 +394,11 @@ get_header(); ?>
 
     </script>
     <script>
-      var formData = new FormData(jQuery("#m_f_queensberry_cadastro_adin")[0]); // Use FormData para incluir anexos
+      
 
       $(document).ready(() => {
+
+        var formData = new FormData($("#m_f_queensberry_cadastro_adin")[0]); // Use FormData para incluir anexos
 
         $("#celular").mask("(00) 00000-0000");
 
@@ -426,7 +428,7 @@ get_header(); ?>
               ).done((res) => {
                 jQuery("#actionField").val("queensberry_fale_conosco");
                 if(res.data.message === "OK") {
-                  $("#actionField").value("queensberry_queensclub");
+                  $("#actionField").val("queensberry_queensclub");
                   jQuery.post(
                     "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_queensclub",
                     $("#m_f_queensberry_cadastro_adin").serialize(),
