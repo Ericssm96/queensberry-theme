@@ -3,14 +3,75 @@ $posts_metadata = [];
 $tag_title = "";
 $world_region = "";
 $current_country = "";
-
 $tag = get_queried_object();
 
 if ($tag && isset($tag->name)) {
   $tag_title = $tag->name;
 }
 
-if(have_posts()){
+$args = array(
+  'tag_id'         => get_queried_object_id(), // Gets the current tag ID
+  'posts_per_page' => -1, // Or any number you want
+  'orderby'        => 'name', // 'name' refers to post_name which is the slug
+  'order'          => 'ASC' // or 'DESC'
+);
+
+$tag_query = new WP_Query($args);
+
+if ($tag_query->have_posts()) :
+  $counter = 1;
+  while ($tag_query->have_posts()) : $tag_query->the_post();
+    // $tag_title = single_tag_title( '', false );
+
+    $post_id = get_the_ID();
+    $metadata = get_post_meta($post_id, 'custom_data', true);
+    foreach($metadata["ProgramInfo"] as $program_info) {
+      if(gettype($program_info) == "string") {
+        $program_info = str_replace('"', "'", $program_info);
+      }
+    }
+    $additional_program_info = $metadata['ProgramAddInfo'];
+    $program_logs_info = $metadata['ProgramLogInfo'];
+    $category_info = $metadata["CategoryInfo"];
+    $program_info = $metadata['ProgramInfo'];
+    $log_name = $additional_program_info["CadernoTitulo"]; 
+    $region_info = $metadata["RegionInfo"];
+    $program_log_info = array_find($program_logs_info, function($program_log_info) use ($log_name) {
+      $lower_log_name = trim(mb_strtolower($log_name));
+      $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
+
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
+    });
+    $program_name = $program_info["Descricao"];
+
+    $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
+    $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
+    $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
+
+
+    $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
+    $card_image_file_name = $program_info["CaminhoImagem"];
+
+    $card_image_url = "$images_folder_prefix_url/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$card_image_file_name";
+    $post_slug = get_post_field( 'post_name', get_post() );
+
+    
+    $posts_metadata[] = [
+      "Link" => get_permalink(),
+      "PostData" => $metadata,
+      "CardImageUrl" => $card_image_url,
+      "PostSlug" => $post_slug,
+      "LogSlug" => sanitize_title($log_name),
+      "RegionInfo" => $region_info,
+      "Key" => $counter
+    ];
+
+    $counter += 1;
+  endwhile;
+  wp_reset_postdata();
+endif;
+
+/* if(have_posts()){
   $counter = 1;
   while(have_posts()) {
     the_post();
@@ -63,14 +124,38 @@ if(have_posts()){
     $counter += 1;
   }
 
-  usort($posts_metadata, function ($a, $b) {
-  $titleA = $a['PostData']['ProgramInfo']['Descricao'] ?? '';
-  $titleB = $b['PostData']['ProgramInfo']['Descricao'] ?? '';
-  return strcmp($titleA, $titleB);
+  usort($posts_metadata, function($a, $b) {
+    $alphabet = 'áabcćçdeéfghiíjklłmnnoóqprstuvwxyz'; 
+    $a = $a['PostData']['ProgramInfo']['Descricao'];
+    $b = $b['PostData']['ProgramInfo']['Descricao'];
+
+    for ($i = 0; $i < mb_strlen($a); $i++) {
+        if (mb_substr($a, $i, 1) == mb_substr($b, $i, 1)) {
+            continue;
+        }
+        if ($i > mb_strlen($b)) {
+            return 1;
+        }
+        if (mb_strpos($alphabet, mb_substr($a, $i, 1)) > mb_strpos($alphabet, mb_substr($b, $i, 1))) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
 });
 
-
+foreach($posts_metadata as $post_meta) {
+  var_dump($post_meta['PostData']['ProgramInfo']['Descricao']);
 }
+
+// usort($posts_metadata, function ($a, $b) {
+//   $titleA = $a['PostData']['ProgramInfo']['Descricao'] ?? '';
+//   $titleB = $b['PostData']['ProgramInfo']['Descricao'] ?? '';
+//   return strcmp($titleA, $titleB);
+// });
+
+
+} */
 
 $json_posts_meta = json_encode($posts_metadata, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 

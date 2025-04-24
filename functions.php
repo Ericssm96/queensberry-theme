@@ -1616,7 +1616,7 @@ function custom_search_results($request) {
     $args = array(
         's'              => $search_query,
         'posts_per_page' => -1,
-        'orderby' => 'title',
+        'orderby' => 'name',
         'order' => 'ASC',
         'post_type' => 'post',
         'post_status' => 'publish'
@@ -1691,7 +1691,7 @@ function custom_tag_filter_results($request) {
         'post_type'      => 'post',
         'posts_per_page' => -1, 
         'post_status'    => 'publish',
-        'orderby' => 'title',
+        'orderby' => 'name',
         'order' => 'ASC'
     );
 
@@ -1774,7 +1774,7 @@ function custom_category_filter_results($request) {
         'post_type'      => 'post',
         'posts_per_page' => -1, 
         'post_status'    => 'publish',
-        'orderby' => 'title',
+        'orderby' => 'name',
         'order' => 'ASC'
     );
 
