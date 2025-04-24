@@ -97,30 +97,31 @@ $flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
         ?>
         </div>
       </div>
-      <button class="request-btn">Solicitar</button>
+      <button class="request-btn" @click="isModalOpen = true;">Solicitar</button>
     </div>
   </div>
-  <div class="modal-overlay">
+  <div class="modal-overlay" x-show="isModalOpen">
     <div class="request-flyer-modal">
-        <div class="title-area">
-          <h2>Selecione o seu Perfil</h2>
+      <i class="fa-solid fa-xmark close-icon" @click="isModalOpen = false"></i>
+      <div class="title-area">
+        <h2>Selecione o seu Perfil</h2>
+      </div>
+      <div class="selection-area">
+        <div class="radio-field">
+          <span class="custom-radio">
+            <input type="radio" value="AGENTE_VIAGENS" name="PERFIL_USUARIO" id="iptAgenteViagens">
+            <label for="iptAgenteViagens" class="radio-circle"></label>
+          </span>
+          <label class="text-label" for="iptAgenteViagens">Agente de Viagens</label>
         </div>
-        <div class="selection-area">
-          <div class="radio-field">
-            <span class="custom-radio">
-              <input type="radio" value="AGENTE_VIAGENS" name="PERFIL_USUARIO" id="iptAgenteViagens">
-              <label for="iptAgenteViagens" class="radio-field"></label>
-            </span>
-            <label for="iptAgenteViagens">Agente de Viagens</label>
-          </div>
-          <div class="radio-field">
-            <span class="custom-radio">
-              <input type="radio" value="PASSAGEIRO" name="PERFIL_USUARIO" id="iptPassageiro">
-              <label for="iptPassageiro" class="radio-field"></label>
-            </span>
-            <label for="iptPassageiro">Passageiro</label>
-          </div>
+        <div class="radio-field">
+          <span class="custom-radio">
+            <input type="radio" value="PASSAGEIRO" name="PERFIL_USUARIO" id="iptPassageiro">
+            <label for="iptPassageiro" class="radio-circle"></label>
+          </span>
+          <label class="text-label" for="iptPassageiro">Passageiro</label>
         </div>
+      </div>
     </div>
   </div>
 </main>
