@@ -38,7 +38,7 @@ $flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
               <a href="$flyer_file_link" class="card-img">
                 <img src="$full_img_url" alt="">
               </a>
-              <h3>4 Continentes 2025</h3>
+              <h3>$flyer_description</h3>
               <div class="action-icons">
                 <a href="$flyer_pdf_link" class="action-icon"><i class="fa-regular fa-file-pdf"></i></a>
                 <a href="$flyer_file_link" class="action-icon"><i class="fa-solid fa-download"></i></a>
@@ -79,7 +79,7 @@ $flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
               <a href="$flyer_file_link" class="card-img">
                 <img src="$full_img_url" alt="">
               </a>
-              <h3>4 Continentes 2025</h3>
+              <h3>$flyer_description</h3>
               <div class="action-icons">
                 <a href="$flyer_pdf_link" class="action-icon"><i class="fa-regular fa-file-pdf"></i></a>
                 <a href="$flyer_file_link" class="action-icon"><i class="fa-solid fa-download"></i></a>
@@ -98,6 +98,29 @@ $flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
         </div>
       </div>
       <button class="request-btn">Solicitar</button>
+    </div>
+  </div>
+  <div class="modal-overlay">
+    <div class="request-flyer-modal">
+        <div class="title-area">
+          <h2>Selecione o seu Perfil</h2>
+        </div>
+        <div class="selection-area">
+          <div class="radio-field">
+            <span class="custom-radio">
+              <input type="radio" value="AGENTE_VIAGENS" name="PERFIL_USUARIO" id="iptAgenteViagens">
+              <label for="iptAgenteViagens" class="radio-field"></label>
+            </span>
+            <label for="iptAgenteViagens">Agente de Viagens</label>
+          </div>
+          <div class="radio-field">
+            <span class="custom-radio">
+              <input type="radio" value="PASSAGEIRO" name="PERFIL_USUARIO" id="iptPassageiro">
+              <label for="iptPassageiro" class="radio-field"></label>
+            </span>
+            <label for="iptPassageiro">Passageiro</label>
+          </div>
+        </div>
     </div>
   </div>
 </main>
