@@ -631,8 +631,8 @@ $videos_titles = $filtered_titles;
             <input type="text" placeholder="email@exemplo.com" required name="EMAIL_ADDRESS_">
           </div>
           <div class="input-area">
-            <label for="slctPerfil">Perfil*</label>
-            <select id="slctPerfil" required name="PERFIL">
+            <label for="slctPerfil1">Perfil*</label>
+            <select id="slctPerfil1" required name="PERFIL">
               <option value="">- Selecione o Assunto - </option>
               <option value="passageiro">Passageiro</option>
               <option value="agente">Agente de Viagens</option>

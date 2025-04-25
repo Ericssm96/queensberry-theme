@@ -497,12 +497,12 @@ function queensberry_handle_receba_novidades()
 
             if ($supplemental_register_result["status"] == 200) {
 
-                /*wp_send_json_success([
+                wp_send_json_success([
                     "message" => "Cadastro concluído com sucesso!",
                     "data_result" => $sign_up_result,
                     "profile_ext" => $profile_ext_result,
                     "supp_result" => $supplemental_register_result 
-                ]);*/
+                ]);
                 //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                 return;
             }

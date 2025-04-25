@@ -50,7 +50,7 @@
         <form id="f_queensberry_receba_novidades" action="/" class="newsletter-form" x-data="{
           isEmailPermissionChecked: false,
         }">
-          <input type="hidden" id="actionField3" name="action" value="queensberry_receba_novidades_recaptcha">
+          <input type="hidden" id="actionField3" name="action" value="queensberry_verify_recaptcha">
 
           <!-- Eloqua -->
           <input type="hidden" name="elqFormName" value="queensberry-newsletter">
@@ -115,22 +115,25 @@
             $("#f_queensberry_receba_novidades").on("submit", function(e) {
               e.preventDefault();
 
-              updateOptInField();
-
+              const perfil = $("#slctPerfil").val();
+              console.log(perfil);
+              
               grecaptcha.ready(function() {
                 grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {
                   action: 'submit'
                 }).then(function(token) {
                   console.log('reCAPTCHA token:', token);
 
-
+                  
                   $.post("<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha", {
                     "g-recaptcha-response": token
                   }).done((res) => {
                     if (res.data && res.data.message === "OK") {
-                      console.log('reCAPTCHA verificado com sucesso.');
-
-                      const perfil = $("#slctPerfil").val();
+                      console.log(res.data);
+                      
+                      $("#actionField3").val("queensberry_receba_novidades")
+                      
+                      
                       const formData = $("#f_queensberry_receba_novidades").serialize();
 
                       if (perfil === "PASSAGEIRO") {
