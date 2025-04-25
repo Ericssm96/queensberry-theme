@@ -61,7 +61,7 @@
             value="X0Gzc2X%3DAQjkPkSRWQG3IHmhTHzcn8K72I2zfGItDUp4G4jzf5RzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG5YElTlcCLrzf3j23eojPBzcP6kufR8zbb">
           <input type="hidden" name="_ei_" value="EZG5N9k5REf3zveZ6bm0rcg">
           <input type="hidden" name="_di_" value="lfbgbm7m1bbva1iuk9gjbrdj77s9ndl30c1bjvbem2898cehfk10">
-          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
+          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
           <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Newsletter Receba Novidades - Queensberry">
           <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
@@ -194,6 +194,33 @@
           window.onload = WaitUntilCustomerGUIDIsRetrieved;
           // _elqQ = _elqQ || [];
           // _elqQ.push(['elqGetCustomerGUID']);
+            }
+
+            window.onload = WaitUntilCustomerGUIDIsRetrieved;
+            // _elqQ = _elqQ || [];
+            // _elqQ.push(['elqGetCustomerGUID']);
+        </script>
+
+        <script>
+            /*Script para verificar se o usuario
+            marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
+            $(function ($) { // on DOM ready (when the DOM is finished loading)
+                $('#agree').click(function () { // when the checkbox is clicked
+                    var checked = $('#agree').is(':checked'); // check the state
+                    $('#optIn').val(checked ? "I" : "O"); // set the value
+                    $('#optInSMS').val(checked ? "I" : "O"); // set the value
+
+                });
+                $('#optIn').triggerHandler("click"); // initialize the value
+                $('#optInSMS').triggerHandler("click"); // initialize the value
+            });
+
+        </script>
+        <script>
+            $(function getURL() {
+                var url_cadastro = window.location.href;
+                document.getElementById('URL_CADASTRO').value = url_cadastro;
+            });
         </script>
       </section>
     </div>

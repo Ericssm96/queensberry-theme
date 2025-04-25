@@ -22,7 +22,7 @@ get_header(); ?>
       <input type="hidden" name="_di_" value="tlbeb7sib7srs4hb3g3hiljo9d0hc596vidmbr8hd67sjghrtai0">
       <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber">
       <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
-      <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
+      <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
       <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Queensclub Cadastro Adin - Queensberry">
       <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
 
@@ -275,7 +275,7 @@ get_header(); ?>
       <!--  -->
 
       <div class="aceito">
-        <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
+        <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES" required>
         <label for="RECEBER_COMUNICACOES">Aceito receber comunicações e
           informações da Queensberry</label>
 
@@ -450,18 +450,21 @@ get_header(); ?>
 
     </script>
 
- <script>
-  jQuery(document).ready(function($) {
-    $('#RECEBER_COMUNICACOES').on('change', function() {
-      if ($(this).is(':checked')) {
-        $('#optIn').val('I'); // I de "Inscrito"
-      } else {
-        $('#optIn').val('O'); // O de "Opt-out"
-      }
-    });
-  });
-</script>
+    <script>
+      /*Script para verificar se o usuario
+      marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
+      $(function ($) { // on DOM ready (when the DOM is finished loading)
+        $('#agree').click(function () { // when the checkbox is clicked
+          var checked = $('#agree').is(':checked'); // check the state
+          $('#optIn').val(checked ? "I" : "O"); // set the value
+          $('#optInSMS').val(checked ? "I" : "O"); // set the value
 
+        });
+        $('#optIn').triggerHandler("click"); // initialize the value
+        $('#optInSMS').triggerHandler("click"); // initialize the value
+      });
+
+    </script>
     <script>
       $(function getURL() {
         var url_cadastro = window.location.href;
