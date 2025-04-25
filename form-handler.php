@@ -412,10 +412,18 @@ function queensberry_handle_popup_cadastro()
 // Form - Newsletter Receba Novidades
 function queensberry_handle_receba_novidades()
 {
+    $user_name = $_POST["NAME"];
+    $user_last_name = "";
+    $user_name_array = explode(' ', $user_name);
+    $user_first_name = array_shift($user_name_array);
 
-    // Colocar dados do formulário aqui
-    $user_first_name = $_POST["FIRST_NAME"];
-    $user_last_name = $_POST["LAST_NAME"];
+    if(count($user_name_array) >= 1) {
+        $user_last_name = implode(' ', $user_name_array);
+    }
+
+
+    // $user_first_name = $_POST["FIRST_NAME"];
+    // $user_last_name = $_POST["LAST_NAME"];
     $user_email = $_POST["EMAIL_ADDRESS_"];
     $email_opt_in = $_POST["EMAIL_PERMISSION_STATUS_"];
 
@@ -431,15 +439,12 @@ function queensberry_handle_receba_novidades()
         "recordData" => [
             "fieldNames" => [
                 "FIRST_NAME",
-                "LAST_NAME",
-                "ESTADO",
                 "EMAIL_ADDRESS_",
                 "EMAIL_PERMISSION_STATUS_"
             ],
             "records" => [
                 [
                     $user_first_name,
-                    $user_last_name,
                     $user_email,
                     $email_opt_in
                 ]
@@ -460,6 +465,23 @@ function queensberry_handle_receba_novidades()
             "defaultPermissionStatus" => "OPTIN"
         ]
     ];
+
+    if($user_last_name !== "") {
+        $sign_up_payload["recordData"]["fieldNames"] = [
+            "FIRST_NAME",
+            "LAST_NAME",
+            "EMAIL_ADDRESS_",
+            "EMAIL_PERMISSION_STATUS_"
+        ];
+        $sign_up_payload["recordData"]["records"] = [
+            [
+                $user_first_name,
+                $user_last_name,
+                $user_email,
+                $email_opt_in
+            ]
+        ];
+    }
 
 
     $supplemental_register_payload = [

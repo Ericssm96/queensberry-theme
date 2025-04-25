@@ -66,13 +66,13 @@
           <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
           <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Newsletter Receba Novidades - Queensberry">
-          <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+          <input type="hidden" value="<?= home_url(); ?>" id="URL_CADASTRO" name="URL_CADASTRO">
           <div class="fillable-fields">
             <header class="title-area">
               <h2>Receba Novidades</h2>
               <p>Cadastre seu e-mail</p>
             </header>
-            <input type="text" name="FIRST_NAME" placeholder="Nome" />
+            <input type="text" name="NAME" placeholder="Nome" />
             <input type="text" name="EMAIL_ADDRESS_" placeholder="E-mail" />
             <select name="PERFIL" id="slctPerfil">
               <option value="PASSAGEIRO" selected>Passageiro</option>
