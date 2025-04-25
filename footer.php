@@ -47,7 +47,9 @@
         </div>
       </nav>
       <section class="form-section">
-        <form id="f_queensberry_receba_novidades" action="/" class="newsletter-form">
+        <form id="f_queensberry_receba_novidades" action="/" class="newsletter-form" x-data="{
+          isEmailPermissionChecked: false,
+        }">
           <input type="hidden" id="actionField3" name="action" value="queensberry_receba_novidades_recaptcha">
 
           <!-- Eloqua -->
@@ -61,7 +63,7 @@
             value="X0Gzc2X%3DAQjkPkSRWQG3IHmhTHzcn8K72I2zfGItDUp4G4jzf5RzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG5YElTlcCLrzf3j23eojPBzcP6kufR8zbb">
           <input type="hidden" name="_ei_" value="EZG5N9k5REf3zveZ6bm0rcg">
           <input type="hidden" name="_di_" value="lfbgbm7m1bbva1iuk9gjbrdj77s9ndl30c1bjvbem2898cehfk10">
-          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
           <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Newsletter Receba Novidades - Queensberry">
           <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
@@ -77,7 +79,7 @@
               <option value="AGENTE">Agente</option>
             </select>
             <div class="checkbox-field">
-              <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
+              <input @change="isEmailPermissionChecked = !isEmailPermissionChecked" type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
               <label for="RECEBER_COMUNICACOES">Aceito receber comunicações e informações da Queensberry</label>
             </div>
           </div>
