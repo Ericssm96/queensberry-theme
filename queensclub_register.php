@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
     Template Name: Registro QueensClub Template
 */
@@ -12,7 +12,9 @@ get_header(); ?>
     </div>
   </header>
   <section class="form-area">
-    <form id="m_f_queensberry_cadastro_adin" name="m_f_queensberry_cadastro_adin" method="POST">
+    <form id="m_f_queensberry_cadastro_adin" name="m_f_queensberry_cadastro_adin" method="POST" x-data="{
+          isEmailPermissionChecked: false,
+        }">
       <input type="hidden" name="action" value="queensberry_queensclub">
 
       <!-- Responsys -->
@@ -22,7 +24,7 @@ get_header(); ?>
       <input type="hidden" name="_di_" value="tlbeb7sib7srs4hb3g3hiljo9d0hc596vidmbr8hd67sjghrtai0">
       <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber">
       <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
-      <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
+      <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
       <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Queensclub Cadastro Adin - Queensberry">
       <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
 
@@ -275,7 +277,7 @@ get_header(); ?>
       <!--  -->
 
       <div class="aceito">
-        <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
+        <input type="checkbox" @change="isEmailPermissionChecked = !isEmailPermissionChecked" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
         <label for="RECEBER_COMUNICACOES">Aceito receber comunicações e
           informações da Queensberry</label>
 
@@ -288,7 +290,7 @@ get_header(); ?>
 
     <script>
       // SCRIPT PARA CARREGAR ESTADOS E CIDADES
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function() {
         const estadoSelect = document.getElementById("ESTADO");
         const cidadeSelect = document.getElementById("CIDADE");
 
@@ -306,7 +308,7 @@ get_header(); ?>
           });
 
         // Evento para carregar cidades ao selecionar estado
-        estadoSelect.addEventListener("change", function () {
+        estadoSelect.addEventListener("change", function() {
           const uf = estadoSelect.value;
           cidadeSelect.innerHTML = '<option value="">Carregando...</option>';
 
@@ -330,7 +332,7 @@ get_header(); ?>
     </script>
     <script>
       // SCRIPT PARA AUTOCOMPLETAR ENDEREÇO PELO CEP
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function() {
         const cepInput = document.getElementById("CEP");
         const bairroInput = document.getElementById("BAIRRO_AGENCIA");
         const ruaInput = document.getElementById("RUA_AGENCIA");
@@ -379,23 +381,19 @@ get_header(); ?>
         }
 
         // Evento ao sair do campo de CEP
-        cepInput.addEventListener("blur", function () {
+        cepInput.addEventListener("blur", function() {
           buscarCEP(cepInput.value);
         });
 
         // Evento para verificar se o campo de CEP está vazio
-        cepInput.addEventListener("input", function () {
+        cepInput.addEventListener("input", function() {
           if (cepInput.value.trim() === "") {
             limparCampos();
           }
         });
       });
-
-
     </script>
     <script>
-      
-
       $(document).ready(() => {
 
         var formData = new FormData($("#m_f_queensberry_cadastro_adin")[0]); // Use FormData para incluir anexos
@@ -418,21 +416,22 @@ get_header(); ?>
           $("#fullPhoneNumber").val(fullNumber);
 
           grecaptcha.ready(function() {
-            grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+            grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {
+              action: 'submit'
+            }).then(function(token) {
               console.log(token);
               jQuery.post(
-                "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
-                {
+                "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha", {
                   "g-recaptcha-response": token
                 }
               ).done((res) => {
                 jQuery("#actionField").val("queensberry_fale_conosco");
-                if(res.data.message === "OK") {
+                if (res.data.message === "OK") {
                   $("#actionField").val("queensberry_queensclub");
                   jQuery.post(
                     "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_queensclub",
                     $("#m_f_queensberry_cadastro_adin").serialize(),
-                    function (data) {
+                    function(data) {
                       console.log(data);
                       alert("Envio realizado com sucesso");
                     }
@@ -443,25 +442,26 @@ get_header(); ?>
               })
             });
           });
-          
+
 
         });
       });
-
     </script>
 
- <script>
-  jQuery(document).ready(function($) {
-    $('#RECEBER_COMUNICACOES').on('change', function() {
-      if ($(this).is(':checked')) {
-        $('#optIn').val('I'); // I de "Inscrito"
-      } else {
-        $('#optIn').val('O'); // O de "Opt-out"
-      }
-    });
-  });
-</script>
+    <script>
+      /*Script para verificar se o usuario
+      marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
+      $(function($) { // on DOM ready (when the DOM is finished loading)
+        $('#agree').click(function() { // when the checkbox is clicked
+          var checked = $('#agree').is(':checked'); // check the state
+          $('#optIn').val(checked ? "I" : "O"); // set the value
+          $('#optInSMS').val(checked ? "I" : "O"); // set the value
 
+        });
+        $('#optIn').triggerHandler("click"); // initialize the value
+        $('#optInSMS').triggerHandler("click"); // initialize the value
+      });
+    </script>
     <script>
       $(function getURL() {
         var url_cadastro = window.location.href;
@@ -507,10 +507,10 @@ get_header(); ?>
         flex-direction: row;
         column-gap: 104px;
         width: 100%;
-        margin-top:31px;
+        margin-top: 31px;
       }
 
-      #m_f_queensberry_cadastro_adin .margin{
+      #m_f_queensberry_cadastro_adin .margin {
         margin-bottom: 31px;
       }
 
@@ -535,12 +535,12 @@ get_header(); ?>
         letter-spacing: -1px;
         text-transform: uppercase;
         margin: 0;
-        margin-top:31px;
+        margin-top: 31px;
       }
 
-      #m_f_queensberry_cadastro_adin .aceito{
-        margin-top:31px;
-        margin-bottom:31px;
+      #m_f_queensberry_cadastro_adin .aceito {
+        margin-top: 31px;
+        margin-bottom: 31px;
       }
 
       #m_f_queensberry_cadastro_adin h3 {

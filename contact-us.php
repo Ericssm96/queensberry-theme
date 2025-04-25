@@ -29,7 +29,9 @@ get_header(); ?>
             (atendimento de segunda à sexta, das 9h às 18h).</p>
         </div>
         <article class="form-container">
-          <form id="f_queensberry_fale_conosco" name="f_queensberry_fale_conosco" method="POST">
+          <form id="f_queensberry_fale_conosco" name="f_queensberry_fale_conosco" method="POST" x-data="{
+          isEmailPermissionChecked: false,
+        }">
             <input type="hidden" id="actionField" name="action" value="queensberry_fale_conosco_recaptcha">
 
             <!-- Eloqua -->
@@ -44,7 +46,7 @@ get_header(); ?>
               value="X0Gzc2X%3DAQjkPkSRWQG1SszaHvzcXON5k0mzaSKb4cfIpfK4zbHDCVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG2e9n6TJuwEzb8zgdnknUzazbyzcsdkPM7pza">
             <input type="hidden" name="_ei_" value="EYl0W1v1-DnBaKPyOAQ9eNc">
             <input type="hidden" name="_di_" value="u609bmeb2lpifgqckful95hnl4g4djuv8rh5sa7qh3771chd5eog">
-            <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
+            <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
             <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
             <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Fale Conosco - Queensberry">
             <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
@@ -70,7 +72,7 @@ get_header(); ?>
 
             <div class="checkbox-area">
               <span class="custom-checkbox">
-                <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
+                <input type="checkbox" @change="isEmailPermissionChecked = !isEmailPermissionChecked" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
                 <label for="RECEBER_COMUNICACOES" class="checkmark"></label>
               </span>
               <label for="RECEBER_COMUNICACOES" class="text-label">Aceito receber comunicações e informações da Queensberry</label>
@@ -153,19 +155,6 @@ get_header(); ?>
               })
             }) 
           </script>
-
-          <script>
-          jQuery(document).ready(function($) {
-            $('#RECEBER_COMUNICACOES').on('change', function() {
-              if ($(this).is(':checked')) {
-                $('#optIn').val('I'); // I de "Inscrito"
-              } else {
-                $('#optIn').val('O'); // O de "Opt-out"
-              }
-            });
-          });
-        </script>
-
           <script>
             $(function getURL() {
               var url_cadastro = window.location.href;
