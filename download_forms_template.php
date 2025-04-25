@@ -26,9 +26,14 @@ get_header(); ?>
         <?php
         foreach($forms_data as $form_data) {
           $file_name = $form_data["NomeArquivo"];
-          $file_url = "$form_file_url_prefix/$file_name";
           $form_name = $form_data["Descricao"];
-
+          
+          if($file_name === "CONTRATO WIND.pdf") {
+            $file_name = "CONTRATO_WIND.pdf";
+          }
+          
+          $file_url = "$form_file_url_prefix/$file_name";
+          
           echo <<<FORM_LINK
           <a href="$file_url" class="file-link" target="_blank">
             <p>$form_name</p>
