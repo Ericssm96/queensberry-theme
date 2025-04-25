@@ -32,6 +32,8 @@ $cat_query_args = [
 
 $cat_query = new WP_Query($cat_query_args);
 
+$counter = 1;
+
 if($cat_query->have_posts()) {
   while($cat_query->have_posts()) {
     $cat_query->the_post();
@@ -51,17 +53,13 @@ if($cat_query->have_posts()) {
       $lower_log_name = trim(mb_strtolower($log_name));
       $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-      return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
     });
     $program_name = $program_info["Descricao"];
 
     $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
-
-    if(sanitize_title($program_name) === "nova-zelandia-de-norte-a-sul") {
-      $program_log_image_folder = "AUSTRALIA_E_NOVA_ZELANDIA";
-    }
 
 
     $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
@@ -80,8 +78,11 @@ if($cat_query->have_posts()) {
       "CardImageUrl" => $card_image_url,
       "PostSlug" => $post_slug,
       "LogSlug" => sanitize_title($log_name),
-      "RegionInfo" => $region_info
+      "RegionInfo" => $region_info,
+      "Key" => $counter
     ];
+
+    $counter += 1;
   }
 }
 
@@ -161,7 +162,8 @@ get_header();
       cSlideSanitizedTitle: "",
       currentSlideDescription: "",
       currentSlideIndex: 0,
-
+      isWorldRegionListOpen: false,
+      isCountriesListOpen: false,
       productGroupSwiper: new Swiper(".product-page-slider .swiper", {
         // Optional parameters
         direction: "horizontal",
@@ -247,8 +249,8 @@ get_header();
       amountOfPosts: 0,
       displayedPosts: 6,
       countriesByRegion: <?= $json_countries_by_region ?>,
-      highlightedPosts: [],
-      normalPosts: [],
+      _highlightedPosts: [],
+      _normalPosts: [],
       selectedRegionsData: [],
       limitedPostsMeta: [],
       selectedLogs: [],
@@ -263,28 +265,72 @@ get_header();
           this.displayedPosts += 6;
         }
       },
-      get postsMeta() {
+      get highlightedPosts() {
         if(this.selectedLogs.length > 0) {
+          let tempHlPosts;
+
+          tempHlPosts = this._postsMeta.filter((postMeta)=>{
+            return this.selectedLogs.includes(postMeta["LogSlug"] + "-log") && postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
+          });
+
+          return tempHlPosts;
+        } else {
           return this._postsMeta.filter(postMeta => {
-            return this.selectedLogs.includes(postMeta["LogSlug"] + "-log");
+            return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
+          });
+        }        
+      },
+      get normalPosts() {
+        if(this.selectedLogs.length > 0) {
+          let tempNormalPosts;
+
+          tempNormalPosts = this._postsMeta.filter((postMeta)=>{
+            return this.selectedLogs.includes(postMeta["LogSlug"] + "-log") && postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
+          });
+
+          return tempNormalPosts;
+        } else {
+          return this._postsMeta.filter(postMeta => {
+            return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
           })
-        } 
-        return this._postsMeta;
+        }       
+      },
+      get postsMeta() {
+        let tempHlPosts, tempNormalPosts;
+        tempHlPosts = this.highlightedPosts;
+        tempNormalPosts = this.normalPosts;
+
+        if(this.postsOrder == "alphabAsc") {
+          this.orderPostsArrayByAscAlphabeticOrder(tempHlPosts);
+          this.orderPostsArrayByAscAlphabeticOrder(tempNormalPosts);
+        } else if (this.postsOrder == "alphabDesc") {
+          this.orderPostsArrayByDescAlphabeticOrder(tempHlPosts);
+          this.orderPostsArrayByDescAlphabeticOrder(tempNormalPosts);
+        }
+
+        console.log("hl: " + tempHlPosts);
+        console.log("np: " + tempNormalPosts);
+
+        return [...tempHlPosts, ...tempNormalPosts];
+
+        // return [...this.highlightedPosts, ...this.normalPosts];
       },
       orderPosts() {
-        if(this.postsOrder == "alphabAsc") {
-          this.filterPostsByAscAlphabeticOrder();
-        } else if (this.postsOrder == "alphabDesc") {
-          this.filterPostsByDescAlphabeticOrder();
-        }
+          if(this.postsOrder == "alphabAsc") {
+            this.orderPostsArrayByAscAlphabeticOrder(this.highlightedPosts);
+            this.orderPostsArrayByAscAlphabeticOrder(this.normalPosts);
+          } else if (this.postsOrder == "alphabDesc") {
+            this.orderPostsArrayByDescAlphabeticOrder(this.highlightedPosts);
+            this.orderPostsArrayByDescAlphabeticOrder(this.normalPosts);
+          }
       },
-      filterPostsByAscAlphabeticOrder() {
+      orderPostsArrayByAscAlphabeticOrder(postsArr) {
         // Função para ordenar os posts em ordem alfabética crescente (A-Z)
-        this.postsMeta.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
+        postsArr.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
       },
-      filterPostsByDescAlphabeticOrder() {
+      orderPostsArrayByDescAlphabeticOrder(postsArr) {
         // Função para ordenar os posts em ordem alfabética descrescente (Z-A)
-        this.postsMeta.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
+        postsArr.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
       },
       async performSearch() {
         this.isLoading = true;
@@ -298,8 +344,6 @@ get_header();
           });
 
           this._postsMeta = response.data;
-
-          console.log(this._postsMeta);
         } catch (error) {
           console.error("Error fetching search results:", error);
         } finally {
@@ -331,26 +375,27 @@ get_header();
 
     cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
     // cards-configs
-    highlightedPosts = postsMeta.filter(postMeta => {
-      return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
-    });
-    normalPosts = postsMeta.filter(postMeta => {
-      return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
-    })
-    _postsMeta = [...highlightedPosts, ...normalPosts];
+    // highlightedPosts = postsMeta.filter(postMeta => {
+    //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
+    // });
+    // normalPosts = postsMeta.filter(postMeta => {
+    //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
+    // })
+    // _postsMeta = [...highlightedPosts, ...normalPosts];
 
     amountOfPosts = postsMeta.length;
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
     selectedTags = [...selectedWorldRegions, ...selectedCountries];" x-effect="
+    selectedTags = [...selectedWorldRegions, ...selectedCountries];
     cSlideSanitizedTitle = sanitizeTitle(currentSlideTitle);
-    console.log(cSlideSanitizedTitle);
-    highlightedPosts = postsMeta.filter(postMeta => {
-      return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
-    });
-    normalPosts = postsMeta.filter(postMeta => {
-      return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
-    })
-    _postsMeta = [...highlightedPosts, ...normalPosts];
+    // highlightedPosts = postsMeta.filter(postMeta => {
+    //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S';
+    // });
+    // normalPosts = postsMeta.filter(postMeta => {
+    //   return postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'N';
+    // });
+    // console.log('hp: ' + highlightedPosts + '\n np: ' + normalPosts);
+    // _postsMeta = [...highlightedPosts, ...normalPosts];
 
     limitedPostsMeta = postsMeta.slice(0, displayedPosts);
     for(let region in countriesByRegion) {
@@ -396,11 +441,19 @@ get_header();
     }
   ?>
     <?php 
-    if(sanitize_title($category_title) === "brasil-in") {
+    if(sanitize_title($category_title) === "brasil-in" || sanitize_title($category_title) === "gbm-grupos-brasileiros-no-mundo") {
+
+      if(sanitize_title($category_title) === "brasil-in") {
+        $title_img_url = get_template_directory_uri() . "/src/img/go4brazil.png";
+      } else {
+        $title_img_url = get_template_directory_uri() . "/src/img/gbm-titulo.png";
+      }
+
       ?>
+
       <section class="product-banner" style="background-image: url(<?= "$banner_img_url_prefix/$banner_img_file_name" ?>);">
         <div class="wrapper">
-          <h1 class="product-title"><img style="width: 200px; height: 162px;" src="<?= get_template_directory_uri() ?>/src/img/go4brazil.png" alt="Brasil IN"></h1>
+          <h1 class="product-title"><img style="width: 200px;" src="<?= $title_img_url ?>" alt="Brasil IN"></h1>
           <div class="product-description" style="">
             <p class="description-text">A Queensberry Viagens apresenta o Brasil sob um novo olhar. Uma linha de Viagens Nacionais elaboradas com riqueza de detalhes para proporcionar experiências únicas e momentos inesquecíveis.Ideal para quem prefere viajar sozinho, a dois ou com a família e grupo de amigos.</p>
           </div>
@@ -432,7 +485,7 @@ get_header();
             <p x-html="currentSlideDescription.replace('\n', '<br />')"></p>
           </div>
           <div class="bottom">
-            <a href="#searchContainer" @click="selectedLogs = []; selectedLogs.push(cSlideSanitizedTitle + '-log');" class="schedules-cta">Programas</a>
+            <a href="#searchContainer" @click="selectedLogs = []; selectedLogs.push(cSlideSanitizedTitle + '-log'); $refs.logListTrigger.checked = true;" class="schedules-cta">Programas</a>
 
             <div class="controls">
               
@@ -451,7 +504,10 @@ get_header();
                 $log_slide_img_file_name = $related_log_info["CadernoFoto"];
                 $log_title = $related_log_info["CadernoTitulo"];
                 echo <<<SLIDE_ELEMENT
-                  <a href="#searchContainer" @click='selectedLogs = [$sanitized_log_identifier]; console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                  <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push("$sanitized_log_identifier"); \$refs.logListTrigger.checked = true;'  class="swiper-slide">
+                  <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
+                  </div>
+                  </a>
                 SLIDE_ELEMENT;
               }
             }
@@ -460,7 +516,10 @@ get_header();
               $log_slide_img_file_name = $related_log_info["CadernoFoto"];
               $log_title = $related_log_info["CadernoTitulo"];
               echo <<<SLIDE_ELEMENT
-                <a href="#searchContainer" @click='selectedLogs = [$sanitized_log_identifier]; console.log(selectedLogs)' class="swiper-slide"><img src="$log_img_url_prefix/$log_slide_img_file_name" alt="$category_title - $log_title"></a>
+                <a href="#searchContainer" @click='selectedLogs = []; selectedLogs.push("$sanitized_log_identifier"); \$refs.logListTrigger.checked = true;' class="swiper-slide">
+                  <div class="img-cont" style="background-image:url('$log_img_url_prefix/$log_slide_img_file_name');">
+                  </div>
+                </a>
               SLIDE_ELEMENT;
             }
             ?>
@@ -497,7 +556,7 @@ get_header();
                 <?php
                 }
                 ?>
-                <input @change="isLogFilterListOpen = !isLogFilterListOpen" type="checkbox" name="logs_list_trigger" id="logs_list_trigger">
+                <input @change="isLogFilterListOpen = !isLogFilterListOpen" type="checkbox" x-ref="logListTrigger" name="logs_list_trigger" id="logs_list_trigger">
                 <ul class="checkbox-list">
                   <?php
                   foreach($related_logs_name_list as $related_log_name) {
@@ -522,10 +581,10 @@ get_header();
                   ?>
                     <div class="checkbox-area">
                       <div class="list-title">
-                        <label for="regions_list_trigger" class="text-area"><span class="active-indicator">[ + ]</span><p>Regiões Mundiais</p></label>
+                        <label for="regions_list_trigger" class="text-area"><span class="active-indicator" x-text="isWorldRegionListOpen ? '[ - ]' : '[ + ]'"></span><p>Regiões Mundiais</p></label>
                         <img src="<?= get_template_directory_uri(); ?>/src/img/icone-globo.png" alt="">
                       </div>
-                      <input type="checkbox" name="regions_list_trigger" id="regions_list_trigger">
+                      <input type="checkbox" @change="isWorldRegionListOpen = !isWorldRegionListOpen" name="regions_list_trigger" id="regions_list_trigger">
                       <ul class="checkbox-list">
                         <?php 
                         foreach($world_regions_names as $world_region_name) {
@@ -545,10 +604,10 @@ get_header();
                     </div>
                     <div class="checkbox-area" x-show="selectedWorldRegions.length > 0">
                       <div class="list-title">
-                        <label for="countries_list_trigger" class="text-area"><span class="active-indicator">[ + ]</span><p>Países</p></label>
+                        <label for="countries_list_trigger" class="text-area"><span x-text="isCountriesListOpen ? '[ - ]' : '[ + ]'" class="active-indicator"></span><p>Países</p></label>
                         <i class="fa-solid fa-location-dot map-pin"></i>
                       </div>
-                      <input type="checkbox" name="countries_list_trigger" id="countries_list_trigger">
+                      <input type="checkbox" @change="isCountriesListOpen = !isCountriesListOpen" name="countries_list_trigger" id="countries_list_trigger">
                       <div class="countries-checkbox-list">
                         <template x-for="region in selectedRegionsData">
                           <ul class="region-list">
@@ -595,21 +654,21 @@ get_header();
               </div>
             </div>
             <div class="cards-grid">
-              <template x-for="postMeta in limitedPostsMeta">
-                <div x-init="console.log()" class="card" x-data="{
+              <template x-for="postMeta in limitedPostsMeta" :key="postMeta['Key']">
+                <div class="card"  x-data="{
                   qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
                   qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
                   isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
+                  highlightText: postMeta['PostData']['ProgramInfo']['DestaquePortalTexto'],
                   cardImgHeight: 0
                 }">
                   <a class="post-link" x-bind:href="postMeta['Link']">
                     <div class="card-img">
                       <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-                      <span x-show="isHighlightedPost" class="highlight-stamp">
-                        DESTAQUE
+                      <span x-show="isHighlightedPost" x-text="highlightText" class="highlight-stamp">
                       </span>
                     </div>
-                    <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
+                    <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight;" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
                         <div class="initial-description">
                             <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
                             <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>

@@ -24,15 +24,15 @@ $last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao
 $last_conversion_date_obj = new DateTime($last_conversion_update_date);
 $formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
 
-$last_euro_conversion_update_time = explode("T", $euro_currency_info["DataAtualizacao"])[1];
+$last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
 $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
 // $euro_price = str_replace(".", ",", $euro_currency_info["ValorCambio"]);
 $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
 ?>
     <div class="video-overlay"></div>
     <main x-init="setTimeout(()=>{
-      isModalOpen = true;
-    }, 5000)">
+      isModalOpen = true
+    }, 4000)">
     <section class="banner">
       <video id="video" poster="https://www.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
         <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.webm"
@@ -46,7 +46,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
     </section>
     <article class="mb-currency-field">
       <strong class="quotation">US$ 1 = R$<?= $dolar_price; ?> | € 1 = R$<?= $euro_price ?></strong>
-      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date; ?> às <?= $last_euro_conversion_update_time; ?></p>
+      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date; ?> às <?= $last_dolar_conversion_update_time; ?></p>
     </article>
     <section class="products" x-init="
     const productSwiper = new Swiper('.products .swiper', {
@@ -616,7 +616,7 @@ $videos_titles = $filtered_titles;
               value="X0Gzc2X%3DAQjkPkSRWQGzazcsJ6AbKrIB0a2vaLabgUpCnzceuwybVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG4TwrzbhWDWUINdjCsOv9y4pzbag2rEa6">
           <input type="hidden" name="_ei_" value="EOFhGZUqGt_VmZAPvWQd4rs">
           <input type="hidden" name="_di_" value="4n7tvcf4fs51837d46au3eocul9la5beeatniu923cdoafbbdf40">
-          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
           <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário PopUp Cadastro - Queensberry">
           <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
@@ -756,20 +756,17 @@ $videos_titles = $filtered_titles;
       </script>
 
       <script>
-          /*Script para verificar se o usuario
-          marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
-          $(function ($) { // on DOM ready (when the DOM is finished loading)
-              $('#agree').click(function () { // when the checkbox is clicked
-                  var checked = $('#agree').is(':checked'); // check the state
-                  $('#optIn').val(checked ? "I" : "O"); // set the value
-                  $('#optInSMS').val(checked ? "I" : "O"); // set the value
-
-              });
-              $('#optIn').triggerHandler("click"); // initialize the value
-              $('#optInSMS').triggerHandler("click"); // initialize the value
+        jQuery(document).ready(function($) {
+          $('#RECEBER_COMUNICACOES').on('change', function() {
+            if ($(this).is(':checked')) {
+              $('#optIn').val('I'); // I de "Inscrito"
+            } else {
+              $('#optIn').val('O'); // O de "Opt-out"
+            }
           });
+        });
+</script>
 
-      </script>
       <script>
           $(function getURL() {
               var url_cadastro = window.location.href;

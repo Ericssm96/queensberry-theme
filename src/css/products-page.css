@@ -224,9 +224,12 @@ main * {
   justify-content: center;
   height: 85%;
 }
-.product-page-slider .container .products-slide .swiper-wrapper .swiper-slide img {
+.product-page-slider .container .products-slide .swiper-wrapper .swiper-slide .img-cont {
   height: 100%;
   width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   /* @media screen and (min-width: $md) {
     height: 100%;
     width: 100%;

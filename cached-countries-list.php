@@ -111,460 +111,470 @@
   ),
   22 => 
   array (
+    'pais' => 'BULGÁRIA',
+    'regiao' => 'Europa',
+  ),
+  23 => 
+  array (
     'pais' => 'CAMBOJA',
     'regiao' => 'Ásia',
   ),
-  23 => 
+  24 => 
   array (
     'pais' => 'CANADÁ',
     'regiao' => 'Américas',
   ),
-  24 => 
+  25 => 
   array (
     'pais' => 'CAZAQUISTÃO',
     'regiao' => 'Ásia',
   ),
-  25 => 
+  26 => 
   array (
     'pais' => 'CHILE',
     'regiao' => 'Américas',
   ),
-  26 => 
+  27 => 
   array (
     'pais' => 'CHINA',
     'regiao' => 'Ásia',
   ),
-  27 => 
+  28 => 
   array (
     'pais' => 'CHIPRE',
     'regiao' => 'Oriente Médio',
   ),
-  28 => 
+  29 => 
   array (
     'pais' => 'CINGAPURA',
     'regiao' => 'Ásia',
   ),
-  29 => 
+  30 => 
   array (
     'pais' => 'COLÔMBIA',
     'regiao' => 'Américas',
   ),
-  30 => 
+  31 => 
   array (
     'pais' => 'CORÉIA DO SUL',
     'regiao' => 'Ásia',
   ),
-  31 => 
+  32 => 
   array (
     'pais' => 'CROÁCIA',
     'regiao' => 'Europa',
   ),
-  32 => 
+  33 => 
   array (
     'pais' => 'DINAMARCA',
     'regiao' => 'Europa',
   ),
-  33 => 
+  34 => 
   array (
     'pais' => 'EGITO',
     'regiao' => 'África',
   ),
-  34 => 
+  35 => 
   array (
     'pais' => 'EMIRADOS ÁRABES',
     'regiao' => 'Oriente Médio',
   ),
-  35 => 
+  36 => 
   array (
     'pais' => 'ESCÓCIA',
     'regiao' => 'Europa',
   ),
-  36 => 
+  37 => 
   array (
     'pais' => 'ESLOVÊNIA',
     'regiao' => 'Europa',
   ),
-  37 => 
+  38 => 
   array (
     'pais' => 'ESLOVÁQUIA',
     'regiao' => 'Europa',
   ),
-  38 => 
+  39 => 
   array (
     'pais' => 'ESPANHA',
     'regiao' => 'Europa',
   ),
-  39 => 
+  40 => 
   array (
     'pais' => 'ESTÔNIA',
     'regiao' => 'Europa',
   ),
-  40 => 
+  41 => 
   array (
     'pais' => 'ESTADOS UNIDOS',
     'regiao' => 'Américas',
   ),
-  41 => 
+  42 => 
   array (
     'pais' => 'FILIPINAS',
     'regiao' => 'Ásia',
   ),
-  42 => 
+  43 => 
   array (
     'pais' => 'FINLÂNDIA',
     'regiao' => 'Europa',
   ),
-  43 => 
+  44 => 
   array (
     'pais' => 'FRANÇA',
     'regiao' => 'Europa',
   ),
-  44 => 
+  45 => 
   array (
     'pais' => 'GIBRALTAR',
     'regiao' => 'Europa',
   ),
-  45 => 
+  46 => 
   array (
     'pais' => 'GRÉCIA',
     'regiao' => 'Europa',
   ),
-  46 => 
+  47 => 
   array (
     'pais' => 'HOLANDA',
     'regiao' => 'Europa',
   ),
-  47 => 
+  48 => 
   array (
     'pais' => 'HONDURAS',
     'regiao' => 'Américas',
   ),
-  48 => 
+  49 => 
   array (
     'pais' => 'HONG KONG',
     'regiao' => 'Ásia',
   ),
-  49 => 
+  50 => 
   array (
     'pais' => 'HUNGRIA',
     'regiao' => 'Europa',
   ),
-  50 => 
+  51 => 
   array (
     'pais' => 'ILHAS CAYMAN',
     'regiao' => 'Américas',
   ),
-  51 => 
+  52 => 
   array (
     'pais' => 'ILHAS VIRGENS AMERICANAS',
     'regiao' => 'Américas',
   ),
-  52 => 
+  53 => 
   array (
     'pais' => 'ILHAS VIRGENS BRITÂNICAS',
     'regiao' => 'Américas',
   ),
-  53 => 
+  54 => 
   array (
     'pais' => 'INDONÉSIA',
     'regiao' => 'Ásia',
   ),
-  54 => 
+  55 => 
   array (
     'pais' => 'IRLANDA DO NORTE',
     'regiao' => 'Europa',
   ),
-  55 => 
+  56 => 
   array (
     'pais' => 'IRLANDA',
     'regiao' => 'Europa',
   ),
-  56 => 
+  57 => 
   array (
     'pais' => 'ISLÂNDIA',
     'regiao' => 'Europa',
   ),
-  57 => 
+  58 => 
   array (
     'pais' => 'ISRAEL',
     'regiao' => 'Oriente Médio',
   ),
-  58 => 
+  59 => 
   array (
     'pais' => 'ITÁLIA',
     'regiao' => 'Europa',
   ),
-  59 => 
+  60 => 
   array (
     'pais' => 'ÍNDIA',
     'regiao' => 'Ásia',
   ),
-  60 => 
+  61 => 
   array (
     'pais' => 'JAMAICA',
     'regiao' => 'Américas',
   ),
-  61 => 
+  62 => 
   array (
     'pais' => 'JAPÃO',
     'regiao' => 'Ásia',
   ),
-  62 => 
+  63 => 
   array (
     'pais' => 'JORDÂNIA',
     'regiao' => 'Oriente Médio',
   ),
-  63 => 
+  64 => 
   array (
     'pais' => 'KOSOVO',
     'regiao' => 'Europa',
   ),
-  64 => 
+  65 => 
   array (
     'pais' => 'KUWAIT',
     'regiao' => 'Ásia',
   ),
-  65 => 
+  66 => 
   array (
     'pais' => 'LAOS',
     'regiao' => 'Ásia',
   ),
-  66 => 
+  67 => 
   array (
     'pais' => 'LETÔNIA',
     'regiao' => 'Europa',
   ),
-  67 => 
+  68 => 
   array (
     'pais' => 'LITUÂNIA',
     'regiao' => 'Europa',
   ),
-  68 => 
+  69 => 
   array (
     'pais' => 'MÔNACO',
     'regiao' => 'Europa',
   ),
-  69 => 
+  70 => 
   array (
     'pais' => 'MACEDÔNIA',
     'regiao' => 'Europa',
   ),
-  70 => 
+  71 => 
   array (
     'pais' => 'MALÁSIA',
     'regiao' => 'Ásia',
   ),
-  71 => 
+  72 => 
   array (
     'pais' => 'MALDIVAS',
     'regiao' => 'Ásia',
   ),
-  72 => 
+  73 => 
   array (
     'pais' => 'MALI',
     'regiao' => 'África',
   ),
-  73 => 
+  74 => 
   array (
     'pais' => 'MARROCOS',
     'regiao' => 'África',
   ),
-  74 => 
+  75 => 
   array (
     'pais' => 'MAURICIO',
     'regiao' => 'África',
   ),
-  75 => 
+  76 => 
   array (
     'pais' => 'MÉXICO',
     'regiao' => 'Américas',
   ),
-  76 => 
+  77 => 
   array (
     'pais' => 'MONGÓLIA',
     'regiao' => 'Ásia',
   ),
-  77 => 
+  78 => 
   array (
     'pais' => 'MONTENEGRO',
     'regiao' => 'Europa',
   ),
-  78 => 
+  79 => 
   array (
     'pais' => 'NAMÍBIA',
     'regiao' => 'África',
   ),
-  79 => 
+  80 => 
   array (
     'pais' => 'NEPAL',
     'regiao' => 'Ásia',
   ),
-  80 => 
+  81 => 
   array (
     'pais' => 'NICARÁGUA',
     'regiao' => 'Américas',
   ),
-  81 => 
+  82 => 
   array (
     'pais' => 'NORUEGA',
     'regiao' => 'Europa',
   ),
-  82 => 
+  83 => 
   array (
     'pais' => 'NOVA ZELÂNDIA',
     'regiao' => 'Oceania',
   ),
-  83 => 
+  84 => 
   array (
     'pais' => 'QATAR',
     'regiao' => 'Europa',
   ),
-  84 => 
+  85 => 
   array (
     'pais' => 'QUÊNIA',
     'regiao' => 'África',
   ),
-  85 => 
+  86 => 
   array (
     'pais' => 'QUIRGUIZISTÃO',
     'regiao' => 'Ásia',
   ),
-  86 => 
+  87 => 
   array (
     'pais' => 'PANAMÁ',
     'regiao' => 'Américas',
   ),
-  87 => 
+  88 => 
   array (
     'pais' => 'PERU',
     'regiao' => 'Américas',
   ),
-  88 => 
+  89 => 
   array (
     'pais' => 'POLÔNIA',
     'regiao' => 'Europa',
   ),
-  89 => 
+  90 => 
   array (
     'pais' => 'POLINÉSIA FRANCESA',
     'regiao' => 'Oceania',
   ),
-  90 => 
+  91 => 
   array (
     'pais' => 'PORTO RICO',
     'regiao' => 'Américas',
   ),
-  91 => 
+  92 => 
   array (
     'pais' => 'PORTUGAL',
     'regiao' => 'Europa',
   ),
-  92 => 
+  93 => 
   array (
     'pais' => 'REINO UNIDO',
     'regiao' => 'Europa',
   ),
-  93 => 
+  94 => 
   array (
     'pais' => 'REPÚBLICA TCHECA',
     'regiao' => 'Europa',
   ),
-  94 => 
+  95 => 
+  array (
+    'pais' => 'ROMÊNIA',
+    'regiao' => 'Europa',
+  ),
+  96 => 
   array (
     'pais' => 'SEICHELES',
     'regiao' => 'África',
   ),
-  95 => 
+  97 => 
   array (
     'pais' => 'SENEGAL',
     'regiao' => 'África',
   ),
-  96 => 
+  98 => 
   array (
     'pais' => 'SRI LANKA',
     'regiao' => 'Ásia',
   ),
-  97 => 
+  99 => 
   array (
     'pais' => 'ST. BARTHELEMY',
     'regiao' => 'Américas',
   ),
-  98 => 
+  100 => 
   array (
     'pais' => 'ST. MARTIN',
     'regiao' => 'Américas',
   ),
-  99 => 
+  101 => 
   array (
     'pais' => 'SUÉCIA',
     'regiao' => 'Europa',
   ),
-  100 => 
+  102 => 
   array (
     'pais' => 'SUIÇA',
     'regiao' => 'Europa',
   ),
-  101 => 
+  103 => 
   array (
     'pais' => 'SVALBARD',
     'regiao' => 'Europa',
   ),
-  102 => 
+  104 => 
   array (
     'pais' => 'TAILÂNDIA',
     'regiao' => 'Ásia',
   ),
-  103 => 
+  105 => 
   array (
     'pais' => 'TAIWAN',
     'regiao' => 'Ásia',
   ),
-  104 => 
+  106 => 
   array (
     'pais' => 'TANZÂNIA',
     'regiao' => 'África',
   ),
-  105 => 
+  107 => 
   array (
     'pais' => 'TOGO',
     'regiao' => 'África',
   ),
-  106 => 
+  108 => 
   array (
     'pais' => 'TUNÍSIA',
     'regiao' => 'África',
   ),
-  107 => 
+  109 => 
   array (
     'pais' => 'TURKS & CAICOS ISLAND',
     'regiao' => 'Américas',
   ),
-  108 => 
+  110 => 
   array (
     'pais' => 'TURQUEMENISTÃO',
     'regiao' => 'Ásia',
   ),
-  109 => 
+  111 => 
   array (
     'pais' => 'TURQUIA',
     'regiao' => 'Europa',
   ),
-  110 => 
+  112 => 
   array (
     'pais' => 'URUGUAI',
     'regiao' => 'Américas',
   ),
-  111 => 
+  113 => 
   array (
     'pais' => 'UZBEQUISTÃO',
     'regiao' => 'Ásia',
   ),
-  112 => 
+  114 => 
   array (
     'pais' => 'VIETNÃ',
     'regiao' => 'Ásia',
   ),
-  113 => 
+  115 => 
   array (
     'pais' => 'ZIMBÁBUE',
     'regiao' => 'África',

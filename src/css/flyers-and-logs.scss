@@ -467,3 +467,101 @@ main {
 
 
 }
+
+.modal-overlay {
+  background-color: #00000050;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 901;
+  display: flex;
+  justify-content: center;
+
+  .request-flyer-modal {
+    width: 92vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 30px;
+    position: relative;
+
+    @media screen and (min-width: $md) {
+      width: 500px;
+    }
+
+    .close-icon {
+      position: absolute;
+      top: 17px;
+      right: 22px;
+      font-size: 18px;
+      color: #212121;
+      cursor: pointer;
+    }
+
+    .title-area {
+      padding: 16px;
+      background-color: #FAFAFA;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.445);
+
+      h2 {
+        font-size: 2rem;
+        color: #212529;
+        font-family: $roboto;
+        font-weight: 500;
+      }
+    }
+
+    .selection-area {
+      padding: 55px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 10px;
+
+      @media screen and (min-width: $md) {
+        flex-direction: row;
+        column-gap: 10px;
+
+      }
+
+      .radio-field {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+
+        .custom-radio {
+          height: 18px;
+          width: 18px;
+          cursor: pointer;
+
+          input {
+            display: none;
+            &:checked ~ .radio-circle {
+              -webkit-box-shadow: inset 0px 0px 3px 5px $lime-green;
+              -moz-box-shadow: inset 0px 0px 3px 5px $lime-green;
+              box-shadow: inset 0px 0px 3px 5px $lime-green;
+            }
+          }
+
+          .radio-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid rgba(80, 80, 80, 0.356);
+            display: inline-block;
+          } 
+        }
+
+        .text-label {
+          font-size: 1.4rem;
+          font-family: $roboto;
+          color: #656565;
+        }
+      }
+    }
+  }
+}

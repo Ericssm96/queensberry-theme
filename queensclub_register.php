@@ -22,7 +22,7 @@ get_header(); ?>
       <input type="hidden" name="_di_" value="tlbeb7sib7srs4hb3g3hiljo9d0hc596vidmbr8hd67sjghrtai0">
       <input type="hidden" name="FULL_PHONE_NUMBER" value="" id="fullPhoneNumber">
       <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
-      <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+      <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
       <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Queensclub Cadastro Adin - Queensberry">
       <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
 
@@ -49,7 +49,7 @@ get_header(); ?>
           </select>
         </div>
         <div class="row-100">
-          <input type="text" placeholder="DD/MM/AAAA" required name="DATA_NASCIMENTO" maxlength="8">
+          <input type="text" placeholder="DD/MM/AAAA" required name="DATA_NASCIMENTO" maxlength="10">
           <input type="text" placeholder="Telefone( )*" maxlength="20" required name="MOBILE_NUMBER_" id="celular">
         </div>
         <div class="row-100">
@@ -275,17 +275,13 @@ get_header(); ?>
       <!--  -->
 
       <div class="aceito">
-        <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES" required>
+        <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
         <label for="RECEBER_COMUNICACOES">Aceito receber comunicações e
           informações da Queensberry</label>
 
       </div>
 
       <div class="submit-area">
-        <div class="recaptcha-box">
-          <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3"></div>
-        </div>
-
         <button class="submit-btn">Cadastrar</button>
       </div>
     </form>
@@ -398,9 +394,11 @@ get_header(); ?>
 
     </script>
     <script>
-      var formData = new FormData(jQuery("#m_f_queensberry_cadastro_adin")[0]); // Use FormData para incluir anexos
+      
 
       $(document).ready(() => {
+
+        var formData = new FormData($("#m_f_queensberry_cadastro_adin")[0]); // Use FormData para incluir anexos
 
         $("#celular").mask("(00) 00000-0000");
 
@@ -419,36 +417,32 @@ get_header(); ?>
           let fullNumber = `55${cleanNumber}`;
           $("#fullPhoneNumber").val(fullNumber);
 
-          let captchaResponse = grecaptcha.getResponse();
-
-          if(captchaResponse.length <= 0) {
-            alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
-
-            throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
-          } else {
-            jQuery.post(
-              "<?= home_url(); ?>/wp-admin/admin-post.php?action=verify_recaptcha",
-              $("#f_queensberry_fale_conosco").serialize(),
-              function (data) {
-                console.log(data);
-                $("#actionField").value("queensberry_queensclub");
-                jQuery.post(
-                  "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_queensclub",
-                  $("#m_f_queensberry_cadastro_adin").serialize(),
-                  function (data) {
-                    console.log(data);
-                  }
-                )
-                
-                console.log(data); 
-              }
-            ).done(() => {
-              window.location.replace("<?= home_url(); ?>/obrigado/");
-            }).fail((res) => {
-              
+          grecaptcha.ready(function() {
+            grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+              console.log(token);
+              jQuery.post(
+                "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                {
+                  "g-recaptcha-response": token
+                }
+              ).done((res) => {
+                jQuery("#actionField").val("queensberry_fale_conosco");
+                if(res.data.message === "OK") {
+                  $("#actionField").val("queensberry_queensclub");
+                  jQuery.post(
+                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_queensclub",
+                    $("#m_f_queensberry_cadastro_adin").serialize(),
+                    function (data) {
+                      console.log(data);
+                      alert("Envio realizado com sucesso");
+                    }
+                  )
+                } else {
+                  console.log("Recaptcha error")
+                }
+              })
             });
-          }
-
+          });
           
 
         });
@@ -456,21 +450,18 @@ get_header(); ?>
 
     </script>
 
-    <script>
-      /*Script para verificar se o usuario
-      marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
-      $(function ($) { // on DOM ready (when the DOM is finished loading)
-        $('#agree').click(function () { // when the checkbox is clicked
-          var checked = $('#agree').is(':checked'); // check the state
-          $('#optIn').val(checked ? "I" : "O"); // set the value
-          $('#optInSMS').val(checked ? "I" : "O"); // set the value
+ <script>
+  jQuery(document).ready(function($) {
+    $('#RECEBER_COMUNICACOES').on('change', function() {
+      if ($(this).is(':checked')) {
+        $('#optIn').val('I'); // I de "Inscrito"
+      } else {
+        $('#optIn').val('O'); // O de "Opt-out"
+      }
+    });
+  });
+</script>
 
-        });
-        $('#optIn').triggerHandler("click"); // initialize the value
-        $('#optInSMS').triggerHandler("click"); // initialize the value
-      });
-
-    </script>
     <script>
       $(function getURL() {
         var url_cadastro = window.location.href;

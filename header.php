@@ -5,9 +5,7 @@
   <?php wp_head(); ?>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit" async defer></script>
-  <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback2&render=explicit" async defer></script>
-  <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback3&render=explicit" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
@@ -31,7 +29,7 @@
   $site_title = strtoupper($site_title);
   ?>
   <title><?= $page_title . " - " . $site_title; ?></title>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </head>
 
@@ -44,7 +42,7 @@ $last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao
 $last_conversion_date_obj = new DateTime($last_conversion_update_date);
 $formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
 
-$last_euro_conversion_update_time = explode("T", $euro_currency_info["DataAtualizacao"])[1];
+$last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
 $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
 // $euro_price = str_replace(".", ",", $euro_currency_info["ValorCambio"]);
 $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
@@ -55,91 +53,6 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
   isModalOpen: false,
 }" x-bind:style="isModalOpen ? 'overflow: hidden;' : 'overflow: auto;'">
 
-  <?php
-  if (is_single()) {
-    echo <<<SCRIPT
-    <script>
-      var clientId1;
-      var clientId2;
-      var clientId3;
-
-      var recaptchaCallback = function() {
-        clientId1 = grecaptcha.render('recaptcha-box-1', {
-          'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-          'theme' : 'dark',
-          'size': 'compact'
-        });
-        clientId2 = grecaptcha.render('recaptcha-box-2', {
-          'sitekey' : '6LcIDAIrAAAAAIsdJDzyMk1Jof-d61K-2zlibDGZ',
-          'theme' : 'light'
-        });
-        clientId3 = grecaptcha.render('recaptcha-box-3', {
-          'sitekey' : '6LexGAIrAAAAALCmMJe_GoDVXZvzNvHUCDAwcX8W',
-          'theme' : 'light'
-        });
-      }
-    </script>
-    SCRIPT;
-  } else {
-    if (is_page("fale-conosco") || is_page("trabalhe-conosco") || is_page("queensclub-registro")) {
-      echo <<<SCRIPT
-      <script>
-        var clientId1;
-        var clientId2;
-        var clientId3;
-
-        var recaptchaCallback = function() {
-          clientId1 = grecaptcha.render('recaptcha-box-1', {
-            'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-            'theme' : 'dark',
-            'size': 'compact'
-          });
-          clientId2 = grecaptcha.render('recaptcha-box-2', {
-            'sitekey' : '6LcIDAIrAAAAAIsdJDzyMk1Jof-d61K-2zlibDGZ',
-            'theme' : 'light'
-          });
-        }
-
-        
-      </script>
-      SCRIPT;
-    } else {
-      if (is_home()) {
-        echo <<<SCRIPT
-        <script>
-          var clientId1;
-          var clientId2;
-          var clientId3;
-  
-          var recaptchaCallback = function() {
-            clientId1 = grecaptcha.render('recaptcha-box-1', {
-              'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-              'theme' : 'dark',
-              'size': 'compact'
-            });
-          }
-        </script>
-        SCRIPT;
-      } else {
-        echo <<<SCRIPT
-        <script>
-          var clientId1;
-          var clientId2;
-          var clientId3;
-  
-          var recaptchaCallback = function() {
-            clientId1 = grecaptcha.render('recaptcha-box-1', {
-              'sitekey' : '6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3',
-              'theme' : 'dark',
-              'size': 'compact'
-            });
-          }
-        </script>
-        SCRIPT;
-      }
-    }
-  }
-  ?>
   <nav
     x-bind:class="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? 'desktop-navigation white-nav' : 'desktop-navigation'"
     x-data="{
@@ -162,7 +75,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
           <span x-show="!isWindowScrolledPastThreshold" class="green-highlight currency-field">
             <strong class="bold">US$ 1 = R$<?= $dolar_price ?> | € 1 = R$<?= $euro_price ?></strong>
             <p class="data">
-              <span class="bold">Data:</span><?= $formatted_conversion_date ?> às <?= $last_euro_conversion_update_time ?>
+              <span class="bold">Data:</span><?= $formatted_conversion_date ?> às <?= $last_dolar_conversion_update_time ?>
             </p>
           </span>
           <a href="https://agentes.queensberry.com.br/" class="green-highlight agent-field">
@@ -280,33 +193,33 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
                   <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
                   <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
                   <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil In</a></li>
-                  <li><a href="<?= home_url(); ?>/category/maritimo">Cruzeiros</a></li>
+                  <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzeiros</a></li>
                 </ul>
                 <div class="right-col">
                   <header>
-                    <h3><a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros No Mundo</a></h3>
+                    <h3><a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros No Mundo</a></h3>
                   </header>
                   <ul class="cards-area">
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log">
+                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-4-continentes.png" alt="Imagem Promocional Grupo Brasil no Mundo - 4 Continentes" />
                       </a>
                       <p>4 continentes 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=europa-2025-log">
+                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=europa-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-europa.png" alt="Imagem Promocional Grupo Brasil no Mundo - Europa" />
                       </a>
                       <p>Europa 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
+                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-baixa-temporada.png" alt="Imagem Promocional Grupo Brasil no Mundo - Baixa Temporada" />
                       </a>
                       <p>Baixa Temporada 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log">
+                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-slow-travel.png" alt="Imagem Promocional Grupo Brasil no Mundo - Slow Travel" />
                       </a>
                       <p>Slow Travel 2025</p>
@@ -373,12 +286,11 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
           <input type="checkbox" name="dropdown-mb" id="produtos-mb" />
           <ul class="produtos-items-mb">
             <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-            <li><a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros no Mundo</a></li>
             <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>
             <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
             <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours regulares</a></li>
             <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil in</a></li>
-            <li><a href="<?= home_url(); ?>/category/maritimo">Cruzerios</a></li>
+            <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzerios</a></li>
           </ul>
         </li>
         <li><a href="https://blog.queensberry.com.br/" target="_blank" rel="noopener">Blog</a></li>

@@ -116,6 +116,10 @@ function qb_assets_queue()
         wp_enqueue_style('qb-about-us', get_template_directory_uri() . "/src/css/group-identity.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
+    if(is_page('folhetos-e-cadernos')) {
+        wp_enqueue_style('qb-flyers-page', get_template_directory_uri() . "/src/css/flyers-and-logs.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
     if(is_page('queensclub')) {
         wp_enqueue_style('qb-about-us', get_template_directory_uri() . "/src/css/queensclub.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
@@ -617,6 +621,33 @@ function get_form_files_array() {
     return $response["Formularios"]["Formularios"]; 
 }
 
+function get_flyers_array() {
+    $url = "https://gx.befly.com.br/bsi/rest/wsFolhetos";
+
+    $flyers_req_payload = [
+        "Token" => "e9cf3b5a-9408-472f-8dd3-b5f36ff75698"
+    ];
+
+    $req_headers = [
+        "Content-Type: application/json"
+    ];
+    
+    $curl_flyers_req = curl_init();
+
+    curl_setopt($curl_flyers_req, CURLOPT_URL, $url);
+    curl_setopt($curl_flyers_req, CURLOPT_POST, true);
+    curl_setopt($curl_flyers_req, CURLOPT_POSTFIELDS, json_encode($flyers_req_payload));
+    curl_setopt($curl_flyers_req, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl_flyers_req, CURLOPT_HTTPHEADER, $req_headers);
+
+    $response_json = curl_exec($curl_flyers_req);
+    $response = json_decode($response_json, true);
+
+    curl_close($curl_flyers_req);
+
+    return $response["Folhetos"]["Folhetos"]; 
+}
+
 function get_dolar_currency_conversion() {
     $url = "https://gx.befly.com.br/bsi/rest/wsCambio";
     $today = date("Y-m-d");
@@ -913,7 +944,7 @@ function create_posts_from_api_data_batches() {
                 'post_status' => 'publish',
                 'posts_per_page' => 1
             ));
-            $category_title = $category_info["CategoriaDescricao"];
+            $category_title = $category_info["Titulo"];
             $current_category = get_term_by('name', $category_title, 'category');
     
             if ($query->have_posts()) {
@@ -1304,13 +1335,14 @@ function create_category_pages_with_api_data() {
     });
 
     foreach($valid_categories_list as $valid_category) {
-        $category_title = $valid_category["CategoriaDescricao"];
+        $category_title = $valid_category["Titulo"];
+        $category_description = $valid_category["CategoriaDescricao"];
         $category_subtitle = $valid_category["SubTitulo"];
-        $formatted_category_title = trim(mb_strtolower($category_title));
-        $logs_related_to_category = array_filter($logs_list, function($log) use ($formatted_category_title) {
+        $formatted_category_description = trim(mb_strtolower($category_description));
+        $logs_related_to_category = array_filter($logs_list, function($log) use ($formatted_category_description) {
             $formatted_log_category_title = trim(mb_strtolower($log["CategoriaDescricao"]));
 
-            return ($formatted_category_title == $formatted_log_category_title) && $log["Status"] == "A";
+            return ($formatted_category_description == $formatted_log_category_title) && $log["Status"] == "A";
         });
         $slugified_category_title = sanitize_title($category_title);
         $category_page_data = [
@@ -1584,7 +1616,7 @@ function custom_search_results($request) {
     $args = array(
         's'              => $search_query,
         'posts_per_page' => -1,
-        'orderby' => 'title',
+        'orderby' => 'name',
         'order' => 'ASC',
         'post_type' => 'post',
         'post_status' => 'publish'
@@ -1595,6 +1627,7 @@ function custom_search_results($request) {
     $results = array();
 
     if ($query->have_posts()) {
+        $counter = 1;
         while ($query->have_posts()) {
             $query->the_post();
             $post_id = get_the_ID();
@@ -1613,7 +1646,7 @@ function custom_search_results($request) {
                 $lower_log_name = trim(mb_strtolower($log_name));
                 $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-                return $lower_log_name == $current_item_name;
+                return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
             });
 
             $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
@@ -1631,8 +1664,11 @@ function custom_search_results($request) {
                 "PostData" => $metadata,
                 "CardImageUrl" => $card_image_url,
                 "PostSlug" => $post_slug,
-                "LogSlug" => sanitize_title($log_name)
+                "LogSlug" => sanitize_title($log_name),
+                "Key" => $counter
             ];
+
+            $counter += 1;
         }
     }
 
@@ -1649,17 +1685,22 @@ function custom_search_results($request) {
 function custom_tag_filter_results($request) {
     $tag_slugs = $request->get_param('tags');
     $category_slugs = $request->get_param('categories');
+    $search_query = sanitize_text_field($request->get_param('search'));
 
     $args = array(
         'post_type'      => 'post',
         'posts_per_page' => -1, 
         'post_status'    => 'publish',
-        'orderby' => 'title',
+        'orderby' => 'name',
         'order' => 'ASC'
     );
 
+    if(!empty($search_query) && trim($search_query) !== "") {
+        $args['s'] = $search_query;
+    }
+
     if (!empty($tag_slugs)) {
-        $args['tag_slug__and'] = explode(',', $tag_slugs);
+        $args['tag_slug__in'] = explode(',', $tag_slugs);
     }
 
     if (!empty($category_slugs)) {
@@ -1677,6 +1718,7 @@ function custom_tag_filter_results($request) {
     // Prepare the response
     $posts_metadata = array();
     if ($query->have_posts()) {
+        $counter = 1;
         while ($query->have_posts()) {
             $query->the_post();
             $post_id = get_the_ID();
@@ -1690,7 +1732,7 @@ function custom_tag_filter_results($request) {
                 $lower_log_name = trim(mb_strtolower($log_name));
                 $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-                return $lower_log_name == $current_item_name;
+                return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
             });
 
             $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
@@ -1708,8 +1750,11 @@ function custom_tag_filter_results($request) {
                 "PostData" => $metadata,
                 "CardImageUrl" => $card_image_url,
                 "PostSlug" => $post_slug,
-                "LogSlug" => sanitize_title($log_name)
+                "LogSlug" => sanitize_title($log_name),
+                "Key" => $counter
             ];
+
+            $counter += 1;
         }
     }
 
@@ -1729,7 +1774,7 @@ function custom_category_filter_results($request) {
         'post_type'      => 'post',
         'posts_per_page' => -1, 
         'post_status'    => 'publish',
-        'orderby' => 'title',
+        'orderby' => 'name',
         'order' => 'ASC'
     );
 
@@ -1738,7 +1783,7 @@ function custom_category_filter_results($request) {
     }
 
     if (!empty($tag_slugs)) {
-        $args['tag_slug__and'] = explode(',', $tag_slugs);
+        $args['tag_slug__in'] = explode(',', $tag_slugs);
     }
 
     if (!empty($category_slug)) {
@@ -1752,7 +1797,9 @@ function custom_category_filter_results($request) {
     $query = new WP_Query($args);
 
     $posts_metadata = array();
+
     if ($query->have_posts()) {
+        $counter = 1;
         while ($query->have_posts()) {
             $query->the_post();
             $post_id = get_the_ID();
@@ -1766,7 +1813,7 @@ function custom_category_filter_results($request) {
                 $lower_log_name = trim(mb_strtolower($log_name));
                 $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-                return $lower_log_name == $current_item_name;
+                return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
             });
 
             $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
@@ -1784,8 +1831,11 @@ function custom_category_filter_results($request) {
                 "PostData" => $metadata,
                 "CardImageUrl" => $card_image_url,
                 "PostSlug" => $post_slug,
-                "LogSlug" => sanitize_title($log_name)
+                "LogSlug" => sanitize_title($log_name),
+                "Key" => $counter,
             ];
+
+            $counter += 1;
         }
     }
 

@@ -9,3 +9,7 @@ secret: 6LcIDAIrAAAAACF_myoi04KL6oLX2_ecROd89xFb
 3:
 site key: 6LexGAIrAAAAALCmMJe_GoDVXZvzNvHUCDAwcX8W
 secret: 6LexGAIrAAAAAP57VspAlgMRv7KeH-2LX2R6kOPy
+
+v3:
+site key: 6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y
+secret key: 6LfF5yArAAAAALzZS-aUHevfaqgcqAgFZ3_eoTz3

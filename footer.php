@@ -19,7 +19,6 @@
           <h2>Institucional</h2>
           <ul class="nav-links">
             <li><a href="<?= home_url(); ?>/quem-somos">Quem Somos</a></li>
-            <li><a href="<?= home_url(); ?>/dados-cadastrais">Dados Cadastrais</a></li>
             <li><a href="<?= home_url(); ?>/fale-conosco">Fale Conosco</a></li>
             <li><a href="<?= home_url(); ?>/trabalhe-conosco">Trabalhe Conosco</a></li>
             <li><a href="<?= home_url(); ?>/politica-de-privacidade">Política de Privacidade</a></li>
@@ -33,7 +32,7 @@
           <div>
             <h2>Serviços</h2>
             <ul class="nav-links">
-              <li><a href="<?= home_url(); ?>">Folhetos & Cadernos</a></li>
+              <li><a href="<?= home_url(); ?>/folhetos-e-cadernos">Folhetos & Cadernos</a></li>
               <li><a href="<?= home_url(); ?>/formularios">Formulários</a></li>
               <li><a href="<?= home_url(); ?>/queensclub/">Queens Club</a></li>
               <li><a href="https://blog.queensberry.com.br/" target="_blank" rel="noopener">Blog</a></li>
@@ -62,7 +61,7 @@
               value="X0Gzc2X%3DAQjkPkSRWQG3IHmhTHzcn8K72I2zfGItDUp4G4jzf5RzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG5YElTlcCLrzf3j23eojPBzcP6kufR8zbb">
           <input type="hidden" name="_ei_" value="EZG5N9k5REf3zveZ6bm0rcg">
           <input type="hidden" name="_di_" value="lfbgbm7m1bbva1iuk9gjbrdj77s9ndl30c1bjvbem2898cehfk10">
-          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
           <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Newsletter Receba Novidades - Queensberry">
           <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
@@ -83,10 +82,6 @@
             </div>
           </div>
           <div class="submit-area">
-            <div class="squarey-recaptcha-box">
-              <!-- <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3" data-size="compact" data-theme="dark"></div> -->
-              <div id="recaptcha-box-1"></div>
-            </div>
             <button type="submit" class="submit-btn">Cadastrar</button>
           </div>
         </form>
@@ -128,9 +123,11 @@
                                 formData,
                                 function (data) {
                                   console.log("Responsys ok", data);
+                                  alert('Formulário enviado com sucesso!')
                                 }
                               ).fail((res) => {
                                 console.log("Responsys fail", res);
+                                alert('O formulário não foi submetido devido a um erro.')
                               });
                             } else {
                               // Enviar para Eloqua
@@ -140,9 +137,11 @@
                                 data: formData,
                                 success: () => {
                                     console.log("Eloqua ok");
+                                    alert('Formulário enviado com sucesso!')
                                 },
                                 error: (res) => {
                                     console.log("Eloqua fail", res);
+                                    alert('O formulário não foi submetido devido a um erro.')
                                 },
                               });
                             }
@@ -153,42 +152,67 @@
             }); */
 
 
-            $(document).ready(() => {
+          $(document).ready(() => {
+            $("#f_queensberry_receba_novidades").on("submit", (e) => {
+              e.preventDefault();
+              let formData = $("#f_queensberry_receba_novidades").serialize();
+              
 
-                $("#f_queensberry_receba_novidades").on("submit", (e) => {
-                    e.preventDefault();
-                    let formData = $("#f_queensberry_receba_novidades").serialize();
-
-                    $("#actionField3").val("queensberry_receba_novidades");
-
-                    let perfil = $("#slctPerfil").val();
-                    if (perfil === "PASSAGEIRO") {
-                      // Enviar para Responsys
-                      jQuery.post(
-                        "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
-                        formData,
-                        function (data) {
-                          console.log("Responsys ok", data);
-                        }
-                      ).fail((res) => {
-                        console.log("Responsys fail", res);
-                      });
-                    } else {
-                      // Enviar para Eloqua
-                      jQuery.ajax({
-                        type: "POST",
-                        url: "https://s2864845.t.eloqua.com/e/f2",
-                        data: formData,
-                        success: () => {
-                            console.log("Eloqua ok");
-                        },
-                        error: (res) => {
-                            console.log("Eloqua fail", res);
-                        },
-                      });
+              grecaptcha.ready(function() {
+                grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+                  console.log(token);
+                  jQuery.post(
+                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                    {
+                      "g-recaptcha-response": token
                     }
+                  ).done((res) => {
+                    $("#actionField3").val("queensberry_receba_novidades");
+                    formData = $("#f_queensberry_receba_novidades").serialize();
+                    if(res.data.message === "OK") {
+                      $("#actionField3").val("queensberry_receba_novidades");
+                      let perfil = $("#slctPerfil").val();
+                      if (perfil === "PASSAGEIRO") {
+                        // Enviar para Responsys
+                        jQuery.post(
+                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
+                          formData,
+                          function (data) {
+                            console.log("Responsys ok", data);
+                            alert('Formulário enviado com sucesso!')
+                          }
+                        ).fail((res) => {
+                          console.log("Responsys fail", res);
+                          alert('O formulário não foi submetido devido a um erro.')
+                        });
+                      } else {
+                        // Enviar para Eloqua
+                        jQuery.ajax({
+                          type: "POST",
+                          url: "https://s2864845.t.eloqua.com/e/f2",
+                          data: formData,
+                          success: () => {
+                              console.log("Eloqua ok");
+                              alert('Formulário enviado com sucesso!')
+                          },
+                          error: (res) => {
+                              console.log("Eloqua fail", res);
+                              alert('O formulário não foi submetido devido a um erro.')
+
+                          },
+                        });
+                      }
+                    } else {
+                      console.log("Recaptcha error")
+                    }
+                  })
                 });
+              });
+
+
+              
             });
+          });
         </script>
 
         <script type="text/javascript">
@@ -215,20 +239,17 @@
         </script>
 
         <script>
-            /*Script para verificar se o usuario
-            marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
-            $(function ($) { // on DOM ready (when the DOM is finished loading)
-                $('#agree').click(function () { // when the checkbox is clicked
-                    var checked = $('#agree').is(':checked'); // check the state
-                    $('#optIn').val(checked ? "I" : "O"); // set the value
-                    $('#optInSMS').val(checked ? "I" : "O"); // set the value
-
-                });
-                $('#optIn').triggerHandler("click"); // initialize the value
-                $('#optInSMS').triggerHandler("click"); // initialize the value
+          jQuery(document).ready(function($) {
+            $('#RECEBER_COMUNICACOES').on('change', function() {
+              if ($(this).is(':checked')) {
+                $('#optIn').val('I'); // I de "Inscrito"
+              } else {
+                $('#optIn').val('O'); // O de "Opt-out"
+              }
             });
-
+          });
         </script>
+
         <script>
             $(function getURL() {
                 var url_cadastro = window.location.href;

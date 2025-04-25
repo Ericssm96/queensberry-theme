@@ -15,6 +15,8 @@ $search_query = new WP_Query([
 $early_posts_metadata = [];
 
 if($search_query->have_posts()){
+  $counter = 1;
+
   while($search_query->have_posts()) {
     $search_query->the_post();
     $post_id = get_the_ID();
@@ -33,7 +35,7 @@ if($search_query->have_posts()){
       $lower_log_name = trim(mb_strtolower($log_name));
       $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-      return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
     });
 
     $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
@@ -51,8 +53,11 @@ if($search_query->have_posts()){
       "PostData" => $metadata,
       "CardImageUrl" => $card_image_url,
       "PostSlug" => $post_slug,
-      "LogSlug" => sanitize_title($log_name)
+      "LogSlug" => sanitize_title($log_name),
+       "Key" => $counter
     ];
+
+    $counter += 1;
   }
 }
 wp_reset_postdata();
@@ -112,7 +117,8 @@ $json_early_posts_meta = json_encode($early_posts_metadata, JSON_UNESCAPED_SLASH
       selectedCategories: [],
       isLoading: false,
       postsOrder: "",
-
+      _highlightedPosts: [],
+      _normalPosts: [],
       async performSearch() {
         if (!this.searchQuery.trim()) return;
         this.isLoading = true;
@@ -131,34 +137,82 @@ $json_early_posts_meta = json_encode($early_posts_metadata, JSON_UNESCAPED_SLASH
           this.isLoading = false;
         }
       },
-
-      get postsMeta() {
-        if(this.selectedCategories.length == 0) {
-          return this._postsMeta;
-        }
-
+      get highlightedPosts() {
         if(this.selectedCategories.length > 0) {
-          return this._postsMeta.filter((postMeta)=> {
+          let tempHlPosts;
+
+          tempHlPosts = this._postsMeta.filter((postMeta)=>{
             let slugifiedCategoryTitle = this.sanitizeTitle(postMeta["PostData"]["CategoryInfo"]["Titulo"]);
-            return this.selectedCategories.includes(slugifiedCategoryTitle);
+            return this.selectedCategories.includes(slugifiedCategoryTitle) && postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
           });
+
+          return tempHlPosts;
+        } else {
+          return this._postsMeta.filter(postMeta => {
+            return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
+          });
+        }        
+      },
+      get normalPosts() {
+        if(this.selectedCategories.length > 0) {
+          let tempNormalPosts;
+
+          tempNormalPosts = this._postsMeta.filter((postMeta)=>{
+            let slugifiedCategoryTitle = this.sanitizeTitle(postMeta["PostData"]["CategoryInfo"]["Titulo"]);
+            return this.selectedCategories.includes(slugifiedCategoryTitle) && postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
+          });
+
+          return tempNormalPosts;
+        } else {
+          return this._postsMeta.filter(postMeta => {
+            return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
+          })
+        }       
+      },
+      get postsMeta() {
+        // if(this.selectedCategories.length == 0) {
+        //   return this._postsMeta;
+        // }
+
+        // if(this.selectedCategories.length > 0) {
+        //   return this._postsMeta.filter((postMeta)=> {
+        //     let slugifiedCategoryTitle = this.sanitizeTitle(postMeta["PostData"]["CategoryInfo"]["Titulo"]);
+        //     return this.selectedCategories.includes(slugifiedCategoryTitle);
+        //   });
+        // }
+
+        tempHlPosts = this.highlightedPosts;
+        tempNormalPosts = this.normalPosts;
+
+        if(this.postsOrder == "alphabAsc") {
+          this.orderPostsArrayByAscAlphabeticOrder(tempHlPosts);
+          this.orderPostsArrayByAscAlphabeticOrder(tempNormalPosts);
+        } else if (this.postsOrder == "alphabDesc") {
+          this.orderPostsArrayByDescAlphabeticOrder(tempHlPosts);
+          this.orderPostsArrayByDescAlphabeticOrder(tempNormalPosts);
         }
+
+        console.log("hl: " + tempHlPosts);
+        console.log("np: " + tempNormalPosts);
+
+        return [...tempHlPosts, ...tempNormalPosts];
       },
       orderPosts() {
-        console.log(this.postsOrder);
         if(this.postsOrder == "alphabAsc") {
-          this.filterPostsByAscAlphabeticOrder();
+          this.orderPostsArrayByAscAlphabeticOrder(this.highlightedPosts);
+          this.orderPostsArrayByAscAlphabeticOrder(this.normalPosts);
         } else if (this.postsOrder == "alphabDesc") {
-          this.filterPostsByDescAlphabeticOrder();
+          this.orderPostsArrayByDescAlphabeticOrder(this.highlightedPosts);
+          this.orderPostsArrayByDescAlphabeticOrder(this.normalPosts);
         }
       },
-      filterPostsByAscAlphabeticOrder() {
+      orderPostsArrayByAscAlphabeticOrder(postsArr) {
         // Função para ordenar os posts em ordem alfabética crescente (A-Z)
-        this.postsMeta.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
+        postsArr.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
       },
-      filterPostsByDescAlphabeticOrder() {
+      orderPostsArrayByDescAlphabeticOrder(postsArr) {
         // Função para ordenar os posts em ordem alfabética descrescente (Z-A)
-        this.postsMeta.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
+        postsArr.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
       }
     }' x-effect="console.log(selectedCategories)">
     <article class="search-container">
@@ -209,27 +263,21 @@ $json_early_posts_meta = json_encode($early_posts_metadata, JSON_UNESCAPED_SLASH
         </div>
       </div>
       <div class="cards-grid" x-show="!isLoading && postsMeta.length > 0">
-        <template x-for="postMeta in postsMeta">
+        <template x-for="postMeta in postsMeta" :key="postMeta['Key']">
           <div class="card" x-data="{
             qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
             qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
             isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
-            cardImgHeight: 0
+            highlightText: postMeta['PostData']['ProgramInfo']['DestaquePortalTexto'],
+            cardImgHeight: 269
           }">
             <a class="post-link" x-bind:href="postMeta['Link']">
               <div class="card-img">
                 <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-                <span x-show="isHighlightedPost" class="highlight-stamp">
-                  DESTAQUE
+                <span x-show="isHighlightedPost" x-text="highlightText" class="highlight-stamp">
                 </span>
               </div>
               <div class="card-content" x-init="cardImgHeight = $refs.cardImg.offsetHeight; console.log(cardImgHeight)" x-bind:style="'height: calc(100% - ' + cardImgHeight + 'px);'">
-              <div class="card-img">
-                <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
-                <span x-show="isHighlightedPost" class="highlight-stamp">
-                  DESTAQUE
-                </span>
-              </div>
                   <div class="initial-description">
                       <h3 x-text="postMeta['PostData']['ProgramInfo']['Descricao']"></h3>
                       <p x-html="postMeta['PostData']['ProgramInfo']['DescricaoResumida'].replace('\n', '<br />')"></p>

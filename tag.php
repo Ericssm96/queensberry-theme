@@ -3,14 +3,76 @@ $posts_metadata = [];
 $tag_title = "";
 $world_region = "";
 $current_country = "";
-
 $tag = get_queried_object();
 
 if ($tag && isset($tag->name)) {
   $tag_title = $tag->name;
 }
 
-if(have_posts()){
+$args = array(
+  'tag_id'         => get_queried_object_id(), // Gets the current tag ID
+  'posts_per_page' => -1, // Or any number you want
+  'orderby'        => 'name', // 'name' refers to post_name which is the slug
+  'order'          => 'ASC' // or 'DESC'
+);
+
+$tag_query = new WP_Query($args);
+
+if ($tag_query->have_posts()) :
+  $counter = 1;
+  while ($tag_query->have_posts()) : $tag_query->the_post();
+    // $tag_title = single_tag_title( '', false );
+
+    $post_id = get_the_ID();
+    $metadata = get_post_meta($post_id, 'custom_data', true);
+    foreach($metadata["ProgramInfo"] as $program_info) {
+      if(gettype($program_info) == "string") {
+        $program_info = str_replace('"', "'", $program_info);
+      }
+    }
+    $additional_program_info = $metadata['ProgramAddInfo'];
+    $program_logs_info = $metadata['ProgramLogInfo'];
+    $category_info = $metadata["CategoryInfo"];
+    $program_info = $metadata['ProgramInfo'];
+    $log_name = $additional_program_info["CadernoTitulo"]; 
+    $region_info = $metadata["RegionInfo"];
+    $program_log_info = array_find($program_logs_info, function($program_log_info) use ($log_name) {
+      $lower_log_name = trim(mb_strtolower($log_name));
+      $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
+
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
+    });
+    $program_name = $program_info["Descricao"];
+
+    $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
+    $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
+    $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
+
+
+    $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
+    $card_image_file_name = $program_info["CaminhoImagem"];
+
+    $card_image_url = "$images_folder_prefix_url/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$card_image_file_name";
+    $post_slug = get_post_field( 'post_name', get_post() );
+
+    
+    $posts_metadata[] = [
+      "Link" => get_permalink(),
+      "PostData" => $metadata,
+      "CardImageUrl" => $card_image_url,
+      "PostSlug" => $post_slug,
+      "LogSlug" => sanitize_title($log_name),
+      "RegionInfo" => $region_info,
+      "Key" => $counter
+    ];
+
+    $counter += 1;
+  endwhile;
+  wp_reset_postdata();
+endif;
+
+/* if(have_posts()){
+  $counter = 1;
   while(have_posts()) {
     the_post();
 
@@ -33,18 +95,13 @@ if(have_posts()){
       $lower_log_name = trim(mb_strtolower($log_name));
       $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-      return $lower_log_name == $current_item_name && $program_log_info["CadernoPastaImagens"] !== "";
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
     });
     $program_name = $program_info["Descricao"];
 
     $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
-
-
-    if(sanitize_title($program_name) === "nova-zelandia-de-norte-a-sul") {
-      $program_log_image_folder = "AUSTRALIA_E_NOVA_ZELANDIA";
-    }
 
 
     $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
@@ -60,18 +117,45 @@ if(have_posts()){
       "CardImageUrl" => $card_image_url,
       "PostSlug" => $post_slug,
       "LogSlug" => sanitize_title($log_name),
-      "RegionInfo" => $region_info
+      "RegionInfo" => $region_info,
+      "Key" => $counter
     ];
+
+    $counter += 1;
   }
 
-  usort($posts_metadata, function ($a, $b) {
-  $titleA = $a['PostData']['ProgramInfo']['Descricao'] ?? '';
-  $titleB = $b['PostData']['ProgramInfo']['Descricao'] ?? '';
-  return strcmp($titleA, $titleB);
+  usort($posts_metadata, function($a, $b) {
+    $alphabet = 'áabcćçdeéfghiíjklłmnnoóqprstuvwxyz'; 
+    $a = $a['PostData']['ProgramInfo']['Descricao'];
+    $b = $b['PostData']['ProgramInfo']['Descricao'];
+
+    for ($i = 0; $i < mb_strlen($a); $i++) {
+        if (mb_substr($a, $i, 1) == mb_substr($b, $i, 1)) {
+            continue;
+        }
+        if ($i > mb_strlen($b)) {
+            return 1;
+        }
+        if (mb_strpos($alphabet, mb_substr($a, $i, 1)) > mb_strpos($alphabet, mb_substr($b, $i, 1))) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
 });
 
-
+foreach($posts_metadata as $post_meta) {
+  var_dump($post_meta['PostData']['ProgramInfo']['Descricao']);
 }
+
+// usort($posts_metadata, function ($a, $b) {
+//   $titleA = $a['PostData']['ProgramInfo']['Descricao'] ?? '';
+//   $titleB = $b['PostData']['ProgramInfo']['Descricao'] ?? '';
+//   return strcmp($titleA, $titleB);
+// });
+
+
+} */
 
 $json_posts_meta = json_encode($posts_metadata, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 
@@ -228,43 +312,58 @@ get_header();
     selectedTags: [],
     selectedCategories: [],
     isLoading: false,
+    _highlightedPosts: [],
+    _normalPosts: [],
+    get highlightedPosts() {
+      return this._postsMeta.filter(postMeta => {
+        return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "S";
+      });    
+    },
+    get normalPosts() {
+      return this._postsMeta.filter(postMeta => {
+        return postMeta["PostData"]["ProgramInfo"]["DestaquePortal"] === "N";
+      })    
+    },
     get postsMeta() {
-      if(this.textFilter === "") {
-        return this._postsMeta;
-      } else {
-        return this._postsMeta.filter((postMeta)=> {
-          let postDescription = postMeta["PostData"]["ProgramInfo"]["DescricaoResumida"].toLowerCase();
-          let postSlug = postMeta["PostSlug"];
-          let travelOutings = postMeta["PostData"]["ProgramInfo"]["SaidasPrograma"].toLowerCase();
-          let travelVisits = postMeta["PostData"]["ProgramInfo"]["Detalhes"].toLowerCase();
-          let lowerCaseFilter = this.textFilter.toLowerCase();
-          return postDescription.includes(lowerCaseFilter) || 
-          postSlug.includes(this.sanitizeTitle(this.textFilter)) || 
-          travelOutings.includes(lowerCaseFilter) ||
-          travelVisits.includes(lowerCaseFilter);
-        });
+      tempHlPosts = this.highlightedPosts;
+      tempNormalPosts = this.normalPosts;
+
+      if(this.postsOrder == "alphabAsc") {
+        this.orderPostsArrayByAscAlphabeticOrder(tempHlPosts);
+        this.orderPostsArrayByAscAlphabeticOrder(tempNormalPosts);
+      } else if (this.postsOrder == "alphabDesc") {
+        this.orderPostsArrayByDescAlphabeticOrder(tempHlPosts);
+        this.orderPostsArrayByDescAlphabeticOrder(tempNormalPosts);
       }
+
+      console.log("hl: " + tempHlPosts);
+      console.log("np: " + tempNormalPosts);
+
+      return [...tempHlPosts, ...tempNormalPosts];
     },
     orderPosts() {
       if(this.postsOrder == "alphabAsc") {
-        this.filterPostsByAscAlphabeticOrder();
+        this.orderPostsArrayByAscAlphabeticOrder(this.highlightedPosts);
+        this.orderPostsArrayByAscAlphabeticOrder(this.normalPosts);
       } else if (this.postsOrder == "alphabDesc") {
-        this.filterPostsByDescAlphabeticOrder();
+        this.orderPostsArrayByDescAlphabeticOrder(this.highlightedPosts);
+        this.orderPostsArrayByDescAlphabeticOrder(this.normalPosts);
       }
     },
-    filterPostsByAscAlphabeticOrder() {
+    orderPostsArrayByAscAlphabeticOrder(postsArr) {
       // Função para ordenar os posts em ordem alfabética crescente (A-Z)
-      this.postsMeta.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
+      postsArr.sort((a, b) => a["PostSlug"].localeCompare(b["PostSlug"], undefined, { sensitivity: "base" }));
     },
-    filterPostsByDescAlphabeticOrder() {
+    orderPostsArrayByDescAlphabeticOrder(postsArr) {
       // Função para ordenar os posts em ordem alfabética descrescente (Z-A)
-      this.postsMeta.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
+      postsArr.sort((a, b) => b["PostSlug"].localeCompare(a["PostSlug"], undefined, { sensitivity: "base" }));
     },
     async performSearch() {
       this.isLoading = true;
       try {
         const response = await axios.get("<?php echo esc_url(rest_url("api/v1/tagfilter/")); ?>", {
           params: {
+            search: this.textFilter,
             tags: this.selectedTags.join(","),
             categories: this.selectedCategories.join(",")
           },
@@ -277,9 +376,7 @@ get_header();
         console.error("Error fetching search results:", error);
       } finally {
         this.isLoading = false;
-      }
-
-      
+      }      
     },
   }' x-init="
     selectedTags = currentCountry.length !== 0 ? [sanitizeTitle(currentCountry)] : [];
@@ -345,8 +442,8 @@ get_header();
           </ul>
         </div>
       </div>
-      <form action="" @submit.prevent="textFilter = $refs.textFilterField.value" class="search-form">
-        <input type="text" x-ref="textFilterField" placeholder="Informe seu destino">
+      <form action="" @submit.prevent="performSearch()" class="search-form">
+        <input type="text" x-model="textFilter" x-ref="textFilterField" placeholder="Informe seu destino">
         <button class="submit-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
       <div class="filter-area">
@@ -367,17 +464,15 @@ get_header();
         </div>
       </div>
       <div class="cards-grid">
-        <template x-for="postMeta in postsMeta">
+        <template x-for="postMeta in postsMeta" :key="postMeta['Key']">
           <div class="card" x-data="{
             qtdDiasPrograma: postMeta['PostData']['ProgramInfo']['QtdDiasViagem'],
             qtdNoitesPrograma: postMeta['PostData']['ProgramInfo']['QtdNoitesViagem'],
             isHighlightedPost: postMeta['PostData']['ProgramInfo']['DestaquePortal'] === 'S',
-            cardImgHeight: 0
-          }" x-show="sanitizeTitle(postMeta['PostData']['ProgramInfo']['Descricao']) !== 'nova-zelandia-express'" x-init="
-          if(sanitizeTitle(postMeta['PostData']['ProgramInfo']['Descricao']) !== 'nova-zelandia-de-norte-a-sul') {
-            postMeta['CardImageUrl']
+            highlightText: postMeta['PostData']['ProgramInfo']['DestaquePortalTexto'],
+            cardImgHeight: 269
           }">
-            <a x-bind:href="postMeta['Link']" class="post-link">
+            <a x-bind:href="postMeta['Link']" x-init="console.log(postMeta['PostData']['ProgramInfo']['Descricao'] + isHighlightedPost)" class="post-link">
               <div class="card-img">
                 <img class="" x-ref="cardImg" x-bind:src="postMeta['CardImageUrl']" alt="Imagem card">
                 <span x-show="isHighlightedPost" class="highlight-stamp">

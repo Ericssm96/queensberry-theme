@@ -44,7 +44,7 @@ get_header(); ?>
               value="X0Gzc2X%3DAQjkPkSRWQG1SszaHvzcXON5k0mzaSKb4cfIpfK4zbHDCVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG2e9n6TJuwEzb8zgdnknUzazbyzcsdkPM7pza">
             <input type="hidden" name="_ei_" value="EYl0W1v1-DnBaKPyOAQ9eNc">
             <input type="hidden" name="_di_" value="u609bmeb2lpifgqckful95hnl4g4djuv8rh5sa7qh3771chd5eog">
-            <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+            <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
             <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
             <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Fale Conosco - Queensberry">
             <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
@@ -77,87 +77,10 @@ get_header(); ?>
             </div>
 
             <div class="submit-area">
-              <div class="recaptcha-box">
-                <!-- <div class="g-recaptcha" data-sitekey="6Lfq8_sqAAAAAAKKFvBPoQyDNvYJEcf5JRrffil3"></div> -->
-                <div id="recaptcha-box-2"></div>
-              </div>
-              
               <button type="submit" class="submit-btn">Enviar</button>
             </div>
           </form>
           <script>
-            /* var formData = new FormData(jQuery("#f_queensberry_fale_conosco")[0]); // Use FormData para incluir anexos
-
-
-            $(document).ready(() => {
-              $("#celular").mask("(00) 00000-0000");
-              $("#iptCpf").mask("000.000.000-00");
-
-              $("#celular").on("blur", () => {
-                let nationalCelNumber = $("#celular").val();
-                let cleanNumber = nationalCelNumber.replace(/\D/g, "");
-                let fullNumber = `55${cleanNumber}`;
-                $("#fullPhoneNumber").val(fullNumber);
-              })
-
-              $("#f_queensberry_fale_conosco").on("submit", (e) => {
-                e.preventDefault();
-
-                let nationalCelNumber = $("#celular").val();
-                let cleanNumber = nationalCelNumber.replace(/\D/g, "");
-                let fullNumber = `55${cleanNumber}`;
-                $("#fullPhoneNumber").val(fullNumber);
-                const captchaResponse = grecaptcha.getResponse();
-
-                if(captchaResponse.length <= 0) {
-                  alert("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.")
-
-                  throw new Error("Erro ao confirmar a resposta do reCaptcha. Se o erro persistir, recarregue a página e tente novamente.");
-                } else {
-                  jQuery
-                  .ajax({
-                    type: "POST",
-                    url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
-                    data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                    error: (res) => {
-                      console.log("Recaptcha Fail", res);
-                    },
-                  }).done((res)=>{
-                    jQuery("#actionField").val("queensberry_fale_conosco");
-                    console.log(res);
-                    console.log(document.querySelector("#actionField").value);
-                    if(res.data.message === "OK") {
-                      jQuery
-                          .ajax({
-                            type: "POST",
-                            url: "https://s2864845.t.eloqua.com/e/f2",
-                            data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                            success: () => {
-                              // jQuery("#actionField").val("envio_seja_parceiro");
-                              // formData = new FormData(this);
-                              console.log("Eloqua ok");
-                              // console.log(document.querySelector("#actionField").value);
-                            },
-                            error: (res) => {
-                              console.log("Eloqua fail", res);
-                            },
-                          })
-                          .then(() => {
-                            jQuery.post(
-                              "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                            $("#f_queensberry_fale_conosco").serialize(),
-                            function (data) {
-                              console.log(data); // Exibe a resposta no console
-                              alert("Envio realizado com sucesso!");
-                            }
-                          )
-                      });
-                    }
-                  })
-                }
-              })
-            }) */
-
             $(document).ready(() => {
               $("#celular").mask("(00) 00000-0000");
               $("#iptCpf").mask("000.000.000-00");
@@ -176,80 +99,73 @@ get_header(); ?>
                 let fullNumber = `55${cleanNumber}`;
                 let subject = $("#ASSUNTO").val();
                 $("#fullPhoneNumber").val(fullNumber);
-                jQuery("#actionField").val("queensberry_fale_conosco");
 
-                if(subject === 'Atendimento ao Passageiro') {
-                  jQuery.post(
-                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                    $("#f_queensberry_fale_conosco").serialize(),
-                    function (data) {
-                      console.log(data); // Exibe a resposta no console
-                      alert("Envio realizado com sucesso!");
-                    }
-                  )
-                } else {
-                  jQuery
-                    .ajax({
-                      type: "POST",
-                      url: "https://s2864845.t.eloqua.com/e/f2",
-                      data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                      success: () => {
-                        // jQuery("#actionField").val("envio_seja_parceiro");
-                        // formData = new FormData(this);
-                        console.log("Eloqua ok");
-                        alert("Envio realizado com sucesso!");
-                        // console.log(document.querySelector("#actionField").value);
-                      },
-                      error: (res) => {
-                        console.log("Eloqua fail", res);
-                      },
-                  })
-                }
 
-                /* jQuery
-                    .ajax({
-                      type: "POST",
-                      url: "https://s2864845.t.eloqua.com/e/f2",
-                      data: jQuery("#f_queensberry_fale_conosco").serialize(),
-                      success: () => {
-                        // jQuery("#actionField").val("envio_seja_parceiro");
-                        // formData = new FormData(this);
-                        console.log("Eloqua ok");
-                        // console.log(document.querySelector("#actionField").value);
-                      },
-                      error: (res) => {
-                        console.log("Eloqua fail", res);
-                      },
-                    })
-                    .then(() => {
-                      jQuery.post(
-                          "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                        $("#f_queensberry_fale_conosco").serialize(),
-                        function (data) {
-                          console.log(data); // Exibe a resposta no console
-                          alert("Envio realizado com sucesso!");
+
+                grecaptcha.ready(function() {
+                  grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {action: 'submit'}).then(function(token) {
+                    console.log(token);
+                    jQuery.post(
+                      "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha",
+                      {
+                        "g-recaptcha-response": token
+                      }
+                    ).done((res) => {
+                      jQuery("#actionField").val("queensberry_fale_conosco");
+                      if(res.data.message === "OK") {
+                        if(subject === 'Atendimento ao Passageiro') {
+                          jQuery.post(
+                              "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
+                            $("#f_queensberry_fale_conosco").serialize(),
+                            function (data) {
+                              console.log(data); // Exibe a resposta no console
+                              alert("Envio realizado com sucesso!");
+                            }
+                          )
+                        } else {
+                          jQuery
+                            .ajax({
+                              type: "POST",
+                              url: "https://s2864845.t.eloqua.com/e/f2",
+                              data: jQuery("#f_queensberry_fale_conosco").serialize(),
+                              success: () => {
+                                // jQuery("#actionField").val("envio_seja_parceiro");
+                                // formData = new FormData(this);
+                                console.log("Eloqua ok");
+                                alert("Envio realizado com sucesso!");
+                                // console.log(document.querySelector("#actionField").value);
+                              },
+                              error: (res) => {
+                                console.log("Eloqua fail", res);
+                              },
+                          })
                         }
-                      )
-                    }); */
+                      } else {
+                        console.log("Recaptcha error")
+                      }
+                    })
+                  });
+                });
+
+
+
+                
               })
             }) 
           </script>
 
           <script>
-            /*Script para verificar se o usuario
-            marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
-            $(function ($) { // on DOM ready (when the DOM is finished loading)
-              $('#agree').click(function () { // when the checkbox is clicked
-                var checked = $('#agree').is(':checked'); // check the state
-                $('#optIn').val(checked ? "I" : "O"); // set the value
-                $('#optInSMS').val(checked ? "I" : "O"); // set the value
-
-              });
-              $('#optIn').triggerHandler("click"); // initialize the value
-              $('#optInSMS').triggerHandler("click"); // initialize the value
+          jQuery(document).ready(function($) {
+            $('#RECEBER_COMUNICACOES').on('change', function() {
+              if ($(this).is(':checked')) {
+                $('#optIn').val('I'); // I de "Inscrito"
+              } else {
+                $('#optIn').val('O'); // O de "Opt-out"
+              }
             });
+          });
+        </script>
 
-          </script>
           <script>
             $(function getURL() {
               var url_cadastro = window.location.href;
@@ -431,6 +347,8 @@ get_header(); ?>
             #f_queensberry_fale_conosco .submit-area {
               display: flex;
               flex-direction: column;
+              align-items: center;
+              justify-content: center;
               row-gap: 50px;
             }
 

@@ -61,7 +61,7 @@ add_action('admin_post_nopriv_queensberry_verify_recaptcha_c', 'queensberry_veri
 
 // Recaptcha
 function queensberry_verify_recaptcha() {
-    $secret_key = "6Lfq8_sqAAAAAGxyoOs1txS7HdsEgPxOhVO-QGOo";
+    $secret_key = "6LfF5yArAAAAALzZS-aUHevfaqgcqAgFZ3_eoTz3";
     $client_grecaptcha_res = $_POST["g-recaptcha-response"];
 
     $verify_response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$client_grecaptcha_res}");
@@ -135,7 +135,8 @@ function queensberry_handle_fale_conosco_sign_up()
     $user_phone_number = $_POST["FULL_PHONE_NUMBER"];
     $email_opt_in = $_POST["EMAIL_PERMISSION_STATUS_"];
     $cel_opt_in = $_POST["MOBILE_PERMISSION_STATUS_"];
-
+    $formatted_cpf = preg_replace('/[^0-9]/', '', $user_cpf);
+    $formatted_phone = preg_replace('/[^0-9]/', '', $user_phone_number);
     $sign_up_origin = $_POST["ORIGEM_CADASTRO"];
     $sign_up_url = $_POST["URL_CADASTRO"];
 
@@ -161,9 +162,9 @@ function queensberry_handle_fale_conosco_sign_up()
                 [
                     $user_first_name,
                     $user_last_name,
-                    $user_cpf,
-                    $user_phone_number,
+                    $formatted_cpf,
                     $user_email,
+                    $formatted_phone,
                     $email_opt_in,
                     $cel_opt_in
                 ]
@@ -246,7 +247,8 @@ function queensberry_handle_fale_conosco_sign_up()
                 if ($supplemental_register_result["status"] == 200) {
                     wp_send_json_success([
                         "message" => "Cadastro concluído com sucesso!",
-                        "data_result" => $sign_up_result,
+                        "phone" => $formatted_phone,
+                        "sign_up_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
                         "supp_result" => $supplemental_register_result 
                     ]);
@@ -742,13 +744,11 @@ function queensberry_handle_recomendar_programa()
         "recordData" => [
             "fieldNames" => [
                 "EMAIL_ADDRESS_",
-                "DESTINO",
                 "MENSAGEM"
             ],
             "records" => [
                 [
                     $user_email,
-                    $destino,
                     $user_message
                 ]
             ],
@@ -806,8 +806,11 @@ function queensberry_handle_queensclub()
     $user_first_name = $_POST["FIRST_NAME"];
     $user_last_name = $_POST["LAST_NAME"];
     $user_cpf = $_POST["CPF_USUARIO"];
+    $formatted_cpf = preg_replace('/[^0-9]/', '', $user_cpf);
     $user_civil_state = $_POST["ESTADO_CIVIL"];
-    $user_birthyear = $_POST["DATA_NASCIMENTO"];
+    $user_birth_date = $_POST["DATA_NASCIMENTO"];
+    $date_user_birth_date = DateTime::createFromFormat('d/m/Y', $user_birth_date);
+    $formatted_birth_date = $date_user_birth_date->format('Y-m-d');
     $user_phone_number = $_POST["FULL_PHONE_NUMBER"];
     $user_email = $_POST["EMAIL_ADDRESS_"];
     $user_cep = $_POST["CEP_CASA"];
@@ -865,9 +868,9 @@ function queensberry_handle_queensclub()
                 [
                     $user_first_name,
                     $user_last_name,
-                    $user_cpf,
+                    $formatted_cpf,
                     $user_civil_state,
-                    $user_birthyear,
+                    $formatted_birth_date,
                     $user_phone_number,
                     $user_email,
                     $email_opt_in,
@@ -972,12 +975,12 @@ function queensberry_handle_queensclub()
                 $supplemental_register_result = queensberry_responsys_supplemental_table($supplemental_register_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/folders/!MasterData/suppData/SUP_ORIGENS_CADASTROS_QUEENSBERRY/members');
 
                 if ($supplemental_register_result["status"] == 200) {
-                    /*wp_send_json_success([
+                    wp_send_json_success([
                         "message" => "Cadastro concluído com sucesso!",
                         "data_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
                         "supp_result" => $supplemental_register_result 
-                    ]);*/
+                    ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
                 }
