@@ -90,81 +90,84 @@
           <img src="<?= get_template_directory_uri(); ?>/src/img/sectigo-watermark.jpg" alt="Image with text: Secured by Sectigo">
         </div>
         <script>
-          var formData = new FormData(jQuery("#f_queensberry_receba_novidades")[0]); // Use FormData para incluir anexos
-
           $(document).ready(() => {
 
-            $('#RECEBER_COMUNICACOES').on('change', function() {
-              if ($(this).is(':checked')) {
-                $('#optIn').val('I'); // I de "Inscrito"
-              } else {
-                $('#optIn').val('O'); // O de "Opt-out"
-              }
-            });
+            function updateOptInField() {
+              const isChecked = $('#RECEBER_COMUNICACOES').is(':checked');
+              const value = isChecked ? 'I' : 'O';
+              $('#optIn').val(value);
+              console.log('EMAIL_PERMISSION_STATUS_ atualizado para:', value);
+            }
 
-            $(function getURL() {
-              var url_cadastro = window.location.href;
-              document.getElementById('URL_CADASTRO').value = url_cadastro;
-            });
+            updateOptInField();
+            $('#RECEBER_COMUNICACOES').on('change', updateOptInField);
 
-            $("#f_queensberry_receba_novidades").on("submit", (e) => {
+
+            (function getURL() {
+              const url_cadastro = window.location.href;
+              $('#URL_CADASTRO').val(url_cadastro);
+              console.log('URL_CADASTRO preenchido com:', url_cadastro);
+            })();
+
+
+            $("#f_queensberry_receba_novidades").on("submit", function(e) {
               e.preventDefault();
-              let formData = $("#f_queensberry_receba_novidades").serialize();
 
+              updateOptInField();
 
               grecaptcha.ready(function() {
                 grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {
                   action: 'submit'
                 }).then(function(token) {
-                  console.log(token);
-                  jQuery.post(
-                    "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha", {
-                      "g-recaptcha-response": token
-                    }
-                  ).done((res) => {
-                    $("#actionField3").val("queensberry_receba_novidades");
-                    formData = $("#f_queensberry_receba_novidades").serialize();
-                    if (res.data.message === "OK") {
-                      $("#actionField3").val("queensberry_receba_novidades");
-                      let perfil = $("#slctPerfil").val();
+                  console.log('reCAPTCHA token:', token);
+
+
+                  $.post("<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha", {
+                    "g-recaptcha-response": token
+                  }).done((res) => {
+                    if (res.data && res.data.message === "OK") {
+                      console.log('reCAPTCHA verificado com sucesso.');
+
+                      const perfil = $("#slctPerfil").val();
+                      const formData = $("#f_queensberry_receba_novidades").serialize();
+
                       if (perfil === "PASSAGEIRO") {
-                        // Enviar para Responsys
-                        jQuery.post(
+                        // Envio para Responsys
+                        $.post(
                           "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_receba_novidades",
-                          formData,
-                          function(data) {
-                            console.log("Responsys ok", data);
-                            alert('Formulário enviado com sucesso!')
-                          }
-                        ).fail((res) => {
-                          console.log("Responsys fail", res);
-                          alert('O formulário não foi submetido devido a um erro.')
+                          formData
+                        ).done((data) => {
+                          console.log("Responsys sucesso:", data);
+                          alert('Formulário enviado com sucesso!');
+                        }).fail((err) => {
+                          console.error("Responsys erro:", err);
+                          alert('O formulário não foi submetido devido a um erro.');
                         });
+
                       } else {
-                        // Enviar para Eloqua
-                        jQuery.ajax({
+                        // Envio para Eloqua
+                        $.ajax({
                           type: "POST",
                           url: "https://s2864845.t.eloqua.com/e/f2",
                           data: formData,
                           success: () => {
-                            console.log("Eloqua ok");
-                            alert('Formulário enviado com sucesso!')
+                            console.log("Eloqua sucesso");
+                            alert('Formulário enviado com sucesso!');
                           },
-                          error: (res) => {
-                            console.log("Eloqua fail", res);
-                            alert('O formulário não foi submetido devido a um erro.')
-                          },
+                          error: (err) => {
+                            console.error("Eloqua erro:", err);
+                            alert('O formulário não foi submetido devido a um erro.');
+                          }
                         });
                       }
+
                     } else {
-                      console.log("Recaptcha error")
+                      console.error("Erro ao verificar o reCAPTCHA:", res);
+                      alert('Erro na verificação de segurança. Tente novamente.');
                     }
-                  })
+                  });
                 });
               });
-
-
-
             });
           });
         </script>
