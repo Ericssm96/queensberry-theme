@@ -480,7 +480,9 @@ if (is_single()) {
       </section>
     </div>
     <section class="form-overlay" x-transition.duration.500ms x-show="isModalOpen && modalType === 'form'">
-      <form id="f_queensberry_programa" x-show="formType === 'saber-mais'" name="f_queensberry_programa" method="POST">
+      <form id="f_queensberry_programa" x-show="formType === 'saber-mais'" name="f_queensberry_programa" method="POST" x-data="{
+          isEmailPermissionChecked: false,
+        }">
         <i class="fa-solid fa-xmark close-icon" @click="isModalOpen = false; modalType = ''; formType = ''"></i>
         <h2>Solicitar informações do programa</h2>
 
@@ -497,7 +499,7 @@ if (is_single()) {
             value="X0Gzc2X%3DAQjkPkSRWQG3dzeR9L6zbBNsuhuiwzf1GoooFvtzam293VwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQGwMvLlYX8dzgFvyzdNnBml9mE4zaI3Pu6h">
         <input type="hidden" name="_ei_" value="EMsDHZOiLRwcDIic0BS0IpQ">
         <input type="hidden" name="_di_" value="k61r2sn2j55sonuocuf01h8r250hjaj2g2gumhl7p9pms8941fcg">
-        <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+        <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
         <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
         <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Programa - Queensberry">
         <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
@@ -544,7 +546,7 @@ if (is_single()) {
           </div>
           <div class="checkbox-area">
             <span class="custom-checkbox">
-              <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
+              <input type="checkbox" @change="isEmailPermissionChecked = !isEmailPermissionChecked" value="Sim" name="RECEBER_COMUNICACOES" id="RECEBER_COMUNICACOES">
               <label for="RECEBER_COMUNICACOES" class="checkmark"></label>
             </span>
             <label for="RECEBER_COMUNICACOES" class="text-label">Aceito receber comunicações e informações da Queensberry</label>
@@ -718,7 +720,9 @@ if (is_single()) {
       </script>
 
 
-      <form id="f_queensberry_recomendar_programa" name="f_queensberry_recomendar_programa" method="POST" x-show="isModalOpen && modalType === 'form' && formType === 'recomendar'">
+      <form id="f_queensberry_recomendar_programa" name="f_queensberry_recomendar_programa" method="POST" x-show="isModalOpen && modalType === 'form' && formType === 'recomendar'" x-data="{
+          isEmailPermissionChecked: false,
+        }">
           <input type="hidden" id="actionField2" name="action" value="queensberry_verify_recaptcha">
           <i class="fa-solid fa-xmark close-icon" @click="isModalOpen = false; modalType = ''; formType = ''"></i>
           <h2>Recomendar Programa</h2>
@@ -728,7 +732,7 @@ if (is_single()) {
               value="X0Gzc2X%3DAQjkPkSRWQGvd46H8AazcAfgLBPKA19XWHehXFudc5VwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQGzeCj2E6OlFDyIUPtO6kwzd9AoaTLlUYs">
           <input type="hidden" name="_ei_" value="ET7obVahR1vnJMcvllB-uxg">
           <input type="hidden" name="_di_" value="il13bar20jj92v93jquln3o9t91ml5b13dqjrnk5jso1031f734g">
-          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
+          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Recomendar Programa - Queensberry">
           <input type="hidden" id="URL_CADASTRO" x-bind:value="window.location.href" name="URL_CADASTRO">
 
@@ -752,7 +756,7 @@ if (is_single()) {
             </div>
             <div class="checkbox-area">
               <span class="custom-checkbox">
-                <input type="checkbox" value="Sim" name="RECEBER_COMUNICACOES" id="checkReceberComunicacoes">
+                <input type="checkbox" @change="isEmailPermissionChecked = !isEmailPermissionChecked" value="Sim" name="RECEBER_COMUNICACOES" id="checkReceberComunicacoes">
                 <label for="checkReceberComunicacoes" class="checkmark"></label>
               </span>
               <label for="checkReceberComunicacoes" class="text-label">Aceito receber comunicações e informações da Queensberry</label>

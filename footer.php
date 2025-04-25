@@ -73,7 +73,7 @@
               <p>Cadastre seu e-mail</p>
             </header>
             <input type="text" name="FIRST_NAME" placeholder="Nome" />
-            <input type="email" name="EMAIL_ADDRESS_" placeholder="E-mail" />
+            <input type="text" name="EMAIL_ADDRESS_" placeholder="E-mail" />
             <select name="PERFIL" id="slctPerfil">
               <option value="PASSAGEIRO" selected>Passageiro</option>
               <option value="AGENTE">Agente</option>
@@ -199,28 +199,8 @@
           window.onload = WaitUntilCustomerGUIDIsRetrieved;
           // _elqQ = _elqQ || [];
           // _elqQ.push(['elqGetCustomerGUID']);
-            }
-
-            window.onload = WaitUntilCustomerGUIDIsRetrieved;
-            // _elqQ = _elqQ || [];
-            // _elqQ.push(['elqGetCustomerGUID']);
         </script>
 
-        <script>
-            /*Script para verificar se o usuario
-            marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
-            $(function ($) { // on DOM ready (when the DOM is finished loading)
-                $('#agree').click(function () { // when the checkbox is clicked
-                    var checked = $('#agree').is(':checked'); // check the state
-                    $('#optIn').val(checked ? "I" : "O"); // set the value
-                    $('#optInSMS').val(checked ? "I" : "O"); // set the value
-
-                });
-                $('#optIn').triggerHandler("click"); // initialize the value
-                $('#optInSMS').triggerHandler("click"); // initialize the value
-            });
-
-        </script>
         <script>
             $(function getURL() {
                 var url_cadastro = window.location.href;
