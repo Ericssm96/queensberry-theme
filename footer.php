@@ -130,10 +130,10 @@
                   }).done((res) => {
                     if (res.data && res.data.message === "OK") {
                       console.log(res.data);
-                      
+
                       $("#actionField3").val("queensberry_receba_novidades")
-                      
-                      
+
+
                       const formData = $("#f_queensberry_receba_novidades").serialize();
 
                       if (perfil === "PASSAGEIRO") {
