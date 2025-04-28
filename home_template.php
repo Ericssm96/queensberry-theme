@@ -17,8 +17,8 @@ $json_videos_titles = json_encode($videos_titles, JSON_UNESCAPED_SLASHES | JSON_
 $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 
 // Carrega informações de câmbio
-$dolar_currency_info = @require_once _DIR_ . "/dolar-currency-conversion-info.php";
-$euro_currency_info = @require_once _DIR_ . "/euro-currency-conversion-info.php";
+$dolar_currency_info = @require_once __DIR__ . "/dolar-currency-conversion-info.php";
+$euro_currency_info = @require_once __DIR__. "/euro-currency-conversion-info.php";
 
 // Inicializa valores padrões
 $dolar_price = "N/D";
@@ -52,7 +52,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
       </video>
       <article class="gbm-cta">
         <strong>GBM 2025</strong>
-        <a href="<?= home_url(); ?>/category/grupos-brasileiros-no-mundo" rel="noreferrer" target="_blank">Saiba mais</a>
+        <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo" rel="noreferrer" target="_blank">Saiba mais</a>
       </article>
     </section>
     <article class="mb-currency-field">
@@ -101,7 +101,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
               }
 
               $cat_description = $category["SubTitulo"];
-              $sanitized_cat_title = sanitize_title($category["CategoriaDescricao"]);
+              $sanitized_cat_title = sanitize_title($category["Titulo"]);
               $cat_img_file_name = $category["ImagemHome"];
               $cat_img_folder = $category["PastaImagens"];
               $cat_img_url = "https://www.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
