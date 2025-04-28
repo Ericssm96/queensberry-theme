@@ -248,7 +248,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       x-bind:class="isMobileNavOpen || isMobileSearchOpen || isWindowScrolledPastThreshold ? 'nav-c white-mobile-nav' : 'nav-c'">
       <h1>
         <a href="<?= home_url() ?>"><img
-            x-bind:src="isMobileNavOpen || isMobileSearchOpen || isWindowScrolledPastThreshold ? '<?= get_template_directory_uri(); ?>src/img/logo-escuro.png' : '<?= get_template_directory_uri(); ?>/src/img/logo.png'"
+            x-bind:src="isMobileNavOpen || isMobileSearchOpen || isWindowScrolledPastThreshold ? '<?= get_template_directory_uri(); ?>/src/img/logo-escuro.png' : '<?= get_template_directory_uri(); ?>/src/img/logo.png'"
             alt="Home - Queensberry" title="Home - Queensberry" /></a>
       </h1>
 
