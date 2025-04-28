@@ -1,7 +1,8 @@
 <?php
-require_once get_template_directory() . '/../../../vendor/autoload.php'; 
-use PHPMailer\PHPMailer\PHPMailer; 
-use PHPMailer\PHPMailer\Exception; 
+require_once get_template_directory() . '/../../../vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 //hooks
 // hook que vem do form Fale Conosco
@@ -60,14 +61,15 @@ add_action('admin_post_nopriv_queensberry_verify_recaptcha_c', 'queensberry_veri
 // RESPONSYS PAYLOAD'S
 
 // Recaptcha
-function queensberry_verify_recaptcha() {
+function queensberry_verify_recaptcha()
+{
     $secret_key = "6LfF5yArAAAAALzZS-aUHevfaqgcqAgFZ3_eoTz3";
     $client_grecaptcha_res = $_POST["g-recaptcha-response"];
 
     $verify_response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$client_grecaptcha_res}");
     $response_data = json_decode($verify_response, true);
 
-    if($response_data["success"] == true) {
+    if ($response_data["success"] == true) {
         wp_send_json_success([
             'message' => 'OK',
             'response_data' => $verify_response
@@ -81,14 +83,15 @@ function queensberry_verify_recaptcha() {
     }
 }
 
-function queensberry_verify_recaptcha_b() {
+function queensberry_verify_recaptcha_b()
+{
     $secret_key = "6LcIDAIrAAAAACF_myoi04KL6oLX2_ecROd89xFb";
     $client_grecaptcha_res = $_POST["g-recaptcha-response"];
 
     $verify_response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$client_grecaptcha_res}");
     $response_data = json_decode($verify_response, true);
 
-    if($response_data["success"] == true) {
+    if ($response_data["success"] == true) {
         wp_send_json_success([
             'message' => 'OK',
             'response_data' => $verify_response
@@ -102,14 +105,15 @@ function queensberry_verify_recaptcha_b() {
     }
 }
 
-function queensberry_verify_recaptcha_c() {
+function queensberry_verify_recaptcha_c()
+{
     $secret_key = "6LexGAIrAAAAAP57VspAlgMRv7KeH-2LX2R6kOPy";
     $client_grecaptcha_res = $_POST["g-recaptcha-response"];
 
     $verify_response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$client_grecaptcha_res}");
     $response_data = json_decode($verify_response, true);
 
-    if($response_data["success"] == true) {
+    if ($response_data["success"] == true) {
         wp_send_json_success([
             'message' => 'OK',
             'response_data' => $verify_response
@@ -250,7 +254,7 @@ function queensberry_handle_fale_conosco_sign_up()
                         "phone" => $formatted_phone,
                         "sign_up_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
-                        "supp_result" => $supplemental_register_result 
+                        "supp_result" => $supplemental_register_result
                     ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
@@ -376,7 +380,7 @@ function queensberry_handle_popup_cadastro()
 
     while ($count < 3) {
         $sign_up_result = queensberry_sign_up_responsys($sign_up_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/lists/Profile_List_Queensberry/members');
-        
+
 
         if ($sign_up_result["status"] == 200) {
             $supplemental_register_result = queensberry_responsys_supplemental_table($supplemental_register_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/folders/!MasterData/suppData/SUP_ORIGENS_CADASTROS_QUEENSBERRY/members');
@@ -389,7 +393,7 @@ function queensberry_handle_popup_cadastro()
                         "message" => "OK",
                         "data_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
-                        "supp_result" => $supplemental_register_result 
+                        "supp_result" => $supplemental_register_result
                     ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
@@ -417,7 +421,7 @@ function queensberry_handle_receba_novidades()
     $user_name_array = explode(' ', $user_name);
     $user_first_name = array_shift($user_name_array);
 
-    if(count($user_name_array) >= 1) {
+    if (count($user_name_array) >= 1) {
         $user_last_name = implode(' ', $user_name_array);
     }
 
@@ -466,7 +470,7 @@ function queensberry_handle_receba_novidades()
         ]
     ];
 
-    if($user_last_name !== "") {
+    if ($user_last_name !== "") {
         $sign_up_payload["recordData"]["fieldNames"] = [
             "FIRST_NAME",
             "LAST_NAME",
@@ -523,7 +527,7 @@ function queensberry_handle_receba_novidades()
                     "message" => "Cadastro concluído com sucesso!",
                     "data_result" => $sign_up_result,
                     "profile_ext" => $profile_ext_result,
-                    "supp_result" => $supplemental_register_result 
+                    "supp_result" => $supplemental_register_result
                 ]);
                 //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                 return;
@@ -667,7 +671,7 @@ function queensberry_handle_programa()
                         "message" => "Cadastro concluído com sucesso!",
                         "data_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
-                        "supp_result" => $supplemental_register_result 
+                        "supp_result" => $supplemental_register_result
                     ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
@@ -800,7 +804,7 @@ function queensberry_handle_recomendar_programa()
                         "message" => "Cadastro concluído com sucesso!",
                         "data_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
-                        "supp_result" => $supplemental_register_result 
+                        "supp_result" => $supplemental_register_result
                     ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
@@ -1001,7 +1005,7 @@ function queensberry_handle_queensclub()
                         "message" => "Cadastro concluído com sucesso!",
                         "data_result" => $sign_up_result,
                         "profile_ext" => $profile_ext_result,
-                        "supp_result" => $supplemental_register_result 
+                        "supp_result" => $supplemental_register_result
                     ]);
                     //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
                     return;
@@ -1105,8 +1109,8 @@ function cadastro_agencia()
 
         foreach ($agents as $agente) {
 
-            $agentes_html .= 
-            <<<HTML
+            $agentes_html .=
+                <<<HTML
             <div style='width: 100%; max-width: 600px; margin: 0 auto;'>
                 <h1 style='font-size: 1.1rem'>Agente {$agente['numero']}</h1>
                 <table style='width: 100%;'>
@@ -1132,7 +1136,7 @@ function cadastro_agencia()
                     </tr>
                 </table>
             </div>
-            HTML;        
+            HTML;
         }
 
         $mail->Body =
@@ -1248,7 +1252,7 @@ function cadastro_agencia()
         HTML;
 
         $mail->Body .= $agentes_html;
-        $mail->Body .= 
+        $mail->Body .=
             <<<HTML
                 <div style="width: 100%; max-width: 600px; margin: 0 auto;">
                     <h1 style="font-size: 1.1rem">Dados Financeiros</h1>
