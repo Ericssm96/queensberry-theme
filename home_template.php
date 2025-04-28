@@ -4,6 +4,7 @@
 */
 get_header();
 
+// Carrega categorias e vídeos
 $categories_list = require_once "cached-categories.php";
 $videos_arr = require_once "cached-videos-urls.php";
 $videos_links = [];
@@ -15,19 +16,29 @@ foreach($videos_arr as $video_info) {
 $json_videos_titles = json_encode($videos_titles, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 
+// Carrega informações de câmbio
+$dolar_currency_info = @require_once _DIR_ . "/dolar-currency-conversion-info.php";
+$euro_currency_info = @require_once _DIR_ . "/euro-currency-conversion-info.php";
 
-$dolar_currency_info = require_once "dolar-currency-conversion-info.php";
-$euro_currency_info = require_once "euro-currency-conversion-info.php";
+// Inicializa valores padrões
+$dolar_price = "N/D";
+$euro_price = "N/D";
+$formatted_conversion_date = "Data indisponível";
+$last_dolar_conversion_update_time = "--:--";
 
-$last_dolar_conversion_update_date = explode("T", $dolar_currency_info["DataAtualizacao"])[0];
-$last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao"])[0];
-$last_conversion_date_obj = new DateTime($last_conversion_update_date);
-$formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
+// Se os dados forem carregados corretamente
+if (is_array($dolar_currency_info) && isset($dolar_currency_info["DataAtualizacao"], $dolar_currency_info["ValorCambio"])) {
+  $last_dolar_conversion_update_date = explode("T", $dolar_currency_info["DataAtualizacao"])[0];
+  $last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
+  $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
+}
 
-$last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
-$dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
-// $euro_price = str_replace(".", ",", $euro_currency_info["ValorCambio"]);
-$euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
+if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"], $euro_currency_info["ValorCambio"])) {
+  $last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao"])[0];
+  $last_conversion_date_obj = new DateTime($last_conversion_update_date);
+  $formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
+  $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
+}
 ?>
     <div class="video-overlay"></div>
     <main x-init="setTimeout(()=>{
