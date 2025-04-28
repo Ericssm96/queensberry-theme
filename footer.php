@@ -20,7 +20,7 @@
           <ul class="nav-links">
             <li><a href="<?= home_url(); ?>/quem-somos">Quem Somos</a></li>
             <li><a href="<?= home_url(); ?>/fale-conosco">Fale Conosco</a></li>
-            <li><a href="<?= home_url(); ?>/trabalhe-conosco">Trabalhe Conosco</a></li>
+            <li><a href="https://befly.gupy.io/" target="_blank" rel="noopener noreferrer">Trabalhe Conosco</a></li>
             <li><a href="<?= home_url(); ?>/politica-de-privacidade">Política de Privacidade</a></li>
             <li><a href="<?= home_url(); ?>/termos-e-condicoes">Termos e Condições de Uso</a></li>
             <li><a href="https://befly.com.br/fale-com-o-presidente/" target="_blank" rel="noopener">Fale com o presidente</a></li>
