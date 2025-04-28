@@ -300,7 +300,7 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
         <li><a href="https://agentes.queensberry.com.br/seja-um-parceiro/" target="_blank" rel="noopener">Seja um Parceiro</a></li>
       </ul>
       <div class="bottom-wrapper">
-        <a href="#" class="green-highlight agent-field">
+        <a href="https://agentes.queensberry.com.br/" target="_blank" class="green-highlight agent-field">
           <svg width="13" class="user-icon" height="14" viewBox="0 0 13 14" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
