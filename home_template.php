@@ -45,8 +45,8 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </article>
     </section>
     <article class="mb-currency-field">
-      <strong class="quotation">US$ 1 = R$<?= $dolar_price; ?> | € 1 = R$<?= $euro_price ?></strong>
-      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date; ?> às <?= $last_dolar_conversion_update_time; ?></p>
+      <strong class="quotation">US$ 1 = R$<?= $dolar_price ?> | € 1 = R$<?= $euro_price ?></strong>
+      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date ?> às <?= $last_dolar_conversion_update_time ?></p>
     </article>
     <section class="products" x-init="
     const productSwiper = new Swiper('.products .swiper', {
