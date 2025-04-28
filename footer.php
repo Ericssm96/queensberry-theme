@@ -117,7 +117,6 @@
 
               const perfil = $("#slctPerfil").val();
               console.log(perfil);
-              
               grecaptcha.ready(function() {
                 grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {
                   action: 'submit'
