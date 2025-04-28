@@ -10,6 +10,7 @@ $sm: 400px;
 $xsm: 300px;
 $lime-green: #99D02C;
 $navy: #0C0150;
+$secondary-navy: #04004F;
 $dark-navy: #161326;
 $secondary-dark-navy: #091360;
 $olive-green: #989898;
@@ -93,6 +94,18 @@ main {
 
     @media screen and (min-width: $xl) {
       width: 1000px;
+    }
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    h2 {
+      font-size: 2.4rem;
+      color: $secondary-navy;
+      margin-bottom: 50px;
     }
   }
 }

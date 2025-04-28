@@ -20,7 +20,7 @@
           <ul class="nav-links">
             <li><a href="<?= home_url(); ?>/quem-somos">Quem Somos</a></li>
             <li><a href="<?= home_url(); ?>/fale-conosco">Fale Conosco</a></li>
-            <li><a href="<?= home_url(); ?>/trabalhe-conosco">Trabalhe Conosco</a></li>
+            <li><a href="https://befly.gupy.io/" target="_blank" rel="noopener noreferrer">Trabalhe Conosco</a></li>
             <li><a href="<?= home_url(); ?>/politica-de-privacidade">Política de Privacidade</a></li>
             <li><a href="<?= home_url(); ?>/termos-e-condicoes">Termos e Condições de Uso</a></li>
             <li><a href="https://befly.com.br/fale-com-o-presidente/" target="_blank" rel="noopener">Fale com o presidente</a></li>
@@ -50,7 +50,7 @@
         <form id="f_queensberry_receba_novidades" action="/" class="newsletter-form" x-data="{
           isEmailPermissionChecked: false,
         }">
-          <input type="hidden" id="actionField3" name="action" value="queensberry_receba_novidades_recaptcha">
+          <input type="hidden" id="actionField3" name="action" value="queensberry_verify_recaptcha">
 
           <!-- Eloqua -->
           <input type="hidden" name="elqFormName" value="queensberry-newsletter">
@@ -66,7 +66,7 @@
           <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
           <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Newsletter Receba Novidades - Queensberry">
-          <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+          <input type="hidden" value="<?= home_url(); ?>" id="URL_CADASTRO" name="URL_CADASTRO">
           <div class="fillable-fields">
             <header class="title-area">
               <h2>Receba Novidades</h2>
@@ -115,7 +115,8 @@
             $("#f_queensberry_receba_novidades").on("submit", function(e) {
               e.preventDefault();
 
-              updateOptInField();
+              const perfil = $("#slctPerfil").val();
+              console.log(perfil);
 
               grecaptcha.ready(function() {
                 grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {
@@ -128,9 +129,11 @@
                     "g-recaptcha-response": token
                   }).done((res) => {
                     if (res.data && res.data.message === "OK") {
-                      console.log('reCAPTCHA verificado com sucesso.');
+                      console.log(res.data);
 
-                      const perfil = $("#slctPerfil").val();
+                      $("#actionField3").val("queensberry_receba_novidades")
+
+
                       const formData = $("#f_queensberry_receba_novidades").serialize();
 
                       if (perfil === "PASSAGEIRO") {
@@ -197,6 +200,7 @@
           // _elqQ = _elqQ || [];
           // _elqQ.push(['elqGetCustomerGUID']);
         </script>
+
         <script>
           $(function getURL() {
             var url_cadastro = window.location.href;

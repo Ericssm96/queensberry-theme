@@ -954,6 +954,12 @@
   z-index: 990;
   color: #1E196B;
   border-radius: 8px;
+  margin: 0px 15px;
+}
+@media screen and (min-width: 768px) {
+  .popup-form-overlay .sign-up-form {
+    margin: 0;
+  }
 }
 .popup-form-overlay .sign-up-form .close-icon {
   position: absolute;

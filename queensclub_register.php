@@ -449,20 +449,6 @@ get_header(); ?>
     </script>
 
     <script>
-      /*Script para verificar se o usuario
-      marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
-      $(function($) { // on DOM ready (when the DOM is finished loading)
-        $('#agree').click(function() { // when the checkbox is clicked
-          var checked = $('#agree').is(':checked'); // check the state
-          $('#optIn').val(checked ? "I" : "O"); // set the value
-          $('#optInSMS').val(checked ? "I" : "O"); // set the value
-
-        });
-        $('#optIn').triggerHandler("click"); // initialize the value
-        $('#optInSMS').triggerHandler("click"); // initialize the value
-      });
-    </script>
-    <script>
       $(function getURL() {
         var url_cadastro = window.location.href;
         document.getElementById('URL_CADASTRO').value = url_cadastro;

@@ -45,8 +45,8 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
       </article>
     </section>
     <article class="mb-currency-field">
-      <strong class="quotation">US$ 1 = R$<?= $dolar_price; ?> | € 1 = R$<?= $euro_price ?></strong>
-      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date; ?> às <?= $last_dolar_conversion_update_time; ?></p>
+      <strong class="quotation">US$ 1 = R$<?= $dolar_price ?> | € 1 = R$<?= $euro_price ?></strong>
+      <p id="quotation-date" class="quotation-date">Data: <?= $formatted_conversion_date ?> às <?= $last_dolar_conversion_update_time ?></p>
     </article>
     <section class="products" x-init="
     const productSwiper = new Swiper('.products .swiper', {
@@ -616,7 +616,7 @@ $videos_titles = $filtered_titles;
               value="X0Gzc2X%3DAQjkPkSRWQGzazcsJ6AbKrIB0a2vaLabgUpCnzceuwybVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRWQG4TwrzbhWDWUINdjCsOv9y4pzbag2rEa6">
           <input type="hidden" name="_ei_" value="EOFhGZUqGt_VmZAPvWQd4rs">
           <input type="hidden" name="_di_" value="4n7tvcf4fs51837d46au3eocul9la5beeatniu923cdoafbbdf40">
-          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="" id="optIn">
+          <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="O" id="optIn">
           <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
           <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário PopUp Cadastro - Queensberry">
           <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
@@ -631,8 +631,8 @@ $videos_titles = $filtered_titles;
             <input type="text" placeholder="email@exemplo.com" required name="EMAIL_ADDRESS_">
           </div>
           <div class="input-area">
-            <label for="slctPerfil">Perfil*</label>
-            <select id="slctPerfil" required name="PERFIL">
+            <label for="slctPerfil1">Perfil*</label>
+            <select id="slctPerfil1" required name="PERFIL">
               <option value="">- Selecione o Assunto - </option>
               <option value="passageiro">Passageiro</option>
               <option value="agente">Agente de Viagens</option>
@@ -683,8 +683,6 @@ $videos_titles = $filtered_titles;
         </div>
       </form>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
       <script>
           var formData = new FormData(jQuery("#f_queensberry_pop_up_cadastro")[0]); // Use FormData para incluir anexos
 
@@ -756,17 +754,20 @@ $videos_titles = $filtered_titles;
       </script>
 
       <script>
-        jQuery(document).ready(function($) {
-          $('#RECEBER_COMUNICACOES').on('change', function() {
-            if ($(this).is(':checked')) {
-              $('#optIn').val('I'); // I de "Inscrito"
-            } else {
-              $('#optIn').val('O'); // O de "Opt-out"
-            }
-          });
-        });
-</script>
+          /*Script para verificar se o usuario
+          marcou o aceite de recebimento de e-mails ou nao (opt-in/opt-out)*/
+          $(function ($) { // on DOM ready (when the DOM is finished loading)
+              $('#agree').click(function () { // when the checkbox is clicked
+                  var checked = $('#agree').is(':checked'); // check the state
+                  $('#optIn').val(checked ? "I" : "O"); // set the value
+                  $('#optInSMS').val(checked ? "I" : "O"); // set the value
 
+              });
+              $('#optIn').triggerHandler("click"); // initialize the value
+              $('#optInSMS').triggerHandler("click"); // initialize the value
+          });
+
+      </script>
       <script>
           $(function getURL() {
               var url_cadastro = window.location.href;

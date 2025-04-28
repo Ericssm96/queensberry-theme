@@ -78,4 +78,14 @@ main * {
   .form-area .wrapper {
     width: 1000px;
   }
+}
+.form-area form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form-area form h2 {
+  font-size: 2.4rem;
+  color: #04004F;
+  margin-bottom: 50px;
 }/*# sourceMappingURL=request-log.css.map */

@@ -1015,6 +1015,11 @@ $olive-green: #989898;
     z-index: 990;
     color: #1E196B;
     border-radius: 8px;
+    margin: 0px 15px;
+
+    @media screen and (min-width: $md) {
+      margin: 0;
+    }
 
     .close-icon {
       position: absolute;
