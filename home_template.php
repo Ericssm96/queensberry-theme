@@ -37,7 +37,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
   $last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao"])[0];
   $last_conversion_date_obj = new DateTime($last_conversion_update_date);
   $formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
-  $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
+  $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
 }
 ?>
     <div class="video-overlay"></div>
