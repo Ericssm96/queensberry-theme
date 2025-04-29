@@ -1629,7 +1629,7 @@ function queensberry_agent_request_flyer()
                         </tr>
                         <tr>
                             <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">E-mail da Agência:</td>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$email_agencia</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$email</td>
                         </tr>
                         <tr>
                             <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Página Web:</td>

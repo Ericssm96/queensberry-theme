@@ -45,7 +45,7 @@ get_header();
               <input type="email" name="EMAIL_AGENCIA" placeholder="E-mail">
           </div>
           <div class="input-area first-col">
-              <input type="text" class="PAGINA_WEB" placeholder="Página Web">
+              <input type="text" name="PAGINA_WEB" placeholder="Página Web">
           </div>
           </div>
           <hr color="#99D02C" class="divider">
@@ -111,7 +111,7 @@ get_header();
                     // Envio para Eloqua
                     $.ajax({
                       type: "POST",
-                      url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_solicitar_folheto_agente",,
+                      url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_solicitar_folheto_agente",
                       data: $("#solicitar_folheto_agente").serialize(),
                       success: (res) => {
                         console.log(res);
