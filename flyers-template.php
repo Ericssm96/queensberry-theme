@@ -42,12 +42,6 @@ $flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
               <div class="action-icons">
                 <a href="$flyer_pdf_link" class="action-icon"><i class="fa-regular fa-file-pdf"></i></a>
                 <a href="$flyer_file_link" class="action-icon"><i class="fa-solid fa-download"></i></a>
-                <a href="#" class="action-icon"><i class="fa-solid fa-share-nodes"></i></a>
-              </div>
-              <div class="qtty-setter">
-                <button type="button">-</button>
-                <input type="number" value="0" name="FLYER_QTTY" id="$sanitized_description">
-                <button type="button">+</button>
               </div>
             </div>
             CARD;
@@ -83,12 +77,6 @@ $flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
               <div class="action-icons">
                 <a href="$flyer_pdf_link" class="action-icon"><i class="fa-regular fa-file-pdf"></i></a>
                 <a href="$flyer_file_link" class="action-icon"><i class="fa-solid fa-download"></i></a>
-                <a href="#" class="action-icon"><i class="fa-solid fa-share-nodes"></i></a>
-              </div>
-              <div class="qtty-setter">
-                <button type="button">-</button>
-                <input type="number" value="0" name="FLYER_QTTY" id="$sanitized_description">
-                <button type="button">+</button>
               </div>
             </div>
             CARD;
@@ -110,16 +98,16 @@ $flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
         <div class="radio-field">
           <span class="custom-radio">
             <input type="radio" value="AGENTE_VIAGENS" name="PERFIL_USUARIO" id="iptAgenteViagens">
-            <label for="iptAgenteViagens" class="radio-circle"></label>
+            <label for="iptAgenteViagens" @click="window.location.href = '<?= home_url(); ?>/solicitar-folheto-agente-de-viagens'" class="radio-circle"></label>
           </span>
-          <label class="text-label" for="iptAgenteViagens">Agente de Viagens</label>
+          <label class="text-label" @click="window.location.href = '<?= home_url(); ?>/solicitar-folheto-agente-de-viagens'" for="iptAgenteViagens">Agente de Viagens</label>
         </div>
         <div class="radio-field">
           <span class="custom-radio">
             <input type="radio" value="PASSAGEIRO" name="PERFIL_USUARIO" id="iptPassageiro">
-            <label for="iptPassageiro" class="radio-circle"></label>
+            <label for="iptPassageiro" @click="window.location.href = '<?= home_url(); ?>/solicitar-folheto-passageiro'" class="radio-circle"></label>
           </span>
-          <label class="text-label" for="iptPassageiro">Passageiro</label>
+          <label class="text-label" @click="window.location.href = '<?= home_url(); ?>/solicitar-folheto-passageiro'" for="iptPassageiro">Passageiro</label>
         </div>
       </div>
     </div>
@@ -127,4 +115,13 @@ $flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
 </main>
 
 
-<?php get_footer(); ?>
+<?php
+/* 
+<div class="qtty-setter">
+  <button type="button">-</button>
+  <input type="number" value="0" name="FLYER_QTTY" id="$sanitized_description">
+  <button type="button">+</button>
+</div> 
+Código comentado pois a parte de compartilhar o folheto foi removida, mas como é possível que volte, as partes necessárias estão acima.
+*/
+get_footer(); ?>
