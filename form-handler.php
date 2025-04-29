@@ -1544,3 +1544,323 @@ function get_API_credentials()
 
     return $response;
 }
+
+function queensberry_agent_request_flyer()
+{
+
+    $cnpj = filter_input(INPUT_POST, "CNPJ", FILTER_SANITIZE_SPECIAL_CHARS);
+    $razao_social = filter_input(INPUT_POST, "RAZAO_SOCIAL", FILTER_SANITIZE_SPECIAL_CHARS);
+    $nome_fantasia = filter_input(INPUT_POST, "NOME_FANTASIA", FILTER_SANITIZE_SPECIAL_CHARS);
+    $insc_est = filter_input(INPUT_POST, "INSC_EST", FILTER_SANITIZE_SPECIAL_CHARS);
+    $cadastur = filter_input(INPUT_POST, "CADASTUR", FILTER_SANITIZE_SPECIAL_CHARS);
+    $nome_agente = filter_input(INPUT_POST, "AGENT_NAME", FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, "EMAIL_AGENCIA", FILTER_SANITIZE_EMAIL);
+    $telefone = filter_input(INPUT_POST, "TELEFONE", FILTER_SANITIZE_SPECIAL_CHARS);
+    $pagina_web = filter_input(INPUT_POST, "PAGINA_WEB", FILTER_SANITIZE_SPECIAL_CHARS);
+    $cep = filter_input(INPUT_POST, "CEP", FILTER_SANITIZE_SPECIAL_CHARS);
+    $bairro = filter_input(INPUT_POST, "BAIRRO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $rua = filter_input(INPUT_POST, "RUA", FILTER_SANITIZE_SPECIAL_CHARS);
+    $numero_endereco = filter_input(INPUT_POST, "NUMERO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $complemento = filter_input(INPUT_POST, "COMPLEMENTO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $cidade = filter_input(INPUT_POST, "CIDADE", FILTER_SANITIZE_SPECIAL_CHARS);
+    $estado = filter_input(INPUT_POST, "ESTADO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $mensagem = filter_input(INPUT_POST, "MENSAGEM", FILTER_SANITIZE_SPECIAL_CHARS);
+
+
+
+    $mail = new PHPMailer(true);
+    try {
+        $mail->SMTPDebug = SMTP_DEBUG;
+        $mail->isSMTP();
+        $mail->Host = SMTP_HOST;
+        $mail->SMTPAuth = SMTP_AUTH;
+        $mail->Username = SMTP_USER;
+        $mail->Password = SMTP_PASS;
+        $mail->SMTPSecure = SMTP_SECURE;
+        $mail->Port = SMTP_PORT;
+
+        $mail->setFrom('naoresponda@flytour.com.br', 'Queensberry');
+        $mail->addAddress('ericssm96@gmail.com');
+        //$mail->addAddress('comercial@queensberry.com.br');
+
+        $mail->isHTML(true);
+        $mail->Subject = 'Queensberry - Solicitar Folheto';
+
+        $mail->Body =
+            <<<HTML
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Queensberry - Trabalhe Conosco </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </head>
+
+        <body>
+            <div style="font-family: Arial; display: block; width: 100%;">
+                <p style="text-align: justify; font-size: 1.1rem; ; margin: 0 auto; padding: 20px; max-width: 600px; color: #04004f; ">Um novo cadastro foi realizado através do formulário "Queensberry - Solicitar Folheto (Agente de Viagens)". Segue detalhes do registro:</p>
+                <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h1 style="font-size: 1.1rem">Dados da Agência</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">CNPJ:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cnpj</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Razão Social:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$razao_social</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Nome Fantasia:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$nome_fantasia</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Inscrição Estadual:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$insc_est</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Cadastur:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cadastur</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Nome do Agente de Viagens:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$nome_agente</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Telefone:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$telefone</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">E-mail da Agência:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$email</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Página Web:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$pagina_web</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h1 style="font-size: 1.1rem">Endereço</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">CEP:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cep</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Bairro:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$bairro</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Rua/Av:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$rua</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Número:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$numero_endereco</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Complemento:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$complemento</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Cidade:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cidade</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Estado:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$estado</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h1 style="font-size: 1.1rem">Detalhes</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Mensagem:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$mensagem</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </body>
+
+        </html>
+        HTML;
+
+        $mail->CharSet = "UTF-8";
+        $mail->AltBody = 'Este email requer visualização em HTML';
+
+        foreach ($_FILES as $file) {
+            if ($file['error'] == UPLOAD_ERR_OK) {
+                $mail->addAttachment($file['tmp_name'], $file['name']);
+            }
+        }
+
+        $mail->send();
+
+        $home_url = home_url();
+
+        //header("Location: $home_url/obrigado/");
+
+        wp_send_json_success([
+            'message' => 'Email enviado',
+        ]);
+    } catch (Exception $e) {
+        wp_send_json_error([
+            'message' => 'Email não enviado',
+        ]);
+
+        return;
+    }
+}
+
+add_action('admin_post_queensberry_solicitar_folheto_agente', 'queensberry_agent_request_flyer');
+add_action('admin_post_nopriv_queensberry_solicitar_folheto_agente', 'queensberry_agent_request_flyer');
+
+function queensberry_passenger_request_flyer()
+{
+
+    $nome = filter_input(INPUT_POST, "NOME", FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, "EMAIL", FILTER_SANITIZE_EMAIL);
+    $telefone = filter_input(INPUT_POST, "TELEFONE", FILTER_SANITIZE_SPECIAL_CHARS);
+    $cep = filter_input(INPUT_POST, "CEP", FILTER_SANITIZE_SPECIAL_CHARS);
+    $bairro = filter_input(INPUT_POST, "BAIRRO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $rua = filter_input(INPUT_POST, "RUA", FILTER_SANITIZE_SPECIAL_CHARS);
+    $numero_endereco = filter_input(INPUT_POST, "NUMERO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $complemento = filter_input(INPUT_POST, "COMPLEMENTO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $cidade = filter_input(INPUT_POST, "CIDADE", FILTER_SANITIZE_SPECIAL_CHARS);
+    $estado = filter_input(INPUT_POST, "ESTADO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $mensagem = filter_input(INPUT_POST, "MENSAGEM", FILTER_SANITIZE_SPECIAL_CHARS);
+
+
+
+    $mail = new PHPMailer(true);
+    try {
+        $mail->SMTPDebug = SMTP_DEBUG;
+        $mail->isSMTP();
+        $mail->Host = SMTP_HOST;
+        $mail->SMTPAuth = SMTP_AUTH;
+        $mail->Username = SMTP_USER;
+        $mail->Password = SMTP_PASS;
+        $mail->SMTPSecure = SMTP_SECURE;
+        $mail->Port = SMTP_PORT;
+
+        $mail->setFrom('naoresponda@flytour.com.br', 'Queensberry');
+        $mail->addAddress('ericssm96@gmail.com');
+        //$mail->addAddress('loja@queensberry.com.br');
+
+        $mail->isHTML(true);
+        $mail->Subject = 'Queensberry - Solicitar Folheto';
+
+        $mail->Body =
+            <<<HTML
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Queensberry - Trabalhe Conosco </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </head>
+
+        <body>
+            <div style="font-family: Arial; display: block; width: 100%;">
+                <p style="text-align: justify; font-size: 1.1rem; ; margin: 0 auto; padding: 20px; max-width: 600px; color: #04004f; ">Um novo cadastro foi realizado através do formulário "Queensberry - Solicitar Folheto (Passageiro)". Segue detalhes do registro:</p>
+                <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h1 style="font-size: 1.1rem">Dados Pessoais</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Nome:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$nome</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">E-mail:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$email</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Telefone:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$telefone</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h1 style="font-size: 1.1rem">Endereço</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">CEP:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cep</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Bairro:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$bairro</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Rua/Av:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$rua</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Número:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$numero_endereco</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Complemento:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$complemento</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Cidade:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cidade</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Estado:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$estado</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h1 style="font-size: 1.1rem">Detalhes</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Mensagem:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$mensagem</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </body>
+
+        </html>
+        HTML;
+
+        $mail->CharSet = "UTF-8";
+        $mail->AltBody = 'Este email requer visualização em HTML';
+
+        foreach ($_FILES as $file) {
+            if ($file['error'] == UPLOAD_ERR_OK) {
+                $mail->addAttachment($file['tmp_name'], $file['name']);
+            }
+        }
+
+        $mail->send();
+
+        $home_url = home_url();
+
+        //header("Location: $home_url/obrigado/");
+
+        wp_send_json_success([
+            'message' => 'Email enviado',
+        ]);
+    } catch (Exception $e) {
+        wp_send_json_error([
+            'message' => 'Email não enviado',
+        ]);
+
+        return;
+    }
+}
+
+add_action('admin_post_queensberry_solicitar_folheto_passageiro', 'queensberry_passenger_request_flyer');
+add_action('admin_post_nopriv_queensberry_solicitar_folheto_passageiro', 'queensberry_passenger_request_flyer');

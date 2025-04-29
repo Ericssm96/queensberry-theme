@@ -101,11 +101,119 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 40px 0px;
+
+    @media screen and (min-width: $md) {
+      padding: 50px 0px;
+    }
+
+    @media screen and (min-width: $xl) {
+      padding: 70px 0px;
+    }
     
     h2 {
       font-size: 2.4rem;
       color: $secondary-navy;
       margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .divider {
+      color: $lime-green;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
+    .grid-two-cols {
+      display: grid;
+      grid-template-columns: 100%;
+
+      @media screen and (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+      }
+
+      @media screen and (min-width: $xl) {
+        column-gap: 50px;
+      }
+    }
+
+    .grid-one-col {
+      display: grid;
+      grid-template-columns: 100%;
+    }
+
+    .grid-four-cols {
+      display: grid;
+      grid-template-columns: 100%;
+
+      @media screen and (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+      }
+
+      @media screen and (min-width: $lg) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+
+    .grid-one-col, .grid-two-cols, .grid-three-cols, .grid-four-cols {
+      margin-bottom: 30px;
+      row-gap: 30px;
+
+      .input-area {
+        width: 100%;
+
+        input, textarea {
+          width: 100%;
+          border: 0px solid black;
+          border-bottom: 1px solid #e5e9ef;
+          outline: none;
+          padding-bottom: 5px;
+          font-size: 1.4rem;
+          font-family: $roboto;
+
+          &:focus {
+            border-bottom: 1px solid $lime-green;
+          }
+        }
+
+        textarea {
+          height: 130px;
+        }
+      }
+    }
+
+    .submit-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .submit-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 230px;
+        border-radius: 6px;
+        background-color: $lime-green;
+        color: $navy;
+        font-family: $roboto;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: 0px solid transparent;
+
+        &:hover {
+          background-color: $dark-navy;
+          color: white;
+        }
+      }
     }
   }
 }

@@ -120,6 +120,10 @@ function qb_assets_queue()
         wp_enqueue_style('qb-flyers-page', get_template_directory_uri() . "/src/css/flyers-and-logs.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
+    if(is_page('solicitar-folheto-agente-de-viagens') || is_page('solicitar-folheto-passageiro')) {
+        wp_enqueue_style('qb-request-flyers-page', get_template_directory_uri() . "/src/css/request-log.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
     if(is_page('queensclub')) {
         wp_enqueue_style('qb-about-us', get_template_directory_uri() . "/src/css/queensclub.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
