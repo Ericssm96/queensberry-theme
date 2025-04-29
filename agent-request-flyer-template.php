@@ -16,7 +16,8 @@ get_header();
   </header>
   <section class="form-area">
       <div class="wrapper">
-      <form action="">
+      <form id="solicitar_folheto_agente" action="/">
+        <input type="hidden" name="action" id="actionField" value="queensberry_verify_recaptcha">
           <h2>Dados da Agência</h2>
           <div class="grid-two-cols">
           <div class="input-area first-col">
@@ -87,6 +88,52 @@ get_header();
           <button class="submit-btn" type="submit">Solicitar</button>
           </div>
       </form>
+      <script>
+        $(document).ready(() => {
+          $("#solicitar_folheto_agente").on("submit", function(e) {
+            e.preventDefault();
+            
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LfF5yArAAAAAF7g7tpSGhzeicUlwwQH6mDxEV6y', {
+                action: 'submit'
+              }).then(function(token) {
+                console.log('reCAPTCHA token:', token);
+
+                
+                $.post("<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_verify_recaptcha", {
+                  "g-recaptcha-response": token
+                }).done((res) => {
+                  if (res.data && res.data.message === "OK") {
+                    console.log(res.data);
+                    
+                    $("#actionField").val("queensberry_solicitar_folheto_agente");
+                    
+                    // Envio para Eloqua
+                    $.ajax({
+                      type: "POST",
+                      url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_solicitar_folheto_agente",,
+                      data: $("#solicitar_folheto_agente").serialize(),
+                      success: (res) => {
+                        console.log(res);
+                        alert('Formulário enviado com sucesso!');
+                      },
+                      error: (err) => {
+                        console.error("Ocorreu um erro:", err);
+                        alert('O formulário não foi submetido devido a um erro.');
+                      }
+                    });
+                    
+
+                  } else {
+                    console.error("Erro ao verificar o reCAPTCHA:", res);
+                    alert('Erro na verificação de segurança. Tente novamente.');
+                  }
+                });
+              });
+            });
+          });
+        });
+      </script>
       </div>
   </section>
 </main>
