@@ -207,6 +207,7 @@ main {
         font-size: 1.2rem;
         font-weight: bold;
         cursor: pointer;
+        border: 0px solid transparent;
 
         &:hover {
           background-color: $dark-navy;

@@ -187,6 +187,7 @@ main * {
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+  border: 0px solid transparent;
 }
 .form-area form .submit-area .submit-btn:hover {
   background-color: #161326;

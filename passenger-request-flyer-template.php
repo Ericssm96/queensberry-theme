@@ -16,7 +16,7 @@ get_header();
   </header>
   <section class="form-area">
     <div class="wrapper">
-      <form action="">
+      <form id="solicitar_folheto_passageiro" action="/">
         <h2>Dados Pessoais</h2>
         <input type="hidden" name="action" id="actionField" value="queensberry_verify_recaptcha">
         <div class="grid-two-cols">
@@ -67,12 +67,12 @@ get_header();
           </div>
         </div>
         <div class="submit-area">
-          <div class="submit-btn">Solicitar</div>
+          <button class="submit-btn" type="submit">Solicitar</button>
         </div>
       </form>
       <script>
         $(document).ready(() => {
-          $("#solicitar_folheto_agente").on("submit", function(e) {
+          $("#solicitar_folheto_passageiro").on("submit", function(e) {
             e.preventDefault();
             
             grecaptcha.ready(function() {
@@ -93,8 +93,8 @@ get_header();
                     // Envio para Eloqua
                     $.ajax({
                       type: "POST",
-                      url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_solicitar_folheto_passageiro",,
-                      data: $("#solicitar_folheto_agente").serialize(),
+                      url: "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_solicitar_folheto_passageiro",
+                      data: $("#solicitar_folheto_passageiro").serialize(),
                       success: (res) => {
                         console.log(res);
                         alert('Formulário enviado com sucesso!');
