@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;500;700;800&family=Tenor+Sans&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./src/css/main_navigation.css" />
+  <link rel="stylesheet" href="./src/css/product-page.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="./src/css/swiper-bundle.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <nav
+    x-bind:class="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? 'desktop-navigation white-nav' : 'desktop-navigation'"
+    x-data="{
+    isNavActive: false,
+    isMouseOverNav: false,
+    isNavSelected: false,
+    isWindowScrolledPastThreshold: false
+  }" x-on:mouseover="isMouseOverNav = true" x-on:mousemove="isMouseOverNav = true"
+    x-on:mouseout="isMouseOverNav = false"
+    x-init="window.addEventListener('scroll', () => isWindowScrolledPastThreshold = window.scrollY > 150)">
+    <div class="nav-a">
+      <div class="wrapper">
+        <form action="" class="search-field">
+          <input type="text" x-on:blur="isNavSelected = false" x-on:focus="isNavSelected = true"
+            placeholder="BUSCA" /><button type="submit" class="search-btn" x-on:focus="isNavSelected = true"
+            x-on:blur="isNavSelected = false">
+            <i class="fa-solid fa-magnifying-glass btn-ico"></i>
+          </button>
+        </form>
+        <h1 class="site-logo">
+          <a href="#"><img
+              x-bind:src="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? './src/img/logo-escuro.png' : './src/img/logo.png'"
+              alt="Queensberry Viagens" title="Queensberry Viagens" class="logo-img" /></a>
+        </h1>
+        <div class="upper-right">
+          <span x-show="!isWindowScrolledPastThreshold" class="green-highlight currency-field">
+            <strong class="bold">US$ 1 = R$5,19 | € 1 = R$5,57</strong>
+            <p class="data">
+              <span class="bold">Data:</span>06/03/2024 às 12:44
+            </p>
+          </span>
+          <a href="#" class="green-highlight agent-field">
+            <svg width="13" class="user-icon" height="14" viewBox="0 0 13 14" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.90764 8.09375C10.7865 8.09375 12.3354 9.64258 12.3354 11.5215V12.1562C12.3354 12.8418 11.7768 13.375 11.1166 13.375H2.17913C1.49358 13.375 0.960375 12.8418 0.960375 12.1562V11.5215C0.960375 9.64258 2.48381 8.09375 4.36272 8.09375C5.09905 8.09375 5.42913 8.5 6.64788 8.5C7.84123 8.5 8.17131 8.09375 8.90764 8.09375ZM11.1166 12.1562V11.5215C11.1166 10.3027 10.1264 9.3125 8.90764 9.3125C8.52678 9.3125 7.9428 9.71875 6.64788 9.71875C5.32756 9.71875 4.74358 9.3125 4.36272 9.3125C3.14397 9.3125 2.17913 10.3027 2.17913 11.5215V12.1562H11.1166ZM6.64788 7.6875C4.61663 7.6875 2.99163 6.0625 2.99163 4.03125C2.99163 2.02539 4.61663 0.375 6.64788 0.375C8.65373 0.375 10.3041 2.02539 10.3041 4.03125C10.3041 6.0625 8.65373 7.6875 6.64788 7.6875ZM6.64788 1.59375C5.30217 1.59375 4.21038 2.71094 4.21038 4.03125C4.21038 5.37695 5.30217 6.46875 6.64788 6.46875C7.96819 6.46875 9.08538 5.37695 9.08538 4.03125C9.08538 2.71094 7.96819 1.59375 6.64788 1.59375Z"
+                fill="white" />
+            </svg>
+            Área do Agente
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-b">
+      <div class="wrapper">
+        <ul class="nav-links">
+          <li class="nav-link destinos-dt">
+            <a href="#"><span class="dot-ref">Destinos</span></a>
+            <div class="mega-box">
+              <div class="content-a">
+                <div class="row">
+                  <h3>
+                    <header>
+                      <h3><a href="#" class="title-link">África</a></h3>
+                    </header>
+                  </h3>
+                  <ul class="mega-links">
+                    <li><a href="#">África do Sul</a></li>
+                    <li><a href="#">Egito</a></li>
+                    <li><a href="#">Marrocos</a></li>
+                    <li><a href="#">Quênia</a></li>
+                    <li><a href="#">Tanzânia</a></li>
+                    <li><a href="#" class="plus">[+]</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>
+                    <h3><a href="#" class="title-link">Américas</a></h3>
+                  </header>
+                  <ul class="mega-links">
+                    <li><a href="#">Argentina</a></li>
+                    <li><a href="#">Brasil</a></li>
+                    <li><a href="#">Canadá</a></li>
+                    <li><a href="#">Chile</a></li>
+                    <li><a href="#">Estados Unidos</a></li>
+                    <li><a href="#">México</a></li>
+                    <li><a href="#">Peru</a></li>
+                    <li><a href="#" class="plus">[+]</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>
+                    <h3><a href="#" class="title-link">Ásia</a></h3>
+                  </header>
+                  <ul class="mega-links">
+                    <li><a href="#">China</a></li>
+                    <li><a href="#">Índia</a></li>
+                    <li><a href="#">Japão</a></li>
+                    <li><a href="#">Maldivas</a></li>
+                    <li><a href="#">Tailândia</a></li>
+                    <li><a href="#" class="plus">[+]</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>
+                    <h3><a href="#" class="title-link">Europa</a></h3>
+                  </header>
+                  <ul class="mega-links">
+                    <li><a href="#">Alemanha</a></li>
+                    <li><a href="#">Croácia</a></li>
+                    <li><a href="#">Espanha</a></li>
+                    <li><a href="#">Grécia</a></li>
+                    <li><a href="#">Itália</a></li>
+                    <li><a href="#">Portugal</a></li>
+                    <li><a href="#">Rússia</a></li>
+                    <li><a href="#">Turquia</a></li>
+                    <li><a href="#" class="plus">[+]</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>
+                    <h3><a href="#" class="title-link">Oceania</a></h3>
+                  </header>
+                  <ul class="mega-links">
+                    <li><a href="#">Austrália</a></li>
+                    <li><a href="#">Nova Zelândia</a></li>
+                    <li><a href="#" class="plus">[+]</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>
+                    <h3><a href="#" class="title-link">Oriente Médio</a></h3>
+                  </header>
+                  <ul class="mega-links">
+                    <li><a href="#">Emirados Árabes</a></li>
+                    <li><a href="#">Irã</a></li>
+                    <li><a href="#">Israel</a></li>
+                    <li><a href="#">Jordânia</a></li>
+                    <li><a href="#">Líbano</a></li>
+                    <li><a href="#" class="plus">[+]</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-link">
+            <a href="#"><span class="dot-ref">Produtos</span></a>
+            <div class="mega-box">
+              <div class="content-b">
+                <ul class="left-col">
+                  <li><a href="#">Férias na neve</a></li>
+                  <li><a href="#">Viagens personalizadas</a></li>
+                  <li><a href="#">Tours Regulares</a></li>
+                  <li><a href="#">Brasil In</a></li>
+                  <li><a href="#">Cruzeiros</a></li>
+                </ul>
+                <div class="right-col">
+                  <header>
+                    <h3><a href="#">GBM - Grupos Brasileiros No Mundo</a></h3>
+                  </header>
+                  <ul class="cards-area">
+                    <li>
+                      <a href="#">
+                        <img src="./src/img/gbm-4-conti.jpg" alt="Imagem Promocional Grupo Brasil no Mundo" />
+                      </a>
+                      <p>4 continentes 2024</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./src/img/gbm-4-conti.jpg" alt="Imagem Promocional Grupo Brasil no Mundo" />
+                      </a>
+                      <p>4 continentes 2024</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./src/img/gbm-4-conti.jpg" alt="Imagem Promocional Grupo Brasil no Mundo" />
+                      </a>
+                      <p>4 continentes 2024</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./src/img/gbm-4-conti.jpg" alt="Imagem Promocional Grupo Brasil no Mundo" />
+                      </a>
+                      <p>4 continentes 2024</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./src/img/gbm-4-conti.jpg" alt="Imagem Promocional Grupo Brasil no Mundo" />
+                      </a>
+                      <p>4 continentes 2024</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-link"><a href="#">Portal do Agente</a></li>
+          <li class="nav-link"><a href="#">Blog</a></li>
+          <li class="nav-link"><a href="#">Viagens de Incentivo</a></li>
+          <li class="nav-link"><a href="#">Quem Somos</a></li>
+          <li class="nav-link"><a href="#">Fale Conosco</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav class="mobile-navigation" x-data="{
+    isMobileNavOpen: false,
+    isMobileSearchOpen: false,
+    isWindowScrolledPastThreshold: false
+  }" x-init="window.addEventListener('scroll', () => isWindowScrolledPastThreshold = window.scrollY > 150)">
+    <div
+      x-bind:class="isMobileNavOpen || isMobileSearchOpen || isWindowScrolledPastThreshold ? 'nav-c white-mobile-nav' : 'nav-c'">
+      <h1>
+        <a href="#"><img
+            x-bind:src="isMobileNavOpen || isMobileSearchOpen || isWindowScrolledPastThreshold ? 'src/img/logo-escuro.png' : 'src/img/logo.png'"
+            alt="Home - Queensberry" title="Home - Queensberry" /></a>
+      </h1>
+
+      <div class="light-buttons">
+        <label class="search-btn" id="whiteSearchBtnMb" for="mobile-search-toggle"><i
+            class="fa-solid fa-magnifying-glass"></i></label>
+        <label class="menu-btn" for="mobile-menu-toggle"><i class="fa-solid fa-bars"></i></label>
+      </div>
+    </div>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle"
+      x-on:change="isMobileNavOpen = !isMobileNavOpen" />
+    <div class="nav-d">
+      <div class="dark-buttons">
+        <label class="search-btn" id="blackSearchBtnMb" for="mobile-search-toggle"><i
+            class="fa-solid fa-magnifying-glass"></i></label>
+        <label class="menu-btn" for="mobile-menu-toggle"><i class="fa-solid fa-bars"></i></label>
+      </div>
+      <ul class="menu-items-mb">
+        <li>
+          <label class="parent-item" for="destinos-mb"><span>Destinos</span><span class="icon"><i
+                class="fa-solid fa-caret-down"></i></span></label>
+          <input type="checkbox" name="dropdown-mb" id="destinos-mb" />
+          <ul class="destinos-items-mb">
+            <li><a href="#">África</a></li>
+            <li><a href="#">Américas</a></li>
+            <li><a href="#">Ásia</a></li>
+            <li><a href="#">Europa</a></li>
+            <li><a href="#">Oceania</a></li>
+            <li><a href="#">Oriente Médio</a></li>
+          </ul>
+        </li>
+        <li>
+          <label class="parent-item" for="produtos-mb">Produtos<span class="icon"><i
+                class="fa-solid fa-caret-down"></i></span></label>
+          <input type="checkbox" name="dropdown-mb" id="produtos-mb" />
+          <ul class="produtos-items-mb">
+            <li><a href="#">Férias na neve</a></li>
+            <li><a href="#">GBM - Grupos Brasileiros no Mundo</a></li>
+            <li><a href="#">Viagens personalizadas</a></li>
+            <li><a href="#">Tours regulares</a></li>
+            <li><a href="#">Brasil in</a></li>
+            <li><a href="#">Cruzerios</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Q Travel</a></li>
+        <li><a href="#">Viagens de Incentivo</a></li>
+        <li><a href="#">Quem Somos</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+      <div class="bottom-wrapper">
+        <a href="#" class="green-highlight agent-field">
+          <svg width="13" class="user-icon" height="14" viewBox="0 0 13 14" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.90764 8.09375C10.7865 8.09375 12.3354 9.64258 12.3354 11.5215V12.1562C12.3354 12.8418 11.7768 13.375 11.1166 13.375H2.17913C1.49358 13.375 0.960375 12.8418 0.960375 12.1562V11.5215C0.960375 9.64258 2.48381 8.09375 4.36272 8.09375C5.09905 8.09375 5.42913 8.5 6.64788 8.5C7.84123 8.5 8.17131 8.09375 8.90764 8.09375ZM11.1166 12.1562V11.5215C11.1166 10.3027 10.1264 9.3125 8.90764 9.3125C8.52678 9.3125 7.9428 9.71875 6.64788 9.71875C5.32756 9.71875 4.74358 9.3125 4.36272 9.3125C3.14397 9.3125 2.17913 10.3027 2.17913 11.5215V12.1562H11.1166ZM6.64788 7.6875C4.61663 7.6875 2.99163 6.0625 2.99163 4.03125C2.99163 2.02539 4.61663 0.375 6.64788 0.375C8.65373 0.375 10.3041 2.02539 10.3041 4.03125C10.3041 6.0625 8.65373 7.6875 6.64788 7.6875ZM6.64788 1.59375C5.30217 1.59375 4.21038 2.71094 4.21038 4.03125C4.21038 5.37695 5.30217 6.46875 6.64788 6.46875C7.96819 6.46875 9.08538 5.37695 9.08538 4.03125C9.08538 2.71094 7.96819 1.59375 6.64788 1.59375Z"
+              fill="white" />
+          </svg>
+          Área do Agente
+        </a>
+      </div>
+    </div>
+    <input type="checkbox" id="mobile-search-toggle" x-on:change="isMobileSearchOpen = !isMobileSearchOpen" />
+    <form action="" class="mobile-global-search">
+      <div class="wrapper">
+        <input type="text" placeholder="Busca" x-on:click="isMobileSearchOpen = !isMobileSearchOpen"
+          name="GLOBAL_SEARCH" />
+        <button type="submit">OK</button>
+      </div>
+    </form>
+  </nav>
+
+  <main>
+    <div class="banner-overlay">
+    </div>
+    <header class="product-page-banner">
+      <div>
+        <strong>Férias na Neve</strong>
+        <h1>Aspen Snowmass</h1>
+        <p>Quatro montanhas, dois encantadores vilarejos e uma experiência memorável.</p>
+      </div>
+    </header>
+    <section class="quick-info">
+      <div class="wrapper">
+        <div class="info-area">
+          <strong>Duração</strong>
+          <p>8 dias / 7 noites</p>
+        </div>
+        <div class="info-area">
+          <strong>Visitando</strong>
+          <p>Aspen Snowmass, no Colorado, Estados Unidos</p>
+        </div>
+        <div class="info-area">
+          <strong>Saídas</strong>
+          <p>Dez ‘2024 a Mar ‘2025</p>
+        </div>
+        <div class="info-area">
+          <strong>Tempo e clima</strong>
+          <p>ASPEN</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="general-info">
+      <div class="container">
+        <div class="itinerary-image-wrapper">
+          <img class="itinerary-image" src="./src/img/NEVE002_MAPA_ROTEIRO.jpeg" alt="Imagem Roteiro Viagem">
+        </div>
+
+        <article class="info-text" x-data="{
+          selectedTab: 'attractions',
+        }">
+          <ul class="tab-select" id="infoTabs">
+            <li @click="selectedTab = 'attractions'" x-bind:class="selectedTab === 'attractions' ? 'selected' : ''"><i class="fa-solid fa-gift"></i> Atrações</li>
+            <li @click="selectedTab = 'itinerary'" x-bind:class="selectedTab === 'itinerary' ? 'selected' : ''"><i class="fa-regular fa-calendar"></i> Roteiro</li>
+            <li @click="selectedTab = 'services'" x-bind:class="selectedTab === 'services' ? 'selected' : ''"><i class="fa-solid fa-bell-concierge"></i> Serviços</li>
+            <li @click="$refs.priceTableModal.showModal()"><i class="fa-solid fa-dollar-sign"></i> Preços</li>
+          </ul>
+          <div class="details">
+            <div class="tab" x-show="selectedTab === 'attractions'">
+              <div class="topic">
+                <h2>Atrações</h2>
+                <p>
+                  Localizado no coração das Montanhas Rochosas, Aspen Snowmass é um destino como nenhum outro. Por mais de 75 anos, a natureza, cultura e a recreação se uniram, para proporcionar momentos e experiências inesquecíveis. Venha ver com seus próprios olhos neste inverno!
+                  • ASPEN: é muito conhecida pelos seus eventos culturais e gastronômicos e considerada uma das mais elegantes e sofisticadas estações de esqui do mundo. Tem uma mistura charmosa de construções do século 19 e do melhor da arquitetura contemporânea. Sua montanha possui diferentes níveis de dificuldade, mas não é para iniciantes, pois metade das pistas são difíceis e algumas reservadas para experts. Mas ainda assim, é possível esquiar nas vizinhas Snowmass, Aspen Highlands e Buttermilk.
+                  • SNOWMASS: é a versão família e tranquila da badalada Aspen, com sua infraestrutura totalmente preparada para receber as famílias. Além de hotéis e apartamentos que acomodam com conforto e restaurantes family-friendly. É aqui que fica o Treehouse Kids’ Adventure Center, o maior complexo infantil do Colorado. Sua montanha é ideal para os iniciantes e intermediários, além de apresentar diversas atividades além do ski.
+                </p>
+              </div>
+            </div>
+            <div class="tab" x-show="selectedTab === 'itinerary'">
+              <div class="topic">
+                <h2>1º DIA - ASPEN SNOWMASS</h2>
+
+                <p>
+                  Chegada ao Aeroporto de Aspen/Eagle/Denver e traslado privativo ao hotel em Aspen ou Snowmass para acomodação por 07 noites.
+                  Caso forem esquiar, sugerimos retirada dos passes de ski e retirada dos equipamentos alugados para deixá-los prontos para o dia seguinte.
+                  À noite, sugerimos jantar no Bosq, o único restaurante em Aspen premiado com uma estrela no Guia Michelin, com uma culinária de inspiração sazonal e menu degustação com foco na produção de alimentos local.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>2º DIA - ASPEN SNOWMASS</h2>
+
+                <p>
+                  Dia livre para atividades de interesse pessoal.
+                  Para os amantes do esporte, que tal aproveitar o dia esquiando nas pistas de uma das quatro montanhas de Aspen Snowmass?
+                  Se o seu plano não é esquiar, mas aproveitar o clima de uma estação de esqui, Snowmass Mountain é seu destino de hoje, pois há muitas atividades de montanha para aproveitar por lá, como a nova estrutura em Elk Camp Gondola com bares (inclusive a céu aberto, com presença de DJs) e restaurantes, tubbing (pista de neve em que é possível deslizar com boias - as crianças adoram), e a divertida Breathtaker Alpine Coaster, uma montanha-russa com trilhos suspensos sob o morro.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>3º DIA - ASPEN SNOWMASS</h2>
+
+                <p>
+                  Dia livre para atividades de interesse pessoal.
+                  Para os amantes do esporte, aproveite o dia esquiando nas pistas das quatro montanhas de Aspen Snowmass.
+
+                  Outra sugestão é conhecer Aspen Village, uma pequena vila que serviu de base para exploração de minérios e que hoje concentra o burburinho turístico de Aspen Mountain, onde você pode fazer compras nas lojas de grife, imergir na cultura e na natureza local e, acima de tudo, aproveitar o après-ski (como é chamado o happy hour na neve) e pela noite com diversas atrações/eventos durante o inverno.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>4º DIA - ASPEN SNOWMASS</h2>
+                <p>
+                  Dia livre para atividades de interesse pessoal.
+                  São várias as opções de pistas de esqui e níveis diferentes. Que tal arriscar um novo percurso?
+
+                  Para quem não esquia, aproveite o dia para fazer snowshoes (trilhas com calçados de neve) e visitar o Sundeck Restaurant, que fica no alto da Aspen Mountain.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>5º DIA - ASPEN SNOWMASS</h2>
+                <p>
+                  Dia livre para atividades de interesse pessoal.
+                  Para os amantes do esporte, aproveite o dia esquiando nas pistas das quatro montanhas de Aspen Snowmass.
+
+                  Em Aspen Village, a elegância se sobressai graças a presença não apenas das vitrines luxuosas, mas também de inúmeras galerias de arte e do Aspen Art Museum, que foi projetado pelo renomado arquiteto japonês Shigeru Ban. Inovador, o edifício foi concebido como uma caixa de vidro envolvida por uma treliça. É belíssimo por fora e por dentro!
+                </p>
+              </div>
+              <div class="topic">
+                <h2>6º DIA - ASPEN SNOWMASS</h2>
+                <p>
+                  Dia livre para atividades de interesse pessoal.
+                  Para os amantes do esporte, aproveite o dia esquiando nas pistas das quatro montanhas de Aspen Snowmass.
+
+                  Conheça também Snowmass Village, pequena e não tem tantas lojas como em Aspen Village, mas tão charmosa quanto, garantindo diversão para toda a família. Há um rinque de patinação no gelo, parede de escalada e uma área com jogos eletrônicos para crianças, bem como diversos playgrounds ao ar livre.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>7º DIA - ASPEN SNOWMASS</h2>
+                <p>
+                  Dia livre para atividades de interesse pessoal.
+                  Lembre-se que hoje é o último em Aspen Snowmass. Se você ainda não esquiou, aproveite ou, se você é daqueles apaixonados pelo esporte desfrute ao máximo deste último dia.
+
+                  Para encerrar a incrível aventura na neve, conheça o lendário Cloud Nine Alpine Bistro com um divertido passeio em snowcat (trator de neve) até o restaurante para jantar. Chegue em uma cabana aconchegante localizada no meio de Aspen Highlands para uma experiência gastronômica incomparável e com vista para os icônicos Maroon Bells - os picos de montanha mais conhecidos e perfeitos para cartões postais do oeste americano - e uma aconchegante lareira a lenha. O jantar é uma experiência inesquecível!
+                </p>
+              </div>
+              <div class="topic">
+                <h2>8º DIA - ASPEN SNOWMASS</h2>
+                <p>
+                  Em horário a ser informado localmente, traslado ao Aeroporto de Aspen/Eagle/Denver para embarque ao seu próximo destino.
+                  Até a próxima viagem!
+                </p>
+              </div>
+            </div>
+            <div class="tab" x-show="selectedTab === 'services'">
+              <div class="topic">
+                <h2>SERVIÇOS INCLUÍDOS</h2>
+                <p>
+                  * 07 noites de hospedagem em Aspen ou Snowmass;
+                  * Traslado oferecido pelo hotel de chegada e saída do Aeroporto de Aspen (ASE);
+                  * Shuttle cortesia oferecido pela estação entre as quatro montanhas de Aspen Snowmass.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>SERVIÇOS NÃO INCLUÍDOS</h2>
+                <p>
+                  * Cobrança do imposto sobre remessa ao exterior (IRRF) sobre o valor total da viagem;
+                  * Bilhetes aéreos internacionais e internos (consulte-nos sobre as melhores tarifas);
+                  * Taxas de embarque nos aeroportos;
+                  * Despesas com documentação e vistos consulares;
+                  * Passeios opcionais;
+                  * Extras de caráter pessoal (bebidas, lavanderia, telefone, etc);
+                  * A tradicional gorjeta ao guia e/ou motorista, carregadores de malas, camareiras e etc., a critério de cada passageiro;
+                  * Qualquer serviço não mencionado em “Serviços incluídos”.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>DOCUMENTAÇÃO</h2>
+                <p>
+                  O passageiro é inteiramente responsável pela obtenção dos documentos necessários para a viagem, devendo possuir passaporte com validade mínima de seis meses a contar da data de retorno ao Brasil, com os devidos vistos e vacinas em dia. Lembrando que para viagens internacionais não serão aceitos os documentos como RG, RNE, CPF, Carteira de Motorista (CNH), Carteiras de Classe CRM (médicos), CREA (engenheiros, arquitetos), OAB (advogados), etc.
+
+                  VISTOS
+                  Para os Estados Unidos é necessário visto para portadores de passaporte brasileiro. O passaporte deve possuir validade mínima de seis meses e duas folhas em branco para o controle de imigração. Passageiros estrangeiros devem consultar diretamente o Consulado ou Embaixada do país a ser visitado.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>VACINAS</h2>
+                <p>
+                  Alguns países exigem o Certificado Internacional de Vacinação contra Febre Amarela, consulte diretamente o(s) Consulado(s) ou Embaixada(s) do(s) país(es) a ser(em) visitado(s) para obter a informação de que será necessário ou não o certificado de vacina contra febre amarela que deverá ser tomada com pelo menos 11 dias de antecedência da data do embarque. Levando em conta que estas regras mudam, às vezes, sem aviso prévio, recomendamos a todos manter sempre seu certificado em dia e levá-lo junto com o passaporte.
+                  Atenção, se seu certificado é antigo (amarelo/laranja), recomendamos atualizar, pois não é mais aceito.
+                  Consulte a documentação exigida com o consulado ou embaixada do(s) destino(s) de sua viagem.
+                </p>
+              </div>
+              <div class="topic">
+                <h2>SEGURO VIAGEM</h2>
+                <p>
+                  No programa acima está incluído seguro-viagem para 07 dias de viagem. É obrigatório que o início e término da vigência do seguro sejam exatamente as datas de saída e chegada ao Brasil.
+                  Por favor consulte-nos sobre as condições gerais, coberturas deste plano e tarifas de diárias extras.
+                </p>
+              </div>
+            </div>
+            <dialog class="price-table-modal" x-ref="priceTableModal">
+              <div class="modal-header">
+                <h2>Aspen Snowmass</h2>
+                <strong>(Férias na Neve)</strong>
+                <span class="close-icon"><i class="fa-solid fa-x" @click="$refs.priceTableModal.close()"></i></span>
+              </div>
+              <div class="modal-content">
+                <img src="./src/img/NEVE002_TAB.jpeg" alt="">
+                <img src="./src/img/NEVE002_TAB2.jpeg" alt="">
+                <img src="./src/img/NEVE002_TAB3.jpeg" alt="">
+                <img src="./src/img/NEVE002_TAB4.jpeg" alt="">
+              </div>
+            </dialog>
+          </div>
+          <div class="share-links">
+            <p>Compartilhe:</p>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+            <a href="#"><i class="fa-solid fa-print"></i></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="price-info" x-data="{
+      isPriceTagOpen: false,
+      productHasPriceInfo: false,
+    }">
+      <button class="price-info-toggle" @click="isPriceTagOpen = true" x-show="!isPriceTagOpen">Solicitar <br/> v</button>
+      <article class="price" x-show="isPriceTagOpen">
+        <span @click="isPriceTagOpen = false" class="close-icon"><i class="fa-solid fa-x"></i></span>
+        <div class="get-more-info" x-show="!productHasPriceInfo">
+          <p>Gostou deste roteiro? Solicite mais informações.</p>
+          <a href="#" class="cta">Solicitar</a>
+        </div>
+        <div class="additional-info" x-show="productHasPriceInfo">
+          <div class="value-box">
+            <p class="highlighted-text">a partir de:</p>
+
+            <div>
+              <strong class="value">R$27.492,08</strong>
+              <small class="small-text">
+                EM 6X IGUAIS <br/>
+                (US$ 4463,00 Câmbio R$ 6,1600)
+              </small>
+            </div>
+          </div>
+          <form>
+            <select name="" id="">
+              <option value="">Selecione</option>
+            </select>
+            <button class="buy-btn">
+              Comprar
+            </button>
+          </form>
+        </div>
+        <span></span>
+      </article>
+    </div>
+    <section class="gallery" x-data="{
+      gallerySwiper: new Swiper('.gallery .swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+          nextEl: '.featured-videos .swiper-button-next',
+          prevEl: '.featured-videos .swiper-button-prev',
+        },
+        shortSwipes: false,
+        breakpoints: {
+          1: {
+            slidesPerView: 2,
+            spaceBetween: 0
+          },
+          600: {
+            slidesPerView: 4,
+            spaceBetween: 0
+          },
+          1000: {
+            slidesPerView: 6,
+            spaceBetween: 0
+          }
+        }
+      })
+    }">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <img src="./src/img/NEVE002_GALERIA_1g.jpeg" class="swiper-slide" alt="Foto Galeria" >
+          <img src="./src/img/NEVE002_GALERIA_1g.jpeg" class="swiper-slide" alt="Foto Galeria" >
+          <img src="./src/img/NEVE002_GALERIA_1g.jpeg" class="swiper-slide" alt="Foto Galeria" >
+          <img src="./src/img/NEVE002_GALERIA_1g.jpeg" class="swiper-slide" alt="Foto Galeria" >
+          <img src="./src/img/NEVE002_GALERIA_1g.jpeg" class="swiper-slide" alt="Foto Galeria" >
+          <img src="./src/img/NEVE002_GALERIA_1g.jpeg" class="swiper-slide" alt="Foto Galeria" >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="wrapper">
+        <nav class="footer-nav">
+          <div class="nav-col address-col">
+            <h2>
+              QUEENSBERRY AGÊNCIA DE VIAGENS E
+              TURISMO LTDA.
+            </h2>
+            <address>
+              Alameda Campinas, 1.070 - Jd. Paulista - 01404-200 - São Paulo/SP<br />
+              +55 (11) 3217-7100 / (11) 3217-7600<br />
+              portalq1@queensberry.com.br<br />
+              CNPJ 45.575.958/0001-49
+            </address>
+          </div>
+          <div class="nav-col">
+            <h2>Institucional</h2>
+            <ul class="nav-links">
+              <li><a href="#">Quem Somos</a></li>
+              <li><a href="#">Dados Cadastrais</a></li>
+              <li><a href="#">Fale Conosco</a></li>
+              <li><a href="#">Trabalhe Conosco</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Termos e Condições de Uso</a></li>
+              <li><a href="#">Recuperação Judicial</a></li>
+              <li><a href="#">Fale com o presidente</a></li>
+              <li><a href="#">Canal de Ética</a></li>
+            </ul>
+          </div>
+          <div class="nav-col">
+            <div>
+              <h2>Serviços</h2>
+              <ul class="nav-links">
+                <li><a href="#">Folhetos & Cadernos</a></li>
+                <li><a href="#">Formulários</a></li>
+                <li><a href="#">Queens Club</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <ul class="network-icons">
+              <li><a href="#"><i class="fa-brands fa-facebook"></a></i></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a href="#"><img src="./src/img/glassdoor-icon.png" alt="Perfil do Queensberry no Glassdoor"></a></li>
+            </ul>
+          </div>
+        </nav>
+        <section class="form-section">
+          <form action="/" class="newsletter-form">
+            <div class="fillable-fields">
+              <header class="title-area">
+                <h2>Receba Novidades</h2>
+                <p>Cadastre seu e-mail</p>
+              </header>
+              <input type="text" placeholder="Nome" />
+              <input type="email" placeholder="E-mail" />
+              <select name="TIPO_USUARIO" id="">
+                <option value="PASSAGEIRO" selected>Passageiro</option>
+                <option value="AGENTE">Agente</option>
+              </select>
+              <div class="checkbox-field">
+                <input type="checkbox" name="RECEBER_COMUNICACOES" id="iptContactAcceptance">
+                <label for="iptContactAcceptance">Aceito receber comunicações e informações da Queensberry</label>
+              </div>
+            </div>
+            <div class="submit-area">
+              <div class="squarey-recaptcha-box"></div>
+              <button class="submit-btn">Cadastrar</button>
+            </div>
+          </form>
+          <div class="safety-watermark">
+            <span class="divider"></span>
+            <img src="./src/img/sectigo-watermark.jpg" alt="Image with text: Secured by Sectigo">
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Uma empresa do ecossistema</p>
+      <img src="./src/img/befly-logo.png" alt="Imagem com texto: BeFly">
+    </div>
+  </footer>
+</body>
+
+</html>

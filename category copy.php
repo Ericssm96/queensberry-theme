@@ -3,9 +3,9 @@ $current_category = get_queried_object();
 
 $api_data = get_term_meta($current_category->term_id, 'api_data', true);
 
-$banner_img_url_prefix = "https://www.queensberry.com.br/imagens//fundos/categorias";
+$banner_img_url_prefix = "https://img.queensberry.com.br/imagens//fundos/categorias";
 $banner_img_file_name = $api_data["CategoryInfo"]["BannerImagemCategoria"];
-$log_img_url_prefix = "https://www.queensberry.com.br/imagens//Cadernos/";
+$log_img_url_prefix = "https://img.queensberry.com.br/imagens//Cadernos/";
 
 $category_info = $api_data["CategoryInfo"];
 $category_title = $api_data["CategoryInfo"]["Titulo"];
@@ -53,7 +53,7 @@ if($cat_query->have_posts()) {
       return $lower_log_name == $current_item_name;
     });
 
-    $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
+    $images_folder_prefix_url = "https://img.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
     $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002

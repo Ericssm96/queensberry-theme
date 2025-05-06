@@ -4,7 +4,7 @@
 */
 
 $forms_data = get_form_files_array();
-$form_file_url_prefix = "https://www.queensberry.com.br/imagens//Formularios/GERAL";
+$form_file_url_prefix = "https://img.queensberry.com.br/imagens//Formularios/GERAL";
 
 
 

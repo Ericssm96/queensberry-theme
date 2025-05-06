@@ -44,7 +44,7 @@ if ($tag_query->have_posts()) :
     });
     $program_name = $program_info["Descricao"];
 
-    $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
+    $images_folder_prefix_url = "https://img.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
 
@@ -99,7 +99,7 @@ endif;
     });
     $program_name = $program_info["Descricao"];
 
-    $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
+    $images_folder_prefix_url = "https://img.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
 
@@ -200,7 +200,7 @@ switch(mb_strtolower($tag_title)) {
     break;
   case "egito":
     $banner_img_name = "egito.jpg";
-    $info_file_url = "https://www.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_egito.pdf";
+    $info_file_url = "https://img.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_egito.pdf";
     break;
   case "quênia":
     $banner_img_name = "quenia.jpg";
@@ -210,7 +210,7 @@ switch(mb_strtolower($tag_title)) {
     break;
   case "tanzânia":
     $banner_img_name = "tanzania.jpg";
-    $info_file_url = "https://www.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_tanzania.pdf";
+    $info_file_url = "https://img.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_tanzania.pdf";
     break;
   case "argentina:":
     $banner_img_name = "argentina.jpg";
@@ -235,7 +235,7 @@ switch(mb_strtolower($tag_title)) {
     break;
   case "emirados árabes":
     $banner_img_name = "dubai.jpg";
-    $info_file_url = "https://www.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_dubai.pdf";
+    $info_file_url = "https://img.queensberry.com.br/imagens//fundos/cadernos/paises/ebook_dubai.pdf";
   default:
     $banner_img_name = "busca.jpg";
 }

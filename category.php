@@ -4,9 +4,9 @@ $checked_log = $_GET["checked_log"];
 
 $api_data = get_term_meta($current_category->term_id, 'api_data', true);
 
-$banner_img_url_prefix = "https://www.queensberry.com.br/imagens//fundos/categorias";
+$banner_img_url_prefix = "https://img.queensberry.com.br/imagens//fundos/categorias";
 $banner_img_file_name = $api_data["CategoryInfo"]["BannerImagemCategoria"];
-$log_img_url_prefix = "https://www.queensberry.com.br/imagens//Cadernos/";
+$log_img_url_prefix = "https://img.queensberry.com.br/imagens//Cadernos/";
 
 $category_info = $api_data["CategoryInfo"];
 $category_title = $api_data["CategoryInfo"]["Titulo"];
@@ -57,7 +57,7 @@ if($cat_query->have_posts()) {
     });
     $program_name = $program_info["Descricao"];
 
-    $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
+    $images_folder_prefix_url = "https://img.queensberry.com.br/imagens//Programas/";
     $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
 
@@ -66,9 +66,9 @@ if($cat_query->have_posts()) {
     $card_image_file_name = $program_info["CaminhoImagem"];
 
     $card_image_url = "$images_folder_prefix_url/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$card_image_file_name";
-    // https://www.queensberry.com.br/imagens//Programas//ROTEIROS_INDIVIDUAIS_FORFAITS//IAF002/IAF002_FOTO_ICONE.JPG
+    // https://img.queensberry.com.br/imagens//Programas//ROTEIROS_INDIVIDUAIS_FORFAITS//IAF002/IAF002_FOTO_ICONE.JPG
 
-    // https://www.queensberry.com.br/imagens//Programas/ROTEIROS_INDIVIDUAIS_FORFAITS/AFRICA/IAF002/IAF002_FOTO_ICONE.JPG
+    // https://img.queensberry.com.br/imagens//Programas/ROTEIROS_INDIVIDUAIS_FORFAITS/AFRICA/IAF002/IAF002_FOTO_ICONE.JPG
     $post_slug = get_post_field( 'post_name', get_post() );
 
     
@@ -442,12 +442,16 @@ get_header();
   ?>
     <?php 
     if(sanitize_title($category_title) === "brasil-in" || sanitize_title($category_title) === "gbm-grupos-brasileiros-no-mundo") {
+      $custom_description = "";
 
       if(sanitize_title($category_title) === "brasil-in") {
         $title_img_url = get_template_directory_uri() . "/src/img/go4brazil.png";
+        $custom_description = "A Queensberry Viagens apresenta o Brasil sob um novo olhar. Uma linha de Viagens Nacionais elaboradas com riqueza de detalhes para proporcionar experiências únicas e momentos inesquecíveis.Ideal para quem prefere viajar sozinho, a dois ou com a família e grupo de amigos.";
       } else {
         $title_img_url = get_template_directory_uri() . "/src/img/gbm-titulo.png";
+        $custom_description = "Viagem em grupo com acompanhamento de guia brasileiro, em roteiros cuidadosamente planejados e hotéis bem localizados. Conta também com \"Slow Travel\", uma viagem mais tranquila, proporcionando conhecer mais e melhor os países visitados.";
       }
+
 
       ?>
 
@@ -455,7 +459,7 @@ get_header();
         <div class="wrapper">
           <h1 class="product-title"><img style="width: 200px;" src="<?= $title_img_url ?>" alt="Brasil IN"></h1>
           <div class="product-description" style="">
-            <p class="description-text">A Queensberry Viagens apresenta o Brasil sob um novo olhar. Uma linha de Viagens Nacionais elaboradas com riqueza de detalhes para proporcionar experiências únicas e momentos inesquecíveis.Ideal para quem prefere viajar sozinho, a dois ou com a família e grupo de amigos.</p>
+            <p class="description-text"><?= $custom_description; ?></p>
           </div>
         </div>
       </section>

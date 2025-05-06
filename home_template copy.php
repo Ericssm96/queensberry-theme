@@ -18,10 +18,10 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
 <div class="video-overlay"></div>
 <main>
   <section class="banner">
-    <video id="video" poster="https://www.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
-      <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.webm"
+    <video id="video" poster="https://img.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
+      <source src="https://img.queensberry.com.br/imagens//Videos/site27_04_21.webm"
         type='video/webm; codecs="vp8, vorbis"' />
-      <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.mp4" type="video/mp4" />
+      <source src="https://img.queensberry.com.br/imagens//Videos/site27_04_21.mp4" type="video/mp4" />
     </video>
     <article class="gbm-cta">
       <strong>GBM 2024</strong>
@@ -71,7 +71,7 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
             $sanitized_cat_title = sanitize_title($category["CategoriaDescricao"]);
             $cat_img_file_name = $category["ImagemHome"];
             $cat_img_folder = $category["PastaImagens"];
-            $cat_img_url = "https://www.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
+            $cat_img_url = "https://img.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
 
             $cat_page_url = home_url() . "/category/$sanitized_cat_title";
             if ($cat_img_file_name !== "") {
@@ -156,7 +156,7 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
                 $visit_details_quick_info = $program_info["Detalhes"];
                 $program_outings_info = $program_info["SaidasPrograma"];
 
-                $images_folder_prefix_url = "https://www.queensberry.com.br/imagens/";
+                $images_folder_prefix_url = "https://img.queensberry.com.br/imagens/";
                 $category_image_folder = $current_category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
                 $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
                 $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002

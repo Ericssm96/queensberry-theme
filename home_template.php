@@ -16,6 +16,7 @@ foreach($videos_arr as $video_info) {
 $json_videos_titles = json_encode($videos_titles, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 
+
 // Carrega informações de câmbio
 $dolar_currency_info = @require_once __DIR__ . "/dolar-currency-conversion-info.php";
 $euro_currency_info = @require_once __DIR__. "/euro-currency-conversion-info.php";
@@ -37,7 +38,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
   $last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao"])[0];
   $last_conversion_date_obj = new DateTime($last_conversion_update_date);
   $formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
-  $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
+  $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
 }
 ?>
     <div class="video-overlay"></div>
@@ -45,10 +46,10 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
       isModalOpen = true
     }, 4000)">
     <section class="banner">
-      <video id="video" poster="https://www.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
-        <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.webm"
+      <video id="video" poster="https://img.queensberry.com.br/imagens//Videos/thumbnail.jpg" autoplay muted loop>
+        <source src="https://img.queensberry.com.br/imagens//Videos/site27_04_21.webm"
           type='video/webm; codecs="vp8, vorbis"' />
-        <source src="https://www.queensberry.com.br/imagens//Videos/site27_04_21.mp4" type="video/mp4" />
+        <source src="https://img.queensberry.com.br/imagens//Videos/site27_04_21.mp4" type="video/mp4" />
       </video>
       <article class="gbm-cta">
         <strong>GBM 2025</strong>
@@ -104,7 +105,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
               $sanitized_cat_title = sanitize_title($category["Titulo"]);
               $cat_img_file_name = $category["ImagemHome"];
               $cat_img_folder = $category["PastaImagens"];
-              $cat_img_url = "https://www.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
+              $cat_img_url = "https://img.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
 
               $cat_page_url = home_url() . "/category/$sanitized_cat_title";
               if($cat_img_file_name !== "") {
@@ -191,7 +192,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
                   $visit_details_quick_info = $program_info["Detalhes"];
                   $program_outings_info = $program_info["SaidasPrograma"];
   
-                  $images_folder_prefix_url = "https://www.queensberry.com.br/imagens/";
+                  $images_folder_prefix_url = "https://img.queensberry.com.br/imagens/";
                   $category_image_folder = $current_category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
                   $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
                   $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
@@ -319,7 +320,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
               $visit_details_quick_info = $program_info["Detalhes"];
               $program_outings_info = $program_info["SaidasPrograma"];
 
-              $images_folder_prefix_url = "https://www.queensberry.com.br/imagens/";
+              $images_folder_prefix_url = "https://img.queensberry.com.br/imagens/";
               $category_image_folder = $current_category_info["PastaImagens"];
               $program_log_image_folder = $program_log_info["CadernoPastaImagens"];
               $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]);

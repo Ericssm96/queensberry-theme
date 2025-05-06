@@ -1580,8 +1580,8 @@ function queensberry_agent_request_flyer()
         $mail->Port = SMTP_PORT;
 
         $mail->setFrom('naoresponda@flytour.com.br', 'Queensberry');
-        $mail->addAddress('ericssm96@gmail.com');
-        //$mail->addAddress('comercial@queensberry.com.br');
+        // $mail->addAddress('ericssm96@gmail.com');
+        $mail->addAddress('comercial@queensberry.com.br');
 
         $mail->isHTML(true);
         $mail->Subject = 'Queensberry - Solicitar Folheto';
@@ -1749,8 +1749,8 @@ function queensberry_passenger_request_flyer()
         $mail->Port = SMTP_PORT;
 
         $mail->setFrom('naoresponda@flytour.com.br', 'Queensberry');
-        $mail->addAddress('ericssm96@gmail.com');
-        //$mail->addAddress('loja@queensberry.com.br');
+        // $mail->addAddress('ericssm96@gmail.com');
+        $mail->addAddress('loja@queensberry.com.br');
 
         $mail->isHTML(true);
         $mail->Subject = 'Queensberry - Solicitar Folheto';

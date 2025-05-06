@@ -17,35 +17,70 @@
 
   if (is_front_page()) {
     $page_title = $site_title;
-  } elseif (is_category()) {
+    $full_title = $site_title;
+  } else if (is_category()) {
     $page_title = single_cat_title('', false);
-  } elseif (is_tag()) {
+    $full_title = $page_title . " - " . $site_title;
+  } else if (is_tag()) {
     $page_title = single_tag_title('', false);
+    $full_title = $page_title . " - " . $site_title;
+  } else if (is_single()) {
+    // $page_title = single_tag_title('', false);
+    // $page_title = wp_title('');
+    $page_title = get_the_title();
+    $full_title = $page_title . " - " . $site_title;
   } else {
     $page_title = get_the_title();
+    $full_title = $page_title . " - " . $site_title;
   }
 
   $page_title = strtoupper($page_title);
   $site_title = strtoupper($site_title);
-  ?>
-  <title><?= $page_title . " - " . $site_title; ?></title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  $full_title = strtoupper($full_title)
+  
 
+  ?>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <meta name="adopt-website-id" content="2c707e8a-d87e-41de-b892-ddea7690a799" />
+  <script src="//tag.goadopt.io/injector.js?website_code=2c707e8a-d87e-41de-b892-ddea7690a799" 
+  class="adopt-injector"></script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MG9V8HG');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <?php
-$dolar_currency_info = require_once "dolar-currency-conversion-info.php";
-$euro_currency_info = require_once "euro-currency-conversion-info.php";
 
-$last_dolar_conversion_update_date = explode("T", $dolar_currency_info["DataAtualizacao"])[0];
-$last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao"])[0];
-$last_conversion_date_obj = new DateTime($last_conversion_update_date);
-$formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
+// Carrega informações de câmbio
+$dolar_currency_info = @require_once __DIR__ . "/dolar-currency-conversion-info.php";
+$euro_currency_info = @require_once __DIR__. "/euro-currency-conversion-info.php";
 
-$last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
-$dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
-// $euro_price = str_replace(".", ",", $euro_currency_info["ValorCambio"]);
-$euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
+// Inicializa valores padrões
+$dolar_price = "N/D";
+$euro_price = "N/D";
+$formatted_conversion_date = "Data indisponível";
+$last_dolar_conversion_update_time = "--:--";
+
+// Se os dados forem carregados corretamente
+if (is_array($dolar_currency_info) && isset($dolar_currency_info["DataAtualizacao"], $dolar_currency_info["ValorCambio"])) {
+  $last_dolar_conversion_update_date = explode("T", $dolar_currency_info["DataAtualizacao"])[0];
+  $last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
+  $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
+}
+
+if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"], $euro_currency_info["ValorCambio"])) {
+  $last_conversion_update_date = explode("T", $euro_currency_info["DataAtualizacao"])[0];
+  $last_conversion_date_obj = new DateTime($last_conversion_update_date);
+  $formatted_conversion_date = $last_conversion_date_obj->format('d/m/Y');
+  $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 0, 4);
+}
+
+
 ?>
 
 
@@ -53,6 +88,10 @@ $euro_price = substr(str_replace(".", ",", $euro_currency_info["ValorCambio"]), 
   isModalOpen: false,
 }" x-bind:style="isModalOpen ? 'overflow: hidden;' : 'overflow: auto;'">
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MG9V8HG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <nav
     x-bind:class="isNavSelected || isMouseOverNav || isWindowScrolledPastThreshold ? 'desktop-navigation white-nav' : 'desktop-navigation'"
     x-data="{

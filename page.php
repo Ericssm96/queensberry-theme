@@ -41,7 +41,7 @@ if (is_page()) {
     $nights_qtty = $program_info["QtdNoitesViagem"];
     $visit_details_quick_info = $program_info["Detalhes"];
     $program_outings_info = $program_info["SaidasPrograma"];
-    $images_folder_prefix_url = "https://www.queensberry.com.br/imagens/";
+    $images_folder_prefix_url = "https://img.queensberry.com.br/imagens/";
     $category_image_folder = $current_category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
     $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
     $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002

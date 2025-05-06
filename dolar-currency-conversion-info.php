@@ -1,6 +1,6 @@
 <?php return array (
-  'Data' => '2025-04-28',
+  'Data' => '2025-05-05',
   'Moeda' => 'US$',
-  'ValorCambio' => '5.8300',
-  'DataAtualizacao' => '2025-04-25T15:27:48',
+  'ValorCambio' => '5.8000',
+  'DataAtualizacao' => '2025-05-05T15:04:38',
 );

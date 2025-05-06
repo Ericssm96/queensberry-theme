@@ -54,6 +54,11 @@ function capitalize_pt_br_string($str) {
 
 require_once "form-handler.php";
 
+function qb_theme_setup() {
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'qb_theme_setup');
+
 function convert_string_to_uppercase_url($string) {
     // Convert the string to uppercase
     $string = mb_strtoupper($string);
@@ -1653,7 +1658,7 @@ function custom_search_results($request) {
                 return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
             });
 
-            $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
+            $images_folder_prefix_url = "https://img.queensberry.com.br/imagens//Programas/";
             $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
             $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
             $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
@@ -1739,7 +1744,7 @@ function custom_tag_filter_results($request) {
                 return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
             });
 
-            $images_folder_prefix_url = "https://www.queensberry.com.br/imagens//Programas/";
+            $images_folder_prefix_url = "https://img.queensberry.com.br/imagens//Programas/";
             $category_image_folder = $category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
             $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
             $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002

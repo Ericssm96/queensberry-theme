@@ -7,7 +7,7 @@ get_header();
 $flyers_array = get_flyers_array();
 
 
-$flyer_img_url_prefix = "https://www.queensberry.com.br/imagens//Folhetos";
+$flyer_img_url_prefix = "https://img.queensberry.com.br/imagens//Folhetos";
 
 ?>
 

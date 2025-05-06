@@ -1,0 +1,9 @@
+Etapas de desenvolvimento restante no site Queensberry:
+
+- Deixar conteúdo da Home dinâmico: 5-8 horas
+- Atualizar links dos menus (atualmente estão atualizados com o conteúdo que já montei no site, mas ainda falta comparar com o site oficial e corrigir as diferenças): 1 hora
+- Inserir os formulários: Não consigo estipular um tempo baseado na informação que tenho sobre os formulários.
+- Página de "Fale Conosco": 1 dia
+- Atualizar conteúdo e estilo da página "Quem Somos": 5 horas
+- Página "Seja um Parceiro" com formulário: 10-16 horas (depende da complexidade de implementação e teste do script de envio relacionado ao formulário)
+- Teste geral das funcionalidades implementadas e estilo: 1 dia (Como a maior parte dos testes eu já fiz e consertei os erros que encontrei, diria que 1 dia é tempo o suficiente para um teste detalhado quando tudo estiver finalizado).
