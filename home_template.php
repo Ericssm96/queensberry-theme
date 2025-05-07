@@ -18,8 +18,8 @@ $json_videos_links = json_encode($videos_links, JSON_UNESCAPED_SLASHES | JSON_HE
 
 
 // Carrega informações de câmbio
-$dolar_currency_info = @require_once __DIR__ . "/dolar-currency-conversion-info.php";
-$euro_currency_info = @require_once __DIR__. "/euro-currency-conversion-info.php";
+$dolar_currency_info = require __DIR__ . "/dolar-currency-conversion-info.php";
+$euro_currency_info = require __DIR__ . "/euro-currency-conversion-info.php";
 
 // Inicializa valores padrões
 $dolar_price = "N/D";

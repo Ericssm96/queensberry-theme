@@ -506,7 +506,7 @@ get_header(); ?>
         <strong class="title">RJ – RIO DE JANEIRO | MG – JUÍZ DE FORA</strong>
         <div class="info-cluster">
           <p>Elton Anselmo</p>
-          <p>Tel.: 11 3217-7128  | 21 99294-5718</p>
+          <p>Tel.: 11 3217-7128  | 21 99471-0408</p>
           <p>E-mail: elton.anselmo@queensberry.com.br</p>
         </div>
       </div>

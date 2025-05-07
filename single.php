@@ -396,7 +396,7 @@ if (is_single()) {
       isPriceTagOpen: false,
       productHasPriceInfo: false,
     }">
-      <button class="price-info-toggle" @click="isPriceTagOpen = true" x-show="!isPriceTagOpen">Solicitar <br/> v</button>
+      <button class="price-info-toggle" @click="isPriceTagOpen = true" x-show="false">Solicitar <br/> v</button>
       <article class="price" x-show="isPriceTagOpen">
         <span @click="isPriceTagOpen = false" class="close-icon"><i class="fa-solid fa-x"></i></span>
         <div class="get-more-info" x-show="!productHasPriceInfo">

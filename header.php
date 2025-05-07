@@ -57,8 +57,8 @@
 <?php
 
 // Carrega informações de câmbio
-$dolar_currency_info = @require_once __DIR__ . "/dolar-currency-conversion-info.php";
-$euro_currency_info = @require_once __DIR__. "/euro-currency-conversion-info.php";
+$dolar_currency_info = require __DIR__ . "/dolar-currency-conversion-info.php";
+$euro_currency_info = require __DIR__ . "/euro-currency-conversion-info.php";
 
 // Inicializa valores padrões
 $dolar_price = "N/D";
@@ -139,83 +139,83 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
                 <div class="row">
                   <h3>
                     <header>
-                      <h3><a href="<?= home_url(); ?>/tag/africa" class="title-link">África</a></h3>
+                      <h3><a href="<?= home_url(); ?>/destino/africa" class="title-link">África</a></h3>
                     </header>
                   </h3>
                   <ul class="mega-links">
-                    <li><a href="<?= home_url(); ?>/tag/africa-do-sul">África do Sul</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/egito">Egito</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/marrocos">Marrocos</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/quenia">Quênia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/tanzania">Tanzânia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/africa" class="plus">[+]</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/africa-do-sul">África do Sul</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/egito">Egito</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/marrocos">Marrocos</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/quenia">Quênia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/tanzania">Tanzânia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/africa" class="plus">[+]</a></li>
                   </ul>
                 </div>
                 <div class="row">
                   <header>
-                    <h3><a href="<?= home_url(); ?>/tag/americas" class="title-link">Américas</a></h3>
+                    <h3><a href="<?= home_url(); ?>/destino/americas" class="title-link">Américas</a></h3>
                   </header>
                   <ul class="mega-links">
-                    <li><a href="<?= home_url(); ?>/tag/argentina">Argentina</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/brasil">Brasil</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/canada">Canadá</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/chile">Chile</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/estados-unidos">Estados Unidos</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/mexico">México</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/peru">Peru</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/americas" class="plus">[+]</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/argentina">Argentina</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/brasil">Brasil</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/canada">Canadá</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/chile">Chile</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/estados-unidos">Estados Unidos</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/mexico">México</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/peru">Peru</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/americas" class="plus">[+]</a></li>
                   </ul>
                 </div>
                 <div class="row">
                   <header>
-                    <h3><a href="<?= home_url(); ?>/tag/asia" class="title-link">Ásia</a></h3>
+                    <h3><a href="<?= home_url(); ?>/destino/asia" class="title-link">Ásia</a></h3>
                   </header>
                   <ul class="mega-links">
-                    <li><a href="<?= home_url(); ?>/tag/china">China</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/india">Índia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/japao">Japão</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/maldivas">Maldivas</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/tailandia">Tailândia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/asia" class="plus">[+]</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/china">China</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/india">Índia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/japao">Japão</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/maldivas">Maldivas</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/tailandia">Tailândia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/asia" class="plus">[+]</a></li>
                   </ul>
                 </div>
                 <div class="row">
                   <header>
-                    <h3><a href="<?= home_url(); ?>/tag/europa" class="title-link">Europa</a></h3>
+                    <h3><a href="<?= home_url(); ?>/destino/europa" class="title-link">Europa</a></h3>
                   </header>
                   <ul class="mega-links">
-                    <li><a href="<?= home_url(); ?>/tag/alemanha">Alemanha</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/croacia">Croácia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/espanha">Espanha</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/grecia">Grécia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/italia">Itália</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/portugal">Portugal</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/russia">Rússia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/turquia">Turquia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/europa" class="plus">[+]</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/alemanha">Alemanha</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/croacia">Croácia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/espanha">Espanha</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/grecia">Grécia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/italia">Itália</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/portugal">Portugal</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/russia">Rússia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/turquia">Turquia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/europa" class="plus">[+]</a></li>
                   </ul>
                 </div>
                 <div class="row">
                   <header>
-                    <h3><a href="<?= home_url(); ?>/tag/oceania" class="title-link">Oceania</a></h3>
+                    <h3><a href="<?= home_url(); ?>/destino/oceania" class="title-link">Oceania</a></h3>
                   </header>
                   <ul class="mega-links">
-                    <li><a href="<?= home_url(); ?>/tag/australia">Austrália</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/nova-zelandia">Nova Zelândia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/oceania" class="plus">[+]</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/australia">Austrália</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/nova-zelandia">Nova Zelândia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/oceania" class="plus">[+]</a></li>
                   </ul>
                 </div>
                 <div class="row">
                   <header>
-                    <h3><a href="<?= home_url(); ?>/tag/oriente-medio" class="title-link">Oriente Médio</a></h3>
+                    <h3><a href="<?= home_url(); ?>/destino/oriente-medio" class="title-link">Oriente Médio</a></h3>
                   </header>
                   <ul class="mega-links">
-                    <li><a href="<?= home_url(); ?>/tag/emirados-arabes">Emirados Árabes</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/ira">Irã</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/israel">Israel</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/jordania">Jordânia</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/libano">Líbano</a></li>
-                    <li><a href="<?= home_url(); ?>/tag/emirados-arabes" class="plus">[+]</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/emirados-arabes">Emirados Árabes</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/ira">Irã</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/israel">Israel</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/jordania">Jordânia</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/libano">Líbano</a></li>
+                    <li><a href="<?= home_url(); ?>/destino/emirados-arabes" class="plus">[+]</a></li>
                   </ul>
                 </div>
               </div>
@@ -226,39 +226,39 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
             <div class="mega-box">
               <div class="content-b">
                 <ul class="left-col">
-                  <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-                  <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>
-                  <li><a href="<?= home_url(); ?>/category/driveness-experience">Driveness Experience</a></li>
-                  <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
-                  <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours Regulares</a></li>
-                  <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil In</a></li>
-                  <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzeiros</a></li>
+                  <li><a href="<?= home_url(); ?>/categoria/ferias-na-neve">Férias na neve</a></li>
+                  <li><a href="<?= home_url(); ?>/categoria/walt-disney-world-resort">Walt Disney World Resort</a></li>
+                  <li><a href="<?= home_url(); ?>/categoria/driveness-experience">Driveness Experience</a></li>
+                  <li><a href="<?= home_url(); ?>/categoria/viagens-personalizadas">Viagens personalizadas</a></li>
+                  <li><a href="<?= home_url(); ?>/categoria/tours-regulares">Tours Regulares</a></li>
+                  <li><a href="<?= home_url(); ?>/categoria/brasil-in">Brasil In</a></li>
+                  <li><a href="<?= home_url(); ?>/categoria/cruzeiros">Cruzeiros</a></li>
                 </ul>
                 <div class="right-col">
                   <header>
-                    <h3><a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros No Mundo</a></h3>
+                    <h3><a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo">GBM - Grupos Brasileiros No Mundo</a></h3>
                   </header>
                   <ul class="cards-area">
                     <li>
-                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log">
+                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-4-continentes.png" alt="Imagem Promocional Grupo Brasil no Mundo - 4 Continentes" />
                       </a>
                       <p>4 continentes 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=europa-2025-log">
+                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=europa-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-europa.png" alt="Imagem Promocional Grupo Brasil no Mundo - Europa" />
                       </a>
                       <p>Europa 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
+                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-baixa-temporada.png" alt="Imagem Promocional Grupo Brasil no Mundo - Baixa Temporada" />
                       </a>
                       <p>Baixa Temporada 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log">
+                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-slow-travel.png" alt="Imagem Promocional Grupo Brasil no Mundo - Slow Travel" />
                       </a>
                       <p>Slow Travel 2025</p>
@@ -311,12 +311,12 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
                 class="fa-solid fa-caret-down"></i></span></label>
           <input type="checkbox" name="dropdown-mb" id="destinos-mb" />
           <ul class="destinos-items-mb">
-            <li><a href="<?= home_url(); ?>/tag/africa">África</a></li>
-            <li><a href="<?= home_url(); ?>/tag/americas">Américas</a></li>
-            <li><a href="<?= home_url(); ?>/tag/asia">Ásia</a></li>
-            <li><a href="<?= home_url(); ?>/tag/europa">Europa</a></li>
-            <li><a href="<?= home_url(); ?>/tag/oceania">Oceania</a></li>
-            <li><a href="<?= home_url(); ?>/tag/oriente-medio">Oriente Médio</a></li>
+            <li><a href="<?= home_url(); ?>/destino/africa">África</a></li>
+            <li><a href="<?= home_url(); ?>/destino/americas">Américas</a></li>
+            <li><a href="<?= home_url(); ?>/destino/asia">Ásia</a></li>
+            <li><a href="<?= home_url(); ?>/destino/europa">Europa</a></li>
+            <li><a href="<?= home_url(); ?>/destino/oceania">Oceania</a></li>
+            <li><a href="<?= home_url(); ?>/destino/oriente-medio">Oriente Médio</a></li>
           </ul>
         </li>
         <li>
@@ -324,12 +324,12 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
                 class="fa-solid fa-caret-down"></i></span></label>
           <input type="checkbox" name="dropdown-mb" id="produtos-mb" />
           <ul class="produtos-items-mb">
-            <li><a href="<?= home_url(); ?>/category/ferias-na-neve">Férias na neve</a></li>
-            <li><a href="<?= home_url(); ?>/category/walt-disney-world-resort">Walt Disney World Resort</a></li>
-            <li><a href="<?= home_url(); ?>/category/viagens-personalizadas">Viagens personalizadas</a></li>
-            <li><a href="<?= home_url(); ?>/category/tours-regulares">Tours regulares</a></li>
-            <li><a href="<?= home_url(); ?>/category/brasil-in">Brasil in</a></li>
-            <li><a href="<?= home_url(); ?>/category/cruzeiros">Cruzerios</a></li>
+            <li><a href="<?= home_url(); ?>/categoria/ferias-na-neve">Férias na neve</a></li>
+            <li><a href="<?= home_url(); ?>/categoria/walt-disney-world-resort">Walt Disney World Resort</a></li>
+            <li><a href="<?= home_url(); ?>/categoria/viagens-personalizadas">Viagens personalizadas</a></li>
+            <li><a href="<?= home_url(); ?>/categoria/tours-regulares">Tours regulares</a></li>
+            <li><a href="<?= home_url(); ?>/categoria/brasil-in">Brasil in</a></li>
+            <li><a href="<?= home_url(); ?>/categoria/cruzeiros">Cruzerios</a></li>
           </ul>
         </li>
         <li><a href="https://blog.queensberry.com.br/" target="_blank" rel="noopener">Blog</a></li>
