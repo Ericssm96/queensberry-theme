@@ -130,6 +130,8 @@ function queensberry_verify_recaptcha_c()
 // Form - Fale Conosco
 function queensberry_handle_fale_conosco_sign_up()
 {
+    $form_data = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
+    queensberry_handle_contact_us_mailing($form_data);
 
     // Colocar dados do formulário aqui
     $user_first_name = $_POST["FIRST_NAME"];
@@ -147,131 +149,135 @@ function queensberry_handle_fale_conosco_sign_up()
     $assunto = $_POST["ASSUNTO"];
     $mensagem = $_POST["MENSAGEM"];
 
-    $api_credentials = get_API_credentials();
-    $api_key = $api_credentials["authToken"];
-
-    //modelo do payload
-    $sign_up_payload = [
-        "recordData" => [
-            "fieldNames" => [
-                "FIRST_NAME",
-                "LAST_NAME",
-                "CPF_USUARIO",
-                "EMAIL_ADDRESS_",
-                "MOBILE_NUMBER_",
-                "EMAIL_PERMISSION_STATUS_",
-                "MOBILE_PERMISSION_STATUS_"
-            ],
-            "records" => [
-                [
-                    $user_first_name,
-                    $user_last_name,
-                    $formatted_cpf,
-                    $user_email,
-                    $formatted_phone,
-                    $email_opt_in,
-                    $cel_opt_in
-                ]
-            ],
-            "mapTemplateName" => null
-        ],
-        "mergeRule" => [
-            "htmlValue" => "H",
-            "optinValue" => "I",
-            "textValue" => "T",
-            "insertOnNoMatch" => true,
-            "updateOnMatch" => "REPLACE_ALL",
-            "matchColumnName1" => "EMAIL_ADDRESS_",
-            "matchColumnName2" => null,
-            "matchOperator" => "NONE",
-            "optoutValue" => "O",
-            "rejectRecordIfChannelEmpty" => null,
-            "defaultPermissionStatus" => "OPTIN"
-        ]
-    ];
-
-
-    $supplemental_register_payload = [
-        "recordData" => [
-            "fieldNames" => [
-                "EMAIL_ADDRESS_",
-                "ORIGEM_CADASTRO",
-                "URL_CADASTRO"
-            ],
-            "records" => [
-                [
-                    $user_email,
-                    "Formulário Fale Conosco Queensberry",
-                    $sign_up_url
-                ]
-            ],
-            "mapTemplateName" => null
-        ],
-
-        "insertOnNoMatch" => true,
-        "updateOnMatch" => "REPLACE_ALL",
-
-    ];
-
-    $profile_ext_payload = [
-        "recordData" => [
-            "fieldNames" => [
-                "EMAIL_ADDRESS_",
-                "ASSUNTO",
-                "MENSAGEM"
-            ],
-            "records" => [
-                [
-                    $user_email,
-                    $assunto,
-                    $mensagem
-                ]
-            ],
-            "mapTemplateName" => null
-        ],
-
-        "insertOnNoMatch" => true,
-        "updateOnMatch" => "REPLACE_ALL",
-        "matchColumnName1" => "EMAIL_ADDRESS",
-    ];
-
-
-    $count = 0;
-
-    while ($count < 3) {
-        $sign_up_result = queensberry_sign_up_responsys($sign_up_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/lists/Profile_List_Queensberry/members');
-
-
-        if ($sign_up_result["status"] == 200) {
-            $profile_ext_result = queensberry_responsys_profile_extension($profile_ext_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/lists/Profile_List_Queensberry/listExtensions/Pet_Queensberry_Fale_Conosco/members');
-
-            if ($profile_ext_result["status"] == 200) {
-                $supplemental_register_result = queensberry_responsys_supplemental_table($supplemental_register_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/folders/!MasterData/suppData/SUP_ORIGENS_CADASTROS_QUEENSBERRY/members');
-
-                if ($supplemental_register_result["status"] == 200) {
-                    wp_send_json_success([
-                        "message" => "Cadastro concluído com sucesso!",
-                        "phone" => $formatted_phone,
-                        "sign_up_result" => $sign_up_result,
-                        "profile_ext" => $profile_ext_result,
-                        "supp_result" => $supplemental_register_result
-                    ]);
-                    //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
-                    return;
-                }
-            }
-        }
-
-        $count += 1;
+    if($assunto === "Atendimento ao Passageiro") {
 
         $api_credentials = get_API_credentials();
         $api_key = $api_credentials["authToken"];
+    
+        //modelo do payload
+        $sign_up_payload = [
+            "recordData" => [
+                "fieldNames" => [
+                    "FIRST_NAME",
+                    "LAST_NAME",
+                    "CPF_USUARIO",
+                    "EMAIL_ADDRESS_",
+                    "MOBILE_NUMBER_",
+                    "EMAIL_PERMISSION_STATUS_",
+                    "MOBILE_PERMISSION_STATUS_"
+                ],
+                "records" => [
+                    [
+                        $user_first_name,
+                        $user_last_name,
+                        $formatted_cpf,
+                        $user_email,
+                        $formatted_phone,
+                        $email_opt_in,
+                        $cel_opt_in
+                    ]
+                ],
+                "mapTemplateName" => null
+            ],
+            "mergeRule" => [
+                "htmlValue" => "H",
+                "optinValue" => "I",
+                "textValue" => "T",
+                "insertOnNoMatch" => true,
+                "updateOnMatch" => "REPLACE_ALL",
+                "matchColumnName1" => "EMAIL_ADDRESS_",
+                "matchColumnName2" => null,
+                "matchOperator" => "NONE",
+                "optoutValue" => "O",
+                "rejectRecordIfChannelEmpty" => null,
+                "defaultPermissionStatus" => "OPTIN"
+            ]
+        ];
+    
+    
+        $supplemental_register_payload = [
+            "recordData" => [
+                "fieldNames" => [
+                    "EMAIL_ADDRESS_",
+                    "ORIGEM_CADASTRO",
+                    "URL_CADASTRO"
+                ],
+                "records" => [
+                    [
+                        $user_email,
+                        "Formulário Fale Conosco Queensberry",
+                        $sign_up_url
+                    ]
+                ],
+                "mapTemplateName" => null
+            ],
+    
+            "insertOnNoMatch" => true,
+            "updateOnMatch" => "REPLACE_ALL",
+    
+        ];
+    
+        $profile_ext_payload = [
+            "recordData" => [
+                "fieldNames" => [
+                    "EMAIL_ADDRESS_",
+                    "ASSUNTO",
+                    "MENSAGEM"
+                ],
+                "records" => [
+                    [
+                        $user_email,
+                        $assunto,
+                        $mensagem
+                    ]
+                ],
+                "mapTemplateName" => null
+            ],
+    
+            "insertOnNoMatch" => true,
+            "updateOnMatch" => "REPLACE_ALL",
+            "matchColumnName1" => "EMAIL_ADDRESS",
+        ];
+    
+    
+        $count = 0;
+    
+        while ($count < 3) {
+            $sign_up_result = queensberry_sign_up_responsys($sign_up_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/lists/Profile_List_Queensberry/members');
+    
+    
+            if ($sign_up_result["status"] == 200) {
+                $profile_ext_result = queensberry_responsys_profile_extension($profile_ext_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/lists/Profile_List_Queensberry/listExtensions/Pet_Queensberry_Fale_Conosco/members');
+    
+                if ($profile_ext_result["status"] == 200) {
+                    $supplemental_register_result = queensberry_responsys_supplemental_table($supplemental_register_payload, $api_key, 'https://i551r8c-api.responsys.ocs.oraclecloud.com/rest/api/v1.3/folders/!MasterData/suppData/SUP_ORIGENS_CADASTROS_QUEENSBERRY/members');
+    
+                    if ($supplemental_register_result["status"] == 200) {
+                        wp_send_json_success([
+                            "message" => "Cadastro concluído com sucesso!",
+                            "phone" => $formatted_phone,
+                            "sign_up_result" => $sign_up_result,
+                            "profile_ext" => $profile_ext_result,
+                            "supp_result" => $supplemental_register_result
+                        ]);
+                        //header('Location: https://queensberryforms.abc7484.sg-host.com/obrigado/');
+                        return;
+                    }
+                }
+            }
+    
+            $count += 1;
+    
+            $api_credentials = get_API_credentials();
+            $api_key = $api_credentials["authToken"];
+        }
+    
+        wp_send_json_error([
+            "message" => "O servidor está offline no momento, por favor, tente novamente mais tarde",
+        ]);
+        return;
     }
 
-    wp_send_json_error([
-        "message" => "O servidor está offline no momento, por favor, tente novamente mais tarde",
-    ]);
-    return;
 }
 
 // Form - Popup Cadastro
@@ -1761,7 +1767,7 @@ function queensberry_passenger_request_flyer()
 
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <title>Queensberry - Trabalhe Conosco </title>
+            <title>Queensberry - Solicitar Folheto </title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </head>
 
@@ -1864,15 +1870,155 @@ function queensberry_passenger_request_flyer()
 add_action('admin_post_queensberry_solicitar_folheto_passageiro', 'queensberry_passenger_request_flyer');
 add_action('admin_post_nopriv_queensberry_solicitar_folheto_passageiro', 'queensberry_passenger_request_flyer');
 
-function queensberry_handle_contact_us_mailing()
+function queensberry_handle_contact_us_mailing($data)
 {
 
-    $nome = filter_input(INPUT_POST, "FIRST_NAME", FILTER_SANITIZE_SPECIAL_CHARS);
+    $nome = $data["FIRST_NAME"];
+    $sobrenome = $data["LAST_NAME"];
+    $email = $data["EMAIL_ADDRESS_"];
+    $telefone = $data["MOBILE_NUMBER_"];
+    $cpf = $data["CPF_USUARIO"];
+    $assunto = $data["ASSUNTO"];
+    $mensagem = $data["MENSAGEM"];
+
+    /* $nome = filter_input(INPUT_POST, "FIRST_NAME", FILTER_SANITIZE_SPECIAL_CHARS);
     $sobrenome = filter_input(INPUT_POST, "LAST_NAME", FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_input(INPUT_POST, "EMAIL_ADDRESS_", FILTER_SANITIZE_EMAIL);
     $telefone = filter_input(INPUT_POST, "MOBILE_NUMBER_", FILTER_SANITIZE_SPECIAL_CHARS);
     $cpf = filter_input(INPUT_POST, "CPF_USUARIO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $assunto = filter_input(INPUT_POST, "ASSUNTO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $mensagem = filter_input(INPUT_POST, "MENSAGEM", FILTER_SANITIZE_SPECIAL_CHARS); */
+
+    $mail = new PHPMailer(true);
+    try {
+        $mail->SMTPDebug = SMTP_DEBUG;
+        $mail->isSMTP();
+        $mail->Host = SMTP_HOST;
+        $mail->SMTPAuth = SMTP_AUTH;
+        $mail->Username = SMTP_USER;
+        $mail->Password = SMTP_PASS;
+        $mail->SMTPSecure = SMTP_SECURE;
+        $mail->Port = SMTP_PORT;
+
+        $destinatario = "";
+
+        if($assunto === "Atendimento ao Agente de Viagens" || $assunto === "Pós Vendas") {
+            $destinatario = "atendimento@queensberry.com.br";
+        } elseif ($assunto === "Assessoria de Imprensa") {
+            $destinatario = "mara@queensberry.com.br";
+        } else if ($assunto === "Atendimento ao Passageiro" || $assunto === "Viagens de Incentivo") {
+            $destinatario = "loja@queensberry.com.br";
+        }
+
+        $mail->setFrom('naoresponda@flytour.com.br', 'Queensberry');
+        $mail->addAddress($destinatario);
+
+        $mail->isHTML(true);
+        $mail->Subject = 'Queensberry - Fale Conosco';
+
+        $mail->Body =
+            <<<HTML
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Queensberry - Fale Conosco </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </head>
+
+        <body>
+            <div style="font-family: Arial; display: block; width: 100%;">
+                <p style="text-align: justify; font-size: 1.1rem; ; margin: 0 auto; padding: 20px; max-width: 600px; color: #04004f; ">Um novo registro foi criado através do formulário "Queensberry - Fale Conosco". Segue detalhes do registro:</p>
+                <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h1 style="font-size: 1.1rem">Dados Pessoais</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Nome:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$nome</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Sobrenome:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$sobrenome</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">E-mail:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$email</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Telefone:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$telefone</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">CPF:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cpf</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+
+                <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h1 style="font-size: 1.1rem">Detalhes</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Assunto:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$assunto</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Mensagem:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$mensagem</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </body>
+
+        </html>
+        HTML;
+
+        $mail->CharSet = "UTF-8";
+        $mail->AltBody = 'Este email requer visualização em HTML';
+
+        foreach ($_FILES as $file) {
+            if ($file['error'] == UPLOAD_ERR_OK) {
+                $mail->addAttachment($file['tmp_name'], $file['name']);
+            }
+        }
+
+        $mail->send();
+
+        $home_url = home_url();
+
+        //header("Location: $home_url/obrigado/");
+
+        if($assunto !== "Atendimento ao Passageiro") {
+            wp_send_json_success([
+                'message' => 'Email enviado',
+            ]);
+        }
+
+        
+    } catch (Exception $e) {
+        wp_send_json_error([
+            'message' => 'Email não enviado',
+        ]);
+
+        return;
+    }
+}
+
+function queensberry_request_program_info()
+{
+
+    $nome = filter_input(INPUT_POST, "FIRST_NAME", FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, "EMAIL_ADDRESS_", FILTER_SANITIZE_EMAIL);
+    $telefone = filter_input(INPUT_POST, "MOBILE_NUMBER_", FILTER_SANITIZE_SPECIAL_CHARS);
+    $estado = filter_input(INPUT_POST, "ESTADO", FILTER_SANITIZE_SPECIAL_CHARS);
+    $cidade = filter_input(INPUT_POST, "CIDADE", FILTER_SANITIZE_SPECIAL_CHARS);
+    $complemento = filter_input(INPUT_POST, "PERFIL", FILTER_SANITIZE_SPECIAL_CHARS);
     $mensagem = filter_input(INPUT_POST, "MENSAGEM", FILTER_SANITIZE_SPECIAL_CHARS);
+
+
 
     $mail = new PHPMailer(true);
     try {
@@ -1886,10 +2032,10 @@ function queensberry_handle_contact_us_mailing()
         $mail->Port = SMTP_PORT;
 
         $mail->setFrom('naoresponda@flytour.com.br', 'Queensberry');
-        // $mail->addAddress('ericssm96@gmail.com');
+        $mail->addAddress('ericssm96@gmail.com');
 
         $mail->isHTML(true);
-        $mail->Subject = 'Queensberry - Solicitar Folheto';
+        $mail->Subject = 'Queensberry - Solicitar Info do Roteiro';
 
         $mail->Body =
             <<<HTML
@@ -1898,13 +2044,13 @@ function queensberry_handle_contact_us_mailing()
 
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <title>Queensberry - Trabalhe Conosco </title>
+            <title>Queensberry - Solicitar Informações do Roteiro </title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </head>
 
         <body>
             <div style="font-family: Arial; display: block; width: 100%;">
-                <p style="text-align: justify; font-size: 1.1rem; ; margin: 0 auto; padding: 20px; max-width: 600px; color: #04004f; ">Um novo cadastro foi realizado através do formulário "Queensberry - Solicitar Folheto (Passageiro)". Segue detalhes do registro:</p>
+                <p style="text-align: justify; font-size: 1.1rem; ; margin: 0 auto; padding: 20px; max-width: 600px; color: #04004f; ">Um novo envio foi realizado através do formulário "Queensberry - Solicitar Informações do Roteiro". Segue detalhes do registro:</p>
                 <div style="width: 100%; max-width: 600px; margin: 0 auto;">
                     <h1 style="font-size: 1.1rem">Dados Pessoais</h1>
                     <table style="width: 100%;">
@@ -1926,26 +2072,6 @@ function queensberry_handle_contact_us_mailing()
                 <div style="width: 100%; max-width: 600px; margin: 0 auto;">
                     <h1 style="font-size: 1.1rem">Endereço</h1>
                     <table style="width: 100%;">
-                        <tr>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">CEP:</td>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cep</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Bairro:</td>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$bairro</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Rua/Av:</td>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$rua</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Número:</td>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$numero_endereco</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Complemento:</td>
-                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$complemento</td>
-                        </tr>
                         <tr>
                             <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Cidade:</td>
                             <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$cidade</td>
@@ -1998,5 +2124,5 @@ function queensberry_handle_contact_us_mailing()
     }
 }
 
-add_action('admin_post_queensberry_solicitar_folheto_passageiro', 'queensberry_handle_contact_us_mailing');
-add_action('admin_post_nopriv_queensberry_solicitar_folheto_passageiro', 'queensberry_handle_contact_us_mailing');
+add_action('admin_post_queensberry_mail_solicitar_programa', 'queensberry_request_program_info');
+add_action('admin_post_nopriv_queensberry_mail_solicitar_programa', 'queensberry_request_program_info');

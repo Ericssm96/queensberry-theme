@@ -1102,4 +1102,16 @@ body {
 .site-footer .footer-bottom img {
   width: 160px;
   height: 33px;
+}
+
+.stand-in-navbar {
+  background-color: #0C0150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
+.stand-in-navbar .logo {
+  width: 160px;
+  height: 40px;
 }/*# sourceMappingURL=main_navigation.css.map */

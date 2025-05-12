@@ -1244,3 +1244,16 @@ body {
     }
   }
 }
+
+.stand-in-navbar {
+  background-color: $navy;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+
+  .logo {
+    width: 160px;
+    height: 40px;
+  }
+}

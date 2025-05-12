@@ -115,16 +115,15 @@ get_header(); ?>
                     ).done((res) => {
                       jQuery("#actionField").val("queensberry_fale_conosco");
                       if(res.data.message === "OK") {
-                        if(subject === 'Atendimento ao Passageiro') {
-                          jQuery.post(
-                              "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
-                            $("#f_queensberry_fale_conosco").serialize(),
-                            function (data) {
-                              console.log(data); // Exibe a resposta no console
-                              alert("Envio realizado com sucesso!");
-                            }
-                          )
-                        } else {
+                        jQuery.post(
+                            "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_fale_conosco",
+                          $("#f_queensberry_fale_conosco").serialize(),
+                          function (data) {
+                            console.log(data); // Exibe a resposta no console
+                            alert("Envio realizado com sucesso!");
+                          }
+                        )
+                        if(subject !== 'Atendimento ao Passageiro') {
                           jQuery
                             .ajax({
                               type: "POST",

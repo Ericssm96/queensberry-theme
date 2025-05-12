@@ -396,7 +396,7 @@ if (is_single()) {
       isPriceTagOpen: false,
       productHasPriceInfo: false,
     }">
-      <button class="price-info-toggle" @click="isPriceTagOpen = true" x-show="false">Solicitar <br/> v</button>
+      <button class="price-info-toggle" @click="isPriceTagOpen = true" x-show="!isPriceTagOpen">Solicitar <br/> v</button>
       <article class="price" x-show="isPriceTagOpen">
         <span @click="isPriceTagOpen = false" class="close-icon"><i class="fa-solid fa-x"></i></span>
         <div class="get-more-info" x-show="!productHasPriceInfo">
@@ -639,9 +639,7 @@ if (is_single()) {
                                 function (data) {
                                     console.log(data);
                                 }
-                            ).done(() => {
-                                alert("Envio realizado com sucesso");
-                            });
+                            )
                         } else if (perfil === "agente") {
                             // Se for "agente", envia para Eloqua
                             jQuery.ajax({
@@ -654,13 +652,22 @@ if (is_single()) {
                                 error: (res) => {
                                     console.log("Eloqua fail", res);
                                 },
-                            }).done(() => {
-                                alert("Envio realizado com sucesso");
-                            });
+                            })
                         }                  
                       } else {
                         console.log("Recaptcha error")
                       }
+                    }).then((res)=> {
+                      $("#actionField").val("queensberry_mail_solicitar_programa");
+                      jQuery.post(
+                        "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_mail_solicitar_programa",
+                        $("#f_queensberry_programa").serialize(),
+                        function (data) {
+                            console.log(data);
+                        }
+                      ).done(() => {
+                          alert("Envio realizado com sucesso");
+                      });
                     })
                   });
                 });

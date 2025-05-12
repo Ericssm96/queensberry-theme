@@ -1,0 +1,65 @@
+main {
+  box-sizing: border-box;
+}
+main * {
+  box-sizing: border-box;
+}
+
+.core {
+  height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8F8F8;
+  row-gap: 52px;
+}
+.core article {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  row-gap: 22px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 92vw;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+}
+@media screen and (min-width: 768px) {
+  .core article {
+    max-width: unset;
+    width: 525px;
+    padding: 42px;
+  }
+}
+.core article .highlight {
+  color: #99D02C;
+  font-weight: bold;
+  font-size: 2.1rem;
+}
+.core article .regular-text {
+  color: #505059;
+  font-size: 1.6rem;
+}
+.core .home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  background-color: #0C0150;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  height: 65px;
+  width: 335px;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.core .home-link .ico {
+  font-weight: 400;
+}/*# sourceMappingURL=thank-you-page.css.map */
