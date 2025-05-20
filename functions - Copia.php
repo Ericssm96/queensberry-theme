@@ -52,6 +52,8 @@ function capitalize_pt_br_string($str) {
     return implode(" ", $capitalized_words);
 }
 
+require_once "form-handler.php";
+
 function qb_theme_setup() {
     add_theme_support('title-tag');
 }
@@ -115,8 +117,16 @@ function qb_assets_queue()
         wp_enqueue_style('qb-program-page', get_template_directory_uri() . "/src/css/program-page.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
+    if(is_404()) {
+        wp_enqueue_style('qb-404-page', get_template_directory_uri() . "/src/css/404-page.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
     if(is_page('quem-somos')) {
         wp_enqueue_style('qb-about-us', get_template_directory_uri() . "/src/css/group-identity.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
+    }
+
+    if(is_page('obrigado')) {
+        wp_enqueue_style('qb-thank-you', get_template_directory_uri() . "/src/css/thank-you-page.css", ['qb-navigation', 'qb-root', 'qb-fa'], "1.0.0", "all");
     }
 
     if(is_page('folhetos-e-cadernos')) {
@@ -943,11 +953,11 @@ function create_posts_from_api_data_batches() {
             $post_id;
             $program_page_title = $program["Descricao"];
             $program_page_description = $program["DescricaoResumida"];
+            $program_slug = sanitize_title($program_page_title . "-" . $program_code);
     
-            // Use WP_Query to check if a page with the title already exists
             $query = new WP_Query(array(
                 'post_type' => 'post',
-                'title' => wp_strip_all_tags($program_page_title),
+                'name' => $program_slug,
                 'post_status' => 'publish',
                 'posts_per_page' => 1
             ));
@@ -955,7 +965,7 @@ function create_posts_from_api_data_batches() {
             $current_category = get_term_by('name', $category_title, 'category');
     
             if ($query->have_posts()) {
-                print_r("Post com o título $program_page_title foi encontrada. Atualizando os dados.");
+                print_r("Post com o título $program_page_title foi encontrado. Atualizando os dados.");
                 $existing_page = $query->posts[0];
                 $post_id = $existing_page->ID;
                 update_post_meta($post_id, 'custom_data', $program_metadata);
@@ -992,6 +1002,7 @@ function create_posts_from_api_data_batches() {
                 $post_id = wp_insert_post(array(
                     'post_title'    => wp_strip_all_tags($program_page_title),
                     'post_content'  => $program_page_description,
+                    'post_name' => $program_slug,
                     'post_status'   => 'publish',
                     'post_type'     => 'post'
                 ));
@@ -1089,19 +1100,19 @@ function generate_countries_list() {
 }
 
 function delete_orphaned_posts() {
-    $active_programs = require_once "cached-active-programs-list.php";
+    $active_programs = require_once "cached-active-programs-info.php";
+    // $active_programs = require_once "stdin-active-programs-info.php"; test file
     $programs_slugs = [];
     $orphaned_posts = [];
     $query_args = array(
         'post_type' => 'post',
         'posts_per_page' => -1,
-        'meta_key' => 'source_api',
-        'meta_value' => 'true'
     );
     
 
     foreach($active_programs as $active_program) {
-        $programs_slugs[] = sanitize_title( $active_program['ProgramaDescricao'] );
+        // $programs_slugs[] = sanitize_title( $active_program['ProgramaDescricao']);
+        $programs_slugs[] = sanitize_title( $active_program['Descricao'] . "-" . $active_program["CodigoPrograma"] );
     }
 
     $existing_posts = new WP_Query($query_args);
@@ -1564,6 +1575,17 @@ function refresh_category_pages_plugin_content() {
     <?php
 }
 
+function refresh_all_cache_files() {
+    update_cache_files();
+    update_world_regions();
+    generate_countries_list();
+}
+
+function sync_posts_with_api_data() {
+    delete_orphaned_posts();
+    create_posts_from_api_data_batches();
+}
+
 function handle_custom_button_click() {
     if (isset($_POST['refresh_cache_btn'])) {
         update_cache_files(); // Call your custom function here
@@ -1578,7 +1600,7 @@ function handle_custom_button_click() {
     if (isset($_POST['refresh_program_pages_btn'])) {
         delete_orphaned_posts();
         /* create_posts_from_api_data(); */
-        create_posts_from_api_data_batches();
+        // create_posts_from_api_data_batches();
         add_action('admin_notices', function() {
             echo '<div class="notice notice-success is-dismissible"><p>Páginas de programas atualizadas!</p></div>';
         });
@@ -1894,104 +1916,33 @@ function consultar_pontos_qc($cpf) {
     return $response;
 }
 
+function schedule_api_sync() {
+    if (!wp_next_scheduled('refresh_api_cache_hook')) {
+        wp_schedule_event(time(), 'every_four_hours', 'refresh_api_cache_hook');
+    }
 
-// 1) Registre todas as query-vars que o seu rule vai usar:
-add_filter( 'query_vars', function( $vars ){
-    $vars[] = 'custom_forfait';  // flag que dispara o template
-    $vars[] = 'type';           // gbm ou forfait
-    $vars[] = 'continente';
-    $vars[] = 'codigo';
-    $vars[] = 'slug';
-    return $vars;
-});
+    if (!wp_next_scheduled('sync_api_programs')) {
+        wp_schedule_event(time(), 'every_twelve_hours', 'sync_programs_hook');
+    }
+}
+add_action('wp', 'schedule_api_sync');
 
-// 2) Crie as rewrite tags para cada uma delas (facilita o parsing interno)
-add_action( 'init', function(){
-    add_rewrite_tag( '%custom_forfait%', '([0-9])' );
-    add_rewrite_tag( '%type%',           '([^/]+)' );
-    add_rewrite_tag( '%continente%',     '([^/]+)' );
-    add_rewrite_tag( '%codigo%',         '([^/]+)' );
-    add_rewrite_tag( '%slug%',           '([^/]+)' );
-}, 1 );
-
-// 3) Adicione a sua regra de rewrite **no topo** (prioridade 1)
-add_action( 'init', function(){
-    add_rewrite_rule(
-        '^programa/detalhes/(gbm|forfait)/([^/]+)/([^/]+)/([^/]+)/?$',
-        'index.php?custom_forfait=1&type=$matches[1]&continente=$matches[2]&codigo=$matches[3]&slug=$matches[4]',
-        'top'
+function add_custom_cron_interval($schedules) {
+    $schedules['every_four_hours'] = array(
+        'interval' => 4 * HOUR_IN_SECONDS,
+        'display'  => __('Every 4 hours'),
     );
-}, 1 );
 
-// 4) Garanta que o single.php seja usado quando custom_forfait estiver ativo:
-add_filter( 'template_include', function( $template ){
-    if ( intval( get_query_var('custom_forfait') ) === 1 ) {
-        // localiza primeiro no child theme, depois no parent
-        $t = locate_template( 'single.php' );
-        if ( $t ) {
-            return $t;
-        }
-    }
-    return $template;
-}, 99 );
+    $schedules['every_twelve_hours'] = array(
+        'interval' => 12 * HOUR_IN_SECONDS,
+        'display'  => __('Every 12 hours'),
+    );
 
 
+    return $schedules;
+}
 
+add_filter('cron_schedules', 'add_custom_cron_interval');
+add_action('refresh_api_cache_hook', 'refresh_all_cache_files');
+add_action('sync_programs_hook', 'sync_posts_with_api_data');
 
-
-add_action('template_redirect', function () {
-  if (get_query_var('custom_forfait')) {
-    $all_programs = require get_template_directory() . '/cached-programs-list.php';
-    $codigo = get_query_var('codigo');
-
-    if (!function_exists('array_find')) {
-      function array_find(array $array, callable $cb) {
-        foreach ($array as $item) {
-          if ($cb($item)) return $item;
-        }
-        return null;
-      }
-    }
-
-    $custom_data = array_find($all_programs, function($p) use($codigo) {
-      return strcasecmp(trim($p['CodigoPrograma']), trim($codigo)) === 0;
-    });
-
-    if ($custom_data) {
-      // Se necessário, normaliza estrutura
-      if (!isset($custom_data['ProgramInfo'])) {
-        $custom_data = [
-          'ProgramInfo' => $custom_data,
-          'ProgramAddInfo' => [],
-          'CategoryInfo' => [],
-          'ProgramLogInfo' => [],
-          'ProgramNotes' => [],
-          'ImageGalleryFiles' => [],
-          'PriceTableImageFiles' => [],
-          'RegionInfo' => [],
-        ];
-      }
-
-      // Salva temporariamente os dados
-      $GLOBALS['custom_forfait_data'] = $custom_data;
-
-      // Simula post para WordPress
-      global $wp_query, $post;
-      $post = (object)[
-        'ID' => 0,
-        'post_title' => $custom_data['ProgramInfo']['Descricao'],
-        'post_content' => '',
-        'post_type' => 'custom_forfait',
-      ];
-      $wp_query->post = $post;
-      $wp_query->is_single = true;
-      $wp_query->is_page = false;
-      $wp_query->is_home = false;
-      $wp_query->is_404 = false;
-      setup_postdata($post);
-    } else {
-      wp_redirect(home_url('/404'));
-      exit;
-    }
-  }
-});

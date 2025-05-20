@@ -1,464 +1,104 @@
 <?php
+// Ensure this is a single page
+if (is_single()) {
+  // Get the current post ID
+  $page_id = get_the_ID();
 
-// logo que entra no template, antes de qualquer if:
-global $wp, $wp_query;
-error_log('---------------------------------------------------------');
-// error_log( 'matched_rule: '. print_r( $wp->matched_rule, true ) );
-// error_log( 'matched_query: '. print_r( $wp->matched_query, true ) );
-// error_log( 'query_vars: '. print_r( $wp_query->query_vars, true ) );
-error_log( 'is_404: '. (int)$wp_query->is_404 );
-error_log( 'is_single: '. (int)is_single() );
-
-$custom_data = $GLOBALS['custom_forfait_data'] ?? null;
-
-// 1️⃣ Detecta URL custom
-if ( get_query_var('custom_forfait') ) {
-  // 2️⃣ Extrai suas vars
-  $type       = get_query_var('type');        // gbm ou forfait
-  $continente = get_query_var('continente');
-  $codigo     = get_query_var('codigo');
-  $slug       = get_query_var('slug');
-
-  // 3️⃣ Carrega os dados de cache
-  $all_programs          = require get_template_directory() . '/cached-programs-list.php';
-  $categories_list       = require get_template_directory() . '/cached-categories.php';
-  $active_programs_info  = require get_template_directory() . '/cached-active-programs-info.php';
-  $active_programs_list  = require get_template_directory() . '/cached-active-programs-list.php';
-  $countries_list        = require get_template_directory() . '/cached-countries-list.php';
-  $world_regions         = require get_template_directory() . '/cached-world-regions.php';
-
-  // 4️⃣ Função de busca
-  if ( ! function_exists('array_find') ) {
-    function array_find(array $array, callable $cb) {
-      foreach($array as $item) {
-        if ($cb($item)) return $item;
-      }
-      return null;
-    }
-  }
-
-  // 5️⃣ Busca o programa
-  $found = array_find($all_programs, function($p) use($codigo) {
-    $programCode = trim($p['CodigoPrograma']);
-    $searchCode = trim($codigo);
-
-    if (stripos($programCode, $searchCode) !== false) {
-        error_log("🟡 Possível match parcial: [$programCode] contém [$searchCode]");
-    }
-
-    if (strcasecmp($programCode, $searchCode) === 0) {
-        error_log("✅ Match exato (case-insensitive): $programCode === $searchCode");
-        return true;
-    }
-
-    return false;
-  });
-
-  if (isset($found['ProgramInfo'])) {
-    $custom_data = $found;
-  } else {
-    error_log('⚠️ Estrutura do programa é simples, montando estrutura simulada');
-    $custom_data = [
-        'ProgramInfo' => $found,
-        'ProgramAddInfo' => [],
-        'CategoryInfo' => [],
-        'ProgramLogInfo' => [],
-        'ProgramNotes' => [],
-        'ImageGalleryFiles' => [],
-        'PriceTableImageFiles' => [],
-        'RegionInfo' => [],
-    ];
-
-    // 🔄 Enriquecimento via API para dados ausentes
-$program_code = $found['CodigoPrograma'] ?? null;
-
-if ($program_code) {
-  error_log("⚙️ Iniciando enriquecimento via API para código: $program_code");
-
-  $program_additional_info = get_specific_active_program_info($program_code);
-  $program_notes = get_program_notes($program_code)['ProgramasNotas']['ProgramasNotas'] ?? [];
-  $image_gallery_files = get_program_images_file_names($program_code)['ProgramasImagens']['ProgramaImagens'] ?? [];
-  $price_table_image_files = get_program_price_table_image_file_names($program_code)['ProgramasPrecos']['ProgramaPrecos'] ?? [];
-  $region_info = get_program_region_data($program_code)['ProgramasCidades']['ProgramasCidades'] ?? [];
-
-  // Reforça as pastas de imagem
-  $custom_data['ProgramInfo']['PastaImagensCategoria'] = $program_additional_info['PastaImagensCategoria'] ?? '';
-  $custom_data['ProgramInfo']['PastaImagensLog'] = $program_additional_info['PastaImagensLog'] ?? '';
-
-  // Enriquecimento nos campos correspondentes
-  $custom_data['ProgramAddInfo'] = [
-    'CadernoTitulo' => $program_additional_info['Torre'] ?? $program_additional_info['DescricaoPortal'] ?? '',
-  ];
-  $custom_data['ProgramNotes'] = $program_notes;
-  $custom_data['ImageGalleryFiles'] = $image_gallery_files;
-  $custom_data['PriceTableImageFiles'] = $price_table_image_files;
-  $custom_data['RegionInfo'] = $region_info;
-
-  // Categoria
-  $categoria_codigo = $found['CategoriaCodigo'] ?? '';
-  $category_info = array_find($categories_list, function($cat) use ($categoria_codigo) {
-    return $cat['CategoriaCodigo'] === $categoria_codigo;
-  });
-
-  if ($category_info) {
-      error_log('🔍 Categoria encontrada: ' . print_r($category_info, true));
-    } else {
-      error_log("❌ Nenhuma categoria encontrada com o código: $categoria_codigo");
-    }
-
-  $custom_data['CategoryInfo'] = $category_info ?? [];
-
-  // Log Info (pela torre)
-  $torre_titulo = $found['Torre'] ?? $found['DescricaoPortal'] ?? '';
-  $log_info = array_find($categories_list, function($cat) use ($torre_titulo) {
-    return isset($cat['CadernoTitulo']) && $cat['CadernoTitulo'] === $torre_titulo;
-  });
-  $custom_data['ProgramLogInfo'] = $log_info ? [$log_info] : [];
-
-  error_log("✅ Enriquecimento via API finalizado.");
-}
-
-  }
-
-  // 6️⃣ Monta estrutura completa se estiver simples
-if (!isset($custom_data['ProgramInfo'])) {
-  error_log('⚠️ Estrutura do programa é simples, montando estrutura simulada');
-
-  $program_info = $custom_data;
-
-  // Fallback: tentar buscar dados mais completos nos outros arquivos de cache
-  $extra_sources = [
-    require get_template_directory() . '/cached-active-programs-info.php',
-    require get_template_directory() . '/cached-active-programs-list.php'
-  ];
-
-  foreach ($extra_sources as $source) {
-    $match = array_find($source, function($item) use ($program_info) {
-      return isset($item['CodigoPrograma']) &&
-             strcasecmp(trim($item['CodigoPrograma']), trim($program_info['CodigoPrograma'] ?? '')) === 0;
-    });
-
-    if ($match) {
-      error_log('🧩 Dados adicionais encontrados no fallback!');
-      $program_info = array_merge($match, $program_info);
-      break;
-    }
-  }
-
-  // 6.1 Recupera dados adicionais
-  $categoria_codigo = $program_info['CategoriaCodigo'] ?? '';
-  $torre_titulo     = $program_info['Torre'] ?? $program_info['DescricaoPortal'] ?? '';
-
-  // Busca nas categorias
-  $category_info = array_find($categories_list, function($cat) use ($categoria_codigo) {
-    return $cat['CategoriaCodigo'] === $categoria_codigo;
-  });
-
-  $log_info = array_find($categories_list, function($cat) use ($torre_titulo) {
-    return isset($cat['CadernoTitulo']) && $cat['CadernoTitulo'] === $torre_titulo;
-  });
-
-  $custom_data = [
-    'ProgramInfo'          => $program_info,
-    'ProgramAddInfo'       => [ 'CadernoTitulo' => $torre_titulo ],
-    'CategoryInfo'         => $category_info ?? [],
-    'ProgramLogInfo'       => $log_info ? [ $log_info ] : [],
-    'ProgramNotes'         => [],
-    'ImageGalleryFiles'    => [],
-    'PriceTableImageFiles' => [],
-    'RegionInfo'           => [],
-  ];
-}
-
-  
-  // 7️⃣ Simula um post “vazio” para disparar o single.php
-  global $post;
-  $post = (object) [
-    'ID'           => 0,
-    'post_title'   => $custom_data['ProgramInfo']['Descricao'] ?? 'Programa Queensberry',
-    'post_content' => '',
-    'post_type'    => 'custom_forfait',
-  ];
-  setup_postdata($post);
-}
-
-// 8️⃣ Garante que o $custom_data esteja presente para URL dinâmica
-if ( get_query_var('custom_forfait') || is_single() ) {
-  if (get_query_var('custom_forfait')) {
-    if (!$custom_data) {
-      wp_redirect(home_url('/404'));
-      exit;
-    }
-
-    global $post;
-    $post = (object) [
-      'ID'           => 999999,
-      'post_title'   => $custom_data['ProgramInfo']['Descricao'] ?? 'Programa Queensberry',
-      'post_content' => '',
-      'post_type'    => 'custom_forfait',
-    ];
-    setup_postdata($post);
-  } else {
-    $page_id = get_the_ID();
-    $custom_data = get_post_meta($page_id, 'custom_data', true);
-  }
-}
-
-
-
-// A partir daqui o restante do template continua exatamente como já estava
-// Ou seja, com $custom_data já definido, seja pela URL dinâmica ou post comum
+  // Retrieve the custom metadata
+  $custom_data = get_post_meta($page_id, 'custom_data', true);
 
   // Check if the custom data exists
   if (!empty($custom_data)):
-  
-    if (empty($custom_data['ProgramLogInfo'])) {
-    $fallback_log_response = get_program_with_log($program_code, '0');
-    $log_items = $fallback_log_response['ProgramasCadernos']['ProgramasCadernos'] ?? [];
+    // Access the data
+    $program_info = $custom_data['ProgramInfo'];
+    $additional_program_info = $custom_data['ProgramAddInfo'];
+    $current_category_info = $custom_data['CategoryInfo'];
+    $program_logs_info = $custom_data['ProgramLogInfo'];
+    $program_notes = $custom_data['ProgramNotes'];
+    $image_gallery_files = $custom_data['ImageGalleryFiles'];
+    $price_table_image_files = $custom_data['PriceTableImageFiles'];
+    $region_info = $custom_data['RegionInfo'];
 
-    if (!empty($log_items)) {
-        error_log('✅ Inserindo log info manual via get_program_with_log');
-        $custom_data['ProgramLogInfo'] = $log_items;
-    } else {
-        error_log('❌ Nenhum log encontrado via get_program_with_log');
-    }
-}
+    $program_name = $program_info["Descricao"];
+    $log_name = $additional_program_info["CadernoTitulo"];
+    $program_code = $program_info["CodigoPrograma"];
+    $category_code = $program_info["CategoriaCodigo"];
+    /* $current_category_info = array_find($categories_info, function($category_info) use ($category_code) {
+      return $category_info["CategoriaCodigo"] == $category_code;
+    }); */
+    $category_name = $current_category_info["CategoriaDescricao"];
+    $program_tower = $program_info["Torre"];
+    /* $program_log_info = array_find($program_logs_info, function($program_log) use ($program_tower) {
+      return $program_log[""];
+    }); */
+    $program_log_info = array_find($program_logs_info, function($program_log_info) use ($log_name) {
+      $lower_log_name = trim(mb_strtolower($log_name));
+      $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"]));
 
-    // Access the data com fallback defensivo
-$program_info = $custom_data['ProgramInfo'] ?? [];
+      return $lower_log_name == $current_item_name && $program_log_info["CadernoStatus"] !== "I" && $program_log_info["CadernoPastaImagens"] !== "";
+    });
+    $quick_description = $program_info["DescricaoResumida"];
+    $days_qtty = $program_info["QtdDiasViagem"];
+    $nights_qtty = $program_info["QtdNoitesViagem"];
+    $visit_details_quick_info = $program_info["Detalhes"];
+    $program_outings_info = $program_info["SaidasPrograma"];
 
-// 🔁 Enriquecimento via API para complementar dados do custom_data
-error_log("⚙️ Iniciando enriquecimento via API para código: " . ($program_info['CodigoPrograma'] ?? ''));
-
-$codigo_programa = $program_info['CodigoPrograma'] ?? '';
-
-// Complementa dados adicionais via API
-$program_notes = get_program_notes($codigo_programa)['ProgramasNotas']['ProgramasNotas'] ?? [];
-$image_gallery_files = get_program_images_file_names($codigo_programa)['Imagens']['Imagens'] ?? [];
-$price_table_image_files = get_program_price_table_image_file_names($codigo_programa)['Tabela']['Tabela'] ?? [];
-$region_info = get_program_region_data($codigo_programa)['Programas']['Programas'] ?? [];
+    $images_folder_prefix_url = "https://img.queensberry.com.br/imagens/";
+    $category_image_folder = $current_category_info["PastaImagens"]; // Ex.: FERIAS_NA_NEVE
+    $program_log_image_folder = $program_log_info["CadernoPastaImagens"]; // Ex.: AMERICAS
 
 
-// Tenta buscar log detalhado via get_program_with_log
-$program_log_info_api = get_program_with_log($codigo_programa)['Caderno']['Caderno'] ?? [];
+    /* if(sanitize_title($program_name) === "nova-zelandia-de-norte-a-sul") {
+      $program_log_image_folder = "AUSTRALIA_E_NOVA_ZELANDIA";
+    } */
 
-// Se não houver $program_logs_info ainda, insere via API
-if (empty($custom_data['ProgramLogInfo']) && !empty($program_log_info_api)) {
-  $custom_data['ProgramLogInfo'] = $program_log_info_api;
-}
 
-// Substitui os dados de imagem e notas se ainda estiverem vazios
-if (empty($custom_data['ImageGalleryFiles']) && !empty($image_gallery_files)) {
-  $custom_data['ImageGalleryFiles'] = $image_gallery_files;
-}
-
-if (empty($custom_data['PriceTableImageFiles']) && !empty($price_table_image_files)) {
-  $custom_data['PriceTableImageFiles'] = $price_table_image_files;
-}
-
-if (empty($custom_data['ProgramNotes']) && !empty($program_notes)) {
-  $custom_data['ProgramNotes'] = $program_notes;
-}
-
-if (empty($custom_data['RegionInfo']) && !empty($region_info)) {
-  $custom_data['RegionInfo'] = $region_info;
-}
-
-error_log("✅ Enriquecimento via API finalizado.");
-
-$test_log = get_program_with_log('IAF168', '0');
-// error_log('🧪 Teste manual via get_program_with_log: ' . print_r($test_log, true));
-
-$additional_program_info = $custom_data['ProgramAddInfo'] ?? [];
-$current_category_info = $custom_data['CategoryInfo'] ?? [];
-$program_logs_info = $custom_data['ProgramLogInfo'] ?? [];
-$program_notes = $custom_data['ProgramNotes'] ?? [];
-$image_gallery_files = $custom_data['ImageGalleryFiles'];
-$price_table_image_files = $custom_data['PriceTableImageFiles'] ?? [];
-$region_info = $custom_data['RegionInfo'] ?? [];
-// error_log('🧩 Dados Brutos Price_table: ' . print_r($custom_data, true));
-
-$data = get_program_images_file_names($program_code);
-
-$program_name = $program_info["Descricao"] ?? '';
-$log_name = $additional_program_info["CadernoTitulo"] ?? '';
-$program_code = $program_info["CodigoPrograma"] ?? '';
-$category_code = $program_info["CategoriaCodigo"] ?? '';
-$category_name = $current_category_info["CategoriaDescricao"] ?? '';
-$program_tower = $program_info["Torre"] ?? '';
-
-// error_log('🧪 Conteúdo completo de $program_logs_info: ' . print_r($program_logs_info, true));
-
-// Buscar o log info mais apropriado
-$program_log_info = array_find($program_logs_info, function($program_log_info) use ($log_name) {
-  $lower_log_name = trim(mb_strtolower($log_name));
-  $current_item_name = trim(mb_strtolower($program_log_info["CadernoTitulo"] ?? ''));
-
-  return $lower_log_name === $current_item_name
-      && ($program_log_info["CadernoStatus"] ?? '') !== "I"
-      && !empty($program_log_info["CadernoPastaImagens"]);
-});
-
-// Fallback se não encontrar via match de título
-if (!$program_log_info && !empty($program_logs_info)) {
-  $program_log_info = $program_logs_info[0];
-  // error_log('⚠️ Fallback para o primeiro log info disponível: ' . print_r($program_log_info, true));
-} elseif (!empty($program_log_info)) {
-  // error_log('✅ Log info encontrado pelo título: ' . print_r($program_log_info, true));
-} else {
-  error_log('❌ Nenhum log info encontrado.');
-}
-
-$quick_description = $program_info["DescricaoResumida"] ?? '';
-$days_qtty = $program_info["QtdDiasViagem"] ?? '';
-$nights_qtty = $program_info["QtdNoitesViagem"] ?? '';
-$visit_details_quick_info = $program_info["Detalhes"] ?? '';
-$program_outings_info = $program_info["SaidasPrograma"] ?? '';
-
-$images_folder_prefix_url = "https://img.queensberry.com.br/imagens/";
-$category_image_folder = $current_category_info["PastaImagens"];
-$program_log_image_folder = $program_log_info["CadernoPastaImagens"] ?? '';
-$url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]);
-$banner_img_file_name = rawurlencode($program_info["Banner"] ?? '');
-
-if (empty($image_gallery_files)) {
-    $image_gallery_files = get_program_images_file_names($program_code)["ProgramasImagens"]["ProgramaImagens"] ?? [];
-    $custom_data['ImageGalleryFiles'] = $image_gallery_files; // atualiza para reuso
-}
-//   error_log('🖼️ Teste de Imagens ,' . print_r($image_gallery_files, true));
-
-// Fallback defensivo para imagem da galeria
-$log_img_file_name = $image_gallery_files[0]['Descricao'] ?? '';
-
-if (empty($category_image_folder) || empty($program_log_image_folder)) {
-    $category_image_folder = $category_info['PastaImagens'] ?? '';
-    $program_log_image_folder = $program_log_info['CadernoPastaImagens'] ?? '';
-
-    // Se ainda estiver vazio, tenta resgatar via lista de categorias
-    if (empty($program_log_image_folder)) {
-        $log_info_via_torre = array_find($categories_list, function($cat) use ($log_name) {
-            return isset($cat['CadernoTitulo']) && $cat['CadernoTitulo'] === $log_name;
-        });
-
-        if ($log_info_via_torre && !empty($log_info_via_torre['CadernoPastaImagens'])) {
-            $program_log_image_folder = $log_info_via_torre['CadernoPastaImagens'];
-            error_log("✅ Pasta do log recuperada via torre nas categorias: $program_log_image_folder");
-        } else {
-            error_log("❌ Ainda sem pasta do log mesmo após torre nas categorias.");
-        }
-    }
-
-    error_log("⚠️ Fallback via API: Pasta categoria = $category_image_folder | Pasta log = $program_log_image_folder");
-}
-
-if (empty($program_log_image_folder)) {
-    $log_api_response = get_program_with_log($program_code);
-    $log_data = $log_api_response['Caderno']['Caderno'] ?? [];
-
-    if (!empty($log_data) && isset($log_data['CadernoPastaImagens'])) {
-        $program_log_image_folder = $log_data['CadernoPastaImagens'];
-        error_log("✅ Pasta do log preenchida via API direta: $program_log_image_folder");
-    } else {
-        error_log("❌ Pasta do log continua vazia após tentativa direta via API.");
-    }
-}
-
-$banner_image_url = "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$banner_img_file_name";
-$itinerary_image_url = "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$log_img_file_name";
-
-error_log("🧩 Montagem imagem:");
-error_log("🧩 Pasta categoria: $category_image_folder");
-error_log("🧩 Pasta log: $program_log_image_folder");
-error_log("🧩 Código programa: $url_friendly_program_code");
-error_log("🧩 Banner: $banner_img_file_name");
-error_log("🧩 Imagem galeria: $log_img_file_name");
-error_log("📸 URL da imagem montada: $banner_image_url");
-error_log("🗺️ URL da imagem mapa: $itinerary_image_url");
-
+    $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]); // Ex.: NEVE002
+    $banner_img_file_name = $program_info["Banner"]; // Ex.: DESTAQUE_NEVE002.JPG
+    $banner_img_file_name = rawurlencode($banner_img_file_name);
+    $log_img_file_name = $image_gallery_files[0]['Descricao'];
     
-$attraction_description_list = array_filter($program_notes, function($note) {
-  return $note["ProgramaDescricao"] == "Atrações" && $note["NotaDescricao"] !== "DESATIVADO";
-});
-$itinerary_info_list = array_filter($program_notes, function($note) {
-  return $note["ProgramaDescricao"] == "Roteiro Dia-a-Dia" && $note["NotaDescricao"] !== "DESATIVADO" && str_contains($note["NotaDescricao"], "DIA");
-});
-$itinerary_info_list = array_values($itinerary_info_list);
-$services_info_list = array_filter($program_notes, function($note) {
-  return $note["ProgramaDescricao"] == "Serviços" && $note["NotaDescricao"] !== "DESATIVADO";
-});
+    $attraction_description_list = array_filter($program_notes, function($note) {
+      return $note["ProgramaDescricao"] == "Atrações" && $note["NotaDescricao"] !== "DESATIVADO";
+    });
+    $itinerary_info_list = array_filter($program_notes, function($note) {
+      return $note["ProgramaDescricao"] == "Roteiro Dia-a-Dia" && $note["NotaDescricao"] !== "DESATIVADO" && str_contains($note["NotaDescricao"], "DIA");
+    });
+    $itinerary_info_list = array_values($itinerary_info_list);
+    $services_info_list = array_filter($program_notes, function($note) {
+      return $note["ProgramaDescricao"] == "Serviços" && $note["NotaDescricao"] !== "DESATIVADO";
+    });
 
-$attractions_note_contents = [];
-$services_note_contents = [];
-$itinerary_note_contents = [];
+    $attractions_note_contents = [];
+    $services_note_contents = [];
+    $itinerary_note_contents = [];
 
-foreach ($attraction_description_list as $attraction_info) {
-  $title = $attraction_info['NotaDescricao'];
-  $text = $attraction_info['NotaTextoDescricao'];
-  $found_key = null;
-  foreach ($attractions_note_contents as $key => $post) {
-    if ($post['NotaDescricao'] === $title) {
-      $found_key = $key;
-      break;
-    }
-  }
-  if ($found_key !== null) {
-    $attractions_note_contents[$found_key]['NotaTextoDescricao'] .= $text;
-  } else {
-    $attractions_note_contents[] = [
-      'NotaDescricao' => $title,
-      'NotaTextoDescricao' => $text
-    ];
-  }
-}
+    // TODO: Make these blocks into a function
 
-if($program_info["DescricaoPortal"] !== "") {
-  $opening_arr = [
-    'NotaDescricao' => "Abertura",
-    'NotaTextoDescricao' => $program_info["DescricaoPortal"]
-  ];
-  array_unshift($attractions_note_contents, $opening_arr);
-}
-
-foreach ($services_info_list as $service_info) {
-  $title = $service_info['NotaDescricao'];
-  $text = $service_info['NotaTextoDescricao'];
-  $found_key = null;
-  foreach ($services_note_contents as $key => $post) {
-    if ($post['NotaDescricao'] === $title) {
-      $found_key = $key;
-      break;
-    }
+    foreach ($attraction_description_list as $attraction_info) {
+      $title = $attraction_info['NotaDescricao'];
+      $text = $attraction_info['NotaTextoDescricao'];
+      
+      // Check if this title already exists in $post_contents
+      $found_key = null;
+      foreach ($attractions_note_contents as $key => $post) {
+          if ($post['NotaDescricao'] === $title) {
+              $found_key = $key;
+              break;
+          }
+      }
+      
+      if ($found_key !== null) {
+          // Append the text to the existing entry
+          $attractions_note_contents[$found_key]['NotaTextoDescricao'] .= $text;
+      } else {
+          // Add a new entry
+          $attractions_note_contents[] = [
+              'NotaDescricao' => $title,
+              'NotaTextoDescricao' => $text
+          ];
+      }
   }
-  if ($found_key !== null) {
-    $services_note_contents[$found_key]['NotaTextoDescricao'] .= $text;
-  } else {
-    $services_note_contents[] = [
-      'NotaDescricao' => $title,
-      'NotaTextoDescricao' => $text
-    ];
-  }
-}
-
-foreach ($itinerary_info_list as $itinerary_info) {
-  $title = $itinerary_info['NotaDescricao'];
-  $text = $itinerary_info['NotaTextoDescricao'];
-  $found_key = null;
-  foreach ($itinerary_note_contents as $key => $post) {
-    if ($post['NotaDescricao'] === $title) {
-      $found_key = $key;
-      break;
-    }
-  }
-  if ($found_key !== null) {
-    $itinerary_note_contents[$found_key]['NotaTextoDescricao'] .= $text;
-  } else {
-    $itinerary_note_contents[] = [
-      'NotaDescricao' => $title,
-      'NotaTextoDescricao' => $text
-    ];
-  }
-}
-
 
   if($program_info["DescricaoPortal"] !== "") {
     $opening_arr = [
@@ -656,10 +296,8 @@ foreach ($itinerary_info_list as $itinerary_info) {
     <section class="general-info">
       <div class="container">
         <div class="itinerary-image-wrapper">
-          <img class="itinerary-image" src="<?php echo $itinerary_image_url; ?>" alt="Imagem Roteiro Viagem">
+          <img class="itinerary-image" src="<?= "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$log_img_file_name" ?>" alt="Imagem Roteiro Viagem">
         </div>
-
-
 
         <article class="info-text" x-data="{
           selectedTab: 'attractions',
@@ -1001,9 +639,7 @@ foreach ($itinerary_info_list as $itinerary_info) {
                                 function (data) {
                                     console.log(data);
                                 }
-                            ).done(() => {
-                                alert("Envio realizado com sucesso");
-                            });
+                            )
                         } else if (perfil === "agente") {
                             // Se for "agente", envia para Eloqua
                             jQuery.ajax({
@@ -1016,13 +652,23 @@ foreach ($itinerary_info_list as $itinerary_info) {
                                 error: (res) => {
                                     console.log("Eloqua fail", res);
                                 },
-                            }).done(() => {
-                                alert("Envio realizado com sucesso");
-                            });
+                            })
                         }                  
                       } else {
                         console.log("Recaptcha error")
                       }
+                    }).then((res)=> {
+                      $("#actionField").val("queensberry_mail_solicitar_programa");
+                      jQuery.post(
+                        "<?= home_url(); ?>/wp-admin/admin-post.php?action=queensberry_mail_solicitar_programa",
+                        $("#f_queensberry_programa").serialize(),
+                        function (data) {
+                            console.log(data);
+                        }
+                      ).done(() => {
+                          // alert("Envio realizado com sucesso");
+                          window.location.href = "<?= home_url() ?>/obrigado"
+                      });
                     })
                   });
                 });
@@ -1496,11 +1142,9 @@ foreach ($itinerary_info_list as $itinerary_info) {
 <?php
     get_footer();
   else:
-  status_header(404); // Isso garante que se cair aqui, a header seja 404
-  nocache_headers();
-  include( get_query_template( '404' ) );
-  exit;
+    echo '<p>Um erro ocorreu buscar os dados dessa página. Entre em contato com nosso suporte.</p>';
   endif;
+}
 ?>
 
 <style>
