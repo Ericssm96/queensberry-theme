@@ -1,6 +1,6 @@
 <?php
 $current_category = get_queried_object();
-$checked_log = $_GET["checked_log"];
+$checked_log = isset($_GET["checked_log"]) ? $_GET["checked_log"] : [];
 
 $api_data = get_term_meta($current_category->term_id, 'api_data', true);
 
@@ -117,6 +117,7 @@ $json_countries_by_region = json_encode($countries_by_region, JSON_UNESCAPED_SLA
 $json_posts_meta = json_encode($posts_metadata, JSON_UNESCAPED_SLASHES | JSON_HEX_QUOT | JSON_HEX_APOS);
 $json_logs_names = json_encode($related_logs_name_list);
 $json_logs_descriptions = json_encode($related_logs_text_list);
+$json_checked_log = json_encode($checked_log);
 
 get_header();
 ?>
@@ -351,6 +352,16 @@ get_header();
         }
       }
     }' x-init="
+    let standinSelectedLogs = [];
+    const urlParams = new URLSearchParams(window.location.search);
+    isAnyLogInitiallyChecked = urlParams.has('checked_log');
+  
+    if(isAnyLogInitiallyChecked) {
+      standinSelectedLogs.push(urlParams.get('checked_log'));
+    }
+
+    selectedLogs = standinSelectedLogs;
+
     // slider configs
     currentSlideTitle = slideTitles[currentSlideIndex];
     currentSlideDescription = slideDescriptions[currentSlideIndex];

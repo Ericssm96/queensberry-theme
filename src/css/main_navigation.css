@@ -473,7 +473,7 @@ body {
 .nav-b .content-b .right-col .cards-area {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .nav-b .content-b .right-col .cards-area li a {
   display: inline-block;
@@ -1114,4 +1114,8 @@ body {
 .stand-in-navbar .logo {
   width: 160px;
   height: 40px;
+}
+
+.hide-navbar .nav-a, .hide-navbar .nav-b, .hide-navbar .nav-c, .hide-navbar .nav-d {
+  display: none !important;
 }/*# sourceMappingURL=main_navigation.css.map */

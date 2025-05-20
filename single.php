@@ -666,7 +666,8 @@ if (is_single()) {
                             console.log(data);
                         }
                       ).done(() => {
-                          alert("Envio realizado com sucesso");
+                          // alert("Envio realizado com sucesso");
+                          window.location.href = "<?= home_url() ?>/obrigado"
                       });
                     })
                   });

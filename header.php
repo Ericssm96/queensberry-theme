@@ -36,8 +36,13 @@
 
   $page_title = strtoupper($page_title);
   $site_title = strtoupper($site_title);
-  $full_title = strtoupper($full_title)
+  $full_title = strtoupper($full_title);
   
+  $body_classes = get_body_class();
+  if (is_404() || is_page('obrigado')) {
+    $body_classes[] = 'hide-navbar';
+  }
+
 
   ?>
   
@@ -70,6 +75,9 @@ $last_dolar_conversion_update_time = "--:--";
 if (is_array($dolar_currency_info) && isset($dolar_currency_info["DataAtualizacao"], $dolar_currency_info["ValorCambio"])) {
   $last_dolar_conversion_update_date = explode("T", $dolar_currency_info["DataAtualizacao"])[0];
   $last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
+  $hour = substr($last_dolar_conversion_update_time, 0, 2);
+  $hour -= 3;
+  $last_dolar_conversion_update_time = substr_replace($last_dolar_conversion_update_time, $hour, 0, 2);
   $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
 }
 
@@ -84,7 +92,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
 ?>
 
 
-<body x-data="{
+<body <?php body_class( $body_classes ); ?> x-data="{
   isModalOpen: false,
 }" x-bind:style="isModalOpen ? 'overflow: hidden;' : 'overflow: auto;'">
 
@@ -240,25 +248,25 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
                   </header>
                   <ul class="cards-area">
                     <li>
-                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log">
+                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log#searchContainer">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-4-continentes.png" alt="Imagem Promocional Grupo Brasil no Mundo - 4 Continentes" />
                       </a>
                       <p>4 continentes 2025</p>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=europa-2025-log">
+                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=europa-2025-log#searchContainer">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-europa.png" alt="Imagem Promocional Grupo Brasil no Mundo - Europa" />
                       </a>
                       <p>Europa 2025</p>
                     </li>
-                    <li>
+                    <!-- <li>
                       <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-baixa-temporada.png" alt="Imagem Promocional Grupo Brasil no Mundo - Baixa Temporada" />
                       </a>
                       <p>Baixa Temporada 2025</p>
-                    </li>
+                    </li> -->
                     <li>
-                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log">
+                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log#searchContainer">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-slow-travel.png" alt="Imagem Promocional Grupo Brasil no Mundo - Slow Travel" />
                       </a>
                       <p>Slow Travel 2025</p>

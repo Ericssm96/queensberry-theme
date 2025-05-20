@@ -29,7 +29,7 @@ get_header(); ?>
             (atendimento de segunda à sexta, das 9h às 18h).</p>
         </div>
         <article class="form-container">
-          <form id="f_queensberry_fale_conosco" name="f_queensberry_fale_conosco" method="POST" x-data="{
+          <form id="f_queensberry_fale_conosco" action="/" name="f_queensberry_fale_conosco" method="POST" x-data="{
           isEmailPermissionChecked: false,
         }">
             <input type="hidden" id="actionField" name="action" value="queensberry_fale_conosco_recaptcha">

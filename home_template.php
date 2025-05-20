@@ -31,6 +31,9 @@ $last_dolar_conversion_update_time = "--:--";
 if (is_array($dolar_currency_info) && isset($dolar_currency_info["DataAtualizacao"], $dolar_currency_info["ValorCambio"])) {
   $last_dolar_conversion_update_date = explode("T", $dolar_currency_info["DataAtualizacao"])[0];
   $last_dolar_conversion_update_time = explode("T", $dolar_currency_info["DataAtualizacao"])[1];
+  $hour = substr($last_dolar_conversion_update_time, 0, 2);
+  $hour -= 3;
+  $last_dolar_conversion_update_time = substr_replace($last_dolar_conversion_update_time, $hour, 0, 2);
   $dolar_price = substr(str_replace(".", ",", $dolar_currency_info["ValorCambio"]), 0, 4);
 }
 
@@ -53,7 +56,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
       </video>
       <article class="gbm-cta">
         <strong>GBM 2025</strong>
-        <a href="<?= home_url(); ?>/category/gbm-grupos-brasileiros-no-mundo" rel="noreferrer" target="_blank">Saiba mais</a>
+        <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo" rel="noreferrer" target="_blank">Saiba mais</a>
       </article>
     </section>
     <article class="mb-currency-field">
@@ -107,7 +110,7 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
               $cat_img_folder = $category["PastaImagens"];
               $cat_img_url = "https://img.queensberry.com.br/imagens//categorias/$cat_img_folder/$cat_img_file_name";
 
-              $cat_page_url = home_url() . "/category/$sanitized_cat_title";
+              $cat_page_url = home_url() . "/categoria/$sanitized_cat_title";
               if($cat_img_file_name !== "") {
                 echo <<<SWIPER_SLIDE
                 <a href="$cat_page_url" style="background-image: url($cat_img_url)" class="swiper-slide">
@@ -792,7 +795,7 @@ $videos_titles = $filtered_titles;
   <div class="mini-popup">
     <div class="popup-rotativo">
             <button class="mini-popup-close-btn" onclick="fecharMiniPopup()"> X </button>
-            <a href="<?= home_url(); ?>/category/walt-disney-world-resort" target="_blank">
+            <a href="<?= home_url(); ?>/categoria/walt-disney-world-resort" target="_blank">
                 <img src="<?= get_template_directory_uri(); ?>/src/img/popupdisney.png">
             </a>
     </div>

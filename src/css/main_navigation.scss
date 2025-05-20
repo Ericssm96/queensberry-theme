@@ -544,7 +544,8 @@ body {
       .cards-area {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        // justify-content: space-between; usar esse quando essa parte voltar a ter 4 itens
 
         li {
           a {
@@ -1255,5 +1256,11 @@ body {
   .logo {
     width: 160px;
     height: 40px;
+  }
+}
+
+.hide-navbar {
+  .nav-a, .nav-b, .nav-c, .nav-d {
+    display: none !important;
   }
 }
