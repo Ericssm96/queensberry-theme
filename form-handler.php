@@ -2017,6 +2017,7 @@ function queensberry_request_program_info()
     $cidade = filter_input(INPUT_POST, "CIDADE", FILTER_SANITIZE_SPECIAL_CHARS);
     $complemento = filter_input(INPUT_POST, "PERFIL", FILTER_SANITIZE_SPECIAL_CHARS);
     $mensagem = filter_input(INPUT_POST, "MENSAGEM", FILTER_SANITIZE_SPECIAL_CHARS);
+    $url_from = filter_input(INPUT_POST, "URL_CADASTRO", FILTER_SANITIZE_SPECIAL_CHARS);
 
 
 
@@ -2033,6 +2034,8 @@ function queensberry_request_program_info()
 
         $mail->setFrom('naoresponda@flytour.com.br', 'Queensberry');
         $mail->addAddress('ericssm96@gmail.com');
+        /* $mail->addAddress('loja@queensberry.com.br');
+        $mail->addAddress('notification@ledev.tech'); */
 
         $mail->isHTML(true);
         $mail->Subject = 'Queensberry - Solicitar Info do Roteiro';
@@ -2088,6 +2091,10 @@ function queensberry_request_program_info()
                         <tr>
                             <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">Mensagem:</td>
                             <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$mensagem</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">URL do programa:</td>
+                            <td style="width: 50%; margin: 0; border-bottom: 2px solid #ccc; padding: 10px ;">$url_from</td>
                         </tr>
                     </table>
                 </div>

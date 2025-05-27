@@ -248,6 +248,12 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
                   </header>
                   <ul class="cards-area">
                     <li>
+                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=reveillon-2025-2026-log#searchContainer">
+                        <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-reveillon-2025.jpg" alt="Imagem Promocional Grupo Brasil no Mundo - Reveillon 2025/2026" />
+                      </a>
+                      <p>Reveillon 2025/2026</p>
+                    </li>
+                    <li>
                       <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=4-continentes-2025-log#searchContainer">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-4-continentes.png" alt="Imagem Promocional Grupo Brasil no Mundo - 4 Continentes" />
                       </a>
@@ -259,12 +265,6 @@ if (is_array($euro_currency_info) && isset($euro_currency_info["DataAtualizacao"
                       </a>
                       <p>Europa 2025</p>
                     </li>
-                    <!-- <li>
-                      <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=baixa-temporada-2025-log">
-                        <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-baixa-temporada.png" alt="Imagem Promocional Grupo Brasil no Mundo - Baixa Temporada" />
-                      </a>
-                      <p>Baixa Temporada 2025</p>
-                    </li> -->
                     <li>
                       <a href="<?= home_url(); ?>/categoria/gbm-grupos-brasileiros-no-mundo?checked_log=slow-travel-2025-log#searchContainer">
                         <img src="<?= get_template_directory_uri(); ?>/src/img/gbm-slow-travel.png" alt="Imagem Promocional Grupo Brasil no Mundo - Slow Travel" />

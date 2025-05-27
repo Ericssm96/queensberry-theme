@@ -544,8 +544,8 @@ body {
       .cards-area {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        // justify-content: space-between; usar esse quando essa parte voltar a ter 4 itens
+        // justify-content: space-evenly; usar esse quando essa parte voltar a ter 3 itens
+        justify-content: space-between; 
 
         li {
           a {

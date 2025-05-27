@@ -12,6 +12,17 @@
   ),
   1 => 
   array (
+    'ProgramaCodigo' => 'AFRO25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'ÁFRICA DO SUL SURPREENDENTE',
+    'PrograDestino' => 'ÁFRICA SUL',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  2 => 
+  array (
     'ProgramaCodigo' => 'AFRO925A',
     'Sequencial' => 0,
     'ProgramaDescricao' => 'ÁFRICA DO SUL SURPREENDENTE (AFRO 9)',
@@ -21,7 +32,7 @@
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  2 => 
+  3 => 
   array (
     'ProgramaCodigo' => 'ALGREM25A',
     'Sequencial' => 0,
@@ -32,7 +43,7 @@
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  3 => 
+  4 => 
   array (
     'ProgramaCodigo' => 'ALPES25A',
     'Sequencial' => 0,
@@ -43,7 +54,7 @@
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  4 => 
+  5 => 
   array (
     'ProgramaCodigo' => 'BALT25A',
     'Sequencial' => 0,
@@ -54,7 +65,7 @@
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  5 => 
+  6 => 
   array (
     'ProgramaCodigo' => 'BLUJAZZ25A',
     'Sequencial' => 0,
@@ -65,7 +76,7 @@
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  6 => 
+  7 => 
   array (
     'ProgramaCodigo' => 'BRBE00124A',
     'Sequencial' => 0,
@@ -78,7 +89,7 @@
     'CategoriaCodigo' => 17,
     'CategoriaDescricao' => 'BRASIL IN',
   ),
-  7 => 
+  8 => 
   array (
     'ProgramaCodigo' => 'BRBE00224A',
     'Sequencial' => 0,
@@ -91,7 +102,7 @@
     'CategoriaCodigo' => 17,
     'CategoriaDescricao' => 'BRASIL IN',
   ),
-  8 => 
+  9 => 
   array (
     'ProgramaCodigo' => 'BRBE00324A',
     'Sequencial' => 0,
@@ -104,7 +115,7 @@
     'CategoriaCodigo' => 17,
     'CategoriaDescricao' => 'BRASIL IN',
   ),
-  9 => 
+  10 => 
   array (
     'ProgramaCodigo' => 'BRBE00424A',
     'Sequencial' => 0,
@@ -117,7 +128,7 @@
     'CategoriaCodigo' => 17,
     'CategoriaDescricao' => 'BRASIL IN',
   ),
-  10 => 
+  11 => 
   array (
     'ProgramaCodigo' => 'BRBE00524A',
     'Sequencial' => 0,
@@ -130,7 +141,7 @@
     'CategoriaCodigo' => 17,
     'CategoriaDescricao' => 'BRASIL IN',
   ),
-  11 => 
+  12 => 
   array (
     'ProgramaCodigo' => 'BRBE00624A',
     'Sequencial' => 0,
@@ -143,7 +154,7 @@
     'CategoriaCodigo' => 17,
     'CategoriaDescricao' => 'BRASIL IN',
   ),
-  12 => 
+  13 => 
   array (
     'ProgramaCodigo' => 'BRBE00724A',
     'Sequencial' => 0,
@@ -156,24 +167,11 @@
     'CategoriaCodigo' => 17,
     'CategoriaDescricao' => 'BRASIL IN',
   ),
-  13 => 
+  14 => 
   array (
     'ProgramaCodigo' => 'BRBE00824A',
     'Sequencial' => 0,
     'ProgramaDescricao' => 'UXUA CASA HOTEL & SPA',
-    'PrograDestino' => 'BRASIL',
-    'CadernoTitulo' => 'Brasil Bem-Estar',
-    'CadernoTexto' => 'Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
-
-',
-    'CategoriaCodigo' => 17,
-    'CategoriaDescricao' => 'BRASIL IN',
-  ),
-  14 => 
-  array (
-    'ProgramaCodigo' => 'BRBE00924A',
-    'Sequencial' => 0,
-    'ProgramaDescricao' => 'GRANDE HOTEL TERMAS DE ARAXÁ',
     'PrograDestino' => 'BRASIL',
     'CadernoTitulo' => 'Brasil Bem-Estar',
     'CadernoTexto' => 'Embarque em uma jornada de serenidade e bem-estar pelos destinos mais encantadores do Brasil, onde cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência única de relaxamento. Nestes oásis de tranquilidade, você está convidado a desfrutar de ambientes acolhedores, terapias revitalizantes e uma culinária que nutre não apenas o corpo, mas também a alma.
@@ -472,6 +470,17 @@
   ),
   41 => 
   array (
+    'ProgramaCodigo' => 'CIPA25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'CIRCUITO À PATAGÔNIA E À TERRA DO FOGO',
+    'PrograDestino' => 'PATA',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  42 => 
+  array (
     'ProgramaCodigo' => 'COREIA25A',
     'Sequencial' => 0,
     'ProgramaDescricao' => 'COREIA DO SUL E TAIWAN',
@@ -481,7 +490,7 @@
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  42 => 
+  43 => 
   array (
     'ProgramaCodigo' => 'DRIVE001',
     'Sequencial' => 0,
@@ -493,7 +502,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 22,
     'CategoriaDescricao' => 'DRIVENESS EXPERIENCE',
   ),
-  43 => 
+  44 => 
   array (
     'ProgramaCodigo' => 'DRIVE002',
     'Sequencial' => 0,
@@ -505,7 +514,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 22,
     'CategoriaDescricao' => 'DRIVENESS EXPERIENCE',
   ),
-  44 => 
+  45 => 
   array (
     'ProgramaCodigo' => 'DRIVE003',
     'Sequencial' => 0,
@@ -517,7 +526,18 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 22,
     'CategoriaDescricao' => 'DRIVENESS EXPERIENCE',
   ),
-  45 => 
+  46 => 
+  array (
+    'ProgramaCodigo' => 'DUBAI25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'DUBAI ESSENCIAL',
+    'PrograDestino' => 'DXB',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  47 => 
   array (
     'ProgramaCodigo' => 'EMI25A',
     'Sequencial' => 0,
@@ -528,7 +548,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  46 => 
+  48 => 
   array (
     'ProgramaCodigo' => 'ESC25A',
     'Sequencial' => 0,
@@ -539,7 +559,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  47 => 
+  49 => 
   array (
     'ProgramaCodigo' => 'ESPO25A',
     'Sequencial' => 0,
@@ -550,7 +570,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  48 => 
+  50 => 
   array (
     'ProgramaCodigo' => 'EVATHVNC',
     'Sequencial' => 0,
@@ -561,7 +581,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  49 => 
+  51 => 
   array (
     'ProgramaCodigo' => 'FRAN25A',
     'Sequencial' => 0,
@@ -572,7 +592,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  50 => 
+  52 => 
   array (
     'ProgramaCodigo' => 'IAF002',
     'Sequencial' => 0,
@@ -585,7 +605,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  51 => 
+  53 => 
   array (
     'ProgramaCodigo' => 'IAF093',
     'Sequencial' => 0,
@@ -598,7 +618,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  52 => 
+  54 => 
   array (
     'ProgramaCodigo' => 'IAF123',
     'Sequencial' => 0,
@@ -611,7 +631,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  53 => 
+  55 => 
   array (
     'ProgramaCodigo' => 'IAF123A',
     'Sequencial' => 0,
@@ -624,7 +644,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  54 => 
+  56 => 
   array (
     'ProgramaCodigo' => 'IAF144',
     'Sequencial' => 0,
@@ -637,7 +657,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  55 => 
+  57 => 
   array (
     'ProgramaCodigo' => 'IAF168',
     'Sequencial' => 0,
@@ -650,7 +670,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  56 => 
+  58 => 
   array (
     'ProgramaCodigo' => 'IAF175',
     'Sequencial' => 0,
@@ -663,7 +683,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  57 => 
+  59 => 
   array (
     'ProgramaCodigo' => 'IAF186',
     'Sequencial' => 0,
@@ -676,7 +696,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  58 => 
+  60 => 
   array (
     'ProgramaCodigo' => 'IAF203',
     'Sequencial' => 0,
@@ -689,7 +709,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  59 => 
+  61 => 
   array (
     'ProgramaCodigo' => 'IAF215',
     'Sequencial' => 0,
@@ -702,7 +722,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  60 => 
+  62 => 
   array (
     'ProgramaCodigo' => 'IAF216',
     'Sequencial' => 0,
@@ -715,7 +735,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  61 => 
+  63 => 
   array (
     'ProgramaCodigo' => 'IAF225',
     'Sequencial' => 0,
@@ -728,7 +748,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  62 => 
+  64 => 
   array (
     'ProgramaCodigo' => 'IAF230',
     'Sequencial' => 0,
@@ -741,7 +761,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  63 => 
+  65 => 
   array (
     'ProgramaCodigo' => 'IAF235',
     'Sequencial' => 0,
@@ -752,7 +772,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  64 => 
+  66 => 
   array (
     'ProgramaCodigo' => 'IAF389',
     'Sequencial' => 0,
@@ -763,7 +783,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  65 => 
+  67 => 
   array (
     'ProgramaCodigo' => 'IAF390',
     'Sequencial' => 0,
@@ -776,7 +796,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  66 => 
+  68 => 
   array (
     'ProgramaCodigo' => 'IAF391',
     'Sequencial' => 0,
@@ -789,7 +809,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  67 => 
+  69 => 
   array (
     'ProgramaCodigo' => 'IAF392',
     'Sequencial' => 0,
@@ -802,7 +822,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  68 => 
+  70 => 
   array (
     'ProgramaCodigo' => 'IAF393',
     'Sequencial' => 0,
@@ -815,7 +835,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  69 => 
+  71 => 
   array (
     'ProgramaCodigo' => 'IAF394',
     'Sequencial' => 0,
@@ -828,7 +848,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  70 => 
+  72 => 
   array (
     'ProgramaCodigo' => 'IAF395',
     'Sequencial' => 0,
@@ -841,7 +861,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  71 => 
+  73 => 
   array (
     'ProgramaCodigo' => 'IAF396',
     'Sequencial' => 0,
@@ -854,7 +874,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  72 => 
+  74 => 
   array (
     'ProgramaCodigo' => 'IAL004',
     'Sequencial' => 0,
@@ -865,7 +885,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  73 => 
+  75 => 
   array (
     'ProgramaCodigo' => 'IAL306',
     'Sequencial' => 0,
@@ -876,7 +896,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  74 => 
+  76 => 
   array (
     'ProgramaCodigo' => 'IAL341',
     'Sequencial' => 0,
@@ -887,7 +907,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  75 => 
+  77 => 
   array (
     'ProgramaCodigo' => 'IAL343',
     'Sequencial' => 0,
@@ -898,7 +918,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  76 => 
+  78 => 
   array (
     'ProgramaCodigo' => 'IAL352',
     'Sequencial' => 0,
@@ -909,7 +929,7 @@ excepcionais em jornadas únicas que combinam culinária surpreendente, hotelari
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  77 => 
+  79 => 
   array (
     'ProgramaCodigo' => 'IAL373',
     'Sequencial' => 0,
@@ -921,7 +941,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  78 => 
+  80 => 
   array (
     'ProgramaCodigo' => 'IAL379',
     'Sequencial' => 0,
@@ -932,7 +952,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  79 => 
+  81 => 
   array (
     'ProgramaCodigo' => 'IAL385',
     'Sequencial' => 0,
@@ -943,7 +963,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  80 => 
+  82 => 
   array (
     'ProgramaCodigo' => 'IAL391',
     'Sequencial' => 0,
@@ -954,7 +974,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  81 => 
+  83 => 
   array (
     'ProgramaCodigo' => 'IAL393',
     'Sequencial' => 0,
@@ -965,7 +985,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  82 => 
+  84 => 
   array (
     'ProgramaCodigo' => 'IAL395',
     'Sequencial' => 0,
@@ -976,7 +996,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  83 => 
+  85 => 
   array (
     'ProgramaCodigo' => 'IAL396',
     'Sequencial' => 0,
@@ -988,7 +1008,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  84 => 
+  86 => 
   array (
     'ProgramaCodigo' => 'IAL397',
     'Sequencial' => 0,
@@ -1000,7 +1020,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  85 => 
+  87 => 
   array (
     'ProgramaCodigo' => 'IAL398',
     'Sequencial' => 0,
@@ -1012,7 +1032,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  86 => 
+  88 => 
   array (
     'ProgramaCodigo' => 'IAL399',
     'Sequencial' => 0,
@@ -1024,7 +1044,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  87 => 
+  89 => 
   array (
     'ProgramaCodigo' => 'IAL401',
     'Sequencial' => 0,
@@ -1036,7 +1056,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  88 => 
+  90 => 
   array (
     'ProgramaCodigo' => 'IAL402',
     'Sequencial' => 0,
@@ -1048,7 +1068,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  89 => 
+  91 => 
   array (
     'ProgramaCodigo' => 'IAL403',
     'Sequencial' => 0,
@@ -1060,7 +1080,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  90 => 
+  92 => 
   array (
     'ProgramaCodigo' => 'IAL404',
     'Sequencial' => 0,
@@ -1072,7 +1092,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  91 => 
+  93 => 
   array (
     'ProgramaCodigo' => 'IAL405',
     'Sequencial' => 0,
@@ -1083,7 +1103,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  92 => 
+  94 => 
   array (
     'ProgramaCodigo' => 'IAL406',
     'Sequencial' => 0,
@@ -1094,7 +1114,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  93 => 
+  95 => 
   array (
     'ProgramaCodigo' => 'IAL407',
     'Sequencial' => 0,
@@ -1106,7 +1126,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  94 => 
+  96 => 
   array (
     'ProgramaCodigo' => 'IAL408',
     'Sequencial' => 0,
@@ -1117,7 +1137,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  95 => 
+  97 => 
   array (
     'ProgramaCodigo' => 'IAL409',
     'Sequencial' => 0,
@@ -1128,7 +1148,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  96 => 
+  98 => 
   array (
     'ProgramaCodigo' => 'IAL410',
     'Sequencial' => 0,
@@ -1139,7 +1159,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  97 => 
+  99 => 
   array (
     'ProgramaCodigo' => 'IAL411',
     'Sequencial' => 0,
@@ -1150,7 +1170,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  98 => 
+  100 => 
   array (
     'ProgramaCodigo' => 'IAL412',
     'Sequencial' => 0,
@@ -1161,7 +1181,18 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  99 => 
+  101 => 
+  array (
+    'ProgramaCodigo' => 'IAL413',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'CHILE: LUZES DO ATACAMA',
+    'PrograDestino' => 'CHILE',
+    'CadernoTitulo' => 'Américas',
+    'CadernoTexto' => 'Uma diversidade de destinos extraordinários distribuídos ao Norte, ao Centro e ao Sul. A civilização maia, por exemplo, com sua magnífica pirâmide de Chichen Itzá, no México. Já na América Central com suas ilhas, atóis e recifes encantam por sua beleza natural. No Sul, oferecemos um repertório completo de atrações naturais como as paisagens glaciais da Patagônia, as ilhas isoladas de Galápagos e Ilha de Páscoa; e também movimentadas capitais como Buenos Aires e Santiago.',
+    'CategoriaCodigo' => 2,
+    'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
+  ),
+  102 => 
   array (
     'ProgramaCodigo' => 'IAN014',
     'Sequencial' => 0,
@@ -1172,7 +1203,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  100 => 
+  103 => 
   array (
     'ProgramaCodigo' => 'IAN042',
     'Sequencial' => 0,
@@ -1183,7 +1214,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  101 => 
+  104 => 
   array (
     'ProgramaCodigo' => 'IAS002',
     'Sequencial' => 0,
@@ -1194,7 +1225,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  102 => 
+  105 => 
   array (
     'ProgramaCodigo' => 'IAS003B',
     'Sequencial' => 0,
@@ -1205,7 +1236,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  103 => 
+  106 => 
   array (
     'ProgramaCodigo' => 'IAS029',
     'Sequencial' => 0,
@@ -1216,7 +1247,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  104 => 
+  107 => 
   array (
     'ProgramaCodigo' => 'IAS033',
     'Sequencial' => 0,
@@ -1227,7 +1258,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  105 => 
+  108 => 
   array (
     'ProgramaCodigo' => 'IAS034',
     'Sequencial' => 0,
@@ -1238,7 +1269,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  106 => 
+  109 => 
   array (
     'ProgramaCodigo' => 'IAS046',
     'Sequencial' => 0,
@@ -1249,7 +1280,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  107 => 
+  110 => 
   array (
     'ProgramaCodigo' => 'IAS055',
     'Sequencial' => 0,
@@ -1260,7 +1291,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  108 => 
+  111 => 
   array (
     'ProgramaCodigo' => 'IAS056',
     'Sequencial' => 0,
@@ -1271,7 +1302,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  109 => 
+  112 => 
   array (
     'ProgramaCodigo' => 'IAS057B',
     'Sequencial' => 0,
@@ -1282,7 +1313,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  110 => 
+  113 => 
   array (
     'ProgramaCodigo' => 'IAS060B',
     'Sequencial' => 0,
@@ -1293,7 +1324,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  111 => 
+  114 => 
   array (
     'ProgramaCodigo' => 'IAS063',
     'Sequencial' => 0,
@@ -1304,7 +1335,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  112 => 
+  115 => 
   array (
     'ProgramaCodigo' => 'IAS063B',
     'Sequencial' => 0,
@@ -1315,7 +1346,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  113 => 
+  116 => 
   array (
     'ProgramaCodigo' => 'IAS071',
     'Sequencial' => 0,
@@ -1326,7 +1357,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  114 => 
+  117 => 
   array (
     'ProgramaCodigo' => 'IAS092',
     'Sequencial' => 0,
@@ -1337,7 +1368,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  115 => 
+  118 => 
   array (
     'ProgramaCodigo' => 'IAS094',
     'Sequencial' => 0,
@@ -1348,7 +1379,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  116 => 
+  119 => 
   array (
     'ProgramaCodigo' => 'IAS095',
     'Sequencial' => 0,
@@ -1359,7 +1390,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  117 => 
+  120 => 
   array (
     'ProgramaCodigo' => 'IAS112',
     'Sequencial' => 0,
@@ -1370,7 +1401,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  118 => 
+  121 => 
   array (
     'ProgramaCodigo' => 'IAS115',
     'Sequencial' => 0,
@@ -1381,7 +1412,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  119 => 
+  122 => 
   array (
     'ProgramaCodigo' => 'IAS117',
     'Sequencial' => 0,
@@ -1392,7 +1423,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  120 => 
+  123 => 
   array (
     'ProgramaCodigo' => 'IAS118',
     'Sequencial' => 0,
@@ -1403,7 +1434,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  121 => 
+  124 => 
   array (
     'ProgramaCodigo' => 'IAS119',
     'Sequencial' => 0,
@@ -1414,7 +1445,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  122 => 
+  125 => 
   array (
     'ProgramaCodigo' => 'IAS121',
     'Sequencial' => 0,
@@ -1425,7 +1456,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  123 => 
+  126 => 
   array (
     'ProgramaCodigo' => 'IEU008',
     'Sequencial' => 0,
@@ -1436,7 +1467,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  124 => 
+  127 => 
   array (
     'ProgramaCodigo' => 'IEU083',
     'Sequencial' => 0,
@@ -1447,7 +1478,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  125 => 
+  128 => 
   array (
     'ProgramaCodigo' => 'IEU112',
     'Sequencial' => 0,
@@ -1458,7 +1489,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  126 => 
+  129 => 
   array (
     'ProgramaCodigo' => 'IEU130',
     'Sequencial' => 0,
@@ -1469,7 +1500,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  127 => 
+  130 => 
   array (
     'ProgramaCodigo' => 'IEU143',
     'Sequencial' => 0,
@@ -1480,7 +1511,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  128 => 
+  131 => 
   array (
     'ProgramaCodigo' => 'IEU150',
     'Sequencial' => 0,
@@ -1491,7 +1522,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  129 => 
+  132 => 
   array (
     'ProgramaCodigo' => 'IEU162',
     'Sequencial' => 0,
@@ -1502,7 +1533,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  130 => 
+  133 => 
   array (
     'ProgramaCodigo' => 'IEU167',
     'Sequencial' => 0,
@@ -1513,7 +1544,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  131 => 
+  134 => 
   array (
     'ProgramaCodigo' => 'IEU168',
     'Sequencial' => 0,
@@ -1524,7 +1555,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  132 => 
+  135 => 
   array (
     'ProgramaCodigo' => 'IEU171',
     'Sequencial' => 0,
@@ -1535,7 +1566,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  133 => 
+  136 => 
   array (
     'ProgramaCodigo' => 'IEU174',
     'Sequencial' => 0,
@@ -1546,7 +1577,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  134 => 
+  137 => 
   array (
     'ProgramaCodigo' => 'IEU187',
     'Sequencial' => 0,
@@ -1557,7 +1588,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  135 => 
+  138 => 
   array (
     'ProgramaCodigo' => 'IEU189',
     'Sequencial' => 0,
@@ -1568,7 +1599,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  136 => 
+  139 => 
   array (
     'ProgramaCodigo' => 'IEU192',
     'Sequencial' => 0,
@@ -1579,7 +1610,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  137 => 
+  140 => 
   array (
     'ProgramaCodigo' => 'IEU195',
     'Sequencial' => 0,
@@ -1590,7 +1621,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  138 => 
+  141 => 
   array (
     'ProgramaCodigo' => 'IEU197',
     'Sequencial' => 0,
@@ -1601,7 +1632,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  139 => 
+  142 => 
   array (
     'ProgramaCodigo' => 'IEU204',
     'Sequencial' => 0,
@@ -1612,7 +1643,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  140 => 
+  143 => 
   array (
     'ProgramaCodigo' => 'IEU205',
     'Sequencial' => 0,
@@ -1623,7 +1654,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  141 => 
+  144 => 
   array (
     'ProgramaCodigo' => 'IEU210',
     'Sequencial' => 0,
@@ -1634,7 +1665,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  142 => 
+  145 => 
   array (
     'ProgramaCodigo' => 'IEU212',
     'Sequencial' => 0,
@@ -1645,7 +1676,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  143 => 
+  146 => 
   array (
     'ProgramaCodigo' => 'IEU213',
     'Sequencial' => 0,
@@ -1656,7 +1687,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  144 => 
+  147 => 
   array (
     'ProgramaCodigo' => 'IEU214',
     'Sequencial' => 0,
@@ -1667,7 +1698,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  145 => 
+  148 => 
   array (
     'ProgramaCodigo' => 'IEU221',
     'Sequencial' => 0,
@@ -1678,7 +1709,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  146 => 
+  149 => 
   array (
     'ProgramaCodigo' => 'IEU222',
     'Sequencial' => 0,
@@ -1689,7 +1720,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  147 => 
+  150 => 
   array (
     'ProgramaCodigo' => 'IEU223',
     'Sequencial' => 0,
@@ -1700,7 +1731,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  148 => 
+  151 => 
   array (
     'ProgramaCodigo' => 'IEU390',
     'Sequencial' => 0,
@@ -1711,7 +1742,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  149 => 
+  152 => 
   array (
     'ProgramaCodigo' => 'IEU391',
     'Sequencial' => 0,
@@ -1722,7 +1753,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  150 => 
+  153 => 
   array (
     'ProgramaCodigo' => 'IEU392',
     'Sequencial' => 0,
@@ -1733,7 +1764,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  151 => 
+  154 => 
   array (
     'ProgramaCodigo' => 'IND25A',
     'Sequencial' => 0,
@@ -1744,7 +1775,18 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  152 => 
+  155 => 
+  array (
+    'ProgramaCodigo' => 'IND25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'ÍNDIA SURPREENDENTE',
+    'PrograDestino' => 'ÍNDIA',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  156 => 
   array (
     'ProgramaCodigo' => 'INDO25A',
     'Sequencial' => 0,
@@ -1755,7 +1797,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  153 => 
+  157 => 
   array (
     'ProgramaCodigo' => 'INDOCH25A',
     'Sequencial' => 0,
@@ -1766,7 +1808,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  154 => 
+  158 => 
   array (
     'ProgramaCodigo' => 'INSIGNIA25',
     'Sequencial' => 0,
@@ -1777,7 +1819,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  155 => 
+  159 => 
   array (
     'ProgramaCodigo' => 'IOM001',
     'Sequencial' => 0,
@@ -1790,7 +1832,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  156 => 
+  160 => 
   array (
     'ProgramaCodigo' => 'IOM094',
     'Sequencial' => 0,
@@ -1801,7 +1843,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  157 => 
+  161 => 
   array (
     'ProgramaCodigo' => 'IOM095',
     'Sequencial' => 0,
@@ -1812,7 +1854,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  158 => 
+  162 => 
   array (
     'ProgramaCodigo' => 'IOM096',
     'Sequencial' => 0,
@@ -1823,7 +1865,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  159 => 
+  163 => 
   array (
     'ProgramaCodigo' => 'IOM097',
     'Sequencial' => 0,
@@ -1834,7 +1876,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  160 => 
+  164 => 
   array (
     'ProgramaCodigo' => 'IRLESC25A',
     'Sequencial' => 0,
@@ -1845,7 +1887,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  161 => 
+  165 => 
   array (
     'ProgramaCodigo' => 'ITH012',
     'Sequencial' => 0,
@@ -1856,7 +1898,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  162 => 
+  166 => 
   array (
     'ProgramaCodigo' => 'ITM009',
     'Sequencial' => 0,
@@ -1867,7 +1909,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  163 => 
+  167 => 
   array (
     'ProgramaCodigo' => 'ITM045',
     'Sequencial' => 0,
@@ -1878,7 +1920,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 2,
     'CategoriaDescricao' => 'VIAGENS PERSONALIZADAS',
   ),
-  164 => 
+  168 => 
   array (
     'ProgramaCodigo' => 'IUGOS25A',
     'Sequencial' => 0,
@@ -1889,7 +1931,18 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  165 => 
+  169 => 
+  array (
+    'ProgramaCodigo' => 'LAPONIA25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'EXPERIÊNCIAS NO CÍRCULO POLAR ÁRTICO',
+    'PrograDestino' => 'LAPONIA',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  170 => 
   array (
     'ProgramaCodigo' => 'MAGBAQCTG',
     'Sequencial' => 0,
@@ -1900,7 +1953,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  166 => 
+  171 => 
   array (
     'ProgramaCodigo' => 'MAGCTGBAQ',
     'Sequencial' => 0,
@@ -1911,7 +1964,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  167 => 
+  172 => 
   array (
     'ProgramaCodigo' => 'MARROCO25A',
     'Sequencial' => 0,
@@ -1922,7 +1975,18 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  168 => 
+  173 => 
+  array (
+    'ProgramaCodigo' => 'MARROCO25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'EXÓTICO MARROCOS IMPERIAL',
+    'PrograDestino' => 'MARROCOS',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  174 => 
   array (
     'ProgramaCodigo' => 'NCLENCSEA',
     'Sequencial' => 0,
@@ -1933,7 +1997,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  169 => 
+  175 => 
   array (
     'ProgramaCodigo' => 'NEVE001',
     'Sequencial' => 0,
@@ -1944,7 +2008,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  170 => 
+  176 => 
   array (
     'ProgramaCodigo' => 'NEVE002',
     'Sequencial' => 0,
@@ -1955,7 +2019,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  171 => 
+  177 => 
   array (
     'ProgramaCodigo' => 'NEVE003',
     'Sequencial' => 0,
@@ -1966,7 +2030,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  172 => 
+  178 => 
   array (
     'ProgramaCodigo' => 'NEVE004',
     'Sequencial' => 0,
@@ -1977,7 +2041,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  173 => 
+  179 => 
   array (
     'ProgramaCodigo' => 'NEVE005',
     'Sequencial' => 0,
@@ -1988,7 +2052,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  174 => 
+  180 => 
   array (
     'ProgramaCodigo' => 'NEVE006',
     'Sequencial' => 0,
@@ -1999,7 +2063,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  175 => 
+  181 => 
   array (
     'ProgramaCodigo' => 'NEVE008',
     'Sequencial' => 0,
@@ -2010,7 +2074,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  176 => 
+  182 => 
   array (
     'ProgramaCodigo' => 'NEVE009',
     'Sequencial' => 0,
@@ -2021,7 +2085,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  177 => 
+  183 => 
   array (
     'ProgramaCodigo' => 'NEVE010',
     'Sequencial' => 0,
@@ -2032,7 +2096,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  178 => 
+  184 => 
   array (
     'ProgramaCodigo' => 'NEVE011',
     'Sequencial' => 0,
@@ -2043,7 +2107,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  179 => 
+  185 => 
   array (
     'ProgramaCodigo' => 'NEVE012',
     'Sequencial' => 0,
@@ -2054,7 +2118,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  180 => 
+  186 => 
   array (
     'ProgramaCodigo' => 'NEVE013',
     'Sequencial' => 0,
@@ -2065,7 +2129,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 20,
     'CategoriaDescricao' => 'FÉRIAS NA NEVE',
   ),
-  181 => 
+  187 => 
   array (
     'ProgramaCodigo' => 'OCEAREGYVR',
     'Sequencial' => 0,
@@ -2076,7 +2140,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  182 => 
+  188 => 
   array (
     'ProgramaCodigo' => 'OCEMIAMIA',
     'Sequencial' => 0,
@@ -2087,7 +2151,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  183 => 
+  189 => 
   array (
     'ProgramaCodigo' => 'ORI25A',
     'Sequencial' => 0,
@@ -2098,7 +2162,18 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  184 => 
+  190 => 
+  array (
+    'ProgramaCodigo' => 'ORI25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'MISTÉRIOS DO EGITO',
+    'PrograDestino' => 'EGITO',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  191 => 
   array (
     'ProgramaCodigo' => 'PARKSE25A',
     'Sequencial' => 0,
@@ -2109,7 +2184,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  185 => 
+  192 => 
   array (
     'ProgramaCodigo' => 'PARKSW25A',
     'Sequencial' => 0,
@@ -2120,7 +2195,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  186 => 
+  193 => 
   array (
     'ProgramaCodigo' => 'PERU25A',
     'Sequencial' => 0,
@@ -2131,7 +2206,18 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  187 => 
+  194 => 
+  array (
+    'ProgramaCodigo' => 'PERU25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'O MELHOR DO PERU',
+    'PrograDestino' => 'PERU',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  195 => 
   array (
     'ProgramaCodigo' => 'R007',
     'Sequencial' => 0,
@@ -2142,7 +2228,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  188 => 
+  196 => 
   array (
     'ProgramaCodigo' => 'R010',
     'Sequencial' => 0,
@@ -2153,7 +2239,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  189 => 
+  197 => 
   array (
     'ProgramaCodigo' => 'R019',
     'Sequencial' => 0,
@@ -2164,7 +2250,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  190 => 
+  198 => 
   array (
     'ProgramaCodigo' => 'R024',
     'Sequencial' => 0,
@@ -2175,7 +2261,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  191 => 
+  199 => 
   array (
     'ProgramaCodigo' => 'R026B',
     'Sequencial' => 0,
@@ -2186,7 +2272,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  192 => 
+  200 => 
   array (
     'ProgramaCodigo' => 'R031',
     'Sequencial' => 0,
@@ -2197,7 +2283,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  193 => 
+  201 => 
   array (
     'ProgramaCodigo' => 'R032',
     'Sequencial' => 0,
@@ -2208,7 +2294,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  194 => 
+  202 => 
   array (
     'ProgramaCodigo' => 'R033B',
     'Sequencial' => 0,
@@ -2219,7 +2305,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  195 => 
+  203 => 
   array (
     'ProgramaCodigo' => 'R048',
     'Sequencial' => 0,
@@ -2230,7 +2316,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  196 => 
+  204 => 
   array (
     'ProgramaCodigo' => 'R072',
     'Sequencial' => 0,
@@ -2241,7 +2327,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  197 => 
+  205 => 
   array (
     'ProgramaCodigo' => 'R113',
     'Sequencial' => 0,
@@ -2252,18 +2338,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  198 => 
-  array (
-    'ProgramaCodigo' => 'R140',
-    'Sequencial' => 0,
-    'ProgramaDescricao' => 'SICÍLIA CONCÓRDIA',
-    'PrograDestino' => 'ITALIA',
-    'CadernoTitulo' => 'Europa',
-    'CadernoTexto' => 'Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.',
-    'CategoriaCodigo' => 3,
-    'CategoriaDescricao' => 'TOURS REGULARES',
-  ),
-  199 => 
+  206 => 
   array (
     'ProgramaCodigo' => 'R147B',
     'Sequencial' => 0,
@@ -2274,7 +2349,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  200 => 
+  207 => 
   array (
     'ProgramaCodigo' => 'R148',
     'Sequencial' => 0,
@@ -2285,7 +2360,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  201 => 
+  208 => 
   array (
     'ProgramaCodigo' => 'R149',
     'Sequencial' => 0,
@@ -2296,7 +2371,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  202 => 
+  209 => 
   array (
     'ProgramaCodigo' => 'R204',
     'Sequencial' => 0,
@@ -2307,7 +2382,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  203 => 
+  210 => 
   array (
     'ProgramaCodigo' => 'R307',
     'Sequencial' => 0,
@@ -2318,7 +2393,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  204 => 
+  211 => 
   array (
     'ProgramaCodigo' => 'R444',
     'Sequencial' => 0,
@@ -2329,7 +2404,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  205 => 
+  212 => 
   array (
     'ProgramaCodigo' => 'R445',
     'Sequencial' => 0,
@@ -2340,7 +2415,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  206 => 
+  213 => 
   array (
     'ProgramaCodigo' => 'R480',
     'Sequencial' => 0,
@@ -2351,7 +2426,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  207 => 
+  214 => 
   array (
     'ProgramaCodigo' => 'R482B',
     'Sequencial' => 0,
@@ -2362,7 +2437,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  208 => 
+  215 => 
   array (
     'ProgramaCodigo' => 'R490',
     'Sequencial' => 0,
@@ -2373,7 +2448,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  209 => 
+  216 => 
   array (
     'ProgramaCodigo' => 'R491',
     'Sequencial' => 0,
@@ -2384,7 +2459,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  210 => 
+  217 => 
   array (
     'ProgramaCodigo' => 'R496',
     'Sequencial' => 0,
@@ -2395,7 +2470,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  211 => 
+  218 => 
   array (
     'ProgramaCodigo' => 'R499',
     'Sequencial' => 0,
@@ -2406,7 +2481,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  212 => 
+  219 => 
   array (
     'ProgramaCodigo' => 'R500',
     'Sequencial' => 0,
@@ -2417,7 +2492,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  213 => 
+  220 => 
   array (
     'ProgramaCodigo' => 'R502',
     'Sequencial' => 0,
@@ -2428,7 +2503,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  214 => 
+  221 => 
   array (
     'ProgramaCodigo' => 'R504',
     'Sequencial' => 0,
@@ -2439,7 +2514,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  215 => 
+  222 => 
   array (
     'ProgramaCodigo' => 'R509',
     'Sequencial' => 0,
@@ -2450,7 +2525,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  216 => 
+  223 => 
   array (
     'ProgramaCodigo' => 'R512',
     'Sequencial' => 0,
@@ -2461,7 +2536,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  217 => 
+  224 => 
   array (
     'ProgramaCodigo' => 'R513',
     'Sequencial' => 0,
@@ -2472,7 +2547,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  218 => 
+  225 => 
   array (
     'ProgramaCodigo' => 'R517',
     'Sequencial' => 0,
@@ -2483,7 +2558,18 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  219 => 
+  226 => 
+  array (
+    'ProgramaCodigo' => 'R518',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'IMPÉRIO VIKING E O BÁLTICO',
+    'PrograDestino' => 'EUROPA',
+    'CadernoTitulo' => 'Europa',
+    'CadernoTexto' => 'Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.',
+    'CategoriaCodigo' => 3,
+    'CategoriaDescricao' => 'TOURS REGULARES',
+  ),
+  227 => 
   array (
     'ProgramaCodigo' => 'R522',
     'Sequencial' => 0,
@@ -2494,7 +2580,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  220 => 
+  228 => 
   array (
     'ProgramaCodigo' => 'R523',
     'Sequencial' => 0,
@@ -2505,7 +2591,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  221 => 
+  229 => 
   array (
     'ProgramaCodigo' => 'R526',
     'Sequencial' => 0,
@@ -2516,7 +2602,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  222 => 
+  230 => 
   array (
     'ProgramaCodigo' => 'R534',
     'Sequencial' => 0,
@@ -2527,7 +2613,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  223 => 
+  231 => 
   array (
     'ProgramaCodigo' => 'R542',
     'Sequencial' => 0,
@@ -2538,7 +2624,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  224 => 
+  232 => 
   array (
     'ProgramaCodigo' => 'R546',
     'Sequencial' => 0,
@@ -2549,7 +2635,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  225 => 
+  233 => 
   array (
     'ProgramaCodigo' => 'R558',
     'Sequencial' => 0,
@@ -2560,7 +2646,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  226 => 
+  234 => 
   array (
     'ProgramaCodigo' => 'R561',
     'Sequencial' => 0,
@@ -2571,7 +2657,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  227 => 
+  235 => 
   array (
     'ProgramaCodigo' => 'R562',
     'Sequencial' => 0,
@@ -2582,7 +2668,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  228 => 
+  236 => 
   array (
     'ProgramaCodigo' => 'R563',
     'Sequencial' => 0,
@@ -2593,7 +2679,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  229 => 
+  237 => 
   array (
     'ProgramaCodigo' => 'R565',
     'Sequencial' => 0,
@@ -2604,7 +2690,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  230 => 
+  238 => 
   array (
     'ProgramaCodigo' => 'R566',
     'Sequencial' => 0,
@@ -2615,7 +2701,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  231 => 
+  239 => 
   array (
     'ProgramaCodigo' => 'R568',
     'Sequencial' => 0,
@@ -2626,7 +2712,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  232 => 
+  240 => 
   array (
     'ProgramaCodigo' => 'R569',
     'Sequencial' => 0,
@@ -2637,7 +2723,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  233 => 
+  241 => 
   array (
     'ProgramaCodigo' => 'R570',
     'Sequencial' => 0,
@@ -2648,7 +2734,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  234 => 
+  242 => 
   array (
     'ProgramaCodigo' => 'R571',
     'Sequencial' => 0,
@@ -2659,7 +2745,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  235 => 
+  243 => 
   array (
     'ProgramaCodigo' => 'R573',
     'Sequencial' => 0,
@@ -2670,18 +2756,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  236 => 
-  array (
-    'ProgramaCodigo' => 'R574',
-    'Sequencial' => 0,
-    'ProgramaDescricao' => 'EMILIANO RIO DE JANEIRO',
-    'PrograDestino' => 'BRASIL',
-    'CadernoTitulo' => 'Américas',
-    'CadernoTexto' => 'Américas com inúmeros destinos que estão presentes em todas as partes do continente são muito apreciados e valorizados em todo o mundo. A civilização maia, por exemplo, teve a sua prórpria pirâmide de Chichen Itzá, que é magnífica e espetacular á sua maneira. Há também o Grand Canyon a jóia do Estados Unidos, um espetáculo que atrai um grande número de visitantes de todo o mundo, a grandiosidade de Niágara Falls, fronteira do Canadá, a grandiosidade da América Central com suas ilhas, enfim destinos únicos!',
-    'CategoriaCodigo' => 3,
-    'CategoriaDescricao' => 'TOURS REGULARES',
-  ),
-  237 => 
+  244 => 
   array (
     'ProgramaCodigo' => 'R575',
     'Sequencial' => 0,
@@ -2692,7 +2767,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  238 => 
+  245 => 
   array (
     'ProgramaCodigo' => 'R576',
     'Sequencial' => 0,
@@ -2703,7 +2778,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  239 => 
+  246 => 
   array (
     'ProgramaCodigo' => 'R583',
     'Sequencial' => 0,
@@ -2714,7 +2789,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  240 => 
+  247 => 
   array (
     'ProgramaCodigo' => 'R585',
     'Sequencial' => 0,
@@ -2725,7 +2800,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  241 => 
+  248 => 
   array (
     'ProgramaCodigo' => 'R588',
     'Sequencial' => 0,
@@ -2736,7 +2811,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  242 => 
+  249 => 
   array (
     'ProgramaCodigo' => 'R589',
     'Sequencial' => 0,
@@ -2747,7 +2822,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  243 => 
+  250 => 
   array (
     'ProgramaCodigo' => 'R590',
     'Sequencial' => 0,
@@ -2758,7 +2833,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  244 => 
+  251 => 
   array (
     'ProgramaCodigo' => 'R591',
     'Sequencial' => 0,
@@ -2769,7 +2844,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  245 => 
+  252 => 
   array (
     'ProgramaCodigo' => 'R592',
     'Sequencial' => 0,
@@ -2780,7 +2855,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  246 => 
+  253 => 
   array (
     'ProgramaCodigo' => 'R593',
     'Sequencial' => 0,
@@ -2791,7 +2866,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  247 => 
+  254 => 
   array (
     'ProgramaCodigo' => 'R594',
     'Sequencial' => 0,
@@ -2802,7 +2877,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  248 => 
+  255 => 
   array (
     'ProgramaCodigo' => 'R595',
     'Sequencial' => 0,
@@ -2813,7 +2888,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  249 => 
+  256 => 
   array (
     'ProgramaCodigo' => 'R596',
     'Sequencial' => 0,
@@ -2824,7 +2899,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  250 => 
+  257 => 
   array (
     'ProgramaCodigo' => 'R597',
     'Sequencial' => 0,
@@ -2835,7 +2910,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  251 => 
+  258 => 
   array (
     'ProgramaCodigo' => 'R598',
     'Sequencial' => 0,
@@ -2846,7 +2921,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  252 => 
+  259 => 
   array (
     'ProgramaCodigo' => 'R599',
     'Sequencial' => 0,
@@ -2857,7 +2932,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  253 => 
+  260 => 
   array (
     'ProgramaCodigo' => 'R600',
     'Sequencial' => 0,
@@ -2868,7 +2943,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  254 => 
+  261 => 
   array (
     'ProgramaCodigo' => 'R601',
     'Sequencial' => 0,
@@ -2879,7 +2954,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  255 => 
+  262 => 
   array (
     'ProgramaCodigo' => 'R602',
     'Sequencial' => 0,
@@ -2890,7 +2965,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  256 => 
+  263 => 
   array (
     'ProgramaCodigo' => 'R603',
     'Sequencial' => 0,
@@ -2901,7 +2976,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  257 => 
+  264 => 
   array (
     'ProgramaCodigo' => 'R604',
     'Sequencial' => 0,
@@ -2912,7 +2987,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  258 => 
+  265 => 
   array (
     'ProgramaCodigo' => 'R606',
     'Sequencial' => 0,
@@ -2923,7 +2998,18 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 3,
     'CategoriaDescricao' => 'TOURS REGULARES',
   ),
-  259 => 
+  266 => 
+  array (
+    'ProgramaCodigo' => 'R607',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'ISLÂNDIA ESSENCIAL',
+    'PrograDestino' => 'ISLANDIA',
+    'CadernoTitulo' => 'Europa',
+    'CadernoTexto' => 'Europa, onde o legado de uma história intensa e multicultural se espalha por toda parte nos destinos que apresentamos nas páginas a seguir. Existem diversas opções de võos para a região e a definição da escolha da companhia aérea dependerá dos lugares a serem visitados. A proximidade dos países possibilita uma infinidade de combinações de destinos numa mesma viagem.',
+    'CategoriaCodigo' => 3,
+    'CategoriaDescricao' => 'TOURS REGULARES',
+  ),
+  267 => 
   array (
     'ProgramaCodigo' => 'SAFARI25A',
     'Sequencial' => 0,
@@ -2934,7 +3020,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  260 => 
+  268 => 
   array (
     'ProgramaCodigo' => 'SAUDI25A',
     'Sequencial' => 0,
@@ -2945,7 +3031,7 @@ Com praias serenas e estilosas que apresentam elegância sofisticada, charme col
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  261 => 
+  269 => 
   array (
     'ProgramaCodigo' => 'SLEGCPHRKV',
     'Sequencial' => 0,
@@ -2957,7 +3043,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  262 => 
+  270 => 
   array (
     'ProgramaCodigo' => 'SLEGEDICPH',
     'Sequencial' => 0,
@@ -2969,18 +3055,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  263 => 
-  array (
-    'ProgramaCodigo' => 'SLGVIECAM',
-    'Sequencial' => 0,
-    'ProgramaDescricao' => 'VIETNÃ E CAMBOJA',
-    'PrograDestino' => 'VIETCAMB',
-    'CadernoTitulo' => 'Inside Asia',
-    'CadernoTexto' => 'Conheça destinos espetaculares e milenares através da seleção de roteiros Inside Asia. Elaborados cuidadosamente por especialistas, oferecem um verdadeiro mix de atrações que vão de admiráveis templos e deslumbrantes paisagens asiáticas a saborosas descobertas gastronômicas.',
-    'CategoriaCodigo' => 18,
-    'CategoriaDescricao' => 'SMALL LUXURY GROUPS',
-  ),
-  264 => 
+  271 => 
   array (
     'ProgramaCodigo' => 'SPRIRKVRKV',
     'Sequencial' => 0,
@@ -2992,7 +3067,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  265 => 
+  272 => 
   array (
     'ProgramaCodigo' => 'SRIMA25A',
     'Sequencial' => 0,
@@ -3003,7 +3078,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  266 => 
+  273 => 
   array (
     'ProgramaCodigo' => 'SWALEMA25A',
     'Sequencial' => 0,
@@ -3014,7 +3089,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  267 => 
+  274 => 
   array (
     'ProgramaCodigo' => 'SWANDAL25A',
     'Sequencial' => 0,
@@ -3025,7 +3100,18 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  268 => 
+  275 => 
+  array (
+    'ProgramaCodigo' => 'SWANDAL25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'ANDALUZIA, COSTA DO SOL E BARCELONA',
+    'PrograDestino' => 'ESPANHA',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  276 => 
   array (
     'ProgramaCodigo' => 'SWBASCO25A',
     'Sequencial' => 0,
@@ -3036,7 +3122,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  269 => 
+  277 => 
   array (
     'ProgramaCodigo' => 'SWBAVIE25A',
     'Sequencial' => 0,
@@ -3047,7 +3133,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  270 => 
+  278 => 
   array (
     'ProgramaCodigo' => 'SWBORG25A',
     'Sequencial' => 0,
@@ -3058,7 +3144,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  271 => 
+  279 => 
   array (
     'ProgramaCodigo' => 'SWCARIB25A',
     'Sequencial' => 0,
@@ -3069,7 +3155,18 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  272 => 
+  280 => 
+  array (
+    'ProgramaCodigo' => 'SWCARIB25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'COLÔMBIA E PANAMÁ',
+    'PrograDestino' => 'COLOMPANAM',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  281 => 
   array (
     'ProgramaCodigo' => 'SWGREEK25A',
     'Sequencial' => 0,
@@ -3080,7 +3177,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  273 => 
+  282 => 
   array (
     'ProgramaCodigo' => 'SWJAPAO25A',
     'Sequencial' => 0,
@@ -3091,7 +3188,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  274 => 
+  283 => 
   array (
     'ProgramaCodigo' => 'SWLESTE25A',
     'Sequencial' => 0,
@@ -3102,7 +3199,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  275 => 
+  284 => 
   array (
     'ProgramaCodigo' => 'SWMEX25A',
     'Sequencial' => 0,
@@ -3113,7 +3210,18 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  276 => 
+  285 => 
+  array (
+    'ProgramaCodigo' => 'SWMEX25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'FASCINANTE MÉXICO',
+    'PrograDestino' => 'MEXICO',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  286 => 
   array (
     'ProgramaCodigo' => 'SWPIEMO25A',
     'Sequencial' => 0,
@@ -3124,7 +3232,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  277 => 
+  287 => 
   array (
     'ProgramaCodigo' => 'SWPROV25A',
     'Sequencial' => 0,
@@ -3135,7 +3243,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  278 => 
+  288 => 
   array (
     'ProgramaCodigo' => 'SWPUGLI25A',
     'Sequencial' => 0,
@@ -3146,7 +3254,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  279 => 
+  289 => 
   array (
     'ProgramaCodigo' => 'SWSICIL25A',
     'Sequencial' => 0,
@@ -3157,7 +3265,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  280 => 
+  290 => 
   array (
     'ProgramaCodigo' => 'SWSWISS25A',
     'Sequencial' => 0,
@@ -3168,7 +3276,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  281 => 
+  291 => 
   array (
     'ProgramaCodigo' => 'SWTHAI25A',
     'Sequencial' => 0,
@@ -3179,7 +3287,18 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  282 => 
+  292 => 
+  array (
+    'ProgramaCodigo' => 'SWTHAI25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'TAILÂNDIA E DOHA',
+    'PrograDestino' => 'TAILÂNDIA',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  293 => 
   array (
     'ProgramaCodigo' => 'SWTOSC25A',
     'Sequencial' => 0,
@@ -3190,7 +3309,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  283 => 
+  294 => 
   array (
     'ProgramaCodigo' => 'SWVENET25A',
     'Sequencial' => 0,
@@ -3201,7 +3320,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  284 => 
+  295 => 
   array (
     'ProgramaCodigo' => 'TUNIS25A',
     'Sequencial' => 0,
@@ -3212,7 +3331,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  285 => 
+  296 => 
   array (
     'ProgramaCodigo' => 'TURK25A',
     'Sequencial' => 0,
@@ -3223,7 +3342,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  286 => 
+  297 => 
   array (
     'ProgramaCodigo' => 'UK1825A',
     'Sequencial' => 0,
@@ -3234,7 +3353,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  287 => 
+  298 => 
   array (
     'ProgramaCodigo' => 'UK25A',
     'Sequencial' => 0,
@@ -3245,7 +3364,7 @@ Com uma atmosfera única, oferecem uma experiência de viagem especial e singula
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  288 => 
+  299 => 
   array (
     'ProgramaCodigo' => 'UNIANTOINE',
     'Sequencial' => 0,
@@ -3257,7 +3376,7 @@ Os premiados navios Uniworld são verdadeiras obras de arte sobre a água e poss
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  289 => 
+  300 => 
   array (
     'ProgramaCodigo' => 'UNIRIVBEL',
     'Sequencial' => 0,
@@ -3269,7 +3388,7 @@ Os premiados navios Uniworld são verdadeiras obras de arte sobre a água e poss
     'CategoriaCodigo' => 5,
     'CategoriaDescricao' => 'MARÍTIMO',
   ),
-  290 => 
+  301 => 
   array (
     'ProgramaCodigo' => 'UZBEK25A',
     'Sequencial' => 0,
@@ -3280,7 +3399,7 @@ Os premiados navios Uniworld são verdadeiras obras de arte sobre a água e poss
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  291 => 
+  302 => 
   array (
     'ProgramaCodigo' => 'VINHAS25A',
     'Sequencial' => 0,
@@ -3291,7 +3410,18 @@ Os premiados navios Uniworld são verdadeiras obras de arte sobre a água e poss
     'CategoriaCodigo' => 4,
     'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
   ),
-  292 => 
+  303 => 
+  array (
+    'ProgramaCodigo' => 'VINHAS25R',
+    'Sequencial' => 0,
+    'ProgramaDescricao' => 'MENDOZA E SALTA',
+    'PrograDestino' => 'ARGENTINA',
+    'CadernoTitulo' => 'Réveillon 2025/2026',
+    'CadernoTexto' => '',
+    'CategoriaCodigo' => 4,
+    'CategoriaDescricao' => 'GRUPOS BRASILEIROS NO MUNDO',
+  ),
+  304 => 
   array (
     'ProgramaCodigo' => 'WDW001',
     'Sequencial' => 0,
@@ -3302,7 +3432,7 @@ Os premiados navios Uniworld são verdadeiras obras de arte sobre a água e poss
     'CategoriaCodigo' => 21,
     'CategoriaDescricao' => 'DISNEY',
   ),
-  293 => 
+  305 => 
   array (
     'ProgramaCodigo' => 'WDW002',
     'Sequencial' => 0,
@@ -3313,7 +3443,7 @@ Os premiados navios Uniworld são verdadeiras obras de arte sobre a água e poss
     'CategoriaCodigo' => 21,
     'CategoriaDescricao' => 'DISNEY',
   ),
-  294 => 
+  306 => 
   array (
     'ProgramaCodigo' => 'WDW003',
     'Sequencial' => 0,

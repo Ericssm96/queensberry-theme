@@ -214,7 +214,9 @@ if ( get_query_var('custom_forfait') || is_single() ) {
   
     if (empty($custom_data['ProgramLogInfo'])) {
     $fallback_log_response = get_program_with_log($program_code, '0');
+    error_log('✅ descobrindo get_program_with_log' . print_r(get_program_with_log($program_code), true));
     $log_items = $fallback_log_response['ProgramasCadernos']['ProgramasCadernos'] ?? [];
+    error_log('❌ Conteudo do log_items: '. print_r($log_items, true));
 
     if (!empty($log_items)) {
         error_log('✅ Inserindo log info manual via get_program_with_log');
@@ -299,15 +301,30 @@ $program_log_info = array_find($program_logs_info, function($program_log_info) u
       && !empty($program_log_info["CadernoPastaImagens"]);
 });
 
-// Fallback se não encontrar via match de título
-if (!$program_log_info && !empty($program_logs_info)) {
-  $program_log_info = $program_logs_info[0];
-  // error_log('⚠️ Fallback para o primeiro log info disponível: ' . print_r($program_log_info, true));
-} elseif (!empty($program_log_info)) {
-  // error_log('✅ Log info encontrado pelo título: ' . print_r($program_log_info, true));
+$program_log_info = null;
+
+if (!empty($program_logs_info)) {
+    foreach ($program_logs_info as $log) {
+        if (
+            isset($log['CadernoStatus']) &&
+            strtoupper($log['CadernoStatus']) === 'A' &&
+            !empty($log['CadernoFoto'])
+        ) {
+            $program_log_info = $log;
+            error_log('✅ Log info com status A e imagem encontrado: ' . print_r($program_log_info, true));
+            break;
+        }
+    }
+
+    // Fallback se nenhum log válido for encontrado
+    if (!$program_log_info) {
+        $program_log_info = $program_logs_info[0]; 
+        error_log('⚠️ Fallback para o primeiro log info disponível: ' . print_r($program_log_info, true));
+    }
 } else {
-  error_log('❌ Nenhum log info encontrado.');
+    error_log('❌ Nenhum log info encontrado.');
 }
+
 
 $quick_description = $program_info["DescricaoResumida"] ?? '';
 $days_qtty = $program_info["QtdDiasViagem"] ?? '';
@@ -318,14 +335,19 @@ $program_outings_info = $program_info["SaidasPrograma"] ?? '';
 $images_folder_prefix_url = "https://img.queensberry.com.br/imagens/";
 $category_image_folder = $current_category_info["PastaImagens"];
 $program_log_image_folder = $program_log_info["CadernoPastaImagens"] ?? '';
+
+error_log('🖼️ Teste pasta log  ,' . print_r($program_log_image_folder, true));
+
 $url_friendly_program_code = convert_string_to_uppercase_url($program_info["CodigoPrograma"]);
 $banner_img_file_name = rawurlencode($program_info["Banner"] ?? '');
+
+// error_log('🖼️ Program Info ,' . print_r($program_info, true));
 
 if (empty($image_gallery_files)) {
     $image_gallery_files = get_program_images_file_names($program_code)["ProgramasImagens"]["ProgramaImagens"] ?? [];
     $custom_data['ImageGalleryFiles'] = $image_gallery_files; // atualiza para reuso
 }
-//   error_log('🖼️ Teste de Imagens ,' . print_r($image_gallery_files, true));
+
 
 // Fallback defensivo para imagem da galeria
 $log_img_file_name = $image_gallery_files[0]['Descricao'] ?? '';
@@ -362,6 +384,9 @@ if (empty($program_log_image_folder)) {
         error_log("❌ Pasta do log continua vazia após tentativa direta via API.");
     }
 }
+
+// error_log('🖼️ Teste de Imagens ,' . print_r($image_gallery_files, true));
+// error_log('🖼️ Teste pasta log  ,' . print_r($program_log_image_folder, true));
 
 $banner_image_url = "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$banner_img_file_name";
 $itinerary_image_url = "$images_folder_prefix_url/Programas/$category_image_folder/$program_log_image_folder/$url_friendly_program_code/$log_img_file_name";
@@ -864,7 +889,7 @@ foreach ($itinerary_info_list as $itinerary_info) {
         <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
         <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
         <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Programa - Queensberry">
-        <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+        <input type="hidden" name="URL_CADASTRO" x-bind:value="window.location.href">
         <input type="hidden" name="FULL_PHONE_NUMBER" x-bind:value="fullPhoneNumberA" id="fullPhoneNumber">
 
 

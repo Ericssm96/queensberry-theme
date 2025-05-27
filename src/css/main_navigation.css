@@ -473,7 +473,7 @@ body {
 .nav-b .content-b .right-col .cards-area {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .nav-b .content-b .right-col .cards-area li a {
   display: inline-block;

@@ -943,11 +943,11 @@ function create_posts_from_api_data_batches() {
             $post_id;
             $program_page_title = $program["Descricao"];
             $program_page_description = $program["DescricaoResumida"];
+            $program_slug = sanitize_title($program_page_title . "-" . $program_code);
     
-            // Use WP_Query to check if a page with the title already exists
             $query = new WP_Query(array(
                 'post_type' => 'post',
-                'title' => wp_strip_all_tags($program_page_title),
+                'name' => $program_slug,
                 'post_status' => 'publish',
                 'posts_per_page' => 1
             ));
@@ -955,7 +955,7 @@ function create_posts_from_api_data_batches() {
             $current_category = get_term_by('name', $category_title, 'category');
     
             if ($query->have_posts()) {
-                print_r("Post com o título $program_page_title foi encontrada. Atualizando os dados.");
+                print_r("Post com o título $program_page_title foi encontrado. Atualizando os dados.");
                 $existing_page = $query->posts[0];
                 $post_id = $existing_page->ID;
                 update_post_meta($post_id, 'custom_data', $program_metadata);
@@ -992,6 +992,7 @@ function create_posts_from_api_data_batches() {
                 $post_id = wp_insert_post(array(
                     'post_title'    => wp_strip_all_tags($program_page_title),
                     'post_content'  => $program_page_description,
+                    'post_name' => $program_slug,
                     'post_status'   => 'publish',
                     'post_type'     => 'post'
                 ));
@@ -1917,7 +1918,7 @@ add_action( 'init', function(){
 // 3) Adicione a sua regra de rewrite **no topo** (prioridade 1)
 add_action( 'init', function(){
     add_rewrite_rule(
-        '^programa/detalhes/(gbm|forfait)/([^/]+)/([^/]+)/([^/]+)/?$',
+        '^programa/detalhes/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$',
         'index.php?custom_forfait=1&type=$matches[1]&continente=$matches[2]&codigo=$matches[3]&slug=$matches[4]',
         'top'
     );

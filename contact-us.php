@@ -29,9 +29,10 @@ get_header(); ?>
             (atendimento de segunda à sexta, das 9h às 18h).</p>
         </div>
         <article class="form-container">
-          <form id="f_queensberry_fale_conosco" action="/" name="f_queensberry_fale_conosco" method="POST" x-data="{
-          isEmailPermissionChecked: false,
-        }">
+          <form id="f_queensberry_fale_conosco" name="f_queensberry_fale_conosco" method="POST" x-data="{
+            isEmailPermissionChecked: false,
+            selectedSubject: '',
+          }">
             <input type="hidden" id="actionField" name="action" value="queensberry_fale_conosco_recaptcha">
 
             <!-- Eloqua -->
@@ -54,7 +55,7 @@ get_header(); ?>
 
             <!-- Formulário -->
             <label for="ASSUNTO">Assunto</label>
-            <select required name="ASSUNTO" id="ASSUNTO">
+            <select x-model="selectedSubject" required name="ASSUNTO" id="ASSUNTO">
               <option value="">- Selecione o Assunto - </option>
               <option value="Assessoria de Imprensa">Assessoria de Imprensa</option>
               <option value="Atendimento ao Agente de Viagens">Atendimento ao Agente de Viagens</option>
@@ -63,6 +64,8 @@ get_header(); ?>
               <option value="Viagens de Incentivo">Viagens de Incentivo</option>
             </select>
 
+            <input type="text" placeholder="Empresa*" required name="EMPRESA" x-show="selectedSubject == 'Viagens de Incentivo'">
+            <input type="text" placeholder="Agência*" required name="AGENCIA" x-show="selectedSubject == 'Atendimento ao Agente de Viagens'">
             <input type="text" placeholder="Nome*" required name="FIRST_NAME">
             <input type="text" placeholder="Sobrenome*" required name="LAST_NAME">
             <input type="text" placeholder="CPF" id="iptCpf" maxlength="14" name="CPF_USUARIO">

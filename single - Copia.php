@@ -62,7 +62,8 @@ if (is_single()) {
       return $note["ProgramaDescricao"] == "Atrações" && $note["NotaDescricao"] !== "DESATIVADO";
     });
     $itinerary_info_list = array_filter($program_notes, function($note) {
-      return $note["ProgramaDescricao"] == "Roteiro Dia-a-Dia" && $note["NotaDescricao"] !== "DESATIVADO" && str_contains($note["NotaDescricao"], "DIA");
+      $lowercase_note_description = strtolower($note["NotaDescricao"]);
+      return $note["ProgramaDescricao"] == "Roteiro Dia-a-Dia" && $note["NotaDescricao"] !== "DESATIVADO" && str_contains($lowercase_note_description, strtolower("DIA"));
     });
     $itinerary_info_list = array_values($itinerary_info_list);
     $services_info_list = array_filter($program_notes, function($note) {
@@ -502,7 +503,7 @@ if (is_single()) {
         <input type="hidden" name="EMAIL_PERMISSION_STATUS_" x-bind:value="isEmailPermissionChecked ? 'I' : 'O'" id="optIn">
         <input type="hidden" name="MOBILE_PERMISSION_STATUS_" value="O" id="optInSMS">
         <input type="hidden" name="ORIGEM_CADASTRO" value="Formulário Programa - Queensberry">
-        <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" onload="getURL">
+        <input type="hidden" id="URL_CADASTRO" name="URL_CADASTRO" x-bind:value="window.location.href">
         <input type="hidden" name="FULL_PHONE_NUMBER" x-bind:value="fullPhoneNumberA" id="fullPhoneNumber">
 
 
